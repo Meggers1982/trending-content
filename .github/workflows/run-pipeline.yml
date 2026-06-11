@@ -1,0 +1,67 @@
+name: Run Trending Content Pipeline
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Pipeline mode
+        required: true
+        default: full
+        type: choice
+        options:
+          - full
+          - prefetch
+
+permissions:
+  contents: write
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
+      SERPAPI_TRENDING_NOW_ENABLED: ${{ vars.SERPAPI_TRENDING_NOW_ENABLED || 'true' }}
+      SERPAPI_TRENDING_NOW_HOURS: ${{ vars.SERPAPI_TRENDING_NOW_HOURS || '24' }}
+      SERPAPI_TRENDING_NOW_CATEGORY_ID: ${{ vars.SERPAPI_TRENDING_NOW_CATEGORY_ID || '7' }}
+      SERPAPI_TIMEOUT_SECONDS: ${{ vars.SERPAPI_TIMEOUT_SECONDS || '45' }}
+      SERPAPI_MAX_RETRIES: ${{ vars.SERPAPI_MAX_RETRIES || '3' }}
+      EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
+      EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+      EMAIL_RECIPIENT: ${{ secrets.EMAIL_RECIPIENT }}
+      EMAIL_SMTP_HOST: ${{ vars.EMAIL_SMTP_HOST || 'smtp.gmail.com' }}
+      EMAIL_SMTP_PORT: ${{ vars.EMAIL_SMTP_PORT || '587' }}
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run radar prefetch
+        if: ${{ inputs.mode == 'prefetch' }}
+        run: python run_pipeline.py --prefetch-only
+
+      - name: Run full pipeline
+        if: ${{ inputs.mode == 'full' }}
+        run: python run_pipeline.py --no-email
+
+      - name: Commit generated artifacts
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add outputs/daily_newsroom_dashboard data/run_history.yaml data/deferred_topics.yaml
+          if git diff --cached --quiet; then
+            echo "No generated artifacts changed."
+          else
+            git commit -m "Update pipeline artifacts"
+            git push
+          fi

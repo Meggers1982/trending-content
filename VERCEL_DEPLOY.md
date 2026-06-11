@@ -19,19 +19,17 @@ It displays:
 - links to generated dashboard, report, and signal cache
 - local pipeline commands
 
-## Important v1 Constraint
+## Running the Pipeline From Vercel
 
-The existing Python pipeline is a long-running local job that writes dashboard files.
-Vercel is hosting the interface in v1; it is not yet the job runner.
+The Vercel app should not run the long Python pipeline directly inside a web request.
+Instead, the **Start New Report** button triggers a GitHub Actions workflow:
 
-For now, run the pipeline locally:
+1. Vercel calls GitHub's workflow dispatch API
+2. GitHub Actions runs `python run_pipeline.py --no-email`
+3. Generated artifacts are committed back to the repo
+4. Vercel redeploys from the new commit
 
-```bash
-npm run prefetch
-npm run pipeline
-```
-
-Then deploy the updated artifacts to Vercel.
+The **Refresh Radar Only** button triggers the same workflow with `--prefetch-only`.
 
 ## Deploy
 
@@ -49,17 +47,37 @@ Or connect this folder to a GitHub repo and import it in Vercel.
 
 Do not upload `.env`.
 
-If/when the pipeline runner moves into Vercel, add these in the Vercel dashboard instead:
+Add these in Vercel project settings:
+
+- `GITHUB_PIPELINE_TOKEN`
+- `GITHUB_REPOSITORY=Meggers1982/trending-content`
+- `GITHUB_PIPELINE_WORKFLOW=run-pipeline.yml`
+- `GITHUB_PIPELINE_REF=main`
+
+Add these as GitHub Actions repository secrets:
 
 - `ANTHROPIC_API_KEY`
 - `SERPAPI_API_KEY`
-- email variables only if cloud email delivery is needed
+- `EMAIL_SENDER` only if email delivery is needed
+- `EMAIL_PASSWORD` only if email delivery is needed
+- `EMAIL_RECIPIENT` only if email delivery is needed
+
+Add these as GitHub Actions repository variables:
+
+- `SERPAPI_TRENDING_NOW_ENABLED=true`
+- `SERPAPI_TRENDING_NOW_HOURS=24`
+- `SERPAPI_TRENDING_NOW_CATEGORY_ID=7`
+- `SERPAPI_TIMEOUT_SECONDS=45`
+- `SERPAPI_MAX_RETRIES=3`
+- `EMAIL_SMTP_HOST=smtp.gmail.com`
+- `EMAIL_SMTP_PORT=587`
+
+`GITHUB_PIPELINE_TOKEN` should be a fine-grained GitHub token with permission to dispatch workflows for this repository. Store it in Vercel only, not in GitHub.
 
 ## Recommended v2
 
-Move pipeline execution into a job layer:
+Move generated artifacts into durable storage:
 
-- Vercel app for interface
-- Vercel Cron or GitHub Actions to trigger daily runs
-- durable storage for generated artifacts, such as Vercel Blob, Supabase, S3, or GitHub commits
-- optional API route to trigger a run manually
+- Vercel Blob, Supabase, or S3 for generated dashboards
+- database table for run metadata and job status
+- Vercel Cron for automatic scheduled runs

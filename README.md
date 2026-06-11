@@ -24,7 +24,8 @@ npm run prefetch
 npm run pipeline
 ```
 
-The web app also includes local controls for starting a new report and refreshing the radar.
+The web app includes controls for starting a new report and refreshing the radar.
+Locally, those controls run Python directly. In Vercel, they trigger the GitHub Actions workflow in `.github/workflows/run-pipeline.yml`.
 
 ## Vercel
 
@@ -34,6 +35,6 @@ This repo is Vercel-ready as a Next.js app. In v1, the web interface reads gener
 outputs/daily_newsroom_dashboard/
 ```
 
-The Python pipeline is still a local/background job. For production, move generated artifacts into durable storage such as Vercel Blob, Supabase, S3, or committed run artifacts.
+The production button triggers GitHub Actions, which runs the Python pipeline and commits generated artifacts back to the repository.
 
 See `VERCEL_DEPLOY.md` for deployment notes.

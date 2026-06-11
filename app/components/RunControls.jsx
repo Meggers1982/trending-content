@@ -6,6 +6,7 @@ function formatStatus(job) {
   if (job?.running) {
     return job.mode === "prefetch" ? "Refreshing radar" : "Generating report";
   }
+  if (job?.logs?.some((line) => line.includes("GitHub Actions workflow queued"))) return "Queued";
   if (job?.exitCode === 0) return "Complete";
   if (job?.exitCode) return "Needs attention";
   return "Ready";
@@ -63,8 +64,8 @@ export default function RunControls() {
         </button>
       </div>
       <p>
-        Full report runs can take a few minutes. When it completes, refresh the page to load
-        the new dashboard data.
+        In Vercel, this queues a GitHub Actions job that runs the pipeline, commits
+        new artifacts, and triggers a fresh deploy. Locally, it runs Python directly.
       </p>
       {message ? <p className="runMessage">{message}</p> : null}
       {logs.length ? (
