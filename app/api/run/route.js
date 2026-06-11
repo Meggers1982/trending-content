@@ -7,6 +7,7 @@ export const dynamic = "force-dynamic";
 const ROOT = process.cwd();
 const REPO = process.env.GITHUB_REPOSITORY || "Meggers1982/trending-content";
 const WORKFLOW_ID = process.env.GITHUB_PIPELINE_WORKFLOW || "run-pipeline.yml";
+const PYTHON_BIN = process.env.PYTHON_BIN || "python3";
 
 function commandForMode(mode) {
   if (mode === "prefetch") return ["run_pipeline.py", "--prefetch-only"];
@@ -91,7 +92,7 @@ export async function POST(request) {
   const args = commandForMode(mode);
   appendLog(`Starting ${mode === "prefetch" ? "radar refresh" : "full report"}...`);
 
-  const child = spawn("python", args, {
+  const child = spawn(PYTHON_BIN, args, {
     cwd: ROOT,
     env: process.env,
     stdio: ["ignore", "pipe", "pipe"]
