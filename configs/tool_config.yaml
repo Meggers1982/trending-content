@@ -1,0 +1,71 @@
+# Tool configuration — maps original config to available tool surfaces
+# Google Trends is the PRIMARY signal source for search_velocity (30% of trend_strength_score)
+
+tools:
+  serpapi:
+    enabled: true
+    api_key_env_var: SERPAPI_API_KEY
+    engines: [google_trends, google_news, google]
+    # In Claude Code / Hyperagent:
+    #   google_trends → COMPOSIO_SEARCH_TRENDS (primary) or SERPAPI_TRENDS_SEARCH (fallback)
+    #   google_news   → SERPAPI_NEWS_SEARCH via ExecuteIntegration
+    #   google        → SERPAPI_SEARCH via ExecuteIntegration
+
+  rss_reader:
+    enabled: true
+    # Use BrowserNavigate or WebFetch on RSS URLs from trusted_sources.yaml
+    # Fetch latest 50 items per feed
+
+  web_fetch:
+    enabled: true
+    # Use ExaContents (preferred) or BrowserNavigate
+
+  reddit_api:
+    enabled: true
+    # BrowserNavigate on subreddit /new.json
+    # Fallback: Pullpush.io API if Reddit blocks direct JSON
+    # Subreddits defined in trusted_sources.yaml
+
+  social_search:
+    enabled: true
+    # ExaSearch with category: tweet for Twitter/X
+    # Monitor accounts defined in trusted_sources.yaml
+
+  arxiv_search:
+    enabled: false
+    # Not primary for health — use PubMed/NEJM/etc. instead
+    # Enable if covering basic science research angle
+
+  youtube_api:
+    enabled: false
+    # Skip unless user enables a YouTube connector
+
+  google_sheets:
+    enabled: false
+    # Use CreateTable for Hyperagent Tables, or enable Google Sheets connector
+
+  content_database:
+    enabled: false
+    # No live site — self-check uses manual slug list when provided.
+    # Without site_url or slugs, Skill 08 uses competitor-list fallback and notes that self-check was skipped.
+
+# ── Google Trends Usage ──────────────────────────────────────
+# Primary action: COMPOSIO_SEARCH_TRENDS via ExecuteIntegration
+# Fallback action: SERPAPI_TRENDS_SEARCH via ExecuteIntegration
+#
+# Key parameters:
+#   query     — 1–5 comma-separated terms for TIMESERIES; 1 term for RELATED_QUERIES/RELATED_TOPICS
+#   data_type — TIMESERIES (default), GEO_MAP, RELATED_TOPICS, RELATED_QUERIES
+#   date      — "now 7-d" (last 7 days), "today 12-m", "today 5-y", "all"
+#
+# Skill 01 should run these calls:
+#   1. RELATED_QUERIES for each core keyword cluster → surfaces rising queries
+#      Core keywords: "health", "wellness", "nutrition", "fitness", "food safety", "diet"
+#   2. TIMESERIES for up to 5 candidate topics head-to-head → computes search_velocity
+#   3. RELATED_TOPICS for top candidates → feeds Skill 03 entity expansion
+#
+# Known pitfalls:
+#   - Values are relative (0–100), not absolute volumes
+#   - Results nested under results.interest_over_time.timeline_data[*].values[*].extracted_value
+#   - Final time bucket may have partial_data: true — treat as incomplete
+#   - Data lags ~24–48 hours; for breaking news <24h use Google News instead

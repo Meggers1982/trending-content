@@ -1,0 +1,43 @@
+# Competitors — used by Skill 01 Step 1 (competitor collector)
+# Scrapes latest 10 articles per domain
+
+competitors:
+  - name: Healthline
+    domain: "https://www.healthline.com/health-news"
+    notes: "Largest health publisher by traffic; medically reviewed, strong SEO, fast on studies and FDA actions"
+
+  - name: WebMD
+    domain: "https://www.webmd.com/news/default.htm"
+    notes: "Legacy health authority; strong on conditions, drug news, and FDA updates"
+
+  - name: Medical News Today
+    domain: "https://www.medicalnewstoday.com/news"
+    notes: "Research-forward; fast on new studies, accessible summaries of journal publications"
+
+  - name: Verywell Health
+    domain: "https://www.verywellhealth.com/news"
+    notes: "Dotdash Meredith; medically reviewed, strong condition-specific content"
+
+  - name: STAT News
+    domain: "https://www.statnews.com"
+    notes: "Premium health journalism; deep on pharma, FDA, biotech, clinical trials — the health equivalent of The Information"
+
+  - name: NYT Well
+    domain: "https://www.nytimes.com/section/well"
+    notes: "Prestige health coverage; strong on longevity, nutrition, mental health trends"
+
+  - name: Prevention
+    domain: "https://www.prevention.com/health/"
+    notes: "Hearst; lifestyle-adjacent health for 40+ audience, strong on nutrition and fitness"
+
+  - name: Everyday Health
+    domain: "https://www.everydayhealth.com/news/"
+    notes: "Condition management focus; strong on chronic disease, drug news"
+
+  - name: Well+Good
+    domain: "https://www.wellandgood.com/category/health/"
+    notes: "Wellness-forward; younger audience, strong on gut health, mental health, fitness trends"
+
+  - name: Health.com
+    domain: "https://www.health.com/news"
+    notes: "Dotdash Meredith; mainstream health news, strong social media presence"

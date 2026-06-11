@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trending Content OS — Daily Dashboard · May 8, 2026</title>
+<style>
+  :root {
+    --navy: #0f1923; --navy-mid: #1a2a3a; --navy-light: #243447;
+    --p1: #e53e3e; --p1-bg: #fff5f5; --p1-border: #feb2b2;
+    --p2: #dd6b20; --p2-bg: #fffaf0; --p2-border: #fbd38d;
+    --p3: #2b6cb0; --p3-bg: #ebf8ff; --p3-border: #bee3f8;
+    --green: #276749; --green-bg: #f0fff4;
+    --warn: #744210; --warn-bg: #fffff0; --warn-border: #f6e05e;
+    --text: #1a202c; --text-mid: #4a5568; --text-light: #718096;
+    --border: #e2e8f0; --bg: #f7f9fc; --white: #ffffff;
+    --radius: 8px; --shadow: 0 1px 3px rgba(0,0,0,.08);
+    --shadow-md: 0 4px 6px rgba(0,0,0,.07);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); font-size: 14px; line-height: 1.6; }
+  .header { background: var(--navy); color: white; padding: 28px 40px 24px; }
+  .header-top { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+  .header-brand { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: #94a3b8; margin-bottom: 6px; }
+  .header-title { font-size: 24px; font-weight: 700; letter-spacing: -.02em; }
+  .header-sub { font-size: 13px; color: #94a3b8; margin-top: 4px; }
+  .header-meta { text-align: right; }
+  .header-date { font-size: 13px; color: #94a3b8; }
+  .header-niche { font-size: 12px; color: #64748b; margin-top: 2px; }
+  .tools-note { margin-top: 16px; padding: 10px 14px; background: rgba(255,255,255,.06); border-left: 3px solid #475569; border-radius: 4px; font-size: 12px; color: #94a3b8; }
+  .tools-note strong { color: #cbd5e0; }
+  .stats-bar { background: var(--navy-mid); padding: 0 40px; display: flex; gap: 0; border-bottom: 1px solid rgba(255,255,255,.06); }
+  .stat { padding: 14px 24px 14px 0; margin-right: 24px; border-right: 1px solid rgba(255,255,255,.08); }
+  .stat:last-child { border-right: none; }
+  .stat-val { font-size: 22px; font-weight: 700; color: white; line-height: 1; }
+  .stat-label { font-size: 11px; color: #64748b; text-transform: uppercase; letter-spacing: .08em; margin-top: 3px; }
+  .stat.p1 .stat-val { color: #fc8181; }
+  .stat.p2 .stat-val { color: #f6ad55; }
+  .stat.p3 .stat-val { color: #63b3ed; }
+  .main { max-width: 1280px; margin: 0 auto; padding: 32px 40px; }
+  .section-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--text-light); margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+  .integrity-banner { background: var(--warn-bg); border: 1px solid var(--warn-border); border-radius: var(--radius); padding: 16px 20px; margin-bottom: 32px; }
+  .integrity-banner-title { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--warn); margin-bottom: 10px; }
+  .integrity-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 8px; }
+  .integrity-item { font-size: 12px; color: var(--warn); background: rgba(0,0,0,.03); border-radius: 4px; padding: 7px 10px; }
+  .table-wrap { overflow-x: auto; margin-bottom: 40px; border-radius: var(--radius); box-shadow: var(--shadow); }
+  table { width: 100%; border-collapse: collapse; background: var(--white); }
+  thead th { background: var(--navy); color: white; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; padding: 12px 14px; text-align: left; white-space: nowrap; }
+  tbody tr { border-bottom: 1px solid var(--border); }
+  tbody tr:hover { background: #f8fafc; }
+  tbody tr:last-child { border-bottom: none; }
+  td { padding: 12px 14px; font-size: 13px; vertical-align: top; }
+  .topic-name { font-weight: 600; color: var(--text); line-height: 1.4; }
+  .topic-entity { font-size: 11px; color: var(--text-light); margin-top: 2px; }
+  .score { font-size: 15px; font-weight: 700; }
+  .score.high { color: var(--green); }
+  .score.mid { color: var(--p2); }
+  .badge { display: inline-block; padding: 3px 8px; border-radius: 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; white-space: nowrap; }
+  .badge.p1 { background: var(--p1); color: white; }
+  .badge.p2 { background: var(--p2); color: white; }
+  .badge.p3 { background: var(--p3); color: white; }
+  .urgency { display: inline-block; padding: 2px 7px; border-radius: 4px; font-size: 11px; font-weight: 600; white-space: nowrap; }
+  .urgency.today { background: #fff8f0; color: var(--p2); border: 1px solid var(--p2-border); }
+  .urgency.week { background: var(--p3-bg); color: var(--p3); border: 1px solid var(--p3-border); }
+  .urgency.evergreen { background: var(--green-bg); color: var(--green); border: 1px solid #c6f6d5; }
+  .difficulty.low { color: var(--green); font-size: 12px; }
+  .difficulty.medium { color: var(--p2); font-size: 12px; }
+  .difficulty.high { color: var(--p1); font-size: 12px; }
+  .source-link { font-size: 11px; color: #3182ce; text-decoration: none; display: inline-block; margin-right: 4px; }
+  .source-link:hover { text-decoration: underline; }
+  .briefs-section { margin-bottom: 40px; }
+  .priority-group { margin-bottom: 32px; }
+  .priority-group-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+  .priority-group-label { font-size: 13px; font-weight: 700; }
+  .priority-group-desc { font-size: 12px; color: var(--text-light); }
+  .briefs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(540px, 1fr)); gap: 16px; }
+  .brief-card { background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid var(--border); overflow: hidden; }
+  .brief-card.p1 { border-top: 3px solid var(--p1); }
+  .brief-card.p2 { border-top: 3px solid var(--p2); }
+  .brief-card.p3 { border-top: 3px solid var(--p3); }
+  .brief-header { padding: 16px 20px 14px; border-bottom: 1px solid var(--border); cursor: pointer; user-select: none; }
+  .brief-header:hover { background: #fafbfc; }
+  .brief-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+  .brief-headline { font-size: 15px; font-weight: 700; line-height: 1.4; color: var(--text); }
+  .brief-angle { font-size: 12px; color: var(--text-mid); margin-top: 6px; font-style: italic; }
+  .brief-scores { display: flex; gap: 12px; margin-top: 10px; align-items: center; }
+  .score-chip { background: var(--bg); border: 1px solid var(--border); border-radius: 6px; padding: 4px 10px; font-size: 12px; }
+  .score-chip strong { font-size: 14px; }
+  .expand-btn { margin-left: auto; font-size: 11px; color: var(--text-light); white-space: nowrap; }
+  .expand-icon { display: inline-block; transition: transform .2s; }
+  .brief-card.open .expand-icon { transform: rotate(180deg); }
+  .brief-body { padding: 16px 20px; display: none; border-top: 1px solid var(--border); }
+  .brief-card.open .brief-body { display: block; }
+  .brief-section { margin-bottom: 18px; }
+  .brief-section:last-child { margin-bottom: 0; }
+  .brief-section-title { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--text-light); margin-bottom: 8px; }
+  .why-now { background: #f0f9ff; border-left: 3px solid #3182ce; padding: 10px 14px; border-radius: 0 4px 4px 0; font-size: 13px; color: #1a365d; }
+  .outline-list { list-style: none; }
+  .outline-list li { padding: 4px 0; font-size: 13px; color: var(--text-mid); display: flex; gap: 8px; }
+  .outline-list li::before { content: '→'; color: var(--text-light); flex-shrink: 0; }
+  .data-points { list-style: none; }
+  .data-points li { padding: 5px 0; font-size: 13px; border-bottom: 1px solid var(--border); }
+  .data-points li:last-child { border-bottom: none; }
+  .data-points li::before { content: '● '; font-size: 8px; color: var(--text-light); }
+  .sources-row { display: flex; flex-wrap: wrap; gap: 6px; }
+  .source-tag { display: inline-block; padding: 3px 10px; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; font-size: 11px; color: #3182ce; text-decoration: none; font-weight: 500; }
+  .source-tag:hover { background: #ebf8ff; border-color: #bee3f8; }
+  .source-tag.t1::before { content: '★ '; font-size: 9px; }
+  .integrity-flag { background: var(--warn-bg); border: 1px solid var(--warn-border); border-radius: 4px; padding: 8px 12px; font-size: 12px; color: var(--warn); margin-bottom: 6px; }
+  .headlines-alt { list-style: none; }
+  .headlines-alt li { padding: 4px 0; font-size: 13px; color: var(--text-mid); border-bottom: 1px dashed var(--border); }
+  .headlines-alt li:last-child { border-bottom: none; }
+  .seo-row { display: flex; flex-wrap: wrap; gap: 6px; }
+  .kw-tag { display: inline-block; padding: 2px 8px; background: #f0fff4; border: 1px solid #c6f6d5; border-radius: 10px; font-size: 11px; color: var(--green); }
+  .expert-box { background: var(--bg); border-radius: 4px; padding: 10px 14px; font-size: 12px; color: var(--text-mid); }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 640px) { .two-col { grid-template-columns: 1fr; } }
+  .rejected-table { width: 100%; border-collapse: collapse; background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+  .rejected-table th { background: #f1f5f9; color: var(--text-mid); font-size: 11px; text-transform: uppercase; letter-spacing: .08em; padding: 10px 14px; text-align: left; }
+  .rejected-table td { padding: 9px 14px; font-size: 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .rejected-table tr:last-child td { border-bottom: none; }
+  .reject-reason { color: var(--text-light); }
+  .archive-box { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 24px; box-shadow: var(--shadow); }
+  .archive-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 16px; }
+  .archive-label { font-size: 11px; color: var(--text-light); text-transform: uppercase; letter-spacing: .08em; }
+  .archive-val { font-size: 13px; font-weight: 600; color: var(--text); margin-top: 2px; }
+  .archive-notes { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); font-size: 12px; color: var(--text-mid); }
+  .footer { border-top: 1px solid var(--border); padding: 20px 40px; text-align: center; font-size: 11px; color: var(--text-light); }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-top">
+    <div>
+      <div class="header-brand">Trending Content OS</div>
+      <div class="header-title">Daily Newsroom Dashboard</div>
+      <div class="header-sub">Health &amp; Wellness · Run 2 of ongoing series</div>
+    </div>
+    <div class="header-meta">
+      <div class="header-date">Friday, May 8, 2026</div>
+      <div class="header-niche">Niche: Health &amp; Wellness · US Audience</div>
+    </div>
+  </div>
+  <div class="tools-note">
+    <strong>Tools active:</strong> WebSearch, WebFetch &nbsp;|&nbsp;
+    <strong>Unavailable:</strong> COMPOSIO_SEARCH_TRENDS, SERPAPI, ExaSearch, Reddit JSON feeds &nbsp;|&nbsp;
+    Search velocity estimated from news volume + source credibility. Google Trends: false.
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stat"><div class="stat-val">~75</div><div class="stat-label">Signals Reviewed</div></div>
+  <div class="stat"><div class="stat-val">14</div><div class="stat-label">Topics Retained</div></div>
+  <div class="stat"><div class="stat-val">~61</div><div class="stat-label">Rejected</div></div>
+  <div class="stat p1"><div class="stat-val">5</div><div class="stat-label">P1 — Publish Now</div></div>
+  <div class="stat p2"><div class="stat-val">4</div><div class="stat-label">P2 — This Week</div></div>
+  <div class="stat p3"><div class="stat-val">5</div><div class="stat-label">P3 — Schedule</div></div>
+  <div class="stat"><div class="stat-val">8</div><div class="stat-label">Integrity Flags</div></div>
+</div>
+
+<div class="main">
+
+<!-- INTEGRITY FLAGS BANNER -->
+<div class="section-title">⚠ Integrity Flags — Review Before Publishing</div>
+<div class="integrity-banner">
+  <div class="integrity-banner-title">⚠ 8 Flags Require Editorial Attention</div>
+  <div class="integrity-list">
+    <div class="integrity-item"><strong>FDA vaccines:</strong> Do not amplify vaccine hesitancy. Vaccines remain CDC-recommended. Frame around patient trust, not safety doubt.</div>
+    <div class="integrity-item"><strong>Daraxonrasib:</strong> "Doubles survival" requires context — 13.2 vs. 6.7 months median OS. Not a cure. Previously treated metastatic PDAC only.</div>
+    <div class="integrity-item"><strong>Survodutide:</strong> Phase 3 data not yet peer-reviewed or published in a journal. Not FDA-approved. No head-to-head vs. Zepbound.</div>
+    <div class="integrity-item"><strong>Pembrolizumab CRC:</strong> Small trial (n=32). Specific genetic subtype only — dMMR/MSI-high (~15% of CRC). Cannot generalize to all colon cancer.</div>
+    <div class="integrity-item"><strong>Depression blood test:</strong> Observational study. Women-only cohort (HIV/non-HIV). Monocyte epigenetic clock not clinically available. Correlation, not causation.</div>
+    <div class="integrity-item"><strong>Hantavirus:</strong> Risk of pandemic panic. WHO risk assessment: LOW. Person-to-person spread (Andes strain only) requires close sustained contact. US risk very low.</div>
+    <div class="integrity-item"><strong>GLP-1 + brain health:</strong> Evoke/Evoke+ trials did NOT confirm semaglutide benefit for existing Alzheimer's. Observational/animal data promising, RCT evidence weak.</div>
+    <div class="integrity-item"><strong>Measles framing:</strong> Politically sensitive given current vaccine policy environment. Maintain factual CDC-anchored framing. Do not amplify anti-vaccine arguments.</div>
+  </div>
+</div>
+
+<!-- PRIORITY TABLE -->
+<div class="section-title">Editorial Priority Board</div>
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Topic</th>
+        <th>Priority</th>
+        <th>Urgency</th>
+        <th>Trend</th>
+        <th>Opportunity</th>
+        <th>Discover</th>
+        <th>SERP Difficulty</th>
+        <th>Signal Type</th>
+        <th>Status</th>
+        <th>Integrity</th>
+        <th>Key Sources</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td><div class="topic-name">FDA blocks COVID &amp; shingles vaccine safety studies</div><div class="topic-entity">FDA / RFK Jr. / HHS</div></td>
+        <td><span class="badge p1">P1</span></td>
+        <td><span class="urgency today">Today</span></td>
+        <td><span class="score high">80</span></td>
+        <td><span class="score high">78</span></td>
+        <td>●●●●○</td>
+        <td><span class="difficulty medium">Medium</span></td>
+        <td>policy_or_regulatory_change</td>
+        <td>update_candidate</td>
+        <td>⚠</td>
+        <td>
+          <a class="source-link" href="https://www.washingtonpost.com/health/2026/05/05/fda-blocks-covid-shingles-vaccine-studies/" target="_blank">Washington Post</a>
+          <a class="source-link" href="https://www.cnbc.com/2026/05/05/fda-studies-covid-shingles-vaccines-safe.html" target="_blank">CNBC</a>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><div class="topic-name">Hantavirus cruise ship outbreak — real risk level</div><div class="topic-entity">Andes virus / WHO / MV Hondius</div></td>
+        <td><span class="badge p1">P1</span></td>
+        <td><span class="urgency today">Today</span></td>
+        <td><span class="score high">82</span></td>
+        <td><span class="score high">70</span></td>
+        <td>●●●●○</td>
+        <td><span class="difficulty medium">Medium</span></td>
+        <td>breaking_news</td>
+        <td>new</td>
+        <td>⚠</td>
+        <td>
+          <a class="source-link" href="https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON599" target="_blank">WHO</a>
+          <a class="source-link" href="https://www.statnews.com/2026/05/07/hantavirus-outbreak-key-takeaways-who-briefing/" target="_blank">STAT News</a>
+        </td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><div class="topic-name">Daraxonrasib doubles survival in pancreatic cancer</div><div class="topic-entity">Revolution Medicines / PDAC / RAS inhibitor</div></td>
+        <td><span class="badge p1">P1</span></td>
+        <td><span class="urgency week">This Week</span></td>
+        <td><span class="score high">76</span></td>
+        <td><span class="score high">77</span></td>
+        <td>●●●●○</td>
+        <td><span class="difficulty medium">Medium</span></td>
+        <td>medical_research</td>
+        <td>new</td>
+        <td>⚠</td>
+        <td>
+          <a class="source-link" href="https://www.nejm.org/doi/full/10.1056/NEJMoa2505783" target="_blank">NEJM</a>
+          <a class="source-link" href="https://www.nbcnews.com/health/health-news/pancreatic-cancer-drug-daraxonrasib-doubles-survival-rcna343730" target="_blank">NBC News</a>
+        </td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><div class="topic-name">Survodutide Phase 3: 16.6% weight loss — next-gen GLP-1</div><div class="topic-entity">Boehringer Ingelheim / survodutide / SYNCHRONIZE-1</div></td>
+        <td><span class="badge p1">P1</span></td>
+        <td><span class="urgency week">This Week</span></td>
+        <td><span class="score mid">66</span></td>
+        <td><span class="score high">82</span></td>
+        <td>●●●●○</td>
+        <td><span class="difficulty low">Low</span></td>
+        <td>medical_research</td>
+        <td>new</td>
+        <td>⚠</td>
+        <td>
+          <a class="source-link" href="https://www.globenewswire.com/news-release/2026/04/28/3282218/0/en/boehringer-ingelheim-s-novel-glucagon-glp-1-dual-agonist-survodutide-achieved-significant-weight-loss-of-16-6-delivering-meaningful-metabolic-improvement-in-people-with-obesity-or-.html" target="_blank">GlobeNewswire</a>
+          <a class="source-link" href="https://www.healthline.com/health-news/new-glp-1-survodutide-weight-loss-phase-3-trial" target="_blank">Healthline</a>
+        </td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><div class="topic-name">Pembrolizumab: zero CRC relapses at 33 months (AACR 2026)</div><div class="topic-entity">UCL / dMMR/MSI-high colorectal / NEOPRISM-CRC</div></td>
+        <td><span class="badge p1">P1</span></td>
+        <td><span class="urgency week">This Week</span></td>
+        <td><span class="score mid">68</span></td>
+        <td><span class="score high">76</span></td>
+        <td>●●●●○</td>
+        <td><span class="difficulty low">Low</span></td>
+        <td>medical_research</td>
+        <td>new</td>
+        <td>⚠</td>
+        <td>
+          <a class="source-link" href="https://www.ucl.ac.uk/news/2026/apr/groundbreaking-bowel-cancer-trial-follow-shows-zero-relapses" target="_blank">UCL</a>
+          <a class="source-link" href="https://www.sciencedaily.com/releases/2026/05/260505234618.htm" target="_blank">ScienceDaily</a>
+        </td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td><div class="topic-name">US measles: 1,814 cases, threatening elimination status</div><div class="topic-entity">CDC / MMR vaccine / Utah outbreak</div></td>
+        <td><span class="badge p2">P2</span></td>
+        <td><span class="urgency today">Today</span></td>
+        <td><span class="score high">78</span></td>
+        <td><span class="score mid">69</span></td>
+        <td>●●●○○</td>
+        <td><span class="difficulty high">High</span></td>
+        <td>public_health</td>
+        <td>update_candidate</td>
+        <td>⚠</td>
+        <td>
+          <a class="source-link" href="https://www.cdc.gov/measles/data-research/index.html" target="_blank">CDC</a>
+          <a class="source-link" href="https://www.cidrap.umn.edu/measles/us-highly-likely-lose-measles-elimination-status-fall-analysis-warns" target="_blank">CIDRAP</a>
+        </td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td><div class="topic-name">Depression blood test: immune cell aging as early biomarker</div><div class="topic-entity">NYU / monocyte epigenetic clock / Journals of Gerontology</div></td>
+        <td><span class="badge p2">P2</span></td>
+        <td><span class="urgency week">This Week</span></td>
+        <td><span class="score mid">58</span></td>
+        <td><span class="score high">81</span></td>
+        <td>●●●●○</td>
+        <td><span class="difficulty low">Low</span></td>
+        <td>medical_research</td>
+        <td>new</td>
+        <td>⚠</td>
+        <td>
+          <a class="source-link" href="https://www.sciencedaily.com/releases/2026/05/260504023827.htm" target="_blank">ScienceDaily</a>
+          <a class="source-link" href="https://www.news-medical.net/news/20260504/Cellular-aging-in-immune-cells-signals-early-onset-of-cognitive-depression.aspx" target="_blank">News-Medical</a>
+        </td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td><div class="topic-name">Foundayo (orforglipron): oral GLP-1 now $50/mo on Medicare</div><div class="topic-entity">Eli Lilly / orforglipron / CMS Medicare model</div></td>
+        <td><span class="badge p2">P2</span></td>
+        <td><span class="urgency week">This Week</span></td>
+        <td><span class="score high">72</span></td>
+        <td><span class="score high">79</span></td>
+        <td>●●●●○</td>
+        <td><span class="difficulty medium">Medium</span></td>
+        <td>product_or_brand_movement</td>
+        <td>update_candidate</td>
+        <td></td>
+        <td>
+          <a class="source-link" href="https://jamanetwork.com/journals/jama/fullarticle/2848076" target="_blank">JAMA</a>
+          <a class="source-link" href="https://kffhealthnews.org/medicare/cheaper-glp-1-weight-loss-medicare-bridge-wegovy-zepbound-foundayo/" target="_blank">KFF</a>
+        </td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td><div class="topic-name">AHA: 10 brain health factors that lower dementia &amp; stroke risk</div><div class="topic-entity">American Heart Association / brain health / dementia prevention</div></td>
+        <td><span class="badge p2">P2</span></td>
+        <td><span class="urgency week">This Week</span></td>
+        <td><span class="score mid">64</span></td>
+        <td><span class="score high">80</span></td>
+        <td>●●●●○</td>
+        <td><span class="difficulty medium">Medium</span></td>
+        <td>data_release</td>
+        <td>new</td>
+        <td></td>
+        <td>
+          <a class="source-link" href="https://www.medicalnewstoday.com/articles/brain-health-shaped-by-8-lifetime-mental-physical-environmental-and-lifestyle-factors" target="_blank">MNT</a>
+        </td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td><div class="topic-name">Even small amounts of alcohol damage brain health</div><div class="topic-entity">Alcohol / brain health / neuroimaging</div></td>
+        <td><span class="badge p3">P3</span></td>
+        <td><span class="urgency week">This Week</span></td>
+        <td><span class="score mid">59</span></td>
+        <td><span class="score high">77</span></td>
+        <td>●●●●○</td>
+        <td><span class="difficulty low">Low</span></td>
+        <td>medical_research</td>
+        <td>new</td>
+        <td></td>
+        <td><a class="source-link" href="https://www.medicalnewstoday.com/articles/even-a-little-alcohol-here-and-there-damages-brain-health" target="_blank">MNT</a></td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td><div class="topic-name">Ultra-processed foods + heart disease: the swaps that help</div><div class="topic-entity">UPF / cardiovascular disease / dietary swaps</div></td>
+        <td><span class="badge p3">P3</span></td>
+        <td><span class="urgency week">This Week</span></td>
+        <td><span class="score mid">63</span></td>
+        <td><span class="score mid">72</span></td>
+        <td>●●●○○</td>
+        <td><span class="difficulty high">High</span></td>
+        <td>medical_research</td>
+        <td>update_candidate</td>
+        <td></td>
+        <td><a class="source-link" href="https://www.healthline.com/health-news/ultra-processed-foods-heart-disease-healthy-swaps" target="_blank">Healthline</a></td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td><div class="topic-name">GLP-1 drugs and brain health: UCSF vs. failed Alzheimer trials</div><div class="topic-entity">GLP-1 / semaglutide / Alzheimer's / UCSF / Evoke trial</div></td>
+        <td><span class="badge p3">P3</span></td>
+        <td><span class="urgency week">This Week</span></td>
+        <td><span class="score mid">67</span></td>
+        <td><span class="score mid">73</span></td>
+        <td>●●●●○</td>
+        <td><span class="difficulty high">High</span></td>
+        <td>medical_research</td>
+        <td>update_candidate</td>
+        <td>⚠</td>
+        <td><a class="source-link" href="https://www.ucsf.edu/news/2026/05/431871/can-blockbuster-glp-1-weight-loss-drugs-also-protect-brain-health" target="_blank">UCSF</a></td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td><div class="topic-name">Eccentric training: more muscle with less effort</div><div class="topic-entity">Eccentric exercise / muscle building / exercise science</div></td>
+        <td><span class="badge p3">P3</span></td>
+        <td><span class="urgency week">This Week</span></td>
+        <td><span class="score mid">54</span></td>
+        <td><span class="score high">75</span></td>
+        <td>●●●○○</td>
+        <td><span class="difficulty low">Low</span></td>
+        <td>medical_research</td>
+        <td>new</td>
+        <td></td>
+        <td><a class="source-link" href="https://www.healthline.com/health-news/eccentric-exercise-builds-muscle-strength-size-less-effort" target="_blank">Healthline</a></td>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td><div class="topic-name">Perimenopause: most women don't recognize it — OB-GYN guide</div><div class="topic-entity">Perimenopause / OB-GYN / women's midlife health</div></td>
+        <td><span class="badge p3">P3</span></td>
+        <td><span class="urgency evergreen">Evergreen</span></td>
+        <td><span class="score mid">57</span></td>
+        <td><span class="score high">75</span></td>
+        <td>●●●○○</td>
+        <td><span class="difficulty medium">Medium</span></td>
+        <td>evergreen_with_fresh_angle</td>
+        <td>new</td>
+        <td></td>
+        <td><a class="source-link" href="https://www.medicalnewstoday.com/articles/expert-qa-perimenopause-management-diet-exercise-sleep-tips-obgyn" target="_blank">MNT</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- EDITORIAL BRIEFS -->
+<div class="section-title">Editorial Briefs</div>
+<div class="briefs-section">
+
+  <!-- P1 GROUP -->
+  <div class="priority-group">
+    <div class="priority-group-header">
+      <span class="badge p1">P1</span>
+      <span class="priority-group-label">Publish Now / Within 24 Hours</span>
+      <span class="priority-group-desc">5 topics — full deep-dive briefs</span>
+    </div>
+    <div class="briefs-grid">
+
+      <!-- BRIEF 1: FDA VACCINES -->
+      <div class="brief-card p1 open">
+        <div class="brief-header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="brief-meta">
+            <span class="badge p1">P1</span>
+            <span class="urgency today">Today</span>
+            <span style="font-size:11px;color:var(--text-light)">policy_or_regulatory_change · update_candidate</span>
+          </div>
+          <div class="brief-headline">The FDA Blocked Vaccine Safety Studies. Here's What That Means for You.</div>
+          <div class="brief-angle">FDA scientists found COVID and shingles vaccines safe. Their own agency suppressed the research. The vaccines are still recommended — so why does this matter?</div>
+          <div class="brief-scores">
+            <div class="score-chip">Trend <strong>80</strong></div>
+            <div class="score-chip">Opp <strong>78</strong></div>
+            <div class="score-chip">Discover <strong>4/5</strong></div>
+            <div class="expand-btn">Details <span class="expand-icon">▼</span></div>
+          </div>
+        </div>
+        <div class="brief-body">
+          <div class="brief-section">
+            <div class="brief-section-title">Why Now</div>
+            <div class="why-now">WaPo/NYT broke the story May 5–6 citing unnamed current and former officials. By May 8, CNBC, ABC, Pharmacy Times, and Washington Monthly are all running follow-up coverage. Congressional scrutiny building. Story is 3 days old and still expanding — patient-guidance angle not yet served by competitors.</div>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Alternate Headlines</div>
+            <ul class="headlines-alt">
+              <li>FDA Scientists Confirmed Vaccines Are Safe — Their Agency Blocked It From Publishing</li>
+              <li>Should You Still Get Your COVID or Shingles Vaccine? Here's the Actual Evidence.</li>
+              <li>Political Interference at the FDA: What It Means for the Studies You Rely On</li>
+            </ul>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Angle</div>
+            <p style="font-size:13px;color:var(--text-mid)">Patient trust explainer. The story is not "vaccines are unsafe." The story is: what does it mean when a government agency blocks its own scientists from publishing safety data that confirmed vaccines work? Answer that clearly, then tell readers what CDC currently recommends and why the recommendations are unchanged.</p>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Content Outline</div>
+            <ul class="outline-list">
+              <li>What the FDA blocked and when (Oct 2025: two COVID studies; Feb 2026: Shingrix abstracts)</li>
+              <li>What those studies actually found (out of 14 outcomes studied, only anaphylaxis — ~1 in 1M — was flagged)</li>
+              <li>Why the FDA says it blocked them ("conclusions not supported by data") vs. what experts say ("active act of sabotage")</li>
+              <li>What RFK Jr.'s HHS has done to vaccine research broadly</li>
+              <li>Current CDC recommendations for COVID and Shingrix — unchanged</li>
+              <li>What patients should do: talk to a doctor, recommendations stand, surveillance systems still active</li>
+            </ul>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Key Data Points</div>
+            <ul class="data-points">
+              <li>14 health outcomes studied — only anaphylaxis (~1 in 1 million doses) flagged as concern</li>
+              <li>Studies used millions of patient records from FDA's Sentinel System</li>
+              <li>Shingrix abstracts withheld from Feb 2026 drug safety conference</li>
+              <li>HHS stated: studies withdrawn because "authors drew broad conclusions not supported by data"</li>
+              <li>CDC still recommends COVID vaccine by age/risk and Shingrix for adults 50+</li>
+            </ul>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">⚠ Integrity Flags</div>
+            <div class="integrity-flag">⚠ Do NOT frame this as "vaccines may be unsafe." The suppressed studies found vaccines safe. Frame around transparency and patient trust, not safety doubt.</div>
+            <div class="integrity-flag">⚠ HHS's stated reason for withdrawal (methodology concerns) is contested by scientists. Present both sides without false balance — expert consensus supports publishing the studies.</div>
+            <div class="integrity-flag">⚠ Political context (RFK Jr., Trump administration) is factual reporting on government action with direct patient health impact. Not excluded-category political opinion.</div>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Expert Sources</div>
+            <div class="expert-box">Former FDA official (on-record quote from STAT May 8 piece) · Infectious disease epidemiologist for patient-risk context · Pharmacist or physician for "should I still get vaccinated?" angle</div>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Sources</div>
+            <div class="sources-row">
+              <a class="source-tag t1" href="https://www.washingtonpost.com/health/2026/05/05/fda-blocks-covid-shingles-vaccine-studies/" target="_blank">Washington Post</a>
+              <a class="source-tag t1" href="https://www.cnbc.com/2026/05/05/fda-studies-covid-shingles-vaccines-safe.html" target="_blank">CNBC</a>
+              <a class="source-tag t1" href="https://abcnews.com/Health/fda-blocked-publication-covid-shingles-vaccine-research-findings/story?id=132687938" target="_blank">ABC News</a>
+              <a class="source-tag t1" href="https://www.statnews.com/2026/05/07/fda-political-interference-sanofi-tzield-rfk-hhs-ssri/" target="_blank">STAT News</a>
+              <a class="source-tag t1" href="https://www.pharmacytimes.com/view/fda-blocks-publication-of-covid-19-and-shingles-vaccine-safety-studies-what-pharmacists-need-to-know" target="_blank">Pharmacy Times</a>
+              <a class="source-tag t1" href="https://www.cdc.gov/vaccines/" target="_blank">CDC Recommendations</a>
+            </div>
+          </div>
+          <div class="brief-section">
+            <div class="two-col">
+              <div>
+                <div class="brief-section-title">SEO Keywords</div>
+                <div class="seo-row">
+                  <span class="kw-tag">FDA vaccine safety studies</span>
+                  <span class="kw-tag">COVID vaccine side effects 2026</span>
+                  <span class="kw-tag">shingles vaccine Shingrix safety</span>
+                  <span class="kw-tag">RFK Jr FDA vaccines</span>
+                  <span class="kw-tag">should I get COVID vaccine 2026</span>
+                </div>
+              </div>
+              <div>
+                <div class="brief-section-title">Format / Word Count</div>
+                <p style="font-size:12px;color:var(--text-mid)">Explainer/news analysis · 900–1,200 words · Article schema · Cluster: FDA regulatory / vaccine policy</p>
+              </div>
+            </div>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Discover Notes</div>
+            <p style="font-size:12px;color:var(--text-mid)">High Discover potential. Public health controversy + direct patient relevance. Hero image: scientist/lab or FDA building. Avoid sensationalist framing that could be mistaken for anti-vaccine content — leads to platform suppression.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- BRIEF 2: HANTAVIRUS -->
+      <div class="brief-card p1">
+        <div class="brief-header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="brief-meta">
+            <span class="badge p1">P1</span>
+            <span class="urgency today">Today</span>
+            <span style="font-size:11px;color:var(--text-light)">breaking_news · new</span>
+          </div>
+          <div class="brief-headline">Hantavirus Is Making Headlines. Here's the Real Risk Level for You.</div>
+          <div class="brief-angle">A cruise ship outbreak has three dead and experts nervous — but also saying it's not the next COVID. That nuance is what most coverage is getting wrong.</div>
+          <div class="brief-scores">
+            <div class="score-chip">Trend <strong>82</strong></div>
+            <div class="score-chip">Opp <strong>70</strong></div>
+            <div class="score-chip">Discover <strong>4/5</strong></div>
+            <div class="expand-btn">Details <span class="expand-icon">▼</span></div>
+          </div>
+        </div>
+        <div class="brief-body">
+          <div class="brief-section">
+            <div class="brief-section-title">Why Now</div>
+            <div class="why-now">WHO held its formal briefing May 7. The MV Hondius ship is sailing to the Canary Islands. New case confirmed in a flight attendant as of May 8 (NBC). Search interest spiking as "pandemic panic" framing circulates on social media. Calibrated risk communication piece is the highest-value angle — Harvard Health and NPR have partial versions but no outlet has nailed the "here's your actual risk" framing for a US general audience.</div>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Alternate Headlines</div>
+            <ul class="headlines-alt">
+              <li>A Cruise Ship Outbreak Has Three Dead. Should You Worry About Hantavirus?</li>
+              <li>What Doctors Actually Know About How Andes Hantavirus Spreads</li>
+              <li>Why Hantavirus Isn't the Next COVID — And What Makes It Genuinely Dangerous</li>
+            </ul>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Angle</div>
+            <p style="font-size:13px;color:var(--text-mid)">Calibrated risk communication. Acknowledge the stakes (38% fatality rate for HPS; person-to-person spread from Andes strain) while explaining exactly why the US general public faces very low risk. Distinguish Andes virus (South America, human-to-human) from North American hantavirus strains (rodent-borne only). Explain what the WHO "low risk" assessment means.</p>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Content Outline</div>
+            <ul class="outline-list">
+              <li>What happened: cruise ship outbreak, 8 cases (3 confirmed), 3 deaths, ship heading to Canary Islands</li>
+              <li>What is hantavirus / what is the Andes strain specifically</li>
+              <li>How it spreads — and the critical distinction from other hantavirus strains</li>
+              <li>Symptoms and timeline (1–8 weeks incubation; late symptoms include fluid in lungs)</li>
+              <li>No vaccine, no specific treatment — what supportive care looks like</li>
+              <li>WHO's risk assessment and why experts say it's not the next COVID</li>
+              <li>Who is actually at risk (close sustained contact with infected, or rodent exposure in the US)</li>
+              <li>What US travelers should know</li>
+            </ul>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Key Data Points</div>
+            <ul class="data-points">
+              <li>8 total cases (3 confirmed) linked to MV Hondius cruise ship as of May 6, 2026</li>
+              <li>3 deaths; Andes virus, only hantavirus strain with human-to-human transmission</li>
+              <li>Person-to-person spread requires close, sustained contact — not casual exposure</li>
+              <li>HPS fatality rate: ~38% for respiratory syndrome cases in the US</li>
+              <li>North American hantavirus strains (Sin Nombre virus) spread only via rodents, not person-to-person</li>
+              <li>WHO risk assessment: LOW for general public globally</li>
+            </ul>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">⚠ Integrity Flags</div>
+            <div class="integrity-flag">⚠ Do not amplify pandemic panic. WHO risk assessment is LOW. Frame the 38% fatality rate in context — it applies to people who develop full HPS, not casual contacts.</div>
+            <div class="integrity-flag">⚠ Clearly distinguish Andes strain (South America, person-to-person) from US strains (rodent-borne only). Conflating them overstates US public risk.</div>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Sources</div>
+            <div class="sources-row">
+              <a class="source-tag t1" href="https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON599" target="_blank">WHO DON599</a>
+              <a class="source-tag t1" href="https://www.cdc.gov/hantavirus/about/index.html" target="_blank">CDC Hantavirus</a>
+              <a class="source-tag t1" href="https://www.cdc.gov/hantavirus/about/andesvirus.html" target="_blank">CDC Andes Virus</a>
+              <a class="source-tag t1" href="https://www.health.harvard.edu/immune-and-infectious-diseases/hantavirus-explained-what-to-know-after-the-cruise-ship-outbreak" target="_blank">Harvard Health</a>
+              <a class="source-tag" href="https://www.statnews.com/2026/05/07/hantavirus-outbreak-key-takeaways-who-briefing/" target="_blank">STAT News</a>
+              <a class="source-tag" href="https://www.nbcnews.com/health/health-news/us-monitoring-hantavirus-cruise-passengers-new-case-flight-attendant-rcna343990" target="_blank">NBC News</a>
+              <a class="source-tag t1" href="https://www.bmj.com/content/393/bmj.s877" target="_blank">BMJ Explainer</a>
+            </div>
+          </div>
+          <div class="brief-section">
+            <div class="two-col">
+              <div>
+                <div class="brief-section-title">SEO Keywords</div>
+                <div class="seo-row">
+                  <span class="kw-tag">hantavirus</span>
+                  <span class="kw-tag">hantavirus symptoms</span>
+                  <span class="kw-tag">hantavirus cruise ship 2026</span>
+                  <span class="kw-tag">Andes virus</span>
+                  <span class="kw-tag">hantavirus risk United States</span>
+                </div>
+              </div>
+              <div>
+                <div class="brief-section-title">Format / Word Count</div>
+                <p style="font-size:12px;color:var(--text-mid)">News explainer · 800–1,100 words · FAQ schema · Cluster: infectious disease / outbreak response</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BRIEF 3: DARAXONRASIB -->
+      <div class="brief-card p1">
+        <div class="brief-header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="brief-meta">
+            <span class="badge p1">P1</span>
+            <span class="urgency week">This Week</span>
+            <span style="font-size:11px;color:var(--text-light)">medical_research · new</span>
+          </div>
+          <div class="brief-headline">A New Drug Doubles Survival Time in Pancreatic Cancer. Here's Who Can Access It Now.</div>
+          <div class="brief-angle">For a cancer with a 12% 5-year survival rate, a drug that nearly doubles median overall survival is a genuine watershed moment. The Phase 3 data is in NEJM. FDA expanded access is already open.</div>
+          <div class="brief-scores">
+            <div class="score-chip">Trend <strong>76</strong></div>
+            <div class="score-chip">Opp <strong>77</strong></div>
+            <div class="score-chip">Discover <strong>4/5</strong></div>
+            <div class="expand-btn">Details <span class="expand-icon">▼</span></div>
+          </div>
+        </div>
+        <div class="brief-body">
+          <div class="brief-section">
+            <div class="brief-section-title">Why Now</div>
+            <div class="why-now">FDA granted expanded access May 4. NEJM published full Phase 3 data this week. NBC News called it "a watershed moment." CBS News ran the story with a patient angle (Ben Sasse). ASCO Post published clinical summary May 10. Coverage is technically thorough in oncology outlets but the patient-access and "what does this mean if you have this diagnosis" angle is underserved in general health media.</div>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Alternate Headlines</div>
+            <ul class="headlines-alt">
+              <li>Pancreatic Cancer Has Been Called Untreatable. This RAS Inhibitor Just Changed That.</li>
+              <li>The First Drug to Target the RAS Mutation in Pancreatic Cancer — What Patients Need to Know</li>
+              <li>FDA Expands Access to Daraxonrasib: What It Means If You or a Loved One Has Pancreatic Cancer</li>
+            </ul>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Angle</div>
+            <p style="font-size:13px;color:var(--text-mid)">Patient-access explainer. SERP gap: technical oncology is well covered. Missing: plain-language explanation of what RAS is, why 90%+ of PDAC patients have it, what "median OS" means in real terms, and — critically — how a patient or caregiver accesses the drug today via expanded access before formal approval.</p>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Content Outline</div>
+            <ul class="outline-list">
+              <li>Why pancreatic cancer is so deadly and why it's been so hard to treat</li>
+              <li>What the RAS/KRAS mutation is and why it matters (~90% of PDAC)</li>
+              <li>What daraxonrasib does and what the Phase 3 results showed</li>
+              <li>"Doubles survival" in context: 13.2 months vs. 6.7 months — what that means for real patients</li>
+              <li>How to access it now: FDA expanded access / compassionate use program</li>
+              <li>Side effects profile and tolerability</li>
+              <li>What comes next: NDA submission timeline and expected approval window</li>
+            </ul>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Key Data Points</div>
+            <ul class="data-points">
+              <li>Median OS: 13.2 months (daraxonrasib) vs. 6.7 months (chemo) — HR 0.40, p&lt;0.0001</li>
+              <li>RAS mutations present in &gt;90% of pancreatic ductal adenocarcinoma patients</li>
+              <li>Oral, once-daily pill — patients prefer over IV chemotherapy infusions</li>
+              <li>Grade 3+ adverse events: 30% — manageable rash, diarrhea, fatigue</li>
+              <li>FDA Breakthrough Therapy + Orphan Drug designations granted</li>
+              <li>FDA expanded access: patients with previously treated metastatic PDAC can apply now</li>
+            </ul>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">⚠ Integrity Flags</div>
+            <div class="integrity-flag">⚠ "Doubles survival" must be contextualized: 13.2 vs. 6.7 months median OS. This is not a cure. It is a significant improvement for a terminal diagnosis — important to convey both the hope and the limits.</div>
+            <div class="integrity-flag">⚠ Trial enrolled previously treated metastatic PDAC only. Not approved for first-line or early-stage pancreatic cancer. Do not generalize.</div>
+            <div class="integrity-flag">⚠ KRAS G12 mutation testing required — not all PDAC patients will qualify. Mention molecular testing requirement.</div>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Sources</div>
+            <div class="sources-row">
+              <a class="source-tag t1" href="https://www.nejm.org/doi/full/10.1056/NEJMoa2505783" target="_blank">NEJM Phase 3</a>
+              <a class="source-tag" href="https://www.nbcnews.com/health/health-news/pancreatic-cancer-drug-daraxonrasib-doubles-survival-rcna343730" target="_blank">NBC News</a>
+              <a class="source-tag" href="https://www.cbsnews.com/news/daraxonrasib-pancreatic-cancer-drug-fda-expanded-access-ben-sasse/" target="_blank">CBS News</a>
+              <a class="source-tag" href="https://pancan.org/news/first-ras-inhibitor-extends-survival-in-previously-treated-metastatic-pancreatic-adenocarcinoma-what-you-need-to-know/" target="_blank">PanCAN</a>
+              <a class="source-tag" href="https://www.usnews.com/news/health-news/articles/2026-05-04/fda-green-lights-expanded-access-to-pancreatic-cancer-drug-daraxonrasib" target="_blank">US News</a>
+            </div>
+          </div>
+          <div class="brief-section">
+            <div class="two-col">
+              <div>
+                <div class="brief-section-title">SEO Keywords</div>
+                <div class="seo-row">
+                  <span class="kw-tag">pancreatic cancer treatment 2026</span>
+                  <span class="kw-tag">daraxonrasib</span>
+                  <span class="kw-tag">RAS inhibitor pancreatic cancer</span>
+                  <span class="kw-tag">pancreatic cancer survival rate</span>
+                  <span class="kw-tag">KRAS mutation treatment</span>
+                </div>
+              </div>
+              <div>
+                <div class="brief-section-title">Format / Word Count</div>
+                <p style="font-size:12px;color:var(--text-mid)">Medical research explainer · 1,000–1,400 words · Article + MedicalCondition schema · Cluster: cancer treatment / oncology</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BRIEF 4: SURVODUTIDE -->
+      <div class="brief-card p1">
+        <div class="brief-header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="brief-meta">
+            <span class="badge p1">P1</span>
+            <span class="urgency week">This Week</span>
+            <span style="font-size:11px;color:var(--text-light)">medical_research · new</span>
+          </div>
+          <div class="brief-headline">Is Survodutide the Next Big Weight Loss Drug? Phase 3 Results, Explained.</div>
+          <div class="brief-angle">A GLP-1/glucagon dual agonist just hit 16.6% average weight loss in Phase 3. Here's what makes the mechanism different — and how it stacks up against Zepbound before anyone has run a head-to-head trial.</div>
+          <div class="brief-scores">
+            <div class="score-chip">Trend <strong>66</strong></div>
+            <div class="score-chip">Opp <strong>82</strong></div>
+            <div class="score-chip">Discover <strong>4/5</strong></div>
+            <div class="expand-btn">Details <span class="expand-icon">▼</span></div>
+          </div>
+        </div>
+        <div class="brief-body">
+          <div class="brief-section">
+            <div class="brief-section-title">Why Now</div>
+            <div class="why-now">Phase 3 SYNCHRONIZE-1 data released April 28. Full data presented at ADA 2026 Scientific Sessions in June. Healthline published a patient-facing explainer May 4 but the comparison angle (how does the dual glucagon+GLP-1 mechanism differ from pure GLP-1 drugs?) is not yet well served in health media. High GLP-1 search interest makes this a strong cluster-expansion piece.</div>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Alternate Headlines</div>
+            <ul class="headlines-alt">
+              <li>After Ozempic and Zepbound: The Next Wave of Weight Loss Drugs Explained</li>
+              <li>16.6% Weight Loss in Phase 3 — What Survodutide's Dual Mechanism Actually Does</li>
+              <li>GLP-1 Plus Glucagon: Is Survodutide Better Than What's Already on the Market?</li>
+            </ul>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Content Outline</div>
+            <ul class="outline-list">
+              <li>What survodutide is — dual glucagon + GLP-1 receptor agonist vs. pure GLP-1</li>
+              <li>What the Phase 3 SYNCHRONIZE-1 trial found: 16.6% vs. 3.2% placebo, metabolic improvements</li>
+              <li>How the glucagon component changes the mechanism (fat burning, liver effects, MASH benefit)</li>
+              <li>Honest comparison to Wegovy/Ozempic (~15%) and Zepbound/Mounjaro (~21%) — no head-to-head</li>
+              <li>Side effect profile (GI effects mild-to-moderate, similar to other GLP-1s)</li>
+              <li>Approval timeline — FDA submission after NDA; ADA June 2026 data presentation</li>
+              <li>Who might benefit most: MASH patients, those who haven't responded well to pure GLP-1s</li>
+            </ul>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Key Data Points</div>
+            <ul class="data-points">
+              <li>Average weight loss: 16.6% vs. 3.2% placebo over 76 weeks (SYNCHRONIZE-1, n=725)</li>
+              <li>85.1% of patients achieved ≥5% body weight reduction</li>
+              <li>Average absolute loss: ~39 lbs (17.8 kg) from baseline</li>
+              <li>Waist circumference and MASH-related liver markers improved</li>
+              <li>GI side effects mostly mild-to-moderate and transient (dose titration phase)</li>
+              <li>Not yet FDA approved — NDA submission pending; full data at ADA June 2026</li>
+            </ul>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">⚠ Integrity Flags</div>
+            <div class="integrity-flag">⚠ Phase 3 data not yet peer-reviewed or published in a journal — conference press release only. State this explicitly.</div>
+            <div class="integrity-flag">⚠ No head-to-head trial vs. Zepbound or Wegovy exists. Any comparison is cross-trial and should be clearly labeled as such.</div>
+            <div class="integrity-flag">⚠ Not FDA approved. Timeline to availability is months to years. Manage patient expectations.</div>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Sources</div>
+            <div class="sources-row">
+              <a class="source-tag" href="https://www.globenewswire.com/news-release/2026/04/28/3282218/0/en/boehringer-ingelheim-s-novel-glucagon-glp-1-dual-agonist-survodutide-achieved-significant-weight-loss-of-16-6-delivering-meaningful-metabolic-improvement-in-people-with-obesity-or-.html" target="_blank">Boehringer Ingelheim (GlobeNewswire)</a>
+              <a class="source-tag" href="https://www.healthline.com/health-news/new-glp-1-survodutide-weight-loss-phase-3-trial" target="_blank">Healthline</a>
+              <a class="source-tag t1" href="https://pubmed.ncbi.nlm.nih.gov/38330987/" target="_blank">Phase 2 PubMed</a>
+            </div>
+          </div>
+          <div class="brief-section">
+            <div class="two-col">
+              <div>
+                <div class="brief-section-title">SEO Keywords</div>
+                <div class="seo-row">
+                  <span class="kw-tag">survodutide weight loss</span>
+                  <span class="kw-tag">next-gen GLP-1 drugs</span>
+                  <span class="kw-tag">weight loss drugs 2026</span>
+                  <span class="kw-tag">glucagon GLP-1 dual agonist</span>
+                  <span class="kw-tag">survodutide vs Zepbound</span>
+                </div>
+              </div>
+              <div>
+                <div class="brief-section-title">Format / Word Count</div>
+                <p style="font-size:12px;color:var(--text-mid)">Research explainer + comparison · 900–1,200 words · Article schema · Cluster: GLP-1 / obesity treatment</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BRIEF 5: PEMBROLIZUMAB CRC -->
+      <div class="brief-card p1">
+        <div class="brief-header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="brief-meta">
+            <span class="badge p1">P1</span>
+            <span class="urgency week">This Week</span>
+            <span style="font-size:11px;color:var(--text-light)">medical_research · new</span>
+          </div>
+          <div class="brief-headline">Zero Cancer Relapses in Three Years: The Colorectal Cancer Immunotherapy Trial Explained</div>
+          <div class="brief-angle">A nine-week immunotherapy course before surgery kept 100% of patients cancer-free at 33 months. The catch: it only works for a specific genetic subtype. Here's who qualifies and what it means.</div>
+          <div class="brief-scores">
+            <div class="score-chip">Trend <strong>68</strong></div>
+            <div class="score-chip">Opp <strong>76</strong></div>
+            <div class="score-chip">Discover <strong>4/5</strong></div>
+            <div class="expand-btn">Details <span class="expand-icon">▼</span></div>
+          </div>
+        </div>
+        <div class="brief-body">
+          <div class="brief-section">
+            <div class="brief-section-title">Why Now</div>
+            <div class="why-now">33-month follow-up data presented at AACR 2026 (San Diego, May 2026). UCL published press release; SciTechDaily, ecancer, OncLive, Fox News all covering. The "zero relapses" framing is extraordinary but coverage is largely technical. Patient-facing explainer on who actually qualifies (MSI-high testing, ~15% of CRC patients) is the SERP gap.</div>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Alternate Headlines</div>
+            <ul class="headlines-alt">
+              <li>A 9-Week Treatment Kept Colon Cancer Away for Nearly 3 Years — Who It Works For</li>
+              <li>The Colorectal Cancer Subtype Where Immunotherapy Is Delivering Remarkable Results</li>
+              <li>No Surgery Needed? The Emerging Question in MSI-High Colon Cancer Treatment</li>
+            </ul>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Content Outline</div>
+            <ul class="outline-list">
+              <li>What the trial found: 9 weeks of pembrolizumab before surgery → zero relapses at 33 months</li>
+              <li>How this compares to standard of care (25% recurrence expected with chemo+surgery)</li>
+              <li>What MSI-high / dMMR means and why it matters for immunotherapy response</li>
+              <li>How many colorectal cancer patients have this subtype (~15%)</li>
+              <li>The personalized ctDNA blood test developed in the trial</li>
+              <li>Is surgery still needed? What the data does and doesn't say about surgery-free futures</li>
+              <li>What patients with colorectal cancer should ask their oncologist</li>
+            </ul>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Key Data Points</div>
+            <ul class="data-points">
+              <li>n=32 patients, dMMR/MSI-high stage 2–3 CRC; 9-week pembrolizumab pre-surgery course</li>
+              <li>59% had no detectable cancer after completing immunotherapy</li>
+              <li>33-month follow-up: zero relapses in any patient</li>
+              <li>Standard of care benchmark: ~25% recurrence in 3 years with surgery+chemo</li>
+              <li>dMMR/MSI-high affects ~15% of all colorectal cancer cases</li>
+              <li>Personalized ctDNA blood test developed to detect residual cancer during treatment</li>
+            </ul>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">⚠ Integrity Flags</div>
+            <div class="integrity-flag">⚠ Small trial: n=32. Remarkable results but cannot be overstated. This needs replication in larger trials before it changes standard of care.</div>
+            <div class="integrity-flag">⚠ MSI-high/dMMR is a specific subtype affecting only ~15% of CRC patients. Headlines must be clear this does not apply to all colorectal cancer.</div>
+            <div class="integrity-flag">⚠ "Surgery-free" future is speculative at this point — trial patients still received surgery. Frame as a promising direction, not a current option.</div>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Sources</div>
+            <div class="sources-row">
+              <a class="source-tag t1" href="https://www.ucl.ac.uk/news/2026/apr/groundbreaking-bowel-cancer-trial-follow-shows-zero-relapses" target="_blank">UCL News</a>
+              <a class="source-tag" href="https://www.sciencedaily.com/releases/2026/05/260505234618.htm" target="_blank">ScienceDaily</a>
+              <a class="source-tag" href="https://ecancer.org/en/news/28096-aacr-2026-groundbreaking-bowel-cancer-trial-follow-up-shows-zero-relapses" target="_blank">ecancer / AACR</a>
+              <a class="source-tag" href="https://www.onclive.com/view/neoadjuvant-pembrolizumab-produces-high-pcr-rate-with-no-relapses-at-3-years-in-high-risk-dmmr-msi-high-crc" target="_blank">OncLive</a>
+            </div>
+          </div>
+          <div class="brief-section">
+            <div class="two-col">
+              <div>
+                <div class="brief-section-title">SEO Keywords</div>
+                <div class="seo-row">
+                  <span class="kw-tag">colorectal cancer immunotherapy</span>
+                  <span class="kw-tag">MSI-high colon cancer treatment</span>
+                  <span class="kw-tag">pembrolizumab colon cancer</span>
+                  <span class="kw-tag">NEOPRISM-CRC trial</span>
+                  <span class="kw-tag">dMMR colon cancer</span>
+                </div>
+              </div>
+              <div>
+                <div class="brief-section-title">Format / Word Count</div>
+                <p style="font-size:12px;color:var(--text-mid)">Research explainer · 900–1,200 words · MedicalCondition schema · Cluster: cancer treatment / immunotherapy</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /briefs-grid P1 -->
+  </div><!-- /priority-group P1 -->
+
+  <!-- P2 GROUP -->
+  <div class="priority-group">
+    <div class="priority-group-header">
+      <span class="badge p2">P2</span>
+      <span class="priority-group-label">This Week — High Value</span>
+      <span class="priority-group-desc">4 topics — full briefs</span>
+    </div>
+    <div class="briefs-grid">
+
+      <!-- BRIEF 6: MEASLES -->
+      <div class="brief-card p2">
+        <div class="brief-header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="brief-meta">
+            <span class="badge p2">P2</span>
+            <span class="urgency today">Today</span>
+          </div>
+          <div class="brief-headline">The US Is About to Lose Measles Elimination Status. What That Actually Means.</div>
+          <div class="brief-angle">1,814 cases, 24 outbreaks, Utah the new hotspot. The data is in. What losing elimination status means in practice — and what it would take to get it back — is where most coverage falls short.</div>
+          <div class="brief-scores">
+            <div class="score-chip">Trend <strong>78</strong></div>
+            <div class="score-chip">Opp <strong>69</strong></div>
+            <div class="score-chip">Discover <strong>3/5</strong></div>
+            <div class="expand-btn">Details <span class="expand-icon">▼</span></div>
+          </div>
+        </div>
+        <div class="brief-body">
+          <div class="brief-section">
+            <div class="brief-section-title">Why Now</div>
+            <div class="why-now">CDC reported 1,814 confirmed cases as of April 30. CIDRAP analysis published this week concludes US is "highly likely" to lose elimination status in fall 2026. Utah has 441 cases — the new hotspot after South Carolina outbreak ended. Johns Hopkins reviewing the status determination process. Story building toward formal CDC announcement.</div>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Angle</div>
+            <p style="font-size:13px;color:var(--text-mid)">Policy/public health explainer. The "what does elimination status actually mean?" question is underserved. Most coverage focuses on case counts. The interesting angle: what changes if we lose it, what CDC/WHO do next, and whether the vaccination rate gap can be closed. Politically sensitive — maintain factual MMR-recommendation framing throughout.</p>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Key Data Points</div>
+            <ul class="data-points">
+              <li>1,814 confirmed US cases as of April 30, 2026 — 24 outbreaks, 93% outbreak-associated</li>
+              <li>Utah: 441 cases — new hotspot after South Carolina's ~1,000-case outbreak ended</li>
+              <li>&gt;90% of cases in people who had not received MMR vaccine</li>
+              <li>National MMR kindergarten coverage below 95% threshold (herd immunity target)</li>
+              <li>US had maintained measles elimination status since 2000</li>
+              <li>CIDRAP: "highly likely" to lose status in fall 2026 based on current trajectory</li>
+            </ul>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">⚠ Integrity Flags</div>
+            <div class="integrity-flag">⚠ Politically sensitive given current vaccine policy environment. Frame entirely around epidemiological data and CDC/WHO guidance. Do not create content that could be read as anti-vaccine or that amplifies vaccine hesitancy.</div>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Sources</div>
+            <div class="sources-row">
+              <a class="source-tag t1" href="https://www.cdc.gov/measles/data-research/index.html" target="_blank">CDC Data</a>
+              <a class="source-tag t1" href="https://www.cidrap.umn.edu/measles/us-highly-likely-lose-measles-elimination-status-fall-analysis-warns" target="_blank">CIDRAP</a>
+              <a class="source-tag t1" href="https://publichealth.jhu.edu/2026/why-review-of-the-uss-measles-elimination-status-has-been-delayed" target="_blank">Johns Hopkins SPH</a>
+              <a class="source-tag" href="https://www.healthline.com/health-news/us-measles-outbreak-2026" target="_blank">Healthline</a>
+            </div>
+          </div>
+          <div class="brief-section">
+            <div class="two-col">
+              <div>
+                <div class="brief-section-title">SEO Keywords</div>
+                <div class="seo-row">
+                  <span class="kw-tag">measles outbreak 2026</span>
+                  <span class="kw-tag">measles elimination status US</span>
+                  <span class="kw-tag">MMR vaccine coverage</span>
+                  <span class="kw-tag">Utah measles outbreak</span>
+                </div>
+              </div>
+              <div>
+                <div class="brief-section-title">Format / Word Count</div>
+                <p style="font-size:12px;color:var(--text-mid)">News explainer · 800–1,000 words · Article schema · Cluster: public health / vaccination</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BRIEF 7: DEPRESSION BLOOD TEST -->
+      <div class="brief-card p2">
+        <div class="brief-header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="brief-meta">
+            <span class="badge p2">P2</span>
+            <span class="urgency week">This Week</span>
+          </div>
+          <div class="brief-headline">A Blood Test for Depression? New Research Points to Immune Cell Aging as a Biomarker</div>
+          <div class="brief-angle">Researchers found that how fast your immune cells age predicts specific symptoms of depression — anhedonia, hopelessness — better than general health markers. Not a test you can get yet, but a meaningful step forward.</div>
+          <div class="brief-scores">
+            <div class="score-chip">Trend <strong>58</strong></div>
+            <div class="score-chip">Opp <strong>81</strong></div>
+            <div class="score-chip">Discover <strong>4/5</strong></div>
+            <div class="expand-btn">Details <span class="expand-icon">▼</span></div>
+          </div>
+        </div>
+        <div class="brief-body">
+          <div class="brief-section">
+            <div class="brief-section-title">Why Now</div>
+            <div class="why-now">Published May 4 in Journals of Gerontology. ScienceDaily, News-Medical, and Medicalxpress covered the research release May 4–7. Minimal patient-facing coverage exists. High audience interest in depression diagnostics (mental health is the #1 searched health category). The epigenetic clock framing is novel enough to be genuinely interesting without overpromising clinical availability.</div>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Angle</div>
+            <p style="font-size:13px;color:var(--text-mid)">Science explainer with honest future-framing. What are epigenetic clocks? What does monocyte aging signal? What specific depression symptoms (anhedonia, hopelessness) are linked vs. which aren't (fatigue, sleep issues)? Why that distinction matters for diagnosis and treatment personalization. Clearly frame as early-stage research, not imminent clinical tool.</p>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Key Data Points</div>
+            <ul class="data-points">
+              <li>Study: 440 women (261 with HIV, 179 without) — Women's Interagency HIV Study</li>
+              <li>Published: Journals of Gerontology Series A, May 2026</li>
+              <li>Accelerated monocyte aging linked to anhedonia, hopelessness, feelings of failure — not fatigue</li>
+              <li>Two epigenetic clocks used: pan-tissue clock + monocyte-specific clock</li>
+              <li>Monocyte-specific clock was more sensitive for non-somatic depression symptoms</li>
+              <li>Hypothesis: chronic inflammation driving both immune aging and depressive symptoms</li>
+            </ul>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">⚠ Integrity Flags</div>
+            <div class="integrity-flag">⚠ Women-only cohort (HIV study population). Cannot generalize findings to men or the broader population without further research.</div>
+            <div class="integrity-flag">⚠ Observational design — association, not causation. Monocyte epigenetic clock is not clinically available. Manage reader expectations on timeline to a real test.</div>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Sources</div>
+            <div class="sources-row">
+              <a class="source-tag t1" href="https://www.sciencedaily.com/releases/2026/05/260504023827.htm" target="_blank">ScienceDaily</a>
+              <a class="source-tag" href="https://www.news-medical.net/news/20260504/Cellular-aging-in-immune-cells-signals-early-onset-of-cognitive-depression.aspx" target="_blank">News-Medical</a>
+              <a class="source-tag" href="https://distilinfo.com/2026/05/07/biological-aging-marker-predicts-depression-symptoms/" target="_blank">DistilINFO</a>
+            </div>
+          </div>
+          <div class="brief-section">
+            <div class="two-col">
+              <div>
+                <div class="brief-section-title">SEO Keywords</div>
+                <div class="seo-row">
+                  <span class="kw-tag">depression blood test</span>
+                  <span class="kw-tag">epigenetic clock depression</span>
+                  <span class="kw-tag">immune cells depression research</span>
+                  <span class="kw-tag">biomarker for depression</span>
+                </div>
+              </div>
+              <div>
+                <div class="brief-section-title">Format / Word Count</div>
+                <p style="font-size:12px;color:var(--text-mid)">Research explainer · 800–1,000 words · Article schema · Cluster: mental health / diagnostics</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BRIEF 8: FOUNDAYO MEDICARE -->
+      <div class="brief-card p2">
+        <div class="brief-header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="brief-meta">
+            <span class="badge p2">P2</span>
+            <span class="urgency week">This Week</span>
+          </div>
+          <div class="brief-headline">The Oral GLP-1 Pill Is Coming to Medicare for $50/Month — What You Need to Know Before July</div>
+          <div class="brief-angle">Foundayo (orforglipron) was FDA approved April 1. Starting July 1, Medicare Part D covers it at $50/month. Here's who qualifies, how it compares to injectable GLP-1s, and whether the switch makes sense.</div>
+          <div class="brief-scores">
+            <div class="score-chip">Trend <strong>72</strong></div>
+            <div class="score-chip">Opp <strong>79</strong></div>
+            <div class="score-chip">Discover <strong>4/5</strong></div>
+            <div class="expand-btn">Details <span class="expand-icon">▼</span></div>
+          </div>
+        </div>
+        <div class="brief-body">
+          <div class="brief-section">
+            <div class="brief-section-title">Why Now</div>
+            <div class="why-now">CMS launched its voluntary weight loss drug access model May 6 (KFF coverage). Medicare Part D access at $50/month begins July 1. Self-pay starts at $149/month now. Drug approved April 1 — fastest NME approval since 2002. Patient-facing access guide underserved; most coverage is clinical/policy oriented.</div>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Key Data Points</div>
+            <ul class="data-points">
+              <li>FDA approved April 1, 2026 — orforglipron (Foundayo™), Eli Lilly</li>
+              <li>First GLP-1 pill with no food or water timing restrictions (unlike oral semaglutide)</li>
+              <li>Phase 3 (ATTAIN-1): –7.5% to –11.2% weight loss at 72 weeks vs. –2.1% placebo</li>
+              <li>Medicare Part D: ~$50/month starting July 1 · Self-pay: $149/month (lowest dose) · Commercial: as low as $25/month with savings card</li>
+              <li>Available now via LillyDirect, retail pharmacies, and telehealth providers</li>
+            </ul>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Angle</div>
+            <p style="font-size:13px;color:var(--text-mid)">Practical access guide. Who qualifies (obesity BMI ≥30, or ≥27 with weight-related condition). How efficacy compares to Wegovy (~15%) — Foundayo shows 7.5–11.2%, lower but meaningful. Why "take anytime" matters for adherence. When Medicare coverage kicks in and what patients should do now to prepare.</p>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Sources</div>
+            <div class="sources-row">
+              <a class="source-tag t1" href="https://jamanetwork.com/journals/jama/fullarticle/2848076" target="_blank">JAMA Approval</a>
+              <a class="source-tag t1" href="https://investor.lilly.com/news-releases/news-release-details/fda-approves-lillys-foundayotm-orforglipron-only-glp-1-pill" target="_blank">Lilly/FDA</a>
+              <a class="source-tag" href="https://kffhealthnews.org/medicare/cheaper-glp-1-weight-loss-medicare-bridge-wegovy-zepbound-foundayo/" target="_blank">KFF Health News</a>
+              <a class="source-tag" href="https://www.medicalnewstoday.com/articles/new-ozempic-pill-may-offer-more-affordable-alternative-to-injectables" target="_blank">MNT</a>
+            </div>
+          </div>
+          <div class="brief-section">
+            <div class="two-col">
+              <div>
+                <div class="brief-section-title">SEO Keywords</div>
+                <div class="seo-row">
+                  <span class="kw-tag">orforglipron Foundayo</span>
+                  <span class="kw-tag">oral GLP-1 pill</span>
+                  <span class="kw-tag">GLP-1 Medicare coverage 2026</span>
+                  <span class="kw-tag">weight loss pill FDA approved</span>
+                </div>
+              </div>
+              <div>
+                <div class="brief-section-title">Format / Word Count</div>
+                <p style="font-size:12px;color:var(--text-mid)">Practical guide · 800–1,000 words · Drug schema · Cluster: GLP-1 / obesity treatment</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BRIEF 9: AHA BRAIN HEALTH -->
+      <div class="brief-card p2">
+        <div class="brief-header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="brief-meta">
+            <span class="badge p2">P2</span>
+            <span class="urgency week">This Week</span>
+          </div>
+          <div class="brief-headline">The AHA Just Identified 10 Brain Health Factors You Can Act On. Here's the List.</div>
+          <div class="brief-angle">The American Heart Association updated its guidance to include 10 lifetime factors that shape dementia and stroke risk — covering physical, mental, environmental, and lifestyle domains. Most people are only hearing about 3 or 4 of them.</div>
+          <div class="brief-scores">
+            <div class="score-chip">Trend <strong>64</strong></div>
+            <div class="score-chip">Opp <strong>80</strong></div>
+            <div class="score-chip">Discover <strong>4/5</strong></div>
+            <div class="expand-btn">Details <span class="expand-icon">▼</span></div>
+          </div>
+        </div>
+        <div class="brief-body">
+          <div class="brief-section">
+            <div class="brief-section-title">Why Now</div>
+            <div class="why-now">Medical News Today published coverage May 5. AHA guidance is authoritative, audience relevance extremely high (dementia is one of the most feared conditions for this audience). The "10 factors" framing is inherently listable and high-Discover potential. SERP for "dementia prevention" is moderately competitive but AHA-anchored content outranks generic lifestyle pieces.</div>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Angle</div>
+            <p style="font-size:13px;color:var(--text-mid)">Actionable AHA-anchored guide. The 10 factors span physical activity, diet, sleep, blood pressure, blood sugar, weight, smoking, hearing loss, air pollution, and mental health. Each factor explained with the strength of evidence behind it — not a generic listicle, but a prioritized guide with evidence tiers.</p>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Key Data Points</div>
+            <ul class="data-points">
+              <li>AHA expanded its "Life's Essential 8" framework to include environmental and mental health factors</li>
+              <li>10 factors: physical activity, diet, sleep, blood pressure, blood glucose, weight, smoking, cholesterol, hearing loss, mental health/stress</li>
+              <li>Environmental factor (air pollution) now included in updated guidance</li>
+              <li>Hearing loss: recently added as modifiable risk factor with strong evidence</li>
+              <li>Guidance covers the full lifespan — interventions in midlife have outsized long-term impact</li>
+            </ul>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Sources</div>
+            <div class="sources-row">
+              <a class="source-tag t1" href="https://www.medicalnewstoday.com/articles/brain-health-shaped-by-8-lifetime-mental-physical-environmental-and-lifestyle-factors" target="_blank">MNT / AHA</a>
+              <a class="source-tag t1" href="https://www.heart.org/" target="_blank">American Heart Association</a>
+            </div>
+          </div>
+          <div class="brief-section">
+            <div class="two-col">
+              <div>
+                <div class="brief-section-title">SEO Keywords</div>
+                <div class="seo-row">
+                  <span class="kw-tag">dementia prevention factors</span>
+                  <span class="kw-tag">AHA brain health 2026</span>
+                  <span class="kw-tag">how to lower dementia risk</span>
+                  <span class="kw-tag">stroke risk reduction</span>
+                </div>
+              </div>
+              <div>
+                <div class="brief-section-title">Format / Word Count</div>
+                <p style="font-size:12px;color:var(--text-mid)">Actionable list/guide · 900–1,100 words · HowTo schema · Cluster: aging / brain health</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /briefs-grid P2 -->
+  </div><!-- /priority-group P2 -->
+
+  <!-- P3 GROUP -->
+  <div class="priority-group">
+    <div class="priority-group-header">
+      <span class="badge p3">P3</span>
+      <span class="priority-group-label">Schedule This Week</span>
+      <span class="priority-group-desc">5 topics — concise briefs</span>
+    </div>
+    <div class="briefs-grid">
+
+      <!-- P3 BRIEF 10: ALCOHOL -->
+      <div class="brief-card p3">
+        <div class="brief-header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="brief-meta"><span class="badge p3">P3</span><span class="urgency week">This Week</span></div>
+          <div class="brief-headline">Even Light Drinking May Damage Brain Health, New Research Suggests</div>
+          <div class="brief-angle">Challenges the "moderate drinking is fine" narrative with neuroimaging evidence.</div>
+          <div class="brief-scores">
+            <div class="score-chip">Trend <strong>59</strong></div>
+            <div class="score-chip">Opp <strong>77</strong></div>
+            <div class="expand-btn">Details <span class="expand-icon">▼</span></div>
+          </div>
+        </div>
+        <div class="brief-body">
+          <div class="brief-section">
+            <div class="brief-section-title">Brief</div>
+            <p style="font-size:13px;color:var(--text-mid)">Medical News Today (May 3) covered new research showing measurable brain health effects even from small amounts of alcohol. Angle: "no safe level" evidence growing — what does the research actually show and what does it mean for your relationship with alcohol? SERP: low competition for the "even light drinking" framing. Strong skepticism angle against moderate drinking guidance.</p>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Key Data + Sources</div>
+            <ul class="data-points">
+              <li>Brain structure changes detectable at low consumption levels in neuroimaging studies</li>
+              <li>No threshold established as "safe" in current brain health literature</li>
+            </ul>
+            <div class="sources-row" style="margin-top:8px">
+              <a class="source-tag" href="https://www.medicalnewstoday.com/articles/even-a-little-alcohol-here-and-there-damages-brain-health" target="_blank">MNT</a>
+            </div>
+          </div>
+          <div class="brief-section">
+            <div class="two-col">
+              <div>
+                <div class="brief-section-title">SEO Keywords</div>
+                <div class="seo-row">
+                  <span class="kw-tag">alcohol brain health</span>
+                  <span class="kw-tag">light drinking brain damage</span>
+                  <span class="kw-tag">no safe level of alcohol</span>
+                </div>
+              </div>
+              <div>
+                <div class="brief-section-title">Format</div>
+                <p style="font-size:12px;color:var(--text-mid)">Research explainer · 600–800 words · Cluster: nutrition / brain health</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- P3 BRIEF 11: UPF HEART DISEASE -->
+      <div class="brief-card p3">
+        <div class="brief-header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="brief-meta"><span class="badge p3">P3</span><span class="urgency week">This Week</span></div>
+          <div class="brief-headline">The Ultra-Processed Foods Most Linked to Heart Disease — and the Swaps That Help</div>
+          <div class="brief-angle">Not all ultra-processed foods are equal risk. The actionable swap angle is underserved in a saturated UPF topic area. <em>Note: UPF appeared in yesterday's run (colorectal angle). Second consecutive run — flag if it appears again next week.</em></div>
+          <div class="brief-scores">
+            <div class="score-chip">Trend <strong>63</strong></div>
+            <div class="score-chip">Opp <strong>72</strong></div>
+            <div class="expand-btn">Details <span class="expand-icon">▼</span></div>
+          </div>
+        </div>
+        <div class="brief-body">
+          <div class="brief-section">
+            <div class="brief-section-title">Brief</div>
+            <p style="font-size:13px;color:var(--text-mid)">Healthline (May 7) covered new research linking ultra-processed foods to heart disease with a "healthy swaps" frame. SERP: heavily saturated generally, but the swaps angle at food-type specificity level is less covered. Differentiate by specifying which food categories carry the highest cardiovascular risk (processed meats, sugary drinks, packaged snacks) vs. lower risk processed foods (canned legumes, plain yogurt).</p>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Key Sources</div>
+            <div class="sources-row">
+              <a class="source-tag" href="https://www.healthline.com/health-news/ultra-processed-foods-heart-disease-healthy-swaps" target="_blank">Healthline</a>
+            </div>
+          </div>
+          <div class="brief-section">
+            <div class="two-col">
+              <div>
+                <div class="brief-section-title">SEO Keywords</div>
+                <div class="seo-row">
+                  <span class="kw-tag">ultra-processed foods heart disease</span>
+                  <span class="kw-tag">UPF cardiovascular risk</span>
+                  <span class="kw-tag">healthy food swaps</span>
+                </div>
+              </div>
+              <div>
+                <div class="brief-section-title">Format</div>
+                <p style="font-size:12px;color:var(--text-mid)">Actionable nutrition guide · 700–900 words · Cluster: nutrition / heart health</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- P3 BRIEF 12: GLP-1 BRAIN HEALTH -->
+      <div class="brief-card p3">
+        <div class="brief-header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="brief-meta"><span class="badge p3">P3</span><span class="urgency week">This Week</span></div>
+          <div class="brief-headline">Can Ozempic Protect Your Brain? What UCSF's Research Shows — and What Novo Nordisk's Failed Trial Means</div>
+          <div class="brief-angle">UCSF says GLP-1s reduce brain inflammation and may protect against neurodegeneration. Novo Nordisk's Evoke/Evoke+ trials failed to confirm semaglutide benefit in existing Alzheimer's. Both are true simultaneously.</div>
+          <div class="brief-scores">
+            <div class="score-chip">Trend <strong>67</strong></div>
+            <div class="score-chip">Opp <strong>73</strong></div>
+            <div class="expand-btn">Details <span class="expand-icon">▼</span></div>
+          </div>
+        </div>
+        <div class="brief-body">
+          <div class="brief-section">
+            <div class="brief-section-title">Brief</div>
+            <p style="font-size:13px;color:var(--text-mid)">UCSF May 2026 review examines neuroprotective mechanisms of GLP-1 drugs (neuroinflammation reduction, synaptic plasticity, blood-brain barrier). Observational data: 53% lower dementia risk in T2D patients on GLP-1s vs. placebo (Danish cohort). RCT data: Evoke/Evoke+ trials failed to show semaglutide benefit for established Alzheimer's. SERP heavily saturated but the "here's the contradiction and what it means" framing is a SERP gap. Integrity flag: do not present dementia prevention as established — it's not.</p>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">⚠ Integrity Flag</div>
+            <div class="integrity-flag">⚠ Evoke/Evoke+ RCT failed. Animal and observational data promising but human trial evidence for existing Alzheimer's is not supportive. Present nuance — prevention vs. treatment are different questions.</div>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Key Sources</div>
+            <div class="sources-row">
+              <a class="source-tag t1" href="https://www.ucsf.edu/news/2026/05/431871/can-blockbuster-glp-1-weight-loss-drugs-also-protect-brain-health" target="_blank">UCSF</a>
+              <a class="source-tag" href="https://www.medicalnewstoday.com/articles/glp-1-drugs-like-ozempic-may-protect-brain-health" target="_blank">MNT</a>
+              <a class="source-tag" href="https://www.healthline.com/health-news/can-ozempic-and-other-glp-1-drugs-reduce-alzheimers-disease-risk" target="_blank">Healthline</a>
+            </div>
+          </div>
+          <div class="brief-section">
+            <div class="two-col">
+              <div>
+                <div class="brief-section-title">SEO Keywords</div>
+                <div class="seo-row">
+                  <span class="kw-tag">Ozempic brain health</span>
+                  <span class="kw-tag">GLP-1 dementia prevention</span>
+                  <span class="kw-tag">semaglutide Alzheimer's</span>
+                </div>
+              </div>
+              <div>
+                <div class="brief-section-title">Format</div>
+                <p style="font-size:12px;color:var(--text-mid)">Balanced analysis · 700–900 words · Cluster: GLP-1 / brain health</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- P3 BRIEF 13: ECCENTRIC EXERCISE -->
+      <div class="brief-card p3">
+        <div class="brief-header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="brief-meta"><span class="badge p3">P3</span><span class="urgency week">This Week</span></div>
+          <div class="brief-headline">Eccentric Training: The Science Behind Getting Stronger With Shorter Workouts</div>
+          <div class="brief-angle">Lowering weights slowly builds more muscle with less total effort — and the research is solid. Most gym-goers don't know this.</div>
+          <div class="brief-scores">
+            <div class="score-chip">Trend <strong>54</strong></div>
+            <div class="score-chip">Opp <strong>75</strong></div>
+            <div class="expand-btn">Details <span class="expand-icon">▼</span></div>
+          </div>
+        </div>
+        <div class="brief-body">
+          <div class="brief-section">
+            <div class="brief-section-title">Brief</div>
+            <p style="font-size:13px;color:var(--text-mid)">Healthline (May 1) covered new research showing eccentric muscle contractions (the lowering phase of a lift) produce greater strength and size gains per unit of effort. Low SERP competition for "eccentric training" at a general audience level. Practical explainer: what eccentric training is, why it works (micro-tears, time under tension), how to add it to a routine without equipment.</p>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Key Source</div>
+            <div class="sources-row"><a class="source-tag" href="https://www.healthline.com/health-news/eccentric-exercise-builds-muscle-strength-size-less-effort" target="_blank">Healthline</a></div>
+          </div>
+          <div class="brief-section">
+            <div class="two-col">
+              <div>
+                <div class="brief-section-title">SEO Keywords</div>
+                <div class="seo-row">
+                  <span class="kw-tag">eccentric training</span>
+                  <span class="kw-tag">eccentric exercise muscle</span>
+                  <span class="kw-tag">how to build muscle faster</span>
+                </div>
+              </div>
+              <div>
+                <div class="brief-section-title">Format</div>
+                <p style="font-size:12px;color:var(--text-mid)">Practical fitness guide · 600–800 words · Cluster: fitness / strength training</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- P3 BRIEF 14: PERIMENOPAUSE -->
+      <div class="brief-card p3">
+        <div class="brief-header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="brief-meta"><span class="badge p3">P3</span><span class="urgency evergreen">Evergreen</span></div>
+          <div class="brief-headline">OB-GYNs Say Most Women Reach Perimenopause Without Recognizing It — Here's the Full Picture</div>
+          <div class="brief-angle">Perimenopause can start in the mid-30s, lasts years, and mimics other conditions. An OB-GYN-anchored guide with real management strategies.</div>
+          <div class="brief-scores">
+            <div class="score-chip">Trend <strong>57</strong></div>
+            <div class="score-chip">Opp <strong>75</strong></div>
+            <div class="expand-btn">Details <span class="expand-icon">▼</span></div>
+          </div>
+        </div>
+        <div class="brief-body">
+          <div class="brief-section">
+            <div class="brief-section-title">Brief</div>
+            <p style="font-size:13px;color:var(--text-mid)">Medical News Today (May 7) published an OB-GYN Q&amp;A on perimenopause management covering diet, exercise, sleep, and clinical options. Women's health is a rising search category in 2026. SERP gap: most perimenopause content is thin and symptom-list focused. OB-GYN-sourced management guide with specific lifestyle recommendations and clear framing on when hormone therapy is appropriate is underserved.</p>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Key Source</div>
+            <div class="sources-row"><a class="source-tag" href="https://www.medicalnewstoday.com/articles/expert-qa-perimenopause-management-diet-exercise-sleep-tips-obgyn" target="_blank">MNT OB-GYN Q&amp;A</a></div>
+          </div>
+          <div class="brief-section">
+            <div class="two-col">
+              <div>
+                <div class="brief-section-title">SEO Keywords</div>
+                <div class="seo-row">
+                  <span class="kw-tag">perimenopause symptoms</span>
+                  <span class="kw-tag">perimenopause management</span>
+                  <span class="kw-tag">how to know if you're in perimenopause</span>
+                </div>
+              </div>
+              <div>
+                <div class="brief-section-title">Format</div>
+                <p style="font-size:12px;color:var(--text-mid)">Evergreen guide · 1,000–1,300 words · FAQPage schema · Cluster: women's health / hormones</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /briefs-grid P3 -->
+  </div><!-- /priority-group P3 -->
+
+</div><!-- /briefs-section -->
+
+<!-- REJECTED TOPICS LOG -->
+<div class="section-title">Rejected Topics</div>
+<div class="table-wrap" style="margin-bottom:40px">
+  <table class="rejected-table">
+    <thead>
+      <tr><th>Topic</th><th>Rejection Reason</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Dolly Parton health update / Las Vegas cancellation</td><td class="reject-reason">excluded_category: celebrity wellness without evidence base</td></tr>
+      <tr><td>Nicole Kidman death doula training</td><td class="reject-reason">excluded_category: celebrity lifestyle</td></tr>
+      <tr><td>Office air theory for skin and hair</td><td class="reject-reason">off_category: low credibility, not in allowed categories</td></tr>
+      <tr><td>Trump drug price reality check (KFF)</td><td class="reject-reason">excluded_category: pure political/business, no clinical health angle</td></tr>
+      <tr><td>Pharmacy discount coupon hidden costs</td><td class="reject-reason">off_category: health system policy, no clinical content</td></tr>
+      <tr><td>California single-payer governor race</td><td class="reject-reason">excluded_category: pure political healthcare opinion</td></tr>
+      <tr><td>Trump addiction services funding cuts</td><td class="reject-reason">excluded_category: pure political, no new clinical data</td></tr>
+      <tr><td>Hospital shootings rise since 2000</td><td class="reject-reason">off_category: public safety, not health science</td></tr>
+      <tr><td>FDA gender rule change (removing "gender" from regulations)</td><td class="reject-reason">off_category: regulatory policy, no patient health angle</td></tr>
+      <tr><td>AI fake citations in medical research (Lancet study)</td><td class="reject-reason">off_category: research process integrity, not health topic</td></tr>
+      <tr><td>Aging scientific workforce innovation study</td><td class="reject-reason">off_category: research workforce, not health topic</td></tr>
+      <tr><td>H5N1 infectious virus in dairy farm milking parlors</td><td class="reject-reason">duplicate: H5N1 covered in yesterday's run (run_history key theme). No materially new patient angle vs. prior coverage. Flag for resurgence if new transmission event occurs.</td></tr>
+      <tr><td>Coffee + gut microbiome stress reduction (Healthline)</td><td class="reject-reason">freshness: published April 28 — outside 5-day freshness_window_hours=120</td></tr>
+      <tr><td>Midlife fitness promotes longevity (Healthline)</td><td class="reject-reason">freshness: published April 28 — outside freshness window</td></tr>
+      <tr><td>Omega-3 / fish oil and brain repair concern</td><td class="reject-reason">weak_signal: contradictory sources, single speculative study, claim_verified: false</td></tr>
+      <tr><td>Vitamin D for brain health / diabetes / IBD</td><td class="reject-reason">off_category: evergreen topic, no fresh primary source this week</td></tr>
+      <tr><td>Postpartum depression US mothers not recovering (WebMD)</td><td class="reject-reason">weak_signal: WebMD story with no fresh primary source or new study this week; candidate for future run if new data emerges</td></tr>
+      <tr><td>Federal worker health data / OPM unredacted medical records</td><td class="reject-reason">brand_safety: privacy/policy story without clinical health content; borderline criteria not met (no health evidence angle)</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- RUN ARCHIVE -->
+<div class="section-title">Run Archive — May 8, 2026</div>
+<div class="archive-box">
+  <div class="archive-grid">
+    <div><div class="archive-label">Run Date</div><div class="archive-val">2026-05-08</div></div>
+    <div><div class="archive-label">Niche</div><div class="archive-val">Health &amp; Wellness</div></div>
+    <div><div class="archive-label">Signals Reviewed</div><div class="archive-val">~75</div></div>
+    <div><div class="archive-label">Topics Retained</div><div class="archive-val">14</div></div>
+    <div><div class="archive-label">Topics Rejected</div><div class="archive-val">~61</div></div>
+    <div><div class="archive-label">P1</div><div class="archive-val">5</div></div>
+    <div><div class="archive-label">P2</div><div class="archive-val">4</div></div>
+    <div><div class="archive-label">P3</div><div class="archive-val">5</div></div>
+    <div><div class="archive-label">Integrity Flags</div><div class="archive-val">8</div></div>
+    <div><div class="archive-label">Top Topic</div><div class="archive-val">FDA blocks vaccine safety studies</div></div>
+    <div><div class="archive-label">Google Trends</div><div class="archive-val">Unavailable</div></div>
+    <div><div class="archive-label">Velocity Source</div><div class="archive-val">Estimated</div></div>
+  </div>
+  <div class="archive-notes">
+    <strong>Key Themes:</strong> FDA/vaccine data suppression (update from run 1) · Hantavirus cruise ship outbreak · Pancreatic cancer RAS inhibitor breakthrough · Next-gen GLP-1 drugs (survodutide Phase 3; Foundayo Medicare access) · Pembrolizumab bowel cancer zero relapses · Measles elimination status threat · Depression epigenetic biomarker · AHA brain health factors · Alcohol brain damage · Eccentric training · Perimenopause<br><br>
+    <strong>Cross-run notes:</strong> FDA/vaccine story is a direct continuation of run 1's "FDA/NIH restructuring" theme — materially escalated (specific studies named, WaPo/NYT primary reporting). Ultra-processed foods appeared in both runs (colorectal run 1; heart disease run 2) — flag as recurring if it appears in run 3. H5N1 deferred: covered in run 1, no new patient angle this run. GLP-1 cluster expanding across both runs — healthy ongoing coverage given sustained audience interest.<br><br>
+    <strong>Tools unavailable (same as run 1):</strong> COMPOSIO_SEARCH_TRENDS, SERPAPI_TRENDS_SEARCH, SERPAPI_NEWS_SEARCH, ExaSearch, Reddit JSON feeds. Search velocity estimated from news volume + source credibility throughout.
+  </div>
+</div>
+
+</div><!-- /main -->
+
+<div class="footer">Trending Content OS · Run 2 · May 8, 2026 · Health &amp; Wellness · Generated by Claude Code</div>
+
+<script>
+  document.querySelectorAll('.brief-header').forEach(function(header) {
+    header.addEventListener('click', function() {
+      this.parentElement.classList.toggle('open');
+    });
+  });
+</script>
+</body>
+</html>

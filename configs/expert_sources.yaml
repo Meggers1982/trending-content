@@ -1,0 +1,89 @@
+# Expert source types — used by Skill 08 (Expert Source Finder)
+
+expert_types:
+  clinical_medicine:
+    - Board-certified physician (specify specialty: cardiology, oncology, endocrinology, psychiatry, etc.)
+    - Primary care physician / internist (for general health topics)
+    - Surgeon (for procedural / surgical topics)
+    - Nurse practitioner or physician assistant (for patient care perspective)
+  research_and_academia:
+    - Epidemiologist (PhD or MD/PhD, published in peer-reviewed journals)
+    - Clinical researcher / principal investigator (active NIH-funded or equivalent)
+    - University professor (medicine, public health, nutrition science, exercise science, psychology)
+    - Biostatistician (for study methodology and data interpretation)
+  nutrition_and_dietetics:
+    - Registered Dietitian Nutritionist (RDN)
+    - Nutrition scientist (PhD, published)
+    - Sports dietitian (CSSD)
+  mental_health:
+    - Clinical psychologist (PhD/PsyD, licensed)
+    - Psychiatrist (MD, board-certified)
+    - Licensed clinical social worker (LCSW) — for therapy modality topics
+    - Neuropsychologist — for brain health / cognitive topics
+  public_health:
+    - Public health official (CDC, state/local health department)
+    - Global health researcher (WHO-affiliated or equivalent)
+    - Health policy researcher (think tank or university-affiliated)
+    - Infectious disease epidemiologist
+  fitness_and_sports_medicine:
+    - Exercise physiologist (PhD or certified, ACSM)
+    - Sports medicine physician (board-certified)
+    - Physical therapist (DPT)
+    - Certified strength and conditioning specialist (CSCS)
+  specialized:
+    - Sleep medicine specialist (board-certified)
+    - Gastroenterologist (for gut health / microbiome)
+    - Dermatologist (for skin health)
+    - Geriatrician (for aging / longevity)
+    - OB/GYN (for women's health / reproductive health)
+    - Pediatrician (for child health)
+
+academic_institutions:
+  - Harvard T.H. Chan School of Public Health
+  - Johns Hopkins Bloomberg School of Public Health
+  - Mayo Clinic Research
+  - Cleveland Clinic Lerner Research Institute
+  - Stanford Medicine
+  - NIH Intramural Research Program
+  - CDC Division of Research
+  - University of California San Francisco (UCSF) Medical Center
+  - Columbia Mailman School of Public Health
+  - Tufts Friedman School of Nutrition Science and Policy
+
+professional_organizations:
+  - American Medical Association (AMA)
+  - American Heart Association (AHA)
+  - American Cancer Society (ACS)
+  - American Diabetes Association (ADA)
+  - American Psychological Association (APA)
+  - Academy of Nutrition and Dietetics
+  - American College of Sports Medicine (ACSM)
+  - Infectious Diseases Society of America (IDSA)
+  - American Academy of Pediatrics (AAP)
+  - National Academy of Medicine
+
+industry_domains:
+  - cdc.gov                    # Advisories, MMWR reports, data releases
+  - nih.gov                    # Research news, clinical trial results
+  - fda.gov                    # Drug approvals, recalls, safety alerts
+  - who.int                    # Global health advisories, disease outbreaks
+  - mayoclinic.org             # Clinical perspectives, patient education
+  - clevelandclinic.org        # Clinical perspectives
+  - pubmed.ncbi.nlm.nih.gov   # Primary literature search
+  - clinicaltrials.gov         # Active and completed trial data
+  - cochranelibrary.com        # Systematic reviews and meta-analyses
+
+# ── How to source expert input WITHOUT direct outreach ──────
+# For trend content, use these methods in order:
+# 1. Cite existing published quote from credible outlet (STAT, NYT, Reuters — link to source)
+# 2. Reference named researcher from a study already in source_evidence
+# 3. Pull statement from institution's official press release, guideline, or advisory
+# 4. Use published clinical data from ClinicalTrials.gov or Cochrane reviews
+# 5. Reference a physician's published commentary in a medical journal
+#
+# Health-specific sourcing rules:
+# - ALWAYS prefer peer-reviewed sources over press releases
+# - ALWAYS note if study is observational vs randomized controlled trial
+# - NEVER present association as causation
+# - NEVER generalize animal study results to humans without explicit qualification
+# - If an expert's statement contradicts consensus, note the consensus alongside it

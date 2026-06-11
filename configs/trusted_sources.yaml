@@ -1,0 +1,89 @@
+trusted_sources:
+  government_and_institutional:
+    tier_1: [CDC (cdc.gov), NIH / NCBI (nih.gov), FDA (fda.gov), WHO (who.int), USDA Dietary Guidelines]
+    tier_2: [HHS (hhs.gov), EPA (health topics), AHRQ, state health departments (when national relevance)]
+  peer_reviewed_journals:
+    tier_1: [NEJM, The Lancet, JAMA, BMJ, Nature Medicine, Science, Annals of Internal Medicine]
+    tier_2: [JAMA Network Open, The Lancet Public Health, Nutrients, Cell Metabolism, Sleep, Gut, Pediatrics, Circulation, Diabetes Care]
+  medical_institutions:
+    tier_1: [Mayo Clinic, Cleveland Clinic, Johns Hopkins Medicine, Harvard Health Publishing, Memorial Sloan Kettering]
+    tier_2: [Stanford Medicine, Mass General, Mount Sinai, MD Anderson, UCLA Health]
+  health_journalism:
+    tier_1: [STAT News, NYT Well, Washington Post Health, NPR Health, Reuters Health]
+    tier_2: [CNN Health, NBC News Health, AP Health, Kaiser Health News (KFF Health News), The Guardian Health]
+  health_media:
+    tier_1: [Healthline, WebMD, Medical News Today]
+    tier_2: [Verywell Health, Health.com, Everyday Health, Prevention, Well+Good]
+  research_aggregators:
+    tier_1: [PubMed, Cochrane Library, ClinicalTrials.gov]
+    tier_2: [Google Scholar, Semantic Scholar, Medscape]
+
+# Tier scores: tier_1 = 100, tier_2 = 60, social-only = 20
+
+rss_feeds:
+  government:
+    - name: CDC Newsroom
+      url: https://tools.cdc.gov/api/v2/resources/media/404952.rss
+    - name: FDA Press Announcements
+      url: https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/fda-news-releases/rss.xml
+    - name: NIH News Releases
+      url: https://www.nih.gov/rss/news/news-releases.xml
+    - name: WHO Disease Outbreak News
+      url: https://www.who.int/rss-feeds/news-english.xml
+  journals:
+    - name: NEJM This Week
+      url: https://www.nejm.org/action/showFeed?ui=0&ui=0&type=etoc&feed=rss&jc=nejm
+    - name: JAMA Current Issue
+      url: https://jamanetwork.com/rss/site_3/67.xml
+    - name: The Lancet Online First
+      url: https://www.thelancet.com/rssfeed/lancet_online.xml
+    - name: BMJ Research
+      url: https://www.bmj.com/rss/research.xml
+    - name: Nature Medicine
+      url: https://www.nature.com/nm.rss
+  health_journalism:
+    - name: STAT News
+      url: https://www.statnews.com/feed/
+    - name: KFF Health News
+      url: https://kffhealthnews.org/feed/
+    - name: NPR Health Shots
+      url: https://feeds.npr.org/103943429/rss.xml
+    - name: Reuters Health
+      url: https://feeds.reuters.com/reuters/healthNews
+  health_media:
+    - name: Healthline Latest
+      url: https://www.healthline.com/rss/health-news
+    - name: Medical News Today
+      url: https://www.medicalnewstoday.com/rss/
+    - name: WebMD Health News
+      url: https://rssfeeds.webmd.com/rss/rss.aspx?RSSSource=RSS_PUBLIC
+
+subreddits:
+  # Query /new.json, last 24h, min 50 upvotes
+  - r/health
+  - r/science  # health flair
+  - r/nutrition
+  - r/fitness
+  - r/medicine
+  - r/mentalhealth
+  - r/sleep
+  - r/longevity
+  - r/Nootropics
+  - r/SkincareAddiction
+  - r/loseit
+  - r/running
+
+twitter_accounts_to_monitor:
+  - "@CDCgov"
+  - "@US_FDA"
+  - "@NIH"
+  - "@WHO"
+  - "@MayoClinic"
+  - "@EricTopol"
+  - "@PeterAttiaMD"
+  - "@DrLacyAlexander"
+  - "@BallouxFrancois"
+  - "@DrLeanaWen"
+  - "@VPrasadMDMPH"
+  - "@TracyBethHöeg"
+  - "@HealthLine"

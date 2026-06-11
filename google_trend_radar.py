@@ -1,0 +1,768 @@
+#!/usr/bin/env python3
+"""
+Google Trend Radar
+
+Creates a standalone trend-discovery dashboard from Google Trends signals
+via SerpAPI. It follows the Trending Content OS pattern: listen, dedupe,
+score, route weak signals out, and publish a compact priority board.
+
+Usage:
+    python google_trend_radar.py --profile wellness
+    python google_trend_radar.py --profile health
+    python google_trend_radar.py --topic "AI tools" --profile ai --geo US --date "now 7-d"
+"""
+
+from __future__ import annotations
+
+import argparse
+import csv
+import json
+import os
+import re
+import smtplib
+import sys
+import urllib.error
+import urllib.parse
+import urllib.request
+from collections import Counter
+from dataclasses import dataclass, field
+from datetime import datetime
+from email import encoders
+from email.mime.base import MIMEBase
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from pathlib import Path
+from statistics import mean
+
+
+PROJECT_ROOT = Path(__file__).resolve().parent
+ENV_PATH = PROJECT_ROOT / ".env"
+OUTPUT_DIR = PROJECT_ROOT / "outputs" / "google_trend_radar"
+TEMPLATE_PATH = PROJECT_ROOT / "google_trend_radar_template.html"
+SERPAPI_BASE = "https://serpapi.com/search"
+
+DEFAULT_SEED_PROFILE = "auto"
+DEFAULT_MAX_SEEDS = 24
+GOOGLE_TRENDS_QUERY_LIMIT = 100
+DEFAULT_REQUEST_TIMEOUT = 12
+DEFAULT_REQUEST_RETRIES = 0
+VERBOSE_ERRORS = False
+REQUEST_FAILURES: Counter[str] = Counter()
+
+SEED_PROFILES = {
+    "wellness": [
+        "wellness",
+        "health",
+        "nutrition",
+        "fitness",
+        "mental health",
+        "public health",
+        "gut health",
+        "fermented foods",
+        "sleep",
+        "weight loss",
+        "healthy recipes",
+        "supplements",
+        "medicine",
+        "skincare",
+        "self care",
+        "workout",
+        "walking",
+        "protein",
+        "plant based protein",
+        "vegan protein",
+        "protein powder",
+        "food safety",
+        "stress",
+        "diet",
+    ],
+    "health": [
+        "health",
+        "wellness",
+        "nutrition",
+        "fitness",
+        "mental health",
+        "public health",
+        "weight loss",
+        "sleep",
+        "gut health",
+        "fermented foods",
+        "diet",
+        "food safety",
+        "medicine",
+        "supplements",
+        "protein",
+        "plant based protein",
+        "vegan protein",
+    ],
+    "ai": [
+        "AI",
+        "artificial intelligence",
+        "AI tools",
+        "generative AI",
+        "ChatGPT",
+        "AI video",
+        "AI search",
+        "AI agents",
+        "AI coding",
+    ],
+}
+
+INTENT_MODIFIERS = [
+    "trends",
+    "products",
+    "news",
+    "for beginners",
+    "routine",
+    "benefits",
+    "ideas",
+    "reviews",
+]
+
+GENERIC_ANCHOR_WORDS = {
+    "best",
+    "near",
+    "news",
+    "new",
+    "trends",
+    "products",
+    "reviews",
+    "routine",
+    "ideas",
+    "benefits",
+    "beginners",
+}
+
+
+@dataclass
+class Candidate:
+    query: str
+    discovery_sources: set[str] = field(default_factory=set)
+    seed_terms: set[str] = field(default_factory=set)
+    related_type: str = "query"
+    rising_value: int | None = None
+    rising_label: str = ""
+    interest_scores: list[int] = field(default_factory=list)
+    first_interest: int = 0
+    latest_interest: int = 0
+    peak_interest: int = 0
+    avg_interest: float = 0.0
+    slope: int = 0
+    acceleration: int = 0
+    emergence_score: int = 0
+    velocity_score: int = 0
+    confidence_score: int = 0
+    radar_score: int = 0
+    trend_stage: str = "watch"
+    urgency: str = "monitor"
+    confidence: str = "low"
+    why_now: str = ""
+    recommended_action: str = ""
+
+
+def load_env(path: Path = ENV_PATH) -> None:
+    if not path.exists():
+        return
+    for line in path.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        key = key.strip()
+        value = value.strip().strip('"').strip("'")
+        if key and key not in os.environ:
+            os.environ[key] = value
+
+
+def serp_get(params: dict, timeout: int = DEFAULT_REQUEST_TIMEOUT, retries: int = DEFAULT_REQUEST_RETRIES) -> dict | None:
+    api_key = os.getenv("SERPAPI_API_KEY", "").strip()
+    if not api_key:
+        return None
+    payload = dict(params)
+    payload["api_key"] = api_key
+    url = SERPAPI_BASE + "?" + urllib.parse.urlencode(payload)
+    label = payload.get("data_type", payload.get("engine"))
+    for attempt in range(retries + 1):
+        try:
+            with urllib.request.urlopen(url, timeout=timeout) as response:
+                return json.loads(response.read().decode("utf-8"))
+        except urllib.error.HTTPError as exc:
+            body = exc.read().decode("utf-8", errors="replace")[:400]
+            print(f"SerpAPI error ({label}): HTTP {exc.code}: {body}", file=sys.stderr)
+            REQUEST_FAILURES[f"{label} HTTP {exc.code}"] += 1
+            return None
+        except TimeoutError:
+            if attempt < retries:
+                if VERBOSE_ERRORS:
+                    print(f"SerpAPI timeout ({label}); retrying...", file=sys.stderr)
+                continue
+            REQUEST_FAILURES[f"{label} timeout"] += 1
+            if VERBOSE_ERRORS:
+                print(f"SerpAPI timeout ({label}); skipped after {timeout}s.", file=sys.stderr)
+        except Exception as exc:
+            message = str(exc)
+            if "timed out" in message.lower() and attempt < retries:
+                if VERBOSE_ERRORS:
+                    print(f"SerpAPI timeout ({label}); retrying...", file=sys.stderr)
+                continue
+            if "timed out" in message.lower():
+                REQUEST_FAILURES[f"{label} timeout"] += 1
+                if VERBOSE_ERRORS:
+                    print(f"SerpAPI timeout ({label}); skipped after {timeout}s.", file=sys.stderr)
+                return None
+            REQUEST_FAILURES[f"{label} error"] += 1
+            print(f"SerpAPI error ({label}): {exc}", file=sys.stderr)
+            return None
+    return None
+
+
+def print_request_summary() -> None:
+    if not REQUEST_FAILURES:
+        return
+    details = ", ".join(f"{count} {label}" for label, count in sorted(REQUEST_FAILURES.items()))
+    print(f"Skipped slow/unavailable SerpAPI calls: {details}", file=sys.stderr)
+
+
+def normalize(text: str) -> str:
+    text = re.sub(r"\s+", " ", text or "").strip().lower()
+    return re.sub(r"[^\w\s#+.-]", "", text)
+
+
+def parse_rising_value(value) -> tuple[int | None, str]:
+    if value is None:
+        return None, ""
+    label = str(value)
+    if "breakout" in label.lower():
+        return 5000, "Breakout"
+    match = re.search(r"([\d,]+)", label)
+    if match:
+        number = int(match.group(1).replace(",", ""))
+        return number, f"+{number}%"
+    if isinstance(value, (int, float)):
+        return int(value), f"+{int(value)}%"
+    return None, label
+
+
+def related_items(data: dict, section: str) -> list[dict]:
+    block = data.get(section, {})
+    items = []
+    for key in ("rising", "top"):
+        group = block.get(key, [])
+        if isinstance(group, dict):
+            group = group.get("items", [])
+        for item in group or []:
+            copied = dict(item)
+            copied["_bucket"] = key
+            items.append(copied)
+    return items
+
+
+def candidate_name(item: dict) -> str:
+    return item.get("query") or item.get("title") or item.get("topic", {}).get("title") or ""
+
+
+def seed_profile_terms(topic: str, profile: str) -> list[str]:
+    profile = (profile or "").strip().lower()
+    topic_key = normalize(topic)
+    if profile in {"none", "off", "custom"}:
+        return []
+    if profile in {"auto", "broad"}:
+        if topic_key in SEED_PROFILES:
+            return SEED_PROFILES[topic_key]
+        for key, terms in SEED_PROFILES.items():
+            if key in topic_key:
+                return terms
+        return []
+    if profile in SEED_PROFILES:
+        return SEED_PROFILES[profile]
+    return []
+
+
+def build_seed_terms(topic: str, manual_seeds: str, profile: str, max_seeds: int) -> list[str]:
+    seeds = [topic.strip()]
+    seeds.extend(seed_profile_terms(topic, profile))
+    seeds.extend(seed.strip() for seed in manual_seeds.split(",") if seed.strip())
+
+    if profile not in {"none", "off", "custom"}:
+        seeds.extend(f"{topic.strip()} {modifier}" for modifier in INTENT_MODIFIERS)
+
+    unique = []
+    seen = set()
+    for seed in seeds:
+        key = normalize(seed)
+        if not key or key in seen:
+            continue
+        unique.append(seed)
+        seen.add(key)
+        if len(unique) >= max_seeds:
+            break
+    return unique
+
+
+def relevance_anchors(topic: str, seeds: list[str]) -> set[str]:
+    anchors = set()
+    for seed in [topic, *seeds]:
+        normalized = normalize(seed)
+        if not normalized:
+            continue
+        anchors.add(normalized)
+        for token in normalized.split():
+            if len(token) >= 4 and token not in GENERIC_ANCHOR_WORDS:
+                anchors.add(token)
+    return anchors
+
+
+def is_relevant_candidate(candidate: Candidate, anchors: set[str]) -> bool:
+    query = normalize(candidate.query)
+    if not query:
+        return False
+    return any(anchor in query for anchor in anchors)
+
+
+def discover_candidates(
+    topic: str,
+    seeds: list[str],
+    geo: str,
+    date: str,
+    limit: int,
+    *,
+    include_related_topics: bool = True,
+    request_timeout: int = DEFAULT_REQUEST_TIMEOUT,
+    request_retries: int = DEFAULT_REQUEST_RETRIES,
+) -> tuple[list[Candidate], list[dict]]:
+    candidates: dict[str, Candidate] = {}
+    rejected: list[dict] = []
+    seen_queries = {normalize(topic)}
+
+    for seed in seeds:
+        requests = [("RELATED_QUERIES", "related_queries", "rising query")]
+        if include_related_topics:
+            requests.append(("RELATED_TOPICS", "related_topics", "rising topic"))
+        for data_type, section, source_name in requests:
+            data = serp_get({
+                "engine": "google_trends",
+                "q": seed,
+                "data_type": data_type,
+                "date": date,
+                "geo": geo,
+                "hl": "en",
+            }, timeout=request_timeout, retries=request_retries)
+            if not data:
+                rejected.append({"topic": seed, "reason": f"No {data_type.lower()} data returned"})
+                continue
+            for item in related_items(data, section):
+                name = candidate_name(item)
+                key = normalize(name)
+                if not key:
+                    continue
+                if key in seen_queries and key != normalize(topic):
+                    continue
+                seen_queries.add(key)
+                candidate = candidates.setdefault(key, Candidate(query=name))
+                candidate.seed_terms.add(seed)
+                candidate.related_type = "topic" if data_type == "RELATED_TOPICS" else "query"
+                bucket = item.get("_bucket", "")
+                candidate.discovery_sources.add(source_name if bucket == "rising" else f"top {candidate.related_type}")
+                value, label = parse_rising_value(item.get("value") or item.get("extracted_value"))
+                if bucket == "rising":
+                    candidate.rising_value = max(candidate.rising_value or 0, value or 0) or candidate.rising_value
+                    candidate.rising_label = label or candidate.rising_label
+
+    ranked = list(candidates.values())
+    ranked.sort(key=lambda c: (c.rising_value or 0, len(c.discovery_sources)), reverse=True)
+    return ranked[:limit], rejected
+
+
+def batches(items: list[Candidate], size: int = 5):
+    for index in range(0, len(items), size):
+        yield items[index:index + size]
+
+
+def attach_timeseries(
+    candidates: list[Candidate],
+    geo: str,
+    date: str,
+    *,
+    request_timeout: int = DEFAULT_REQUEST_TIMEOUT,
+    request_retries: int = DEFAULT_REQUEST_RETRIES,
+) -> None:
+    valid_candidates = [
+        candidate for candidate in candidates
+        if len(candidate.query) <= GOOGLE_TRENDS_QUERY_LIMIT
+    ]
+    for candidate in candidates:
+        if len(candidate.query) > GOOGLE_TRENDS_QUERY_LIMIT:
+            candidate.discovery_sources.add("too long for timeseries")
+
+    for group in batches(valid_candidates, 5):
+        query = ",".join(c.query for c in group)
+        data = serp_get({
+            "engine": "google_trends",
+            "q": query,
+            "data_type": "TIMESERIES",
+            "date": date,
+            "geo": geo,
+            "hl": "en",
+        }, timeout=request_timeout, retries=request_retries)
+        if not data:
+            continue
+        timeline = data.get("interest_over_time", {}).get("timeline_data", [])
+        values_by_index = [[] for _ in group]
+        for point in timeline:
+            values = point.get("values", [])
+            if point.get("partial_data"):
+                continue
+            for idx, value in enumerate(values[:len(group)]):
+                extracted = value.get("extracted_value")
+                if isinstance(extracted, (int, float)):
+                    values_by_index[idx].append(int(extracted))
+        for candidate, scores in zip(group, values_by_index):
+            candidate.interest_scores = scores
+
+
+def clamp(value: float, minimum: int = 0, maximum: int = 100) -> int:
+    return int(max(minimum, min(maximum, round(value))))
+
+
+def score_candidate(candidate: Candidate) -> None:
+    scores = candidate.interest_scores
+    if scores:
+        candidate.first_interest = scores[0]
+        candidate.latest_interest = scores[-1]
+        candidate.peak_interest = max(scores)
+        candidate.avg_interest = mean(scores)
+        candidate.slope = scores[-1] - scores[0]
+        midpoint = max(1, len(scores) // 2)
+        first_half = mean(scores[:midpoint])
+        second_half = mean(scores[midpoint:])
+        candidate.acceleration = round(second_half - first_half)
+
+    rising = candidate.rising_value or 0
+    faded_spike = bool(scores and candidate.latest_interest == 0 and candidate.peak_interest < 15)
+    rising_score = 100 if rising >= 5000 else clamp(rising / 10)
+    headroom_score = clamp(100 - candidate.avg_interest) if scores else 55
+    slope_score = clamp(50 + candidate.slope) if scores else 50
+    acceleration_score = clamp(50 + candidate.acceleration) if scores else 50
+    multi_source_score = clamp(len(candidate.discovery_sources) * 30 + len(candidate.seed_terms) * 10)
+
+    candidate.emergence_score = clamp((rising_score * 0.45) + (headroom_score * 0.25) + (multi_source_score * 0.30))
+    candidate.velocity_score = clamp((slope_score * 0.55) + (acceleration_score * 0.25) + (candidate.latest_interest * 0.20))
+    if faded_spike:
+        candidate.velocity_score = min(candidate.velocity_score, 25)
+        candidate.emergence_score = min(candidate.emergence_score, 45)
+    candidate.confidence_score = clamp((len(candidate.discovery_sources) * 25) + (35 if scores else 0) + (15 if candidate.rising_value else 0))
+    candidate.radar_score = clamp((candidate.emergence_score * 0.45) + (candidate.velocity_score * 0.35) + (candidate.confidence_score * 0.20))
+
+    if not faded_spike and (rising >= 5000 or candidate.radar_score >= 84):
+        candidate.trend_stage = "breakout"
+        candidate.urgency = "today"
+    elif candidate.radar_score >= 70 or rising >= 500:
+        candidate.trend_stage = "emerging"
+        candidate.urgency = "this_week"
+    elif candidate.radar_score >= 55 or candidate.slope > 15:
+        candidate.trend_stage = "rising"
+        candidate.urgency = "monitor"
+    else:
+        candidate.trend_stage = "watch"
+        candidate.urgency = "monitor"
+
+    if candidate.confidence_score >= 75:
+        candidate.confidence = "high"
+    elif candidate.confidence_score >= 50:
+        candidate.confidence = "medium"
+    else:
+        candidate.confidence = "low"
+
+    reason_bits = []
+    if candidate.rising_label:
+        reason_bits.append(f"Google Trends labels it {candidate.rising_label}")
+    if scores:
+        reason_bits.append(f"interest moved from {candidate.first_interest} to {candidate.latest_interest}")
+    else:
+        reason_bits.append("time-series validation was skipped or unavailable")
+    if faded_spike:
+        reason_bits.append("latest interest has faded after a small spike")
+    if candidate.discovery_sources:
+        reason_bits.append(f"found through {', '.join(sorted(candidate.discovery_sources))}")
+    candidate.why_now = "; ".join(reason_bits) or "Candidate appeared in Google Trends related discovery"
+
+    if candidate.trend_stage == "breakout":
+        candidate.recommended_action = "Prioritize a same-day brief, then validate sources before publishing."
+    elif candidate.trend_stage == "emerging":
+        candidate.recommended_action = "Build an angle this week and monitor the next 24-48 hours."
+    elif candidate.trend_stage == "rising":
+        candidate.recommended_action = "Track as a developing query and compare against existing coverage."
+    else:
+        candidate.recommended_action = "Keep on watchlist unless another signal channel confirms it."
+
+
+def candidate_to_dict(candidate: Candidate, rank: int) -> dict:
+    return {
+        "rank": rank,
+        "topic": candidate.query,
+        "trend_stage": candidate.trend_stage,
+        "urgency": candidate.urgency,
+        "radar_score": candidate.radar_score,
+        "emergence_score": candidate.emergence_score,
+        "velocity_score": candidate.velocity_score,
+        "confidence_score": candidate.confidence_score,
+        "confidence": candidate.confidence,
+        "rising_label": candidate.rising_label,
+        "latest_interest": candidate.latest_interest,
+        "peak_interest": candidate.peak_interest,
+        "slope": candidate.slope,
+        "acceleration": candidate.acceleration,
+        "seed_terms": sorted(candidate.seed_terms),
+        "discovery_sources": sorted(candidate.discovery_sources),
+        "interest_scores": candidate.interest_scores,
+        "why_now": candidate.why_now,
+        "recommended_action": candidate.recommended_action,
+    }
+
+
+def build_data(topic: str, geo: str, date: str, seeds: list[str], candidates: list[Candidate], rejected: list[dict]) -> dict:
+    anchors = relevance_anchors(topic, seeds)
+    relevant = []
+    off_topic = []
+    for candidate in candidates:
+        if is_relevant_candidate(candidate, anchors):
+            relevant.append(candidate)
+        else:
+            off_topic.append(candidate)
+            rejected.append({"topic": candidate.query, "reason": "Off-topic after expanded seed scan"})
+
+    retained = [c for c in relevant if c.radar_score >= 50]
+    weak = [c for c in relevant if c.radar_score < 50]
+    for candidate in weak:
+        rejected.append({"topic": candidate.query, "reason": f"Weak radar score ({candidate.radar_score})"})
+    retained.sort(key=lambda c: c.radar_score, reverse=True)
+
+    stages = {}
+    for candidate in retained:
+        stages[candidate.trend_stage] = stages.get(candidate.trend_stage, 0) + 1
+
+    return {
+        "run_date": datetime.now().strftime("%Y-%m-%d"),
+        "generated_at": datetime.now().isoformat(timespec="seconds"),
+        "topic": topic,
+        "geo": geo,
+        "date_window": date,
+        "seed_terms": seeds,
+        "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+        "summary": {
+            "seed_count": len(seeds),
+            "total_reviewed": len(candidates),
+            "total_retained": len(retained),
+            "total_rejected": len(rejected),
+            "breakouts": stages.get("breakout", 0),
+            "emerging": stages.get("emerging", 0),
+            "rising": stages.get("rising", 0),
+            "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them.",
+        },
+        "candidates": [candidate_to_dict(candidate, index + 1) for index, candidate in enumerate(retained)],
+        "rejected": rejected,
+    }
+
+
+def generate_html(data: dict) -> str:
+    if not TEMPLATE_PATH.exists():
+        raise FileNotFoundError(f"Template not found: {TEMPLATE_PATH}")
+    template = TEMPLATE_PATH.read_text(encoding="utf-8")
+    return template.replace("__RADAR_DATA__", json.dumps(data, ensure_ascii=False, indent=2))
+
+
+def write_csv(data: dict, path: Path) -> None:
+    fieldnames = [
+        "rank", "topic", "trend_stage", "urgency", "radar_score",
+        "emergence_score", "velocity_score", "confidence_score", "confidence",
+        "rising_label", "latest_interest", "peak_interest", "slope",
+        "seed_terms", "discovery_sources", "why_now", "recommended_action",
+    ]
+    with path.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=fieldnames)
+        writer.writeheader()
+        for row in data.get("candidates", []):
+            normalized = dict(row)
+            normalized["seed_terms"] = "; ".join(row.get("seed_terms", []))
+            normalized["discovery_sources"] = "; ".join(row.get("discovery_sources", []))
+            writer.writerow({field: normalized.get(field, "") for field in fieldnames})
+
+
+def build_email_body(data: dict) -> str:
+    candidates = data.get("candidates", [])
+    summary = data.get("summary", {})
+    top_rows = ""
+    for candidate in candidates[:10]:
+        top_rows += f"""
+        <tr>
+          <td style="padding:8px 10px;border-bottom:1px solid #e7e5e0;color:#777;font-family:Menlo,Consolas,monospace;font-size:12px;">{candidate.get('rank','')}</td>
+          <td style="padding:8px 10px;border-bottom:1px solid #e7e5e0;">
+            <strong>{candidate.get('topic','')}</strong><br>
+            <span style="color:#666;font-size:12px;">{candidate.get('why_now','')}</span>
+          </td>
+          <td style="padding:8px 10px;border-bottom:1px solid #e7e5e0;font-family:Menlo,Consolas,monospace;font-size:12px;">{candidate.get('trend_stage','')}</td>
+          <td style="padding:8px 10px;border-bottom:1px solid #e7e5e0;font-family:Menlo,Consolas,monospace;font-size:12px;">{candidate.get('radar_score','')}</td>
+        </tr>"""
+
+    return f"""<!doctype html>
+<html>
+<body style="margin:0;padding:24px;background:#fbfaf8;color:#2b2b2b;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">
+  <div style="max-width:760px;margin:0 auto;">
+    <div style="font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#cf2f32;font-weight:700;">Google Trend Radar</div>
+    <h1 style="font-family:Georgia,'Times New Roman',serif;margin:8px 0 6px;color:#171717;">{data.get('topic','Trend')} Radar</h1>
+    <div style="color:#666;font-size:13px;margin-bottom:18px;">{data.get('geo','US')} · {data.get('date_window','')} · {data.get('run_date','')}</div>
+
+    <table width="100%" cellpadding="0" cellspacing="8" style="margin:0 0 18px;">
+      <tr>
+        <td style="background:#fff;border:1px solid #dedbd4;border-top:3px solid #cf2f32;border-radius:6px;padding:14px;">
+          <div style="font-size:28px;font-family:Georgia,'Times New Roman',serif;color:#cf2f32;font-weight:700;">{summary.get('total_reviewed',0)}</div>
+          <div style="font-size:12px;color:#666;font-weight:700;">Signals Reviewed</div>
+        </td>
+        <td style="background:#fff;border:1px solid #dedbd4;border-top:3px solid #1f9d55;border-radius:6px;padding:14px;">
+          <div style="font-size:28px;font-family:Georgia,'Times New Roman',serif;color:#1f9d55;font-weight:700;">{summary.get('total_retained',0)}</div>
+          <div style="font-size:12px;color:#666;font-weight:700;">Retained Trends</div>
+        </td>
+        <td style="background:#fff;border:1px solid #dedbd4;border-top:3px solid #d97706;border-radius:6px;padding:14px;">
+          <div style="font-size:28px;font-family:Georgia,'Times New Roman',serif;color:#d97706;font-weight:700;">{summary.get('breakouts',0)}</div>
+          <div style="font-size:12px;color:#666;font-weight:700;">Breakouts</div>
+        </td>
+      </tr>
+    </table>
+
+    <div style="background:#eff6ff;border:1px solid #b7d4ff;border-left:4px solid #2563eb;border-radius:6px;padding:12px 14px;color:#183052;font-size:13px;margin-bottom:18px;">
+      Full interactive dashboard and CSV are attached.
+    </div>
+
+    <table width="100%" cellpadding="0" cellspacing="0" style="background:#fff;border:1px solid #dedbd4;border-radius:6px;border-collapse:collapse;">
+      <tr style="background:#f1f0ec;">
+        <th style="text-align:left;padding:9px 10px;font-size:11px;color:#666;text-transform:uppercase;">#</th>
+        <th style="text-align:left;padding:9px 10px;font-size:11px;color:#666;text-transform:uppercase;">Trend</th>
+        <th style="text-align:left;padding:9px 10px;font-size:11px;color:#666;text-transform:uppercase;">Stage</th>
+        <th style="text-align:left;padding:9px 10px;font-size:11px;color:#666;text-transform:uppercase;">Score</th>
+      </tr>
+      {top_rows}
+    </table>
+  </div>
+</body>
+</html>"""
+
+
+def attach_file(message: MIMEMultipart, path: Path, mime_type: str) -> None:
+    maintype, subtype = mime_type.split("/", 1)
+    with path.open("rb") as handle:
+        part = MIMEBase(maintype, subtype)
+        part.set_payload(handle.read())
+    encoders.encode_base64(part)
+    part.add_header("Content-Disposition", f'attachment; filename="{path.name}"')
+    message.attach(part)
+
+
+def send_email(data: dict, html_path: Path, csv_path: Path, json_path: Path | None = None) -> None:
+    sender = os.getenv("EMAIL_SENDER", "").strip()
+    password = os.getenv("EMAIL_PASSWORD", "").strip()
+    recipient = os.getenv("EMAIL_RECIPIENT", "").strip()
+    smtp_host = os.getenv("EMAIL_SMTP_HOST", "smtp.gmail.com").strip()
+    smtp_port = int(os.getenv("EMAIL_SMTP_PORT", "587"))
+
+    if not all([sender, password, recipient]):
+        raise RuntimeError("Email settings missing. Set EMAIL_SENDER, EMAIL_PASSWORD, and EMAIL_RECIPIENT in .env.")
+
+    subject = f"Google Trend Radar Test - {data.get('topic','Trend')} - {data.get('run_date','')}"
+    message = MIMEMultipart("mixed")
+    message["Subject"] = subject
+    message["From"] = sender
+    message["To"] = recipient
+    message.attach(MIMEText(build_email_body(data), "html", "utf-8"))
+
+    attach_file(message, html_path, "text/html")
+    attach_file(message, csv_path, "text/csv")
+    if json_path and json_path.exists():
+        attach_file(message, json_path, "application/json")
+
+    with smtplib.SMTP(smtp_host, smtp_port, timeout=30) as server:
+        server.ehlo()
+        server.starttls()
+        server.login(sender, password)
+        server.sendmail(sender, recipient, message.as_string())
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Create a Google Trends radar dashboard for a topic.")
+    parser.add_argument("--topic", default="", help="Topic or niche to scan, for example 'AI tools', 'health', or 'wellness'. If omitted, --profile health or --profile wellness becomes the topic.")
+    parser.add_argument("--geo", default="US", help="Google Trends geography code. Default: US.")
+    parser.add_argument("--date", default="now 7-d", help='Google Trends date window. Default: "now 7-d".')
+    parser.add_argument("--seeds", default="", help="Optional comma-separated seed terms to scan in addition to the selected profile.")
+    parser.add_argument("--profile", "--seed-profile", dest="seed_profile", default=DEFAULT_SEED_PROFILE, choices=["auto", "wellness", "health", "ai", "none"], help="Seed profile to scan: wellness, health, ai, none, or auto. Default: auto.")
+    parser.add_argument("--max-seeds", type=int, default=DEFAULT_MAX_SEEDS, help="Maximum seed terms to scan. Default: 24.")
+    parser.add_argument("--limit", type=int, default=80, help="Maximum discovered candidates to validate. Default: 80.")
+    parser.add_argument("--timeout", type=int, default=DEFAULT_REQUEST_TIMEOUT, help="Seconds to wait for each SerpAPI request. Default: 12.")
+    parser.add_argument("--retries", type=int, default=DEFAULT_REQUEST_RETRIES, help="Retries per SerpAPI request after timeout/error. Default: 0.")
+    parser.add_argument("--include-related-topics", action="store_true", help="Also scan related topics. Slower, but can surface entity-level discoveries.")
+    parser.add_argument("--skip-timeseries", action="store_true", help="Skip time-series validation. Faster for discovery runs when SerpAPI is slow.")
+    parser.add_argument("--verbose-errors", action="store_true", help="Print every skipped SerpAPI request instead of only the final summary.")
+    parser.add_argument("--email", action="store_true", help="Email the generated dashboard to EMAIL_RECIPIENT with HTML, CSV, and JSON attached.")
+    parser.add_argument("--output-dir", default=str(OUTPUT_DIR), help="Directory for dashboard, CSV, and JSON output.")
+    return parser.parse_args()
+
+
+def main() -> None:
+    args = parse_args()
+    global VERBOSE_ERRORS
+    VERBOSE_ERRORS = args.verbose_errors
+    load_env()
+
+    if not os.getenv("SERPAPI_API_KEY", "").strip():
+        sys.exit("SERPAPI_API_KEY is not set. Add it to .env or export it before running the radar.")
+
+    output_dir = Path(args.output_dir)
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    if not args.topic.strip():
+        if args.seed_profile in SEED_PROFILES:
+            args.topic = args.seed_profile
+        else:
+            sys.exit("Choose --profile health, --profile wellness, or provide --topic.")
+
+    seeds = build_seed_terms(args.topic, args.seeds, args.seed_profile, args.max_seeds)
+
+    print(f"Scanning Google Trends for '{args.topic}' ({args.geo}, {args.date})...")
+    print(f"Seed terms ({len(seeds)}): {', '.join(seeds)}")
+    candidates, rejected = discover_candidates(
+        args.topic,
+        seeds,
+        args.geo,
+        args.date,
+        args.limit,
+        include_related_topics=args.include_related_topics,
+        request_timeout=args.timeout,
+        request_retries=args.retries,
+    )
+    if not args.skip_timeseries:
+        attach_timeseries(candidates, args.geo, args.date, request_timeout=args.timeout, request_retries=args.retries)
+    for candidate in candidates:
+        score_candidate(candidate)
+
+    data = build_data(args.topic, args.geo, args.date, seeds, candidates, rejected)
+    stamp = datetime.now().strftime("%Y-%m-%d_%H%M")
+    slug = re.sub(r"[^a-z0-9]+", "-", args.topic.lower()).strip("-") or "topic"
+    base = f"trend_radar_{slug}_{stamp}"
+
+    json_path = output_dir / f"{base}.json"
+    csv_path = output_dir / f"{base}.csv"
+    html_path = output_dir / f"{base}.html"
+
+    json_path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    write_csv(data, csv_path)
+    html_path.write_text(generate_html(data), encoding="utf-8")
+
+    print_request_summary()
+    if args.email:
+        send_email(data, html_path, csv_path, json_path)
+        print(f"Email sent to {os.getenv('EMAIL_RECIPIENT', '').strip()}")
+    print(f"Dashboard: {html_path}")
+    print(f"CSV:       {csv_path}")
+    print(f"JSON:      {json_path}")
+
+
+if __name__ == "__main__":
+    main()

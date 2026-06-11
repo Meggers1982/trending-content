@@ -1,0 +1,11 @@
+# Deferred topics — overflow from daily runs
+# Topics here passed scoring thresholds but exceeded max_candidates_returned.
+# Format:
+#   - topic: <string>
+#     primary_entity: <string>
+#     trend_strength_score: <0-100>
+#     opportunity_score: <0-100>
+#     recheck_on: <YYYY-MM-DD>
+#     notes: <string>
+
+deferred_topics: []

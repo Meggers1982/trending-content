@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trending Content OS — Daily Dashboard · May 7, 2026</title>
+<style>
+  :root {
+    --navy: #0f1923;
+    --navy-mid: #1a2a3a;
+    --navy-light: #243447;
+    --p1: #e53e3e;
+    --p1-bg: #fff5f5;
+    --p1-border: #feb2b2;
+    --p2: #dd6b20;
+    --p2-bg: #fffaf0;
+    --p2-border: #fbd38d;
+    --p3: #2b6cb0;
+    --p3-bg: #ebf8ff;
+    --p3-border: #bee3f8;
+    --green: #276749;
+    --green-bg: #f0fff4;
+    --warn: #744210;
+    --warn-bg: #fffff0;
+    --warn-border: #f6e05e;
+    --text: #1a202c;
+    --text-mid: #4a5568;
+    --text-light: #718096;
+    --border: #e2e8f0;
+    --bg: #f7f9fc;
+    --white: #ffffff;
+    --radius: 8px;
+    --shadow: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
+    --shadow-md: 0 4px 6px rgba(0,0,0,.07), 0 2px 4px rgba(0,0,0,.05);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); font-size: 14px; line-height: 1.6; }
+
+  /* HEADER */
+  .header { background: var(--navy); color: white; padding: 28px 40px 24px; }
+  .header-top { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+  .header-brand { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: #94a3b8; margin-bottom: 6px; }
+  .header-title { font-size: 24px; font-weight: 700; letter-spacing: -.02em; }
+  .header-sub { font-size: 13px; color: #94a3b8; margin-top: 4px; }
+  .header-meta { text-align: right; }
+  .header-date { font-size: 13px; color: #94a3b8; }
+  .header-niche { font-size: 12px; color: #64748b; margin-top: 2px; }
+  .tools-note { margin-top: 16px; padding: 10px 14px; background: rgba(255,255,255,.06); border-left: 3px solid #475569; border-radius: 4px; font-size: 12px; color: #94a3b8; }
+  .tools-note strong { color: #cbd5e0; }
+
+  /* STATS BAR */
+  .stats-bar { background: var(--navy-mid); padding: 0 40px; display: flex; gap: 0; border-bottom: 1px solid rgba(255,255,255,.06); }
+  .stat { padding: 14px 24px 14px 0; margin-right: 24px; border-right: 1px solid rgba(255,255,255,.08); }
+  .stat:last-child { border-right: none; }
+  .stat-val { font-size: 22px; font-weight: 700; color: white; line-height: 1; }
+  .stat-label { font-size: 11px; color: #64748b; text-transform: uppercase; letter-spacing: .08em; margin-top: 3px; }
+  .stat.p1 .stat-val { color: #fc8181; }
+  .stat.p2 .stat-val { color: #f6ad55; }
+  .stat.p3 .stat-val { color: #63b3ed; }
+
+  /* LAYOUT */
+  .main { max-width: 1280px; margin: 0 auto; padding: 32px 40px; }
+  .section-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--text-light); margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+  /* INTEGRITY FLAGS */
+  .integrity-banner { background: var(--warn-bg); border: 1px solid var(--warn-border); border-radius: var(--radius); padding: 16px 20px; margin-bottom: 32px; }
+  .integrity-banner-title { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--warn); margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
+  .integrity-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 8px; }
+  .integrity-item { font-size: 12px; color: var(--warn); background: rgba(0,0,0,.03); border-radius: 4px; padding: 7px 10px; display: flex; gap: 6px; align-items: flex-start; }
+  .integrity-item strong { white-space: nowrap; }
+
+  /* PRIORITY TABLE */
+  .table-wrap { overflow-x: auto; margin-bottom: 40px; border-radius: var(--radius); box-shadow: var(--shadow); }
+  table { width: 100%; border-collapse: collapse; background: var(--white); }
+  thead th { background: var(--navy); color: white; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; padding: 12px 14px; text-align: left; white-space: nowrap; }
+  tbody tr { border-bottom: 1px solid var(--border); transition: background .12s; }
+  tbody tr:hover { background: #f8fafc; }
+  tbody tr:last-child { border-bottom: none; }
+  td { padding: 12px 14px; font-size: 13px; vertical-align: top; }
+  td.topic-cell { max-width: 280px; }
+  .topic-name { font-weight: 600; color: var(--text); line-height: 1.4; }
+  .topic-entity { font-size: 11px; color: var(--text-light); margin-top: 2px; }
+  .score-cell { text-align: center; }
+  .score-pair { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+  .score { font-size: 15px; font-weight: 700; }
+  .score-label { font-size: 10px; color: var(--text-light); text-transform: uppercase; letter-spacing: .06em; }
+  .score.high { color: var(--green); }
+  .score.mid { color: var(--p2); }
+  .score.low { color: var(--text-light); }
+
+  /* BADGES */
+  .badge { display: inline-block; padding: 3px 8px; border-radius: 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; white-space: nowrap; }
+  .badge.p1 { background: var(--p1); color: white; }
+  .badge.p2 { background: var(--p2); color: white; }
+  .badge.p3 { background: var(--p3); color: white; }
+  .urgency { display: inline-block; padding: 2px 7px; border-radius: 4px; font-size: 11px; font-weight: 600; white-space: nowrap; }
+  .urgency.now { background: #fff5f5; color: var(--p1); border: 1px solid var(--p1-border); }
+  .urgency.today { background: #fff8f0; color: var(--p2); border: 1px solid var(--p2-border); }
+  .urgency.this-week { background: var(--p3-bg); color: var(--p3); border: 1px solid var(--p3-border); }
+  .difficulty { font-size: 11px; }
+  .difficulty.low { color: var(--green); }
+  .difficulty.medium { color: var(--p2); }
+  .difficulty.high { color: var(--p1); }
+  .flag-icon { font-size: 12px; }
+  .discover-dots { display: flex; gap: 2px; }
+  .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--border); }
+  .dot.on { background: var(--navy); }
+  .source-link { font-size: 11px; color: #3182ce; text-decoration: none; display: inline-block; margin-top: 2px; }
+  .source-link:hover { text-decoration: underline; }
+
+  /* BRIEF CARDS */
+  .briefs-section { margin-bottom: 40px; }
+  .priority-group { margin-bottom: 32px; }
+  .priority-group-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+  .priority-group-label { font-size: 13px; font-weight: 700; }
+  .priority-group-desc { font-size: 12px; color: var(--text-light); }
+  .briefs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(540px, 1fr)); gap: 16px; }
+
+  .brief-card { background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid var(--border); overflow: hidden; }
+  .brief-card.p1 { border-top: 3px solid var(--p1); }
+  .brief-card.p2 { border-top: 3px solid var(--p2); }
+  .brief-card.p3 { border-top: 3px solid var(--p3); }
+
+  .brief-header { padding: 16px 20px 14px; border-bottom: 1px solid var(--border); cursor: pointer; user-select: none; }
+  .brief-header:hover { background: #fafbfc; }
+  .brief-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+  .brief-headline { font-size: 15px; font-weight: 700; line-height: 1.4; color: var(--text); }
+  .brief-angle { font-size: 12px; color: var(--text-mid); margin-top: 6px; font-style: italic; }
+  .brief-scores { display: flex; gap: 12px; margin-top: 10px; align-items: center; }
+  .score-chip { background: var(--bg); border: 1px solid var(--border); border-radius: 6px; padding: 4px 10px; font-size: 12px; }
+  .score-chip strong { font-size: 14px; }
+  .expand-btn { margin-left: auto; font-size: 11px; color: var(--text-light); white-space: nowrap; }
+  .expand-icon { display: inline-block; transition: transform .2s; }
+  .brief-card.open .expand-icon { transform: rotate(180deg); }
+
+  .brief-body { padding: 16px 20px; display: none; border-top: 1px solid var(--border); }
+  .brief-card.open .brief-body { display: block; }
+
+  .brief-section { margin-bottom: 18px; }
+  .brief-section:last-child { margin-bottom: 0; }
+  .brief-section-title { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--text-light); margin-bottom: 8px; }
+
+  .why-now { background: #f0f9ff; border-left: 3px solid #3182ce; padding: 10px 14px; border-radius: 0 4px 4px 0; font-size: 13px; color: #1a365d; }
+  .outline-list { list-style: none; }
+  .outline-list li { padding: 4px 0; font-size: 13px; color: var(--text-mid); display: flex; gap: 8px; }
+  .outline-list li::before { content: '→'; color: var(--text-light); flex-shrink: 0; }
+  .data-points { list-style: none; }
+  .data-points li { padding: 5px 0; font-size: 13px; border-bottom: 1px solid var(--border); display: flex; gap: 8px; align-items: baseline; }
+  .data-points li:last-child { border-bottom: none; }
+  .data-points li::before { content: '●'; font-size: 7px; color: var(--text-light); flex-shrink: 0; margin-top: 3px; }
+
+  .sources-row { display: flex; flex-wrap: wrap; gap: 6px; }
+  .source-tag { display: inline-block; padding: 3px 10px; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; font-size: 11px; color: #3182ce; text-decoration: none; font-weight: 500; }
+  .source-tag:hover { background: #ebf8ff; border-color: #bee3f8; }
+  .source-tag.t1::before { content: '★ '; font-size: 9px; }
+  .source-tag.unverified { color: var(--text-light); font-style: italic; }
+
+  .integrity-flag { background: var(--warn-bg); border: 1px solid var(--warn-border); border-radius: 4px; padding: 8px 12px; font-size: 12px; color: var(--warn); margin-bottom: 6px; }
+  .integrity-flag:last-child { margin-bottom: 0; }
+
+  .headlines-alt { list-style: none; }
+  .headlines-alt li { padding: 4px 0; font-size: 13px; color: var(--text-mid); border-bottom: 1px dashed var(--border); }
+  .headlines-alt li:last-child { border-bottom: none; }
+
+  .seo-row { display: flex; flex-wrap: wrap; gap: 6px; }
+  .kw-tag { display: inline-block; padding: 2px 8px; background: #f0fff4; border: 1px solid #c6f6d5; border-radius: 10px; font-size: 11px; color: var(--green); }
+
+  .expert-box { background: var(--bg); border-radius: 4px; padding: 10px 14px; font-size: 12px; color: var(--text-mid); }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 640px) { .two-col { grid-template-columns: 1fr; } }
+
+  /* REJECTED LOG */
+  .rejected-table { width: 100%; border-collapse: collapse; background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+  .rejected-table th { background: #f1f5f9; color: var(--text-mid); font-size: 11px; text-transform: uppercase; letter-spacing: .08em; padding: 10px 14px; text-align: left; }
+  .rejected-table td { padding: 9px 14px; font-size: 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .rejected-table tr:last-child td { border-bottom: none; }
+  .reject-reason { color: var(--text-light); }
+
+  /* RUN ARCHIVE */
+  .archive-box { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 24px; box-shadow: var(--shadow); }
+  .archive-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+  .archive-item { }
+  .archive-label { font-size: 11px; color: var(--text-light); text-transform: uppercase; letter-spacing: .08em; }
+  .archive-val { font-size: 13px; font-weight: 600; color: var(--text); margin-top: 2px; }
+  .archive-notes { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); font-size: 12px; color: var(--text-mid); }
+  .archive-notes strong { color: var(--text); }
+
+  /* FOOTER */
+  .footer { border-top: 1px solid var(--border); padding: 20px 40px; text-align: center; font-size: 11px; color: var(--text-light); }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-top">
+    <div>
+      <div class="header-brand">Trending Content OS</div>
+      <div class="header-title">Daily Newsroom Dashboard</div>
+      <div class="header-sub">May 7, 2026 &nbsp;·&nbsp; Health &amp; Wellness (US)</div>
+    </div>
+    <div class="header-meta">
+      <div class="header-date">Run completed: 2026-05-07</div>
+      <div class="header-niche">Niche: health and wellness &nbsp;·&nbsp; Geography: US</div>
+    </div>
+  </div>
+  <div class="tools-note">
+    <strong>Tools note:</strong> Google Trends unavailable — search_velocity estimated from news volume + social spread. SERP gap analysis is knowledge-estimated. Reddit feeds returned stale content and were skipped. Scores carry moderate confidence penalty where noted.
+  </div>
+</div>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stat"><div class="stat-val">68</div><div class="stat-label">Signals reviewed</div></div>
+  <div class="stat"><div class="stat-val">14</div><div class="stat-label">Retained</div></div>
+  <div class="stat"><div class="stat-val">54</div><div class="stat-label">Rejected</div></div>
+  <div class="stat p1"><div class="stat-val">5</div><div class="stat-label">P1 — Publish now</div></div>
+  <div class="stat p2"><div class="stat-val">4</div><div class="stat-label">P2 — Short-term</div></div>
+  <div class="stat p3"><div class="stat-val">5</div><div class="stat-label">P3 — Schedule</div></div>
+  <div class="stat"><div class="stat-val">10</div><div class="stat-label">Integrity flags</div></div>
+</div>
+
+<div class="main">
+
+  <!-- INTEGRITY FLAGS -->
+  <div class="section-title">⚠️ Integrity Flags — Editorial Review Required</div>
+  <div class="integrity-banner">
+    <div class="integrity-banner-title">⚠️ 10 flags across today's run — review before assigning</div>
+    <div class="integrity-list">
+      <div class="integrity-item"><strong>Brief 1 (Oral Wegovy):</strong> Oral semaglutide requires strict administration (empty stomach, 30-min wait). Adherence complexity differs from injectable.</div>
+      <div class="integrity-item"><strong>Brief 2 (Hantavirus):</strong> Experts explicitly discount pandemic risk. Do NOT frame as pandemic threat. Hantavirus does not spread person-to-person.</div>
+      <div class="integrity-item"><strong>Brief 3 (FDA vaccine suppression):</strong> CRITICAL — suppressed studies found vaccines SAFE. Frame as scientific transparency story, NOT vaccine danger. Anti-vaccine misread risk is high.</div>
+      <div class="integrity-item"><strong>Brief 4 (Measles):</strong> No major flags — CDC data is authoritative. Standard outbreak framing applies.</div>
+      <div class="integrity-item"><strong>Brief 5 (Mifepristone):</strong> Borderline brand safety. Drug access angle ONLY — no political framing. State restrictions remain separate from SCOTUS ruling.</div>
+      <div class="integrity-item"><strong>Brief 6 (SELECT trial):</strong> RCT design — note clearly. Liver outcomes are secondary/exploratory endpoints; weight appropriately against primary cardiac endpoints.</div>
+      <div class="integrity-item"><strong>Brief 7 (NAION):</strong> Causation NOT established. MHRA issued a safety update, not a withdrawal. Absolute risk appears rare — do not alarm patients on GLP-1s.</div>
+      <div class="integrity-item"><strong>Brief 8 (HRT labeling):</strong> Benefits (50% CVD risk reduction) apply to early initiators only — within 10 years of menopause onset. Do not overgeneralize.</div>
+      <div class="integrity-item"><strong>Brief 9 (Medicare GLP-1):</strong> $50 pilot excludes LIS/Extra Help recipients — state this clearly in paragraph 2, not buried in footnotes.</div>
+      <div class="integrity-item"><strong>Brief 10 (Teen diet):</strong> Observational studies only — association, not causation. Directionality could run both ways.</div>
+    </div>
+  </div>
+
+  <!-- PRIORITY BOARD TABLE -->
+  <div class="section-title">Priority Board</div>
+  <div class="table-wrap" style="margin-bottom:40px;">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Topic</th>
+          <th>Priority</th>
+          <th>Urgency</th>
+          <th>Trend</th>
+          <th>Opp.</th>
+          <th>Discover</th>
+          <th>Difficulty</th>
+          <th>Flags</th>
+          <th>Key Sources</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td class="topic-cell"><div class="topic-name">Oral Wegovy (semaglutide pill) — FDA-approved GLP-1 now available</div><div class="topic-entity">Primary entity: oral semaglutide</div></td>
+          <td><span class="badge p1">P1</span></td>
+          <td><span class="urgency now">NOW</span></td>
+          <td class="score-cell"><span class="score high">88</span></td>
+          <td class="score-cell"><span class="score high">87</span></td>
+          <td class="score-cell"><div class="discover-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div></div></td>
+          <td><span class="difficulty medium">Medium</span></td>
+          <td class="flag-icon">⚠️</td>
+          <td><a href="https://www.ajmc.com/view/fda-approves-oral-semaglutide-as-first-glp-1-pill-for-weight-loss" target="_blank" rel="noopener" class="source-link">AJMC</a><br><a href="https://www.pharmacytimes.com/view/fda-approves-oral-glp-1-for-weight-management" target="_blank" rel="noopener" class="source-link">Pharmacy Times</a></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td class="topic-cell"><div class="topic-name">Hantavirus cruise ship outbreak (MV Hondius) — WHO investigating</div><div class="topic-entity">Primary entity: hantavirus</div></td>
+          <td><span class="badge p1">P1</span></td>
+          <td><span class="urgency today">TODAY</span></td>
+          <td class="score-cell"><span class="score high">83</span></td>
+          <td class="score-cell"><span class="score high">84</span></td>
+          <td class="score-cell"><div class="discover-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div></div></td>
+          <td><span class="difficulty low">Low</span></td>
+          <td class="flag-icon">⚠️</td>
+          <td><a href="https://www.statnews.com" target="_blank" rel="noopener" class="source-link">STAT News</a><br><a href="https://www.who.int" target="_blank" rel="noopener" class="source-link">WHO</a></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td class="topic-cell"><div class="topic-name">FDA blocks COVID + shingles vaccine safety study publication</div><div class="topic-entity">Primary entity: FDA vaccine research suppression</div></td>
+          <td><span class="badge p1">P1</span></td>
+          <td><span class="urgency today">TODAY</span></td>
+          <td class="score-cell"><span class="score high">77</span></td>
+          <td class="score-cell"><span class="score high">82</span></td>
+          <td class="score-cell"><div class="discover-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div></div></td>
+          <td><span class="difficulty low">Low</span></td>
+          <td class="flag-icon">⚠️⚠️</td>
+          <td><a href="https://www.washingtonpost.com/health/2026/05/05/fda-blocks-covid-shingles-vaccine-studies/" target="_blank" rel="noopener" class="source-link">Washington Post</a><br><a href="https://abcnews.com/Health/fda-blocked-publication-covid-shingles-vaccine-research-findings/story?id=132687938" target="_blank" rel="noopener" class="source-link">ABC News</a></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td class="topic-cell"><div class="topic-name">Measles — US highly likely to lose elimination status (1,814 cases, 45 states)</div><div class="topic-entity">Primary entity: measles elimination status (US)</div></td>
+          <td><span class="badge p1">P1</span></td>
+          <td><span class="urgency today">TODAY</span></td>
+          <td class="score-cell"><span class="score high">74</span></td>
+          <td class="score-cell"><span class="score high">80</span></td>
+          <td class="score-cell"><div class="discover-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div></div></td>
+          <td><span class="difficulty low">Low</span></td>
+          <td class="flag-icon">—</td>
+          <td><a href="https://www.cdc.gov/measles/data-research/index.html" target="_blank" rel="noopener" class="source-link">CDC</a><br><a href="https://www.cidrap.umn.edu/measles/us-highly-likely-lose-measles-elimination-status-fall-analysis-warns" target="_blank" rel="noopener" class="source-link">CIDRAP</a></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td class="topic-cell"><div class="topic-name">Mifepristone — SCOTUS restores telehealth + mail access <em style="font-size:11px;color:var(--text-light)">(borderline)</em></div><div class="topic-entity">Primary entity: mifepristone</div></td>
+          <td><span class="badge p1">P1</span></td>
+          <td><span class="urgency today">TODAY</span></td>
+          <td class="score-cell"><span class="score high">87</span></td>
+          <td class="score-cell"><span class="score high">85</span></td>
+          <td class="score-cell"><div class="discover-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div></div></td>
+          <td><span class="difficulty medium">Medium</span></td>
+          <td class="flag-icon">⚠️⚠️</td>
+          <td><a href="https://www.statnews.com" target="_blank" rel="noopener" class="source-link">STAT News</a><br><a href="https://www.fda.gov" target="_blank" rel="noopener" class="source-link">FDA</a></td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td class="topic-cell"><div class="topic-name">Semaglutide cuts heart disease + liver disease risk (Nature Medicine, SELECT trial)</div><div class="topic-entity">Primary entity: semaglutide / SELECT trial</div></td>
+          <td><span class="badge p2">P2</span></td>
+          <td><span class="urgency this-week">THIS WEEK</span></td>
+          <td class="score-cell"><span class="score high">79</span></td>
+          <td class="score-cell"><span class="score high">88</span></td>
+          <td class="score-cell"><div class="discover-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div></div></td>
+          <td><span class="difficulty medium">Medium</span></td>
+          <td class="flag-icon">⚠️</td>
+          <td><a href="https://www.vcuhealth.org/news/clinical-trial-results-show-weight-loss-drug-reduces-the-risk-of-heart-and-liver-diseases-in-people-with-obesity/" target="_blank" rel="noopener" class="source-link">VCU Health</a><br><a href="https://www.nature.com/nm" target="_blank" rel="noopener" class="source-link">Nature Medicine</a></td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td class="topic-cell"><div class="topic-name">GLP-1 / semaglutide linked to optic nerve damage (NAION) — UK MHRA safety alert</div><div class="topic-entity">Primary entity: NAION + semaglutide</div></td>
+          <td><span class="badge p2">P2</span></td>
+          <td><span class="urgency this-week">THIS WEEK</span></td>
+          <td class="score-cell"><span class="score high">75</span></td>
+          <td class="score-cell"><span class="score high">84</span></td>
+          <td class="score-cell"><div class="discover-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div></div></td>
+          <td><span class="difficulty low">Low</span></td>
+          <td class="flag-icon">⚠️</td>
+          <td><a href="https://www.gov.uk/government/organisations/medicines-and-healthcare-products-regulatory-agency" target="_blank" rel="noopener" class="source-link">MHRA</a> <span style="font-size:10px;color:var(--text-light)">[verify URL]</span></td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td class="topic-cell"><div class="topic-name">FDA removes misleading HRT warnings — new menopause hormone therapy labeling</div><div class="topic-entity">Primary entity: HRT / menopausal hormone therapy</div></td>
+          <td><span class="badge p2">P2</span></td>
+          <td><span class="urgency this-week">THIS WEEK</span></td>
+          <td class="score-cell"><span class="score high">73</span></td>
+          <td class="score-cell"><span class="score high">84</span></td>
+          <td class="score-cell"><div class="discover-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div></div></td>
+          <td><span class="difficulty low">Low</span></td>
+          <td class="flag-icon">⚠️</td>
+          <td><a href="https://www.fda.gov/news-events/press-announcements/hhs-advances-womens-health-removes-misleading-fda-warnings-hormone-replacement-therapy" target="_blank" rel="noopener" class="source-link">FDA Announcement</a></td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td class="topic-cell"><div class="topic-name">Medicare GLP-1 Bridge pilot — $50/month weight loss drugs starting July 2026</div><div class="topic-entity">Primary entity: Medicare GLP-1 Bridge program</div></td>
+          <td><span class="badge p2">P2</span></td>
+          <td><span class="urgency this-week">THIS WEEK</span></td>
+          <td class="score-cell"><span class="score mid">68</span></td>
+          <td class="score-cell"><span class="score high">83</span></td>
+          <td class="score-cell"><div class="discover-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div></div></td>
+          <td><span class="difficulty low">Low</span></td>
+          <td class="flag-icon">⚠️</td>
+          <td><a href="https://kffhealthnews.org" target="_blank" rel="noopener" class="source-link">KFF Health News</a></td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td class="topic-cell"><div class="topic-name">Teen diet and depression — healthy eating linked to fewer symptoms (review of 20 studies)</div><div class="topic-entity">Primary entity: teen diet / adolescent mental health</div></td>
+          <td><span class="badge p3">P3</span></td>
+          <td><span class="urgency this-week">THIS WEEK</span></td>
+          <td class="score-cell"><span class="score mid">64</span></td>
+          <td class="score-cell"><span class="score mid">78</span></td>
+          <td class="score-cell"><div class="discover-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div><div class="dot"></div></div></td>
+          <td><span class="difficulty medium">Medium</span></td>
+          <td class="flag-icon">⚠️</td>
+          <td><span style="font-size:11px;color:var(--text-light)">[URL unverified — verify primary review]</span></td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td class="topic-cell"><div class="topic-name">H5N1 aerosolized in dairy farm milking parlors — novel transmission route discovered</div><div class="topic-entity">Primary entity: H5N1 dairy farm aerosolization</div></td>
+          <td><span class="badge p3">P3</span></td>
+          <td><span class="urgency this-week">THIS WEEK</span></td>
+          <td class="score-cell"><span class="score mid">69</span></td>
+          <td class="score-cell"><span class="score mid">78</span></td>
+          <td class="score-cell"><div class="discover-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div></div></td>
+          <td><span class="difficulty low">Low</span></td>
+          <td class="flag-icon">⚠️</td>
+          <td><a href="https://www.cidrap.umn.edu/avian-influenza-bird-flu/sampling-reveals-possible-novel-sources-h5n1-avian-flu-transmission-dairy" target="_blank" rel="noopener" class="source-link">CIDRAP</a></td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td class="topic-cell"><div class="topic-name">Ultra-processed foods + heart disease + healthy swaps (European study)</div><div class="topic-entity">Primary entity: ultra-processed foods / cardiovascular risk</div></td>
+          <td><span class="badge p3">P3</span></td>
+          <td><span class="urgency this-week">THIS WEEK</span></td>
+          <td class="score-cell"><span class="score mid">61</span></td>
+          <td class="score-cell"><span class="score mid">68</span></td>
+          <td class="score-cell"><div class="discover-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div><div class="dot"></div></div></td>
+          <td><span class="difficulty high">High</span></td>
+          <td class="flag-icon">⚠️</td>
+          <td><a href="https://www.healthline.com/health-news" target="_blank" rel="noopener" class="source-link">Healthline</a> <span style="font-size:10px;color:var(--text-light)">[verify source journal]</span></td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td class="topic-cell"><div class="topic-name">GLP-1 drugs and social stigma — drug-assisted weight loss judged more harshly</div><div class="topic-entity">Primary entity: GLP-1 weight loss stigma</div></td>
+          <td><span class="badge p3">P3</span></td>
+          <td><span class="urgency this-week">THIS WEEK</span></td>
+          <td class="score-cell"><span class="score mid">57</span></td>
+          <td class="score-cell"><span class="score mid">74</span></td>
+          <td class="score-cell"><div class="discover-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div><div class="dot"></div></div></td>
+          <td><span class="difficulty medium">Medium</span></td>
+          <td class="flag-icon">—</td>
+          <td><a href="https://www.sciencedaily.com/releases/2026/05/260504154016.htm" target="_blank" rel="noopener" class="source-link">ScienceDaily</a></td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td class="topic-cell"><div class="topic-name">FDA authorizes fruit-flavored vapes — what the public health evidence says</div><div class="topic-entity">Primary entity: FDA flavored vape authorization</div></td>
+          <td><span class="badge p3">P3</span></td>
+          <td><span class="urgency this-week">THIS WEEK</span></td>
+          <td class="score-cell"><span class="score mid">66</span></td>
+          <td class="score-cell"><span class="score mid">66</span></td>
+          <td class="score-cell"><div class="discover-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div><div class="dot"></div></div></td>
+          <td><span class="difficulty medium">Medium</span></td>
+          <td class="flag-icon">⚠️</td>
+          <td><a href="https://www.statnews.com" target="_blank" rel="noopener" class="source-link">STAT News</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- BRIEFS -->
+  <div class="section-title">Editorial Briefs</div>
+
+  <!-- P1 GROUP -->
+  <div class="priority-group">
+    <div class="priority-group-header">
+      <span class="badge p1">P1</span>
+      <span class="priority-group-label">Publish Immediately</span>
+      <span class="priority-group-desc">5 candidates — draft today</span>
+    </div>
+    <div class="briefs-grid">
+
+      <!-- BRIEF 1 -->
+      <div class="brief-card p1" id="brief-1">
+        <div class="brief-header" onclick="toggle('brief-1')">
+          <div class="brief-meta">
+            <span class="badge p1">P1</span>
+            <span class="urgency now">NOW</span>
+            <span style="font-size:11px;color:var(--text-light)">GLP-1 · FDA Regulatory</span>
+            <span class="expand-btn"><span class="expand-icon">▼</span> Details</span>
+          </div>
+          <div class="brief-headline">The First GLP-1 Weight Loss Pill Is Here. What You Need to Know Before Asking Your Doctor</div>
+          <div class="brief-angle">"Shot vs. pill" honest comparison — for patients who've been waiting for an injectable alternative</div>
+          <div class="brief-scores">
+            <div class="score-chip">Trend <strong>88</strong></div>
+            <div class="score-chip">Opp. <strong>87</strong></div>
+            <div class="score-chip">Discover <strong>5/5</strong></div>
+            <div class="score-chip">~1,800–2,200 words</div>
+          </div>
+        </div>
+        <div class="brief-body">
+          <div class="brief-section">
+            <div class="brief-section-title">Why Now</div>
+            <div class="why-now">FDA approved oral Wegovy in December 2025. Novo Nordisk is now making it widely available commercially in May 2026 — this is the market launch moment, with Wegovy holding 65% of all new U.S. GLP-1 prescriptions.</div>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">⚠️ Integrity Flags</div>
+            <div class="integrity-flag">⚠️ Oral semaglutide requires strict administration (empty stomach, small sip of water, 30-min wait before eating/drinking). Adherence complexity is meaningfully different from injectable. Note this clearly.</div>
+            <div class="integrity-flag">⚠️ Cardiac and liver benefits (from SELECT trial) were demonstrated for injectable semaglutide — not yet confirmed for oral formulation. Do not conflate.</div>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Alternate Headlines</div>
+            <ul class="headlines-alt">
+              <li>Wegovy Is Now Available as a Pill — Here's How the Oral Version Compares to Shots</li>
+              <li>FDA-Approved Oral Semaglutide Just Launched. Here's Everything That Changes</li>
+            </ul>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Outline</div>
+            <ul class="outline-list">
+              <li>Intro: The GLP-1 revolution just got more accessible — what the pill means for patients</li>
+              <li>What is oral semaglutide and how does it differ from Ozempic/Wegovy injections?</li>
+              <li>How well does the pill work? (OASIS 4: 16.6% weight loss, 1 in 3 lost 20%+)</li>
+              <li>Shot vs. pill — honest comparison: efficacy, administration, cost, availability</li>
+              <li>Who qualifies? (BMI criteria, type 2 diabetes, insurance coverage reality)</li>
+              <li>What the pill doesn't do (yet) — cardiac benefits, compounding ban context</li>
+              <li>How to talk to your doctor about switching or starting</li>
+              <li>FAQ: Insurance coverage? Can I switch from injections? What if I can't wait 30 min?</li>
+            </ul>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Key Data Points</div>
+            <ul class="data-points">
+              <li>16.6% mean weight loss at 64 weeks in OASIS 4 trial — <a href="https://www.pharmacytimes.com/view/fda-approves-oral-glp-1-for-weight-management" target="_blank" rel="noopener">Pharmacy Times</a></li>
+              <li>1 in 3 adherent patients achieved ≥20% weight loss vs. &lt;3% with placebo — <a href="https://www.ajmc.com/view/fda-approves-oral-semaglutide-as-first-glp-1-pill-for-weight-loss" target="_blank" rel="noopener">AJMC</a></li>
+              <li>Wegovy brand: 65% of all new U.S. GLP-1 prescriptions per Novo Nordisk CEO — <a href="https://www.cnbc.com/2026/05/06/wegovy-glp1-weight-loss-novo-nordisk-earnings-stock-nvo-ozempic.html" target="_blank" rel="noopener">CNBC</a></li>
+              <li>FDA moving to permanently exclude semaglutide from compounded drug list (public comment open through June 29) — <a href="https://www.pharmacytimes.com/view/fda-moves-to-permanently-close-the-door-on-compounded-glp-1s" target="_blank" rel="noopener">Pharmacy Times</a></li>
+            </ul>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Sources</div>
+            <div class="sources-row">
+              <a href="https://www.ajmc.com/view/fda-approves-oral-semaglutide-as-first-glp-1-pill-for-weight-loss" target="_blank" rel="noopener" class="source-tag t1">AJMC — FDA approval + trial data</a>
+              <a href="https://www.pharmacytimes.com/view/fda-approves-oral-glp-1-for-weight-management" target="_blank" rel="noopener" class="source-tag t1">Pharmacy Times — Approval details</a>
+              <a href="https://www.cnbc.com/2026/05/06/wegovy-glp1-weight-loss-novo-nordisk-earnings-stock-nvo-ozempic.html" target="_blank" rel="noopener" class="source-tag">CNBC — Market data</a>
+              <a href="https://www.endocrinologyadvisor.com/news/fda-approves-oral-wegovy-for-weight-management" target="_blank" rel="noopener" class="source-tag">Endocrinology Advisor — Clinical context</a>
+              <a href="https://www.nbcnews.com/health/health-news/weight-loss-drug-prices-2026-glp-1-pills-trumprx-what-expect-rcna249520" target="_blank" rel="noopener" class="source-tag">NBC News — Pricing</a>
+            </div>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Expert Sources</div>
+            <div class="expert-box">Endocrinologist or obesity medicine specialist · Registered Dietitian with GLP-1 clinical experience. Pull existing published quotes from AJMC or Pharmacy Times coverage.</div>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">SEO</div>
+            <div class="seo-row">
+              <span class="kw-tag">oral Wegovy pill</span><span class="kw-tag">semaglutide pill</span><span class="kw-tag">oral GLP-1 weight loss</span><span class="kw-tag">Wegovy pill vs injection</span><span class="kw-tag">oral Wegovy side effects</span><span class="kw-tag">who qualifies for Wegovy pill</span>
+            </div>
+            <div style="margin-top:8px;font-size:12px;color:var(--text-light)">Format: Evaluative guide · Schema: FAQ + MedicalWebPage · Cluster: GLP-1 hub anchor</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BRIEF 2 -->
+      <div class="brief-card p1" id="brief-2">
+        <div class="brief-header" onclick="toggle('brief-2')">
+          <div class="brief-meta">
+            <span class="badge p1">P1</span>
+            <span class="urgency today">TODAY</span>
+            <span style="font-size:11px;color:var(--text-light)">Infectious Disease · Breaking</span>
+            <span class="expand-btn"><span class="expand-icon">▼</span> Details</span>
+          </div>
+          <div class="brief-headline">A Hantavirus Outbreak Hit a Cruise Ship. Here's What We Know — and What Experts Say About the Risk</div>
+          <div class="brief-angle">Skeptical explainer: what hantavirus is, what this outbreak means, and why experts aren't panicking</div>
+          <div class="brief-scores">
+            <div class="score-chip">Trend <strong>83</strong></div>
+            <div class="score-chip">Opp. <strong>84</strong></div>
+            <div class="score-chip">Discover <strong>5/5</strong></div>
+            <div class="score-chip">~1,200–1,600 words</div>
+          </div>
+        </div>
+        <div class="brief-body">
+          <div class="brief-section">
+            <div class="brief-section-title">Why Now</div>
+            <div class="why-now">STAT News, Healthline, and WHO reported May 5–7 on a cluster of deaths from hantavirus aboard the MV Hondius cruise ship. Hantavirus outbreaks on cruise ships are extremely rare — this is genuinely novel.</div>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">⚠️ Integrity Flags</div>
+            <div class="integrity-flag">⚠️ Experts explicitly discount pandemic risk. Do NOT frame as pandemic threat.</div>
+            <div class="integrity-flag">⚠️ CRITICAL FACT: Hantavirus does NOT spread person-to-person through respiratory route the way COVID did. Must clarify this early in the piece.</div>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Outline</div>
+            <ul class="outline-list">
+              <li>Intro: A disease most people have never heard of just appeared on a cruise ship</li>
+              <li>What is hantavirus? (rodent droppings/urine — NOT person-to-person)</li>
+              <li>What happened on the MV Hondius?</li>
+              <li>How deadly is hantavirus? (case-fatality rate up to 38% for HPS)</li>
+              <li>Is the general public at risk? (No — but who is?)</li>
+              <li>Why experts are concerned but not panicking</li>
+              <li>What cruise passengers and travelers should know</li>
+              <li>FAQ: Can it spread person-to-person? Symptoms? Treatment?</li>
+            </ul>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Key Data Points</div>
+            <ul class="data-points">
+              <li>Hantavirus pulmonary syndrome (HPS) case-fatality rate: up to 38% — <a href="https://www.cdc.gov" target="_blank" rel="noopener">CDC</a></li>
+              <li>Hantavirus does NOT spread human-to-human through respiratory route — <a href="https://www.cdc.gov" target="_blank" rel="noopener">CDC</a></li>
+              <li>Outbreak confirmed aboard cruise ship MV Hondius; WHO alerted — <a href="https://www.statnews.com" target="_blank" rel="noopener">STAT News</a></li>
+              <li>CDC cruise ship sanitation program official retired amid outbreak — <a href="https://www.statnews.com" target="_blank" rel="noopener">STAT News</a></li>
+            </ul>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Sources</div>
+            <div class="sources-row">
+              <a href="https://www.statnews.com" target="_blank" rel="noopener" class="source-tag t1">STAT News — Outbreak reporting</a>
+              <a href="https://www.healthline.com/health-news" target="_blank" rel="noopener" class="source-tag t1">Healthline — Consumer summary</a>
+              <a href="https://www.cdc.gov" target="_blank" rel="noopener" class="source-tag t1">CDC — Disease facts</a>
+              <a href="https://www.who.int" target="_blank" rel="noopener" class="source-tag t1">WHO — Advisory</a>
+            </div>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">SEO</div>
+            <div class="seo-row">
+              <span class="kw-tag">hantavirus cruise ship</span><span class="kw-tag">what is hantavirus</span><span class="kw-tag">hantavirus symptoms</span><span class="kw-tag">hantavirus transmission</span><span class="kw-tag">can hantavirus spread person to person</span><span class="kw-tag">MV Hondius outbreak</span>
+            </div>
+            <div style="margin-top:8px;font-size:12px;color:var(--text-light)">Format: News explainer + FAQ · Schema: NewsArticle + FAQ · Publish within hours — peak cycle 24–48h</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BRIEF 3 -->
+      <div class="brief-card p1" id="brief-3">
+        <div class="brief-header" onclick="toggle('brief-3')">
+          <div class="brief-meta">
+            <span class="badge p1">P1</span>
+            <span class="urgency today">TODAY</span>
+            <span style="font-size:11px;color:var(--text-light)">FDA Regulatory · ⚠️ High sensitivity</span>
+            <span class="expand-btn"><span class="expand-icon">▼</span> Details</span>
+          </div>
+          <div class="brief-headline">The FDA Blocked Publication of Studies That Found COVID and Shingles Vaccines Were Safe. Here's What We Know.</div>
+          <div class="brief-angle">Factual explainer — what the suppressed studies actually found and what patients should take from this</div>
+          <div class="brief-scores">
+            <div class="score-chip">Trend <strong>77</strong></div>
+            <div class="score-chip">Opp. <strong>82</strong></div>
+            <div class="score-chip">Discover <strong>4/5</strong></div>
+            <div class="score-chip">~1,400–1,800 words</div>
+          </div>
+        </div>
+        <div class="brief-body">
+          <div class="brief-section">
+            <div class="brief-section-title">Why Now</div>
+            <div class="why-now">Washington Post, ABC News, and STAT News reported May 5–7 that FDA blocked publication of two COVID-19 vaccine safety studies and Shingrix conference abstracts. Studies found serious side effects to be very rare.</div>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">⚠️ Integrity Flags — EDITORIAL REVIEW REQUIRED</div>
+            <div class="integrity-flag">⚠️ CRITICAL: The suppressed studies found vaccines are SAFE — serious side effects are very rare. This is NOT a vaccine danger story. Frame as scientific transparency and institutional integrity.</div>
+            <div class="integrity-flag">⚠️ FDA/HHS states studies drew conclusions "not supported by underlying data." Present this official response alongside the reporting.</div>
+            <div class="integrity-flag">⚠️ Do NOT allow any framing that could be read as anti-vaccine. The science conclusion is: vaccines are safe. The story is suppression of that finding.</div>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Outline</div>
+            <ul class="outline-list">
+              <li>Intro: FDA stopped publication of vaccine safety research conducted by its own scientists</li>
+              <li>What the suppressed studies found (vaccines safe; serious side effects rare)</li>
+              <li>What was suppressed and when (COVID studies October; Shingrix February)</li>
+              <li>FDA/HHS official response: conclusions not supported by data</li>
+              <li>CDC's separate withholding of a COVID hospitalization report</li>
+              <li>What this means for public trust — expert perspectives</li>
+              <li>What patients should know — the existing evidence base for vaccine safety</li>
+            </ul>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Key Data Points</div>
+            <ul class="data-points">
+              <li>FDA directed withdrawal of two COVID-19 vaccine safety studies accepted by medical journals — <a href="https://www.washingtonpost.com/health/2026/05/05/fda-blocks-covid-shingles-vaccine-studies/" target="_blank" rel="noopener">Washington Post</a></li>
+              <li>Studies analyzed millions of patient records; found serious side effects "very rare" — <a href="https://www.washingtonpost.com/health/2026/05/05/fda-blocks-covid-shingles-vaccine-studies/" target="_blank" rel="noopener">Washington Post</a></li>
+              <li>FDA also blocked Shingrix (shingles vaccine) abstracts from major drug safety conference in February — <a href="https://www.washingtonpost.com/health/2026/05/05/fda-blocks-covid-shingles-vaccine-studies/" target="_blank" rel="noopener">Washington Post</a></li>
+              <li>CDC separately withheld report showing COVID vaccine reduced hospitalizations last winter — <a href="https://abcnews.com/Health/fda-blocked-publication-covid-shingles-vaccine-research-findings/story?id=132687938" target="_blank" rel="noopener">ABC News</a></li>
+            </ul>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Sources</div>
+            <div class="sources-row">
+              <a href="https://www.washingtonpost.com/health/2026/05/05/fda-blocks-covid-shingles-vaccine-studies/" target="_blank" rel="noopener" class="source-tag t1">Washington Post — Primary reporting</a>
+              <a href="https://abcnews.com/Health/fda-blocked-publication-covid-shingles-vaccine-research-findings/story?id=132687938" target="_blank" rel="noopener" class="source-tag t1">ABC News — Corroborating</a>
+              <a href="https://www.prismnews.com/news/fda-blocks-publication-of-studies-finding-covid-shingles" target="_blank" rel="noopener" class="source-tag">Prism News</a>
+            </div>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">SEO</div>
+            <div class="seo-row">
+              <span class="kw-tag">FDA blocks vaccine study</span><span class="kw-tag">FDA vaccine safety research suppressed</span><span class="kw-tag">COVID vaccine safety studies</span><span class="kw-tag">are vaccines safe 2026</span>
+            </div>
+            <div style="margin-top:8px;font-size:12px;color:var(--text-light)">Format: News explainer · Schema: NewsArticle · Mandatory editorial review before publish</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BRIEF 4 -->
+      <div class="brief-card p1" id="brief-4">
+        <div class="brief-header" onclick="toggle('brief-4')">
+          <div class="brief-meta">
+            <span class="badge p1">P1</span>
+            <span class="urgency today">TODAY</span>
+            <span style="font-size:11px;color:var(--text-light)">Public Health · Epidemiology</span>
+            <span class="expand-btn"><span class="expand-icon">▼</span> Details</span>
+          </div>
+          <div class="brief-headline">The US Is About to Lose Its Measles "Elimination" Status. Here's What That Actually Means.</div>
+          <div class="brief-angle">Explainer on what elimination status is, why we're at risk of losing it, and what happens if we do</div>
+          <div class="brief-scores">
+            <div class="score-chip">Trend <strong>74</strong></div>
+            <div class="score-chip">Opp. <strong>80</strong></div>
+            <div class="score-chip">Discover <strong>4/5</strong></div>
+            <div class="score-chip">~1,400–1,800 words</div>
+          </div>
+        </div>
+        <div class="brief-body">
+          <div class="brief-section">
+            <div class="brief-section-title">Why Now</div>
+            <div class="why-now">1,814 confirmed measles cases in 45 states as of April 30, 2026. Analysis published in 2026 says US is "highly likely" to lose elimination status by fall — a threshold first achieved in 2000.</div>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Outline</div>
+            <ul class="outline-list">
+              <li>Intro: A public health milestone 25 years in the making is at serious risk</li>
+              <li>What is measles elimination and when did the US achieve it?</li>
+              <li>Where we are now (1,814 cases, 45 states, 24 outbreaks, 93% outbreak-associated)</li>
+              <li>How did we get here? (vaccination rate decline, outbreak dynamics)</li>
+              <li>What losing elimination status means practically for the country</li>
+              <li>Who is at highest risk?</li>
+              <li>What individuals and parents should do now</li>
+              <li>FAQ: Is the measles vaccine still effective? Symptoms? Am I protected from childhood vaccination?</li>
+            </ul>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Key Data Points</div>
+            <ul class="data-points">
+              <li>1,814 confirmed measles cases, 24 new outbreaks, 93% outbreak-associated as of April 30 — <a href="https://www.cdc.gov/measles/data-research/index.html" target="_blank" rel="noopener">CDC</a></li>
+              <li>US "highly likely" to lose elimination status by fall 2026 — <a href="https://www.cidrap.umn.edu/measles/us-highly-likely-lose-measles-elimination-status-fall-analysis-warns" target="_blank" rel="noopener">CIDRAP</a></li>
+              <li>Outbreak began in Texas in early 2025 with two imported cases; spread to 45 states — <a href="https://www.cidrap.umn.edu/measles/us-highly-likely-lose-measles-elimination-status-fall-analysis-warns" target="_blank" rel="noopener">CIDRAP</a></li>
+            </ul>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Sources</div>
+            <div class="sources-row">
+              <a href="https://www.cdc.gov/measles/data-research/index.html" target="_blank" rel="noopener" class="source-tag t1">CDC — Case counts + outbreak data</a>
+              <a href="https://www.cidrap.umn.edu/measles/us-highly-likely-lose-measles-elimination-status-fall-analysis-warns" target="_blank" rel="noopener" class="source-tag t1">CIDRAP — Elimination status analysis</a>
+            </div>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">SEO</div>
+            <div class="seo-row">
+              <span class="kw-tag">measles outbreak 2026</span><span class="kw-tag">US measles elimination status</span><span class="kw-tag">how many measles cases 2026</span><span class="kw-tag">measles vaccine protection</span>
+            </div>
+            <div style="margin-top:8px;font-size:12px;color:var(--text-light)">Format: Explainer + FAQ · Visual: US outbreak map · Schema: NewsArticle + FAQ</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BRIEF 5 -->
+      <div class="brief-card p1" id="brief-5">
+        <div class="brief-header" onclick="toggle('brief-5')">
+          <div class="brief-meta">
+            <span class="badge p1">P1</span>
+            <span class="urgency today">TODAY</span>
+            <span style="font-size:11px;color:var(--text-light)">Women's Health · Borderline — editorial review required</span>
+            <span class="expand-btn"><span class="expand-icon">▼</span> Details</span>
+          </div>
+          <div class="brief-headline">The Supreme Court Has Restored Telehealth and Mail Access to Mifepristone. Here's What Patients Need to Know.</div>
+          <div class="brief-angle">Practical patient guide — what changed, what patients can do now, what restrictions remain</div>
+          <div class="brief-scores">
+            <div class="score-chip">Trend <strong>87</strong></div>
+            <div class="score-chip">Opp. <strong>85</strong></div>
+            <div class="score-chip">Discover <strong>4/5</strong></div>
+            <div class="score-chip">~1,200–1,600 words</div>
+          </div>
+        </div>
+        <div class="brief-body">
+          <div class="brief-section">
+            <div class="brief-section-title">⚠️ Integrity Flags — EDITORIAL REVIEW REQUIRED</div>
+            <div class="integrity-flag">⚠️ Cover as drug access / women's health story ONLY. No political commentary or editorial opinion.</div>
+            <div class="integrity-flag">⚠️ State-level restrictions may still apply — this ruling restores federal access, not state. Must be stated clearly.</div>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Why Now</div>
+            <div class="why-now">May 4, 2026 SCOTUS ruling — direct, immediate impact on patient access to FDA-approved medication through telehealth and mail-order pharmacy.</div>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Outline</div>
+            <ul class="outline-list">
+              <li>Intro: What the ruling means in plain terms for patients</li>
+              <li>What is mifepristone and how is it used medically? (medication abortion + miscarriage management)</li>
+              <li>What the Supreme Court ruled and what changed</li>
+              <li>How to access mifepristone through telehealth or mail now</li>
+              <li>What restrictions remain (state laws, gestational limits)</li>
+              <li>What patients should know about safety and effectiveness</li>
+            </ul>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Sources</div>
+            <div class="sources-row">
+              <a href="https://www.statnews.com" target="_blank" rel="noopener" class="source-tag t1">STAT News — Ruling reporting</a>
+              <a href="https://www.fda.gov" target="_blank" rel="noopener" class="source-tag t1">FDA — Drug safety + approval history</a>
+            </div>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">SEO</div>
+            <div class="seo-row">
+              <span class="kw-tag">mifepristone telehealth access</span><span class="kw-tag">Supreme Court mifepristone ruling</span><span class="kw-tag">how to get mifepristone</span><span class="kw-tag">abortion pill mail order 2026</span>
+            </div>
+            <div style="margin-top:8px;font-size:12px;color:var(--text-light)">Format: News explainer + practical guide · Confidence: medium (borderline brand safety)</div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /p1 briefs grid -->
+  </div><!-- /p1 group -->
+
+  <!-- P2 GROUP -->
+  <div class="priority-group">
+    <div class="priority-group-header">
+      <span class="badge p2">P2</span>
+      <span class="priority-group-label">Short-Term (1–3 days)</span>
+      <span class="priority-group-desc">4 candidates — assign today, publish this week</span>
+    </div>
+    <div class="briefs-grid">
+
+      <!-- BRIEF 6 -->
+      <div class="brief-card p2" id="brief-6">
+        <div class="brief-header" onclick="toggle('brief-6')">
+          <div class="brief-meta">
+            <span class="badge p2">P2</span>
+            <span class="urgency this-week">THIS WEEK</span>
+            <span style="font-size:11px;color:var(--text-light)">Medical Research · GLP-1</span>
+            <span class="expand-btn"><span class="expand-icon">▼</span> Details</span>
+          </div>
+          <div class="brief-headline">Ozempic Wasn't Just Approved for Weight Loss. A Major Trial Found It Also Protects Your Heart and Liver.</div>
+          <div class="brief-angle">The GLP-1 drug doing more than weight loss — a research explainer for patients and their doctors</div>
+          <div class="brief-scores">
+            <div class="score-chip">Trend <strong>79</strong></div>
+            <div class="score-chip">Opp. <strong>88</strong></div>
+            <div class="score-chip">Discover <strong>4/5</strong></div>
+            <div class="score-chip">~1,800–2,200 words</div>
+          </div>
+        </div>
+        <div class="brief-body">
+          <div class="brief-section">
+            <div class="brief-section-title">⚠️ Integrity Flags</div>
+            <div class="integrity-flag">⚠️ SELECT was an RCT — state this clearly. Participants had existing CVD + obesity — benefits may not generalize to all patients.</div>
+            <div class="integrity-flag">⚠️ Liver outcomes appear to be secondary/exploratory endpoints — weight appropriately vs. primary cardiac endpoints.</div>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Key Data Points</div>
+            <ul class="data-points">
+              <li>SELECT trial: 17,504 patients, 804 clinical sites, 41 countries — <a href="https://www.vcuhealth.org/news/clinical-trial-results-show-weight-loss-drug-reduces-the-risk-of-heart-and-liver-diseases-in-people-with-obesity/" target="_blank" rel="noopener">VCU Health</a></li>
+              <li>Reduced major adverse cardiovascular events in adults with obesity + CVD — <a href="https://www.nature.com/nm" target="_blank" rel="noopener">Nature Medicine</a></li>
+              <li>Also reduced fatty liver disease (NASH/MASLD) risk — Nature Medicine</li>
+              <li>NIH study: GLP-1 drugs suppress "eating for pleasure" (hedonic hunger) separately — NIH</li>
+            </ul>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Sources</div>
+            <div class="sources-row">
+              <a href="https://www.vcuhealth.org/news/clinical-trial-results-show-weight-loss-drug-reduces-the-risk-of-heart-and-liver-diseases-in-people-with-obesity/" target="_blank" rel="noopener" class="source-tag t1">VCU Health — Study summary</a>
+              <span class="source-tag unverified">Nature Medicine — [DOI unverified — search doi.org for SELECT trial 2026]</span>
+            </div>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Expert Sources + SEO</div>
+            <div class="expert-box">Cardiologist · Hepatologist · Endocrinologist. Pull SELECT trial principal investigators from Nature Medicine paper.</div>
+            <div class="seo-row" style="margin-top:8px;">
+              <span class="kw-tag">Ozempic heart disease</span><span class="kw-tag">semaglutide liver disease</span><span class="kw-tag">GLP-1 cardiovascular benefits</span><span class="kw-tag">SELECT trial results</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BRIEF 7 -->
+      <div class="brief-card p2" id="brief-7">
+        <div class="brief-header" onclick="toggle('brief-7')">
+          <div class="brief-meta">
+            <span class="badge p2">P2</span>
+            <span class="urgency this-week">THIS WEEK</span>
+            <span style="font-size:11px;color:var(--text-light)">GLP-1 Safety · MHRA Alert</span>
+            <span class="expand-btn"><span class="expand-icon">▼</span> Details</span>
+          </div>
+          <div class="brief-headline">GLP-1 Drugs May Be Linked to a Rare Eye Condition That Can Cause Sudden Vision Loss. Here's What to Know.</div>
+          <div class="brief-angle">"What you need to know" patient explainer — what NAION is, what the warning actually says, what GLP-1 users should watch for</div>
+          <div class="brief-scores">
+            <div class="score-chip">Trend <strong>75</strong></div>
+            <div class="score-chip">Opp. <strong>84</strong></div>
+            <div class="score-chip">Discover <strong>5/5</strong></div>
+            <div class="score-chip">~1,400–1,800 words</div>
+          </div>
+        </div>
+        <div class="brief-body">
+          <div class="brief-section">
+            <div class="brief-section-title">⚠️ Integrity Flags</div>
+            <div class="integrity-flag">⚠️ MHRA issued a safety update — NOT a withdrawal or ban. This is a precautionary signal only.</div>
+            <div class="integrity-flag">⚠️ Causation has NOT been established. Absolute risk appears rare. Do NOT advise patients to stop GLP-1s — frame as: know the symptoms, talk to your doctor.</div>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Key Data Points</div>
+            <ul class="data-points">
+              <li>UK MHRA safety update links semaglutide to NAION (non-arteritic anterior ischemic optic neuropathy) — <a href="https://www.gov.uk/government/organisations/medicines-and-healthcare-products-regulatory-agency" target="_blank" rel="noopener">MHRA</a> [verify specific URL]</li>
+              <li>NAION: sudden, painless vision loss in one eye due to reduced blood flow to optic nerve</li>
+              <li>Most cases occur in patients with existing cardiovascular risk factors (diabetes, hypertension, high cholesterol)</li>
+            </ul>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Sources + SEO</div>
+            <div class="sources-row">
+              <a href="https://www.gov.uk/government/organisations/medicines-and-healthcare-products-regulatory-agency" target="_blank" rel="noopener" class="source-tag t1">MHRA — Safety update [verify URL]</a>
+              <a href="https://www.fda.gov" target="_blank" rel="noopener" class="source-tag t1">FDA — Cross-reference US status</a>
+            </div>
+            <div class="seo-row" style="margin-top:8px;">
+              <span class="kw-tag">GLP-1 eye side effects</span><span class="kw-tag">Ozempic vision loss</span><span class="kw-tag">semaglutide NAION</span><span class="kw-tag">Wegovy eye problems</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BRIEF 8 -->
+      <div class="brief-card p2" id="brief-8">
+        <div class="brief-header" onclick="toggle('brief-8')">
+          <div class="brief-meta">
+            <span class="badge p2">P2</span>
+            <span class="urgency this-week">THIS WEEK</span>
+            <span style="font-size:11px;color:var(--text-light)">Women's Health · FDA Regulatory</span>
+            <span class="expand-btn"><span class="expand-icon">▼</span> Details</span>
+          </div>
+          <div class="brief-headline">The FDA Just Changed Its Warnings on Hormone Replacement Therapy. Here's What Menopausal Women Should Know.</div>
+          <div class="brief-angle">What changed and why — clear explainer for women navigating the HRT decision</div>
+          <div class="brief-scores">
+            <div class="score-chip">Trend <strong>73</strong></div>
+            <div class="score-chip">Opp. <strong>84</strong></div>
+            <div class="score-chip">Discover <strong>4/5</strong></div>
+            <div class="score-chip">~1,600–2,000 words</div>
+          </div>
+        </div>
+        <div class="brief-body">
+          <div class="brief-section">
+            <div class="brief-section-title">⚠️ Integrity Flags</div>
+            <div class="integrity-flag">⚠️ The 50% CVD reduction, 35% Alzheimer's reduction — apply to EARLY initiators only (within 10 years of menopause onset). Must appear prominently, not buried.</div>
+            <div class="integrity-flag">⚠️ WHI study context is essential: original HRT fears came from WHI (older average age, different formulations). New labeling corrects that outdated framing.</div>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Key Data Points</div>
+            <ul class="data-points">
+              <li>FDA approved labeling changes to 6 menopausal hormone therapy products — <a href="https://www.fda.gov/news-events/press-announcements/hhs-advances-womens-health-removes-misleading-fda-warnings-hormone-replacement-therapy" target="_blank" rel="noopener">FDA</a></li>
+              <li>HRT initiated within 10 years of menopause may reduce CVD risk by 50%, Alzheimer's by 35%, fractures by 50–60%, all-cause mortality — <a href="https://www.fda.gov/news-events/press-announcements/hhs-advances-womens-health-removes-misleading-fda-warnings-hormone-replacement-therapy" target="_blank" rel="noopener">FDA announcement</a></li>
+            </ul>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Sources + Expert + SEO</div>
+            <div class="sources-row">
+              <a href="https://www.fda.gov/news-events/press-announcements/hhs-advances-womens-health-removes-misleading-fda-warnings-hormone-replacement-therapy" target="_blank" rel="noopener" class="source-tag t1">FDA — Primary announcement</a>
+              <a href="https://www.contemporaryobgyn.net/view/top-fda-news-in-womens-health-you-missed-in-q1-2026" target="_blank" rel="noopener" class="source-tag">Contemporary OB/GYN</a>
+            </div>
+            <div class="expert-box" style="margin-top:8px;">OB/GYN · Menopause specialist · NAMS (North American Menopause Society) official guidance.</div>
+            <div class="seo-row" style="margin-top:8px;">
+              <span class="kw-tag">HRT labeling change FDA 2026</span><span class="kw-tag">hormone replacement therapy menopause new guidelines</span><span class="kw-tag">is HRT safe 2026</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BRIEF 9 -->
+      <div class="brief-card p2" id="brief-9">
+        <div class="brief-header" onclick="toggle('brief-9')">
+          <div class="brief-meta">
+            <span class="badge p2">P2</span>
+            <span class="urgency this-week">THIS WEEK</span>
+            <span style="font-size:11px;color:var(--text-light)">Chronic Disease · Drug Access</span>
+            <span class="expand-btn"><span class="expand-icon">▼</span> Details</span>
+          </div>
+          <div class="brief-headline">Medicare Is Offering $50/Month Weight Loss Drugs Starting July. Here's Who Qualifies (and Who Doesn't).</div>
+          <div class="brief-angle">"What you need to know before July" — emphasizing who qualifies and the critical LIS exclusion</div>
+          <div class="brief-scores">
+            <div class="score-chip">Trend <strong>68</strong></div>
+            <div class="score-chip">Opp. <strong>83</strong></div>
+            <div class="score-chip">Discover <strong>4/5</strong></div>
+            <div class="score-chip">~1,200–1,600 words</div>
+          </div>
+        </div>
+        <div class="brief-body">
+          <div class="brief-section">
+            <div class="brief-section-title">⚠️ Integrity Flags</div>
+            <div class="integrity-flag">⚠️ CRITICAL: The $50 program EXCLUDES patients receiving low-income subsidies (LIS/Extra Help). State this in paragraph 2 — not buried. This is the most vulnerable Medicare population.</div>
+            <div class="integrity-flag">⚠️ Program is a pilot — not all Medicare plans will participate immediately at July launch.</div>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Key Data Points</div>
+            <ul class="data-points">
+              <li>Medicare GLP-1 Bridge pilot: $50/month copay for weight loss medications starting July 2026 — <a href="https://kffhealthnews.org" target="_blank" rel="noopener">KFF Health News</a></li>
+              <li>Program excludes low-income subsidy (LIS/Extra Help) recipients — <a href="https://kffhealthnews.org" target="_blank" rel="noopener">KFF Health News</a></li>
+              <li>Wegovy lists at ~$1,300/month; $50 copay = massive cost reduction for eligible beneficiaries</li>
+            </ul>
+          </div>
+          <div class="brief-section">
+            <div class="brief-section-title">Sources + Expert + SEO</div>
+            <div class="sources-row">
+              <a href="https://kffhealthnews.org" target="_blank" rel="noopener" class="source-tag t1">KFF Health News — Primary report</a>
+              <a href="https://www.cms.gov" target="_blank" rel="noopener" class="source-tag t1">CMS.gov — Official program details [verify URL]</a>
+            </div>
+            <div class="expert-box" style="margin-top:8px;">Medicare policy expert · Pharmacist specializing in Medicare Part D.</div>
+            <div class="seo-row" style="margin-top:8px;">
+              <span class="kw-tag">Medicare GLP-1 drugs 2026</span><span class="kw-tag">Medicare Ozempic coverage</span><span class="kw-tag">Medicare weight loss drug cost</span><span class="kw-tag">Medicare GLP-1 bridge program</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /p2 briefs grid -->
+  </div><!-- /p2 group -->
+
+  <!-- P3 GROUP -->
+  <div class="priority-group">
+    <div class="priority-group-header">
+      <span class="badge p3">P3</span>
+      <span class="priority-group-label">Schedule This Week</span>
+      <span class="priority-group-desc">5 candidates — assign when P1/P2 capacity clears</span>
+    </div>
+    <div class="briefs-grid">
+
+      <div class="brief-card p3" id="brief-10">
+        <div class="brief-header" onclick="toggle('brief-10')">
+          <div class="brief-meta"><span class="badge p3">P3</span><span class="urgency this-week">THIS WEEK</span><span style="font-size:11px;color:var(--text-light)">Mental Health · Nutrition</span><span class="expand-btn"><span class="expand-icon">▼</span> Details</span></div>
+          <div class="brief-headline">Teens Who Eat Healthier Have Fewer Depression Symptoms, a Review of 20 Studies Finds</div>
+          <div class="brief-scores"><div class="score-chip">T <strong>64</strong></div><div class="score-chip">O <strong>78</strong></div><div class="score-chip">Discover <strong>3/5</strong></div><div class="score-chip">~1,200–1,500 words</div></div>
+        </div>
+        <div class="brief-body">
+          <div class="integrity-flag">⚠️ Observational studies only — association, not causation. Directionality may run both ways (depressed teens may eat less healthily, not only vice versa).</div>
+          <div style="margin-top:12px;font-size:13px;color:var(--text-mid)"><strong>Angle:</strong> Research synthesis — what the evidence actually says, with appropriate caveats, and practical takeaways for parents and teens.</div>
+          <div class="seo-row" style="margin-top:10px;"><span class="kw-tag">teen diet mental health</span><span class="kw-tag">healthy eating depression teenagers</span><span class="kw-tag">adolescent mental health nutrition</span></div>
+          <div style="margin-top:10px;"><span class="source-tag unverified">[Primary review study — verify DOI before assigning]</span></div>
+        </div>
+      </div>
+
+      <div class="brief-card p3" id="brief-11">
+        <div class="brief-header" onclick="toggle('brief-11')">
+          <div class="brief-meta"><span class="badge p3">P3</span><span class="urgency this-week">THIS WEEK</span><span style="font-size:11px;color:var(--text-light)">Infectious Disease · Worker Safety</span><span class="expand-btn"><span class="expand-icon">▼</span> Details</span></div>
+          <div class="brief-headline">H5N1 Was Found Airborne in Dairy Farm Milking Parlors. What That Means for Farm Workers — and Food Safety.</div>
+          <div class="brief-scores"><div class="score-chip">T <strong>69</strong></div><div class="score-chip">O <strong>78</strong></div><div class="score-chip">Discover <strong>4/5</strong></div><div class="score-chip">~1,000–1,400 words</div></div>
+        </div>
+        <div class="brief-body">
+          <div class="integrity-flag">⚠️ General public risk remains low per WHO. Story is about worker safety and transmission science — do NOT lead with pandemic framing.</div>
+          <div style="margin-top:12px;font-size:13px;color:var(--text-mid)"><strong>Angle:</strong> Worker safety + food safety explainer. What the aerosolization finding means, why it matters specifically for farm workers, and why food safety for consumers is not currently impacted.</div>
+          <div class="sources-row" style="margin-top:10px;">
+            <a href="https://www.cidrap.umn.edu/avian-influenza-bird-flu/sampling-reveals-possible-novel-sources-h5n1-avian-flu-transmission-dairy" target="_blank" rel="noopener" class="source-tag t1">CIDRAP — Primary study report</a>
+            <a href="https://www.cdc.gov/bird-flu/situation-summary/index.html" target="_blank" rel="noopener" class="source-tag t1">CDC — Bird flu situation summary</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="brief-card p3" id="brief-12">
+        <div class="brief-header" onclick="toggle('brief-12')">
+          <div class="brief-meta"><span class="badge p3">P3</span><span class="urgency this-week">THIS WEEK</span><span style="font-size:11px;color:var(--text-light)">Nutrition · ⚠️ Saturated SERP</span><span class="expand-btn"><span class="expand-icon">▼</span> Details</span></div>
+          <div class="brief-headline">Ultra-Processed Foods Raise Heart Disease Risk — But These Swaps Might Undo Some of the Damage</div>
+          <div class="brief-scores"><div class="score-chip">T <strong>61</strong></div><div class="score-chip">O <strong>68</strong></div><div class="score-chip">Discover <strong>3/5</strong></div><div class="score-chip">~1,200–1,600 words</div></div>
+        </div>
+        <div class="brief-body">
+          <div class="integrity-flag">⚠️ SERP is heavily saturated. Only assign if the healthy swaps angle is genuinely differentiated. Verify original European study journal before assigning.</div>
+          <div style="margin-top:12px;font-size:13px;color:var(--text-mid)"><strong>Angle:</strong> Lead with the swaps data, not the fear headline. The actionable finding is what specific food substitutions materially reduce risk.</div>
+          <div class="sources-row" style="margin-top:10px;">
+            <a href="https://www.healthline.com/health-news" target="_blank" rel="noopener" class="source-tag">Healthline — May 7</a>
+            <span class="source-tag unverified">[European study journal — verify before assigning]</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="brief-card p3" id="brief-13">
+        <div class="brief-header" onclick="toggle('brief-13')">
+          <div class="brief-meta"><span class="badge p3">P3</span><span class="urgency this-week">THIS WEEK</span><span style="font-size:11px;color:var(--text-light)">Mental Health · GLP-1</span><span class="expand-btn"><span class="expand-icon">▼</span> Details</span></div>
+          <div class="brief-headline">People Who Lose Weight With Ozempic Are Judged More Harshly Than Those Who Diet or Exercise. Researchers Want to Know Why.</div>
+          <div class="brief-scores"><div class="score-chip">T <strong>57</strong></div><div class="score-chip">O <strong>74</strong></div><div class="score-chip">Discover <strong>3/5</strong></div><div class="score-chip">~1,000–1,400 words</div></div>
+        </div>
+        <div class="brief-body">
+          <div style="font-size:13px;color:var(--text-mid);margin-bottom:10px;"><strong>Angle:</strong> Psychology + social science — the stigma attached to pharmaceutical weight loss and what it means for patients' mental health and treatment adherence.</div>
+          <div class="sources-row">
+            <a href="https://www.sciencedaily.com/releases/2026/05/260504154016.htm" target="_blank" rel="noopener" class="source-tag">ScienceDaily — Primary study summary</a>
+          </div>
+          <div class="seo-row" style="margin-top:8px;"><span class="kw-tag">Ozempic stigma</span><span class="kw-tag">GLP-1 weight loss judgment</span><span class="kw-tag">drug-assisted weight loss perception</span></div>
+        </div>
+      </div>
+
+      <div class="brief-card p3" id="brief-14">
+        <div class="brief-header" onclick="toggle('brief-14')">
+          <div class="brief-meta"><span class="badge p3">P3</span><span class="urgency this-week">THIS WEEK</span><span style="font-size:11px;color:var(--text-light)">FDA Regulatory · Public Health</span><span class="expand-btn"><span class="expand-icon">▼</span> Details</span></div>
+          <div class="brief-headline">The FDA Just Authorized Fruit-Flavored Vapes. The Public Health Debate, Explained.</div>
+          <div class="brief-scores"><div class="score-chip">T <strong>66</strong></div><div class="score-chip">O <strong>66</strong></div><div class="score-chip">Discover <strong>3/5</strong></div><div class="score-chip">~1,000–1,400 words</div></div>
+        </div>
+        <div class="brief-body">
+          <div class="integrity-flag">⚠️ Present FDA's adult cessation rationale alongside public health concerns about youth appeal. Do not editorialize.</div>
+          <div style="font-size:13px;color:var(--text-mid);margin-top:10px;margin-bottom:10px;"><strong>Angle:</strong> Skeptical explainer — what's FDA's reasoning, what do public health experts say, what should parents know.</div>
+          <div class="sources-row">
+            <a href="https://www.statnews.com" target="_blank" rel="noopener" class="source-tag t1">STAT News — May 6</a>
+            <a href="https://www.fda.gov" target="_blank" rel="noopener" class="source-tag t1">FDA</a>
+            <a href="https://www.cdc.gov" target="_blank" rel="noopener" class="source-tag t1">CDC — Tobacco data</a>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /p3 briefs grid -->
+  </div><!-- /p3 group -->
+
+  <!-- REJECTED LOG -->
+  <div class="section-title">Rejected Signals Log</div>
+  <div style="overflow-x:auto;margin-bottom:40px;border-radius:var(--radius);box-shadow:var(--shadow);">
+    <table class="rejected-table">
+      <thead><tr><th>Topic</th><th>Rejection Reason</th></tr></thead>
+      <tbody>
+        <tr><td>Dolly Parton health update</td><td class="reject-reason">Excluded category: celebrity wellness / gossip</td></tr>
+        <tr><td>Office air + skin/hair appearance</td><td class="reject-reason">Off category: no evidence base; social-only trend</td></tr>
+        <tr><td>ICU wedding story</td><td class="reject-reason">Off category: human interest, not health informational</td></tr>
+        <tr><td>Dreams and morning mood study</td><td class="reject-reason">Weak signal; no institutional source; lifestyle fluff</td></tr>
+        <tr><td>10-minute exercise anti-cancer (Jan 2026)</td><td class="reject-reason">Outside freshness window (January); no fresh news hook</td></tr>
+        <tr><td>Proteomic aging + exercise (npj Aging 2025)</td><td class="reject-reason">Outside freshness window (2025 publication)</td></tr>
+        <tr><td>Rapamycin + exercise interaction (April 29)</td><td class="reject-reason">Outside 5-day freshness window (8 days old)</td></tr>
+        <tr><td>Eccentric exercise for muscle (May 1)</td><td class="reject-reason">Just outside 5-day freshness window; no fresh hook</td></tr>
+        <tr><td>Gut microbiome + aging — academic review papers</td><td class="reject-reason">Older academic content (2024–2025); no breaking news hook</td></tr>
+        <tr><td>FDA workforce cuts / 3,500 jobs</td><td class="reject-reason">Brand safety: primarily political/institutional story; insufficient patient health angle</td></tr>
+        <tr><td>Sanofi FDA political drug interference</td><td class="reject-reason">Brand safety: political interference story; limited direct patient relevance</td></tr>
+        <tr><td>Hospital food HHS directive</td><td class="reject-reason">Too institutional/narrow; limited national consumer-facing value</td></tr>
+        <tr><td>Drug prices rising (general KFF)</td><td class="reject-reason">Broad policy story; no specific patient-actionable angle this cycle</td></tr>
+        <tr><td>Prescription drug coupon hidden costs</td><td class="reject-reason">Finance/insurance angle; borderline; deferred to next cycle</td></tr>
+        <tr><td>Cardiovascular-Kidney-Metabolic syndrome + cancer (May 1)</td><td class="reject-reason">Just outside 5-day freshness window</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- RUN ARCHIVE -->
+  <div class="section-title">Run Archive</div>
+  <div class="archive-box">
+    <div class="archive-grid">
+      <div class="archive-item"><div class="archive-label">Run Date</div><div class="archive-val">2026-05-07</div></div>
+      <div class="archive-item"><div class="archive-label">Niche</div><div class="archive-val">Health &amp; Wellness (US)</div></div>
+      <div class="archive-item"><div class="archive-label">Signals Reviewed</div><div class="archive-val">68</div></div>
+      <div class="archive-item"><div class="archive-label">Topics Retained</div><div class="archive-val">14</div></div>
+      <div class="archive-item"><div class="archive-label">Topics Rejected</div><div class="archive-val">54</div></div>
+      <div class="archive-item"><div class="archive-label">P1 (NOW)</div><div class="archive-val" style="color:var(--p1)">5</div></div>
+      <div class="archive-item"><div class="archive-label">P2 (SHORT-TERM)</div><div class="archive-val" style="color:var(--p2)">4</div></div>
+      <div class="archive-item"><div class="archive-label">P3 (SCHEDULE)</div><div class="archive-val" style="color:var(--p3)">5</div></div>
+      <div class="archive-item"><div class="archive-label">Integrity Flags</div><div class="archive-val">10</div></div>
+      <div class="archive-item"><div class="archive-label">Top Topic</div><div class="archive-val" style="font-size:12px;">Oral Wegovy pill (T:88, O:87)</div></div>
+    </div>
+    <div class="archive-notes">
+      <strong>Key Themes:</strong> GLP-1 drugs (5 candidates), FDA regulatory actions (4), infectious disease outbreaks (2), women's health (2), mental health + nutrition (1)<br><br>
+      <strong>Tools Used:</strong> WebSearch, WebFetch (RSS + competitor pages)<br>
+      <strong>Tools Unavailable:</strong> COMPOSIO_SEARCH_TRENDS, SERPAPI_NEWS_SEARCH, ExaSearch, Reddit live feeds — search_velocity estimated throughout<br><br>
+      <strong>Notes:</strong> Strong signal day. GLP-1 cluster dominates. Two P1 stories (FDA vaccine suppression, mifepristone) require editorial review before publish due to political adjacency. SERP gap analysis is knowledge-estimated, not live-queried. Verify MHRA.gov.uk URL for NAION brief before assigning. Ultra-processed foods brief on hold pending original study verification.
+    </div>
+  </div>
+
+</div><!-- /main -->
+
+<div class="footer">
+  Trending Content OS · Daily Run · May 7, 2026 · Health &amp; Wellness (US) · Generated by Claude Code
+</div>
+
+<script>
+function toggle(id) {
+  const card = document.getElementById(id);
+  card.classList.toggle('open');
+}
+</script>
+</body>
+</html>

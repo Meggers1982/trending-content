@@ -1,0 +1,11 @@
+.env
+.env*.local
+node_modules/
+.next/
+out/
+__pycache__/
+*.pyc
+.DS_Store
+outputs/pipeline.log
+outputs/daily_newsroom_dashboard/*.blank.*
+outputs/google_trend_radar/

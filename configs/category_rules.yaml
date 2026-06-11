@@ -1,0 +1,47 @@
+allowed_categories:
+  - medical research and clinical trials    # new studies, drug approvals, clinical trial results, breakthrough treatments
+  - nutrition and diet science              # dietary guidelines, nutrient research, food safety, obesity science
+  - mental health and psychology            # depression, anxiety, therapy modalities, neuroscience of mental health, burnout
+  - fitness and exercise science            # exercise physiology, training research, sports medicine, recovery science
+  - public health and epidemiology          # disease outbreaks, vaccination data, CDC/WHO advisories, population health trends
+  - FDA and CDC regulatory updates          # drug approvals, recalls, safety warnings, guideline changes, EUA decisions
+  - chronic disease management              # diabetes, heart disease, cancer screening, autoimmune conditions, COPD
+  - women's health                          # reproductive health, menopause research, maternal health, endometriosis, PCOS
+  - aging and longevity                     # healthspan research, geriatric medicine, anti-aging science (evidence-based only)
+  - sleep science                           # circadian research, sleep disorders, sleep hygiene studies
+  - gut health and microbiome               # microbiome research, probiotics evidence, gut-brain axis
+  - pediatric health                        # childhood vaccination, developmental health, pediatric disease
+  - environmental health                    # air quality, water contamination, climate-health intersection, toxic exposures
+  - infectious disease                      # emerging pathogens, antimicrobial resistance, pandemic preparedness, seasonal flu/RSV
+
+excluded_categories:
+  - celebrity wellness trends               # celebrity endorsements of diets, supplements, or wellness products without evidence
+  - supplement marketing                    # branded supplement promotions or MLM health products
+  - anti-vaccine misinformation             # content undermining vaccine safety without credible evidence
+  - medical misinformation                  # unsubstantiated miracle cures, conspiracy theories about healthcare
+  - alternative medicine without evidence   # homeopathy, crystal healing, detox cleanses — unless a credible study evaluates them
+  - pure pharma business                    # pharma M&A, earnings, exec changes — unless directly tied to patient access or drug availability
+  - pure political healthcare opinion       # partisan healthcare policy debate without factual health content
+  - rage bait                               # fear-mongering health content designed to generate outrage, not inform
+  - adult content
+  - local hospital news                     # individual hospital openings, staffing, or admin changes too narrow for national audience
+  - pet health                              # veterinary topics unless directly relevant to zoonotic disease / One Health
+
+category_decision_rules:
+  require_allowed_category_match: true
+  reject_if_excluded_category_conflict: true
+  allow_borderline_if_audience_value_high: true
+
+  # Borderline topics: only allow if ALL THREE criteria are met
+  borderline_criteria:
+    - audience_relevance_score_minimum: 70
+    - has_clear_health_evidence_or_research_angle: true
+    - not_in_excluded_category: true
+
+  borderline_examples:
+    pass: "New study links ultra-processed food to depression risk → nutrition + mental health, peer-reviewed, qualifies"
+    pass: "FDA approves first OTC birth control pill → regulatory + women's health, direct patient impact"
+    pass: "Ozempic shortage continues as demand surges → drug availability + chronic disease, qualifies if framed around patient access"
+    fail: "Gwyneth Paltrow launches new supplement line → celebrity wellness, no evidence base"
+    fail: "UnitedHealth stock drops 8% → pure business news, no patient health angle"
+    fail: "Senator proposes Medicare expansion → pure political opinion without new health data"

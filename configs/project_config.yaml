@@ -1,0 +1,26 @@
+project_name: Trending Content OS — Health
+
+# ── Niche & Audience ──────────────────────────────────────
+site_niche: "health and wellness"
+target_audience: "health-conscious general audience — readers of Healthline, WebMD, NYT Well, and Prevention who follow medical research, nutrition science, fitness, mental health, and public health developments without needing clinical expertise"
+site_url: ""   # No live site yet — self-check unavailable; use competitor-check fallback and disclose in notes
+
+# ── Geography & Freshness ──────────────────────────────────
+geography: US
+freshness_window_hours: 120        # 5 days; health news cycles are slower than tech, but CDC/FDA announcements spike fast
+freshness_window_google: "now 7-d" # Google Trends API format
+
+# ── Scoring Thresholds (0–100 scale) ───────────────────────
+minimum_trend_strength_score: 50   # Slightly higher than AI — health signals must be substantiated, not just viral
+minimum_opportunity_score: 55      # Lower bar since no existing content to protect from cannibalization
+max_candidates_returned: 25        # Overflow → data/deferred_topics.yaml
+
+# ── Output ─────────────────────────────────────────────────
+output_destination: "outputs/daily_newsroom_dashboard/"
+
+# ── Brand Safety ───────────────────────────────────────────
+brand_safety_rules:
+  allow_politics: false            # Pure political healthcare opinion excluded
+  allow_celebrity_gossip: false    # Celebrity wellness fads without evidence excluded
+  allow_unverified_social_claims: false
+  require_source_validation: true  # Critical for health — all claims must trace to peer-reviewed or institutional sources

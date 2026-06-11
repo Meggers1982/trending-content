@@ -1,0 +1,38 @@
+# Scoring weights for Health/Wellness niche
+# Health content demands higher source credibility — peer-reviewed and institutional sources
+# carry more weight than social spread (health misinformation is disproportionately viral).
+
+trend_strength_weighting:
+  search_velocity: 0.30       # Rising % on Google Trends; health searches spike around CDC announcements, study releases, seasonal illness
+  news_volume: 0.25           # Article count last 24h; log-scaled, 100 at 50+ articles
+  social_spread: 0.15         # Platforms with chatter; LOWER than default — health misinformation goes viral, so social alone is weak signal
+  source_credibility: 0.30    # Best source tier: tier-1 = 100, tier-2 = 60, social-only = 20. HIGHER for health — peer-reviewed and institutional sources carry more weight
+  # Weights must sum to 1.0
+
+opportunity_weighting:
+  audience_relevance: 0.30         # How well topic matches target_audience (health-conscious generalist)
+  category_fit: 0.20               # Core category = 100, adjacent = 60, edge = 30
+  serp_under_coverage: 0.20        # Thin/aggregator top-10 = 100; saturated by WebMD+Healthline = 20
+  cluster_expansion_potential: 0.15 # Does it extend an existing content cluster?
+  entity_richness: 0.15            # Count of related entities + terms, capped at 100
+  # Weights must sum to 1.0
+
+# Rationale for health-specific weight adjustments vs default:
+# search_velocity 0.35→0.30: Health searches can spike on fear/hype (monkeypox, bird flu) before facts are clear
+# news_volume 0.25→0.25: Unchanged — multiple credible outlets covering simultaneously = reliable signal
+# social_spread 0.20→0.15: Reduced — health misinformation is disproportionately viral on social
+# source_credibility 0.20→0.30: Raised — a NEJM study with low social buzz > viral TikTok health claim
+
+trend_strength_scale:
+  0-29: "weak/noise"
+  30-49: "early signal — monitor"
+  50-69: "gaining traction — eligible"
+  70-84: "strong trend"
+  85-100: "breakout/urgent"
+
+opportunity_scale:
+  0-29: "not worth covering"
+  30-49: "low value — monitor"
+  50-59: "borderline"
+  60-79: "strong opportunity"
+  80-100: "high-priority"

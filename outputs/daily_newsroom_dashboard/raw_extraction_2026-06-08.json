@@ -1,0 +1,262 @@
+```json
+{
+  "run_date": "2026-06-08",
+  "niche": "health and wellness",
+  "signal_summary": {
+    "total_reviewed": 144,
+    "total_retained": 8,
+    "total_rejected": 136,
+    "tools_active": ["serpapi", "google_trends"],
+    "tools_unavailable": ["direct_reddit_api", "direct_exa_search", "direct_rss_fetch"],
+    "notes": "site_url not configured; self-check skipped, competitor_list_fallback active. Deferred topics and run history files not accessible. All Google Trends velocity sourced from serpapi_prefetch injection. Skill 02b integrity gating applied to medical claims."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "FDA Salmonella Recall Expands — Seasonings, Supplements, Moringa Powder",
+      "primary_entity": "FDA Salmonella Recall 2026",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 88,
+      "opportunity_score": 85,
+      "discover_score": 5,
+      "urgency": "now",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 9,
+      "recommended_angle": "Practical consumer guide — what's been recalled, how to check if you have it, and what to do now",
+      "why_now": "Active multi-product Salmonella recall expanding across seasoning, supplement, and moringa powder categories as of this week; FDA outbreak investigation pages live; multiple Tier-1 health outlets covering; consumer confusion is high given breadth of products",
+      "primary_headline": "FDA Salmonella Recall 2026: Full List of Recalled Seasonings, Supplements, and Foods — and What To Do",
+      "next_steps": "Assign immediately. Writer verifies FDA recall page for current product/lot code list before drafting table. Publish within 6 hours. Update article as recall expands.",
+      "notes": "Breaking-recall exception applied. Verify all product names, lot codes, and recall status directly on FDA.gov before publishing. Ice pop/baby wipes/gas relief are separate recall events — keep distinct or cover separately. Confidence capped at Medium until FDA notices confirmed live."
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "GLP-1 Drugs Linked to Lower Breast Cancer Risk — Large Cohort Study",
+      "primary_entity": "GLP-1 receptor agonists",
+      "signal_type": "medical_study",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 80,
+      "opportunity_score": 82,
+      "discover_score": 5,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "What the study actually found — and what it doesn't mean yet — with context on who this matters for",
+      "why_now": "Penn Medicine published findings from a large cohort study linking GLP-1 use to lower breast cancer incidence, released 06/02. GLP-1 drugs are the dominant health story of 2025–2026; any cancer-related finding generates immediate consumer interest. SERP currently shows no consolidated consumer-friendly explainer of this specific finding.",
+      "primary_headline": "GLP-1 Drugs Like Ozempic May Lower Breast Cancer Risk, Study Finds — Here's What Researchers Actually Discovered",
+      "next_steps": "Assign immediately. Confirm Penn Medicine press release URL, journal publication name, sample size, and DOI. Note study design clearly in article. Do not publish without confirming primary source details.",
+      "notes": "Observational study — correlation ≠ causation. Must be stated prominently. Do not frame as GLP-1 prevents breast cancer. Skill 02b passed but medical study integrity required. Full journal citation, DOI, and sample size must be confirmed before publishing."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Survodutide Phase 3 Trial: New GLP-1/Glucagon Drug Targets Obesity AND Liver Disease",
+      "primary_entity": "Survodutide",
+      "signal_type": "clinical_trial",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 75,
+      "opportunity_score": 80,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "What survodutide is, what the Phase 3 trial showed, and why it matters for the millions with MASLD who have no approved drug treatment",
+      "why_now": "Nature published Phase 3 results (SYNCHRONIZE-MASLD trial) on 06/08/2026 — today. Survodutide is a dual GLP-1/glucagon receptor agonist targeting the enormous unmet need in metabolic dysfunction-associated steatotic liver disease (MASLD), which affects ~30% of adults globally. No FDA-approved treatment for MASLD currently exists.",
+      "primary_headline": "A New Drug for Fatty Liver Disease Just Showed Promising Phase 3 Results — What Is Survodutide and Who Could It Help?",
+      "next_steps": "Retrieve Nature DOI and confirm primary endpoint data from paper before drafting. Publish within 48 hours to capture journal publication news cycle.",
+      "notes": "Phase 3 = promising but not FDA-approved. Do not frame as approved or available treatment. Confirm primary endpoints and headline results from Nature paper directly. Note that resmetirom (Rezdiffra) was approved for MASH in 2024 — clarify disease-stage distinction. DOI must be retrieved and included."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Men's Mental Health Month 2026: Why June Matters and What the Research Says",
+      "primary_entity": "Men's Mental Health Month",
+      "signal_type": "seasonal_trend",
+      "allowed_category": "mental health and psychology",
+      "trend_strength_score": 72,
+      "opportunity_score": 78,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 5,
+      "recommended_angle": "Definitive seasonal guide: why men underutilize mental health care, what the evidence says about barriers and effective interventions, and practical resources",
+      "why_now": "Google Trends shows 'men's mental health month,' 'is it men's mental health month,' 'is june men's mental health awareness month,' and related queries all rising sharply this week. June = Men's Mental Health Awareness Month. High search volume, fragmented SERP, strong evergreen value beyond June.",
+      "primary_headline": "Men's Mental Health Month 2026: Why Men Still Aren't Getting Help — and What Actually Works",
+      "next_steps": "Assign this week. Strong featured-snippet opportunity on 'is June men's mental health month' — optimize H1/intro for direct answer. Include crisis resources in all drafts.",
+      "notes": "Rising Trends queries confirm consumer awareness peaking. High search intent: (1) confirming month (featured snippet opportunity) and (2) understanding why with actionable information. Avoid reinforcing stereotypes; frame around systemic and cultural barriers. Include safe messaging on suicide statistics (no method details; include crisis resources prominently)."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Working From Home May Be Harming Your Health, New Study Finds",
+      "primary_entity": "work-from-home health effects",
+      "signal_type": "medical_study",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 68,
+      "opportunity_score": 74,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "What the study actually found, which health outcomes it measured, and what remote workers can do about it — without advising them to go back to the office",
+      "why_now": "NPR published a piece today (06/08/2026) citing a new study: 'People love working from home. But does it love them back? A new study says no.' Post-pandemic WFH is still a dominant lifestyle topic with consistent search demand. Fresh study provides a credible news hook.",
+      "primary_headline": "Working From Home Is Bad for Your Health, New Study Finds — Here's What the Research Actually Shows",
+      "next_steps": "Retrieve NPR article URL and underlying study citation. Confirm study design, institution, and primary findings. Assign for today or tomorrow.",
+      "notes": "Must retrieve and cite the actual study from the NPR article before publishing. NPR headline is the signal; underlying study must be verified. WFH health literature is mixed — do not present as settled science. Avoid implying workers should return to office. This is not the finding and creates brand safety risk."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "The Diet Pattern Linked to Higher Dementia Risk",
+      "primary_entity": "dementia risk diet",
+      "signal_type": "rising_search_interest",
+      "allowed_category": "nutrition and diet science",
+      "trend_strength_score": 65,
+      "opportunity_score": 70,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "low",
+      "content_status": "new",
+      "source_count": 1,
+      "recommended_angle": "Identify the specific study driving the search spike; explain which dietary pattern was studied, what the risk association showed, and what the limitations are",
+      "why_now": "Google Trends shows 'diet that raises dementia risk' and 'the diet that raises dementia risk' rising sharply this 7-day period. Search pattern suggests a specific study or media piece triggered consumer curiosity.",
+      "primary_headline": "The Diet Pattern Linked to Higher Dementia Risk, According to New Research",
+      "next_steps": "Research desk identifies primary study before assigning to writer. If study cannot be found or is not peer-reviewed, do not publish. Check PubMed for 'diet dementia 2026' and recent JAMA/Lancet Neurology publications.",
+      "notes": "HOLD — Integrity Flag / Skill 02b Monitor. No specific study confirmed as primary source driving this spike. Do not publish without identifying underlying study: journal, authors, institution, DOI, study design. Likely candidates: ultra-processed food / cognitive decline studies. If observational (likely), apply full integrity framing: association ≠ causation; dietary recall limitations; confounders."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Infant Formula Safety Alert: What Parents Need to Know About the FDA's Infant Botulism Investigation",
+      "primary_entity": "infant botulism investigation 2025",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 60,
+      "opportunity_score": 68,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Parent-first guide: what botulism is, what the FDA investigation found, which products are involved, and what parents of infants should do",
+      "why_now": "FDA outbreak investigation page for infant botulism / infant formula (November 2025) is listed as active as of 06/03/2026. Infant safety topics generate high parental search demand and YMYL signals.",
+      "primary_headline": "FDA Investigating Infant Botulism Cases Linked to Infant Formula — What Parents Need to Know",
+      "next_steps": "Verify FDA investigation is active (not resolved) before publishing. If resolved, archive and do not publish.",
+      "notes": "Breaking-recall exception applied; confidence capped at Medium. Infantile botulism is distinct from foodborne botulism — article must explain clearly to avoid unnecessary alarm. Confirm from FDA.gov whether this is active warning or resolved/closed investigation before publishing. Do not present older resolved investigation as active current risk."
+    },
+    {
+      "priority_level": "P5",
+      "publish_timing": "monitor",
+      "topic": "Ebola Outbreak Containment Struggles — Monitoring for Escalation",
+      "primary_entity": "Ebola outbreak 2026",
+      "signal_type": "breaking_news",
+      "allowed_category": "public health and epidemiology",
+      "trend_strength_score": 55,
+      "opportunity_score": 60,
+      "discover_score": 3,
+      "urgency": "monitor",
+      "confidence": "low",
+      "content_status": "new",
+      "source_count": 1,
+      "recommended_angle": "If WHO/CDC advisory issues: explainer on outbreak location, scale, containment status, and US risk level",
+      "why_now": "PBS headline (06/03/2026): 'Health workers struggle to contain Ebola outbreak.' Single credible source. No WHO advisory or CDC health notice directly retrieved at time of run.",
+      "primary_headline": "[HOLD] Ebola Outbreak Is Growing — Here's What We Know and the Current Risk Level",
+      "next_steps": "Monitor WHO Disease Outbreak News, CDC Traveler's Health, and MMWR. Escalate to P1 brief within 2 hours of official advisory. Escalate if WHO issues PHEIC, CDC issues Level 2+ travel health notice, case count expands or reaches new country, or US cases reported.",
+      "notes": "Do not publish on Ebola risk based on single PBS headline. Single-source public health claims require WHO/CDC confirmation before editorial action. Watch closely — a WHO advisory would immediately elevate to P1."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "Melinda French Gates $215M women's health funding donation",
+      "reason": "off-category — philanthropy and business news without direct patient health content"
+    },
+    {
+      "topic": "RFK Jr. seeking access to Americans' medical records for autism-vaccine research",
+      "reason": "brand_safety — pure political and regulatory controversy without new health evidence angle sufficient to clear borderline criteria"
+    },
+    {
+      "topic": "Reproductive health / federal court litigation tracking",
+      "reason": "off-category — pure political healthcare opinion and litigation without patient health evidence"
+    },
+    {
+      "topic": "WVU Health System and Independence Health merger",
+      "reason": "off-category — local and regional administrative news without national audience relevance"
+    },
+    {
+      "topic": "Hackensack Meridian wellness center in travel hub",
+      "reason": "off-category — local facility news without national audience relevance"
+    },
+    {
+      "topic": "Teamsters strike at Ascend Wellness",
+      "reason": "off-category — labor news without health content"
+    },
+    {
+      "topic": "Wellness officer appointments and county health fair announcements",
+      "reason": "off-category — institutional PR and local administrative news"
+    },
+    {
+      "topic": "Wellness retreats and hotel wellness awards",
+      "reason": "off-category — hospitality and lifestyle news without health evidence"
+    },
+    {
+      "topic": "Wellness influencers and medical professional dismissal (Guardian opinion)",
+      "reason": "off-category — opinion and commentary without primary research backing or evidence base"
+    },
+    {
+      "topic": "History of wellness traditions from ancient China",
+      "reason": "off-category — historical content without contemporary health research angle"
+    },
+    {
+      "topic": "Clinical trials infrastructure and AI data harmonization",
+      "reason": "weak_signal — niche professional audience; no consumer health angle strong enough to clear today"
+    },
+    {
+      "topic": "CAR-T cell access disparities for people with HIV",
+      "reason": "weak_signal — single European source; insufficient US consumer relevance at this signal level"
+    },
+    {
+      "topic": "Psychedelic-assisted therapy VA trial in Missouri",
+      "reason": "weak_signal — state legislative news, not a study release"
+    },
+    {
+      "topic": "AI reveals brain tumor risks without genetic testing (Mayo Clinic)",
+      "reason": "weak_signal — promising but single institutional source; insufficient at this signal level for publication today (monitor for cluster piece later)"
+    },
+    {
+      "topic": "Samsung Health AI app product announcement",
+      "reason": "off-category — consumer technology product announcement without health research angle"
+    },
+    {
+      "topic": "Hydrogel for osteoarthritis (Yale early-stage study)",
+      "reason": "weak_signal — animal and early-stage study, not consumer-ready"
+    },
+    {
+      "topic": "USDA nutrition funding injunction",
+      "reason": "weak_signal — regulatory and funding news without clear consumer health angle"
+    },
+    {
+      "topic": "Crumbl dirty soda nutrition analysis",
+      "reason": "off-category — brand and food product trending without health value angle beyond SEO bait"
+    },
+    {
+      "topic": "Simone Biles health scare",
+      "reason": "weak_signal — celebrity health story with speculative search queries and no confirmed health event"
+    },
+    {
+      "topic": "Paragon Health Institute policy announcement",
+      "reason": "weak_signal — policy think tank announcement without consumer health angle"
+    },
+    {
+      "topic": "Planet Fitness and EOS Fitness trending queries",
+      "reason": "off-category — fitness brand marketing trends without health research content"
+    }
+  ]
+}
+```
