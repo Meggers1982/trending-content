@@ -220,11 +220,11 @@ button.button:disabled {
   opacity: .55;
 }
 .runMessage {
-  border: 1px solid #f0c46f;
+  border: 1px solid #f2a6a6;
   border-radius: 6px;
-  background: #fffbeb;
+  background: #fff1f2;
   padding: 9px 10px;
-  color: #8a4b00 !important;
+  color: #9f1d20 !important;
   font-weight: 700;
 }
 .logBox {

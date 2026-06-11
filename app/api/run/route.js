@@ -1,5 +1,6 @@
 import { spawn } from "node:child_process";
 import { NextResponse } from "next/server";
+import { explainRunError } from "@/lib/error-messages";
 import { appendLog, finishJob, pipelineJob, resetJob } from "@/lib/job-state";
 
 export const dynamic = "force-dynamic";
@@ -78,9 +79,10 @@ export async function POST(request) {
     const trigger = await triggerGithubWorkflow(mode);
     if (!trigger.ok) {
       appendLog(trigger.message);
-      finishJob(1, trigger.message);
+      const friendly = explainRunError(trigger.message, mode);
+      finishJob(1, trigger.message, friendly);
       return NextResponse.json(
-        { ok: false, message: trigger.message, job: pipelineJob },
+        { ok: false, message: friendly, job: pipelineJob },
         { status: trigger.status || 500 }
       );
     }
@@ -102,11 +104,11 @@ export async function POST(request) {
   child.stderr.on("data", (chunk) => appendLog(chunk));
   child.on("error", (error) => {
     appendLog(error.message);
-    finishJob(1, error.message);
+    finishJob(1, error.message, explainRunError(error.message, mode));
   });
   child.on("close", (code) => {
     appendLog(code === 0 ? "Run complete." : `Run exited with code ${code}.`);
-    finishJob(code);
+    finishJob(code, code === 0 ? null : `Run exited with code ${code}.`, code === 0 ? null : explainRunError(`Run exited with code ${code}.`, mode));
   });
 
   return NextResponse.json({ ok: true, job: pipelineJob });

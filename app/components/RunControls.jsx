@@ -67,7 +67,9 @@ export default function RunControls() {
         In Vercel, this queues a GitHub Actions job that runs the pipeline, commits
         new artifacts, and triggers a fresh deploy. Locally, it runs Python directly.
       </p>
-      {message ? <p className="runMessage">{message}</p> : null}
+      {message || job?.friendlyError ? (
+        <p className="runMessage">{message || job.friendlyError}</p>
+      ) : null}
       {logs.length ? (
         <div className="logBox" aria-live="polite">
           {logs.slice(-12).map((line, index) => (
