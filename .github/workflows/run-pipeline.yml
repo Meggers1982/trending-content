@@ -1,6 +1,8 @@
 name: Run Trending Content Pipeline
 
 on:
+  schedule:
+    - cron: '0 12 * * *'   # 7am CT (UTC-5) / adjust to your timezone
   workflow_dispatch:
     inputs:
       mode:
@@ -28,11 +30,9 @@ jobs:
       SERPAPI_TRENDING_NOW_CATEGORY_ID: ${{ vars.SERPAPI_TRENDING_NOW_CATEGORY_ID || '7' }}
       SERPAPI_TIMEOUT_SECONDS: ${{ vars.SERPAPI_TIMEOUT_SECONDS || '45' }}
       SERPAPI_MAX_RETRIES: ${{ vars.SERPAPI_MAX_RETRIES || '3' }}
+      RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
       EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
-      EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
       EMAIL_RECIPIENT: ${{ secrets.EMAIL_RECIPIENT }}
-      EMAIL_SMTP_HOST: ${{ vars.EMAIL_SMTP_HOST || 'smtp.gmail.com' }}
-      EMAIL_SMTP_PORT: ${{ vars.EMAIL_SMTP_PORT || '587' }}
 
     steps:
       - name: Check out repository
@@ -51,8 +51,8 @@ jobs:
         run: python run_pipeline.py --prefetch-only
 
       - name: Run full pipeline
-        if: ${{ inputs.mode == 'full' }}
-        run: python run_pipeline.py --no-email
+        if: ${{ inputs.mode == 'full' || github.event_name == 'schedule' }}
+        run: python run_pipeline.py
 
       - name: Commit generated artifacts
         run: |

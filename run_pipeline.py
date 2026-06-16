@@ -36,15 +36,10 @@ import json
 import re
 import argparse
 import logging
-import smtplib
 import time
 import urllib.parse
 import urllib.request
 import urllib.error
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
-from email.mime.base import MIMEBase
-from email import encoders
 from datetime import datetime
 from pathlib import Path
 
@@ -858,19 +853,27 @@ def send_email(
     csv_path: Path,
     today_str: str,
 ) -> None:
-    """Send the daily brief email with dashboard HTML + CSV attached."""
-    sender    = os.getenv("EMAIL_SENDER", "").strip()
-    password  = os.getenv("EMAIL_PASSWORD", "").strip()
-    recipient = os.getenv("EMAIL_RECIPIENT", "").strip()
-    smtp_host = os.getenv("EMAIL_SMTP_HOST", "smtp.gmail.com").strip()
-    smtp_port = int(os.getenv("EMAIL_SMTP_PORT", "587"))
+    """Send the daily brief email with dashboard HTML + CSV attached via Resend."""
+    try:
+        import resend
+    except ImportError:
+        log.error("Missing dependency: pip install resend")
+        return
 
-    if not all([sender, password, recipient]):
+    import base64
+
+    api_key   = os.getenv("RESEND_API_KEY", "").strip()
+    sender    = os.getenv("EMAIL_SENDER", "").strip()
+    recipient = os.getenv("EMAIL_RECIPIENT", "").strip()
+
+    if not all([api_key, sender, recipient]):
         log.warning(
-            "Email skipped — set EMAIL_SENDER, EMAIL_PASSWORD, and "
+            "Email skipped — set RESEND_API_KEY, EMAIL_SENDER, and "
             "EMAIL_RECIPIENT in .env to enable delivery."
         )
         return
+
+    resend.api_key = api_key
 
     candidates = data.get("candidates", [])
     p1_count   = sum(1 for c in candidates if c.get("priority_level") == "P1")
@@ -878,54 +881,29 @@ def send_email(
     if p1_count:
         subject += f" ({p1_count} P1{'s' if p1_count > 1 else ''})"
 
-    msg = MIMEMultipart("mixed")
-    msg["Subject"] = subject
-    msg["From"]    = sender
-    msg["To"]      = recipient
-
-    # HTML body
-    body_html = build_email_body(data)
-    msg.attach(MIMEText(body_html, "html", "utf-8"))
-
-    # Attach interactive dashboard HTML
-    if html_path and html_path.exists():
-        with open(html_path, "rb") as f:
-            part = MIMEBase("application", "octet-stream")
-            part.set_payload(f.read())
-            encoders.encode_base64(part)
-            part.add_header(
-                "Content-Disposition",
-                f'attachment; filename="dashboard_{today_str}.html"',
-            )
-            msg.attach(part)
-
-    # Attach CSV
-    if csv_path and csv_path.exists():
-        with open(csv_path, "rb") as f:
-            part = MIMEBase("text", "csv")
-            part.set_payload(f.read())
-            encoders.encode_base64(part)
-            part.add_header(
-                "Content-Disposition",
-                f'attachment; filename="dashboard_{today_str}.csv"',
-            )
-            msg.attach(part)
+    attachments = []
+    for path, filename in [
+        (html_path, f"dashboard_{today_str}.html"),
+        (csv_path,  f"dashboard_{today_str}.csv"),
+    ]:
+        if path and path.exists():
+            attachments.append({
+                "filename": filename,
+                "content":  base64.b64encode(path.read_bytes()).decode(),
+            })
 
     try:
-        log.info(f"Sending email to {recipient} via {smtp_host}:{smtp_port}...")
-        with smtplib.SMTP(smtp_host, smtp_port, timeout=30) as server:
-            server.ehlo()
-            server.starttls()
-            server.login(sender, password)
-            server.sendmail(sender, recipient, msg.as_string())
-        log.info(f"✅ Email sent → {recipient}")
-    except smtplib.SMTPAuthenticationError:
-        log.error(
-            "SMTP authentication failed. For Gmail, use an App Password "
-            "(not your account password): https://myaccount.google.com/apppasswords"
-        )
+        log.info(f"Sending email to {recipient} via Resend...")
+        resend.Emails.send({
+            "from":        sender,
+            "to":          [recipient],
+            "subject":     subject,
+            "html":        build_email_body(data),
+            "attachments": attachments,
+        })
+        log.info(f"✅ Email sent via Resend → {recipient}")
     except Exception as e:
-        log.error(f"Email send failed: {e}")
+        log.error(f"Resend email failed: {e}")
 
 
 # ── Main pipeline runner ──────────────────────────────────────────────────────
