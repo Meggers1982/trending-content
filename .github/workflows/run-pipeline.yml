@@ -63,5 +63,6 @@ jobs:
             echo "No generated artifacts changed."
           else
             git commit -m "Update pipeline artifacts"
+            git pull --rebase
             git push
           fi
