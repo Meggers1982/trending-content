@@ -955,7 +955,7 @@ def run_pipeline(send_email_flag: bool = True) -> None:
             label="Pipeline call",
             model="claude-sonnet-4-6",
             max_tokens=PIPELINE_MAX_TOKENS,
-            system=system_prompt,
+            system=[{"type": "text", "text": system_prompt, "cache_control": {"type": "ephemeral"}}],
             messages=[{"role": "user", "content": pipeline_prompt}],
         )
     except Exception as e:
@@ -969,7 +969,7 @@ def run_pipeline(send_email_flag: bool = True) -> None:
                 label="Pipeline call without SerpAPI context",
                 model="claude-sonnet-4-6",
                 max_tokens=PIPELINE_MAX_TOKENS,
-                system=system_prompt,
+                system=[{"type": "text", "text": system_prompt, "cache_control": {"type": "ephemeral"}}],
                 messages=[{"role": "user", "content": build_pipeline_prompt("")}],
             )
         else:
