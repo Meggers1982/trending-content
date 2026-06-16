@@ -498,7 +498,7 @@ JSON_SCHEMA = """
     "total_reviewed": 0,
     "total_retained": 0,
     "total_rejected": 0,
-    "tools_active": ["web_search", "ahrefs", "serpapi"],
+    "tools_active": ["web_search", "google_news", "google_trends", "serpapi"],
     "tools_unavailable": [],
     "notes": "..."
   },
@@ -547,7 +547,7 @@ Rules:
 - discover_score: integer 1–5
 - trend_strength_score and opportunity_score: integer 0–100
 - source_count: integer (count of source_evidence items, or estimate)
-- tools_active and tools_unavailable: short lowercase names (e.g. "web_search", "ahrefs", "serpapi")
+- tools_active and tools_unavailable: short lowercase names (e.g. "web_search", "google_news", "google_trends", "serpapi", "ahrefs"). Always list "google_news" and "google_trends" separately when SerpAPI pre-fetch data was present in the pipeline context.
 - Include ALL retained candidates and ALL rejected topics from the output
 
 Pipeline output:
