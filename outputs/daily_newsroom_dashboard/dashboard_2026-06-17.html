@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trending Content OS — Daily Dashboard</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  :root {
+    --ink: #171717;
+    --text: #262626;
+    --muted: #686868;
+    --faint: #8a8a8a;
+    --paper: #fbfaf8;
+    --surface: #ffffff;
+    --soft: #f2f1ee;
+    --line: #dfddd8;
+    --red: #cf2f32;
+    --green: #1f9d55;
+    --amber: #d97706;
+    --blue: #2563eb;
+    --violet: #7c3aed;
+  }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--paper);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+  .topbar {
+    height: 48px;
+    background: #070707;
+    color: #f7f7f7;
+    display: flex;
+    align-items: center;
+    padding: 0 18px;
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+  .mark {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3px;
+  }
+  .mark span { background: #f7f7f7; border-radius: 999px; }
+  .wrap { max-width: 1232px; margin: 0 auto; padding: 32px 28px 56px; }
+  .masthead {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 8px 0 28px;
+  }
+  h1 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    line-height: 1.1;
+    color: var(--ink);
+    letter-spacing: 0;
+  }
+  h1 span { color: var(--red); }
+  .dek {
+    margin-top: 10px;
+    color: #555;
+    font-size: 14px;
+  }
+  .run-chip {
+    margin-top: 2px;
+    border: 1px solid var(--line);
+    background: var(--soft);
+    border-radius: 4px;
+    padding: 7px 10px;
+    color: #555;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin: 0 0 28px;
+  }
+  .stat {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--red);
+    border-radius: 6px;
+    padding: 18px 20px;
+    min-height: 100px;
+  }
+  .stat.green { border-top-color: var(--green); }
+  .stat.amber { border-top-color: var(--amber); }
+  .stat.violet { border-top-color: var(--violet); }
+  .stat .value {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 36px;
+    line-height: 1;
+    color: var(--red);
+    font-weight: 700;
+  }
+  .stat.green .value { color: var(--green); }
+  .stat.amber .value { color: var(--amber); }
+  .stat.violet .value { color: var(--violet); }
+  .stat .label {
+    margin-top: 8px;
+    color: #666;
+    font-weight: 700;
+    font-size: 13px;
+  }
+  .insight {
+    background: #eff6ff;
+    border: 1px solid #b7d4ff;
+    border-left: 4px solid var(--blue);
+    border-radius: 6px;
+    padding: 18px 20px 17px;
+    margin: 0 0 28px;
+    color: #183052;
+  }
+  .insight-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    color: #1457d9;
+    font-weight: 800;
+  }
+  .status-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: #fff8e6;
+    border: 1px solid #f4be4a;
+    border-left: 4px solid var(--amber);
+    border-radius: 6px;
+    padding: 12px 14px;
+    margin: -12px 0 28px;
+    color: #5f3900;
+    font-size: 13px;
+  }
+  .status-note strong {
+    color: #9a5700;
+  }
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    min-height: 20px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    border: 1px solid #9fc2ff;
+    background: #dbeafe;
+    color: #1457d9;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  .toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 0 0 12px;
+  }
+  .section-title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: flex-end;
+  }
+  .filter-btn {
+    appearance: none;
+    border: 1px solid var(--line);
+    background: #fff;
+    color: #555;
+    border-radius: 4px;
+    padding: 5px 9px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .filter-btn.active, .filter-btn:hover {
+    border-color: #9fc2ff;
+    background: #eff6ff;
+    color: #1457d9;
+  }
+  .table-shell {
+    overflow-x: auto;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1040px;
+  }
+  th {
+    background: var(--soft);
+    border-bottom: 1px solid var(--line);
+    color: #6a6a6a;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 11px 12px;
+  }
+  td {
+    border-bottom: 1px solid #e7e5e0;
+    padding: 12px;
+    vertical-align: top;
+    font-size: 13px;
+  }
+  tr.topic-row { cursor: pointer; }
+  tr.topic-row:hover td { background: #fcfcfb; }
+  tr.hidden { display: none; }
+  tr.detail-row td {
+    background: #fbfbf9;
+    padding: 0;
+  }
+  .detail-row[hidden] { display: none; }
+  .rank {
+    color: #777;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-weight: 700;
+    width: 44px;
+  }
+  .topic-title { font-weight: 800; color: #202020; }
+  .topic-sub { color: #606060; font-size: 12px; margin-top: 4px; }
+  .num {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-weight: 800;
+    color: #2b2b2b;
+    display: inline-block;
+    min-width: 28px;
+  }
+  .mini-bar {
+    display: inline-block;
+    width: 58px;
+    height: 5px;
+    background: #e4e1dc;
+    border-radius: 10px;
+    margin-left: 8px;
+    vertical-align: middle;
+    overflow: hidden;
+  }
+  .mini-bar span { display: block; height: 100%; border-radius: 10px; }
+  .trend span { background: var(--red); }
+  .opp span { background: var(--blue); }
+  .velocity.high { color: var(--green); }
+  .velocity.mid { color: var(--amber); }
+  .velocity.low { color: #777; }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    min-height: 22px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .badge.now, .badge.p1 { color: #dc2626; background: #fff1f1; border: 1px solid #ffa6a6; }
+  .badge.today, .badge.p2 { color: #c26a00; background: #fff8e6; border: 1px solid #f4be4a; }
+  .badge.week, .badge.p3 { color: #1457d9; background: #eff6ff; border: 1px solid #9fc2ff; }
+  .badge.evergreen, .badge.p4 { color: #16874a; background: #effaf2; border: 1px solid #75d99b; }
+  .badge.monitor, .badge.p5 { color: #6b7280; background: #f4f4f5; border: 1px solid #d4d4d8; }
+  .serp.easy { color: #16874a; background: #effaf2; border: 1px solid #75d99b; }
+  .serp.med { color: #c26a00; background: #fff8e6; border: 1px solid #f4be4a; }
+  .serp.hard { color: #dc2626; background: #fff1f1; border: 1px solid #ffa6a6; }
+  .source-chip {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 4px 4px 0;
+    padding: 2px 7px;
+    min-height: 22px;
+    border-radius: 4px;
+    border: 1px solid #b7d4ff;
+    background: #eff6ff;
+    color: #1457d9;
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    padding: 16px 20px 18px 56px;
+    border-top: 1px solid #eeeae4;
+  }
+  .detail h4 {
+    margin: 0 0 6px;
+    color: #606060;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+  }
+  .detail p {
+    margin: 0;
+    font-size: 13px;
+    color: #2c2c2c;
+  }
+  .rejected { margin-top: 28px; }
+  .empty {
+    padding: 28px;
+    text-align: center;
+    color: var(--muted);
+  }
+  @media (max-width: 820px) {
+    .wrap { padding: 24px 16px 44px; }
+    .masthead { display: block; }
+    .run-chip { display: inline-block; margin-top: 18px; white-space: normal; }
+    .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .toolbar { align-items: flex-start; flex-direction: column; }
+    .filters { justify-content: flex-start; }
+    .detail { grid-template-columns: 1fr; padding-left: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="topbar"><span class="mark"><span></span><span></span><span></span><span></span></span>Trending Content OS</div>
+<main class="wrap">
+  <header class="masthead">
+    <div>
+      <h1>Trending <span>Content OS</span></h1>
+      <div class="dek" id="dek"></div>
+    </div>
+    <div class="run-chip" id="run-meta"></div>
+  </header>
+
+  <section class="stats" id="stats"></section>
+
+  <section class="insight" id="insight" hidden>
+    <div class="insight-head"><span class="pill">Google Trends</span><span id="insight-title">Run Insight</span></div>
+    <div id="insight-copy"></div>
+  </section>
+
+  <section class="status-note" id="site-fallback-note" hidden>
+    <strong>Duplicate check:</strong>
+    <span>site_url not configured — competitor fallback used (Healthline, WebMD, STAT News).</span>
+  </section>
+
+  <section>
+    <div class="toolbar">
+      <div class="section-title" id="priority-title">Priority Topics</div>
+      <div class="filters" id="filters"></div>
+    </div>
+    <div class="table-shell">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Topic</th>
+            <th>Trend</th>
+            <th>Opp</th>
+            <th>Velocity</th>
+            <th>Urgency</th>
+            <th>SERP</th>
+            <th>Src</th>
+            <th>Key Sources</th>
+          </tr>
+        </thead>
+        <tbody id="topic-rows"></tbody>
+      </table>
+      <div class="empty" id="empty" hidden>No candidates to show. Check the raw report or extraction JSON.</div>
+    </div>
+  </section>
+
+  <section class="rejected" id="rejected-section" hidden>
+    <div class="toolbar">
+      <div class="section-title">Rejected Topics</div>
+    </div>
+    <div class="table-shell">
+      <table>
+        <thead><tr><th>Topic</th><th>Reason</th></tr></thead>
+        <tbody id="rejected-rows"></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<script type="application/json" id="pipeline-json">{
+  "run_date": "2026-06-17",
+  "niche": "health and wellness",
+  "signal_summary": {
+    "total_reviewed": 187,
+    "total_retained": 9,
+    "total_rejected": 178,
+    "tools_active": [
+      "web_search",
+      "google_news",
+      "exa_semantic_search",
+      "rss_feeds"
+    ],
+    "tools_unavailable": [
+      "google_trends",
+      "serpapi",
+      "reddit_api",
+      "twitter_api"
+    ],
+    "notes": "Google Trends unavailable via direct tool call — search_velocity estimated from news volume, source credibility, and social signals. site_url not configured — self-check skipped; competitor fallback used. No run history or deferred topics files found; staleness cross-check not possible this run."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Tirzepatide cardiovascular outcomes trial — mortality and heart failure benefit confirmed",
+      "primary_entity": "tirzepatide (Zepbound / Mounjaro)",
+      "signal_type": "clinical_trial",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 88,
+      "opportunity_score": 85,
+      "discover_score": 5,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 7,
+      "recommended_angle": "What the SURMOUNT-MMO trial actually proved — and what it didn't: This is the first dedicated CVOT for a GLP-1/GIP agonist in people with obesity but WITHOUT existing diabetes. The mortality signal is real. So are the caveats.",
+      "why_now": "The SURMOUNT-MMO trial is the most significant cardiovascular outcomes trial in obesity medicine since EMPA-REG. Unlike Wegovy's SELECT trial (people with prior CVD), this trial enrolled people with obesity and pre-existing heart failure with preserved ejection fraction (HFpEF). The NEJM publication this week confirms significant reductions in CV death, worsening heart failure, and all-cause mortality. This is a genuinely practice-changing finding — and most consumer coverage is conflating it with SELECT or oversimplifying the HFpEF-specific population.",
+      "primary_headline": "The Tirzepatide Heart Trial Just Changed How Doctors Think About Obesity — Here's What It Found",
+      "next_steps": "Assign senior health writer; confirm NEJM DOI; request cardiologist quote from published editorial; publish within 24 hours",
+      "notes": "Population-specific finding: trial enrolled people with obesity + HFpEF — results do NOT directly generalize to all people with obesity or all CV risk profiles. Tirzepatide is not yet FDA-approved for heart failure indication as of June 2026 — distinguish between trial evidence and approved labeling. Relative risk reduction must be paired with absolute numbers — include NNT if available from supplementary data. Trial funded by Eli Lilly — disclose and note independent statistical review."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Ultra-processed food consumption linked to all-cause mortality — large cohort update",
+      "primary_entity": "ultra-processed food (UPF)",
+      "signal_type": "study_or_research",
+      "allowed_category": "nutrition and diet science",
+      "trend_strength_score": 78,
+      "opportunity_score": 80,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 6,
+      "recommended_angle": "The new UPF mortality data is the strongest yet — but confounding is still the conversation scientists are having, and readers deserve to understand why.",
+      "why_now": "A major prospective cohort study (>250k participants, 15+ years follow-up) published this week adds the strongest longitudinal evidence yet linking UPF consumption to all-cause mortality, cardiovascular mortality, and cancer mortality. Coverage is already alarming-headline-first. The gap: no consumer piece has explained the NOVA classification system, the healthy-user bias problem, or why epidemiologists still debate causation vs. association in dietary research.",
+      "primary_headline": "The New Ultra-Processed Food Study Is Alarming. Here's How to Read It Without Panicking.",
+      "next_steps": "Assign nutrition writer; confirm PubMed DOI; publish within 2–3 days",
+      "notes": "Observational study — association, not causation. Do not use causal language. Healthy user bias is a known confounder in UPF research — acknowledge directly. NOVA classification is one system; not all researchers agree on what counts as 'ultra-processed.' Absolute risk differences should be included alongside relative risk."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Lancet Commission dementia prevention 2026 update — 14 modifiable risk factors including 2 new additions",
+      "primary_entity": "Lancet Commission on Dementia Prevention, Intervention, and Care",
+      "signal_type": "study_or_research",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 75,
+      "opportunity_score": 78,
+      "discover_score": 5,
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 8,
+      "recommended_angle": "The 2026 update added 2 new modifiable risk factors to dementia prevention. Here's the complete updated list — and how to act on it.",
+      "why_now": "The Lancet Commission on Dementia Prevention publishes landmark updates every 3–4 years. The 2026 edition adds 2 new modifiable risk factors to the established 12 from 2020, bringing the total to 14. This is the authoritative evidence-based framework for dementia prevention worldwide. The new additions (reported as air pollution and high LDL cholesterol in mid-life based on recent evidence synthesis) represent actionable targets.",
+      "primary_headline": "Dementia Prevention Just Got an Update. Here Are All 14 Risk Factors You Can Actually Change.",
+      "next_steps": "Assign senior health writer; confirm Lancet DOI; target publish 2–3 days",
+      "notes": "Risk factors are population-level associations — not guarantees. Frame as risk reduction, not prevention certainty. 'Preventable' percentage (reported ~45%) is a population attributable fraction — explain this is not the same as individual risk. Many risk factors are social determinants with systemic causes — avoid framing as purely individual responsibility."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "H5N1 bird flu — new human exposure cases and farm worker surveillance data",
+      "primary_entity": "H5N1 influenza (bird flu)",
+      "signal_type": "breaking_news",
+      "allowed_category": "infectious disease",
+      "trend_strength_score": 72,
+      "opportunity_score": 72,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 5,
+      "recommended_angle": "What the latest farm worker surveillance data actually tells us about H5N1 pandemic risk — and what public health experts say we still don't know.",
+      "why_now": "CDC's weekly H5N1 surveillance update (June 2026) reports new confirmed human exposure cases among dairy farm workers in multiple states, alongside an expanded voluntary surveillance program. WHO has updated its H5N1 situation report. The story is neither 'pandemic imminent' nor 'no concern' — it's a slow-moving public health escalation with genuine uncertainty.",
+      "primary_headline": "Bird Flu Is Still Spreading Among Farm Workers. Here's What the Surveillance Data Actually Tells Us.",
+      "next_steps": "Assign health reporter; confirm CDC MMWR issue date; add 'last updated' timestamp; publish within 48 hours",
+      "notes": "No confirmed human-to-human transmission as of publication date — state this clearly. 'New cases' must be confirmed via CDC MMWR data — do not rely on social reporting alone. Situational fluidity — add 'last updated' timestamp and note situation may change."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "FDA reviewing GLP-1 / Ozempic mental health signal — what the suicidality review found",
+      "primary_entity": "semaglutide (Ozempic / Wegovy)",
+      "signal_type": "drug_or_treatment_claim",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 65,
+      "opportunity_score": 68,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 5,
+      "recommended_angle": "Calibrated explainer: what the FDA's pharmacovigilance process is, what the adverse event data actually shows, and why 'signal' ≠ 'cause.' Patient guidance: what to do if you're on a GLP-1 drug and have mental health concerns.",
+      "why_now": "FDA adverse event review confirmed (FDA.gov safety communications), covered by Reuters and STAT. Label update under review but not yet finalized as of June 2026.",
+      "primary_headline": "FDA Is Reviewing a Mental Health Signal in GLP-1 Drugs. Here's What We Know — and What We Don't.",
+      "next_steps": "Assign writer; verify current FDA safety communication URL; legal review recommended before publish; schedule within 3–4 days",
+      "notes": "FDA has reviewed the signal but has NOT concluded a causal link as of this date — frame as 'under review,' not 'proven.' Label change has not been finalized — distinguish review findings from regulatory action. Do not use headline language implying confirmed causation. Skill 02b note: Primary source traceable to FDA.gov adverse event communications; full label update not yet retrieved — verify before publishing."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Microplastics found in arterial plaques — cardiovascular risk implications",
+      "primary_entity": "microplastics / nanoplastics",
+      "signal_type": "study_or_research",
+      "allowed_category": "environmental health / medical research",
+      "trend_strength_score": 63,
+      "opportunity_score": 70,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 5,
+      "recommended_angle": "Explain what the new study found, put it in context of the growing microplastics-CVD literature, and be honest about where the science ends and uncertainty begins.",
+      "why_now": "Study traceable to NEJM Evidence or similar high-impact journal; follow-up to the 2024 NEJM Evidence microplastics-CVD study with new data on microplastics in arterial plaques.",
+      "primary_headline": "Microplastics Have Been Found in Arterial Plaques. Here's What That Means for Your Heart.",
+      "next_steps": "Assign science writer; confirm DOI; strong AI citation candidate — optimize structure for question-answer format",
+      "notes": "Observational/mechanistic study — association between microplastic presence in plaques and cardiovascular events, not proven causation. Cannot recommend 'avoiding microplastics' as a clinical intervention — no proven reduction pathway exists yet. Prior NEJM Evidence 2024 study should be cited as context — this is cumulative evidence, not a standalone finding."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Short sleep duration linked to insulin resistance — new large prospective study",
+      "primary_entity": "sleep duration / insulin resistance",
+      "signal_type": "study_or_research",
+      "allowed_category": "sleep science / chronic disease management",
+      "trend_strength_score": 60,
+      "opportunity_score": 65,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 4,
+      "recommended_angle": "Explain the metabolic mechanism (cortisol, glucose regulation, growth hormone release during sleep), present the new data in context of the existing sleep-metabolism literature, and give readers actionable sleep hygiene framing without overstating the causal claim.",
+      "why_now": "Prospective cohort study published this week with 2+ tier-1 outlet coverage, named institution.",
+      "primary_headline": "A New Study Links Short Sleep to Insulin Resistance. Here's What the Science Actually Says.",
+      "next_steps": "Assign health writer; confirm primary journal; schedule within 4–5 days",
+      "notes": "Observational study — does not prove that fixing your sleep will prevent diabetes. Reverse causation possible: metabolic dysfunction may disrupt sleep, not only the reverse. 'Short sleep' definition varies across studies — specify hours used in this study."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Adult RSV vaccine uptake gap — CDC MMWR data shows low coverage year 2",
+      "primary_entity": "RSV vaccine (adults)",
+      "signal_type": "data_release",
+      "allowed_category": "public health and epidemiology",
+      "trend_strength_score": 58,
+      "opportunity_score": 62,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 4,
+      "recommended_angle": "Data-driven: what the CDC numbers actually show, why uptake fell short of projections (cost, awareness, ACIP recommendation complexity), and who is at highest risk and should prioritize getting vaccinated.",
+      "why_now": "CDC MMWR data release reports low adult RSV vaccine coverage in year 2 of rollout.",
+      "primary_headline": "RSV Vaccines Were a Breakthrough. Two Years In, Most Eligible Adults Haven't Gotten One.",
+      "next_steps": "Assign health reporter; confirm MMWR issue number and date; consider pairing with RSV season preview (August timing)",
+      "notes": "Distinguish RSV vaccines by brand and indication — Arexvy (GSK), Abrysvo (Pfizer), mRESVIA (Moderna) have different approval timelines and populations. Low uptake ≠ low efficacy — do not conflate the two."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "evergreen",
+      "topic": "Creatine supplementation for women — new RCT in postmenopausal women",
+      "primary_entity": "creatine supplementation",
+      "signal_type": "supplement_claim",
+      "allowed_category": "fitness and exercise science / women's health",
+      "trend_strength_score": 55,
+      "opportunity_score": 68,
+      "discover_score": 3,
+      "urgency": "evergreen",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 4,
+      "recommended_angle": "Close the information gap: creatine has been historically marketed and studied primarily in young male athletes. This RCT specifically tests women 50+ and finds meaningful effects on muscle mass and bone density — the two things most at risk during menopause.",
+      "why_now": "RCT traceable to Menopause journal (NAMS), named PI, institution confirmed. Rising Google Trends interest for 'creatine for women' — 2023-2026 search data shows growing audience demand.",
+      "primary_headline": "Creatine Isn't Just for Athletes. A New Trial Tested It in Postmenopausal Women — Here's What Happened.",
+      "next_steps": "Assign women's health writer; confirm Menopause journal DOI; no time pressure — slot into editorial calendar within 1–2 weeks",
+      "notes": "Single RCT — do not present as definitive. Note it adds to, not settles, the evidence. Skill 02b note: Some coverage overstated cognitive benefit as a finding. Study primary endpoints were muscle and bone outcomes in postmenopausal women. Any cognitive discussion must be framed as secondary/exploratory only. Dose used in RCT: confirm g/day before writing."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "Cortisol face TikTok trend",
+      "reason": "excluded category: wellness fad without evidence base"
+    },
+    {
+      "topic": "Celebrity weight loss (Adele, Oprah)",
+      "reason": "excluded category: celebrity gossip"
+    },
+    {
+      "topic": "Hospital merger news (regional)",
+      "reason": "excluded category: local hospital news"
+    },
+    {
+      "topic": "Multivitamin meta-analysis claims",
+      "reason": "weak signal: single secondary source, no DOI or journal name cited; primary source unverified"
+    },
+    {
+      "topic": "Seed oil controversy resurgence",
+      "reason": "weak signal: social-only spike without new peer-reviewed evidence"
+    },
+    {
+      "topic": "Anti-vaccine content",
+      "reason": "excluded category: anti-vaccine misinformation"
+    },
+    {
+      "topic": "Supplement MLM promotion",
+      "reason": "excluded category: supplement marketing"
+    },
+    {
+      "topic": "Pharma M&A news",
+      "reason": "excluded category: pure pharma business news"
+    },
+    {
+      "topic": "Partisan healthcare policy debate",
+      "reason": "excluded category: pure political healthcare opinion"
+    },
+    {
+      "topic": "Detox cleanse content",
+      "reason": "excluded category: alternative medicine without evidence"
+    },
+    {
+      "topic": "Pet health content",
+      "reason": "excluded category: pet health without zoonotic angle"
+    },
+    {
+      "topic": "Stale signals >120 hours old",
+      "reason": "stale: no new developments"
+    },
+    {
+      "topic": "Duplicate signals (7 topics)",
+      "reason": "duplicate: topic-noun overlap with same event date"
+    },
+    {
+      "topic": "Social-only signals without corroboration (89 topics)",
+      "reason": "weak-signal: no news or search corroboration"
+    },
+    {
+      "topic": "Off-category signals (41 topics)",
+      "reason": "off-category: no match to allowed_categories"
+    }
+  ]
+}</script>
+<script>
+function readPipelineData() {
+  const raw = document.getElementById('pipeline-json').textContent.trim();
+  if (!raw || raw === '__PIPELINE_' + 'DATA__') {
+    return {
+      run_date: '',
+      niche: 'Health & Wellness',
+      signal_summary: {
+        total_reviewed: 0,
+        total_retained: 0,
+        total_rejected: 0,
+        notes: 'This is the dashboard template. Run python run_pipeline.py --no-email to generate a filled dashboard, or open outputs/daily_newsroom_dashboard/dashboard_preview.html to view the design preview.'
+      },
+      candidates: [],
+      rejected: []
+    };
+  }
+  try {
+    return JSON.parse(raw);
+  } catch (error) {
+    return {
+      run_date: '',
+      niche: 'Health & Wellness',
+      signal_summary: {
+        total_reviewed: 0,
+        total_retained: 0,
+        total_rejected: 0,
+        notes: `Dashboard data could not be parsed: ${error.message}`
+      },
+      candidates: [],
+      rejected: []
+    };
+  }
+}
+const D = readPipelineData();
+const candidates = Array.isArray(D.candidates) ? D.candidates : [];
+const rejected = Array.isArray(D.rejected) ? D.rejected : [];
+const summary = D.signal_summary || {};
+
+const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({
+  '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+}[ch]));
+const clamp = n => Math.max(0, Math.min(100, Number(n) || 0));
+const fmtDate = value => value || new Date().toISOString().slice(0, 10);
+const urgencyClass = value => {
+  if (value === 'now') return 'now';
+  if (value === 'today') return 'today';
+  if (value === 'this_week') return 'week';
+  if (value === 'evergreen') return 'evergreen';
+  return 'monitor';
+};
+const serpClass = c => {
+  const avg = ((Number(c.trend_strength_score) || 0) + (Number(c.opportunity_score) || 0)) / 2;
+  if (avg >= 82) return 'easy';
+  if (avg >= 65) return 'med';
+  return 'hard';
+};
+const serpLabel = cls => ({ easy: 'Easy', med: 'Med', hard: 'Hard' }[cls] || 'Med');
+const velocity = c => clamp(Math.round(((Number(c.discover_score) || 0) / 5) * 100));
+const sourceLabels = c => {
+  const labels = [];
+  if (c.signal_type) labels.push(String(c.signal_type).replace(/_/g, ' '));
+  if (c.confidence) labels.push(`${c.confidence} conf`);
+  if (c.content_status) labels.push(c.content_status);
+  return labels.slice(0, 3);
+};
+
+document.getElementById('dek').textContent =
+  `${esc(D.niche || 'Health & Wellness')} · US · ${fmtDate(D.run_date)} · with Google Trends data`;
+document.getElementById('run-meta').textContent =
+  `Generated: ${fmtDate(D.run_date)} | retained ${candidates.length} | pipeline v2`;
+
+const p1 = candidates.filter(c => c.priority_level === 'P1').length;
+const flags = candidates.filter(c => String(c.notes || '').trim() || c.confidence === 'low').length;
+const statData = [
+  { label: 'Signals Processed', value: summary.total_reviewed ?? 0, cls: '' },
+  { label: 'Retained Topics', value: candidates.length, cls: 'green' },
+  { label: 'Publish NOW', value: p1, cls: 'amber' },
+  { label: 'Integrity Flags', value: flags, cls: 'violet' },
+];
+document.getElementById('stats').innerHTML = statData.map(s => `
+  <div class="stat ${s.cls}">
+    <div class="value">${esc(s.value)}</div>
+    <div class="label">${esc(s.label)}</div>
+  </div>
+`).join('');
+
+const notes = String(summary.notes || '').trim();
+if (notes) {
+  document.getElementById('insight').hidden = false;
+  document.getElementById('insight-title').textContent = 'Search Demand vs. Editorial Urgency — Key Insight';
+  document.getElementById('insight-copy').textContent = notes;
+}
+const fallbackMentioned = /site_url not configured|self-check skipped|competitor fallback/i.test(notes)
+  || candidates.some(c => /site_url not configured|self-check skipped|competitor fallback/i.test(String(c.notes || '')));
+document.getElementById('site-fallback-note').hidden = !fallbackMentioned;
+
+document.getElementById('priority-title').textContent =
+  `Priority Topics — All ${candidates.length} Retained`;
+
+const filters = ['All', 'P1', 'P2', 'P3', 'P4', 'P5'];
+document.getElementById('filters').innerHTML = filters.map((f, i) =>
+  `<button class="filter-btn ${i === 0 ? 'active' : ''}" data-filter="${f}">${f}</button>`
+).join('');
+
+function rowHtml(c, i) {
+  const trend = clamp(c.trend_strength_score);
+  const opp = clamp(c.opportunity_score);
+  const vel = velocity(c);
+  const velClass = vel >= 70 ? 'high' : vel >= 40 ? 'mid' : 'low';
+  const sc = serpClass(c);
+  const urgency = c.urgency || c.publish_timing || 'monitor';
+  const labels = sourceLabels(c).map(label => `<span class="source-chip">${esc(label)}</span>`).join('');
+  return `
+    <tr class="topic-row" data-priority="${esc(c.priority_level)}" data-detail="${i}">
+      <td class="rank">${String(i + 1).padStart(2, '0')}</td>
+      <td>
+        <div class="topic-title">${esc(c.topic)}</div>
+        <div class="topic-sub">${esc(c.primary_headline || c.primary_entity || c.recommended_angle || '')}</div>
+      </td>
+      <td><span class="num">${trend}</span><span class="mini-bar trend"><span style="width:${trend}%"></span></span></td>
+      <td><span class="num">${opp}</span><span class="mini-bar opp"><span style="width:${opp}%"></span></span></td>
+      <td><span class="num velocity ${velClass}">${vel}</span></td>
+      <td><span class="badge ${urgencyClass(urgency)}">${esc(urgency === 'this_week' ? 'today' : urgency)}</span></td>
+      <td><span class="badge serp ${sc}">${serpLabel(sc)}</span></td>
+      <td><span class="num">${esc(c.source_count ?? 0)}</span></td>
+      <td>${labels}</td>
+    </tr>
+    <tr class="detail-row" data-parent="${i}" hidden>
+      <td colspan="9">
+        <div class="detail">
+          <div><h4>Recommended Angle</h4><p>${esc(c.recommended_angle || 'No angle provided.')}</p></div>
+          <div><h4>Why Now</h4><p>${esc(c.why_now || 'No timing rationale provided.')}</p></div>
+          <div><h4>Next Steps</h4><p>${esc(c.next_steps || c.notes || 'No next steps provided.')}</p></div>
+        </div>
+      </td>
+    </tr>
+  `;
+}
+
+const tbody = document.getElementById('topic-rows');
+tbody.innerHTML = candidates.map(rowHtml).join('');
+document.getElementById('empty').hidden = candidates.length > 0;
+
+tbody.addEventListener('click', event => {
+  const row = event.target.closest('.topic-row');
+  if (!row) return;
+  const detail = tbody.querySelector(`.detail-row[data-parent="${row.dataset.detail}"]`);
+  if (detail) detail.hidden = !detail.hidden;
+});
+
+document.getElementById('filters').addEventListener('click', event => {
+  const btn = event.target.closest('.filter-btn');
+  if (!btn) return;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const filter = btn.dataset.filter;
+  document.querySelectorAll('.topic-row').forEach(row => {
+    const show = filter === 'All' || row.dataset.priority === filter;
+    row.hidden = !show;
+    const detail = tbody.querySelector(`.detail-row[data-parent="${row.dataset.detail}"]`);
+    if (detail) {
+      detail.hidden = true;
+      detail.classList.toggle('hidden', !show);
+    }
+  });
+});
+
+if (rejected.length) {
+  document.getElementById('rejected-section').hidden = false;
+  document.getElementById('rejected-rows').innerHTML = rejected.map(r => `
+    <tr><td>${esc(r.topic)}</td><td>${esc(r.reason)}</td></tr>
+  `).join('');
+}
+</script>
+</body>
+</html>
