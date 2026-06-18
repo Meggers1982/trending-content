@@ -1,0 +1,302 @@
+```json
+{
+  "run_date": "2026-06-18",
+  "niche": "health and wellness",
+  "signal_summary": {
+    "total_reviewed": 144,
+    "total_retained": 9,
+    "total_rejected": 135,
+    "tools_active": ["web_search", "google_news", "google_trends", "serpapi"],
+    "tools_unavailable": [],
+    "notes": "site_url not configured — competitor-check fallback active. No deferred_topics.yaml or run_history.yaml found. Breaking-recall exception applied to 3 pharmaceutical/food recalls. All 9 retained candidates require FDA notice verification before publishing. GLP-1 and recall clusters dominate. Mental health velocity declining (-13 week-over-week) but individual editorial hooks strong."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Alfredo Sauce Salmonella Recall — FDA Class I, 41 States",
+      "primary_entity": "alfredo sauce salmonella recall",
+      "signal_type": "breaking_news",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 88,
+      "opportunity_score": 82,
+      "discover_score": 4,
+      "urgency": "now",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 6,
+      "recommended_angle": "Consumer safety action guide: which products are recalled, how to identify them, and what to do if you've eaten them",
+      "why_now": "FDA upgraded to Class I — highest risk classification — distributed across 41 states. Salmonella is acutely dangerous for children, elderly, and immunocompromised. Time-sensitive consumer action needed.",
+      "primary_headline": "Alfredo Sauce Recalled in 41 States: What You Need to Know About the Salmonella Risk",
+      "next_steps": "Verify full FDA notice (brand name, lot codes, UPC) at fda.gov before publishing. Assign to writer immediately. Publish within 4 hours.",
+      "notes": "Breaking-recall exception applied. Confidence capped Medium until full FDA recall notice directly retrieved. Primary FDA outbreak page found (06/15) but complete lot code list not directly retrieved."
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Chlorthalidone Blood Pressure Drug Recall — Nationwide",
+      "primary_entity": "chlorthalidone",
+      "signal_type": "breaking_news",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 85,
+      "opportunity_score": 80,
+      "discover_score": 4,
+      "urgency": "now",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 4,
+      "recommended_angle": "What patients taking chlorthalidone need to know: is your medication affected, what is the risk, and what to do next. Critical: do not stop taking without consulting your doctor.",
+      "why_now": "Single real-time rising trend on Google Trends Trending Now (2026-06-18). Blood pressure medications taken daily by tens of millions of Americans. Immediate patient action need.",
+      "primary_headline": "Blood Pressure Medication Chlorthalidone Recalled Nationwide: What Patients Should Know",
+      "next_steps": "Verify FDA MedWatch notice for specific manufacturer and lot codes immediately. Confirm recall reason (likely nitrosamine/carcinogen). Assign to writer now. Publish within 4 hours.",
+      "notes": "Breaking-recall exception applied. Primary FDA recall notice not directly retrieved. Do not advise readers to stop taking medication without consulting prescriber — abrupt antihypertensive discontinuation is dangerous."
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Retatrutide Phase 3: 30% Body Weight Loss, On Par With Bariatric Surgery",
+      "primary_entity": "retatrutide",
+      "signal_type": "clinical_trial",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 82,
+      "opportunity_score": 85,
+      "discover_score": 5,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 5,
+      "recommended_angle": "Is retatrutide the drug that makes weight-loss surgery optional? What 30% weight loss in a trial actually means for patients.",
+      "why_now": "Phase 3 results published. GLP-1/weight loss at high sustained interest (weight_loss 50 baseline). Retatrutide's 30% body weight loss — comparable to bariatric surgery — is the most significant weight-loss drug result in years.",
+      "primary_headline": "Retatrutide Helped People Lose 30% of Their Body Weight. Is This the Future of Obesity Treatment?",
+      "next_steps": "Retrieve primary NEJM publication and DOI before publish. Verify FDA submission status. Assign to senior health writer with GLP-1 familiarity. Target publish within 24 hours.",
+      "notes": "Phase 3 results reported via UCHealth and trade sources — verify peer-reviewed journal publication (NEJM or equivalent) before citing. Retatrutide is NOT yet FDA-approved — must be clearly stated. Do not imply availability. Distinguish triple agonist (GIP/GLP-1/glucagon) from dual agonists (tirzepatide)."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Antidepressant Recall: Generic Cymbalta / Duloxetine Carcinogen Risk",
+      "primary_entity": "duloxetine recall",
+      "signal_type": "breaking_news",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 78,
+      "opportunity_score": 77,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "What patients on duloxetine need to know: which generics are recalled, what the carcinogen risk actually means, and whether to keep taking your medication.",
+      "why_now": "Antidepressants among most widely prescribed medications in US. Carcinogen contamination recall affecting common generic creates immediate patient anxiety. Competitor coverage will be brief without clinical context.",
+      "primary_headline": "Generic Antidepressant Duloxetine Recalled Over Possible Carcinogen Risk: What Patients Should Do",
+      "next_steps": "Verify FDA notice for specific manufacturer and lot codes. Confirm contamination class (NDMA vs. other nitrosamine). Publish within 48 hours.",
+      "notes": "Breaking-recall exception applied. Do NOT advise patients to stop taking duloxetine without medical guidance. Abrupt SNRI discontinuation causes withdrawal syndrome — can be severe. 'Possible carcinogen' language must be precise: IARC Group 2A probable carcinogen, not confirmed human carcinogen."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Shingles Vaccine Linked to Lower Dementia Risk",
+      "primary_entity": "shingles vaccine dementia risk",
+      "signal_type": "medical_study",
+      "allowed_category": "aging and longevity",
+      "trend_strength_score": 72,
+      "opportunity_score": 78,
+      "discover_score": 5,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "The study showing shingles vaccination is linked to lower dementia risk — what it actually found, what it can and can't prove, and whether you should get vaccinated if you haven't already.",
+      "why_now": "Published 06/15 via Brown University citing Annals of Internal Medicine. Dementia prevention one of highest-value search topics for 50+ audience. Herpes zoster–dementia hypothesis well-established. Strong Discover score.",
+      "primary_headline": "Getting the Shingles Vaccine May Lower Your Dementia Risk, New Study Suggests",
+      "next_steps": "Retrieve AIM publication DOI from PubMed. Confirm effect size and study design. Assign to health writer with aging/longevity familiarity. Publish within 48 hours.",
+      "notes": "Observational study — cannot establish causation; frame as association throughout. DOI not directly retrieved — confirm primary publication in Annals of Internal Medicine before citing. Confidence capped Medium until primary AIM publication confirmed."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Mental Health and Pregnancy Planning: New Research",
+      "primary_entity": "mental health family planning",
+      "signal_type": "study_or_research",
+      "allowed_category": "mental health and psychology",
+      "trend_strength_score": 65,
+      "opportunity_score": 72,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "The mental health conversation that happens before pregnancy — what the NYT Well story surfaces, why this gap matters, and what patients and providers can do.",
+      "why_now": "NYT Well published 06/17 within 24 hours. Mental health velocity declining overall (-13) but mental health + reproductive planning is underserved and addresses high-anxiety audience question.",
+      "primary_headline": "The Mental Health Factor in Pregnancy Planning That Most Doctors Don't Discuss",
+      "next_steps": "Read NYT Well article in full; retrieve underlying research. Consult ACOG guidelines on psychiatric conditions in pregnancy. Assign to writer with women's health experience. Target 48–72 hours.",
+      "notes": "Primary research source behind NYT Well story not directly retrieved — verify underlying study or data before citing specific statistics. Do not overstate psychiatric medication risk in pregnancy without citing current ACOG guidance."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "GLP-1 Drug Associated With Slower Biological Aging",
+      "primary_entity": "GLP-1 biological aging",
+      "signal_type": "medical_study",
+      "allowed_category": "aging and longevity",
+      "trend_strength_score": 70,
+      "opportunity_score": 70,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "What 'slowing biological aging' actually means — and why the GLP-1 aging study is being misread by almost everyone covering it.",
+      "why_now": "UC study published recently. GLP-1 continues highest-sustained search topic. 'Aging' angle is newer than weight loss coverage and opens distinct content cluster. Opportunity in correcting coverage.",
+      "primary_headline": "GLP-1 Drugs May Slow Biological Aging — But What Does That Actually Mean?",
+      "next_steps": "Retrieve primary publication and DOI. Confirm what aging marker was used. Assign to writer comfortable with nuanced mechanism stories. Target 48 hours.",
+      "notes": "'Slowing biological aging' likely refers to epigenetic clock markers (GrimAge, PhenoAge) — not direct longevity outcomes. Must specify measure. Correlation not causation. Mechanism not established; weight loss itself reduces aging biomarkers. Do not generalize to 'GLP-1 is anti-aging medication.'"
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Psilocybin for Mental Health: USC Launches First Clinical Trial",
+      "primary_entity": "psilocybin USC clinical trial",
+      "signal_type": "clinical_trial",
+      "allowed_category": "mental health and psychology",
+      "trend_strength_score": 60,
+      "opportunity_score": 65,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "What USC's psilocybin trial could mean for treatment-resistant depression — and what's different about this study.",
+      "why_now": "USC Keck School of Medicine launched institution's first psilocybin clinical study this week (06/16). Psilocybin mental health is fastest-growing research area in psychiatry.",
+      "primary_headline": "USC Just Launched Its First Psilocybin Study for Mental Health. Here's What It's Testing.",
+      "next_steps": "Retrieve trial registration from ClinicalTrials.gov. Clarify specific indication and patient population. Schedule within 5 days.",
+      "notes": "This is trial launch, not trial results — frame as 'researchers are studying,' not 'psilocybin works for X.' Distinguish from FDA Breakthrough Therapy designation. Do not conflate recreational use with clinical psilocybin therapy protocols."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "NIH: Lifestyle Intervention in Prediabetes Lowers Risk of Multiple Chronic Conditions",
+      "primary_entity": "prediabetes lifestyle intervention",
+      "signal_type": "clinical_trial",
+      "allowed_category": "chronic disease management",
+      "trend_strength_score": 58,
+      "opportunity_score": 68,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "The prediabetes intervention plan — backed by a new NIH study — that protects against heart disease, kidney disease, and more at the same time.",
+      "why_now": "NIH published 06/15 within 72 hours. Prediabetes affects ~98 million US adults. Multi-condition protective effect (not just diabetes prevention) is differentiating finding and content gap.",
+      "primary_headline": "If You Have Prediabetes, This Lifestyle Plan Can Cut Risk of Multiple Diseases, NIH Study Finds",
+      "next_steps": "Pull NIH press release and primary publication. Retrieve exact intervention protocol from study. Schedule within 5–7 days.",
+      "notes": "Retrieve primary publication — confirm whether this is DPP (Diabetes Prevention Program) follow-up or new trial. Specify what 'lifestyle intervention' means in study — caloric targets, physical activity minutes, behavioral counseling. Confirm whether observational vs. RCT."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "Taylor Parker mental health diagnosis",
+      "reason": "brand_safety / off-category — criminal case celebrity angle; excluded category"
+    },
+    {
+      "topic": "Jeremy Clarkson health / Mitch McConnell health / David Bromstad health",
+      "reason": "off-category — celebrity health status speculation; not health content"
+    },
+    {
+      "topic": "GetActive.gov / Secretary Kennedy Colorado tour",
+      "reason": "brand_safety — political adjacency; HHS political initiative"
+    },
+    {
+      "topic": "KFF mental health policy tracker — Trump administration",
+      "reason": "weak_signal — primarily political policy analysis; no new health science signal"
+    },
+    {
+      "topic": "Google AMIE / LLM medical AI benchmarks",
+      "reason": "off_category — tech/AI story; adjacent but not core health category"
+    },
+    {
+      "topic": "University of Michigan brain-computer interface",
+      "reason": "off_category — highly specialized; niche audience; tech-adjacent medical device"
+    },
+    {
+      "topic": "Novo Nordisk cyberattack / clinical trial data stolen",
+      "reason": "off_category — cybersecurity story, not health content"
+    },
+    {
+      "topic": "GLP-1 lifetime cost savings ($192K)",
+      "reason": "weak_signal — business/economics framing; editorial overlap with retatrutide brief"
+    },
+    {
+      "topic": "Mount Sinai music therapy cancer study",
+      "reason": "weak_signal — single small study; no primary publication retrieved; low search velocity"
+    },
+    {
+      "topic": "Mac & cheese recall (525K packages)",
+      "reason": "duplicate — subsumed into Alfredo sauce recall brief"
+    },
+    {
+      "topic": "Birth control drug recall (3 drugs)",
+      "reason": "unverified_claim — insufficient corroboration; The Healthy only; monitored pending FDA verification"
+    },
+    {
+      "topic": "Infant formula recall",
+      "reason": "weak_signal — fda.gov homepage signal without specific recall notice details; monitored pending verification"
+    },
+    {
+      "topic": "Gas-X coolant contamination",
+      "reason": "weak_signal — included in MedShadow omnibus; lower individual urgency"
+    },
+    {
+      "topic": "Hypothyroidism new treatment (UConn)",
+      "reason": "weak_signal — single institutional source; insufficient corroboration; monitored"
+    },
+    {
+      "topic": "Melanoma / moles genetic study",
+      "reason": "weak_signal — SERP difficulty high; deferred to monitor"
+    },
+    {
+      "topic": "Pew abortion data",
+      "reason": "off_category — political/social policy; excluded category"
+    },
+    {
+      "topic": "CaroMont new hospital, Northwestern grant",
+      "reason": "off_category — local/institutional; too narrow for national health audience"
+    },
+    {
+      "topic": "Wellness retreats, Father's Day wellness gifts",
+      "reason": "off_category — lifestyle fluff"
+    },
+    {
+      "topic": "Global Wellness Day 2026",
+      "reason": "weak_signal — low informational value; seasonal marketing event"
+    },
+    {
+      "topic": "Banfield wellness plan / pet death",
+      "reason": "off_category — pet health, not human health"
+    },
+    {
+      "topic": "Gallup healthcare affordability",
+      "reason": "weak_signal — policy/economics; good evergreen angle but no fresh editorial hook today"
+    },
+    {
+      "topic": "CMS health technology office",
+      "reason": "off_category — B2B/institutional; not audience-relevant"
+    },
+    {
+      "topic": "AI transforming clinical trial recruitment",
+      "reason": "off_category — B2B clinical trial operations; not patient-facing"
+    },
+    {
+      "topic": "Sourdough vs white bread nutrition",
+      "reason": "weak_signal — rising search query but no news anchor; pure SEO topic"
+    },
+    {
+      "topic": "Baking soda weight loss TikTok queries",
+      "reason": "unverified_claim — social-only signal; unverified health claim; brand safety fail"
+    },
+    {
+      "topic": "All local wellness events, community health announcements",
+      "reason": "off_category — too local/narrow"
+    }
+  ]
+}
+```
