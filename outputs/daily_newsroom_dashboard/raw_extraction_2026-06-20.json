@@ -1,0 +1,266 @@
+```json
+{
+  "run_date": "2026-06-20",
+  "niche": "health and wellness",
+  "signal_summary": {
+    "total_reviewed": 144,
+    "total_retained": 9,
+    "total_rejected": 135,
+    "tools_active": ["web_search", "google_news", "google_trends", "serpapi"],
+    "tools_unavailable": [],
+    "notes": "site_url not configured — competitor-list fallback used; no deferred_topics.yaml or run_history.yaml found; treated as first run; Google Trends pre-fetch available via serpapi; sauerkraut/gut health signal retained from convergence of rising Trends queries (+8 delta) across gut_health, nutrition, diet clusters"
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Antidepressant recall — duloxetine (generic Cymbalta) carcinogen risk",
+      "primary_entity": "duloxetine (generic Cymbalta)",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 88,
+      "opportunity_score": 85,
+      "discover_score": 5,
+      "urgency": "now",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 5,
+      "recommended_angle": "What patients currently taking generic Cymbalta (duloxetine) need to do right now — does yours need to be returned, and what should you take instead?",
+      "why_now": "FDA has issued a recall of generic duloxetine (Cymbalta) due to presence of a potential carcinogen impurity. Multiple major outlets confirmed June 15–17, 2026. Patients are actively searching for what this means for their prescriptions. High-urgency, patient-action content.",
+      "primary_headline": "Your Generic Antidepressant May Be Recalled — Here's What to Do If You Take Duloxetine",
+      "next_steps": "Verify FDA.gov recall URL → confirm carcinogen name and lot numbers → assign to writer immediately → medical reviewer sign-off before publish → publish within 4 hours of assignment",
+      "notes": "Do NOT advise abrupt discontinuation — withdrawal syndrome risk. Carcinogen risk is low-level cumulative exposure, not acute toxicity. Verify exact lot numbers and manufacturer directly from FDA.gov before publishing."
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Infant formula botulism — FDA outbreak investigation (June 2026)",
+      "primary_entity": "powdered infant formula botulism outbreak",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 85,
+      "opportunity_score": 84,
+      "discover_score": 5,
+      "urgency": "now",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 5,
+      "recommended_angle": "What parents need to know right now: which formula brands are linked to botulism cases, what symptoms to watch for in infants, and what the FDA is telling families to do",
+      "why_now": "FDA opened an outbreak investigation on June 17, 2026 linking powdered infant formula to infant botulism cases including one in Washington state. Prevention confirmed nationwide recall warning. Parents of infants are the most urgency-sensitive audience in health content.",
+      "primary_headline": "FDA Links Baby Formula to Botulism Cases — What Parents Need to Know Right Now",
+      "next_steps": "Pull FDA.gov outbreak investigation page immediately → confirm brand and lot numbers → assign to writer + medical reviewer simultaneously → publish within 2–3 hours",
+      "notes": "Do not name brand unless confirmed by FDA.gov directly. Do not conflate with honey/soil-source botulism — mechanism may differ. Three cases is small but severe; contextualize carefully."
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Alfredo sauce recall — Salmonella contamination, 41 states, FDA Class I",
+      "primary_entity": "Alfredo sauce Salmonella recall",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 82,
+      "opportunity_score": 80,
+      "discover_score": 4,
+      "urgency": "now",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 6,
+      "recommended_angle": "Practical consumer guide: which Alfredo sauce was recalled, which states are affected, what Salmonella illness looks like, and what to do if you've already eaten it",
+      "why_now": "FDA elevated this to Class I (highest risk) recall covering 41 states. Covered by ABC7, PBS, NBC NY, FOX LiveNOW, and Prevention June 14–17, 2026. Broad geographic spread means large portion of US health audience is directly affected.",
+      "primary_headline": "Alfredo Sauce Recalled in 41 States Due to Salmonella Risk — Check Your Fridge",
+      "next_steps": "Confirm brand name and UPC from FDA.gov → writer assign → publish within 3–4 hours. Cross-link to infant formula brief.",
+      "notes": "Verify exact brand name(s) from FDA.gov — multiple secondary sources confirmed recall but brand specifics must come from primary source. Do not conflate with raw poultry Salmonella messaging."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Retatrutide: new GLP-1 drug achieves 30% body weight loss — on par with bariatric surgery",
+      "primary_entity": "Retatrutide",
+      "signal_type": "clinical_trial",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 79,
+      "opportunity_score": 82,
+      "discover_score": 5,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Retatrutide is not FDA-approved yet — here's what the trial data actually shows, how it compares to Ozempic and Mounjaro, and when it might become available",
+      "why_now": "UCHealth article (June 16, 2026) reports published trial data showing retatrutide achieves ~30% body weight loss. Weight loss is at 7d-delta +2 in Trends. GLP-1 is the dominant health story of past 2 years. A third-generation triple agonist achieving surgery-level results is the next chapter readers are waiting for.",
+      "primary_headline": "Retatrutide Achieved 30% Weight Loss in Trials — Rivaling Bariatric Surgery. Here's What That Means.",
+      "next_steps": "Confirm journal publication for trial data → verify trial phase and population size → assign to writer with endocrinology background → publish within 36 hours",
+      "notes": "'On par with bariatric surgery' requires precise qualification — which surgery type, which metric (EWL vs. total body weight), which time horizon. Confirm trial phase (Phase 2 vs. Phase 3). Weight regain after discontinuation must be mentioned. Drug is NOT FDA-approved."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Shingles vaccine linked to lower dementia risk",
+      "primary_entity": "shingles vaccine (zoster vaccine) dementia risk",
+      "signal_type": "medical_study",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 74,
+      "opportunity_score": 78,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "The shingles vaccine is already recommended for adults 50+. New evidence suggesting it may also reduce dementia risk gives people a second compelling reason to get it — here's what the study found and what it doesn't prove",
+      "why_now": "Medical Xpress reported June 16, 2026 on a study suggesting shingles vaccine may lower dementia risk. Aging/longevity is a core category with consistent high search demand. Strong SERP gap for consumer-facing explainer of vaccine-dementia link. Confidence capped at Medium pending journal confirmation.",
+      "primary_headline": "The Shingles Vaccine May Also Protect Your Brain. Here's What a New Study Found.",
+      "next_steps": "Verify journal name and DOI from Medical Xpress article → confirm study design (observational vs. RCT) → assign; publish within 48 hours",
+      "notes": "Confidence capped Medium — verify journal before publishing. 'May lower' = association, not causation — preserve hedged language throughout. If observational design confirmed, acknowledge confounding variables."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Prediabetes lifestyle intervention reduces risk of developing multiple chronic diseases — NIH trial",
+      "primary_entity": "prediabetes lifestyle intervention chronic disease prevention",
+      "signal_type": "clinical_trial",
+      "allowed_category": "chronic disease management",
+      "trend_strength_score": 72,
+      "opportunity_score": 76,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 4,
+      "recommended_angle": "96 million American adults have prediabetes — NIH evidence now shows lifestyle changes don't just prevent diabetes, they reduce risk of heart disease, kidney disease, and other chronic conditions simultaneously. Here's what the intervention actually looked like",
+      "why_now": "NIH.gov published June 15, 2026 on a lifestyle intervention trial showing reduced risk of developing multiple chronic conditions for prediabetes patients. Tier-1 institutional source with direct patient relevance to one of the most common US health conditions. Strong SERP gap.",
+      "primary_headline": "NIH Trial: Lifestyle Changes for Prediabetes Cut Risk of Multiple Chronic Diseases — Not Just Diabetes",
+      "next_steps": "Confirm NIH press release URL → identify journal paper → assign; publish within 72 hours",
+      "notes": "Specify which chronic conditions the trial measured — 'multiple' is insufficient precision. Confirm whether new trial or reanalysis of DPP data."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Psilocybin for mental health: USC launches first clinical study",
+      "primary_entity": "psilocybin clinical study USC Keck School of Medicine",
+      "signal_type": "clinical_trial",
+      "allowed_category": "mental health and psychology",
+      "trend_strength_score": 70,
+      "opportunity_score": 75,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Psilocybin therapy is entering mainstream academic medicine. What USC's new clinical study is actually testing, what prior evidence shows, and what this means for patients who've exhausted other mental health treatments",
+      "why_now": "Keck School of Medicine of USC launched USC's first clinical psilocybin study for mental health (June 16, 2026). Mental health Trends at 35 (delta +2). Psilocybin has moved from fringe to FDA-tracked; this is a major academic institution legitimizing the therapy. Strong SERP gap.",
+      "primary_headline": "USC Just Launched Its First Psilocybin Clinical Study. Here's What the Research Is Actually Testing.",
+      "next_steps": "Confirm specific mental health condition studied → pull USC researcher name → identify prior trial publications for citation → assign; publish within 72 hours",
+      "notes": "Clearly distinguish supervised clinical use from recreational use throughout. Psilocybin remains Schedule I federally — do not imply availability as treatment. Confirm which specific mental health condition(s) the USC trial targets."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Blood proteins predict biological aging and disease risk — Nature study",
+      "primary_entity": "plasma proteomic signatures aging disease prediction",
+      "signal_type": "medical_study",
+      "allowed_category": "aging and longevity",
+      "trend_strength_score": 65,
+      "opportunity_score": 72,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Scientists can now read your biological age from proteins in your blood — and predict disease risk years before symptoms appear. What the Nature study found and what it means for the future of preventive medicine",
+      "why_now": "Nature published June 15, 2026. Aging/longevity category with strong SERP gap for consumer-facing explainer of proteomics-based aging science. No major consumer health outlet has a clear, accessible explainer yet.",
+      "primary_headline": "Scientists Found Proteins in Your Blood That Predict How Fast You're Aging — Here's What That Means",
+      "next_steps": "Pull DOI from Nature June 15 issue → identify lead author institution → assign; publish mid-week",
+      "notes": "Predictive association ≠ deterministic outcome — frame carefully. This is not a commercially available test — do not imply readers can access it."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Sauerkraut and gut health: what the science says about fermented foods",
+      "primary_entity": "sauerkraut gut health fermented foods",
+      "signal_type": "rising_search_interest",
+      "allowed_category": "gut health and microbiome",
+      "trend_strength_score": 62,
+      "opportunity_score": 68,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 4,
+      "recommended_angle": "Sauerkraut is trending across gut health, nutrition, and diet searches — but is the evidence as strong as the hype? An evidence-based look at what fermented foods actually do for your microbiome and when they're worth eating",
+      "why_now": "Google Trends shows gut_health at 59 (7d-delta +8), with 'sauerkraut' appearing as rising related query in gut_health, nutrition, diet, and weight_loss clusters simultaneously. Rising: 'best time to eat sauerkraut for gut health,' 'list of fermented foods for gut health,' 'sibo symptoms.' Cross-cluster signal with no authoritative explainer in top SERP.",
+      "primary_headline": "Sauerkraut for Gut Health: What the Science Actually Says (and What It Doesn't)",
+      "next_steps": "Pull Sonnenburg lab citation → identify RDN or gut microbiome researcher for expert framing → assign; publish end of week",
+      "notes": "Commercial pasteurized sauerkraut may not contain live cultures — mention clearly. SIBO contraindication — fermented foods are not universally beneficial. Most evidence is observational or short-term; Stanford RCT (Sonnenburg lab, Cell 2021) is notable but limited in scope."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "OpenAI ChatGPT health intelligence improvements",
+      "reason": "off-category: tech product announcement, not health science; no direct patient-health angle"
+    },
+    {
+      "topic": "Google AMIE medical AI research",
+      "reason": "off-category: AI product development; lacks clinical health content angle"
+    },
+    {
+      "topic": "RFK Jr. / HHS $700M mental health funding",
+      "reason": "brand_safety: allow_politics = false; no new clinical data"
+    },
+    {
+      "topic": "GetActive.gov launch — Kennedy/Burgum Colorado tour",
+      "reason": "brand_safety: political figure + government PR; no new clinical data"
+    },
+    {
+      "topic": "Mosquito population surge — Fort Bend County public health emergency",
+      "reason": "off-category: hyperlocal; no national consumer health angle"
+    },
+    {
+      "topic": "California health insurance tax increase",
+      "reason": "off-category: insurance policy/finance; no clinical health content"
+    },
+    {
+      "topic": "Balenciaga wellness/techwear launch",
+      "reason": "off-category: commercial wellness marketing; no evidence-based health angle"
+    },
+    {
+      "topic": "Samsung connected care solutions (VivaTech)",
+      "reason": "off-category: consumer electronics marketing; no clinical health content"
+    },
+    {
+      "topic": "Bank of America self-care report",
+      "reason": "off-category: financial services content"
+    },
+    {
+      "topic": "NHL/Good Shepherd youth wellness/autism center",
+      "reason": "off-category: hyperlocal facility news"
+    },
+    {
+      "topic": "Wearables in clinical trials",
+      "reason": "off-category: industry/B2B framing; insufficient consumer health angle"
+    },
+    {
+      "topic": "Pet aging study (AVMA)",
+      "reason": "off-category: pet health excluded unless zoonotic angle"
+    },
+    {
+      "topic": "Traffic fatalities study (CDOT)",
+      "reason": "off-category: safety/transportation, not health/wellness"
+    },
+    {
+      "topic": "Study abroad / pre-med students (Pittsburg State)",
+      "reason": "off-category: educational programming, not health content"
+    },
+    {
+      "topic": "Pew abortion data report",
+      "reason": "brand_safety: allow_politics = false"
+    },
+    {
+      "topic": "North Atlantic Right Whale health updates (NOAA)",
+      "reason": "off-category: animal/marine ecology, not human health"
+    },
+    {
+      "topic": "Most wellness cluster headlines (hotel, fitness class, VA wellness programming)",
+      "reason": "off-category: commercial/lifestyle marketing; no evidence-based health content"
+    }
+  ]
+}
+```
