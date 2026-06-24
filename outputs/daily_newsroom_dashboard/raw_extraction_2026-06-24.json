@@ -1,0 +1,230 @@
+```json
+{
+  "run_date": "2026-06-24",
+  "niche": "health and wellness",
+  "signal_summary": {
+    "total_reviewed": 144,
+    "total_retained": 8,
+    "total_rejected": 136,
+    "tools_active": ["web_search", "google_news", "google_trends", "serpapi"],
+    "tools_unavailable": ["reddit_live", "rss_live", "exa_live", "composio_trends"],
+    "notes": "Google Trends shows 'chlorthalidone recall' as real-time trending topic in US health category. Wellness and fitness showed strong 7d delta (+25, +32) but news signals were predominantly local/institutional PR with no national editorial value. Gut health and food safety showed negative 7d delta."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Blood pressure medication recall — chlorthalidone and related BP drugs",
+      "primary_entity": "chlorthalidone",
+      "signal_type": "breaking_news",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 88,
+      "opportunity_score": 82,
+      "discover_score": 5,
+      "urgency": "now",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 8,
+      "recommended_angle": "Consumer action guide: Here's exactly what to do if you have this medication — actionable, specific, search-aligned",
+      "why_now": "Chlorthalidone recall is trending in real-time on Google Trends US health category. Multiple major consumer outlets (TODAY, Good Housekeeping, Cleveland.com, TheStreet) published within 24-48 hours. Patients are actively searching for whether their specific medication is affected.",
+      "primary_headline": "Blood Pressure Medication Recalled Nationwide: Is Yours on the List?",
+      "next_steps": "1. Verify FDA recall notice directly at fda.gov before publishing. 2. Confirm exact drug name(s), lot numbers, manufacturer, and reason for recall. 3. Assign immediately — target publish within 4 hours of FDA verification.",
+      "notes": "⚠️ Breaking-recall exception applied. Primary FDA notice not directly retrieved. DO NOT PUBLISH before confirming fda.gov recall page. Confidence capped at Medium. Do not advise patients to stop taking medication without physician guidance — rebound hypertension is a serious risk."
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "COVID vaccine study blocked by CDC acting director — published in outside peer-reviewed journal",
+      "primary_entity": "CDC acting director / blocked COVID vaccine study",
+      "signal_type": "breaking_news",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 85,
+      "opportunity_score": 80,
+      "discover_score": 5,
+      "urgency": "now",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 5,
+      "recommended_angle": "What the study actually found — cut through the suppressed framing to explain the science, institutional conflict, and what readers should know about COVID vaccine safety data",
+      "why_now": "Published June 23-24, 2026. Five major outlets (Washington Post, ABC News, NBC News, Medscape, STAT News) reported simultaneously. CDC institutional conflict is a major news driver. Readers are searching for actual study findings, not just the political story.",
+      "primary_headline": "The COVID Vaccine Study the CDC Blocked — What It Actually Found",
+      "next_steps": "1. Retrieve the published journal article (identify journal name from WashPost/NBC reports). 2. Read the actual findings — do not rely only on news summaries. 3. Assign health journalist with medical research experience. 4. Target publish within 6 hours.",
+      "notes": "⚠️ High editorial sensitivity. 'Blocked' framing carries political charge. Lead with the science, not the conflict. Clearly distinguish: (a) what the study found, (b) why CDC leadership blocked it, (c) what the broader COVID vaccine evidence base shows. Do not amplify misinformation framing."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "HHS Operation TrialBlazer — US federal initiative to accelerate phase 1 clinical trials by 6-12 months",
+      "primary_entity": "HHS Operation TrialBlazer",
+      "signal_type": "breaking_news",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 72,
+      "opportunity_score": 70,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 6,
+      "recommended_angle": "Patient-centered explainer: What do faster clinical trials actually mean for someone waiting on a new treatment? Cuts through policy/geopolitics framing.",
+      "why_now": "Announced June 22, 2026. Multiple federal agencies and major outlets reported simultaneously. 'Clinical trial' + 'US vs China' framing is driving news cycle. Patients and researchers are the most engaged audiences.",
+      "primary_headline": "The US Just Launched a Plan to Speed Up Drug Trials by a Year. Here's What That Means for Patients.",
+      "next_steps": "1. Read HHS.gov primary announcement for specific program details. 2. Identify which disease areas or drug classes are prioritized. 3. Target publish within 24 hours.",
+      "notes": "Lower editorial sensitivity. Policy framing is acceptable given HHS primary source. Clearly distinguish announced plan from implemented policy — no trials have been accelerated yet."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "FDA Listeria outbreak investigation — soft cheese, June 2026",
+      "primary_entity": "Listeria monocytogenes soft cheese outbreak",
+      "signal_type": "breaking_news",
+      "allowed_category": "public health and epidemiology",
+      "trend_strength_score": 74,
+      "opportunity_score": 75,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Which cheeses to avoid + who is at highest risk. Consumer action guide format modeled on how CDC/FDA present outbreak advisories.",
+      "why_now": "FDA published its outbreak investigation page June 18, 2026. Listeria in soft cheese is a recurring food safety threat with high consumer search intent during an active investigation. Which cheeses is the most-searched question pattern.",
+      "primary_headline": "FDA Investigating Listeria Outbreak Linked to Soft Cheese: Which Products to Avoid",
+      "next_steps": "1. Access FDA outbreak page. 2. Confirm affected brands, states, and whether recall has been issued. 3. Check CDC outbreak page for case count and severity data. 4. Publish within 24 hours.",
+      "notes": "⚠️ Verify whether this is an investigation (no recall yet) or an active recall — do not conflate investigation with recall in consumer-facing copy. Listeria mortality risk is real for high-risk groups — present risk accurately without unnecessary panic."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Magnesium supplement recall — FDA announces removal of popular magnesium product",
+      "primary_entity": "magnesium supplement recall",
+      "signal_type": "breaking_news",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 68,
+      "opportunity_score": 72,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 4,
+      "recommended_angle": "Which magnesium products are recalled, why, and what buyers should do. High search intent from supplement-taking wellness audience.",
+      "why_now": "Announced June 22, 2026 per Yahoo and consumer outlets. Magnesium is a top-selling supplement category. Wellness audience overlap is very high.",
+      "primary_headline": "Magnesium Supplement Recalled by FDA: Which Products Are Affected and What to Do",
+      "next_steps": "1. MUST verify fda.gov for specific product name, manufacturer, lot numbers, and recall reason before publishing. 2. Confirm Yahoo/consumer coverage aligns with FDA primary notice. 3. Target publish within 24-36 hours after verification.",
+      "notes": "⚠️ Breaking-recall exception applied. Confidence capped at Medium. Do not publish specific product names or claims until FDA notice is verified. Do not imply all magnesium supplements are unsafe — product-specific recall only."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Duloxetine (antidepressant) recalled over possible cancer-causing chemical",
+      "primary_entity": "duloxetine recall",
+      "signal_type": "breaking_news",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 60,
+      "opportunity_score": 68,
+      "discover_score": 3,
+      "urgency": "today",
+      "confidence": "low",
+      "content_status": "new",
+      "source_count": 1,
+      "recommended_angle": "Is your antidepressant on the recall list? Patient safety guide for duloxetine users. High stakes: abrupt discontinuation of SNRIs is dangerous.",
+      "why_now": "Reported June 18, 2026. Duloxetine (Cymbalta generic) is widely prescribed for depression, anxiety, and chronic pain. Potential carcinogen contamination (likely NDMA class) follows pattern of similar recalls.",
+      "primary_headline": "Duloxetine Recalled Over Cancer-Causing Chemical Concern: What Patients Need to Know",
+      "next_steps": "1. PRIORITY: Verify FDA.gov recall notice before any publishing. This brief is HELD until verification. 2. If FDA notice confirmed: assign immediately, publish within 4 hours. 3. If FDA notice not found: downgrade to P3/Monitor.",
+      "notes": "⚠️ HELD — Low confidence. Single tier-3 source (Alton Telegraph) only. DO NOT PUBLISH without FDA.gov confirmation. Duloxetine discontinuation syndrome is well-documented and potentially severe — DO NOT instruct patients to stop taking medication without physician guidance."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Fish oil supplements may not prevent Alzheimer's-related cognitive decline",
+      "primary_entity": "fish oil supplements / Alzheimer's prevention",
+      "signal_type": "breaking_news",
+      "allowed_category": "nutrition and diet science",
+      "trend_strength_score": 58,
+      "opportunity_score": 65,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "What the study actually showed — and what interventions DO have evidence for Alzheimer's prevention. Corrective explainer for a widely-believed supplement claim.",
+      "why_now": "Published June 18, 2026 via Keck Medicine/USC. Fish oil is one of the top-selling supplements in the US and is widely taken for brain health. This study challenges a common belief.",
+      "primary_headline": "Fish Oil Won't Prevent Alzheimer's, New Study Suggests. What Actually Might.",
+      "next_steps": "1. Find journal publication or preprint (confirm DOI/PubMed ID from Keck press release). 2. Read methodology: study design, sample size, duration, primary endpoint. 3. Schedule within 3-5 days.",
+      "notes": "⚠️ Institutional press release only — verify peer-reviewed publication before briefing writer. Key distinction: may not prevent Alzheimer's-related decline ≠ fish oil has no health benefits. Do not overgeneralize."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Patients are bringing AI tools to their therapy sessions — APA survey/report",
+      "primary_entity": "AI in therapy / patients using AI between sessions",
+      "signal_type": "breaking_news",
+      "allowed_category": "mental health and psychology",
+      "trend_strength_score": 55,
+      "opportunity_score": 62,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Balanced explainer: what are patients actually doing with AI in therapy contexts, what does the APA say about it, what are real risks and benefits? Skeptical but not dismissive.",
+      "why_now": "APA published June 23, 2026. Mental health showed 7d delta +11 on Google Trends. AI-in-healthcare is sustained audience conversation. Nature study (chatbots vs clinical AI) published same week adds context.",
+      "primary_headline": "Your Therapy Clients Are Using AI. Here's What the APA Says About It.",
+      "next_steps": "1. Read full APA report at apa.org (June 23, 2026). 2. Identify specific survey data: % of patients, use cases, clinician concerns. 3. Schedule within 4-5 days.",
+      "notes": "APA report may be survey/policy statement, not peer-reviewed clinical study. Do not present AI tools as safe or endorsed alternatives to clinical mental health care. Follow APA style guidelines for mental health reporting."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "RFK Jr. mental health funding",
+      "reason": "stale / off-category"
+    },
+    {
+      "topic": "AI health intelligence in ChatGPT (OpenAI)",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "Google AMIE / clinical AI benchmarks",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Wellness facility openings and partnerships",
+      "reason": "off-category"
+    },
+    {
+      "topic": "California health insurance tax",
+      "reason": "off-category"
+    },
+    {
+      "topic": "FDA wellness device guidance",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "Neural stem cell therapy — Huntington's",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "Colon cancer metastasis mechanism study",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "Ebola travel advisory",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "Eli Lilly obesity drug access story",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Immigrants in US healthcare workforce",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Health care fraud takedown",
+      "reason": "off-category"
+    },
+    {
+      "topic": "US healthcare affordability polls",
+      "reason": "stale"
+    }
+  ]
+}
+```
