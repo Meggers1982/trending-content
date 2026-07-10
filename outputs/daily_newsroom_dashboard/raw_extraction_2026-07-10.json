@@ -1,0 +1,334 @@
+```json
+{
+  "run_date": "2026-07-10",
+  "niche": "health and wellness",
+  "signal_summary": {
+    "total_reviewed": 87,
+    "total_retained": 9,
+    "total_rejected": 78,
+    "tools_active": ["web_search", "google_news", "google_trends", "serpapi"],
+    "tools_unavailable": ["ExaSearch", "BrowserNavigate", "COMPOSIO"],
+    "notes": "Google Trends shows exceptional spikes in gut_health (+40 7d-delta, 95/100), mental_health (+23), and health (+25) broadly. Food safety rising +17 consistent with active recalls. FDA food safety recall cluster represents strongest signal day this cycle. Psilocybin/cocaine RCT routed to P5 Monitor — pharmaceutical press release without independent DOI. McConnell health queries rejected as off-category political content."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "E. coli Outbreak Linked to Frozen Blueberries — FDA and CDC Active Investigation",
+      "primary_entity": "Frozen Blueberries E. coli Outbreak",
+      "signal_type": "breaking_news",
+      "allowed_category": "food safety / public health",
+      "trend_strength_score": 88,
+      "opportunity_score": 85,
+      "discover_score": 5,
+      "urgency": "now",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 6,
+      "recommended_angle": "What consumers need to do right now — specific product ID, symptoms to watch, and when to see a doctor",
+      "why_now": "FDA and CDC have simultaneous active outbreak investigation pages live as of July 6–7, 2026. E. coli outbreaks linked to produce are high-search, high-fear events with immediate consumer action required. Frozen blueberries are a staple in health-conscious households. Search interest in 'food safety' is up +17 in 7 days.",
+      "primary_headline": "FDA and CDC Investigating E. coli Outbreak Linked to Frozen Blueberries — What to Do Now",
+      "next_steps": "Assign immediately. Monitor FDA page for brand/lot code updates — article should be live-updated as investigation develops. Verify E. coli O157:H7 symptoms and incubation timeline. Source CDC outbreak communication staff for official language.",
+      "notes": "Product list and lot codes may change as investigation develops — link directly to FDA page rather than reprinting static lot codes that may become outdated. Do not speculate on case count; use 'cases under investigation' framing. Do not imply all frozen blueberries are unsafe — specify implicated products only."
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "2.5 Million Bottles of Eye Drops Recalled — FDA Warns of Foreign Substance Contamination",
+      "primary_entity": "Eye Drops Recall 2.5 Million Bottles",
+      "signal_type": "breaking_news",
+      "allowed_category": "FDA regulatory updates",
+      "trend_strength_score": 84,
+      "opportunity_score": 80,
+      "discover_score": 5,
+      "urgency": "now",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 7,
+      "recommended_angle": "Which eye drops are affected and what the foreign substance risk means for your eyes",
+      "why_now": "Coverage spanning Prevention, KCRA, Fox Business, NJ.com, Boston 25 News, AOL from July 7–10 confirms active national recall. 2.5 million bottles is a mass-scale recall affecting a common household OTC product. Eye drop recalls carry serious injury risk (infection, vision damage).",
+      "primary_headline": "2.5 Million Bottles of Eye Drops Recalled: Is Yours on the List?",
+      "next_steps": "Assign immediately. Retrieve FDA recall notice URL before publish — embed direct link prominently. Verify exact product names and lot codes from FDA primary notice.",
+      "notes": "PRIMARY FDA RECALL URL UNCONFIRMED — must retrieve before publish. Breaking-recall exception applied — confidence capped Medium until direct FDA notice URL confirmed. 'Foreign substance' identity not specified in available coverage — do not speculate on substance type. All product names and lot codes must come directly from the official FDA notice."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Gut Health Surge: What's Behind the Massive Search Spike and What the Evidence Actually Says",
+      "primary_entity": "gut health",
+      "signal_type": "rising_search_interest",
+      "allowed_category": "gut health and microbiome",
+      "trend_strength_score": 78,
+      "opportunity_score": 82,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 4,
+      "recommended_angle": "Decode the gut health trend — what the microbiome science actually supports vs. what's hype, with specific evidence-based foods and supplements",
+      "why_now": "Gut health is at 95/100 on Google Trends with a +40 7-day delta — the strongest single signal in today's run. Rising queries include 'best foods for gut health,' 'stewed apples for gut health,' 'seed probiotics,' 'best gut health supplement for women,' and 'ryze mushroom coffee' — showing audience is actively seeking both dietary and supplement guidance. SERP is dominated by listicles and brand-sponsored content with thin evidence.",
+      "primary_headline": "Gut Health Is Everywhere Right Now — Here's What the Science Actually Says",
+      "next_steps": "Assign to writer with nutrition science background. Source DOI links for all cited studies (Wastyk et al., 2021 Cell fermented foods RCT; Nature Medicine microbiome-aging connection). Avoid sponsored supplement language. Publish within 1–3 days.",
+      "notes": "Probiotic supplement claims vary dramatically by strain and condition — never generalize 'probiotics help gut health' without strain/condition specificity. Mushroom coffee (Ryze) has minimal RCT evidence — cover honestly, do not endorse. Association ≠ causation for microbiome diversity studies — most are observational."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "GLP-1 Weight Loss Drugs Available Online With Little Doctor Oversight, Yale Study Finds",
+      "primary_entity": "GLP-1 prescriptions online oversight",
+      "signal_type": "drug_or_treatment_claim",
+      "allowed_category": "chronic disease management / FDA regulatory updates",
+      "trend_strength_score": 72,
+      "opportunity_score": 78,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 4,
+      "recommended_angle": "What patients should know about the risks of getting GLP-1 drugs through online prescribers with minimal clinical oversight",
+      "why_now": "Yale School of Medicine published this study July 8, 2026. GLP-1 drugs (Ozempic, Wegovy, Mounjaro) are the most-searched drug class in health media. An 'online secret shopping' study revealing prescriptions issued with minimal clinician review is a directly actionable patient-safety story with immediate relevance to millions of Americans.",
+      "primary_headline": "It's Surprisingly Easy to Get Ozempic Online — A Yale Study Shows Why That's a Problem",
+      "next_steps": "Retrieve Yale study DOI/PubMed ID. Assign to writer with pharma/clinical background. Publish within 24–48 hours while Yale study is fresh.",
+      "notes": "Confidence capped at Medium — journal DOI not directly retrieved; Yale newsroom satisfies trusted secondary but retrieve primary publication before publish. Do not imply GLP-1 drugs are unsafe broadly — they are approved and effective; the story is about oversight gaps, not the drugs themselves. Distinguish semaglutide (Ozempic/Wegovy) from tirzepatide (Mounjaro/Zepbound) — not interchangeable."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Cream Cheese and Seasoning Recalled at Highest FDA Risk Level — What to Check",
+      "primary_entity": "FDA Class I recall cream cheese seasoning",
+      "signal_type": "breaking_news",
+      "allowed_category": "food safety / FDA regulatory updates",
+      "trend_strength_score": 74,
+      "opportunity_score": 71,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 5,
+      "recommended_angle": "Consolidate the simultaneous Class I FDA food recalls into one actionable pantry-check guide",
+      "why_now": "Multiple simultaneous Class I FDA food recalls (cream cheese, seasoning blend, plus the blueberry E. coli recall) create an unusually high food-safety alert moment. Class I = FDA's highest risk rating. Consolidating these into a single pantry-check article serves audience immediately and captures multiple recall search queries.",
+      "primary_headline": "FDA Issues Highest-Risk Recall on Cream Cheese and Seasonings — Here's What to Check",
+      "next_steps": "Retrieve all three FDA recall notice URLs before publish. Assign immediately given same-week news cycle. Include internal link to frozen blueberries E. coli article (Brief 01).",
+      "notes": "Breaking-recall exception applied for cream cheese and seasoning — FDA primary notice URLs not directly retrieved; verify before reprinting specific product/lot code information. Confidence capped at Medium until FDA notices directly confirmed. Do not conflate different recall reasons (listeria vs. contamination vs. undeclared allergen) — each has different symptom and risk profiles."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Stanford Study: Chronic Pain Patients Can Taper Opioids Voluntarily",
+      "primary_entity": "opioid taper chronic pain",
+      "signal_type": "medical_study",
+      "allowed_category": "chronic disease management",
+      "trend_strength_score": 65,
+      "opportunity_score": 72,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Hope-framing for chronic pain patients: what the Stanford findings mean for people who want to reduce opioids but fear the process",
+      "why_now": "Stanford Medicine published this finding July 9, 2026. Opioid dependency in chronic pain patients is a persistent high-interest health topic with deeply personal stakes for millions of Americans. 'Voluntary taper' reframes opioid reduction from forced detox to patient-controlled possibility.",
+      "primary_headline": "Many Chronic Pain Patients Can Reduce Opioids on Their Own Terms, Stanford Study Finds",
+      "next_steps": "Retrieve Stanford study DOI/PubMed ID. Assign to pain management specialist writer. Consult pain management physician for clinical accuracy.",
+      "notes": "Do not present as guidance to taper without physician supervision — study finding ≠ self-help instruction. Confidence Medium — journal DOI not directly retrieved; confirm publication before publish. Verify study design (RCT vs. observational) before characterizing findings."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Sleep Deprivation Directly Causes Weight Gain (Columbia Study)",
+      "primary_entity": "sleep deprivation weight gain",
+      "signal_type": "medical_study",
+      "allowed_category": "sleep science / nutrition",
+      "trend_strength_score": 62,
+      "opportunity_score": 70,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Connect sleep to weight management through the specific mechanisms the Columbia study identifies — appetite hormones, late-night eating behavior, metabolic rate",
+      "why_now": "Columbia University Irving Medical Center published this July 6, 2026. Sleep is a rising category, and the weight-gain mechanism makes this directly relevant to the large segment of the audience interested in nutrition and weight management. The gut health trend spike also connects — sleep affects microbiome composition.",
+      "primary_headline": "Not Getting Enough Sleep? A Columbia Study Explains Why Your Weight May Pay the Price",
+      "next_steps": "Retrieve Columbia study DOI/PubMed ID. Assign to sleep medicine or endocrinology writer. Cross-link to gut health article (sleep affects microbiome diversity).",
+      "notes": "Confidence Medium — verify study design (RCT vs. observational cohort); do not imply causation if observational. Do not frame as 'sleep X hours to lose weight' — this overstates findings; frame as risk factor. Retrieve DOI before publish."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Ebola DRC — First Clinical Trials for Bundibugyo Strain",
+      "primary_entity": "Ebola Bundibugyo strain clinical trials DRC",
+      "signal_type": "clinical_trial",
+      "allowed_category": "infectious disease / public health",
+      "trend_strength_score": 64,
+      "opportunity_score": 66,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 4,
+      "recommended_angle": "Explain why this is significant — Bundibugyo has no approved treatment, making these trials genuinely unprecedented — and what it means for global outbreak preparedness",
+      "why_now": "NPR and Mongabay both reported July 7–8, 2026, with NPR noting no treatment exists for this strain and clinical trials are now beginning. This is an authentic 'first ever' story in infectious disease that health-conscious readers will care about.",
+      "primary_headline": "There's No Treatment for This Ebola Strain. Now, for the First Time, There Might Be.",
+      "next_steps": "Verify trial sponsor and ClinicalTrials.gov registration before publish. Assign to infectious disease epidemiologist writer. Cite WHO or DRC health ministry officials named in NPR/Mongabay coverage.",
+      "notes": "Trial results are not available — this is a 'trials begin' story, not a treatment success story; frame carefully. Bundibugyo strain is distinct from Zaire strain (which Ervebo targets) — do not conflate existing Ebola vaccines/treatments with this trial. Confidence Medium — WHO primary situation report not directly retrieved."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Biological Aging Clocks — New Research in Health & Disease",
+      "primary_entity": "biological aging clocks",
+      "signal_type": "medical_study",
+      "allowed_category": "aging and longevity",
+      "trend_strength_score": 58,
+      "opportunity_score": 68,
+      "discover_score": 4,
+      "urgency": "evergreen",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Make biological aging clocks accessible and actionable — what they measure, what the Nature study found, and which lifestyle factors the science says actually slow biological aging",
+      "why_now": "Nature published 'Biological aging clocks in health and disease' July 9, 2026 — a fresh anchor for an evergreen topic. Rising queries for longevity science signal audience interest. The overlap with gut health trend (microbiome aging connection) provides a strong internal linking opportunity.",
+      "primary_headline": "What Are Biological Aging Clocks — and Can You Actually Slow Yours Down?",
+      "next_steps": "Retrieve Nature paper DOI. Assign to geriatrician or aging researcher writer. Cite named researchers from Nature paper.",
+      "notes": "Confidence Medium — retrieve DOI from Nature paper before publish. Distinguish between research-grade aging clocks (not commercially available for clinical use) and consumer 'biological age tests' (DTC products with limited validation). Do not overstate reversibility of biological aging — clock slowing ≠ immortality; frame as risk reduction."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "Mitch McConnell health status / Senate vacancy",
+      "reason": "off-category"
+    },
+    {
+      "topic": "ACA enrollment shrinkage",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Lawmakers targeting health insurance giants",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Direct care workers / federal policy",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Yale health system CEO ousted",
+      "reason": "excluded-category"
+    },
+    {
+      "topic": "Ascension acquires Williamson Health",
+      "reason": "excluded-category"
+    },
+    {
+      "topic": "Anti-inflammation retreat / luxury wellness",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Game of Thrones star / wellness cult",
+      "reason": "brand-safety"
+    },
+    {
+      "topic": "Wellness bathroom features",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Best wellness retreats in the US",
+      "reason": "off-category"
+    },
+    {
+      "topic": "UC San Diego Applied Health Intelligence Institute",
+      "reason": "off-category"
+    },
+    {
+      "topic": "JMU $115M behavioral studies facilities",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Insilico Medicine Phase III IPF trial",
+      "reason": "unverified-claim"
+    },
+    {
+      "topic": "Nanox Cardiac AI",
+      "reason": "off-category"
+    },
+    {
+      "topic": "AI-empowered clinical trial design",
+      "reason": "off-category"
+    },
+    {
+      "topic": "HHS Operation TrialBlazer",
+      "reason": "off-category"
+    },
+    {
+      "topic": "GOP lawmakers / FDA clinical trial diversity",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Psilocybin / cocaine RCT",
+      "reason": "unverified-claim"
+    },
+    {
+      "topic": "UCF study: microgravity / space radiation / aging",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "Northwestern lung transplant / terminal lung cancer",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "Weill Cornell glioma progression study",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "Xpert Xpress MVP vaginal symptoms diagnostic",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Penn Medicine novel rare disease medicine / philanthropy",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Fitness / Planet Fitness holiday hours",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Rachael Ray health",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Brian Johnson health (borderline)",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Alkaline diet trending queries",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "Parenteral nutrition trending",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "Cream of wheat nutrition",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "Mark Zuckerberg wagyu cattle / diet",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Connor Murphy fitness influencer",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Wellness SEO domain clusters (spearstate, aliasshareshop, goodnever, etc.)",
+      "reason": "brand-safety"
+    },
+    {
+      "topic": "Potato chips recall",
+      "reason": "stale"
+    },
+    {
+      "topic": "Fitness and diet declining trends",
+      "reason": "weak-signal"
+    }
+  ]
+}
+```
