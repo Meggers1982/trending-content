@@ -43,6 +43,7 @@ import time
 import urllib.parse
 import urllib.request
 import urllib.error
+import yaml
 from datetime import datetime, timedelta
 from pathlib import Path
 
@@ -52,6 +53,9 @@ ENV_PATH       = PROJECT_ROOT / ".env"
 CONFIGS_DIR    = PROJECT_ROOT / "configs"
 SKILLS_DIR     = PROJECT_ROOT / "skills"
 PROMPTS_DIR    = PROJECT_ROOT / "prompts"
+DATA_DIR       = PROJECT_ROOT / "data"
+RUN_HISTORY_PATH     = DATA_DIR / "run_history.yaml"
+DEFERRED_TOPICS_PATH = DATA_DIR / "deferred_topics.yaml"
 OUTPUT_DIR     = PROJECT_ROOT / "outputs" / "daily_newsroom_dashboard"
 TEMPLATE_PATH  = PROJECT_ROOT / "dashboard_template.html"
 LOG_PATH       = PROJECT_ROOT / "outputs" / "pipeline.log"
@@ -436,13 +440,15 @@ def build_serp_context() -> str:
     return header + "\n\n".join(sections)
 
 
-def build_pipeline_prompt(serp_context: str = "") -> str:
+def build_pipeline_prompt(serp_context: str = "", history_context: str = "") -> str:
     today = datetime.now().strftime("%Y-%m-%d")
     prompt_path = PROMPTS_DIR / "daily_run_prompt.md"
     if not prompt_path.exists():
         prompt_path = PROJECT_ROOT / "daily-run-prompt.md"
     base  = load_file(prompt_path)
     prefix = f"Today's date: {today}\n\n{AUTOMATION_OUTPUT_CONSTRAINT}\n\n"
+    if history_context:
+        prefix += history_context + "\n\n---\n\n"
     if serp_context:
         prefix += serp_context + "\n\n---\n\n"
     return prefix + base
@@ -502,13 +508,11 @@ Malformed JSON:
 
 
 # ── Recent-topic dedup ──────────────────────────────────────────────────────
-# The pipeline has no persistent memory between runs (CLAUDE.md's "check
-# deferred topics" / "archive to history" steps are never fed real data by
-# this script — see data/run_history.yaml, which has been static since the
-# initial commit). Google News queries also use a rolling `when:7d` window,
-# so the same stories keep resurfacing. This is a code-side safety net: it
-# compares today's candidates against the last few days' already-generated
-# dashboard CSVs on disk and drops near-duplicate topics before output.
+# Belt-and-suspenders lexical safety net that runs regardless of whether the
+# model actually used the history context below (e.g. if it mislabels a
+# repeat as content_status: new anyway). Compares today's candidates against
+# the last few days' already-generated dashboard CSVs on disk and drops
+# near-duplicate topics before output.
 DEDUP_LOOKBACK_DAYS = 5
 DEDUP_SIMILARITY_THRESHOLD = 0.6
 
@@ -605,6 +609,211 @@ def filter_recent_duplicates(data: dict, today_str: str) -> dict:
         data["rejected"] = data.get("rejected", []) + dropped
     data["candidates"] = kept
     return data
+
+
+# ── Run history & deferred topics ───────────────────────────────────────────
+# Implements CLAUDE.md's Skill 01 Step 2 ("check deferred topics") and Daily
+# Run Step 9 ("archive run to history") for real: previously these files
+# were never read or written by this script, so the model had no memory of
+# prior runs at all. build_history_context() feeds recent coverage + due
+# deferred topics into the pipeline prompt; archive_run_to_history() and
+# update_deferred_topics() persist this run's results afterward. GitHub
+# Actions already commits data/run_history.yaml and data/deferred_topics.yaml
+# on every run, so once this script writes real data, it persists across days.
+HISTORY_LOOKBACK_DAYS = 7
+RUN_HISTORY_MAX_ENTRIES = 120
+DEFERRED_RECHECK_DAYS = 3
+PRIORITY_LEVELS = ("P1", "P2", "P3", "P4", "P5")
+
+
+def _parse_date_safe(value):
+    if not value:
+        return None
+    try:
+        return datetime.strptime(str(value), "%Y-%m-%d").date()
+    except ValueError:
+        return None
+
+
+def load_project_config() -> dict:
+    path = CONFIGS_DIR / "project_config.yaml"
+    if not path.exists():
+        return {}
+    try:
+        return yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    except yaml.YAMLError as e:
+        log.warning(f"Could not parse {path}: {e}")
+        return {}
+
+
+def read_deferred_topics() -> list[dict]:
+    if not DEFERRED_TOPICS_PATH.exists():
+        return []
+    try:
+        parsed = yaml.safe_load(DEFERRED_TOPICS_PATH.read_text(encoding="utf-8")) or {}
+    except yaml.YAMLError as e:
+        log.warning(f"Could not parse {DEFERRED_TOPICS_PATH}: {e}")
+        return []
+    return parsed.get("deferred_topics") or []
+
+
+def write_deferred_topics(topics: list[dict]) -> None:
+    DEFERRED_TOPICS_PATH.parent.mkdir(parents=True, exist_ok=True)
+    header = (
+        "# Deferred topics — overflow from daily runs\n"
+        "# Topics here passed scoring thresholds but exceeded max_candidates_returned.\n"
+    )
+    DEFERRED_TOPICS_PATH.write_text(
+        header + yaml.safe_dump({"deferred_topics": topics}, sort_keys=False, allow_unicode=True, width=100),
+        encoding="utf-8",
+    )
+
+
+def build_history_context(today_str: str, days: int = HISTORY_LOOKBACK_DAYS) -> str:
+    """Format recent coverage + due deferred topics as a prompt section so
+    the model actually has the memory CLAUDE.md's dedup/recheck steps assume
+    it has, instead of re-discovering the same stories as content_status:new
+    every day."""
+    sections = []
+
+    recent = load_recent_dashboard_topics(today_str, days=days)
+    if recent:
+        recent_sorted = sorted(recent, key=lambda r: r["date"], reverse=True)
+        lines = "\n".join(f"- {r['date']}: {r['topic']}" for r in recent_sorted)
+        sections.append(
+            f"## Recent Coverage (last {days} days) — Check Before Selecting\n\n"
+            "The topics below were already covered in recent runs. Before adding a "
+            "candidate, check whether it is materially the same story. If so, set "
+            "`content_status: existing` and reject it — unless there is a specific new "
+            "development since it was last covered (new data, new casualty/case count, "
+            "new agency action, new study, etc.), in which case set `content_status: "
+            "update` and name the new development in `why_now`.\n\n" + lines
+        )
+
+    today = datetime.strptime(today_str, "%Y-%m-%d").date()
+    due = [
+        t for t in read_deferred_topics()
+        if (d := _parse_date_safe(t.get("recheck_on"))) and d <= today
+    ]
+    if due:
+        lines = "\n".join(
+            f"- {t.get('topic', '')} (entity: {t.get('primary_entity', '')}, "
+            f"prior trend={t.get('trend_strength_score', '?')}/opportunity={t.get('opportunity_score', '?')}, "
+            f"notes: {t.get('notes', '')})"
+            for t in due
+        )
+        sections.append(
+            "## Deferred Topics Due For Recheck\n\n"
+            "These topics scored well in a previous run but were cut for exceeding the "
+            "daily candidate limit. Consider whether each is still worth including today "
+            "given current signals.\n\n" + lines
+        )
+
+    return "\n\n---\n\n".join(sections)
+
+
+def update_deferred_topics(data: dict, today_str: str, max_candidates: int) -> dict:
+    """Cap today's candidates at `max_candidates` (by opportunity_score),
+    pushing overflow into deferred_topics.yaml for a later recheck. Clears
+    previously-deferred entries whose recheck_on date has passed — they were
+    surfaced once via build_history_context(), so they get one recheck
+    rather than resurfacing indefinitely regardless of outcome."""
+    today = datetime.strptime(today_str, "%Y-%m-%d").date()
+    still_pending = [
+        t for t in read_deferred_topics()
+        if not ((d := _parse_date_safe(t.get("recheck_on"))) and d <= today)
+    ]
+
+    candidates = data.get("candidates", [])
+    if len(candidates) > max_candidates:
+        ranked = sorted(candidates, key=lambda c: c.get("opportunity_score", 0), reverse=True)
+        kept, overflow = ranked[:max_candidates], ranked[max_candidates:]
+        recheck_date = (today + timedelta(days=DEFERRED_RECHECK_DAYS)).strftime("%Y-%m-%d")
+        for c in overflow:
+            still_pending.append({
+                "topic": c.get("topic", ""),
+                "primary_entity": c.get("primary_entity", ""),
+                "trend_strength_score": c.get("trend_strength_score", 0),
+                "opportunity_score": c.get("opportunity_score", 0),
+                "recheck_on": recheck_date,
+                "notes": f"Deferred {today_str}: exceeded max_candidates_returned ({max_candidates}).",
+            })
+        data["candidates"] = kept
+        log.info(f"Deferred {len(overflow)} candidate(s) exceeding max_candidates_returned={max_candidates}.")
+
+    write_deferred_topics(still_pending)
+    return data
+
+
+def _integrity_flag_count(candidates: list[dict]) -> int:
+    count = 0
+    for c in candidates:
+        text = f"{c.get('notes', '')} {c.get('confidence', '')}".lower()
+        if "verify" in text or "flag" in str(c.get("notes", "")).lower():
+            count += 1
+    return count
+
+
+def archive_run_to_history(data: dict, today_str: str, dashboard_file: str) -> None:
+    """Append this run's results to data/run_history.yaml so the next run's
+    build_history_context() has real memory of it."""
+    candidates = data.get("candidates", [])
+    rejected = data.get("rejected", [])
+    summary = data.get("signal_summary", {})
+
+    priority_counts = {level: 0 for level in PRIORITY_LEVELS}
+    for c in candidates:
+        level = c.get("priority_level")
+        if level in priority_counts:
+            priority_counts[level] += 1
+
+    top_topic = next((c.get("topic", "") for c in candidates if c.get("priority_level") == "P1"), None)
+    if not top_topic and candidates:
+        top_topic = candidates[0].get("topic", "")
+
+    entry = {
+        "run_date": today_str,
+        "niche": data.get("niche", "health and wellness"),
+        "signals_reviewed": summary.get("total_reviewed", 0),
+        "topics_retained": len(candidates),
+        "topics_rejected": len(rejected),
+        "p1_count": priority_counts["P1"],
+        "p2_count": priority_counts["P2"],
+        "p3_count": priority_counts["P3"],
+        "p4_count": priority_counts["P4"],
+        "p5_count": priority_counts["P5"],
+        "integrity_flags": _integrity_flag_count(candidates),
+        "top_topic": top_topic or "",
+        "key_themes": [c.get("topic", "") for c in candidates if c.get("topic")],
+        "tools_used": summary.get("tools_active", []),
+        "tools_unavailable": summary.get("tools_unavailable", []),
+        "dashboard_file": dashboard_file,
+        "notes": summary.get("notes", ""),
+    }
+
+    existing = {}
+    if RUN_HISTORY_PATH.exists():
+        try:
+            existing = yaml.safe_load(RUN_HISTORY_PATH.read_text(encoding="utf-8")) or {}
+        except yaml.YAMLError as e:
+            log.warning(f"Could not parse {RUN_HISTORY_PATH}, starting a fresh history: {e}")
+
+    runs = existing.get("runs") or []
+    runs = [r for r in runs if r.get("run_date") != today_str]  # replace same-day entry on re-run
+    runs.insert(0, entry)
+    runs = runs[:RUN_HISTORY_MAX_ENTRIES]
+
+    header = (
+        "# Run History — Trending Content OS\n"
+        "# Appended after each completed pipeline run.\n"
+        "# Format mirrors Daily Run workflow Step 9 schema.\n\n"
+    )
+    RUN_HISTORY_PATH.parent.mkdir(parents=True, exist_ok=True)
+    RUN_HISTORY_PATH.write_text(
+        header + yaml.safe_dump({"runs": runs}, sort_keys=False, allow_unicode=True, width=100),
+        encoding="utf-8",
+    )
+    log.info(f"Run archived → {RUN_HISTORY_PATH} ({len(runs)} total entries)")
 
 
 def load_env_or_exit() -> None:
@@ -1099,8 +1308,9 @@ def run_pipeline(send_email_flag: bool = True) -> None:
 
     # ── Step 1: Run the full pipeline ──────────────────────────────────────────
     log.info("Step 1/4 — Running full pipeline (claude-sonnet-4-6)...")
+    history_context = build_history_context(today_str)
     system_prompt = build_system_prompt()
-    pipeline_prompt = build_pipeline_prompt(serp_context)
+    pipeline_prompt = build_pipeline_prompt(serp_context, history_context)
     log.info(
         f"Prompt sizes — system: {len(system_prompt):,} chars, "
         f"user: {len(pipeline_prompt):,} chars"
@@ -1126,7 +1336,7 @@ def run_pipeline(send_email_flag: bool = True) -> None:
                 model="claude-sonnet-4-6",
                 max_tokens=PIPELINE_MAX_TOKENS,
                 system=[{"type": "text", "text": system_prompt, "cache_control": {"type": "ephemeral"}}],
-                messages=[{"role": "user", "content": build_pipeline_prompt("")}],
+                messages=[{"role": "user", "content": build_pipeline_prompt("", history_context)}],
             )
         else:
             raise
@@ -1193,6 +1403,10 @@ def run_pipeline(send_email_flag: bool = True) -> None:
     # filter_recent_duplicates() docstring for why this exists.
     data = filter_recent_duplicates(data, today_str)
 
+    # Cap at max_candidates_returned, deferring overflow for a later recheck.
+    max_candidates = load_project_config().get("max_candidates_returned", 25)
+    data = update_deferred_topics(data, today_str, max_candidates)
+
     # ── Step 3: Write HTML dashboard + CSV ────────────────────────────────────
     log.info("Step 3/4 — Generating HTML dashboard and CSV...")
 
@@ -1207,6 +1421,9 @@ def run_pipeline(send_email_flag: bool = True) -> None:
     csv_path = OUTPUT_DIR / f"dashboard_{today_str}.csv"
     csv_path.write_text(generate_csv(data), encoding="utf-8")
     log.info(f"CSV export → {csv_path}")
+
+    # Archive this run so tomorrow's build_history_context() has real memory of it.
+    archive_run_to_history(data, today_str, dashboard_file=f"outputs/daily_newsroom_dashboard/dashboard_{today_str}.html")
 
     # ── Step 4: Send email ────────────────────────────────────────────────────
     log.info("Step 4/4 — Sending email...")
