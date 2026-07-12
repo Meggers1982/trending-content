@@ -32,16 +32,18 @@ Requirements:
 
 import os
 import sys
+import csv
 import json
 import re
 import html
+import difflib
 import argparse
 import logging
 import time
 import urllib.parse
 import urllib.request
 import urllib.error
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
@@ -497,6 +499,112 @@ Preserve all fields and values from the original as much as possible.
 Malformed JSON:
 {raw_json}
 """
+
+
+# ── Recent-topic dedup ──────────────────────────────────────────────────────
+# The pipeline has no persistent memory between runs (CLAUDE.md's "check
+# deferred topics" / "archive to history" steps are never fed real data by
+# this script — see data/run_history.yaml, which has been static since the
+# initial commit). Google News queries also use a rolling `when:7d` window,
+# so the same stories keep resurfacing. This is a code-side safety net: it
+# compares today's candidates against the last few days' already-generated
+# dashboard CSVs on disk and drops near-duplicate topics before output.
+DEDUP_LOOKBACK_DAYS = 5
+DEDUP_SIMILARITY_THRESHOLD = 0.6
+
+
+def _normalize_for_dedup(*parts: str) -> str:
+    text = " ".join(p for p in parts if p).lower()
+    text = re.sub(r"[^a-z0-9\s]", " ", text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def load_recent_dashboard_topics(exclude_date: str, days: int = DEDUP_LOOKBACK_DAYS) -> list[dict]:
+    """Read topic/primary_entity from the last `days` days of already-written
+    dashboard CSVs (excluding today's own file, if one already exists)."""
+    if not OUTPUT_DIR.exists():
+        return []
+
+    cutoff = datetime.strptime(exclude_date, "%Y-%m-%d") - timedelta(days=days)
+    recent = []
+    for csv_path in OUTPUT_DIR.glob("dashboard_*.csv"):
+        match = re.match(r"^dashboard_(\d{4}-\d{2}-\d{2})\.csv$", csv_path.name)
+        if not match:
+            continue
+        file_date_str = match.group(1)
+        if file_date_str == exclude_date:
+            continue
+        try:
+            file_date = datetime.strptime(file_date_str, "%Y-%m-%d")
+        except ValueError:
+            continue
+        if file_date < cutoff:
+            continue
+        try:
+            with csv_path.open(encoding="utf-8") as fh:
+                for row in csv.DictReader(fh):
+                    topic = (row.get("topic") or "").strip()
+                    if not topic:
+                        continue
+                    recent.append({
+                        "date": file_date_str,
+                        "topic": topic,
+                        "normalized": _normalize_for_dedup(topic, row.get("primary_entity") or ""),
+                    })
+        except OSError as e:
+            log.warning(f"Dedup: could not read {csv_path}: {e}")
+    return recent
+
+
+def filter_recent_duplicates(data: dict, today_str: str) -> dict:
+    """Drop candidates that closely match a topic already covered in a
+    recent run, moving them into `rejected` with a note instead of silently
+    dropping them. Candidates the model itself already tagged as an
+    intentional `update` (a deliberate follow-up on new evidence) are left
+    alone rather than re-filtered."""
+    candidates = data.get("candidates", [])
+    if not candidates:
+        return data
+
+    recent = load_recent_dashboard_topics(today_str)
+    if not recent:
+        return data
+
+    kept, dropped = [], []
+    for candidate in candidates:
+        if candidate.get("content_status") == "update":
+            kept.append(candidate)
+            continue
+
+        cand_text = _normalize_for_dedup(candidate.get("topic", ""), candidate.get("primary_entity", ""))
+        if not cand_text:
+            kept.append(candidate)
+            continue
+
+        best_ratio, best_match = 0.0, None
+        for item in recent:
+            ratio = difflib.SequenceMatcher(None, cand_text, item["normalized"]).ratio()
+            if ratio > best_ratio:
+                best_ratio, best_match = ratio, item
+
+        if best_match and best_ratio >= DEDUP_SIMILARITY_THRESHOLD:
+            candidate["content_status"] = "existing"
+            dropped.append({
+                "topic": candidate.get("topic", ""),
+                "reason": (
+                    f"Auto-filtered: {best_ratio:.0%} match to '{best_match['topic']}' "
+                    f"already covered {best_match['date']}."
+                ),
+            })
+        else:
+            kept.append(candidate)
+
+    if dropped:
+        log.info(f"Dedup: filtered {len(dropped)} candidate(s) matching recent runs: "
+                  f"{[d['topic'] for d in dropped]}")
+        data["rejected"] = data.get("rejected", []) + dropped
+    data["candidates"] = kept
+    return data
 
 
 def load_env_or_exit() -> None:
@@ -1080,6 +1188,10 @@ def run_pipeline(send_email_flag: bool = True) -> None:
 
     # Ensure run_date is set
     data.setdefault("run_date", today_str)
+
+    # Drop candidates that closely match a topic from a recent run — see
+    # filter_recent_duplicates() docstring for why this exists.
+    data = filter_recent_duplicates(data, today_str)
 
     # ── Step 3: Write HTML dashboard + CSV ────────────────────────────────────
     log.info("Step 3/4 — Generating HTML dashboard and CSV...")

@@ -1106,6 +1106,14 @@ These are implementation-level guardrails in `run_pipeline.py` and `google_trend
 
 When adding new fields that flow from external signals into generated HTML/CSV/email output, apply the same escaping — don't assume new fields are safe by default.
 
+### Known limitation: "Check deferred topics" / "Archive run to history" are not actually wired up
+
+Despite being documented above as Skill 01 Step 2 and Daily Run Step 9, **`data/run_history.yaml` and `data/deferred_topics.yaml` are never read or written by `run_pipeline.py`** — `build_system_prompt()` only loads `CLAUDE.md` + `configs/*.yaml` + skill files, so the model has zero awareness of what it covered in previous runs. `run_history.yaml`'s current content (references to `WebSearch`/`WebFetch`/`COMPOSIO_SEARCH_TRENDS`) is stale seed data from before this automated harness existed; it has had exactly one commit (the initial one) since. Combined with `GOOGLE_NEWS_QUERIES` using a rolling `when:7d` window, this caused the same stories to be re-surfaced and re-scored as `content_status: new` for several consecutive days (confirmed 2026-07-12: 6+ of 9 candidates were repeats of the prior 1–2 days).
+
+**Mitigation added 2026-07-12** (`filter_recent_duplicates()` in `run_pipeline.py`): after extraction, today's candidates are compared against `topic`/`primary_entity` text from the last `DEDUP_LOOKBACK_DAYS` (5) days of already-written `outputs/daily_newsroom_dashboard/dashboard_*.csv` files using `difflib.SequenceMatcher`. Matches scoring ≥ `DEDUP_SIMILARITY_THRESHOLD` (0.6) are moved from `candidates` into `rejected` (visible in the rejected-topics log) instead of the board, unless the model already tagged the candidate `content_status: update` (an intentional, evidence-justified follow-up).
+
+This is a code-side safety net, not a real fix — it has a real false-negative ceiling: two headlines about the *same* story can still slip through if the model rephrases enough that shared-vocabulary overlap drops below ~0.6 (observed with a GLP-1 story reworded across 3 days, ~40% overlap, never caught). It also can't do anything CLAUDE.md's `content_status: existing`/`update` distinction is supposed to do (i.e. recognize *genuine* follow-ups vs. re-hashes) since the model still has no real history — everything still gets extracted as `new`. The real fix is to load recent `run_history.yaml`/prior-topic context into the system prompt and actually persist `data["candidates"]` into `run_history.yaml`/`deferred_topics.yaml` after each run; that hasn't been done yet.
+
 ---
 
 ## Success Criteria
