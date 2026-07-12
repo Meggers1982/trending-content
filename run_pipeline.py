@@ -512,7 +512,10 @@ Malformed JSON:
 # model actually used the history context below (e.g. if it mislabels a
 # repeat as content_status: new anyway). Compares today's candidates against
 # the last few days' already-generated dashboard CSVs on disk and drops
-# near-duplicate topics before output.
+# near-duplicate topics before output. run_pipeline() shares one fetch (at
+# HISTORY_LOOKBACK_DAYS, below) between this and build_history_context()
+# rather than each re-scanning OUTPUT_DIR; DEDUP_LOOKBACK_DAYS is only the
+# default for standalone/test calls that don't pass `recent` in directly.
 DEDUP_LOOKBACK_DAYS = 5
 DEDUP_SIMILARITY_THRESHOLD = 0.6
 
@@ -560,17 +563,23 @@ def load_recent_dashboard_topics(exclude_date: str, days: int = DEDUP_LOOKBACK_D
     return recent
 
 
-def filter_recent_duplicates(data: dict, today_str: str) -> dict:
+def filter_recent_duplicates(data: dict, today_str: str, recent: list[dict] | None = None) -> dict:
     """Drop candidates that closely match a topic already covered in a
     recent run, moving them into `rejected` with a note instead of silently
     dropping them. Candidates the model itself already tagged as an
     intentional `update` (a deliberate follow-up on new evidence) are left
-    alone rather than re-filtered."""
+    alone rather than re-filtered.
+
+    `recent` lets a caller that already fetched the recent-topics list (e.g.
+    run_pipeline(), which also feeds it to build_history_context()) pass it
+    in directly instead of this function re-scanning/re-parsing every
+    dashboard CSV a second time in the same run."""
     candidates = data.get("candidates", [])
     if not candidates:
         return data
 
-    recent = load_recent_dashboard_topics(today_str)
+    if recent is None:
+        recent = load_recent_dashboard_topics(today_str)
     if not recent:
         return data
 
@@ -669,14 +678,18 @@ def write_deferred_topics(topics: list[dict]) -> None:
     )
 
 
-def build_history_context(today_str: str, days: int = HISTORY_LOOKBACK_DAYS) -> str:
+def build_history_context(today_str: str, days: int = HISTORY_LOOKBACK_DAYS, recent: list[dict] | None = None) -> str:
     """Format recent coverage + due deferred topics as a prompt section so
     the model actually has the memory CLAUDE.md's dedup/recheck steps assume
     it has, instead of re-discovering the same stories as content_status:new
-    every day."""
+    every day.
+
+    `recent` lets a caller pass an already-fetched topics list (see
+    filter_recent_duplicates()'s docstring for why)."""
     sections = []
 
-    recent = load_recent_dashboard_topics(today_str, days=days)
+    if recent is None:
+        recent = load_recent_dashboard_topics(today_str, days=days)
     if recent:
         recent_sorted = sorted(recent, key=lambda r: r["date"], reverse=True)
         lines = "\n".join(f"- {r['date']}: {r['topic']}" for r in recent_sorted)
@@ -1308,7 +1321,11 @@ def run_pipeline(send_email_flag: bool = True) -> None:
 
     # ── Step 1: Run the full pipeline ──────────────────────────────────────────
     log.info("Step 1/4 — Running full pipeline (claude-sonnet-4-6)...")
-    history_context = build_history_context(today_str)
+    # Fetched once and reused for filter_recent_duplicates() below — both
+    # need the same "recent dashboard topics" list, and OUTPUT_DIR doesn't
+    # gain new dashboard CSVs between here and there within a single run.
+    recent_topics = load_recent_dashboard_topics(today_str, days=HISTORY_LOOKBACK_DAYS)
+    history_context = build_history_context(today_str, recent=recent_topics)
     system_prompt = build_system_prompt()
     pipeline_prompt = build_pipeline_prompt(serp_context, history_context)
     log.info(
@@ -1401,7 +1418,7 @@ def run_pipeline(send_email_flag: bool = True) -> None:
 
     # Drop candidates that closely match a topic from a recent run — see
     # filter_recent_duplicates() docstring for why this exists.
-    data = filter_recent_duplicates(data, today_str)
+    data = filter_recent_duplicates(data, today_str, recent=recent_topics)
 
     # Cap at max_candidates_returned, deferring overflow for a later recheck.
     max_candidates = load_project_config().get("max_candidates_returned", 25)
@@ -1410,27 +1427,26 @@ def run_pipeline(send_email_flag: bool = True) -> None:
     # ── Step 3: Write HTML dashboard + CSV ────────────────────────────────────
     log.info("Step 3/4 — Generating HTML dashboard and CSV...")
 
+    html_path = OUTPUT_DIR / f"dashboard_{today_str}.html"
+    csv_path  = OUTPUT_DIR / f"dashboard_{today_str}.csv"
+
     html = generate_html(data, today_str)
     if html:
-        html_path = OUTPUT_DIR / f"dashboard_{today_str}.html"
         html_path.write_text(html, encoding="utf-8")
         log.info(f"HTML dashboard → {html_path}")
     else:
         log.warning("HTML generation skipped (template missing).")
 
-    csv_path = OUTPUT_DIR / f"dashboard_{today_str}.csv"
     csv_path.write_text(generate_csv(data), encoding="utf-8")
     log.info(f"CSV export → {csv_path}")
 
     # Archive this run so tomorrow's build_history_context() has real memory of it.
-    archive_run_to_history(data, today_str, dashboard_file=f"outputs/daily_newsroom_dashboard/dashboard_{today_str}.html")
+    archive_run_to_history(data, today_str, dashboard_file=f"outputs/daily_newsroom_dashboard/{html_path.name}")
 
     # ── Step 4: Send email ────────────────────────────────────────────────────
     log.info("Step 4/4 — Sending email...")
     if send_email_flag:
-        html_out = OUTPUT_DIR / f"dashboard_{today_str}.html"
-        csv_out  = OUTPUT_DIR / f"dashboard_{today_str}.csv"
-        send_email(data, html_out, csv_out, today_str)
+        send_email(data, html_path, csv_path, today_str)
 
     log.info("✅ Daily pipeline run complete.")
 
