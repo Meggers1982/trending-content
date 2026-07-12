@@ -27,6 +27,9 @@ npm run pipeline
 The web app includes controls for starting a new report and refreshing the radar.
 Locally, those controls run Python directly. In Vercel, they trigger the GitHub Actions workflow in `.github/workflows/run-pipeline.yml`.
 
+If `RUN_CONTROL_TOKEN` is set in the environment, the run-trigger endpoint (`POST /api/run`) requires that
+token in the dashboard's "Run token" field. See `VERCEL_DEPLOY.md` for why this matters once deployed.
+
 ## Vercel
 
 This repo is Vercel-ready as a Next.js app. In v1, the web interface reads generated artifacts from:

@@ -1091,6 +1091,23 @@ When `site_url` is absent, never silently imply confirmed-new status. Use `conte
 
 ---
 
+## Engineering Notes — Reliability & Security Safeguards
+
+These are implementation-level guardrails in `run_pipeline.py` and `google_trend_radar.py` that this document's editorial workflow depends on. They exist because signal/candidate text (topics, titles, notes, angles) originates from external sources (Google News/Trends) and passes through LLM extraction before landing in generated artifacts — treat it as untrusted when touching the code below.
+
+- **HTML escaping in email digests**: `build_email_body()` in both files runs every candidate/topic/notes field through `html.escape()` before splicing into the email HTML. Do not remove this — it's the only thing preventing a scraped headline from breaking the digest layout or injecting markup.
+- **`</script>` breakout escaping**: `generate_html()` in both files escapes literal `</script` sequences in the JSON payload before splicing it into `__PIPELINE_DATA__` / `__RADAR_DATA__` in the dashboard/radar HTML templates. HTML parsers close a `<script>` tag on that substring regardless of the tag's `type` attribute.
+- **CSV formula-injection guard**: `generate_csv()` / `write_csv()` prefix any cell value starting with `= + - @` with a single quote so Excel/Sheets doesn't execute it as a formula.
+- **Claude API response guard**: `extract_response_text()` in `run_pipeline.py` checks that a Claude response has non-empty `.content` and a text block before reading `.text` — a refusal or empty response fails loudly (`SystemExit(1)`) instead of crashing with a raw `IndexError`.
+- **SerpAPI retry on 429/5xx**: `_serp_get()` retries rate-limit and server errors with backoff instead of dropping that signal silently.
+- **Per-candidate scoring isolation**: in `google_trend_radar.py`'s `main()`, `score_candidate()` failures are caught per-candidate so one malformed/sparse-data candidate can't abort the whole run.
+- **Per-run lock file**: `outputs/.pipeline.lock` (30-minute staleness threshold) prevents a manually-triggered run (via the web UI) from overlapping the scheduled GitHub Actions run and corrupting the same day's committed artifacts. Acquired/released per execution via `_run_locked()` — including inside `--schedule` mode's daily loop, not just once at process start, since that mode can run for days.
+- **`RUN_CONTROL_TOKEN`**: optional shared-secret env var. If set, `POST /api/run` requires a matching `x-run-token` header, so the pipeline-trigger endpoint isn't publicly abusable (each trigger costs Anthropic + SerpAPI + GitHub Actions usage) once deployed to Vercel. See `VERCEL_DEPLOY.md`.
+
+When adding new fields that flow from external signals into generated HTML/CSV/email output, apply the same escaping — don't assume new fields are safe by default.
+
+---
+
 ## Success Criteria
 
 The system is working if:
