@@ -1102,9 +1102,17 @@ These are implementation-level guardrails in `run_pipeline.py` and `google_trend
 - **SerpAPI retry on 429/5xx**: `_serp_get()` retries rate-limit and server errors with backoff instead of dropping that signal silently.
 - **Per-candidate scoring isolation**: in `google_trend_radar.py`'s `main()`, `score_candidate()` failures are caught per-candidate so one malformed/sparse-data candidate can't abort the whole run.
 - **Per-run lock file**: `outputs/.pipeline.lock` (30-minute staleness threshold) prevents a manually-triggered run (via the web UI) from overlapping the scheduled GitHub Actions run and corrupting the same day's committed artifacts. Acquired/released per execution via `_run_locked()` — including inside `--schedule` mode's daily loop, not just once at process start, since that mode can run for days.
-- **`RUN_CONTROL_TOKEN`**: optional shared-secret env var. If set, `POST /api/run` requires a matching `x-run-token` header, so the pipeline-trigger endpoint isn't publicly abusable (each trigger costs Anthropic + SerpAPI + GitHub Actions usage) once deployed to Vercel. See `VERCEL_DEPLOY.md`.
+- **`RUN_CONTROL_TOKEN`**: optional shared-secret env var. If set, `POST /api/run` and `POST /api/radar` both require a matching `x-run-token` header, so neither trigger endpoint is publicly abusable (each costs Anthropic/SerpAPI/GitHub Actions usage) once deployed to Vercel. See `VERCEL_DEPLOY.md`.
 
 When adding new fields that flow from external signals into generated HTML/CSV/email output, apply the same escaping — don't assume new fields are safe by default.
+
+### `google_trend_radar.py` is a separate, deliberate tool — not dead code, not the daily pipeline
+
+It initially looked orphaned (nothing in `run_pipeline.py`, `package.json`, or the GitHub Actions workflow calls it), but it has genuinely distinct capability: it's a general-purpose, any-topic/any-geo CLI (`--topic`, `--geo`, `--profile {wellness,health,ai,none,auto}`) that does its own code-side trend scoring (mean/slope/acceleration via `statistics.mean`) with **no Anthropic API call at all** — unlike `run_pipeline.py`, which is hardcoded to the health/wellness niche and delegates all scoring/reasoning to Claude.
+
+**Given a home in the app 2026-07-12**: the dashboard's "Trend scanner" panel (`app/components/RadarScan.jsx`, `#scan`) lets you run it on demand from the browser instead of only via CLI. `app/api/radar/route.js` spawns it locally with array-form `spawn` args (topic is user input — validated for length and a leading `-`, which would otherwise be parsed as a CLI flag) and shares the same optional `RUN_CONTROL_TOKEN` auth as `/api/run`. Results are served through `app/api/radar-artifact/[file]/route.js`, reading from `outputs/google_trend_radar/` (a completely separate directory from the daily pipeline's `outputs/daily_newsroom_dashboard/`). `lib/job-state.js` now exposes two independent job slots (`pipelineJob`, `radarJob`) via a shared `createJobState()` factory, so a scan doesn't block on / get blocked by a daily pipeline run.
+
+This only works locally/self-hosted (spawns a real Python process) — there's no GitHub Actions equivalent, so on Vercel `POST /api/radar` returns `501` immediately. See `VERCEL_DEPLOY.md`.
 
 ### Recent-run memory: how "check deferred topics" / "archive run to history" actually work
 

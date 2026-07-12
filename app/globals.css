@@ -256,7 +256,42 @@ button.button:disabled {
 }
 .logBox div + div { margin-top: 4px; }
 
-.board, .runs, .formattedReport { margin-top: 30px; }
+.board, .runs, .formattedReport, .scanSection { margin-top: 30px; }
+.radarScan {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  padding: 18px;
+}
+.radarScanForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+}
+.radarScanForm input[type="text"],
+.radarScanForm select {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 8px 10px;
+  font: inherit;
+  color: var(--ink);
+  background: #fff;
+}
+.radarScanForm input[type="text"] { flex: 1 1 220px; }
+.radarScanGeo { flex: 0 0 4.5em; }
+.radarScanHistory { margin-top: 14px; font-size: 12px; }
+.radarScanHistory > span {
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: 10px;
+  font-weight: 700;
+}
+.radarScanHistory ul { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 6px; }
+.radarScanHistory li { display: flex; gap: 10px; align-items: baseline; }
+.radarScanHistory a { color: var(--ink); }
+.radarScanHistory a + a { color: var(--muted); font-size: 11px; }
 .reportGrid {
   display: grid;
   grid-template-columns: 1fr;

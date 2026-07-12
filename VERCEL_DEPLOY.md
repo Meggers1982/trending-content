@@ -31,6 +31,13 @@ Instead, the **Start New Report** button triggers a GitHub Actions workflow:
 
 The **Refresh Radar Only** button triggers the same workflow with `--prefetch-only`.
 
+## Ad-hoc Trend Scanner Is Not Available on Vercel
+
+The "Trend scanner" panel (`POST /api/radar`) spawns `google_trend_radar.py` directly — there's no
+GitHub Actions workflow wired up for it the way there is for the daily pipeline. On Vercel this
+route returns `501` immediately rather than trying and failing. It only works locally or on a
+self-hosted server where a live process (and `SERPAPI_API_KEY`) is actually available.
+
 ## Deploy
 
 From the project root:

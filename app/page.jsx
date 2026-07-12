@@ -1,5 +1,6 @@
 import { getLatestRun, getReportText, getRunSummary, getSignalText, listRuns } from "@/lib/runs";
 import RunControls from "./components/RunControls";
+import RadarScan from "./components/RadarScan";
 
 function scoreBar(value, tone = "red") {
   const width = Math.max(0, Math.min(100, Number(value) || 0));
@@ -271,6 +272,7 @@ export default function Home() {
           <a href="#board">Board</a>
           <a href="#runs">Runs</a>
           <a href="#ops">Ops</a>
+          <a href="#scan">Scan</a>
         </nav>
       </aside>
 
@@ -424,6 +426,16 @@ export default function Home() {
               </article>
             ))}
           </div>
+        </section>
+
+        <section className="scanSection" id="scan">
+          <div className="sectionTitle">
+            <div>
+              <p className="eyebrow">Ad-hoc Research</p>
+              <h2>Trend scanner</h2>
+            </div>
+          </div>
+          <RadarScan />
         </section>
       </section>
     </main>
