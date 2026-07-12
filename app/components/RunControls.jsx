@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 
+const RUN_TOKEN_STORAGE_KEY = "trending-content-os:run-token";
+
 function formatStatus(job) {
   if (job?.running) {
     return job.mode === "prefetch" ? "Refreshing radar" : "Generating report";
@@ -15,6 +17,7 @@ function formatStatus(job) {
 export default function RunControls() {
   const [job, setJob] = useState(null);
   const [message, setMessage] = useState("");
+  const [runToken, setRunToken] = useState("");
 
   async function loadStatus() {
     const response = await fetch("/api/run", { cache: "no-store" });
@@ -26,7 +29,10 @@ export default function RunControls() {
     setMessage("");
     const response = await fetch("/api/run", {
       method: "POST",
-      headers: { "content-type": "application/json" },
+      headers: {
+        "content-type": "application/json",
+        ...(runToken ? { "x-run-token": runToken } : {})
+      },
       body: JSON.stringify({ mode })
     });
     const data = await response.json();
@@ -37,8 +43,15 @@ export default function RunControls() {
   }
 
   useEffect(() => {
+    setRunToken(window.localStorage.getItem(RUN_TOKEN_STORAGE_KEY) || "");
     loadStatus();
   }, []);
+
+  function handleRunTokenChange(event) {
+    const value = event.target.value;
+    setRunToken(value);
+    window.localStorage.setItem(RUN_TOKEN_STORAGE_KEY, value);
+  }
 
   useEffect(() => {
     if (!job?.running) return undefined;
@@ -63,6 +76,16 @@ export default function RunControls() {
           Refresh Radar Only
         </button>
       </div>
+      <label className="runTokenField">
+        Run token (only needed if deployed with RUN_CONTROL_TOKEN)
+        <input
+          type="password"
+          value={runToken}
+          onChange={handleRunTokenChange}
+          autoComplete="off"
+          placeholder="optional"
+        />
+      </label>
       <p>
         In Vercel, this queues a GitHub Actions job that runs the pipeline, commits
         new artifacts, and triggers a fresh deploy. Locally, it runs Python directly.

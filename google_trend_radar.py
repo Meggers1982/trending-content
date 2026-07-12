@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import html
 import json
 import os
 import re
@@ -365,7 +366,10 @@ def discover_candidates(
                 candidate.discovery_sources.add(source_name if bucket == "rising" else f"top {candidate.related_type}")
                 value, label = parse_rising_value(item.get("value") or item.get("extracted_value"))
                 if bucket == "rising":
-                    candidate.rising_value = max(candidate.rising_value or 0, value or 0) or candidate.rising_value
+                    if value is not None:
+                        candidate.rising_value = (
+                            value if candidate.rising_value is None else max(candidate.rising_value, value)
+                        )
                     candidate.rising_label = label or candidate.rising_label
 
     ranked = list(candidates.values())
@@ -433,8 +437,13 @@ def score_candidate(candidate: Candidate) -> None:
         candidate.avg_interest = mean(scores)
         candidate.slope = scores[-1] - scores[0]
         midpoint = max(1, len(scores) // 2)
-        first_half = mean(scores[:midpoint])
-        second_half = mean(scores[midpoint:])
+        first_slice = scores[:midpoint]
+        second_slice = scores[midpoint:]
+        # A single-point (or otherwise lopsided) series can leave one slice
+        # empty; mean([]) raises StatisticsError, so fall back to the only
+        # value available instead of crashing the whole run.
+        first_half = mean(first_slice) if first_slice else scores[0]
+        second_half = mean(second_slice) if second_slice else first_half
         candidate.acceleration = round(second_half - first_half)
 
     rising = candidate.rising_value or 0
@@ -564,11 +573,45 @@ def build_data(topic: str, geo: str, date: str, seeds: list[str], candidates: li
     }
 
 
+def _escape_script_close(match: re.Match) -> str:
+    # Preserve the matched case (</script vs </SCRIPT, etc.) while breaking
+    # up the sequence so it can't prematurely close the surrounding
+    # <script> tag when spliced into the HTML template.
+    return "<\\/" + match.group(0)[2:]
+
+
 def generate_html(data: dict) -> str:
     if not TEMPLATE_PATH.exists():
         raise FileNotFoundError(f"Template not found: {TEMPLATE_PATH}")
     template = TEMPLATE_PATH.read_text(encoding="utf-8")
-    return template.replace("__RADAR_DATA__", json.dumps(data, ensure_ascii=False, indent=2))
+    payload = json.dumps(data, ensure_ascii=False, indent=2)
+    # HTML parsers close a <script> tag on the first literal "</script"
+    # substring regardless of quoting, so a keyword/title containing it
+    # could break out of the JSON payload and inject markup. Escape it.
+    payload = re.sub(r"</script", _escape_script_close, payload, flags=re.IGNORECASE)
+    return template.replace("__RADAR_DATA__", payload)
+
+
+FORMULA_TRIGGER_CHARS = ("=", "+", "-", "@")
+# Fields whose values are free-text/external and must be neutralized against
+# CSV formula injection before being written out.
+CSV_FORMULA_RISK_FIELDS = (
+    "topic", "trend_stage", "urgency", "confidence", "rising_label",
+    "seed_terms", "discovery_sources", "why_now", "recommended_action",
+)
+
+
+def csv_safe(value: str) -> str:
+    """Prefix values that Excel/Sheets would interpret as a formula.
+
+    csv.writer already quote-escapes special characters; this guards against
+    a separate risk where a leading =, +, -, or @ makes the spreadsheet
+    application evaluate the cell as a formula.
+    """
+    text = "" if value is None else str(value)
+    if text.lstrip().startswith(FORMULA_TRIGGER_CHARS):
+        return "'" + text
+    return text
 
 
 def write_csv(data: dict, path: Path) -> None:
@@ -585,10 +628,19 @@ def write_csv(data: dict, path: Path) -> None:
             normalized = dict(row)
             normalized["seed_terms"] = "; ".join(row.get("seed_terms", []))
             normalized["discovery_sources"] = "; ".join(row.get("discovery_sources", []))
+            for key in CSV_FORMULA_RISK_FIELDS:
+                if key in normalized:
+                    normalized[key] = csv_safe(normalized[key])
             writer.writerow({field: normalized.get(field, "") for field in fieldnames})
 
 
 def build_email_body(data: dict) -> str:
+    def esc(value) -> str:
+        # Trends/News-derived text (keywords, titles, notes, ...) is
+        # untrusted and gets f-string-spliced straight into raw HTML below;
+        # escape it so it can't inject markup into the email client.
+        return html.escape(str(value)) if value is not None else ""
+
     candidates = data.get("candidates", [])
     summary = data.get("summary", {})
     top_rows = ""
@@ -597,10 +649,10 @@ def build_email_body(data: dict) -> str:
         <tr>
           <td style="padding:8px 10px;border-bottom:1px solid #e7e5e0;color:#777;font-family:Menlo,Consolas,monospace;font-size:12px;">{candidate.get('rank','')}</td>
           <td style="padding:8px 10px;border-bottom:1px solid #e7e5e0;">
-            <strong>{candidate.get('topic','')}</strong><br>
-            <span style="color:#666;font-size:12px;">{candidate.get('why_now','')}</span>
+            <strong>{esc(candidate.get('topic',''))}</strong><br>
+            <span style="color:#666;font-size:12px;">{esc(candidate.get('why_now',''))}</span>
           </td>
-          <td style="padding:8px 10px;border-bottom:1px solid #e7e5e0;font-family:Menlo,Consolas,monospace;font-size:12px;">{candidate.get('trend_stage','')}</td>
+          <td style="padding:8px 10px;border-bottom:1px solid #e7e5e0;font-family:Menlo,Consolas,monospace;font-size:12px;">{esc(candidate.get('trend_stage',''))}</td>
           <td style="padding:8px 10px;border-bottom:1px solid #e7e5e0;font-family:Menlo,Consolas,monospace;font-size:12px;">{candidate.get('radar_score','')}</td>
         </tr>"""
 
@@ -609,8 +661,8 @@ def build_email_body(data: dict) -> str:
 <body style="margin:0;padding:24px;background:#fbfaf8;color:#2b2b2b;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">
   <div style="max-width:760px;margin:0 auto;">
     <div style="font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#cf2f32;font-weight:700;">Google Trend Radar</div>
-    <h1 style="font-family:Georgia,'Times New Roman',serif;margin:8px 0 6px;color:#171717;">{data.get('topic','Trend')} Radar</h1>
-    <div style="color:#666;font-size:13px;margin-bottom:18px;">{data.get('geo','US')} · {data.get('date_window','')} · {data.get('run_date','')}</div>
+    <h1 style="font-family:Georgia,'Times New Roman',serif;margin:8px 0 6px;color:#171717;">{esc(data.get('topic','Trend'))} Radar</h1>
+    <div style="color:#666;font-size:13px;margin-bottom:18px;">{esc(data.get('geo','US'))} · {esc(data.get('date_window',''))} · {esc(data.get('run_date',''))}</div>
 
     <table width="100%" cellpadding="0" cellspacing="8" style="margin:0 0 18px;">
       <tr>
@@ -740,7 +792,13 @@ def main() -> None:
     if not args.skip_timeseries:
         attach_timeseries(candidates, args.geo, args.date, request_timeout=args.timeout, request_retries=args.retries)
     for candidate in candidates:
-        score_candidate(candidate)
+        try:
+            score_candidate(candidate)
+        except Exception as exc:
+            # A single candidate with sparse/malformed data must not take
+            # down the whole run; log it and move on to the next one.
+            print(f"Skipping candidate '{candidate.query}' due to scoring error: {exc}", file=sys.stderr)
+            continue
 
     data = build_data(args.topic, args.geo, args.date, seeds, candidates, rejected)
     stamp = datetime.now().strftime("%Y-%m-%d_%H%M")

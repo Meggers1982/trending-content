@@ -63,6 +63,17 @@ export async function GET() {
 }
 
 export async function POST(request) {
+  const runControlToken = process.env.RUN_CONTROL_TOKEN;
+  if (runControlToken) {
+    const providedToken = request.headers.get("x-run-token");
+    if (providedToken !== runControlToken) {
+      return NextResponse.json(
+        { ok: false, message: "Invalid or missing run token." },
+        { status: 401 }
+      );
+    }
+  }
+
   if (pipelineJob.running) {
     return NextResponse.json(
       { ok: false, message: "A pipeline run is already in progress.", job: pipelineJob },

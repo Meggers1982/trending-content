@@ -53,6 +53,11 @@ Add these in Vercel project settings:
 - `GITHUB_REPOSITORY=Meggers1982/trending-content`
 - `GITHUB_PIPELINE_WORKFLOW=run-pipeline.yml`
 - `GITHUB_PIPELINE_REF=main`
+- `RUN_CONTROL_TOKEN` (optional, but recommended) — a shared secret you choose. When set, `POST /api/run`
+  requires a matching `x-run-token` header, so only someone who knows the token can trigger a run.
+  Without it, the run-trigger endpoint is publicly triggerable by anyone who has the deployed URL,
+  which can rack up Anthropic API, SerpAPI, and GitHub Actions costs. Enter the same value in the
+  dashboard's "Run token" field to use it from the browser.
 
 Add these as GitHub Actions repository secrets:
 

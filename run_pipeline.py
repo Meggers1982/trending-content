@@ -34,6 +34,7 @@ import os
 import sys
 import json
 import re
+import html
 import argparse
 import logging
 import time
@@ -72,6 +73,7 @@ log = logging.getLogger(__name__)
 def load_file(path: Path) -> str:
     if path.exists():
         return path.read_text(encoding="utf-8")
+    log.warning(f"Config/prompt file not found: {path} — using fallback placeholder text.")
     return f"[FILE NOT FOUND: {path.name}]"
 
 
@@ -178,6 +180,20 @@ def _serp_get(params: dict) -> dict | None:
                 return json.loads(resp.read().decode("utf-8"))
         except urllib.error.HTTPError as e:
             body = e.read().decode("utf-8", errors="replace")[:300]
+            if e.code == 429 or e.code >= 500:
+                if attempt >= SERPAPI_MAX_RETRIES:
+                    log.warning(
+                        f"SerpAPI request failed ({engine}, {query}) after "
+                        f"{SERPAPI_MAX_RETRIES} attempts: HTTP Error {e.code}: {body}"
+                    )
+                    return None
+                log.warning(
+                    f"SerpAPI request failed ({engine}, {query}): "
+                    f"HTTP Error {e.code}: {body}; retrying "
+                    f"{attempt + 1}/{SERPAPI_MAX_RETRIES}..."
+                )
+                time.sleep(min(2 ** attempt, 8))
+                continue
             log.warning(
                 f"SerpAPI request failed ({engine}, {query}): "
                 f"HTTP Error {e.code}: {body}"
@@ -441,6 +457,29 @@ def create_message_with_connection_fallback(client, *, label: str, **kwargs):
         return client.messages.create(**kwargs)
 
 
+def extract_response_text(response, *, label: str) -> str:
+    """
+    Safely pull the text out of a Claude API response.
+    A refusal, empty response, or non-text content block would otherwise
+    raise IndexError/AttributeError and crash the whole run — log a clear
+    error with context and fail fast instead, consistent with how other
+    unrecoverable pipeline failures in this file (e.g. JSON repair failure)
+    are handled.
+    """
+    content = getattr(response, "content", None)
+    if not content:
+        log.error(f"{label}: Claude API returned empty content — cannot continue.")
+        raise SystemExit(1)
+    block = content[0]
+    if getattr(block, "type", None) != "text" or not hasattr(block, "text"):
+        log.error(
+            f"{label}: Claude API returned a non-text content block "
+            f"(type={getattr(block, 'type', 'unknown')}) — cannot continue."
+        )
+        raise SystemExit(1)
+    return block.text
+
+
 def parse_extraction_json(raw_json: str) -> dict:
     """Parse model JSON output after stripping common markdown wrappers."""
     cleaned = raw_json.strip()
@@ -571,6 +610,10 @@ def generate_html(data: dict, today_str: str) -> str:
 
     html = template_path.read_text(encoding="utf-8")
     data_json = json.dumps(data, indent=2, ensure_ascii=False)
+    # Prevent a news title/field containing a literal "</script" from
+    # breaking out of the <script type="application/json"> tag — HTML
+    # parsers close the tag on that substring regardless of the type attr.
+    data_json = re.sub(r"</script", lambda _m: "<\\/script", data_json, flags=re.IGNORECASE)
     html = html.replace("__PIPELINE_DATA__", data_json)
     return html
 
@@ -587,6 +630,11 @@ CSV_HEADER = (
 def generate_csv(data: dict) -> str:
     def esc(val):
         v = str(val).replace('"', '""')
+        # Formula-injection guard: Excel/Sheets treats a leading
+        # = + - @ as the start of a formula. Neutralize by prefixing
+        # with a single quote, which forces text interpretation.
+        if v.lstrip()[:1] in ("=", "+", "-", "@"):
+            v = "'" + v
         return f'"{v}"'
 
     rows = [CSV_HEADER]
@@ -653,7 +701,7 @@ def build_email_body(data: dict) -> str:
           <div style="background:#1f1010;border:1px solid #7f1d1d;border-radius:8px;
                       padding:14px 18px;font-size:13px;color:#fca5a5;">
             <strong style="color:#ef4444;">🔴 P1 — Publish Now:</strong>&nbsp;
-            {p1.get('topic','')}
+            {html.escape(str(p1.get('topic','')))}
           </div>
         </td></tr>
         """
@@ -712,27 +760,27 @@ def build_email_body(data: dict) -> str:
           </td>
           <td style="padding:12px 10px;vertical-align:top;">
             <div style="font-size:13px;font-weight:600;color:#fff;margin-bottom:3px;">
-              {emoji} {c.get('topic','')}
+              {emoji} {html.escape(str(c.get('topic','')))}
             </div>
-            {f'<div style="font-size:11px;color:#818cf8;font-style:italic;margin-bottom:5px;">{c.get("primary_headline","")}</div>' if c.get("primary_headline") else ''}
-            <div style="font-size:11px;color:#9ca3af;">{c.get("recommended_angle","")}</div>
+            {f'<div style="font-size:11px;color:#818cf8;font-style:italic;margin-bottom:5px;">{html.escape(str(c.get("primary_headline","")))}</div>' if c.get("primary_headline") else ''}
+            <div style="font-size:11px;color:#9ca3af;">{html.escape(str(c.get("recommended_angle","")))}</div>
           </td>
           <td style="padding:12px 10px;vertical-align:top;white-space:nowrap;">
             <div style="margin-bottom:4px;">{score_bar(c.get("trend_strength_score",0), "#818cf8")}</div>
             <div style="margin-bottom:4px;">{score_bar(c.get("opportunity_score",0), "#4ade80")}</div>
             <div style="font-size:10px;color:#6b7280;margin-top:2px;">
-              Discover {c.get("discover_score","—")}/5 &nbsp;·&nbsp; {c.get("confidence","—")} confidence
+              Discover {c.get("discover_score","—")}/5 &nbsp;·&nbsp; {html.escape(str(c.get("confidence","—")))} confidence
             </div>
           </td>
           <td style="padding:12px 10px;vertical-align:top;font-size:11px;color:#9ca3af;max-width:180px;">
-            {c.get("next_steps","")}
+            {html.escape(str(c.get("next_steps","")))}
           </td>
         </tr>"""
 
     # Rejected rows
     rejected_rows = "".join(
-        f'<tr><td style="padding:6px 10px;color:#e2e8f0;font-size:12px;">{r.get("topic","")}</td>'
-        f'<td style="padding:6px 10px;color:#6b7280;font-size:12px;">{r.get("reason","")}</td></tr>'
+        f'<tr><td style="padding:6px 10px;color:#e2e8f0;font-size:12px;">{html.escape(str(r.get("topic","")))}</td>'
+        f'<td style="padding:6px 10px;color:#6b7280;font-size:12px;">{html.escape(str(r.get("reason","")))}</td></tr>'
         for r in rejected
     )
     rejected_table = f"""
@@ -830,7 +878,7 @@ def build_email_body(data: dict) -> str:
       {rejected_table}
 
       <!-- Notes -->
-      {f'<tr><td style="padding:20px 0 0"><div style="background:#181c27;border:1px solid #2a2f45;border-radius:8px;padding:12px 14px;font-size:12px;color:#9ca3af;line-height:1.6;"><strong style="color:#e2e8f0;">Run notes:</strong> {summary.get("notes","")}</div></td></tr>' if summary.get("notes") else ''}
+      {f'<tr><td style="padding:20px 0 0"><div style="background:#181c27;border:1px solid #2a2f45;border-radius:8px;padding:12px 14px;font-size:12px;color:#9ca3af;line-height:1.6;"><strong style="color:#e2e8f0;">Run notes:</strong> {html.escape(str(summary.get("notes","")))}</div></td></tr>' if summary.get("notes") else ''}
 
       <!-- Footer -->
       <tr><td style="padding:28px 0 0;border-top:1px solid #2a2f45;margin-top:24px;">
@@ -974,7 +1022,7 @@ def run_pipeline(send_email_flag: bool = True) -> None:
             )
         else:
             raise
-    pipeline_output = pipeline_response.content[0].text
+    pipeline_output = extract_response_text(pipeline_response, label="Pipeline call")
     log.info(
         f"Pipeline complete. Tokens in: {pipeline_response.usage.input_tokens}, "
         f"out: {pipeline_response.usage.output_tokens}"
@@ -997,7 +1045,7 @@ def run_pipeline(send_email_flag: bool = True) -> None:
             "content": build_extraction_prompt(pipeline_output),
         }],
     )
-    raw_json = extraction_response.content[0].text.strip()
+    raw_json = extract_response_text(extraction_response, label="Extraction call").strip()
     raw_json_path = OUTPUT_DIR / f"raw_extraction_{today_str}.json"
     raw_json_path.write_text(raw_json, encoding="utf-8")
     log.info(f"Raw extraction JSON → {raw_json_path}")
@@ -1016,7 +1064,7 @@ def run_pipeline(send_email_flag: bool = True) -> None:
                 "content": build_json_repair_prompt(raw_json),
             }],
         )
-        repaired_json = repair_response.content[0].text.strip()
+        repaired_json = extract_response_text(repair_response, label="Extraction JSON repair call").strip()
         repaired_json_path = OUTPUT_DIR / f"repaired_extraction_{today_str}.json"
         repaired_json_path.write_text(repaired_json, encoding="utf-8")
         log.info(f"Repaired extraction JSON → {repaired_json_path}")
@@ -1068,10 +1116,10 @@ def start_scheduler(run_time: str) -> None:
         sys.exit("Missing dependency for scheduler: pip install schedule")
 
     log.info(f"Scheduler started — pipeline runs daily at {run_time}.")
-    schedule.every().day.at(run_time).do(run_pipeline)
+    schedule.every().day.at(run_time).do(lambda: _run_locked(run_pipeline))
 
     log.info("Running once now for verification...")
-    run_pipeline(send_email_flag=True)
+    _run_locked(run_pipeline, send_email_flag=True)
 
     while True:
         schedule.run_pending()
@@ -1079,6 +1127,55 @@ def start_scheduler(run_time: str) -> None:
 
 
 # ── Entrypoint ────────────────────────────────────────────────────────────────
+
+# Guards against a manually-triggered run (web UI) overlapping a scheduled
+# GitHub Actions run and both writing to the same day's output files.
+PIPELINE_LOCK_PATH = PROJECT_ROOT / "outputs" / ".pipeline.lock"
+PIPELINE_LOCK_STALE_MINUTES = 30  # roughly matches the GH Actions timeout-minutes budget
+
+
+def _acquire_pipeline_lock() -> None:
+    if PIPELINE_LOCK_PATH.exists():
+        try:
+            age_minutes = (time.time() - PIPELINE_LOCK_PATH.stat().st_mtime) / 60
+        except OSError:
+            age_minutes = 0
+        if age_minutes < PIPELINE_LOCK_STALE_MINUTES:
+            log.error(
+                f"Another pipeline run appears to be in progress "
+                f"(lock file {PIPELINE_LOCK_PATH} is {age_minutes:.1f} min old, "
+                f"staleness threshold is {PIPELINE_LOCK_STALE_MINUTES} min). "
+                f"Exiting to avoid a concurrent run corrupting today's output files."
+            )
+            sys.exit(1)
+        log.warning(
+            f"Found stale pipeline lock ({age_minutes:.1f} min old) — "
+            f"treating prior run as dead and proceeding."
+        )
+    PIPELINE_LOCK_PATH.parent.mkdir(parents=True, exist_ok=True)
+    PIPELINE_LOCK_PATH.write_text(f"pid={os.getpid()} started={datetime.now().isoformat()}", encoding="utf-8")
+
+
+def _release_pipeline_lock() -> None:
+    try:
+        PIPELINE_LOCK_PATH.unlink()
+    except FileNotFoundError:
+        pass
+    except OSError as e:
+        log.warning(f"Failed to remove pipeline lock file {PIPELINE_LOCK_PATH}: {e}")
+
+
+def _run_locked(fn, *args, **kwargs):
+    """Run a single pipeline execution under the lock, releasing it when that
+    execution finishes. Used per-run rather than around --schedule's whole
+    (potentially days-long) process lifetime, so the lock's staleness window
+    reflects one run, not the scheduler daemon's uptime."""
+    _acquire_pipeline_lock()
+    try:
+        return fn(*args, **kwargs)
+    finally:
+        _release_pipeline_lock()
+
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Trending Content OS — daily runner")
@@ -1093,11 +1190,13 @@ def main() -> None:
     args = parser.parse_args()
 
     if args.prefetch_only:
-        run_prefetch_only()
+        _run_locked(run_prefetch_only)
     elif args.schedule:
+        # start_scheduler manages the lock itself, once per triggered run,
+        # since it stays alive indefinitely rather than exiting after one run.
         start_scheduler(args.time)
     else:
-        run_pipeline(send_email_flag=not args.no_email)
+        _run_locked(run_pipeline, send_email_flag=not args.no_email)
 
 
 if __name__ == "__main__":
