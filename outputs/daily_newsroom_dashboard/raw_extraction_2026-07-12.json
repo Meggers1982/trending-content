@@ -1,0 +1,286 @@
+```json
+{
+  "run_date": "2026-07-12",
+  "niche": "health and wellness",
+  "signal_summary": {
+    "total_reviewed": 144,
+    "total_retained": 9,
+    "total_rejected": 23,
+    "tools_active": [
+      "web_search",
+      "google_news",
+      "google_trends",
+      "serpapi"
+    ],
+    "tools_unavailable": [],
+    "notes": "First run in history; site_url not configured — self-check skipped; competitor coverage checked instead. Google Trends pre-fetch used as primary search_velocity source. McConnell health queries are top rising on Trends but excluded (political celebrity health status — brand safety). Wellness cluster was largely promotional/local; Financial Times peptide piece monitored pending 02b — insufficient primary sourcing to pass gate. Fentanyl vaccine monitored — 02b triggered, single editorial source with skepticism embedded, no primary trial data traceable. PCOS nutrition flagged for next cycle if news corroboration develops."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "FDA Recalls 2.53 Million Steroid Eye Drop Bottles Over Foreign Substance Contamination",
+      "primary_entity": "Lupin Pharmaceuticals eye drop recall",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 88,
+      "opportunity_score": 82,
+      "discover_score": 5,
+      "urgency": "now",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 6,
+      "recommended_angle": "Consumer safety action guide — which specific products are recalled, what to check at home, what risks the contamination poses, and when to see a doctor.",
+      "why_now": "FDA recall active as of July 6–10, 2026. 2.53 million bottles across multiple steroid eye drop SKUs. Foreign substance contamination — consumer confusion is high; search spike confirmed in Google Trends. Most current coverage is news-brief format with no consumer guidance depth. Major SERP gap for actionable explainer.",
+      "primary_headline": "FDA Recalls 2.5 Million Eye Drop Bottles: Is Yours on the List?",
+      "next_steps": "Verify exact product list, lot numbers, and foreign substance type from FDA.gov recall notice. Do not use Class I language (this is Class II). Confidence capped at Medium until FDA notice directly retrieved."
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "E. coli Outbreak Linked to Frozen Blueberries — CDC and FDA Active Investigation",
+      "primary_entity": "E. coli outbreak / frozen blueberries",
+      "signal_type": "recall",
+      "allowed_category": "public health and epidemiology / FDA and CDC regulatory updates",
+      "trend_strength_score": 84,
+      "opportunity_score": 78,
+      "discover_score": 5,
+      "urgency": "now",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 5,
+      "recommended_angle": "Outbreak tracker explainer — what is known so far, which products are linked, symptoms to watch for, what to do if you've eaten affected blueberries.",
+      "why_now": "CDC active outbreak investigation page published July 7, 2026. FDA also published July 6 outbreak investigation page. Frozen blueberries are widely consumed household product; consumer urgency is high. Most coverage is short news alerts — no deep consumer explainer exists.",
+      "primary_headline": "E. Coli Outbreak Tied to Frozen Blueberries: What to Know Right Now",
+      "next_steps": "Outbreak is active and evolving — include 'developing story' note and live CDC tracker link. Verify E. coli strain type from CDC page. Do not state confirmed case count without direct CDC page verification at time of writing."
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Cream Cheese Recalled — FDA Class I Risk Level",
+      "primary_entity": "Cream cheese FDA Class I recall",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates / public health",
+      "trend_strength_score": 75,
+      "opportunity_score": 72,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 4,
+      "recommended_angle": "Plain-language explainer: what product was recalled, what Class I means, what contamination is involved, and what consumers should do — without sensationalism.",
+      "why_now": "AOL/Reader's Digest and MedShadow reporting as of July 8, 2026. FDA Class I recall (highest severity). A calm, accurate explainer fills a clear gap and counters potential misinformation spread.",
+      "primary_headline": "Cream Cheese Recalled by FDA: What Class I Risk Actually Means for You",
+      "next_steps": "Verify exact product name, manufacturer, lot codes, and contamination type from FDA.gov. Do NOT reproduce 'serious adverse health consequences or death' as headline without contextualizing as FDA classification language, not a confirmed death report. Avoid sensationalism."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Yale Study: Online GLP-1 Prescriptions With Little Oversight — What Patients Need to Know",
+      "primary_entity": "GLP-1 medications / online prescribing",
+      "signal_type": "study_or_research",
+      "allowed_category": "medical research and clinical trials / chronic disease management",
+      "trend_strength_score": 72,
+      "opportunity_score": 76,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Consumer safety and informed decision-making angle: what the Yale secret-shopping study found, what risks come with minimal-oversight GLP-1 prescribing, and what patients should look for in a legitimate telehealth provider.",
+      "why_now": "Yale School of Medicine published July 8, 2026. GLP-1 searches remain persistently high. Consumer-facing coverage of this study is minimal. Strong SERP gap for a patient-safety angle targeting the audience asking 'is it safe to get Ozempic online?'",
+      "primary_headline": "Ozempic Online: Yale Study Finds Most Telehealth Prescribers Ask Few Questions",
+      "next_steps": "Verify peer-review status and journal citation before publishing. Secret-shopping study = observational audit; cannot establish causation. Nuance on telehealth safety required; not all online GLP-1 prescribing is equivalent."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Sleep Deprivation Linked to Weight Gain — Columbia Study",
+      "primary_entity": "Sleep deprivation and weight gain",
+      "signal_type": "study_or_research",
+      "allowed_category": "sleep science / nutrition and diet science",
+      "trend_strength_score": 74,
+      "opportunity_score": 71,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Mechanistic explainer: not just that sleep deprivation causes weight gain, but HOW — hormonal mechanisms (ghrelin, leptin, cortisol), behavioral drivers (late-night eating, reduced activity), and what the data means for practical sleep habits.",
+      "why_now": "Columbia University Irving Medical Center published July 6, 2026. Google Trends shows diet, nutrition, gut health elevated this week. Sleep-weight connection is perennially searched but rarely explained with mechanistic depth.",
+      "primary_headline": "Poor Sleep Is Making You Gain Weight — Here's the Science Behind Why",
+      "next_steps": "Verify study type (observational vs. RCT) before publishing. Do not write 'causes' without verification. Qualify effect sizes with absolute numbers, not relative framing only. Single study — note this adds to existing body of evidence."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Stanford: Chronic Pain Patients Can Taper Opioids Slowly — What the Research Shows",
+      "primary_entity": "Opioid tapering / chronic pain management",
+      "signal_type": "study_or_research",
+      "allowed_category": "medical research and clinical trials / chronic disease management",
+      "trend_strength_score": 65,
+      "opportunity_score": 68,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Patient empowerment angle: what a voluntary, slow taper actually looks like, what the Stanford data shows about outcomes, and what this means for patients currently on long-term opioids for chronic pain.",
+      "why_now": "Stanford Medicine published July 9, 2026. Opioid use and chronic pain are persistent high-relevance topics. Study centers patient agency (voluntary taper) — meaningful distinction with strong SERP differentiation.",
+      "primary_headline": "Stanford Study: Patients With Chronic Pain Can Reduce Opioids on Their Own Timeline",
+      "next_steps": "Pull exact percentage or sample language from Stanford release — 'many patients' is imprecise. Verify study design before publishing. Do not imply patients should taper without physician guidance. Do not conflate chronic pain opioid use with opioid use disorder/addiction treatment."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Ebola Clinical Trials Begin in DRC — First Treatment Hope for Bundibugyo Strain",
+      "primary_entity": "Ebola / Bundibugyo strain / DRC clinical trials",
+      "signal_type": "clinical_trial",
+      "allowed_category": "infectious disease / public health",
+      "trend_strength_score": 68,
+      "opportunity_score": 62,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 4,
+      "recommended_angle": "Explainer for general health audience: what the Bundibugyo strain is, why it's been neglected in treatment development, what the new trials involve, and what the realistic timeline looks like.",
+      "why_now": "Clinical trials began July 6–8, 2026, confirmed by NPR, Mongabay, Forbes, and STAT. The Bundibugyo strain has no approved treatment; these are the first designed trials. Meaningful infectious disease development underreported in consumer health media.",
+      "primary_headline": "The Ebola Strain With No Treatment Just Got Its First Clinical Trials — Here's What's at Stake",
+      "next_steps": "Verify clinical trial ID and sponsor from ClinicalTrials.gov or WHO AFRO. Clarify trial phase before publishing; manage reader expectations on treatment timeline."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "\"Super Mover\" Walking Speed — What the Research Says About Intensity and Longevity",
+      "primary_entity": "Walking speed / super mover exercise benefits",
+      "signal_type": "rising_search_interest",
+      "allowed_category": "fitness and exercise science / aging and longevity",
+      "trend_strength_score": 63,
+      "opportunity_score": 65,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Evidence-grounded explainer: what 'super mover' walking means, what the research says about vigorous walking vs. moderate walking for longevity markers, and how to apply it practically without injury risk.",
+      "why_now": "Trending now in Google Trends health category as of July 12, 2026. No strong authoritative explainer occupies the SERP. Exercise science and longevity are core audience interests with high Discover score potential.",
+      "primary_headline": "What Is 'Super Mover' Walking — And Is the Speed Actually Better for You?",
+      "next_steps": "Verify whether 'super mover' terminology originates from a specific study or is media framing. Do not present as a new medical concept without source confirmation. Pull from existing published literature on brisk vs. moderate walking and longevity."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Pediatric Mental Health Emergencies Are Overwhelming ERs — What the Data Shows",
+      "primary_entity": "Pediatric mental health / emergency department gaps",
+      "signal_type": "study_or_research",
+      "allowed_category": "mental health and psychology / pediatric health",
+      "trend_strength_score": 58,
+      "opportunity_score": 63,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "low",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Data-driven explainer on the scope of the gap: what the Illinois study found, why ERs are not equipped for pediatric mental health crises, and what families should know about their options.",
+      "why_now": "News-Medical published July 8, 2026. Pediatric mental health crisis is a sustained high-salience topic for parents and caregivers. Most ER-focused coverage is clinician-facing. Parent-facing explainer has clear SERP gap.",
+      "primary_headline": "Kids in Mental Health Crisis Are Ending Up in ERs That Can't Help Them. Here's Why",
+      "next_steps": "Confidence LOW — locate primary study before commissioning. Do not publish statistical claims without primary source verification. Ensure language is non-stigmatizing; follow mental health reporting guidelines."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "Mitch McConnell health status",
+      "reason": "brand_safety — political celebrity health status; excluded category"
+    },
+    {
+      "topic": "ACA marketplace / insurance premium increases",
+      "reason": "off_category — pure healthcare policy/insurance business; no patient clinical health content angle"
+    },
+    {
+      "topic": "Yale CEO ouster / health system financial woes",
+      "reason": "off_category — local hospital/health system admin news; no national patient health angle"
+    },
+    {
+      "topic": "AI-driven clinical trial design methodology",
+      "reason": "off_category — too technical/industry-facing for general health audience"
+    },
+    {
+      "topic": "UC San Diego AI health intelligence institute",
+      "reason": "off_category — institutional announcement; no patient/consumer health content"
+    },
+    {
+      "topic": "Health system neuroimaging AI models",
+      "reason": "off_category — technical AI/medical imaging; no consumer angle"
+    },
+    {
+      "topic": "UHC lifestyle spending accounts",
+      "reason": "off_category — insurance product/healthcare business news"
+    },
+    {
+      "topic": "Wellness retreats (Travel + Leisure)",
+      "reason": "off_category — lifestyle/tourism; no evidence-based health content"
+    },
+    {
+      "topic": "Digital detox / wellness incentives",
+      "reason": "weak_signal — local institutional/employer programs; insufficient national audience relevance"
+    },
+    {
+      "topic": "Social wellness month (Texas HHS)",
+      "reason": "weak_signal — government awareness campaign; insufficient editorial content value"
+    },
+    {
+      "topic": "New York Post wellness club for Manhattan moms",
+      "reason": "off_category — celebrity/lifestyle fluff; no evidence base"
+    },
+    {
+      "topic": "Rachael Ray health",
+      "reason": "brand_safety — celebrity health status gossip; excluded"
+    },
+    {
+      "topic": "Brian Johnson health (biohacker)",
+      "reason": "weak_signal — insufficient credible news corroboration this cycle; no specific new study; monitor for future cycle"
+    },
+    {
+      "topic": "PCOS nutrition center",
+      "reason": "weak_signal — no news corroboration this cycle; monitor next cycle"
+    },
+    {
+      "topic": "Enteral nutrition",
+      "reason": "off_category — too clinical/institutional for general health audience without specific news hook"
+    },
+    {
+      "topic": "DOJ health company / Adderall fraud",
+      "reason": "weak_signal — primarily crime/legal story; regulatory health angle insufficient without patient guidance applicability"
+    },
+    {
+      "topic": "Glioma progression / cancer evolution study",
+      "reason": "weak_signal — retained at P4 due to institutional source; lower audience relevance; monitor if national media picks up"
+    },
+    {
+      "topic": "UCF microgravity aging study",
+      "reason": "off_category — space medicine; low general-audience applicability; no consumer action angle"
+    },
+    {
+      "topic": "Harvard viral protein study",
+      "reason": "weak_signal — basic research too far upstream from clinical or consumer application"
+    },
+    {
+      "topic": "Colorado/local restaurant food safety",
+      "reason": "off_category — local news; excluded"
+    },
+    {
+      "topic": "Speech-to-text AI reliability (U of Cincinnati)",
+      "reason": "off_category — AI/technology; no direct health content angle"
+    },
+    {
+      "topic": "FT male wellness peptide guide",
+      "reason": "unverified_claim — supplement/drug claim; single lifestyle source; no primary sourcing; monitored, not rejected"
+    },
+    {
+      "topic": "Fentanyl vaccine (clinical trial claim)",
+      "reason": "unverified_claim — drug/clinical trial claim; single editorial source with skepticism; no primary trial ID; monitored, not rejected"
+    }
+  ]
+}
+```
