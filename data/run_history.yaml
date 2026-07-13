@@ -3,94 +3,128 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
-  - run_date: "2026-05-08"
-    niche: "health and wellness"
-    signals_reviewed: 75
-    topics_retained: 14
-    topics_rejected: 61
-    p1_count: 5
-    p2_count: 4
-    p3_count: 5
-    p4_count: 0
-    p5_count: 0
-    integrity_flags: 8
-    top_topic: "FDA blocks COVID and shingles vaccine safety studies"
-    key_themes:
-      - FDA vaccine safety study suppression (escalation of run 1 theme)
-      - Hantavirus cruise ship outbreak (Andes strain, WHO briefing)
-      - Daraxonrasib RAS inhibitor doubles survival in pancreatic cancer
-      - Survodutide Phase 3 — next-gen GLP-1/glucagon dual agonist (16.6% weight loss)
-      - Pembrolizumab dMMR/MSI-high colorectal cancer — zero relapses at 33 months (AACR 2026)
-      - US measles elimination status threatened — 1,814 cases, Utah new hotspot
-      - Depression epigenetic biomarker — monocyte aging predicts anhedonia/hopelessness
-      - Foundayo (orforglipron) oral GLP-1 pill — Medicare access $50/month starting July 1
-      - AHA 10 brain health factors for dementia and stroke prevention
-      - Alcohol and brain damage (even light drinking)
-      - Ultra-processed foods and heart disease with healthy swaps
-      - GLP-1 drugs and brain health — UCSF vs. failed Evoke/Evoke+ Alzheimer trials
-      - Eccentric training builds more muscle with less effort
-      - Perimenopause recognition and management (OB-GYN guide)
-    tools_used:
-      - WebSearch
-      - WebFetch
-    tools_unavailable:
-      - COMPOSIO_SEARCH_TRENDS
-      - SERPAPI_TRENDS_SEARCH
-      - SERPAPI_NEWS_SEARCH
-      - ExaSearch
-      - Reddit JSON feeds (blocked)
-    search_velocity_source: "estimated"
-    google_trends_available: false
-    dashboard_file: "outputs/daily_newsroom_dashboard/2026-05-08.html"
-    notes: >
-      Run 2. Same tool constraints as run 1 — search velocity estimated from news volume and
-      source credibility. FDA/vaccine theme is a direct escalation of run 1's FDA/NIH
-      restructuring topic (specific studies named, WaPo/NYT primary reporting). Ultra-processed
-      foods appeared in both runs (colorectal run 1; heart disease run 2) — flag as recurring
-      if it appears in run 3. H5N1 deferred (covered run 1, no new patient angle). GLP-1 cluster
-      healthy and expanding across both runs. 8 integrity flags, all documented in dashboard.
-      CLAUDE_CODE_MAX_OUTPUT_TOKENS increased to 65000 this session to support dashboard output.
+- run_date: '2026-07-13'
+  niche: health and wellness
+  signals_reviewed: 144
+  topics_retained: 8
+  topics_rejected: 22
+  p1_count: 2
+  p2_count: 3
+  p3_count: 2
+  p4_count: 0
+  p5_count: 1
+  integrity_flags: 1
+  top_topic: New World Screwworm — USDA Confirmed Detections Expanding in United States
+  key_themes:
+  - New World Screwworm — USDA Confirmed Detections Expanding in United States
+  - Zeke Emanuel's Case for Ice Cream and the Science of Longevity Diets
+  - OTC Skin Cream Recalls — FDA Manufacturing Violations
+  - 'AMA Survey: Most Physicians Now Support Consumer Wearables for Patient Care'
+  - 'Marie-Pierre St-Onge and the Sleep-Diet Connection: What the Research Shows'
+  - Lung Transplant for Terminal Lung Cancer — What We Now Know About Patient Selection
+  - 'Glioma Progression: What Weill Cornell''s Cancer Evolution Study Reveals'
+  - Fentanyl Vaccine — Evidence Claims vs. What the Trial Data Actually Shows
+  tools_used:
+  - web_search
+  - google_news
+  - google_trends
+  - serpapi
+  tools_unavailable: []
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-07-13.html
+  notes: Google Trends pre-fetch treated as primary velocity source. Gut health +20 delta is strongest
+    Trends movement but SERP fully saturated and topic covered 07-10. Fitness +17 delta driven by non-health
+    queries. Weight loss -26 delta driven by celebrity queries — excluded. Medical mistrust/wellness/politics
+    cluster monitored due to political drift risk. site_url not configured — competitor coverage checked
+    instead.
+- run_date: '2026-05-08'
+  niche: health and wellness
+  signals_reviewed: 75
+  topics_retained: 14
+  topics_rejected: 61
+  p1_count: 5
+  p2_count: 4
+  p3_count: 5
+  p4_count: 0
+  p5_count: 0
+  integrity_flags: 8
+  top_topic: FDA blocks COVID and shingles vaccine safety studies
+  key_themes:
+  - FDA vaccine safety study suppression (escalation of run 1 theme)
+  - Hantavirus cruise ship outbreak (Andes strain, WHO briefing)
+  - Daraxonrasib RAS inhibitor doubles survival in pancreatic cancer
+  - Survodutide Phase 3 — next-gen GLP-1/glucagon dual agonist (16.6% weight loss)
+  - Pembrolizumab dMMR/MSI-high colorectal cancer — zero relapses at 33 months (AACR 2026)
+  - US measles elimination status threatened — 1,814 cases, Utah new hotspot
+  - Depression epigenetic biomarker — monocyte aging predicts anhedonia/hopelessness
+  - Foundayo (orforglipron) oral GLP-1 pill — Medicare access $50/month starting July 1
+  - AHA 10 brain health factors for dementia and stroke prevention
+  - Alcohol and brain damage (even light drinking)
+  - Ultra-processed foods and heart disease with healthy swaps
+  - GLP-1 drugs and brain health — UCSF vs. failed Evoke/Evoke+ Alzheimer trials
+  - Eccentric training builds more muscle with less effort
+  - Perimenopause recognition and management (OB-GYN guide)
+  tools_used:
+  - WebSearch
+  - WebFetch
+  tools_unavailable:
+  - COMPOSIO_SEARCH_TRENDS
+  - SERPAPI_TRENDS_SEARCH
+  - SERPAPI_NEWS_SEARCH
+  - ExaSearch
+  - Reddit JSON feeds (blocked)
+  search_velocity_source: estimated
+  google_trends_available: false
+  dashboard_file: outputs/daily_newsroom_dashboard/2026-05-08.html
+  notes: 'Run 2. Same tool constraints as run 1 — search velocity estimated from news volume and source
+    credibility. FDA/vaccine theme is a direct escalation of run 1''s FDA/NIH restructuring topic (specific
+    studies named, WaPo/NYT primary reporting). Ultra-processed foods appeared in both runs (colorectal
+    run 1; heart disease run 2) — flag as recurring if it appears in run 3. H5N1 deferred (covered run
+    1, no new patient angle). GLP-1 cluster healthy and expanding across both runs. 8 integrity flags,
+    all documented in dashboard. CLAUDE_CODE_MAX_OUTPUT_TOKENS increased to 65000 this session to support
+    dashboard output.
 
-  - run_date: "2026-05-07"
-    niche: "health and wellness"
-    signals_reviewed: 68
-    topics_retained: 14
-    topics_rejected: 54
-    p1_count: 5
-    p2_count: 4
-    p3_count: 5
-    p4_count: 0
-    p5_count: 0
-    integrity_flags: 10
-    top_topic: "FDA halts childhood vaccine safety studies amid NIH restructuring"
-    key_themes:
-      - FDA/NIH restructuring and vaccine safety studies
-      - Ultra-processed food and colorectal cancer risk (Gen Z/Millennial trend)
-      - Tirzepatide weight loss maintenance (long-term data)
-      - mifepristone SCOTUS ruling and drug access
-      - GLP-1 receptor agonists and cardiovascular benefit (non-obese patients)
-      - Seed oils inflammation debate (SERP gap opportunity)
-      - SSRIs and pregnancy safety (updated guidance)
-      - Bird flu H5N1 poultry outbreak and food safety
-      - Magnesium supplementation and sleep quality
-    tools_used:
-      - WebSearch
-      - WebFetch
-    tools_unavailable:
-      - COMPOSIO_SEARCH_TRENDS
-      - SERPAPI_TRENDS_SEARCH
-      - SERPAPI_NEWS_SEARCH
-      - ExaSearch
-      - Reddit JSON feeds (blocked)
-      - NPR Health Shots RSS (wrong feed URL — 2018 shutdown)
-      - FDA RSS (404)
-    search_velocity_source: "estimated"
-    google_trends_available: false
-    dashboard_file: "outputs/daily_newsroom_dashboard/2026-05-07.html"
-    notes: >
-      First pipeline run. Google Trends unavailable (Hyperagent-only tools not accessible in
-      Claude Code context). Search velocity estimated from news volume and social spread.
-      CDC RSS returned Feb 2025 article — not used. Reddit JSON feeds blocked by platform.
-      Two borderline brand-safety edge cases (FDA vaccine suppression, mifepristone SCOTUS)
-      retained with medium confidence and mandatory editorial review flags — factual reporting
-      on government action with direct patient impact. Partial deduplication only (no site_url set).
+    '
+- run_date: '2026-05-07'
+  niche: health and wellness
+  signals_reviewed: 68
+  topics_retained: 14
+  topics_rejected: 54
+  p1_count: 5
+  p2_count: 4
+  p3_count: 5
+  p4_count: 0
+  p5_count: 0
+  integrity_flags: 10
+  top_topic: FDA halts childhood vaccine safety studies amid NIH restructuring
+  key_themes:
+  - FDA/NIH restructuring and vaccine safety studies
+  - Ultra-processed food and colorectal cancer risk (Gen Z/Millennial trend)
+  - Tirzepatide weight loss maintenance (long-term data)
+  - mifepristone SCOTUS ruling and drug access
+  - GLP-1 receptor agonists and cardiovascular benefit (non-obese patients)
+  - Seed oils inflammation debate (SERP gap opportunity)
+  - SSRIs and pregnancy safety (updated guidance)
+  - Bird flu H5N1 poultry outbreak and food safety
+  - Magnesium supplementation and sleep quality
+  tools_used:
+  - WebSearch
+  - WebFetch
+  tools_unavailable:
+  - COMPOSIO_SEARCH_TRENDS
+  - SERPAPI_TRENDS_SEARCH
+  - SERPAPI_NEWS_SEARCH
+  - ExaSearch
+  - Reddit JSON feeds (blocked)
+  - NPR Health Shots RSS (wrong feed URL — 2018 shutdown)
+  - FDA RSS (404)
+  search_velocity_source: estimated
+  google_trends_available: false
+  dashboard_file: outputs/daily_newsroom_dashboard/2026-05-07.html
+  notes: 'First pipeline run. Google Trends unavailable (Hyperagent-only tools not accessible in Claude
+    Code context). Search velocity estimated from news volume and social spread. CDC RSS returned Feb
+    2025 article — not used. Reddit JSON feeds blocked by platform. Two borderline brand-safety edge cases
+    (FDA vaccine suppression, mifepristone SCOTUS) retained with medium confidence and mandatory editorial
+    review flags — factual reporting on government action with direct patient impact. Partial deduplication
+    only (no site_url set).
+
+    '
