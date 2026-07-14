@@ -744,7 +744,15 @@ def build_data(
         # literal substring of the topic/seed anchors even though they're
         # on-topic, so widen the anchor set with the taxonomy terms used to
         # discover them rather than dropping them as off-topic noise.
-        anchors |= relevance_anchors("", extra_anchor_terms)
+        #
+        # Deliberately NOT using relevance_anchors() here: it decomposes each
+        # term into standalone word tokens (>=4 chars), which is fine for a
+        # short, curated seed list but not for a ~60-term taxonomy pulled from
+        # a config file - a benefit like "even skin tone" would contribute the
+        # bare token "even", which then matches any candidate containing
+        # "events" (confirmed in production: "upcoming events" slipped through
+        # this way). Full-phrase-only anchors avoid that whole class of bug.
+        anchors |= {normalize(term) for term in extra_anchor_terms if normalize(term)}
     relevant = []
     off_topic = []
     for candidate in candidates:
