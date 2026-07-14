@@ -46,6 +46,11 @@ The most recent scan's plain keyword list (topic, stage, radar/opportunity score
 shows up inline on the main dashboard under "Trending keywords" (`#keywords`), so you don't have
 to open a separate HTML file to see what's trending.
 
+A separate scheduled job, `.github/workflows/run-beauty-radar.yml`, runs the beauty profile
+automatically once a week (Monday mornings) and commits the results, so "Trending keywords"
+stays current without anyone clicking "Scan" — edit the cron line in that file to change how
+often it runs.
+
 This only works where the request is actually handled — i.e. locally or on a self-hosted server
 with a `SERPAPI_API_KEY` set. It's not available when the app is deployed to Vercel (`POST /api/radar`
 returns a 501 there), since there's no GitHub Actions equivalent wired up for ad-hoc scans.
