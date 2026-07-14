@@ -5,36 +5,38 @@
 runs:
 - run_date: '2026-07-14'
   niche: health and wellness
-  signals_reviewed: 144
-  topics_retained: 7
-  topics_rejected: 26
+  signals_reviewed: 168
+  topics_retained: 8
+  topics_rejected: 24
   p1_count: 2
   p2_count: 3
-  p3_count: 2
+  p3_count: 3
   p4_count: 0
   p5_count: 0
-  integrity_flags: 1
-  top_topic: Medical Cannabis for Dementia Agitation
+  integrity_flags: 0
+  top_topic: West Virginia Cyclosporiasis Outbreak — Update
   key_themes:
+  - West Virginia Cyclosporiasis Outbreak — Update
   - Medical Cannabis for Dementia Agitation
-  - HHS and VA Sign MOU for Psychedelic Drug Trials for Veterans
+  - Heat Waves and Mental Health Hospitalizations
   - Dementia Rising in Latino Populations — WashU Multidecade Study
-  - Pew Research — Nearly 6 in 10 Young Women Get Health Information from Influencers
-  - Extreme Heat Linked to Mental Health Hospitalizations — Nature Study, Multi-Country
-  - Shampoo Recall — Bacterial Contamination Risk
-  - FDA Urges Infant Formula Makers to Tighten Supplier Oversight After Botulism Outbreaks
+  - HHS/VA Psychedelic Trials for Veterans — MOU Announcement
+  - Shampoo Recall — Bacterial Contamination
+  - FDA Infant Formula Safety Advisory — Botulism Risk
+  - GLP-1 Illegal Prescribing — Enforcement Action
   tools_used:
   - web_search
   - google_news
   - google_trends
   - serpapi
-  tools_unavailable: []
+  tools_unavailable:
+  - reddit
+  - exa
   dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-07-14.html
-  notes: High duplicate load from recurring clusters (E. coli, eye drops, GLP-1, sleep/weight, Ebola cycling
-    without new developments). Cyclosporiasis trending in Google Trends NOW but covered 07-08 and 07-11
-    without confirmed new outbreak expansion. Gut health Trends velocity (+8) noted but no anchoring study.
-    Shampoo recall confidence capped at Medium — FDA.gov primary notice not retrieved; breaking recall
-    exception applied pending verification.
+  notes: Site URL not configured; self-check skipped. Deferred topics file not accessible in automation
+    mode. Recurring themes (E. coli, eye drops, GLP-1 Yale study, cream cheese, sleep/weight, Ebola) all
+    suppressed as existing unless new development present. Cyclosporiasis retained as update due to West
+    Virginia-specific breakout on Google Trends Trending Now.
 - run_date: '2026-07-13'
   niche: health and wellness
   signals_reviewed: 144
