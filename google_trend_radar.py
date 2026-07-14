@@ -170,6 +170,13 @@ GENERIC_ANCHOR_WORDS = {
     "ideas",
     "benefits",
     "beginners",
+    # These showed up as false-positive anchors in production: a seed like
+    # "clean beauty" or "scalp care" derives the standalone token "clean" or
+    # "care", which then matches any unrelated Google Trends query containing
+    # that common word (e.g. "how to clean a waffle maker", "pet care tips").
+    "clean",
+    "care",
+    "loss",
 }
 
 
