@@ -57,6 +57,13 @@ automatically once a week (Monday mornings) and commits the results, so "Trendin
 stays current without anyone clicking "Scan" — edit the cron line in that file to change how
 often it runs.
 
+Each of the other 7 profiles has its own weekly scheduled workflow too
+(`run-nutrition-radar.yml`, `run-fitness-radar.yml`, `run-food-safety-radar.yml`,
+`run-diet-radar.yml`, `run-weight-loss-radar.yml`, `run-mental-health-radar.yml`,
+`run-gut-health-radar.yml`), staggered across Monday-Wednesday mornings so they don't all run
+(and push) at the same time. All of them show up individually in the GitHub Actions tab and
+can be triggered manually from there ("Run workflow") in addition to their schedule.
+
 This only works where the request is actually handled — i.e. locally or on a self-hosted server
 with a `SERPAPI_API_KEY` set. It's not available when the app is deployed to Vercel (`POST /api/radar`
 returns a 501 there), since there's no GitHub Actions equivalent wired up for ad-hoc scans.

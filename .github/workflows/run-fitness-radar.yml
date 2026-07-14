@@ -1,0 +1,45 @@
+name: Run Fitness Trend Radar
+
+on:
+  schedule:
+    - cron: '30 13 * * 1'   # Monday ~7:30am CT (UTC-6) - weekly; edit day/time to change cadence
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  run-fitness-radar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    env:
+      SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run fitness trend radar
+        run: python google_trend_radar.py --profile fitness --geo US --date "now 7-d"
+
+      - name: Commit generated artifacts
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f outputs/google_trend_radar
+          if git diff --cached --quiet; then
+            echo "No generated artifacts changed."
+          else
+            git commit -m "Update fitness trend radar scan"
+            git pull --rebase
+            git push
+          fi
