@@ -1,0 +1,2022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google Trend Radar</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  :root {
+    --ink: #171717;
+    --text: #2b2b2b;
+    --muted: #696969;
+    --paper: #fbfaf8;
+    --surface: #fff;
+    --soft: #f1f0ec;
+    --line: #dedbd4;
+    --red: #cf2f32;
+    --green: #1f9d55;
+    --amber: #d97706;
+    --blue: #2563eb;
+  }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--paper);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+  .topbar {
+    height: 48px;
+    background: #070707;
+    color: #f7f7f7;
+    display: flex;
+    align-items: center;
+    padding: 0 18px;
+    font-weight: 800;
+  }
+  .mark {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3px;
+  }
+  .mark span { background: #f7f7f7; border-radius: 999px; }
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 32px 28px 56px; }
+  .masthead {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 8px 0 28px;
+  }
+  h1 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 31px;
+    line-height: 1.1;
+    color: var(--ink);
+  }
+  h1 span { color: var(--red); }
+  .dek { margin-top: 10px; color: #555; }
+  .run-chip {
+    border: 1px solid var(--line);
+    background: var(--soft);
+    border-radius: 4px;
+    padding: 7px 10px;
+    color: #555;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin: 0 0 24px;
+  }
+  .stat {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--red);
+    border-radius: 6px;
+    padding: 18px 20px;
+    min-height: 96px;
+  }
+  .stat.green { border-top-color: var(--green); }
+  .stat.amber { border-top-color: var(--amber); }
+  .stat.blue { border-top-color: var(--blue); }
+  .stat .value {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 34px;
+    line-height: 1;
+    color: var(--red);
+    font-weight: 700;
+  }
+  .stat.green .value { color: var(--green); }
+  .stat.amber .value { color: var(--amber); }
+  .stat.blue .value { color: var(--blue); }
+  .stat .label { margin-top: 8px; color: #666; font-weight: 800; font-size: 13px; }
+  .insight {
+    background: #eff6ff;
+    border: 1px solid #b7d4ff;
+    border-left: 4px solid var(--blue);
+    border-radius: 6px;
+    padding: 16px 18px;
+    margin: 0 0 24px;
+    color: #183052;
+  }
+  .seed-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 12px;
+  }
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    min-height: 20px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    border: 1px solid #9fc2ff;
+    background: #dbeafe;
+    color: #1457d9;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  .toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 0 0 12px;
+  }
+  .section-title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .filters { display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end; }
+  .filter-btn {
+    appearance: none;
+    border: 1px solid var(--line);
+    background: #fff;
+    color: #555;
+    border-radius: 4px;
+    padding: 5px 9px;
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+  }
+  .filter-btn.active, .filter-btn:hover {
+    border-color: #9fc2ff;
+    background: #eff6ff;
+    color: #1457d9;
+  }
+  .table-shell {
+    overflow-x: auto;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+  }
+  table {
+    width: 100%;
+    min-width: 1060px;
+    border-collapse: collapse;
+  }
+  th {
+    background: var(--soft);
+    border-bottom: 1px solid var(--line);
+    color: #6a6a6a;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 11px 12px;
+  }
+  td {
+    border-bottom: 1px solid #e7e5e0;
+    padding: 12px;
+    vertical-align: top;
+    font-size: 13px;
+  }
+  tr.topic-row { cursor: pointer; }
+  tr.topic-row:hover td { background: #fcfcfb; }
+  .rank {
+    color: #777;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-weight: 800;
+    width: 44px;
+  }
+  .topic-title { font-weight: 800; color: #202020; }
+  .topic-sub { color: #606060; font-size: 12px; margin-top: 4px; }
+  .num {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-weight: 800;
+    color: #2b2b2b;
+    display: inline-block;
+    min-width: 28px;
+  }
+  .mini-bar {
+    display: inline-block;
+    width: 62px;
+    height: 5px;
+    background: #e4e1dc;
+    border-radius: 10px;
+    margin-left: 8px;
+    vertical-align: middle;
+    overflow: hidden;
+  }
+  .mini-bar span { display: block; height: 100%; border-radius: 10px; }
+  .radar span { background: var(--red); }
+  .emerge span { background: var(--green); }
+  .velocity span { background: var(--blue); }
+  .opportunity span { background: var(--amber); }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    min-height: 22px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .badge.breakout { color: #dc2626; background: #fff1f1; border: 1px solid #ffa6a6; }
+  .badge.emerging { color: #c26a00; background: #fff8e6; border: 1px solid #f4be4a; }
+  .badge.rising { color: #1457d9; background: #eff6ff; border: 1px solid #9fc2ff; }
+  .badge.watch { color: #6b7280; background: #f4f4f5; border: 1px solid #d4d4d8; }
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 4px 4px 0;
+    padding: 2px 7px;
+    min-height: 22px;
+    border-radius: 4px;
+    border: 1px solid #b7d4ff;
+    background: #eff6ff;
+    color: #1457d9;
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .detail-row[hidden] { display: none; }
+  .detail-row td {
+    background: #fbfbf9;
+    padding: 0;
+  }
+  .detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    padding: 16px 20px 18px 56px;
+    border-top: 1px solid #eeeae4;
+  }
+  .detail h4 {
+    margin: 0 0 6px;
+    color: #606060;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+  }
+  .detail p { margin: 0; font-size: 13px; color: #2c2c2c; }
+  .spark {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    align-items: end;
+    gap: 2px;
+    width: 96px;
+    height: 30px;
+  }
+  .spark span {
+    display: block;
+    background: #cf2f32;
+    min-height: 2px;
+    border-radius: 2px 2px 0 0;
+  }
+  .rejected { margin-top: 28px; }
+  .empty { padding: 28px; text-align: center; color: var(--muted); }
+  @media (max-width: 820px) {
+    .wrap { padding: 24px 16px 44px; }
+    .masthead { display: block; }
+    .run-chip { display: inline-block; margin-top: 18px; white-space: normal; }
+    .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .toolbar { align-items: flex-start; flex-direction: column; }
+    .filters { justify-content: flex-start; }
+    .detail { grid-template-columns: 1fr; padding-left: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="topbar"><span class="mark"><span></span><span></span><span></span><span></span></span>Google Trend Radar</div>
+<main class="wrap">
+  <header class="masthead">
+    <div>
+      <h1><span id="topic-title">Trend</span> Radar</h1>
+      <div class="dek" id="dek"></div>
+    </div>
+    <div class="run-chip" id="run-meta"></div>
+  </header>
+
+  <section class="stats" id="stats"></section>
+
+  <section class="insight">
+    <div><span class="pill">Method</span></div>
+    <div id="method-copy" style="margin-top:10px;"></div>
+    <div class="seed-list" id="seed-list"></div>
+  </section>
+
+  <section>
+    <div class="toolbar">
+      <div class="section-title" id="radar-title">Trend Radar</div>
+      <div class="filters" id="filters"></div>
+    </div>
+    <div class="table-shell">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Trend</th>
+            <th>Stage</th>
+            <th>Radar</th>
+            <th>Emergence</th>
+            <th>Velocity</th>
+            <th>Opportunity</th>
+            <th>Interest</th>
+            <th>Lift</th>
+            <th>Signals</th>
+          </tr>
+        </thead>
+        <tbody id="topic-rows"></tbody>
+      </table>
+      <div class="empty" id="empty" hidden>No trends cleared the radar threshold.</div>
+    </div>
+  </section>
+
+  <section class="rejected" id="rejected-section" hidden>
+    <div class="toolbar"><div class="section-title">Rejected Or Weak Signals</div></div>
+    <div class="table-shell">
+      <table>
+        <thead><tr><th>Topic</th><th>Reason</th></tr></thead>
+        <tbody id="rejected-rows"></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<script type="application/json" id="radar-json">{
+  "run_date": "2026-07-14",
+  "generated_at": "2026-07-14T20:25:42",
+  "topic": "diet",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "diet",
+    "keto diet",
+    "intermittent fasting",
+    "low carb diet",
+    "Mediterranean diet",
+    "weight management",
+    "calorie deficit",
+    "macro tracking",
+    "elimination diet",
+    "anti-inflammatory diet",
+    "diet trends",
+    "diet products",
+    "diet news",
+    "diet for beginners",
+    "diet routine",
+    "diet benefits",
+    "diet ideas",
+    "diet reviews"
+  ],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 18,
+    "total_reviewed": 80,
+    "total_retained": 6,
+    "total_rejected": 75,
+    "breakouts": 2,
+    "emerging": 0,
+    "rising": 3,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "topic": "how to lose weight fast",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 66,
+      "emergence_score": 82,
+      "velocity_score": 41,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "Breakout",
+      "latest_interest": 1,
+      "peak_interest": 3,
+      "slope": 1,
+      "acceleration": 0,
+      "seed_terms": [
+        "diet reviews"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; interest moved from 0 to 1; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 2,
+      "topic": "ups tracking",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 65,
+      "emergence_score": 79,
+      "velocity_score": 42,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 87,
+      "confidence": "high",
+      "rising_label": "Breakout",
+      "latest_interest": 17,
+      "peak_interest": 27,
+      "slope": 0,
+      "acceleration": -4,
+      "seed_terms": [
+        "macro tracking"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        17,
+        14,
+        12,
+        10,
+        10,
+        8,
+        7,
+        7,
+        6,
+        6,
+        6,
+        6,
+        7,
+        11,
+        16,
+        22,
+        27,
+        26,
+        26,
+        22,
+        21,
+        19,
+        18,
+        18,
+        16,
+        15,
+        13,
+        11,
+        10,
+        8,
+        7,
+        7,
+        6,
+        5,
+        6,
+        5,
+        7,
+        9,
+        16,
+        22,
+        25,
+        25,
+        23,
+        22,
+        20,
+        19,
+        18,
+        16,
+        16,
+        14,
+        12,
+        10,
+        8,
+        8,
+        7,
+        6,
+        6,
+        5,
+        5,
+        5,
+        7,
+        8,
+        15,
+        20,
+        25,
+        25,
+        23,
+        21,
+        19,
+        18,
+        17,
+        16,
+        13,
+        12,
+        10,
+        8,
+        7,
+        6,
+        5,
+        5,
+        5,
+        5,
+        4,
+        4,
+        4,
+        6,
+        8,
+        11,
+        11,
+        11,
+        11,
+        10,
+        9,
+        9,
+        8,
+        8,
+        6,
+        6,
+        5,
+        4,
+        4,
+        3,
+        4,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        5,
+        7,
+        6,
+        6,
+        6,
+        6,
+        6,
+        5,
+        5,
+        5,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        5,
+        7,
+        11,
+        17,
+        22,
+        25,
+        24,
+        21,
+        19,
+        19,
+        18,
+        17,
+        17,
+        15,
+        12,
+        11,
+        8,
+        7,
+        6,
+        6,
+        5,
+        5,
+        4,
+        4,
+        5,
+        8,
+        13,
+        18,
+        24,
+        24,
+        22,
+        23,
+        19,
+        18,
+        18,
+        17
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; interest moved from 17 to 17; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 3,
+      "topic": "easy keto recipes for beginners",
+      "trend_stage": "rising",
+      "urgency": "monitor",
+      "radar_score": 53,
+      "emergence_score": 40,
+      "velocity_score": 58,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 64,
+      "confidence": "high",
+      "rising_label": "+150%",
+      "latest_interest": 20,
+      "peak_interest": 100,
+      "slope": 20,
+      "acceleration": 14,
+      "seed_terms": [
+        "keto diet"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        5,
+        6,
+        4,
+        4,
+        6,
+        13,
+        6,
+        0,
+        13,
+        15,
+        20,
+        20,
+        0,
+        0,
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        3,
+        6,
+        0,
+        0,
+        0,
+        0,
+        4,
+        6,
+        5,
+        0,
+        10,
+        0,
+        0,
+        19,
+        22,
+        0,
+        23,
+        10,
+        8,
+        5,
+        0,
+        0,
+        0,
+        6,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        0,
+        0,
+        0,
+        10,
+        16,
+        25,
+        32,
+        20,
+        36,
+        20,
+        16,
+        0,
+        6,
+        5,
+        7,
+        5,
+        8,
+        6,
+        6,
+        7,
+        6,
+        10,
+        8,
+        6,
+        8,
+        7,
+        10,
+        15,
+        13,
+        13,
+        23,
+        20,
+        25,
+        33,
+        0,
+        10,
+        0,
+        0,
+        4,
+        5,
+        0,
+        0,
+        5,
+        6,
+        6,
+        7,
+        6,
+        9,
+        7,
+        10,
+        8,
+        13,
+        17,
+        25,
+        30,
+        35,
+        53,
+        39,
+        30,
+        22,
+        13,
+        10,
+        9,
+        8,
+        7,
+        5,
+        6,
+        7,
+        5,
+        8,
+        10,
+        6,
+        4,
+        6,
+        11,
+        12,
+        20,
+        29,
+        27,
+        33,
+        74,
+        38,
+        38,
+        22,
+        19,
+        17,
+        30,
+        22,
+        24,
+        20,
+        26,
+        25,
+        31,
+        22,
+        18,
+        15,
+        13,
+        12,
+        20,
+        28,
+        55,
+        97,
+        94,
+        100,
+        70,
+        56,
+        33,
+        14,
+        18,
+        14,
+        14,
+        20,
+        12,
+        14,
+        20
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +150%; interest moved from 0 to 20; found through rising query",
+      "recommended_action": "Track as a developing query and compare against existing coverage."
+    },
+    {
+      "rank": 4,
+      "topic": "keto diet plan",
+      "trend_stage": "rising",
+      "urgency": "monitor",
+      "radar_score": 53,
+      "emergence_score": 35,
+      "velocity_score": 63,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 61,
+      "confidence": "high",
+      "rising_label": "+50%",
+      "latest_interest": 28,
+      "peak_interest": 100,
+      "slope": 24,
+      "acceleration": 15,
+      "seed_terms": [
+        "diet"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        4,
+        5,
+        8,
+        8,
+        9,
+        6,
+        7,
+        14,
+        10,
+        15,
+        0,
+        0,
+        23,
+        0,
+        0,
+        11,
+        7,
+        0,
+        5,
+        7,
+        5,
+        5,
+        4,
+        4,
+        5,
+        7,
+        5,
+        5,
+        7,
+        7,
+        7,
+        8,
+        6,
+        11,
+        14,
+        17,
+        27,
+        22,
+        19,
+        15,
+        0,
+        10,
+        7,
+        6,
+        3,
+        7,
+        6,
+        0,
+        0,
+        3,
+        0,
+        5,
+        0,
+        5,
+        0,
+        0,
+        8,
+        11,
+        18,
+        26,
+        31,
+        18,
+        23,
+        16,
+        14,
+        5,
+        6,
+        11,
+        6,
+        7,
+        10,
+        8,
+        7,
+        6,
+        10,
+        11,
+        9,
+        8,
+        11,
+        15,
+        16,
+        8,
+        14,
+        26,
+        30,
+        0,
+        34,
+        11,
+        12,
+        9,
+        10,
+        5,
+        4,
+        4,
+        6,
+        7,
+        7,
+        10,
+        10,
+        7,
+        6,
+        7,
+        7,
+        7,
+        19,
+        17,
+        20,
+        43,
+        34,
+        59,
+        30,
+        35,
+        16,
+        15,
+        10,
+        8,
+        10,
+        10,
+        6,
+        6,
+        11,
+        11,
+        11,
+        8,
+        9,
+        11,
+        14,
+        15,
+        19,
+        20,
+        32,
+        35,
+        41,
+        69,
+        62,
+        38,
+        21,
+        24,
+        21,
+        33,
+        22,
+        24,
+        22,
+        27,
+        29,
+        32,
+        24,
+        16,
+        14,
+        16,
+        20,
+        25,
+        35,
+        51,
+        98,
+        100,
+        90,
+        51,
+        56,
+        31,
+        24,
+        27,
+        21,
+        14,
+        18,
+        13,
+        15,
+        28
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +50%; interest moved from 4 to 28; found through rising query",
+      "recommended_action": "Track as a developing query and compare against existing coverage."
+    },
+    {
+      "rank": 5,
+      "topic": "what is a balanced diet",
+      "trend_stage": "rising",
+      "urgency": "monitor",
+      "radar_score": 52,
+      "emergence_score": 37,
+      "velocity_score": 57,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 62,
+      "confidence": "high",
+      "rising_label": "+80%",
+      "latest_interest": 21,
+      "peak_interest": 100,
+      "slope": 18,
+      "acceleration": 12,
+      "seed_terms": [
+        "diet"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        3,
+        3,
+        5,
+        7,
+        3,
+        7,
+        7,
+        6,
+        11,
+        12,
+        0,
+        15,
+        17,
+        21,
+        17,
+        8,
+        8,
+        4,
+        5,
+        4,
+        3,
+        5,
+        4,
+        5,
+        4,
+        3,
+        0,
+        3,
+        4,
+        6,
+        4,
+        6,
+        0,
+        14,
+        11,
+        15,
+        20,
+        19,
+        15,
+        7,
+        0,
+        4,
+        6,
+        0,
+        0,
+        4,
+        4,
+        0,
+        0,
+        0,
+        0,
+        4,
+        4,
+        3,
+        5,
+        6,
+        7,
+        10,
+        13,
+        13,
+        27,
+        25,
+        25,
+        17,
+        6,
+        5,
+        6,
+        9,
+        7,
+        6,
+        5,
+        7,
+        6,
+        7,
+        7,
+        7,
+        10,
+        8,
+        7,
+        9,
+        17,
+        12,
+        17,
+        22,
+        24,
+        28,
+        26,
+        10,
+        8,
+        7,
+        0,
+        7,
+        5,
+        6,
+        6,
+        9,
+        6,
+        5,
+        4,
+        7,
+        8,
+        7,
+        8,
+        9,
+        9,
+        16,
+        23,
+        23,
+        29,
+        36,
+        50,
+        22,
+        16,
+        10,
+        11,
+        8,
+        8,
+        5,
+        8,
+        7,
+        8,
+        7,
+        9,
+        8,
+        9,
+        6,
+        8,
+        11,
+        15,
+        21,
+        24,
+        28,
+        30,
+        78,
+        53,
+        31,
+        14,
+        23,
+        17,
+        27,
+        22,
+        19,
+        23,
+        26,
+        24,
+        21,
+        17,
+        10,
+        9,
+        13,
+        12,
+        21,
+        28,
+        38,
+        88,
+        96,
+        100,
+        62,
+        43,
+        26,
+        12,
+        16,
+        13,
+        14,
+        13,
+        15,
+        16,
+        21
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +80%; interest moved from 3 to 21; found through rising query",
+      "recommended_action": "Track as a developing query and compare against existing coverage."
+    },
+    {
+      "rank": 6,
+      "topic": "how to start a diet plan",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 50,
+      "emergence_score": 37,
+      "velocity_score": 52,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 62,
+      "confidence": "high",
+      "rising_label": "+80%",
+      "latest_interest": 13,
+      "peak_interest": 89,
+      "slope": 10,
+      "acceleration": 14,
+      "seed_terms": [
+        "diet"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        3,
+        4,
+        6,
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        9,
+        0,
+        0,
+        15,
+        0,
+        13,
+        0,
+        0,
+        7,
+        5,
+        0,
+        0,
+        0,
+        3,
+        5,
+        0,
+        3,
+        0,
+        4,
+        3,
+        0,
+        0,
+        0,
+        9,
+        8,
+        0,
+        0,
+        15,
+        0,
+        14,
+        10,
+        7,
+        4,
+        5,
+        0,
+        0,
+        6,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        5,
+        10,
+        8,
+        20,
+        17,
+        31,
+        20,
+        23,
+        16,
+        11,
+        6,
+        5,
+        7,
+        5,
+        5,
+        5,
+        8,
+        9,
+        6,
+        7,
+        6,
+        8,
+        4,
+        7,
+        9,
+        7,
+        13,
+        12,
+        18,
+        0,
+        29,
+        16,
+        9,
+        0,
+        8,
+        4,
+        5,
+        6,
+        5,
+        6,
+        5,
+        3,
+        7,
+        7,
+        4,
+        6,
+        6,
+        5,
+        8,
+        11,
+        14,
+        27,
+        23,
+        32,
+        47,
+        36,
+        22,
+        14,
+        8,
+        6,
+        7,
+        5,
+        6,
+        7,
+        10,
+        5,
+        6,
+        6,
+        8,
+        9,
+        6,
+        9,
+        10,
+        11,
+        16,
+        22,
+        30,
+        31,
+        77,
+        56,
+        28,
+        18,
+        21,
+        16,
+        27,
+        20,
+        17,
+        23,
+        26,
+        21,
+        28,
+        19,
+        12,
+        8,
+        10,
+        14,
+        11,
+        28,
+        53,
+        78,
+        89,
+        89,
+        69,
+        34,
+        38,
+        20,
+        19,
+        15,
+        16,
+        14,
+        17,
+        15,
+        13
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +80%; interest moved from 3 to 13; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "calorie deficit",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "hello fresh",
+      "reason": "Off-topic after expanded seed scan"
+    },
+    {
+      "topic": "airmail",
+      "reason": "Off-topic after expanded seed scan"
+    },
+    {
+      "topic": "backend development",
+      "reason": "Off-topic after expanded seed scan"
+    },
+    {
+      "topic": "twitter",
+      "reason": "Off-topic after expanded seed scan"
+    },
+    {
+      "topic": "robotics programming",
+      "reason": "Off-topic after expanded seed scan"
+    },
+    {
+      "topic": "digestive enzymes",
+      "reason": "Off-topic after expanded seed scan"
+    },
+    {
+      "topic": "rust programming",
+      "reason": "Off-topic after expanded seed scan"
+    },
+    {
+      "topic": "shirataki noodles",
+      "reason": "Off-topic after expanded seed scan"
+    },
+    {
+      "topic": "healthy minds",
+      "reason": "Off-topic after expanded seed scan"
+    },
+    {
+      "topic": "mobile app development",
+      "reason": "Off-topic after expanded seed scan"
+    },
+    {
+      "topic": "bmi calculator women",
+      "reason": "Off-topic after expanded seed scan"
+    },
+    {
+      "topic": "vpn subscription",
+      "reason": "Off-topic after expanded seed scan"
+    },
+    {
+      "topic": "cloud",
+      "reason": "Off-topic after expanded seed scan"
+    },
+    {
+      "topic": "cauliflower rice",
+      "reason": "Off-topic after expanded seed scan"
+    },
+    {
+      "topic": "python web framework",
+      "reason": "Off-topic after expanded seed scan"
+    },
+    {
+      "topic": "java",
+      "reason": "Off-topic after expanded seed scan"
+    },
+    {
+      "topic": "dka",
+      "reason": "Off-topic after expanded seed scan"
+    },
+    {
+      "topic": "dance",
+      "reason": "Off-topic after expanded seed scan"
+    },
+    {
+      "topic": "optavia reviews",
+      "reason": "Off-topic after expanded seed scan"
+    },
+    {
+      "topic": "high fiber foods",
+      "reason": "Off-topic after expanded seed scan"
+    },
+    {
+      "topic": "computer",
+      "reason": "Off-topic after expanded seed scan"
+    },
+    {
+      "topic": "university of southern california longevity diet",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "summer diet high fiber foods",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "the fast metabolism diet reviews",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "marie-pierre st-onge sleep diet",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "tracy paeschke cholesterol diet advice",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "keto diet chart for weight loss for female",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "is diet soda keto friendly",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "weight watchers login",
+      "reason": "Weak radar score (49)"
+    },
+    {
+      "topic": "ifm elimination diet",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "carnivore diet meal plan",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "best diet for diabetics",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "how to reduce sugar in diet",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "how does a low carb diet work",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "what is a detox diet",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "candida elimination diet",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "gluten free diet for beginners",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "erling haaland diet routine",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "keto diet dangers",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "intermittent fasting vs calorie restriction",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "does intermittent fasting lower cholesterol",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "best way to do intermittent fasting",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "what is a low carb diet consist of",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "how to start the keto diet",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "is corn good for keto diet",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "gestational diabetes diet",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "mediterranean diet meal plan",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "foods to avoid on a low carb diet",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "optavia diet",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "how does intermittent fasting work for weight loss",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "how does intermittent fasting help you lose weight",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "intermittent fasting schedules",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "is mediterranean diet low carb",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "gluten free diet benefits",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "keto diet explained",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "keto diet with intermittent fasting",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "intermittent fasting reviews",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "how many carbs per day for low carb diet",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "how to start a keto diet",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "is diet coke keto",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "calorie deficit calculator",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "diet coke",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "mediterranean diet",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "mediterranean",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "protein diet",
+      "reason": "Weak radar score (39)"
+    },
+    {
+      "topic": "keto diet",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "science diet",
+      "reason": "Weak radar score (40)"
+    },
+    {
+      "topic": "what is the best diet",
+      "reason": "Weak radar score (46)"
+    },
+    {
+      "topic": "water diet",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "liquid diet",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "carnivore diet",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "pepsi diet",
+      "reason": "Weak radar score (45)"
+    },
+    {
+      "topic": "anti inflammatory diet",
+      "reason": "Weak radar score (40)"
+    },
+    {
+      "topic": "dash diet",
+      "reason": "Weak radar score (46)"
+    }
+  ]
+}</script>
+<script>
+function readRadarData() {
+  const raw = document.getElementById('radar-json').textContent.trim();
+  if (!raw || raw === '__RADAR_' + 'DATA__') {
+    return {
+      run_date: '',
+      generated_at: '',
+      topic: 'Topic',
+      geo: 'US',
+      date_window: 'now 7-d',
+      methodology: 'Dashboard template preview.',
+      summary: { total_reviewed: 0, total_retained: 0, total_rejected: 0, breakouts: 0, emerging: 0, notes: '' },
+      candidates: [],
+      rejected: []
+    };
+  }
+  return JSON.parse(raw);
+}
+
+const D = readRadarData();
+const candidates = Array.isArray(D.candidates) ? D.candidates : [];
+const rejected = Array.isArray(D.rejected) ? D.rejected : [];
+const summary = D.summary || {};
+const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({
+  '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+}[ch]));
+const clamp = n => Math.max(0, Math.min(100, Number(n) || 0));
+const stageClass = value => ['breakout', 'emerging', 'rising', 'watch'].includes(value) ? value : 'watch';
+
+document.getElementById('topic-title').textContent = D.topic || 'Trend';
+document.getElementById('dek').textContent = `${D.geo || 'US'} · ${D.date_window || 'now 7-d'} · ${D.run_date || ''}`;
+document.getElementById('run-meta').textContent = `Generated: ${(D.generated_at || '').replace('T', ' ')} | retained ${candidates.length}`;
+document.getElementById('method-copy').textContent = `${D.methodology}. ${summary.notes || ''}`;
+document.getElementById('radar-title').textContent = `Trend Radar — ${candidates.length} retained`;
+document.getElementById('seed-list').innerHTML = (Array.isArray(D.seed_terms) ? D.seed_terms : [])
+  .map(seed => `<span class="chip">${esc(seed)}</span>`)
+  .join('');
+
+const statData = [
+  { label: 'Signals Reviewed', value: summary.total_reviewed ?? 0, cls: '' },
+  { label: 'Retained Trends', value: candidates.length, cls: 'green' },
+  { label: 'Breakouts', value: summary.breakouts ?? 0, cls: 'amber' },
+  { label: 'Emerging', value: summary.emerging ?? 0, cls: 'blue' },
+];
+document.getElementById('stats').innerHTML = statData.map(s => `
+  <div class="stat ${s.cls}">
+    <div class="value">${esc(s.value)}</div>
+    <div class="label">${esc(s.label)}</div>
+  </div>
+`).join('');
+
+const filters = ['All', 'breakout', 'emerging', 'rising', 'watch'];
+document.getElementById('filters').innerHTML = filters.map((f, i) =>
+  `<button class="filter-btn ${i === 0 ? 'active' : ''}" data-filter="${esc(f)}">${esc(f)}</button>`
+).join('');
+
+function scoreCell(value, cls) {
+  const score = clamp(value);
+  return `<span class="num">${score}</span><span class="mini-bar ${cls}"><span style="width:${score}%"></span></span>`;
+}
+
+function sparkline(scores) {
+  const vals = Array.isArray(scores) ? scores.slice(-8) : [];
+  if (!vals.length) return '<span class="topic-sub">No time series</span>';
+  const max = Math.max(...vals, 1);
+  return `<div class="spark">${vals.map(v => `<span style="height:${Math.max(2, Math.round((v / max) * 30))}px"></span>`).join('')}</div>`;
+}
+
+function chips(values) {
+  return (Array.isArray(values) ? values : []).slice(0, 4).map(value => `<span class="chip">${esc(value)}</span>`).join('');
+}
+
+function tagChips(tags) {
+  const entries = tags && typeof tags === 'object' ? Object.entries(tags) : [];
+  if (!entries.length) return '<span class="topic-sub">No tags matched</span>';
+  return entries.map(([tagType, terms]) => `<span class="chip">${esc(tagType)}: ${esc((terms || []).join(', '))}</span>`).join(' ');
+}
+
+function rowHtml(c, i) {
+  const stage = stageClass(c.trend_stage);
+  const lift = c.rising_label || (Number(c.slope) > 0 ? `+${c.slope}` : String(c.slope ?? 0));
+  return `
+    <tr class="topic-row" data-stage="${esc(stage)}" data-detail="${i}">
+      <td class="rank">${String(c.rank || i + 1).padStart(2, '0')}</td>
+      <td>
+        <div class="topic-title">${esc(c.topic)}</div>
+        <div class="topic-sub">${esc(c.why_now || '')}</div>
+      </td>
+      <td><span class="badge ${esc(stage)}">${esc(stage)}</span></td>
+      <td>${scoreCell(c.radar_score, 'radar')}</td>
+      <td>${scoreCell(c.emergence_score, 'emerge')}</td>
+      <td>${scoreCell(c.velocity_score, 'velocity')}</td>
+      <td>${scoreCell(c.opportunity_score, 'opportunity')}</td>
+      <td>${sparkline(c.interest_scores)}</td>
+      <td><span class="num">${esc(lift)}</span></td>
+      <td>${chips(c.discovery_sources)}</td>
+    </tr>
+    <tr class="detail-row" data-parent="${i}" hidden>
+      <td colspan="10">
+        <div class="detail">
+          <div><h4>Recommended Action</h4><p>${esc(c.recommended_action || '')}</p></div>
+          <div><h4>Seed Terms</h4><p>${esc((c.seed_terms || []).join(', ') || 'None')}</p></div>
+          <div><h4>Confidence</h4><p>${esc(c.confidence || 'low')} confidence · score ${esc(c.confidence_score ?? 0)}</p></div>
+          <div><h4>Tags</h4><p>${tagChips(c.tags)}</p></div>
+        </div>
+      </td>
+    </tr>
+  `;
+}
+
+const tbody = document.getElementById('topic-rows');
+tbody.innerHTML = candidates.map(rowHtml).join('');
+document.getElementById('empty').hidden = candidates.length > 0;
+
+tbody.addEventListener('click', event => {
+  const row = event.target.closest('.topic-row');
+  if (!row) return;
+  const detail = tbody.querySelector(`.detail-row[data-parent="${row.dataset.detail}"]`);
+  if (detail) detail.hidden = !detail.hidden;
+});
+
+document.getElementById('filters').addEventListener('click', event => {
+  const btn = event.target.closest('.filter-btn');
+  if (!btn) return;
+  document.querySelectorAll('.filter-btn').forEach(button => button.classList.remove('active'));
+  btn.classList.add('active');
+  const filter = btn.dataset.filter;
+  document.querySelectorAll('.topic-row').forEach(row => {
+    const show = filter === 'All' || row.dataset.stage === filter;
+    row.hidden = !show;
+    const detail = tbody.querySelector(`.detail-row[data-parent="${row.dataset.detail}"]`);
+    if (detail) detail.hidden = true;
+  });
+});
+
+if (rejected.length) {
+  document.getElementById('rejected-section').hidden = false;
+  document.getElementById('rejected-rows').innerHTML = rejected.map(r => `
+    <tr><td>${esc(r.topic)}</td><td>${esc(r.reason)}</td></tr>
+  `).join('');
+}
+</script>
+</body>
+</html>
