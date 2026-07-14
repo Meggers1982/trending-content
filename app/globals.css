@@ -134,39 +134,12 @@ h2 { font-size: 24px; }
 .metrics strong { display: block; margin-top: 10px; font: 700 34px/1 Georgia, "Times New Roman", serif; }
 .metrics p { margin: 8px 0 0; color: var(--muted); }
 
-.grid, .radarDashboard { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.radarDashboard { display: grid; gap: 14px; }
 .panel, .opsPanel { padding: 18px; min-width: 0; }
 .panelHeader { display: flex; justify-content: space-between; gap: 16px; margin-bottom: 12px; }
 .panelHeader strong { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; }
 .formattedPanel { min-height: 340px; }
-.trendGrid { display: grid; gap: 10px; }
-.trendCard {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 44px 42px;
-  align-items: center;
-  gap: 10px;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  background: #fbfaf7;
-  padding: 10px 12px;
-}
-.trendCard strong { display: block; text-transform: capitalize; }
-.trendCard span { color: var(--muted); font-size: 12px; }
-.trendCard b {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 24px;
-  text-align: right;
-}
-.trendCard em {
-  border-radius: 999px;
-  padding: 3px 6px;
-  text-align: center;
-  font-style: normal;
-  font-size: 12px;
-  font-weight: 800;
-}
-.trendCard em.up { color: var(--green); background: #eefaf2; }
-.trendCard em.down { color: var(--red); background: #fff1f2; }
 .newsList {
   display: grid;
   gap: 10px;
@@ -194,7 +167,6 @@ h2 { font-size: 24px; }
   line-height: 1.35;
 }
 .newsItem p { margin: 5px 0 0; color: var(--muted); font-size: 12px; }
-.risingPanel { grid-column: 1 / -1; }
 .risingPanel h4 { margin: 0 0 8px; font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
 .risingPanel .chipGroup { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
 .risingPanel .chipGroup:last-child { margin-bottom: 0; }
@@ -433,6 +405,6 @@ td b { display: inline-block; min-width: 28px; }
   .rail nav { display: flex; width: auto; }
   .rail a { padding: 8px 10px; }
   .shell { width: 100%; padding: 24px 18px 48px; }
-  .hero, .grid, .radarDashboard, .metrics, .runList, .metadataGrid { grid-template-columns: 1fr; }
+  .hero, .grid, .metrics, .runList, .metadataGrid { grid-template-columns: 1fr; }
   .hero h2 { font-size: 30px; }
 }

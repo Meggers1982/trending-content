@@ -1146,6 +1146,43 @@ Fix, `app/page.jsx`: `parseSignalRadar()` now splits the signal text into `## `-
 
 **Recurred a third time from a different source**: re-ran again and "upcoming events" (no seed overlap at all) slipped through. Root cause was structural, not another missing word: `build_data()`'s `extra_anchor_terms` param (the beauty taxonomy, ~60 terms across `ingredients`/`benefits`/`concerns`) was being folded into the anchor set via `relevance_anchors()`, which decomposes every multi-word term into standalone tokens — the benefit `"even skin tone"` contributed the bare token `"even"`, which is a literal substring of `"events"`. Unlike the seed list (a short, curated dozen terms worth patching word-by-word), a ~60-term config file will keep producing this same bug indefinitely. Fixed structurally instead: `build_data()` now adds `extra_anchor_terms` as full-phrase-only anchors (`{normalize(term) for term in extra_anchor_terms}`, no per-word decomposition) rather than calling `relevance_anchors()` on them. This is scoped to just the taxonomy-enrichment path — the original seed-based anchor decomposition (topic + `SEED_PROFILES`/manual seeds) is untouched, since it's a short list that's now been audited. Verified against all three generations of false positives (clean/care/loss, glass/acid/treatment/cycling, even→events) plus legitimate matches in one pass.
 
+### Seven dedicated per-category profiles + removed the "Category Interest" panel (added 2026-07-14)
+
+User feedback: the `wellness`/`health` seed profiles blend all 9 tracked categories (health,
+wellness, nutrition, fitness, food safety, diet, weight loss, mental health, gut health —
+`GOOGLE_TRENDS_KEYWORDS` in `run_pipeline.py`) into one broad seed list each, so there was no
+way to scan just one category on its own. Added 7 new focused `SEED_PROFILES` entries in
+`google_trend_radar.py` for the categories that didn't already have one: `nutrition`,
+`fitness`, `food-safety`, `diet`, `weight-loss`, `mental-health`, `gut-health` (hyphenated
+slugs — CLI-flag convention, matches `--profile food-safety` etc.). Same treatment as
+`wellness`/`health`/`ai`: pure Google Trends discovery + scoring, no Reddit cross-check or
+taxonomy tagging (those stay beauty-specific — building 7 more taxonomies/subreddit lists
+wasn't asked for and adds real surface). Wired into the same 3 places as every other profile:
+argparse `choices` in `google_trend_radar.py`, `PROFILES` in `RadarScan.jsx`,
+`ALLOWED_PROFILES` in `app/api/radar/route.js`.
+
+**Applied the anchor-word lesson proactively this time** instead of finding it in production
+again: before finalizing each new seed list, ran the same offline
+`relevance_anchors()`/`is_relevant_candidate()` check used to catch the beauty bugs, against
+plausible off-topic queries sharing a word with each seed (e.g. "pest control company" for
+`nutrition`'s "portion control", "heart surgery recovery" for `weight-loss`'s "weight loss
+surgery"). Found and pre-emptively added 7 more words to `GENERIC_ANCHOR_WORDS`: `safety`,
+`training`, `recovery`, `management`, `surgery`, `medication`, `control` — all generic halves
+of compound seeds ("food safety", "strength training", "workout recovery", "weight
+management", "weight loss surgery", "weight loss medication", "portion control"). All 7
+profiles passed the audit before any real scan ran.
+
+Also removed the "Category Interest" panel from `app/page.jsx` (the 9-fixed-category
+depth/delta view) per user request — now redundant with the "Rising Searches" panel above it,
+and was the literal thing prompting "these are topics not trends" feedback twice. Deleted the
+panel's `<article>`, the now-dead `trendRows` extraction in `parseSignalRadar()`, and the
+unused `.trendGrid`/`.trendCard*` CSS. `.radarDashboard` (`app/globals.css`) changed from a
+2-column grid to a single-column stack, since it only ever had two children and one is gone;
+`.risingPanel`'s now-redundant `grid-column: 1 / -1` was removed too. `GOOGLE_TRENDS_KEYWORDS`
+in `run_pipeline.py` and the underlying `serp_signals_*.md` collection are untouched — only
+the dashboard's *rendering* of that fixed-category depth data was removed, not the collection
+itself (still feeds the "Rising Related Searches" aggregate, which is derived from it).
+
 ### Recent-run memory: how "check deferred topics" / "archive run to history" actually work
 
 For a while (until 2026-07-12), `data/run_history.yaml` and `data/deferred_topics.yaml` were purely documentation — Skill 01 Step 2 and Daily Run Step 9 above described steps the model was never actually given data for, because `run_pipeline.py` never read or wrote either file. `build_system_prompt()` only loaded `CLAUDE.md` + `configs/*.yaml` + skill files. Combined with `GOOGLE_NEWS_QUERIES` using a rolling `when:7d` window, this caused the same stories to be re-surfaced and re-scored as `content_status: new` for several consecutive days (confirmed 2026-07-12: 6+ of 9 candidates were repeats of the prior 1–2 days). `run_history.yaml`'s original seed content (references to `WebSearch`/`WebFetch`/`COMPOSIO_SEARCH_TRENDS`) was leftover from before this automated harness existed and had had exactly one commit (the initial one) the entire time.

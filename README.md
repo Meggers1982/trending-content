@@ -42,6 +42,12 @@ source, tags candidates with ingredient/benefit/concern labels from `configs/bea
 and computes an `opportunity_score` estimating whitespace (high trend interest, low existing
 coverage) alongside the base `radar_score` — see `CLAUDE.md`'s Engineering Notes for details.
 
+There are also focused, single-topic profiles for each of the categories the daily pipeline
+tracks depth for: `nutrition`, `fitness`, `food-safety`, `diet`, `weight-loss`,
+`mental-health`, `gut-health` (plus the existing `wellness`/`health`/`ai`/`beauty`) — pick one
+from the Trend Scanner's profile dropdown, or `--profile nutrition` on the CLI, to scan just
+that category instead of the broad `wellness`/`health` blend.
+
 The most recent scan's plain keyword list (topic, stage, radar/opportunity scores, tags) also
 shows up inline on the main dashboard under "Trending keywords" (`#keywords`), so you don't have
 to open a separate HTML file to see what's trending.

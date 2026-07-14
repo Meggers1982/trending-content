@@ -229,14 +229,6 @@ function parseSignalRadar(text) {
   const interestKey = sectionKeys.find((k) => k.startsWith("Google Trends — 7-Day Interest"));
   const interestLines = interestKey ? sections[interestKey] : [];
 
-  const trendRows = [];
-  for (const line of interestLines) {
-    const trend = line.match(/^\s+-\s+\*\*(.+?)\*\*:\s+latest=(\d+),\s+peak=(\d+),\s+7d-delta=([+-]?\d+)/);
-    if (trend) {
-      trendRows.push({ keyword: trend[1], latest: trend[2], peak: trend[3], delta: trend[4] });
-    }
-  }
-
   const risingIndex = interestLines.findIndex((line) => line.includes("Top rising related queries"));
   const risingSearches = risingIndex >= 0 ? bulletLines(interestLines.slice(risingIndex + 1)).slice(0, 20) : [];
 
@@ -252,14 +244,13 @@ function parseSignalRadar(text) {
 
   return {
     trendingNow,
-    trendRows: trendRows.slice(0, 9),
     risingSearches,
     newsRows: newsRows.slice(0, 18)
   };
 }
 
 function RadarDashboard({ text }) {
-  const { trendingNow, trendRows, risingSearches, newsRows } = parseSignalRadar(text);
+  const { trendingNow, risingSearches, newsRows } = parseSignalRadar(text);
   const hasRising = trendingNow.length > 0 || risingSearches.length > 0;
   return (
     <section className="radarDashboard" id="radar">
@@ -294,28 +285,6 @@ function RadarDashboard({ text }) {
             SerpAPI configured.
           </p>
         )}
-      </article>
-      <article className="panel formattedPanel">
-        <div className="panelHeader">
-          <span>Category Interest</span>
-          <strong>{trendRows.length ? "7-day interest" : "Missing"}</strong>
-        </div>
-        <p style={{ color: "var(--muted)", fontSize: 12, marginTop: -6, marginBottom: 12 }}>
-          Fixed topic areas we track depth for, not discovered trends — see Rising Searches above
-          for actual emerging queries.
-        </p>
-        <div className="trendGrid">
-          {trendRows.map((trend) => (
-            <div className="trendCard" key={trend.keyword}>
-              <div>
-                <strong>{trend.keyword}</strong>
-                <span>Peak {trend.peak}</span>
-              </div>
-              <b>{trend.latest}</b>
-              <em className={Number(trend.delta) >= 0 ? "up" : "down"}>{Number(trend.delta) >= 0 ? "+" : ""}{trend.delta}</em>
-            </div>
-          ))}
-        </div>
       </article>
       <article className="panel formattedPanel">
         <div className="panelHeader">

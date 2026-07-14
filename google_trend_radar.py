@@ -145,6 +145,90 @@ SEED_PROFILES = {
         "hair loss",
         "acne treatment",
     ],
+    "nutrition": [
+        "nutrition",
+        "macronutrients",
+        "meal prep",
+        "whole foods",
+        "fiber intake",
+        "added sugar",
+        "ultra-processed foods",
+        "nutrient deficiency",
+        "mindful eating",
+        "portion control",
+        "plant-based diet",
+    ],
+    "fitness": [
+        "fitness",
+        "strength training",
+        "cardio",
+        "HIIT workout",
+        "resistance training",
+        "mobility training",
+        "workout recovery",
+        "home workout",
+        "running",
+        "weightlifting",
+        "VO2 max",
+    ],
+    "food-safety": [
+        "food safety",
+        "food recall",
+        "foodborne illness",
+        "food contamination",
+        "listeria outbreak",
+        "salmonella outbreak",
+        "restaurant inspection",
+        "USDA recall",
+        "cross contamination",
+    ],
+    "diet": [
+        "diet",
+        "keto diet",
+        "intermittent fasting",
+        "low carb diet",
+        "Mediterranean diet",
+        "weight management",
+        "calorie deficit",
+        "macro tracking",
+        "elimination diet",
+        "anti-inflammatory diet",
+    ],
+    "weight-loss": [
+        "weight loss",
+        "weight loss journey",
+        "fat loss",
+        "sustainable weight loss",
+        "weight loss surgery",
+        "GLP-1",
+        "semaglutide",
+        "weight loss plateau",
+        "weight loss medication",
+    ],
+    "mental-health": [
+        "mental health",
+        "anxiety",
+        "depression",
+        "therapy",
+        "burnout",
+        "stress management",
+        "mindfulness",
+        "cognitive behavioral therapy",
+        "mental health awareness",
+        "trauma recovery",
+    ],
+    "gut-health": [
+        "gut health",
+        "microbiome",
+        "probiotics",
+        "prebiotics",
+        "gut bacteria",
+        "digestive health",
+        "IBS",
+        "bloating",
+        "gut brain axis",
+        "leaky gut",
+    ],
 }
 
 INTENT_MODIFIERS = [
@@ -185,6 +269,21 @@ GENERIC_ANCHOR_WORDS = {
     "acid",
     "treatment",
     "cycling",
+    # Audited proactively when adding the nutrition/fitness/food-safety/diet/
+    # weight-loss/mental-health/gut-health profiles, before shipping rather
+    # than after: each of these is the generic half of a compound seed
+    # ("food safety", "strength training", "workout recovery", "weight
+    # management", "weight loss surgery", "weight loss medication", "portion
+    # control") that would otherwise leak into an anchor matching unrelated
+    # queries ("gun safety", "job training", "data recovery", "project
+    # management", "heart surgery", "prescription medication", "pest control").
+    "safety",
+    "training",
+    "recovery",
+    "management",
+    "surgery",
+    "medication",
+    "control",
 }
 
 
@@ -971,7 +1070,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--geo", default="US", help="Google Trends geography code. Default: US.")
     parser.add_argument("--date", default="now 7-d", help='Google Trends date window. Default: "now 7-d".')
     parser.add_argument("--seeds", default="", help="Optional comma-separated seed terms to scan in addition to the selected profile.")
-    parser.add_argument("--profile", "--seed-profile", dest="seed_profile", default=DEFAULT_SEED_PROFILE, choices=["auto", "wellness", "health", "ai", "beauty", "none"], help="Seed profile to scan: wellness, health, ai, beauty, none, or auto. Default: auto.")
+    parser.add_argument("--profile", "--seed-profile", dest="seed_profile", default=DEFAULT_SEED_PROFILE, choices=["auto", "wellness", "health", "ai", "beauty", "nutrition", "fitness", "food-safety", "diet", "weight-loss", "mental-health", "gut-health", "none"], help="Seed profile to scan: wellness, health, ai, beauty, nutrition, fitness, food-safety, diet, weight-loss, mental-health, gut-health, none, or auto. Default: auto.")
     parser.add_argument("--max-seeds", type=int, default=DEFAULT_MAX_SEEDS, help="Maximum seed terms to scan. Default: 24.")
     parser.add_argument("--limit", type=int, default=80, help="Maximum discovered candidates to validate. Default: 80.")
     parser.add_argument("--timeout", type=int, default=DEFAULT_REQUEST_TIMEOUT, help="Seconds to wait for each SerpAPI request. Default: 12.")
@@ -1001,7 +1100,7 @@ def main() -> None:
         if args.seed_profile in SEED_PROFILES:
             args.topic = args.seed_profile
         else:
-            sys.exit("Choose --profile health, --profile wellness, --profile beauty, or provide --topic.")
+            sys.exit("Choose a --profile (wellness, health, ai, beauty, nutrition, fitness, food-safety, diet, weight-loss, mental-health, gut-health), or provide --topic.")
 
     seeds = build_seed_terms(args.topic, args.seeds, args.seed_profile, args.max_seeds)
     taxonomy = load_taxonomy()

@@ -3,7 +3,21 @@
 import { useEffect, useState } from "react";
 
 const RUN_TOKEN_STORAGE_KEY = "trending-content-os:run-token";
-const PROFILES = ["auto", "wellness", "health", "ai", "beauty", "none"];
+const PROFILES = [
+  "auto",
+  "wellness",
+  "health",
+  "ai",
+  "beauty",
+  "nutrition",
+  "fitness",
+  "food-safety",
+  "diet",
+  "weight-loss",
+  "mental-health",
+  "gut-health",
+  "none"
+];
 
 function formatStatus(job) {
   if (job?.running) return `Scanning "${job.mode}"`;

@@ -9,7 +9,21 @@ export const dynamic = "force-dynamic";
 const ROOT = process.cwd();
 const PYTHON_BIN = process.env.PYTHON_BIN || "python3";
 const MAX_TOPIC_LENGTH = 100;
-const ALLOWED_PROFILES = new Set(["auto", "wellness", "health", "ai", "beauty", "none"]);
+const ALLOWED_PROFILES = new Set([
+  "auto",
+  "wellness",
+  "health",
+  "ai",
+  "beauty",
+  "nutrition",
+  "fitness",
+  "food-safety",
+  "diet",
+  "weight-loss",
+  "mental-health",
+  "gut-health",
+  "none"
+]);
 
 // google_trend_radar.py prints this line on success; capturing the path lets
 // the UI link straight to the result instead of the user hunting for it.
