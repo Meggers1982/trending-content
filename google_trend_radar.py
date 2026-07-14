@@ -177,6 +177,14 @@ GENERIC_ANCHOR_WORDS = {
     "clean",
     "care",
     "loss",
+    # Audited the rest of the beauty seed list for the same pattern (a
+    # compound term whose generic half can stand alone as an anchor) after
+    # "glass" (from "glass skin") produced the same failure mode as "clean":
+    # "how to clean shower glass" slipped through a second time.
+    "glass",
+    "acid",
+    "treatment",
+    "cycling",
 }
 
 
