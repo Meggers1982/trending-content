@@ -42,6 +42,10 @@ source, tags candidates with ingredient/benefit/concern labels from `configs/bea
 and computes an `opportunity_score` estimating whitespace (high trend interest, low existing
 coverage) alongside the base `radar_score` — see `CLAUDE.md`'s Engineering Notes for details.
 
+The most recent scan's plain keyword list (topic, stage, radar/opportunity scores, tags) also
+shows up inline on the main dashboard under "Trending keywords" (`#keywords`), so you don't have
+to open a separate HTML file to see what's trending.
+
 This only works where the request is actually handled — i.e. locally or on a self-hosted server
 with a `SERPAPI_API_KEY` set. It's not available when the app is deployed to Vercel (`POST /api/radar`
 returns a 501 there), since there's no GitHub Actions equivalent wired up for ad-hoc scans.

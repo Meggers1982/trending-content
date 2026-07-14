@@ -1,4 +1,5 @@
 import { getLatestRun, getReportText, getRunSummary, getSignalText, listRuns } from "@/lib/runs";
+import { getLatestRadarScanData } from "@/lib/radar";
 import RunControls from "./components/RunControls";
 import RadarScan from "./components/RadarScan";
 
@@ -20,6 +21,21 @@ function badge(value) {
   if (normalized.includes("medium")) className += " mid";
   if (normalized.includes("low") || normalized.includes("hard")) className += " risk";
   return <span className={className}>{value || "—"}</span>;
+}
+
+function stageBadge(stage) {
+  const tone = { breakout: "hot", emerging: "warm", rising: "good", watch: "" }[stage] || "";
+  return <span className={`badge ${tone}`}>{stage || "watch"}</span>;
+}
+
+function tagChips(tags) {
+  const entries = tags && typeof tags === "object" ? Object.entries(tags) : [];
+  if (!entries.length) return <span>—</span>;
+  return entries.map(([tagType, terms]) => (
+    <span className="badge" key={tagType} style={{ marginRight: 4, marginBottom: 4 }}>
+      {tagType}: {(terms || []).join(", ")}
+    </span>
+  ));
 }
 
 function inlineParts(text) {
@@ -257,6 +273,8 @@ export default function Home() {
     ["PREFLIGHT SUMMARY", "GOOGLE NEWS RADAR COVERAGE SUMMARY", "SIGNAL SUMMARY", "SKILL 02b ROUTING SUMMARY"].includes(section.title)
   );
   const candidates = latest?.candidates || [];
+  const radarScan = getLatestRadarScanData();
+  const radarCandidates = radarScan?.candidates || [];
 
   return (
     <main>
@@ -270,6 +288,7 @@ export default function Home() {
         <nav>
           <a href="#radar">Radar</a>
           <a href="#board">Board</a>
+          <a href="#keywords">Keywords</a>
           <a href="#runs">Runs</a>
           <a href="#ops">Ops</a>
           <a href="#scan">Scan</a>
@@ -404,6 +423,67 @@ export default function Home() {
               </tbody>
             </table>
           </div>
+        </section>
+
+        <section className="board" id="keywords">
+          <div className="sectionTitle">
+            <div>
+              <p className="eyebrow">Ad-hoc Research</p>
+              <h2>Trending keywords{radarScan?.topic ? ` — ${radarScan.topic}` : ""}</h2>
+            </div>
+          </div>
+          {radarCandidates.length ? (
+            <>
+              <p style={{ color: "var(--muted)", fontSize: 13, marginBottom: 10 }}>
+                From the most recent Trend Scanner run ({radarScan.geo || "US"} · {radarScan.date_window || ""} ·{" "}
+                {radarScan.run_date || ""}). Plain trending topics/keywords, not synthesized content ideas — no
+                Anthropic API cost.{" "}
+                {radarScan.htmlPath ? (
+                  <a href={`/api/radar-artifact/${radarScan.htmlPath}`} target="_blank" rel="noreferrer">
+                    Open full scan
+                  </a>
+                ) : null}
+              </p>
+              <div className="tableWrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Stage</th>
+                      <th>Keyword</th>
+                      <th>Radar</th>
+                      <th>Opportunity</th>
+                      <th>Tags</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {radarCandidates.slice(0, 25).map((candidate, index) => (
+                      <tr key={`${candidate.topic}-${index}`}>
+                        <td>{stageBadge(candidate.trend_stage)}</td>
+                        <td>
+                          <strong>{candidate.topic}</strong>
+                          <span>{candidate.why_now}</span>
+                        </td>
+                        <td>
+                          <b>{candidate.radar_score}</b>
+                          {scoreBar(candidate.radar_score, "red")}
+                        </td>
+                        <td>
+                          <b>{candidate.opportunity_score}</b>
+                          {scoreBar(candidate.opportunity_score, "blue")}
+                        </td>
+                        <td>{tagChips(candidate.tags)}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </>
+          ) : (
+            <p>
+              No scan has been run yet. Head to the <a href="#scan">Trend scanner</a> below, pick a topic/profile,
+              and click Scan — results will show up here automatically on the next page load.
+            </p>
+          )}
         </section>
 
         <section className="runs" id="runs">
