@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trending Content OS — Daily Dashboard</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  :root {
+    --ink: #171717;
+    --text: #262626;
+    --muted: #686868;
+    --faint: #8a8a8a;
+    --paper: #fbfaf8;
+    --surface: #ffffff;
+    --soft: #f2f1ee;
+    --line: #dfddd8;
+    --red: #cf2f32;
+    --green: #1f9d55;
+    --amber: #d97706;
+    --blue: #2563eb;
+    --violet: #7c3aed;
+  }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--paper);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+  .topbar {
+    height: 48px;
+    background: #070707;
+    color: #f7f7f7;
+    display: flex;
+    align-items: center;
+    padding: 0 18px;
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+  .mark {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3px;
+  }
+  .mark span { background: #f7f7f7; border-radius: 999px; }
+  .wrap { max-width: 1232px; margin: 0 auto; padding: 32px 28px 56px; }
+  .masthead {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 8px 0 28px;
+  }
+  h1 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    line-height: 1.1;
+    color: var(--ink);
+    letter-spacing: 0;
+  }
+  h1 span { color: var(--red); }
+  .dek {
+    margin-top: 10px;
+    color: #555;
+    font-size: 14px;
+  }
+  .run-chip {
+    margin-top: 2px;
+    border: 1px solid var(--line);
+    background: var(--soft);
+    border-radius: 4px;
+    padding: 7px 10px;
+    color: #555;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin: 0 0 28px;
+  }
+  .stat {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--red);
+    border-radius: 6px;
+    padding: 18px 20px;
+    min-height: 100px;
+  }
+  .stat.green { border-top-color: var(--green); }
+  .stat.amber { border-top-color: var(--amber); }
+  .stat.violet { border-top-color: var(--violet); }
+  .stat .value {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 36px;
+    line-height: 1;
+    color: var(--red);
+    font-weight: 700;
+  }
+  .stat.green .value { color: var(--green); }
+  .stat.amber .value { color: var(--amber); }
+  .stat.violet .value { color: var(--violet); }
+  .stat .label {
+    margin-top: 8px;
+    color: #666;
+    font-weight: 700;
+    font-size: 13px;
+  }
+  .insight {
+    background: #eff6ff;
+    border: 1px solid #b7d4ff;
+    border-left: 4px solid var(--blue);
+    border-radius: 6px;
+    padding: 18px 20px 17px;
+    margin: 0 0 28px;
+    color: #183052;
+  }
+  .insight-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    color: #1457d9;
+    font-weight: 800;
+  }
+  .status-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: #fff8e6;
+    border: 1px solid #f4be4a;
+    border-left: 4px solid var(--amber);
+    border-radius: 6px;
+    padding: 12px 14px;
+    margin: -12px 0 28px;
+    color: #5f3900;
+    font-size: 13px;
+  }
+  .status-note strong {
+    color: #9a5700;
+  }
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    min-height: 20px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    border: 1px solid #9fc2ff;
+    background: #dbeafe;
+    color: #1457d9;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  .toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 0 0 12px;
+  }
+  .section-title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: flex-end;
+  }
+  .filter-btn {
+    appearance: none;
+    border: 1px solid var(--line);
+    background: #fff;
+    color: #555;
+    border-radius: 4px;
+    padding: 5px 9px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .filter-btn.active, .filter-btn:hover {
+    border-color: #9fc2ff;
+    background: #eff6ff;
+    color: #1457d9;
+  }
+  .table-shell {
+    overflow-x: auto;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1040px;
+  }
+  th {
+    background: var(--soft);
+    border-bottom: 1px solid var(--line);
+    color: #6a6a6a;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 11px 12px;
+  }
+  td {
+    border-bottom: 1px solid #e7e5e0;
+    padding: 12px;
+    vertical-align: top;
+    font-size: 13px;
+  }
+  tr.topic-row { cursor: pointer; }
+  tr.topic-row:hover td { background: #fcfcfb; }
+  tr.hidden { display: none; }
+  tr.detail-row td {
+    background: #fbfbf9;
+    padding: 0;
+  }
+  .detail-row[hidden] { display: none; }
+  .rank {
+    color: #777;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-weight: 700;
+    width: 44px;
+  }
+  .topic-title { font-weight: 800; color: #202020; }
+  .topic-sub { color: #606060; font-size: 12px; margin-top: 4px; }
+  .num {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-weight: 800;
+    color: #2b2b2b;
+    display: inline-block;
+    min-width: 28px;
+  }
+  .mini-bar {
+    display: inline-block;
+    width: 58px;
+    height: 5px;
+    background: #e4e1dc;
+    border-radius: 10px;
+    margin-left: 8px;
+    vertical-align: middle;
+    overflow: hidden;
+  }
+  .mini-bar span { display: block; height: 100%; border-radius: 10px; }
+  .trend span { background: var(--red); }
+  .opp span { background: var(--blue); }
+  .velocity.high { color: var(--green); }
+  .velocity.mid { color: var(--amber); }
+  .velocity.low { color: #777; }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    min-height: 22px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .badge.now, .badge.p1 { color: #dc2626; background: #fff1f1; border: 1px solid #ffa6a6; }
+  .badge.today, .badge.p2 { color: #c26a00; background: #fff8e6; border: 1px solid #f4be4a; }
+  .badge.week, .badge.p3 { color: #1457d9; background: #eff6ff; border: 1px solid #9fc2ff; }
+  .badge.evergreen, .badge.p4 { color: #16874a; background: #effaf2; border: 1px solid #75d99b; }
+  .badge.monitor, .badge.p5 { color: #6b7280; background: #f4f4f5; border: 1px solid #d4d4d8; }
+  .serp.easy { color: #16874a; background: #effaf2; border: 1px solid #75d99b; }
+  .serp.med { color: #c26a00; background: #fff8e6; border: 1px solid #f4be4a; }
+  .serp.hard { color: #dc2626; background: #fff1f1; border: 1px solid #ffa6a6; }
+  .source-chip {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 4px 4px 0;
+    padding: 2px 7px;
+    min-height: 22px;
+    border-radius: 4px;
+    border: 1px solid #b7d4ff;
+    background: #eff6ff;
+    color: #1457d9;
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    padding: 16px 20px 18px 56px;
+    border-top: 1px solid #eeeae4;
+  }
+  .detail h4 {
+    margin: 0 0 6px;
+    color: #606060;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+  }
+  .detail p {
+    margin: 0;
+    font-size: 13px;
+    color: #2c2c2c;
+  }
+  .rejected { margin-top: 28px; }
+  .empty {
+    padding: 28px;
+    text-align: center;
+    color: var(--muted);
+  }
+  @media (max-width: 820px) {
+    .wrap { padding: 24px 16px 44px; }
+    .masthead { display: block; }
+    .run-chip { display: inline-block; margin-top: 18px; white-space: normal; }
+    .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .toolbar { align-items: flex-start; flex-direction: column; }
+    .filters { justify-content: flex-start; }
+    .detail { grid-template-columns: 1fr; padding-left: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="topbar"><span class="mark"><span></span><span></span><span></span><span></span></span>Trending Content OS</div>
+<main class="wrap">
+  <header class="masthead">
+    <div>
+      <h1>Trending <span>Content OS</span></h1>
+      <div class="dek" id="dek"></div>
+    </div>
+    <div class="run-chip" id="run-meta"></div>
+  </header>
+
+  <section class="stats" id="stats"></section>
+
+  <section class="insight" id="insight" hidden>
+    <div class="insight-head"><span class="pill">Google Trends</span><span id="insight-title">Run Insight</span></div>
+    <div id="insight-copy"></div>
+  </section>
+
+  <section class="status-note" id="site-fallback-note" hidden>
+    <strong>Duplicate check:</strong>
+    <span>site_url not configured — competitor fallback used (Healthline, WebMD, STAT News).</span>
+  </section>
+
+  <section>
+    <div class="toolbar">
+      <div class="section-title" id="priority-title">Priority Topics</div>
+      <div class="filters" id="filters"></div>
+    </div>
+    <div class="table-shell">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Topic</th>
+            <th>Trend</th>
+            <th>Opp</th>
+            <th>Velocity</th>
+            <th>Urgency</th>
+            <th>SERP</th>
+            <th>Src</th>
+            <th>Key Sources</th>
+          </tr>
+        </thead>
+        <tbody id="topic-rows"></tbody>
+      </table>
+      <div class="empty" id="empty" hidden>No candidates to show. Check the raw report or extraction JSON.</div>
+    </div>
+  </section>
+
+  <section class="rejected" id="rejected-section" hidden>
+    <div class="toolbar">
+      <div class="section-title">Rejected Topics</div>
+    </div>
+    <div class="table-shell">
+      <table>
+        <thead><tr><th>Topic</th><th>Reason</th></tr></thead>
+        <tbody id="rejected-rows"></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<script type="application/json" id="pipeline-json">{
+  "run_date": "2026-07-14",
+  "niche": "health and wellness",
+  "signal_summary": {
+    "total_reviewed": 144,
+    "total_retained": 10,
+    "total_rejected": 134,
+    "tools_active": [
+      "web_search",
+      "google_news",
+      "google_trends",
+      "serpapi"
+    ],
+    "tools_unavailable": [],
+    "notes": "Strong day for institutional/research signals. Google Trends diet delta +14 and food_safety +11 notable. Cyclosporiasis WV outbreak is top real-time trending signal. Celebrity health queries high-volume but categorically excluded. Recurring stale topics (E. coli blueberries, eye drops, GLP-1, sleep-weight, Ebola, screwworm) rejected without new development. Gut health monitored—no new anchor study despite +11 search delta. USC longevity diet retained at P3/Low confidence pending primary source confirmation."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Extreme Heat and Mental Health Hospitalizations — Nature Study + WHO Advisory",
+      "primary_entity": "Extreme heat / mental health hospitalizations",
+      "signal_type": "study_or_research",
+      "allowed_category": "public health and epidemiology",
+      "trend_strength_score": 84,
+      "opportunity_score": 82,
+      "discover_score": 5,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 4,
+      "recommended_angle": "Lead with Nature study's core finding—what sustained extreme heat means, which mental health conditions showed strongest hospitalization signals, multi-country methodology strength. Contrast with public assumption (heat affects physical health, not mental). Close with actionable guidance for vulnerable populations.",
+      "why_now": "Nature-published multi-country study released 07-11-2026 found sustained extreme heat associated with increased mental health hospitalizations. WHO issued heat-and-health advisory 07-14-2026 (today). Convergence of peer-reviewed study and same-day WHO advisory creates P1 urgency.",
+      "primary_headline": "Extreme Heat Is Sending People to Mental Health Hospitals — What a New International Study Found",
+      "next_steps": "Assign immediately; verify Nature DOI and pull specific effect sizes; commission expert quote from psychiatrist regarding medication-heat interaction.",
+      "notes": "Observational study—association, not causation. Confirm study design (ecological vs. individual-level cohort) before characterizing evidence strength. Nature DOI not directly retrieved—verify before publish. Multi-country findings may not map uniformly to US populations—note geographic variation."
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Cyclosporiasis West Virginia Outbreak — 2026 Update",
+      "primary_entity": "Cyclosporiasis / West Virginia outbreak",
+      "signal_type": "breaking_news",
+      "allowed_category": "public health and epidemiology",
+      "trend_strength_score": 88,
+      "opportunity_score": 76,
+      "discover_score": 4,
+      "urgency": "now",
+      "confidence": "high",
+      "content_status": "update",
+      "source_count": 3,
+      "recommended_angle": "Practical public health explainer anchored to WV outbreak—what Cyclospora is, how it spreads (typically produce-linked), WV-specific case details from DHHR/CDC, who is most at risk, what to do if symptomatic. Demystify 'mysterious parasite' framing without alarming.",
+      "why_now": "Google Trends shows 'west virginia cyclosporiasis outbreak' and 'mysterious parasite' as #1 and #2 real-time trending health searches in US today. Local outbreak broken into public awareness. Prior coverage (07-08, 07-11) was general; this is state-specific geographic development.",
+      "primary_headline": "West Virginia Cyclosporiasis Outbreak: What the 'Mysterious Parasite' Is and Who's at Risk",
+      "next_steps": "Assign immediately; pull CDC cyclosporiasis surveillance update and WV DHHR outbreak notice; confirm case count and suspected source before publish.",
+      "notes": "WV case count and confirmed source not yet directly retrieved from CDC/DHHR—verify before publish. Do not overstate outbreak scope. 'Mysterious parasite' framing in search is public confusion, not scientific uncertainty—avoid amplifying alarm."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Medical Cannabis for Dementia Agitation — New Study",
+      "primary_entity": "Medical cannabis / dementia agitation",
+      "signal_type": "study_or_research",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 72,
+      "opportunity_score": 78,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Caregiver-focused reality check—what the study measured, what 'agitation' means clinically, effect sizes, limitations (RCT vs. observational? sample size?), and what dementia specialists currently recommend. Avoid overclaiming in either direction.",
+      "why_now": "NYT (tier-1) published coverage 07-14-2026 (today). Dementia caregiving and agitation management are persistent audience pain points. Cannabis-as-medicine remains high-interest, frequently mischaracterized topic. 'Study suggests' framing indicates promising but non-conclusive findings.",
+      "primary_headline": "Medical Cannabis May Help Calm Dementia Agitation, Study Suggests — But Here's What the Evidence Actually Shows",
+      "next_steps": "Verify journal and DOI via NYT article; confirm study design (RCT preferred); pull geriatric psychiatrist quote; publish within 24h given NYT same-day coverage.",
+      "notes": "Confidence capped at Medium—journal/DOI not directly retrieved. Verify before treating as confirmed RCT. 'Suggests' language in NYT headline indicates finding is not definitive—lead with actual study design and effect size. Medical cannabis legal status varies by state—include practical context. Do not generalize to dementia prevention or other cannabis health claims."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "HHS/VA MOU — Psychedelic Drug Trials Partnership for Veterans",
+      "primary_entity": "HHS / VA psychedelic drug trials",
+      "signal_type": "clinical_trial",
+      "allowed_category": "mental health and psychology",
+      "trend_strength_score": 68,
+      "opportunity_score": 74,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 4,
+      "recommended_angle": "What the MOU actually commits to (access pathways, funding, trial design), which psychedelics in scope (ketamine already VA-approved; MDMA/psilocybin further from approval), what this realistically means for veterans seeking treatment now vs. 2-3 years. Avoid hype—this is policy/access development, not treatment approval.",
+      "why_now": "HHS.gov published MOU announcement 07-13-2026; American Legion confirmed partnership. Veteran mental health (suicide rates, PTSD, treatment-resistant depression) is persistent high-urgency public health issue. Psychedelic-assisted therapy for PTSD is active, accelerating clinical research area. MOU is concrete institutional development.",
+      "primary_headline": "The VA and HHS Just Signed a Deal to Expand Psychedelic Therapy Trials for Veterans — What It Means",
+      "next_steps": "Confirm HHS.gov announcement URL; identify which specific treatments in scope per MOU; pull ClinicalTrials.gov for active VA psychedelic trials; assign to writer with mental health/policy background.",
+      "notes": "MOU is partnership agreement, not drug approval—distinguish clearly from any implication that psychedelics now available to veterans. MDMA-assisted therapy FDA approval rejected 2024. Psilocybin remains Schedule I—contextual accuracy required."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "FDA Shampoo Recall — Bacterial Contamination Risk",
+      "primary_entity": "FDA shampoo recall / bacterial contamination",
+      "signal_type": "breaking_news",
+      "allowed_category": "public health",
+      "trend_strength_score": 74,
+      "opportunity_score": 70,
+      "discover_score": 3,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Consumer-action focused—which brand(s), what contamination, what bacterial risk actually is (low for healthy users, higher for immunocompromised or those with broken skin/scalp conditions), what to do (stop using, check lot numbers, return/discard).",
+      "why_now": "KAKE reported FDA recall 07-13-2026. Google Trends 'food safety' delta +11 today indicates heightened consumer recall awareness. Shampoo recalls for bacterial contamination underreported yet relevant to immunocompromised users and those with skin conditions. Not in run history.",
+      "primary_headline": "FDA Announces Shampoo Recall Over Bacterial Contamination Risk — Here's What to Check",
+      "next_steps": "Pull FDA.gov recall notice immediately; confirm brand name, lot numbers, contamination type; assign for same-day publish once FDA details confirmed.",
+      "notes": "Breaking-recall exception applied—KAKE is primary signal source; FDA.gov recall notice URL not yet directly retrieved. Verify and confirm brand name, lot numbers, bacterial contaminant type before publish. Confidence capped at Medium until FDA.gov primary notice confirmed."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "FDA Infant Formula Advisory — Supplier Oversight and Botulism Outbreaks",
+      "primary_entity": "FDA infant formula / supplier oversight / botulism",
+      "signal_type": "policy_or_regulatory_change",
+      "allowed_category": "public health",
+      "trend_strength_score": 66,
+      "opportunity_score": 72,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Parent-facing explainer—what FDA's advisory says, what botulism risk in formula means clinically, which manufacturers affected (if named by FDA), what specific actions parents should take now (check lot numbers, contact pediatrician if concerned), how this relates to 2022 formula shortage/Abbott recall aftermath.",
+      "why_now": "Reuters (tier-1) reported 07-13-2026 that FDA is urging infant formula manufacturers to tighten supplier oversight following product recalls and botulism outbreaks. Infant formula safety category has acute parental anxiety, high search intent, significant institutional stakes.",
+      "primary_headline": "FDA Is Telling Infant Formula Makers to Tighten Supplier Oversight — Here's What Parents Should Know",
+      "next_steps": "Pull FDA advisory document; confirm manufacturer names if disclosed; verify Reuters URL; assign to writer with pediatric health background; publish within 24-48h.",
+      "notes": "Botulism in infant formula is extremely rare but severe—maintain proportionate language; avoid alarming without evidence of current harm. Confirm whether FDA has named specific manufacturers before publishing any brand-specific content."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Pew Research — Young Women Get Health and Wellness Information From Influencers",
+      "primary_entity": "Pew Research Center / health influencers / young women",
+      "signal_type": "data_release",
+      "allowed_category": "public health and epidemiology",
+      "trend_strength_score": 60,
+      "opportunity_score": 65,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Lead with Pew finding, then interrogate what kinds of health information young women getting from influencers (nutrition, mental health, supplements, GLP-1?) and what evidence says about influencer health content accuracy. Pair with Medscape story ('When Medical Mistrust, Wellness, and Politics Align') for broader cultural context. Avoid condescension; frame around information literacy.",
+      "why_now": "Pew Research published data 07-13-2026. Young women health information seeking from influencers is persistent, growing trend with significant public health implications for misinformation spread.",
+      "primary_headline": "Nearly 6 in 10 Young Women Get Health Information From Influencers — Here's Why That's a Public Health Problem",
+      "next_steps": "Pull Pew report URL; find specific data breakdown by topic area; assign this week.",
+      "notes": "Confirm Pew sample size, methodology, and age range before citing statistics. Avoid framing that implies all influencer health content is misinformation; some is credible."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Peanut Allergy Clinical Trial — Children's Healthcare of Atlanta Multi-Site Study",
+      "primary_entity": "Peanut allergy / Children's Healthcare of Atlanta / multi-site trial",
+      "signal_type": "clinical_trial",
+      "allowed_category": "pediatric health",
+      "trend_strength_score": 58,
+      "opportunity_score": 63,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Parent-facing explainer—what the trial is testing (immunotherapy approach, dosing, eligibility criteria), how it differs from Palforzia (already FDA-approved peanut OIT), how families with peanut-allergic children can find out about trial eligibility. Context on broader peanut allergy treatment pipeline.",
+      "why_now": "Georgia Public Broadcasting reported multi-site trial news 07-13-2026. Pediatric health, parent audience pain point, clinical trial angle.",
+      "primary_headline": "A Major Multi-Site Clinical Trial for Peanut Allergies Has Begun — What Families Should Know",
+      "next_steps": "Find ClinicalTrials.gov NCT number; confirm what intervention being tested; verify GPB article URL.",
+      "notes": "Trial outcome data not yet available—frame as 'what this trial is studying,' not 'new treatment found.' Confirm trial registration on ClinicalTrials.gov before publish."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "this_week",
+      "topic": "ACEs (Adverse Childhood Experiences) Mental Health Test — Rising Search Interest",
+      "primary_entity": "ACEs / adverse childhood experiences / mental health assessment",
+      "signal_type": "rising_search_interest",
+      "allowed_category": "mental health and psychology",
+      "trend_strength_score": 55,
+      "opportunity_score": 61,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Demystify ACEs questionnaire—what it measures, what your score means, what it doesn't predict (it's a research tool, not a diagnostic instrument), where to find evidence-based support if you score high. Rising 'aces mental health test' query indicates people finding test online and seeking context.",
+      "why_now": "Rising Google Trends query 'aces mental health test' indicates sustained public interest. Strong evergreen + timely (rising search) candidate.",
+      "primary_headline": "What Is the ACEs Mental Health Test — and Should You Take It?",
+      "next_steps": "Confirm rising search volume on Google Trends; assign as evergreen candidate; low production complexity.",
+      "notes": "ACE score is population-level research tool, not clinical diagnostic—be precise about what score means and doesn't mean for individuals. Avoid framing that implies high ACE score is deterministic for health outcomes; resilience and protective factors exist."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "USC Longevity Diet Research — What the Evidence Says",
+      "primary_entity": "USC longevity diet / Valter Longo",
+      "signal_type": "rising_search_interest",
+      "allowed_category": "nutrition and diet science",
+      "trend_strength_score": 52,
+      "opportunity_score": 60,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "low",
+      "content_status": "new",
+      "source_count": 1,
+      "recommended_angle": "Explain what USC/Longo longevity diet framework actually recommends (pescatarian, time-restricted eating, periodic fasting-mimicking diet), what evidence base is (primarily observational + mouse studies + some human trials), how it compares to Mediterranean diet and other evidence-based longevity frameworks. Distinct from Zeke Emanuel ice cream/caloric restriction story covered 07-13.",
+      "why_now": "Rising Google Trends query 'university of southern california longevity diet' points to Valter Longo's research program. Diet search trend +14 delta today indicates heightened interest.",
+      "primary_headline": "The USC Longevity Diet: What the Research Actually Recommends for Living Longer",
+      "next_steps": "Verify whether a new USC paper or announcement is driving the query spike before assigning; if no new paper, treat as evergreen; low urgency.",
+      "notes": "Confidence LOW—no specific new USC study confirmed; search-trend driven only. Much of Longo's longevity diet evidence is observational or animal-model—note limitations clearly. Fasting-mimicking diet (Prolon) is commercial product associated with Longo—disclose conflict of interest context."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "E. coli frozen blueberries",
+      "reason": "existing — covered 07-08 through 07-12; no materially new case count, recall expansion, or agency action found today"
+    },
+    {
+      "topic": "Eye drops recall",
+      "reason": "existing — covered 07-09 through 07-12; no new lot, brand, or agency action today"
+    },
+    {
+      "topic": "GLP-1 online prescriptions",
+      "reason": "existing — covered 07-08 through 07-12 (Yale study); no new development"
+    },
+    {
+      "topic": "New World Screwworm",
+      "reason": "existing — covered 07-13; no new USDA detection data found for today"
+    },
+    {
+      "topic": "OTC skin cream recalls",
+      "reason": "existing — covered 07-13"
+    },
+    {
+      "topic": "Ebola DRC",
+      "reason": "existing — covered 07-08 through 07-12; CDC 07-14 item is traveler info page, not a new outbreak development"
+    },
+    {
+      "topic": "Sleep-diet connection",
+      "reason": "existing — covered 07-11 through 07-13 multiple times"
+    },
+    {
+      "topic": "Gut health",
+      "reason": "existing — covered comprehensively 07-10 and 07-11; no new study today; recurring stale flag applies"
+    },
+    {
+      "topic": "PCOS nutrition",
+      "reason": "existing — covered 07-11 as 'PCOS Nutrition: What the Research Actually Says'; no materially new development"
+    },
+    {
+      "topic": "Glioma progression / Weill Cornell",
+      "reason": "existing — covered 07-13"
+    },
+    {
+      "topic": "Jimmy Kimmel health",
+      "reason": "brand_safety — celebrity health gossip; excluded category"
+    },
+    {
+      "topic": "Mitch McConnell health",
+      "reason": "brand_safety — political figure; pure political health gossip; excluded"
+    },
+    {
+      "topic": "Brian Johnson health",
+      "reason": "brand_safety — celebrity/influencer; excluded category"
+    },
+    {
+      "topic": "ACA premiums 2027",
+      "reason": "off_category — pure health insurance/policy business; no direct patient health science angle"
+    },
+    {
+      "topic": "Digital health CEO sentenced ($90M Adderall scheme)",
+      "reason": "weak_signal — DOJ item from 07-07; outside freshness window for P1/P2; note for P5 future"
+    },
+    {
+      "topic": "Matcha gut health / stewed apples gut health",
+      "reason": "off_category — gut health covered comprehensively 07-10/07-11; no new study anchoring these queries"
+    }
+  ]
+}</script>
+<script>
+function readPipelineData() {
+  const raw = document.getElementById('pipeline-json').textContent.trim();
+  if (!raw || raw === '__PIPELINE_' + 'DATA__') {
+    return {
+      run_date: '',
+      niche: 'Health & Wellness',
+      signal_summary: {
+        total_reviewed: 0,
+        total_retained: 0,
+        total_rejected: 0,
+        notes: 'This is the dashboard template. Run python run_pipeline.py --no-email to generate a filled dashboard, or open outputs/daily_newsroom_dashboard/dashboard_preview.html to view the design preview.'
+      },
+      candidates: [],
+      rejected: []
+    };
+  }
+  try {
+    return JSON.parse(raw);
+  } catch (error) {
+    return {
+      run_date: '',
+      niche: 'Health & Wellness',
+      signal_summary: {
+        total_reviewed: 0,
+        total_retained: 0,
+        total_rejected: 0,
+        notes: `Dashboard data could not be parsed: ${error.message}`
+      },
+      candidates: [],
+      rejected: []
+    };
+  }
+}
+const D = readPipelineData();
+const candidates = Array.isArray(D.candidates) ? D.candidates : [];
+const rejected = Array.isArray(D.rejected) ? D.rejected : [];
+const summary = D.signal_summary || {};
+
+const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({
+  '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+}[ch]));
+const clamp = n => Math.max(0, Math.min(100, Number(n) || 0));
+const fmtDate = value => value || new Date().toISOString().slice(0, 10);
+const urgencyClass = value => {
+  if (value === 'now') return 'now';
+  if (value === 'today') return 'today';
+  if (value === 'this_week') return 'week';
+  if (value === 'evergreen') return 'evergreen';
+  return 'monitor';
+};
+const serpClass = c => {
+  const avg = ((Number(c.trend_strength_score) || 0) + (Number(c.opportunity_score) || 0)) / 2;
+  if (avg >= 82) return 'easy';
+  if (avg >= 65) return 'med';
+  return 'hard';
+};
+const serpLabel = cls => ({ easy: 'Easy', med: 'Med', hard: 'Hard' }[cls] || 'Med');
+const velocity = c => clamp(Math.round(((Number(c.discover_score) || 0) / 5) * 100));
+const sourceLabels = c => {
+  const labels = [];
+  if (c.signal_type) labels.push(String(c.signal_type).replace(/_/g, ' '));
+  if (c.confidence) labels.push(`${c.confidence} conf`);
+  if (c.content_status) labels.push(c.content_status);
+  return labels.slice(0, 3);
+};
+
+document.getElementById('dek').textContent =
+  `${esc(D.niche || 'Health & Wellness')} · US · ${fmtDate(D.run_date)} · with Google Trends data`;
+document.getElementById('run-meta').textContent =
+  `Generated: ${fmtDate(D.run_date)} | retained ${candidates.length} | pipeline v2`;
+
+const p1 = candidates.filter(c => c.priority_level === 'P1').length;
+const flags = candidates.filter(c => String(c.notes || '').trim() || c.confidence === 'low').length;
+const statData = [
+  { label: 'Signals Processed', value: summary.total_reviewed ?? 0, cls: '' },
+  { label: 'Retained Topics', value: candidates.length, cls: 'green' },
+  { label: 'Publish NOW', value: p1, cls: 'amber' },
+  { label: 'Integrity Flags', value: flags, cls: 'violet' },
+];
+document.getElementById('stats').innerHTML = statData.map(s => `
+  <div class="stat ${s.cls}">
+    <div class="value">${esc(s.value)}</div>
+    <div class="label">${esc(s.label)}</div>
+  </div>
+`).join('');
+
+const notes = String(summary.notes || '').trim();
+if (notes) {
+  document.getElementById('insight').hidden = false;
+  document.getElementById('insight-title').textContent = 'Search Demand vs. Editorial Urgency — Key Insight';
+  document.getElementById('insight-copy').textContent = notes;
+}
+const fallbackMentioned = /site_url not configured|self-check skipped|competitor fallback/i.test(notes)
+  || candidates.some(c => /site_url not configured|self-check skipped|competitor fallback/i.test(String(c.notes || '')));
+document.getElementById('site-fallback-note').hidden = !fallbackMentioned;
+
+document.getElementById('priority-title').textContent =
+  `Priority Topics — All ${candidates.length} Retained`;
+
+const filters = ['All', 'P1', 'P2', 'P3', 'P4', 'P5'];
+document.getElementById('filters').innerHTML = filters.map((f, i) =>
+  `<button class="filter-btn ${i === 0 ? 'active' : ''}" data-filter="${f}">${f}</button>`
+).join('');
+
+function rowHtml(c, i) {
+  const trend = clamp(c.trend_strength_score);
+  const opp = clamp(c.opportunity_score);
+  const vel = velocity(c);
+  const velClass = vel >= 70 ? 'high' : vel >= 40 ? 'mid' : 'low';
+  const sc = serpClass(c);
+  const urgency = c.urgency || c.publish_timing || 'monitor';
+  const labels = sourceLabels(c).map(label => `<span class="source-chip">${esc(label)}</span>`).join('');
+  return `
+    <tr class="topic-row" data-priority="${esc(c.priority_level)}" data-detail="${i}">
+      <td class="rank">${String(i + 1).padStart(2, '0')}</td>
+      <td>
+        <div class="topic-title">${esc(c.topic)}</div>
+        <div class="topic-sub">${esc(c.primary_headline || c.primary_entity || c.recommended_angle || '')}</div>
+      </td>
+      <td><span class="num">${trend}</span><span class="mini-bar trend"><span style="width:${trend}%"></span></span></td>
+      <td><span class="num">${opp}</span><span class="mini-bar opp"><span style="width:${opp}%"></span></span></td>
+      <td><span class="num velocity ${velClass}">${vel}</span></td>
+      <td><span class="badge ${urgencyClass(urgency)}">${esc(urgency === 'this_week' ? 'today' : urgency)}</span></td>
+      <td><span class="badge serp ${sc}">${serpLabel(sc)}</span></td>
+      <td><span class="num">${esc(c.source_count ?? 0)}</span></td>
+      <td>${labels}</td>
+    </tr>
+    <tr class="detail-row" data-parent="${i}" hidden>
+      <td colspan="9">
+        <div class="detail">
+          <div><h4>Recommended Angle</h4><p>${esc(c.recommended_angle || 'No angle provided.')}</p></div>
+          <div><h4>Why Now</h4><p>${esc(c.why_now || 'No timing rationale provided.')}</p></div>
+          <div><h4>Next Steps</h4><p>${esc(c.next_steps || c.notes || 'No next steps provided.')}</p></div>
+        </div>
+      </td>
+    </tr>
+  `;
+}
+
+const tbody = document.getElementById('topic-rows');
+tbody.innerHTML = candidates.map(rowHtml).join('');
+document.getElementById('empty').hidden = candidates.length > 0;
+
+tbody.addEventListener('click', event => {
+  const row = event.target.closest('.topic-row');
+  if (!row) return;
+  const detail = tbody.querySelector(`.detail-row[data-parent="${row.dataset.detail}"]`);
+  if (detail) detail.hidden = !detail.hidden;
+});
+
+document.getElementById('filters').addEventListener('click', event => {
+  const btn = event.target.closest('.filter-btn');
+  if (!btn) return;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const filter = btn.dataset.filter;
+  document.querySelectorAll('.topic-row').forEach(row => {
+    const show = filter === 'All' || row.dataset.priority === filter;
+    row.hidden = !show;
+    const detail = tbody.querySelector(`.detail-row[data-parent="${row.dataset.detail}"]`);
+    if (detail) {
+      detail.hidden = true;
+      detail.classList.toggle('hidden', !show);
+    }
+  });
+});
+
+if (rejected.length) {
+  document.getElementById('rejected-section').hidden = false;
+  document.getElementById('rejected-rows').innerHTML = rejected.map(r => `
+    <tr><td>${esc(r.topic)}</td><td>${esc(r.reason)}</td></tr>
+  `).join('');
+}
+</script>
+</body>
+</html>
