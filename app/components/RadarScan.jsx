@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 const RUN_TOKEN_STORAGE_KEY = "trending-content-os:run-token";
-const PROFILES = ["auto", "wellness", "health", "ai", "none"];
+const PROFILES = ["auto", "wellness", "health", "ai", "beauty", "none"];
 
 function formatStatus(job) {
   if (job?.running) return `Scanning "${job.mode}"`;
@@ -68,7 +68,8 @@ export default function RadarScan() {
       </div>
       <p>
         Runs google_trend_radar.py directly against SerpAPI for any topic — no Anthropic
-        API cost, not tied to the health/wellness niche. Local/self-hosted only.
+        API cost, not tied to the health/wellness niche. Local/self-hosted only. The
+        beauty profile also cross-checks Reddit and tags ingredient/benefit/concern terms.
       </p>
       <form className="radarScanForm" onSubmit={startScan}>
         <input

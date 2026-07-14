@@ -37,6 +37,11 @@ topic — not just health/wellness, and with no Anthropic API cost (pure SerpAPI
 scoring). It's a separate tool from the daily automated pipeline above; see the "Known limitation"
 / Engineering Notes sections in `CLAUDE.md` for how it differs from `run_pipeline.py`.
 
+The `beauty` profile additionally cross-checks Reddit (free, no API key) as a second signal
+source, tags candidates with ingredient/benefit/concern labels from `configs/beauty_taxonomy.yaml`,
+and computes an `opportunity_score` estimating whitespace (high trend interest, low existing
+coverage) alongside the base `radar_score` — see `CLAUDE.md`'s Engineering Notes for details.
+
 This only works where the request is actually handled — i.e. locally or on a self-hosted server
 with a `SERPAPI_API_KEY` set. It's not available when the app is deployed to Vercel (`POST /api/radar`
 returns a 501 there), since there's no GitHub Actions equivalent wired up for ad-hoc scans.

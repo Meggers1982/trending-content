@@ -1,0 +1,74 @@
+# Beauty/wellness taxonomy for tagging trend radar candidates.
+# Keyword lists are matched (substring, case-insensitive) against a candidate's
+# query text. A candidate can carry tags from more than one list at once
+# (e.g. "retinol purging" -> ingredient: retinol, concern: purging).
+# Not exhaustive by design — extend these lists as new terms show up in scans
+# rather than trying to enumerate every possible ingredient/benefit up front.
+
+ingredients:
+  - retinol
+  - retinoid
+  - niacinamide
+  - hyaluronic acid
+  - peptides
+  - vitamin c
+  - vitamin e
+  - salicylic acid
+  - glycolic acid
+  - lactic acid
+  - azelaic acid
+  - ceramides
+  - squalane
+  - collagen
+  - snail mucin
+  - centella
+  - bakuchiol
+  - zinc oxide
+  - benzoyl peroxide
+  - hydroquinone
+  - biotin
+  - minoxidil
+  - keratin
+  - shea butter
+  - argan oil
+  - rosehip oil
+
+benefits:
+  - anti-aging
+  - hydration
+  - brightening
+  - barrier repair
+  - skin barrier
+  - exfoliation
+  - hair growth
+  - hair thickening
+  - pore minimizing
+  - even skin tone
+  - firming
+  - plumping
+  - glass skin
+  - dewy skin
+  - clear skin
+  - scar fading
+  - sun protection
+  - moisture retention
+
+concerns:
+  - acne
+  - breakouts
+  - purging
+  - irritation
+  - fragrance sensitivity
+  - dryness
+  - redness
+  - rosacea
+  - eczema
+  - dermatitis
+  - hair loss
+  - hair thinning
+  - dandruff
+  - clogged pores
+  - hyperpigmentation
+  - sun damage
+  - sensitive skin
+  - allergic reaction

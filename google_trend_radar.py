@@ -10,6 +10,12 @@ Usage:
     python google_trend_radar.py --profile wellness
     python google_trend_radar.py --profile health
     python google_trend_radar.py --topic "AI tools" --profile ai --geo US --date "now 7-d"
+    python google_trend_radar.py --profile beauty --geo US --date "now 7-d"
+
+The beauty profile additionally cross-checks Reddit (free, no API key) as a
+second signal source and tags candidates with ingredient/benefit/concern
+labels from configs/beauty_taxonomy.yaml, plus an opportunity_score
+estimating whitespace (high emergence, low saturation) alongside radar_score.
 """
 
 from __future__ import annotations
@@ -22,6 +28,7 @@ import os
 import re
 import smtplib
 import sys
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -35,18 +42,27 @@ from email.mime.text import MIMEText
 from pathlib import Path
 from statistics import mean
 
+import yaml
+
 
 PROJECT_ROOT = Path(__file__).resolve().parent
 ENV_PATH = PROJECT_ROOT / ".env"
 OUTPUT_DIR = PROJECT_ROOT / "outputs" / "google_trend_radar"
 TEMPLATE_PATH = PROJECT_ROOT / "google_trend_radar_template.html"
+BEAUTY_TAXONOMY_PATH = PROJECT_ROOT / "configs" / "beauty_taxonomy.yaml"
 SERPAPI_BASE = "https://serpapi.com/search"
+REDDIT_SEARCH_BASE = "https://www.reddit.com/search.json"
+REDDIT_SUBREDDIT_SEARCH_BASE = "https://www.reddit.com/r/{subreddit}/search.json"
+REDDIT_USER_AGENT = "google-trend-radar/1.0 (personal trend-scanning script)"
+REDDIT_BEAUTY_SUBREDDITS = ["SkincareAddiction", "MakeupAddiction", "HaircareScience"]
 
 DEFAULT_SEED_PROFILE = "auto"
 DEFAULT_MAX_SEEDS = 24
 GOOGLE_TRENDS_QUERY_LIMIT = 100
 DEFAULT_REQUEST_TIMEOUT = 12
 DEFAULT_REQUEST_RETRIES = 0
+REDDIT_REQUEST_DELAY_SECONDS = 1.5
+REDDIT_MIN_MENTIONS = 2
 VERBOSE_ERRORS = False
 REQUEST_FAILURES: Counter[str] = Counter()
 
@@ -107,6 +123,28 @@ SEED_PROFILES = {
         "AI agents",
         "AI coding",
     ],
+    "beauty": [
+        "beauty",
+        "skincare",
+        "makeup",
+        "haircare",
+        "fragrance",
+        "clean beauty",
+        "retinol",
+        "niacinamide",
+        "peptides",
+        "hyaluronic acid",
+        "skin barrier",
+        "skin cycling",
+        "glass skin",
+        "slugging",
+        "scalp care",
+        "SPF",
+        "sunscreen",
+        "K-beauty",
+        "hair loss",
+        "acne treatment",
+    ],
 }
 
 INTENT_MODIFIERS = [
@@ -154,11 +192,16 @@ class Candidate:
     velocity_score: int = 0
     confidence_score: int = 0
     radar_score: int = 0
+    saturation_score: int = 0
+    opportunity_score: int = 0
+    top_bucket_hits: int = 0
+    rising_bucket_hits: int = 0
     trend_stage: str = "watch"
     urgency: str = "monitor"
     confidence: str = "low"
     why_now: str = ""
     recommended_action: str = ""
+    tags: dict[str, list[str]] = field(default_factory=dict)
 
 
 def load_env(path: Path = ENV_PATH) -> None:
@@ -227,6 +270,36 @@ def print_request_summary() -> None:
 def normalize(text: str) -> str:
     text = re.sub(r"\s+", " ", text or "").strip().lower()
     return re.sub(r"[^\w\s#+.-]", "", text)
+
+
+def load_taxonomy(path: Path = BEAUTY_TAXONOMY_PATH) -> dict[str, list[str]]:
+    if not path.exists():
+        return {}
+    try:
+        data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    except yaml.YAMLError as exc:
+        print(f"Could not parse taxonomy file {path}: {exc}", file=sys.stderr)
+        return {}
+    taxonomy: dict[str, list[str]] = {}
+    for tag_type in ("ingredients", "benefits", "concerns"):
+        terms = data.get(tag_type) or []
+        taxonomy[tag_type] = [str(term) for term in terms if term]
+    return taxonomy
+
+
+def tag_candidate(query: str, taxonomy: dict[str, list[str]]) -> dict[str, list[str]]:
+    """Keyword-match a candidate's query text against the beauty taxonomy.
+
+    Runs for every profile, not just beauty, since ingredient/benefit/concern
+    terms (magnesium, hair loss, etc.) show up across wellness/health scans too.
+    """
+    normalized_query = normalize(query)
+    tags: dict[str, list[str]] = {}
+    for tag_type, terms in taxonomy.items():
+        matches = [term for term in terms if normalize(term) in normalized_query]
+        if matches:
+            tags[tag_type] = matches
+    return tags
 
 
 def parse_rising_value(value) -> tuple[int | None, str]:
@@ -364,6 +437,10 @@ def discover_candidates(
                 candidate.related_type = "topic" if data_type == "RELATED_TOPICS" else "query"
                 bucket = item.get("_bucket", "")
                 candidate.discovery_sources.add(source_name if bucket == "rising" else f"top {candidate.related_type}")
+                if bucket == "rising":
+                    candidate.rising_bucket_hits += 1
+                else:
+                    candidate.top_bucket_hits += 1
                 value, label = parse_rising_value(item.get("value") or item.get("extracted_value"))
                 if bucket == "rising":
                     if value is not None:
@@ -424,6 +501,101 @@ def attach_timeseries(
             candidate.interest_scores = scores
 
 
+def reddit_get(url: str, params: dict, timeout: int = DEFAULT_REQUEST_TIMEOUT, retries: int = DEFAULT_REQUEST_RETRIES) -> dict | None:
+    """Fetch Reddit's public read-only JSON search API.
+
+    No OAuth/API key is required for anonymous search, only a descriptive
+    User-Agent (Reddit blocks the urllib default one). Anonymous requests are
+    rate-limited more aggressively than authenticated ones, so callers should
+    space requests out and treat failures as skippable, same as serp_get.
+    """
+    full_url = url + "?" + urllib.parse.urlencode(params)
+    request = urllib.request.Request(full_url, headers={"User-Agent": REDDIT_USER_AGENT})
+    for attempt in range(retries + 1):
+        try:
+            with urllib.request.urlopen(request, timeout=timeout) as response:
+                return json.loads(response.read().decode("utf-8"))
+        except urllib.error.HTTPError as exc:
+            REQUEST_FAILURES[f"reddit HTTP {exc.code}"] += 1
+            if VERBOSE_ERRORS:
+                print(f"Reddit error: HTTP {exc.code}", file=sys.stderr)
+            return None
+        except Exception as exc:
+            message = str(exc)
+            if "timed out" in message.lower() and attempt < retries:
+                continue
+            REQUEST_FAILURES["reddit error"] += 1
+            if VERBOSE_ERRORS:
+                print(f"Reddit error: {exc}", file=sys.stderr)
+            return None
+    return None
+
+
+def discover_reddit_candidates(
+    candidates: dict[str, Candidate],
+    seeds: list[str],
+    taxonomy: dict[str, list[str]],
+    profile: str,
+    *,
+    request_timeout: int = DEFAULT_REQUEST_TIMEOUT,
+    request_retries: int = DEFAULT_REQUEST_RETRIES,
+    max_seed_queries: int = 6,
+) -> None:
+    """Cross-validate/expand candidates using Reddit as a second signal source.
+
+    Rather than trying to extract arbitrary phrases from post titles with NLP,
+    this reuses the beauty taxonomy (ingredients/benefits/concerns) as the
+    phrase dictionary to scan titles against - consistent with the rest of the
+    script's keyword-matching approach, and free of any Anthropic API cost.
+    Mutates `candidates` in place: existing entries gain "reddit" as a
+    discovery source (boosting their multi-source/confidence score), and
+    taxonomy terms mentioned only on Reddit are added as new candidates.
+    """
+    phrase_pool = sorted({term for terms in taxonomy.values() for term in terms})
+    if not phrase_pool:
+        return
+
+    mention_counts: Counter[str] = Counter()
+    queries: list[tuple[str, dict]] = []
+    for seed in seeds[:max_seed_queries]:
+        queries.append((seed, {"q": seed, "sort": "hot", "t": "week", "limit": 25}))
+    if profile == "beauty":
+        for subreddit in REDDIT_BEAUTY_SUBREDDITS:
+            queries.append((subreddit, {"q": seeds[0] if seeds else "", "restrict_sr": 1, "sort": "hot", "t": "week", "limit": 25}))
+
+    for index, (label, params) in enumerate(queries):
+        if index > 0:
+            time.sleep(REDDIT_REQUEST_DELAY_SECONDS)
+        if label in REDDIT_BEAUTY_SUBREDDITS:
+            url = REDDIT_SUBREDDIT_SEARCH_BASE.format(subreddit=label)
+        else:
+            url = REDDIT_SEARCH_BASE
+        data = reddit_get(url, params, timeout=request_timeout, retries=request_retries)
+        if not data:
+            continue
+        posts = data.get("data", {}).get("children", [])
+        for post in posts:
+            title = normalize(post.get("data", {}).get("title", ""))
+            if not title:
+                continue
+            for term in phrase_pool:
+                if normalize(term) in title:
+                    mention_counts[term] += 1
+
+    for term, count in mention_counts.items():
+        if count < REDDIT_MIN_MENTIONS:
+            continue
+        key = normalize(term)
+        if not key:
+            continue
+        candidate = candidates.get(key)
+        if candidate is None:
+            candidate = Candidate(query=term)
+            candidates[key] = candidate
+        candidate.discovery_sources.add("reddit")
+        candidate.rising_bucket_hits += count
+
+
 def clamp(value: float, minimum: int = 0, maximum: int = 100) -> int:
     return int(max(minimum, min(maximum, round(value))))
 
@@ -461,6 +633,16 @@ def score_candidate(candidate: Candidate) -> None:
         candidate.emergence_score = min(candidate.emergence_score, 45)
     candidate.confidence_score = clamp((len(candidate.discovery_sources) * 25) + (35 if scores else 0) + (15 if candidate.rising_value else 0))
     candidate.radar_score = clamp((candidate.emergence_score * 0.45) + (candidate.velocity_score * 0.35) + (candidate.confidence_score * 0.20))
+
+    # Whitespace/opportunity: high emergence + low saturation is the actual
+    # "get there before it's crowded" signal, not just "is this trending".
+    # Saturation approximates how mainstream/established a term already is by
+    # how often it showed up in Google Trends' "top" bucket (established
+    # queries) versus only the "rising" bucket (newly emerging).
+    total_bucket_hits = candidate.top_bucket_hits + candidate.rising_bucket_hits
+    top_ratio = (candidate.top_bucket_hits / total_bucket_hits) if total_bucket_hits else 0.5
+    candidate.saturation_score = clamp(top_ratio * 100)
+    candidate.opportunity_score = clamp((candidate.emergence_score * 0.6) + ((100 - candidate.saturation_score) * 0.4))
 
     if not faded_spike and (rising >= 5000 or candidate.radar_score >= 84):
         candidate.trend_stage = "breakout"
@@ -515,6 +697,8 @@ def candidate_to_dict(candidate: Candidate, rank: int) -> dict:
         "emergence_score": candidate.emergence_score,
         "velocity_score": candidate.velocity_score,
         "confidence_score": candidate.confidence_score,
+        "saturation_score": candidate.saturation_score,
+        "opportunity_score": candidate.opportunity_score,
         "confidence": candidate.confidence,
         "rising_label": candidate.rising_label,
         "latest_interest": candidate.latest_interest,
@@ -524,13 +708,28 @@ def candidate_to_dict(candidate: Candidate, rank: int) -> dict:
         "seed_terms": sorted(candidate.seed_terms),
         "discovery_sources": sorted(candidate.discovery_sources),
         "interest_scores": candidate.interest_scores,
+        "tags": candidate.tags,
         "why_now": candidate.why_now,
         "recommended_action": candidate.recommended_action,
     }
 
 
-def build_data(topic: str, geo: str, date: str, seeds: list[str], candidates: list[Candidate], rejected: list[dict]) -> dict:
+def build_data(
+    topic: str,
+    geo: str,
+    date: str,
+    seeds: list[str],
+    candidates: list[Candidate],
+    rejected: list[dict],
+    extra_anchor_terms: list[str] | None = None,
+) -> dict:
     anchors = relevance_anchors(topic, seeds)
+    if extra_anchor_terms:
+        # Reddit/taxonomy-sourced candidates (e.g. "ceramides") often aren't a
+        # literal substring of the topic/seed anchors even though they're
+        # on-topic, so widen the anchor set with the taxonomy terms used to
+        # discover them rather than dropping them as off-topic noise.
+        anchors |= relevance_anchors("", extra_anchor_terms)
     relevant = []
     off_topic = []
     for candidate in candidates:
@@ -597,7 +796,7 @@ FORMULA_TRIGGER_CHARS = ("=", "+", "-", "@")
 # CSV formula injection before being written out.
 CSV_FORMULA_RISK_FIELDS = (
     "topic", "trend_stage", "urgency", "confidence", "rising_label",
-    "seed_terms", "discovery_sources", "why_now", "recommended_action",
+    "seed_terms", "discovery_sources", "tags", "why_now", "recommended_action",
 )
 
 
@@ -617,9 +816,10 @@ def csv_safe(value: str) -> str:
 def write_csv(data: dict, path: Path) -> None:
     fieldnames = [
         "rank", "topic", "trend_stage", "urgency", "radar_score",
-        "emergence_score", "velocity_score", "confidence_score", "confidence",
+        "emergence_score", "velocity_score", "confidence_score",
+        "saturation_score", "opportunity_score", "confidence",
         "rising_label", "latest_interest", "peak_interest", "slope",
-        "seed_terms", "discovery_sources", "why_now", "recommended_action",
+        "seed_terms", "discovery_sources", "tags", "why_now", "recommended_action",
     ]
     with path.open("w", encoding="utf-8", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=fieldnames)
@@ -628,6 +828,8 @@ def write_csv(data: dict, path: Path) -> None:
             normalized = dict(row)
             normalized["seed_terms"] = "; ".join(row.get("seed_terms", []))
             normalized["discovery_sources"] = "; ".join(row.get("discovery_sources", []))
+            tags = row.get("tags") or {}
+            normalized["tags"] = "; ".join(f"{tag_type}: {', '.join(terms)}" for tag_type, terms in tags.items())
             for key in CSV_FORMULA_RISK_FIELDS:
                 if key in normalized:
                     normalized[key] = csv_safe(normalized[key])
@@ -654,6 +856,7 @@ def build_email_body(data: dict) -> str:
           </td>
           <td style="padding:8px 10px;border-bottom:1px solid #e7e5e0;font-family:Menlo,Consolas,monospace;font-size:12px;">{esc(candidate.get('trend_stage',''))}</td>
           <td style="padding:8px 10px;border-bottom:1px solid #e7e5e0;font-family:Menlo,Consolas,monospace;font-size:12px;">{candidate.get('radar_score','')}</td>
+          <td style="padding:8px 10px;border-bottom:1px solid #e7e5e0;font-family:Menlo,Consolas,monospace;font-size:12px;">{candidate.get('opportunity_score','')}</td>
         </tr>"""
 
     return f"""<!doctype html>
@@ -691,6 +894,7 @@ def build_email_body(data: dict) -> str:
         <th style="text-align:left;padding:9px 10px;font-size:11px;color:#666;text-transform:uppercase;">Trend</th>
         <th style="text-align:left;padding:9px 10px;font-size:11px;color:#666;text-transform:uppercase;">Stage</th>
         <th style="text-align:left;padding:9px 10px;font-size:11px;color:#666;text-transform:uppercase;">Score</th>
+        <th style="text-align:left;padding:9px 10px;font-size:11px;color:#666;text-transform:uppercase;">Opportunity</th>
       </tr>
       {top_rows}
     </table>
@@ -744,13 +948,14 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--geo", default="US", help="Google Trends geography code. Default: US.")
     parser.add_argument("--date", default="now 7-d", help='Google Trends date window. Default: "now 7-d".')
     parser.add_argument("--seeds", default="", help="Optional comma-separated seed terms to scan in addition to the selected profile.")
-    parser.add_argument("--profile", "--seed-profile", dest="seed_profile", default=DEFAULT_SEED_PROFILE, choices=["auto", "wellness", "health", "ai", "none"], help="Seed profile to scan: wellness, health, ai, none, or auto. Default: auto.")
+    parser.add_argument("--profile", "--seed-profile", dest="seed_profile", default=DEFAULT_SEED_PROFILE, choices=["auto", "wellness", "health", "ai", "beauty", "none"], help="Seed profile to scan: wellness, health, ai, beauty, none, or auto. Default: auto.")
     parser.add_argument("--max-seeds", type=int, default=DEFAULT_MAX_SEEDS, help="Maximum seed terms to scan. Default: 24.")
     parser.add_argument("--limit", type=int, default=80, help="Maximum discovered candidates to validate. Default: 80.")
     parser.add_argument("--timeout", type=int, default=DEFAULT_REQUEST_TIMEOUT, help="Seconds to wait for each SerpAPI request. Default: 12.")
     parser.add_argument("--retries", type=int, default=DEFAULT_REQUEST_RETRIES, help="Retries per SerpAPI request after timeout/error. Default: 0.")
     parser.add_argument("--include-related-topics", action="store_true", help="Also scan related topics. Slower, but can surface entity-level discoveries.")
     parser.add_argument("--skip-timeseries", action="store_true", help="Skip time-series validation. Faster for discovery runs when SerpAPI is slow.")
+    parser.add_argument("--skip-reddit", action="store_true", help="Skip Reddit cross-validation. Reddit search is free/no-auth but rate-limited and can be slow or flaky.")
     parser.add_argument("--verbose-errors", action="store_true", help="Print every skipped SerpAPI request instead of only the final summary.")
     parser.add_argument("--email", action="store_true", help="Email the generated dashboard to EMAIL_RECIPIENT with HTML, CSV, and JSON attached.")
     parser.add_argument("--output-dir", default=str(OUTPUT_DIR), help="Directory for dashboard, CSV, and JSON output.")
@@ -773,9 +978,10 @@ def main() -> None:
         if args.seed_profile in SEED_PROFILES:
             args.topic = args.seed_profile
         else:
-            sys.exit("Choose --profile health, --profile wellness, or provide --topic.")
+            sys.exit("Choose --profile health, --profile wellness, --profile beauty, or provide --topic.")
 
     seeds = build_seed_terms(args.topic, args.seeds, args.seed_profile, args.max_seeds)
+    taxonomy = load_taxonomy()
 
     print(f"Scanning Google Trends for '{args.topic}' ({args.geo}, {args.date})...")
     print(f"Seed terms ({len(seeds)}): {', '.join(seeds)}")
@@ -789,10 +995,29 @@ def main() -> None:
         request_timeout=args.timeout,
         request_retries=args.retries,
     )
+
+    # Reddit cross-validation is only meaningful for the beauty profile today
+    # (the taxonomy phrase pool is beauty-specific), and running it for
+    # unrelated profiles would just be wasted requests against Reddit's
+    # anonymous rate limit.
+    if not args.skip_reddit and args.seed_profile == "beauty":
+        print("Cross-checking Reddit for beauty signal...")
+        candidates_by_key = {normalize(c.query): c for c in candidates}
+        discover_reddit_candidates(
+            candidates_by_key,
+            seeds,
+            taxonomy,
+            args.seed_profile,
+            request_timeout=args.timeout,
+            request_retries=args.retries,
+        )
+        candidates = list(candidates_by_key.values())
+
     if not args.skip_timeseries:
         attach_timeseries(candidates, args.geo, args.date, request_timeout=args.timeout, request_retries=args.retries)
     for candidate in candidates:
         try:
+            candidate.tags = tag_candidate(candidate.query, taxonomy)
             score_candidate(candidate)
         except Exception as exc:
             # A single candidate with sparse/malformed data must not take
@@ -800,7 +1025,8 @@ def main() -> None:
             print(f"Skipping candidate '{candidate.query}' due to scoring error: {exc}", file=sys.stderr)
             continue
 
-    data = build_data(args.topic, args.geo, args.date, seeds, candidates, rejected)
+    extra_anchor_terms = sorted({term for terms in taxonomy.values() for term in terms}) if args.seed_profile == "beauty" else None
+    data = build_data(args.topic, args.geo, args.date, seeds, candidates, rejected, extra_anchor_terms=extra_anchor_terms)
     stamp = datetime.now().strftime("%Y-%m-%d_%H%M")
     slug = re.sub(r"[^a-z0-9]+", "-", args.topic.lower()).strip("-") or "topic"
     base = f"trend_radar_{slug}_{stamp}"

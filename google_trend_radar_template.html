@@ -219,6 +219,7 @@
   .radar span { background: var(--red); }
   .emerge span { background: var(--green); }
   .velocity span { background: var(--blue); }
+  .opportunity span { background: var(--amber); }
   .badge {
     display: inline-flex;
     align-items: center;
@@ -328,6 +329,7 @@
             <th>Radar</th>
             <th>Emergence</th>
             <th>Velocity</th>
+            <th>Opportunity</th>
             <th>Interest</th>
             <th>Lift</th>
             <th>Signals</th>
@@ -423,6 +425,12 @@ function chips(values) {
   return (Array.isArray(values) ? values : []).slice(0, 4).map(value => `<span class="chip">${esc(value)}</span>`).join('');
 }
 
+function tagChips(tags) {
+  const entries = tags && typeof tags === 'object' ? Object.entries(tags) : [];
+  if (!entries.length) return '<span class="topic-sub">No tags matched</span>';
+  return entries.map(([tagType, terms]) => `<span class="chip">${esc(tagType)}: ${esc((terms || []).join(', '))}</span>`).join(' ');
+}
+
 function rowHtml(c, i) {
   const stage = stageClass(c.trend_stage);
   const lift = c.rising_label || (Number(c.slope) > 0 ? `+${c.slope}` : String(c.slope ?? 0));
@@ -437,16 +445,18 @@ function rowHtml(c, i) {
       <td>${scoreCell(c.radar_score, 'radar')}</td>
       <td>${scoreCell(c.emergence_score, 'emerge')}</td>
       <td>${scoreCell(c.velocity_score, 'velocity')}</td>
+      <td>${scoreCell(c.opportunity_score, 'opportunity')}</td>
       <td>${sparkline(c.interest_scores)}</td>
       <td><span class="num">${esc(lift)}</span></td>
       <td>${chips(c.discovery_sources)}</td>
     </tr>
     <tr class="detail-row" data-parent="${i}" hidden>
-      <td colspan="9">
+      <td colspan="10">
         <div class="detail">
           <div><h4>Recommended Action</h4><p>${esc(c.recommended_action || '')}</p></div>
           <div><h4>Seed Terms</h4><p>${esc((c.seed_terms || []).join(', ') || 'None')}</p></div>
           <div><h4>Confidence</h4><p>${esc(c.confidence || 'low')} confidence · score ${esc(c.confidence_score ?? 0)}</p></div>
+          <div><h4>Tags</h4><p>${tagChips(c.tags)}</p></div>
         </div>
       </td>
     </tr>
