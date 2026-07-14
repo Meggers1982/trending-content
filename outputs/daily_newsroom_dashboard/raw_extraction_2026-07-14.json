@@ -4,278 +4,258 @@
   "niche": "health and wellness",
   "signal_summary": {
     "total_reviewed": 144,
-    "total_retained": 10,
-    "total_rejected": 134,
+    "total_retained": 7,
+    "total_rejected": 137,
     "tools_active": ["web_search", "google_news", "google_trends", "serpapi"],
     "tools_unavailable": [],
-    "notes": "Strong day for institutional/research signals. Google Trends diet delta +14 and food_safety +11 notable. Cyclosporiasis WV outbreak is top real-time trending signal. Celebrity health queries high-volume but categorically excluded. Recurring stale topics (E. coli blueberries, eye drops, GLP-1, sleep-weight, Ebola, screwworm) rejected without new development. Gut health monitored—no new anchor study despite +11 search delta. USC longevity diet retained at P3/Low confidence pending primary source confirmation."
+    "notes": "High duplicate load from recurring clusters (E. coli, eye drops, GLP-1, sleep/weight, Ebola cycling without new developments). Cyclosporiasis trending in Google Trends NOW but covered 07-08 and 07-11 without confirmed new outbreak expansion. Gut health Trends velocity (+8) noted but no anchoring study. Shampoo recall confidence capped at Medium — FDA.gov primary notice not retrieved; breaking recall exception applied pending verification."
   },
   "candidates": [
     {
       "priority_level": "P1",
       "publish_timing": "immediate",
-      "topic": "Extreme Heat and Mental Health Hospitalizations — Nature Study + WHO Advisory",
-      "primary_entity": "Extreme heat / mental health hospitalizations",
+      "topic": "Medical Cannabis for Dementia Agitation",
+      "primary_entity": "Medical cannabis / cannabidiol (CBD)",
       "signal_type": "study_or_research",
-      "allowed_category": "public health and epidemiology",
-      "trend_strength_score": 84,
-      "opportunity_score": 82,
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 82,
+      "opportunity_score": 84,
       "discover_score": 5,
       "urgency": "today",
       "confidence": "high",
       "content_status": "new",
       "source_count": 4,
-      "recommended_angle": "Lead with Nature study's core finding—what sustained extreme heat means, which mental health conditions showed strongest hospitalization signals, multi-country methodology strength. Contrast with public assumption (heat affects physical health, not mental). Close with actionable guidance for vulnerable populations.",
-      "why_now": "Nature-published multi-country study released 07-11-2026 found sustained extreme heat associated with increased mental health hospitalizations. WHO issued heat-and-health advisory 07-14-2026 (today). Convergence of peer-reviewed study and same-day WHO advisory creates P1 urgency.",
-      "primary_headline": "Extreme Heat Is Sending People to Mental Health Hospitals — What a New International Study Found",
-      "next_steps": "Assign immediately; verify Nature DOI and pull specific effect sizes; commission expert quote from psychiatrist regarding medication-heat interaction.",
-      "notes": "Observational study—association, not causation. Confirm study design (ecological vs. individual-level cohort) before characterizing evidence strength. Nature DOI not directly retrieved—verify before publish. Multi-country findings may not map uniformly to US populations—note geographic variation."
+      "recommended_angle": "What does the study actually show — and what it doesn't: cannabis 'suggested' to help, not proven. Evaluate the evidence honestly for caregivers and patients.",
+      "why_now": "NYT covered a peer-reviewed study published 07-14-2026 finding medical cannabis may reduce agitation in dementia patients. Dementia caregiving is a massive audience pain point; cannabis-for-dementia is a rising search query with high emotional resonance. First credible study-level signal on this specific indication.",
+      "primary_headline": "Medical Cannabis and Dementia Agitation: What a New Study Actually Shows",
+      "next_steps": "Retrieve primary study DOI and journal citation from NYT article. Evaluate study design (RCT vs. observational). Pull dementia prevalence and caregiver statistics from Alzheimer's Association. Confirm federal Schedule I status and state-level legal variation. Secure expert commentary from geriatric psychiatrist or neurologist. Format as in-depth explainer (1,400–1,800 words) with FAQ section. Apply MedicalWebPage + FAQPage schema.",
+      "notes": "⚠️ Study framing uses 'suggested' — do not present as proven treatment. Confirm RCT vs. observational design. Federal Schedule I status and state-level legal variation must be addressed explicitly. Mild overstatement risk in study framing — note association, not causation."
     },
     {
       "priority_level": "P1",
       "publish_timing": "immediate",
-      "topic": "Cyclosporiasis West Virginia Outbreak — 2026 Update",
-      "primary_entity": "Cyclosporiasis / West Virginia outbreak",
-      "signal_type": "breaking_news",
-      "allowed_category": "public health and epidemiology",
-      "trend_strength_score": 88,
-      "opportunity_score": 76,
-      "discover_score": 4,
-      "urgency": "now",
-      "confidence": "high",
-      "content_status": "update",
-      "source_count": 3,
-      "recommended_angle": "Practical public health explainer anchored to WV outbreak—what Cyclospora is, how it spreads (typically produce-linked), WV-specific case details from DHHR/CDC, who is most at risk, what to do if symptomatic. Demystify 'mysterious parasite' framing without alarming.",
-      "why_now": "Google Trends shows 'west virginia cyclosporiasis outbreak' and 'mysterious parasite' as #1 and #2 real-time trending health searches in US today. Local outbreak broken into public awareness. Prior coverage (07-08, 07-11) was general; this is state-specific geographic development.",
-      "primary_headline": "West Virginia Cyclosporiasis Outbreak: What the 'Mysterious Parasite' Is and Who's at Risk",
-      "next_steps": "Assign immediately; pull CDC cyclosporiasis surveillance update and WV DHHR outbreak notice; confirm case count and suspected source before publish.",
-      "notes": "WV case count and confirmed source not yet directly retrieved from CDC/DHHR—verify before publish. Do not overstate outbreak scope. 'Mysterious parasite' framing in search is public confusion, not scientific uncertainty—avoid amplifying alarm."
-    },
-    {
-      "priority_level": "P2",
-      "publish_timing": "short_term",
-      "topic": "Medical Cannabis for Dementia Agitation — New Study",
-      "primary_entity": "Medical cannabis / dementia agitation",
-      "signal_type": "study_or_research",
+      "topic": "HHS and VA Sign MOU for Psychedelic Drug Trials for Veterans",
+      "primary_entity": "HHS / VA psychedelic drug clinical trials",
+      "signal_type": "clinical_trial",
       "allowed_category": "medical research and clinical trials",
-      "trend_strength_score": 72,
-      "opportunity_score": 78,
+      "trend_strength_score": 78,
+      "opportunity_score": 80,
       "discover_score": 4,
       "urgency": "today",
-      "confidence": "medium",
+      "confidence": "high",
       "content_status": "new",
       "source_count": 3,
-      "recommended_angle": "Caregiver-focused reality check—what the study measured, what 'agitation' means clinically, effect sizes, limitations (RCT vs. observational? sample size?), and what dementia specialists currently recommend. Avoid overclaiming in either direction.",
-      "why_now": "NYT (tier-1) published coverage 07-14-2026 (today). Dementia caregiving and agitation management are persistent audience pain points. Cannabis-as-medicine remains high-interest, frequently mischaracterized topic. 'Study suggests' framing indicates promising but non-conclusive findings.",
-      "primary_headline": "Medical Cannabis May Help Calm Dementia Agitation, Study Suggests — But Here's What the Evidence Actually Shows",
-      "next_steps": "Verify journal and DOI via NYT article; confirm study design (RCT preferred); pull geriatric psychiatrist quote; publish within 24h given NYT same-day coverage.",
-      "notes": "Confidence capped at Medium—journal/DOI not directly retrieved. Verify before treating as confirmed RCT. 'Suggests' language in NYT headline indicates finding is not definitive—lead with actual study design and effect size. Medical cannabis legal status varies by state—include practical context. Do not generalize to dementia prevention or other cannabis health claims."
+      "recommended_angle": "What the HHS/VA partnership actually commits to — and what it means for veterans seeking access to psilocybin and MDMA-assisted therapy before FDA approval pathways are resolved.",
+      "why_now": "HHS and VA signed an MOU on 07-13-2026 to advance rapid-acting mental health treatments including psychedelic-assisted therapy for veterans. Announced via HHS.gov and corroborated by The American Legion. Arrives against the backdrop of unresolved MDMA FDA approval status and growing veteran mental health crisis. High institutional authority signal.",
+      "primary_headline": "HHS and VA Partner on Psychedelic Drug Trials for Veterans — What the New Agreement Actually Means",
+      "next_steps": "Retrieve HHS.gov primary announcement. Confirm MOU scope and committed trial expansion metrics. Verify current FDA status of MDMA (rejected August 2024) and psilocybin DEA scheduling. Pull veteran suicide rate data from VA 2023 National Veteran Suicide Prevention Annual Report. Secure expert commentary from VA-affiliated psychiatrist, PTSD researcher, or veteran mental health advocate. Format as policy-to-patient explainer (1,200–1,600 words) with FAQ. Apply NewsArticle + FAQPage schema.",
+      "notes": "⚠️ MOU is a cooperation agreement, not an approval or access expansion — must be explicit. MDMA not FDA-approved; psilocybin Schedule I. Do not conflate 'rapid-acting' ketamine (FDA-approved) with investigational psychedelics. Trials not yet reporting results; framing must reflect announcement, not outcomes."
     },
     {
       "priority_level": "P2",
       "publish_timing": "short_term",
-      "topic": "HHS/VA MOU — Psychedelic Drug Trials Partnership for Veterans",
-      "primary_entity": "HHS / VA psychedelic drug trials",
-      "signal_type": "clinical_trial",
-      "allowed_category": "mental health and psychology",
-      "trend_strength_score": 68,
-      "opportunity_score": 74,
+      "topic": "Dementia Rising in Latino Populations — WashU Multidecade Study",
+      "primary_entity": "Latino dementia incidence (Washington University in St. Louis study)",
+      "signal_type": "study_or_research",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 74,
+      "opportunity_score": 82,
       "discover_score": 4,
-      "urgency": "today",
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Why are dementia rates rising specifically in Latino populations — and what the WashU data reveals about risk factors, health disparities, and what families can do now.",
+      "why_now": "WashU Medicine published findings from a multidecade study (07-13-2026) showing dementia is rising across Latino populations. Data-driven, institutionally sourced story with significant audience relevance — Latino adults are the largest-growing segment of the US aging population, yet systematically underrepresented in dementia research. SERP thin on current, accessible coverage.",
+      "primary_headline": "Dementia Is Rising Among Latino Adults — What a New Decades-Long Study Reveals",
+      "next_steps": "Retrieve WashU Medicine institutional release. Confirm study design, primary incidence figures, and which Latino subgroups are represented. Pull Census Bureau data on Latino 65+ population growth. Retrieve Alzheimer's Association Latino prevalence statistics (1.5x higher likelihood). Compile diabetes, hypertension, and healthcare access disparities data (CDC sources). Secure expert commentary from WashU PI or Latino health specialist. Format as research explainer with health equity angle (1,400–1,800 words). Apply MedicalWebPage + FAQPage schema.",
+      "notes": "⚠️ Observational study — rising incidence is correlation/trend, not causation. 'Latino' is not monolithic — study must specify which subgroups. Do not conflate increased detection/diagnosis rates with true incidence increase. Note association, not causation."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Pew Research — Nearly 6 in 10 Young Women Get Health Information from Influencers",
+      "primary_entity": "Pew Research Center health influencer survey (young women)",
+      "signal_type": "data_release",
+      "allowed_category": "public health and epidemiology",
+      "trend_strength_score": 70,
+      "opportunity_score": 78,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "What the Pew data actually reveals — and the real stakes when influencers are the primary health information source for young women: what's being missed, what's being distorted, and how to tell good health information from bad.",
+      "why_now": "Pew Research Center published 07-13-2026 that nearly 60% of young women get health and wellness information from influencers. Primary survey data from the most credible survey research organization. Directly intersects with audience concern about health misinformation. Fresh data anchor for durable topic.",
+      "primary_headline": "Nearly 6 in 10 Young Women Get Health Info from Influencers — What Pew's New Data Really Means",
+      "next_steps": "Retrieve Pew Research full report and confirm precise statistic and age definition of 'young women.' Identify platform breakdown (TikTok, Instagram, YouTube). Extract topic areas most influenced (weight loss, mental health, supplements, skincare). Research prior documented influencer health misinformation studies (BMJ TikTok health content study, other relevant citations). Develop 5-point framework for evaluating online health information. Secure expert commentary from health communication researcher or social media health misinformation specialist. Format as data explainer with embedded practical evaluation guide (1,200–1,500 words). Apply Article + FAQPage schema.",
+      "notes": "⚠️ 'Getting information from' ≠ 'trusting exclusively' — do not overstate Pew framing. Pull precise Pew definition of 'young women' — do not assume age range. Focus on what information gap the influencer-reliance fills and documented accuracy concerns."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Extreme Heat Linked to Mental Health Hospitalizations — Nature Study, Multi-Country",
+      "primary_entity": "Extreme heat / mental health hospitalizations",
+      "signal_type": "study_or_research",
+      "allowed_category": "environmental health",
+      "trend_strength_score": 68,
+      "opportunity_score": 76,
+      "discover_score": 4,
+      "urgency": "this_week",
       "confidence": "high",
       "content_status": "new",
       "source_count": 4,
-      "recommended_angle": "What the MOU actually commits to (access pathways, funding, trial design), which psychedelics in scope (ketamine already VA-approved; MDMA/psilocybin further from approval), what this realistically means for veterans seeking treatment now vs. 2-3 years. Avoid hype—this is policy/access development, not treatment approval.",
-      "why_now": "HHS.gov published MOU announcement 07-13-2026; American Legion confirmed partnership. Veteran mental health (suicide rates, PTSD, treatment-resistant depression) is persistent high-urgency public health issue. Psychedelic-assisted therapy for PTSD is active, accelerating clinical research area. MOU is concrete institutional development.",
-      "primary_headline": "The VA and HHS Just Signed a Deal to Expand Psychedelic Therapy Trials for Veterans — What It Means",
-      "next_steps": "Confirm HHS.gov announcement URL; identify which specific treatments in scope per MOU; pull ClinicalTrials.gov for active VA psychedelic trials; assign to writer with mental health/policy background.",
-      "notes": "MOU is partnership agreement, not drug approval—distinguish clearly from any implication that psychedelics now available to veterans. MDMA-assisted therapy FDA approval rejected 2024. Psilocybin remains Schedule I—contextual accuracy required."
+      "recommended_angle": "The heat-mental health link is now documented at the hospitalization level across multiple countries — what the data shows about who is most vulnerable and what it means for public health and individuals.",
+      "why_now": "Nature published study 07-11-2026 linking sustained extreme heat to mental health hospitalizations across multiple countries; WHO issued heat-and-health advisory 07-13-2026. Dual institutional signal in Northern Hemisphere summer peak. Temperatures forecasted extreme through July. Immediate geographic and temporal relevance.",
+      "primary_headline": "Extreme Heat Is Sending More People to the Hospital for Mental Health Crises — New Research Explains Why",
+      "next_steps": "Retrieve Nature study (full text or DOI). Confirm countries studied, effect magnitude, which mental health conditions most affected. Retrieve WHO 07-13-2026 heat advisory. Research mechanism: dehydration, sleep disruption, medication interactions (lithium, antipsychotics, SSRIs heat risk). Identify vulnerable populations (older adults, psychiatric medication users, unhoused). Retrieve FDA drug labeling and CDC heat-medication interaction guidance. Secure expert commentary from environmental health researcher or psychiatrist with heat-medication expertise. Format as explanatory article with protective guidance section (1,300–1,700 words). Apply MedicalWebPage + FAQPage schema.",
+      "notes": "⚠️ Multi-country observational study — association, not proven causation. Effect sizes and countries included matter; do not overgeneralize. Medication-heat interactions serious — recommend readers consult prescribers, not act unilaterally. Note cross-national observational design explicitly."
     },
     {
-      "priority_level": "P2",
-      "publish_timing": "short_term",
-      "topic": "FDA Shampoo Recall — Bacterial Contamination Risk",
-      "primary_entity": "FDA shampoo recall / bacterial contamination",
-      "signal_type": "breaking_news",
-      "allowed_category": "public health",
-      "trend_strength_score": 74,
-      "opportunity_score": 70,
+      "priority_level": "P3",
+      "publish_timing": "immediate",
+      "topic": "Shampoo Recall — Bacterial Contamination Risk",
+      "primary_entity": "Shampoo recall (FDA / bacterial contamination)",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 65,
+      "opportunity_score": 62,
       "discover_score": 3,
       "urgency": "today",
       "confidence": "medium",
       "content_status": "new",
       "source_count": 3,
-      "recommended_angle": "Consumer-action focused—which brand(s), what contamination, what bacterial risk actually is (low for healthy users, higher for immunocompromised or those with broken skin/scalp conditions), what to do (stop using, check lot numbers, return/discard).",
-      "why_now": "KAKE reported FDA recall 07-13-2026. Google Trends 'food safety' delta +11 today indicates heightened consumer recall awareness. Shampoo recalls for bacterial contamination underreported yet relevant to immunocompromised users and those with skin conditions. Not in run history.",
-      "primary_headline": "FDA Announces Shampoo Recall Over Bacterial Contamination Risk — Here's What to Check",
-      "next_steps": "Pull FDA.gov recall notice immediately; confirm brand name, lot numbers, contamination type; assign for same-day publish once FDA details confirmed.",
-      "notes": "Breaking-recall exception applied—KAKE is primary signal source; FDA.gov recall notice URL not yet directly retrieved. Verify and confirm brand name, lot numbers, bacterial contaminant type before publish. Confidence capped at Medium until FDA.gov primary notice confirmed."
+      "recommended_angle": "What's been recalled, who is affected, and what to do — without overstating risk before FDA primary notice is confirmed.",
+      "why_now": "FDA announced recall of popular shampoo brand due to bacterial contamination risk (KAKE 07-13-2026). Recall news has direct consumer action value. Multiple sources confirm; FDA.gov primary notice not directly retrieved — breaking recall exception applied.",
+      "primary_headline": "Popular Shampoo Brand Recalled Over Bacterial Contamination — What to Check",
+      "next_steps": "CRITICAL: Verify FDA.gov primary recall notice before publishing. Confirm brand name, product line, lot codes, contaminating organism, and FDA risk classification. Do not publish until FDA.gov source is directly accessed and confirmed. Format as short news brief (400–600 words) with clear product identification checklist. Include FDA.gov link and how to report adverse effects.",
+      "notes": "⚠️ FDA.gov primary recall notice not directly retrieved at time of brief — breaking recall exception applied pending verification. Confidence capped at Medium per Skill 02b. Do not overstate infection risk — bacterial contamination in rinse-off products carries different risk profile than food or injectables. State risk accurately per FDA notice language. MANDATORY: Editor must confirm FDA.gov source before publishing."
     },
     {
-      "priority_level": "P2",
+      "priority_level": "P3",
       "publish_timing": "short_term",
-      "topic": "FDA Infant Formula Advisory — Supplier Oversight and Botulism Outbreaks",
-      "primary_entity": "FDA infant formula / supplier oversight / botulism",
+      "topic": "FDA Urges Infant Formula Makers to Tighten Supplier Oversight After Botulism Outbreaks",
+      "primary_entity": "FDA / infant formula supplier oversight",
       "signal_type": "policy_or_regulatory_change",
-      "allowed_category": "public health",
-      "trend_strength_score": 66,
-      "opportunity_score": 72,
-      "discover_score": 4,
-      "urgency": "today",
-      "confidence": "high",
-      "content_status": "new",
-      "source_count": 3,
-      "recommended_angle": "Parent-facing explainer—what FDA's advisory says, what botulism risk in formula means clinically, which manufacturers affected (if named by FDA), what specific actions parents should take now (check lot numbers, contact pediatrician if concerned), how this relates to 2022 formula shortage/Abbott recall aftermath.",
-      "why_now": "Reuters (tier-1) reported 07-13-2026 that FDA is urging infant formula manufacturers to tighten supplier oversight following product recalls and botulism outbreaks. Infant formula safety category has acute parental anxiety, high search intent, significant institutional stakes.",
-      "primary_headline": "FDA Is Telling Infant Formula Makers to Tighten Supplier Oversight — Here's What Parents Should Know",
-      "next_steps": "Pull FDA advisory document; confirm manufacturer names if disclosed; verify Reuters URL; assign to writer with pediatric health background; publish within 24-48h.",
-      "notes": "Botulism in infant formula is extremely rare but severe—maintain proportionate language; avoid alarming without evidence of current harm. Confirm whether FDA has named specific manufacturers before publishing any brand-specific content."
-    },
-    {
-      "priority_level": "P3",
-      "publish_timing": "scheduled",
-      "topic": "Pew Research — Young Women Get Health and Wellness Information From Influencers",
-      "primary_entity": "Pew Research Center / health influencers / young women",
-      "signal_type": "data_release",
-      "allowed_category": "public health and epidemiology",
-      "trend_strength_score": 60,
-      "opportunity_score": 65,
-      "discover_score": 3,
-      "urgency": "this_week",
-      "confidence": "high",
-      "content_status": "new",
-      "source_count": 3,
-      "recommended_angle": "Lead with Pew finding, then interrogate what kinds of health information young women getting from influencers (nutrition, mental health, supplements, GLP-1?) and what evidence says about influencer health content accuracy. Pair with Medscape story ('When Medical Mistrust, Wellness, and Politics Align') for broader cultural context. Avoid condescension; frame around information literacy.",
-      "why_now": "Pew Research published data 07-13-2026. Young women health information seeking from influencers is persistent, growing trend with significant public health implications for misinformation spread.",
-      "primary_headline": "Nearly 6 in 10 Young Women Get Health Information From Influencers — Here's Why That's a Public Health Problem",
-      "next_steps": "Pull Pew report URL; find specific data breakdown by topic area; assign this week.",
-      "notes": "Confirm Pew sample size, methodology, and age range before citing statistics. Avoid framing that implies all influencer health content is misinformation; some is credible."
-    },
-    {
-      "priority_level": "P3",
-      "publish_timing": "scheduled",
-      "topic": "Peanut Allergy Clinical Trial — Children's Healthcare of Atlanta Multi-Site Study",
-      "primary_entity": "Peanut allergy / Children's Healthcare of Atlanta / multi-site trial",
-      "signal_type": "clinical_trial",
-      "allowed_category": "pediatric health",
-      "trend_strength_score": 58,
-      "opportunity_score": 63,
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 62,
+      "opportunity_score": 68,
       "discover_score": 3,
       "urgency": "this_week",
       "confidence": "medium",
       "content_status": "new",
-      "source_count": 2,
-      "recommended_angle": "Parent-facing explainer—what the trial is testing (immunotherapy approach, dosing, eligibility criteria), how it differs from Palforzia (already FDA-approved peanut OIT), how families with peanut-allergic children can find out about trial eligibility. Context on broader peanut allergy treatment pipeline.",
-      "why_now": "Georgia Public Broadcasting reported multi-site trial news 07-13-2026. Pediatric health, parent audience pain point, clinical trial angle.",
-      "primary_headline": "A Major Multi-Site Clinical Trial for Peanut Allergies Has Begun — What Families Should Know",
-      "next_steps": "Find ClinicalTrials.gov NCT number; confirm what intervention being tested; verify GPB article URL.",
-      "notes": "Trial outcome data not yet available—frame as 'what this trial is studying,' not 'new treatment found.' Confirm trial registration on ClinicalTrials.gov before publish."
-    },
-    {
-      "priority_level": "P3",
-      "publish_timing": "this_week",
-      "topic": "ACEs (Adverse Childhood Experiences) Mental Health Test — Rising Search Interest",
-      "primary_entity": "ACEs / adverse childhood experiences / mental health assessment",
-      "signal_type": "rising_search_interest",
-      "allowed_category": "mental health and psychology",
-      "trend_strength_score": 55,
-      "opportunity_score": 61,
-      "discover_score": 3,
-      "urgency": "this_week",
-      "confidence": "medium",
-      "content_status": "new",
-      "source_count": 2,
-      "recommended_angle": "Demystify ACEs questionnaire—what it measures, what your score means, what it doesn't predict (it's a research tool, not a diagnostic instrument), where to find evidence-based support if you score high. Rising 'aces mental health test' query indicates people finding test online and seeking context.",
-      "why_now": "Rising Google Trends query 'aces mental health test' indicates sustained public interest. Strong evergreen + timely (rising search) candidate.",
-      "primary_headline": "What Is the ACEs Mental Health Test — and Should You Take It?",
-      "next_steps": "Confirm rising search volume on Google Trends; assign as evergreen candidate; low production complexity.",
-      "notes": "ACE score is population-level research tool, not clinical diagnostic—be precise about what score means and doesn't mean for individuals. Avoid framing that implies high ACE score is deterministic for health outcomes; resilience and protective factors exist."
-    },
-    {
-      "priority_level": "P3",
-      "publish_timing": "scheduled",
-      "topic": "USC Longevity Diet Research — What the Evidence Says",
-      "primary_entity": "USC longevity diet / Valter Longo",
-      "signal_type": "rising_search_interest",
-      "allowed_category": "nutrition and diet science",
-      "trend_strength_score": 52,
-      "opportunity_score": 60,
-      "discover_score": 3,
-      "urgency": "this_week",
-      "confidence": "low",
-      "content_status": "new",
-      "source_count": 1,
-      "recommended_angle": "Explain what USC/Longo longevity diet framework actually recommends (pescatarian, time-restricted eating, periodic fasting-mimicking diet), what evidence base is (primarily observational + mouse studies + some human trials), how it compares to Mediterranean diet and other evidence-based longevity frameworks. Distinct from Zeke Emanuel ice cream/caloric restriction story covered 07-13.",
-      "why_now": "Rising Google Trends query 'university of southern california longevity diet' points to Valter Longo's research program. Diet search trend +14 delta today indicates heightened interest.",
-      "primary_headline": "The USC Longevity Diet: What the Research Actually Recommends for Living Longer",
-      "next_steps": "Verify whether a new USC paper or announcement is driving the query spike before assigning; if no new paper, treat as evergreen; low urgency.",
-      "notes": "Confidence LOW—no specific new USC study confirmed; search-trend driven only. Much of Longo's longevity diet evidence is observational or animal-model—note limitations clearly. Fasting-mimicking diet (Prolon) is commercial product associated with Longo—disclose conflict of interest context."
+      "source_count": 3,
+      "recommended_angle": "What the FDA is actually asking infant formula companies to do — and what it means for parents given the 2022 formula shortage context and ongoing botulism risk concerns.",
+      "why_now": "Reuters reported 07-13-2026 that FDA is urging infant formula manufacturers to tighten supplier oversight following product recalls and botulism outbreaks. Direct FDA regulatory action with consumer protection implications. Formula safety remains high-anxiety topic for parents post-2022 Abbott/Similac shortage.",
+      "primary_headline": "FDA Tells Infant Formula Companies to Strengthen Supplier Oversight — What Parents Need to Know",
+      "next_steps": "Retrieve FDA.gov guidance document or advisory linked in Reuters article. Confirm scope: which manufacturers received guidance, which specific botulism incidents prompted action. Clarify 'urging' vs. mandatory enforcement distinction. Pull 2022 formula shortage context for backdrop. Compile current infant formula safety recall status. Develop parent-facing FAQ addressing safety concerns. Format as news explainer (700–900 words) with parent FAQ section. Apply Article + FAQPage schema.",
+      "notes": "⚠️ Reuters is credible but FDA primary document not directly retrieved. Verify FDA.gov source before publishing. Do not conflate 'urging' or guidance with mandatory recall or enforcement action unless FDA primary source confirms authority. Confidence Medium pending FDA source confirmation."
     }
   ],
   "rejected": [
     {
-      "topic": "E. coli frozen blueberries",
-      "reason": "existing — covered 07-08 through 07-12; no materially new case count, recall expansion, or agency action found today"
+      "topic": "E. coli Outbreak — Frozen Blueberries",
+      "reason": "stale / existing"
     },
     {
-      "topic": "Eye drops recall",
-      "reason": "existing — covered 07-09 through 07-12; no new lot, brand, or agency action today"
+      "topic": "Eye Drop Recall (2.5M bottles)",
+      "reason": "stale / existing"
     },
     {
-      "topic": "GLP-1 online prescriptions",
-      "reason": "existing — covered 07-08 through 07-12 (Yale study); no new development"
+      "topic": "Cream Cheese / Seasoning Recall",
+      "reason": "stale / existing"
     },
     {
-      "topic": "New World Screwworm",
-      "reason": "existing — covered 07-13; no new USDA detection data found for today"
+      "topic": "OTC Skin Cream Recalls",
+      "reason": "stale / existing"
     },
     {
-      "topic": "OTC skin cream recalls",
-      "reason": "existing — covered 07-13"
+      "topic": "GLP-1 / Online Prescriptions (Yale)",
+      "reason": "stale / existing"
     },
     {
-      "topic": "Ebola DRC",
-      "reason": "existing — covered 07-08 through 07-12; CDC 07-14 item is traveler info page, not a new outbreak development"
+      "topic": "GLP-1 Illegal Prescribing Asheville",
+      "reason": "brand-safety / off-category"
     },
     {
-      "topic": "Sleep-diet connection",
-      "reason": "existing — covered 07-11 through 07-13 multiple times"
+      "topic": "Sleep Deprivation → Weight Gain (Columbia)",
+      "reason": "stale / existing"
     },
     {
-      "topic": "Gut health",
-      "reason": "existing — covered comprehensively 07-10 and 07-11; no new study today; recurring stale flag applies"
+      "topic": "Ebola DRC Clinical Trials",
+      "reason": "stale / existing"
     },
     {
-      "topic": "PCOS nutrition",
-      "reason": "existing — covered 07-11 as 'PCOS Nutrition: What the Research Actually Says'; no materially new development"
+      "topic": "New World Screwworm USDA",
+      "reason": "stale / existing"
     },
     {
-      "topic": "Glioma progression / Weill Cornell",
-      "reason": "existing — covered 07-13"
+      "topic": "AMA Wearables Survey",
+      "reason": "stale / existing"
     },
     {
-      "topic": "Jimmy Kimmel health",
-      "reason": "brand_safety — celebrity health gossip; excluded category"
+      "topic": "Longevity Diet / Zeke Emanuel",
+      "reason": "stale / existing"
     },
     {
-      "topic": "Mitch McConnell health",
-      "reason": "brand_safety — political figure; pure political health gossip; excluded"
+      "topic": "Glioma Progression / Weill Cornell",
+      "reason": "stale / existing"
     },
     {
-      "topic": "Brian Johnson health",
-      "reason": "brand_safety — celebrity/influencer; excluded category"
+      "topic": "Fentanyl Vaccine",
+      "reason": "stale / existing"
     },
     {
-      "topic": "ACA premiums 2027",
-      "reason": "off_category — pure health insurance/policy business; no direct patient health science angle"
+      "topic": "Biological Aging Clocks",
+      "reason": "stale / existing"
     },
     {
-      "topic": "Digital health CEO sentenced ($90M Adderall scheme)",
-      "reason": "weak_signal — DOJ item from 07-07; outside freshness window for P1/P2; note for P5 future"
+      "topic": "Cyclosporiasis WV",
+      "reason": "stale / existing"
     },
     {
-      "topic": "Matcha gut health / stewed apples gut health",
-      "reason": "off_category — gut health covered comprehensively 07-10/07-11; no new study anchoring these queries"
+      "topic": "PCOS Nutrition",
+      "reason": "stale / existing"
+    },
+    {
+      "topic": "Gut Health / Microbiome",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "Stanford Opioid Taper Study",
+      "reason": "stale / existing"
+    },
+    {
+      "topic": "Lung Transplant Terminal Cancer",
+      "reason": "stale / existing"
+    },
+    {
+      "topic": "Sleep-Diet Connection (St-Onge)",
+      "reason": "stale / existing"
+    },
+    {
+      "topic": "Trump HHS / Trans Care Medicare",
+      "reason": "brand-safety / off-category"
+    },
+    {
+      "topic": "Digital Health Fraud / Adderall Sentencing",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Male Wellness Peptides (FT)",
+      "reason": "brand-safety / off-category"
+    },
+    {
+      "topic": "$11B Wellness Island Abu Dhabi",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Peanut Allergy Multi-Site Trial (Atlanta)",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "UHC Lifestyle Spending Accounts",
+      "reason": "off-category"
     }
   ]
 }
