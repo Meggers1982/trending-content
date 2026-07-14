@@ -192,45 +192,118 @@ function ReportSection({ section }) {
   );
 }
 
-function parseSignalRadar(text) {
-  const trendRows = [];
-  const newsRows = [];
-
+// The signal file uses "## Section Title" headers (see build_serp_context()
+// in run_pipeline.py); splitting on those first lets us tell apart the fixed
+// seed-category depth readings from the actual discovered rising/trending
+// terms, which live in different sections but share the same "  - text"
+// bullet format.
+function splitSignalSections(text) {
+  const sections = {};
+  let current = null;
   for (const line of `${text || ""}`.split("\n")) {
+    const match = line.match(/^##\s+(.+)/);
+    if (match) {
+      current = match[1].trim();
+      sections[current] = [];
+    } else if (current) {
+      sections[current].push(line);
+    }
+  }
+  return sections;
+}
+
+function bulletLines(lines) {
+  return lines
+    .map((line) => line.match(/^\s+-\s+(.+)/))
+    .filter(Boolean)
+    .map((match) => match[1].trim());
+}
+
+function parseSignalRadar(text) {
+  const sections = splitSignalSections(text);
+  const sectionKeys = Object.keys(sections);
+
+  const trendingNowKey = sectionKeys.find((k) => k.startsWith("Google Trends — Trending Now"));
+  const trendingNow = trendingNowKey ? bulletLines(sections[trendingNowKey]).slice(0, 12) : [];
+
+  const interestKey = sectionKeys.find((k) => k.startsWith("Google Trends — 7-Day Interest"));
+  const interestLines = interestKey ? sections[interestKey] : [];
+
+  const trendRows = [];
+  for (const line of interestLines) {
     const trend = line.match(/^\s+-\s+\*\*(.+?)\*\*:\s+latest=(\d+),\s+peak=(\d+),\s+7d-delta=([+-]?\d+)/);
     if (trend) {
-      trendRows.push({
-        keyword: trend[1],
-        latest: trend[2],
-        peak: trend[3],
-        delta: trend[4]
-      });
-      continue;
-    }
-
-    const news = line.match(/^\s+-\s+\((.+?)\)\s+\[(.+?)\]\s+(.+?)\s+—\s+(.+)/);
-    if (news) {
-      newsRows.push({
-        query: news[1],
-        source: news[2],
-        date: news[3],
-        title: news[4]
-      });
+      trendRows.push({ keyword: trend[1], latest: trend[2], peak: trend[3], delta: trend[4] });
     }
   }
 
-  return { trendRows: trendRows.slice(0, 9), newsRows: newsRows.slice(0, 18) };
+  const risingIndex = interestLines.findIndex((line) => line.includes("Top rising related queries"));
+  const risingSearches = risingIndex >= 0 ? bulletLines(interestLines.slice(risingIndex + 1)).slice(0, 20) : [];
+
+  const newsKey = sectionKeys.find((k) => k.startsWith("Google News Radar"));
+  const newsLines = newsKey ? sections[newsKey] : [];
+  const newsRows = [];
+  for (const line of newsLines) {
+    const news = line.match(/^\s+-\s+\((.+?)\)\s+\[(.+?)\]\s+(.+?)\s+—\s+(.+)/);
+    if (news) {
+      newsRows.push({ query: news[1], source: news[2], date: news[3], title: news[4] });
+    }
+  }
+
+  return {
+    trendingNow,
+    trendRows: trendRows.slice(0, 9),
+    risingSearches,
+    newsRows: newsRows.slice(0, 18)
+  };
 }
 
 function RadarDashboard({ text }) {
-  const { trendRows, newsRows } = parseSignalRadar(text);
+  const { trendingNow, trendRows, risingSearches, newsRows } = parseSignalRadar(text);
+  const hasRising = trendingNow.length > 0 || risingSearches.length > 0;
   return (
     <section className="radarDashboard" id="radar">
+      <article className="panel formattedPanel risingPanel">
+        <div className="panelHeader">
+          <span>Rising Searches</span>
+          <strong>{hasRising ? "discovered today" : "Missing"}</strong>
+        </div>
+        {hasRising ? (
+          <>
+            {trendingNow.length ? (
+              <>
+                <h4>Trending Now (real-time)</h4>
+                <div className="chipGroup">
+                  {trendingNow.map((term) => <span className="chip" key={term}>{term}</span>)}
+                </div>
+              </>
+            ) : null}
+            {risingSearches.length ? (
+              <>
+                <h4>Rising Related Searches</h4>
+                <div className="chipGroup">
+                  {risingSearches.map((term) => <span className="chip" key={term}>{term}</span>)}
+                </div>
+              </>
+            ) : null}
+          </>
+        ) : (
+          <p>
+            No rising-query data in today's signal file yet. This needs{" "}
+            <code>SERPAPI_TRENDING_NOW_ENABLED=true</code> (for real-time terms) and a run with
+            SerpAPI configured.
+          </p>
+        )}
+      </article>
       <article className="panel formattedPanel">
         <div className="panelHeader">
-          <span>Google Trends</span>
+          <span>Category Interest</span>
           <strong>{trendRows.length ? "7-day interest" : "Missing"}</strong>
         </div>
+        <p style={{ color: "var(--muted)", fontSize: 12, marginTop: -6, marginBottom: 12 }}>
+          Fixed topic areas we track depth for, not discovered trends — see Rising Searches above
+          for actual emerging queries.
+        </p>
         <div className="trendGrid">
           {trendRows.map((trend) => (
             <div className="trendCard" key={trend.keyword}>
