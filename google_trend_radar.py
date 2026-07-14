@@ -859,7 +859,15 @@ def build_data(
             relevant.append(candidate)
         else:
             off_topic.append(candidate)
-            rejected.append({"topic": candidate.query, "reason": "Off-topic after expanded seed scan"})
+            # Off-topic candidates cluster by originating seed (e.g. a thin
+            # "diet news"/"diet products" combo falling back to Google's
+            # generic trending-searches filler) - keeping the seed(s) here
+            # lets us trace and prune the offending seed instead of guessing.
+            rejected.append({
+                "topic": candidate.query,
+                "reason": "Off-topic after expanded seed scan",
+                "seed_terms": sorted(candidate.seed_terms),
+            })
 
     retained = [c for c in relevant if c.radar_score >= 50]
     weak = [c for c in relevant if c.radar_score < 50]

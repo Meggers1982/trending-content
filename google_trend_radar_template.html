@@ -345,7 +345,7 @@
     <div class="toolbar"><div class="section-title">Rejected Or Weak Signals</div></div>
     <div class="table-shell">
       <table>
-        <thead><tr><th>Topic</th><th>Reason</th></tr></thead>
+        <thead><tr><th>Topic</th><th>Reason</th><th>Seed</th></tr></thead>
         <tbody id="rejected-rows"></tbody>
       </table>
     </div>
@@ -491,7 +491,7 @@ document.getElementById('filters').addEventListener('click', event => {
 if (rejected.length) {
   document.getElementById('rejected-section').hidden = false;
   document.getElementById('rejected-rows').innerHTML = rejected.map(r => `
-    <tr><td>${esc(r.topic)}</td><td>${esc(r.reason)}</td></tr>
+    <tr><td>${esc(r.topic)}</td><td>${esc(r.reason)}</td><td>${esc((r.seed_terms || []).join(', '))}</td></tr>
   `).join('');
 }
 </script>
