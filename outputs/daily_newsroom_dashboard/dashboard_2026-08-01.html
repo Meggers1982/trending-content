@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trending Content OS — Daily Dashboard</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  :root {
+    --ink: #171717;
+    --text: #262626;
+    --muted: #686868;
+    --faint: #8a8a8a;
+    --paper: #fbfaf8;
+    --surface: #ffffff;
+    --soft: #f2f1ee;
+    --line: #dfddd8;
+    --red: #cf2f32;
+    --green: #1f9d55;
+    --amber: #d97706;
+    --blue: #2563eb;
+    --violet: #7c3aed;
+  }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--paper);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+  .topbar {
+    height: 48px;
+    background: #070707;
+    color: #f7f7f7;
+    display: flex;
+    align-items: center;
+    padding: 0 18px;
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+  .mark {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3px;
+  }
+  .mark span { background: #f7f7f7; border-radius: 999px; }
+  .wrap { max-width: 1232px; margin: 0 auto; padding: 32px 28px 56px; }
+  .masthead {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 8px 0 28px;
+  }
+  h1 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    line-height: 1.1;
+    color: var(--ink);
+    letter-spacing: 0;
+  }
+  h1 span { color: var(--red); }
+  .dek {
+    margin-top: 10px;
+    color: #555;
+    font-size: 14px;
+  }
+  .run-chip {
+    margin-top: 2px;
+    border: 1px solid var(--line);
+    background: var(--soft);
+    border-radius: 4px;
+    padding: 7px 10px;
+    color: #555;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin: 0 0 28px;
+  }
+  .stat {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--red);
+    border-radius: 6px;
+    padding: 18px 20px;
+    min-height: 100px;
+  }
+  .stat.green { border-top-color: var(--green); }
+  .stat.amber { border-top-color: var(--amber); }
+  .stat.violet { border-top-color: var(--violet); }
+  .stat .value {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 36px;
+    line-height: 1;
+    color: var(--red);
+    font-weight: 700;
+  }
+  .stat.green .value { color: var(--green); }
+  .stat.amber .value { color: var(--amber); }
+  .stat.violet .value { color: var(--violet); }
+  .stat .label {
+    margin-top: 8px;
+    color: #666;
+    font-weight: 700;
+    font-size: 13px;
+  }
+  .insight {
+    background: #eff6ff;
+    border: 1px solid #b7d4ff;
+    border-left: 4px solid var(--blue);
+    border-radius: 6px;
+    padding: 18px 20px 17px;
+    margin: 0 0 28px;
+    color: #183052;
+  }
+  .insight-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    color: #1457d9;
+    font-weight: 800;
+  }
+  .status-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: #fff8e6;
+    border: 1px solid #f4be4a;
+    border-left: 4px solid var(--amber);
+    border-radius: 6px;
+    padding: 12px 14px;
+    margin: -12px 0 28px;
+    color: #5f3900;
+    font-size: 13px;
+  }
+  .status-note strong {
+    color: #9a5700;
+  }
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    min-height: 20px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    border: 1px solid #9fc2ff;
+    background: #dbeafe;
+    color: #1457d9;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  .toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 0 0 12px;
+  }
+  .section-title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: flex-end;
+  }
+  .filter-btn {
+    appearance: none;
+    border: 1px solid var(--line);
+    background: #fff;
+    color: #555;
+    border-radius: 4px;
+    padding: 5px 9px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .filter-btn.active, .filter-btn:hover {
+    border-color: #9fc2ff;
+    background: #eff6ff;
+    color: #1457d9;
+  }
+  .table-shell {
+    overflow-x: auto;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1040px;
+  }
+  th {
+    background: var(--soft);
+    border-bottom: 1px solid var(--line);
+    color: #6a6a6a;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 11px 12px;
+  }
+  td {
+    border-bottom: 1px solid #e7e5e0;
+    padding: 12px;
+    vertical-align: top;
+    font-size: 13px;
+  }
+  tr.topic-row { cursor: pointer; }
+  tr.topic-row:hover td { background: #fcfcfb; }
+  tr.hidden { display: none; }
+  tr.detail-row td {
+    background: #fbfbf9;
+    padding: 0;
+  }
+  .detail-row[hidden] { display: none; }
+  .rank {
+    color: #777;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-weight: 700;
+    width: 44px;
+  }
+  .topic-title { font-weight: 800; color: #202020; }
+  .topic-sub { color: #606060; font-size: 12px; margin-top: 4px; }
+  .num {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-weight: 800;
+    color: #2b2b2b;
+    display: inline-block;
+    min-width: 28px;
+  }
+  .mini-bar {
+    display: inline-block;
+    width: 58px;
+    height: 5px;
+    background: #e4e1dc;
+    border-radius: 10px;
+    margin-left: 8px;
+    vertical-align: middle;
+    overflow: hidden;
+  }
+  .mini-bar span { display: block; height: 100%; border-radius: 10px; }
+  .trend span { background: var(--red); }
+  .opp span { background: var(--blue); }
+  .velocity.high { color: var(--green); }
+  .velocity.mid { color: var(--amber); }
+  .velocity.low { color: #777; }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    min-height: 22px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .badge.now, .badge.p1 { color: #dc2626; background: #fff1f1; border: 1px solid #ffa6a6; }
+  .badge.today, .badge.p2 { color: #c26a00; background: #fff8e6; border: 1px solid #f4be4a; }
+  .badge.week, .badge.p3 { color: #1457d9; background: #eff6ff; border: 1px solid #9fc2ff; }
+  .badge.evergreen, .badge.p4 { color: #16874a; background: #effaf2; border: 1px solid #75d99b; }
+  .badge.monitor, .badge.p5 { color: #6b7280; background: #f4f4f5; border: 1px solid #d4d4d8; }
+  .serp.easy { color: #16874a; background: #effaf2; border: 1px solid #75d99b; }
+  .serp.med { color: #c26a00; background: #fff8e6; border: 1px solid #f4be4a; }
+  .serp.hard { color: #dc2626; background: #fff1f1; border: 1px solid #ffa6a6; }
+  .source-chip {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 4px 4px 0;
+    padding: 2px 7px;
+    min-height: 22px;
+    border-radius: 4px;
+    border: 1px solid #b7d4ff;
+    background: #eff6ff;
+    color: #1457d9;
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    padding: 16px 20px 18px 56px;
+    border-top: 1px solid #eeeae4;
+  }
+  .detail h4 {
+    margin: 0 0 6px;
+    color: #606060;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+  }
+  .detail p {
+    margin: 0;
+    font-size: 13px;
+    color: #2c2c2c;
+  }
+  .rejected { margin-top: 28px; }
+  .empty {
+    padding: 28px;
+    text-align: center;
+    color: var(--muted);
+  }
+  @media (max-width: 820px) {
+    .wrap { padding: 24px 16px 44px; }
+    .masthead { display: block; }
+    .run-chip { display: inline-block; margin-top: 18px; white-space: normal; }
+    .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .toolbar { align-items: flex-start; flex-direction: column; }
+    .filters { justify-content: flex-start; }
+    .detail { grid-template-columns: 1fr; padding-left: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="topbar"><span class="mark"><span></span><span></span><span></span><span></span></span>Trending Content OS</div>
+<main class="wrap">
+  <header class="masthead">
+    <div>
+      <h1>Trending <span>Content OS</span></h1>
+      <div class="dek" id="dek"></div>
+    </div>
+    <div class="run-chip" id="run-meta"></div>
+  </header>
+
+  <section class="stats" id="stats"></section>
+
+  <section class="insight" id="insight" hidden>
+    <div class="insight-head"><span class="pill">Google Trends</span><span id="insight-title">Run Insight</span></div>
+    <div id="insight-copy"></div>
+  </section>
+
+  <section class="status-note" id="site-fallback-note" hidden>
+    <strong>Duplicate check:</strong>
+    <span>site_url not configured — competitor fallback used (Healthline, WebMD, STAT News).</span>
+  </section>
+
+  <section>
+    <div class="toolbar">
+      <div class="section-title" id="priority-title">Priority Topics</div>
+      <div class="filters" id="filters"></div>
+    </div>
+    <div class="table-shell">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Topic</th>
+            <th>Trend</th>
+            <th>Opp</th>
+            <th>Velocity</th>
+            <th>Urgency</th>
+            <th>SERP</th>
+            <th>Src</th>
+            <th>Key Sources</th>
+          </tr>
+        </thead>
+        <tbody id="topic-rows"></tbody>
+      </table>
+      <div class="empty" id="empty" hidden>No candidates to show. Check the raw report or extraction JSON.</div>
+    </div>
+  </section>
+
+  <section class="rejected" id="rejected-section" hidden>
+    <div class="toolbar">
+      <div class="section-title">Rejected Topics</div>
+    </div>
+    <div class="table-shell">
+      <table>
+        <thead><tr><th>Topic</th><th>Reason</th></tr></thead>
+        <tbody id="rejected-rows"></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<script type="application/json" id="pipeline-json">{
+  "run_date": "2026-08-01",
+  "niche": "health and wellness",
+  "signal_summary": {
+    "total_reviewed": 144,
+    "total_retained": 10,
+    "total_rejected": 134,
+    "tools_active": [
+      "web_search",
+      "google_news",
+      "google_trends",
+      "serpapi"
+    ],
+    "tools_unavailable": [
+      "reddit_live",
+      "twitter_live",
+      "rss_live"
+    ],
+    "notes": "Google Trends pre-fetch used as primary search_velocity input. Google News Radar provided 60 of 144 signals as broad discovery layer. site_url not configured — self-check skipped; competitor-check fallback active. No deferred topics past due. Run history not available from prior sessions; no recurring-theme flags applied this run. Six Trends signals elevated without Google News corroboration were scored conservatively (Low/Medium confidence)."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Nationwide FDA recall of levothyroxine sodium tablets due to subpotency",
+      "primary_entity": "Levothyroxine sodium tablets",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates / chronic disease management",
+      "trend_strength_score": 88,
+      "opportunity_score": 85,
+      "discover_score": 5,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 6,
+      "recommended_angle": "Patient action guide: what to do if you take levothyroxine — check your bottle, contact your pharmacy, call your doctor. Include manufacturer name, affected lot numbers, NDC codes from FDA.gov. Frame as dosing-strength issue, not contamination. Do NOT advise stopping without physician consultation.",
+      "why_now": "Levothyroxine is one of the most-prescribed drugs in the US (27M+ patients). Nationwide recall for low potency means patients may have been undertreated for hypothyroidism — a condition where underdosing has direct health consequences. Recall broke July 27–28 and remains active as of August 1. High consumer search intent; SERP currently dominated by brief news briefs without patient action guidance.",
+      "primary_headline": "Levothyroxine Recalled Nationwide: What to Do If You Take Thyroid Medication",
+      "next_steps": "Pull exact lot numbers and manufacturer from FDA.gov before writing. Assign to health reporter with pharmacy/drug beat. Publish within 4 hours.",
+      "notes": "Confidence capped at Medium per Skill 02b breaking-recall exception. Verify manufacturer name, affected lot numbers, and NDC codes from FDA.gov primary page before publishing. Do NOT rely solely on secondary coverage."
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Active E. coli outbreak investigation linked to frozen blueberries (FDA + CDC joint investigation, July 2026)",
+      "primary_entity": "Frozen blueberries / E. coli outbreak",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates / public health and epidemiology",
+      "trend_strength_score": 85,
+      "opportunity_score": 82,
+      "discover_score": 5,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 4,
+      "recommended_angle": "Check-your-freezer consumer action guide — which brands, what E. coli symptoms look like, when to seek care, and how to safely handle recalled product. Outbreak is under active investigation — affected brands/lots may expand; recommend adding update timestamp and link to live FDA page.",
+      "why_now": "FDA and CDC simultaneously published outbreak investigation notices dated July 30, 2026 — two days ago and still active. Frozen blueberries are a staple in health-conscious households. E. coli STEC can cause serious illness, especially in children and older adults. Investigation is ongoing, meaning affected brands/lot numbers may expand. SERP currently has only brief news reports; no comprehensive patient-facing explainer exists.",
+      "primary_headline": "E. coli Outbreak Linked to Frozen Blueberries: What You Need to Know",
+      "next_steps": "Pull confirmed brands and lot numbers from FDA outbreak page. Assign immediately. Update article if FDA expands recall scope.",
+      "notes": "Outbreak is under active investigation — affected brands/lots may expand after publication. Do not characterize the outbreak scale without directly citing FDA/CDC numbers. Specify E. coli strain (STEC / O157:H7 or other) once confirmed in primary sources."
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Class I FDA recall of 19M+ egg cartons sold at Kroger, Brookshire's, and other national retailers due to Salmonella contamination risk",
+      "primary_entity": "Egg recall / Salmonella",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates / public health and epidemiology",
+      "trend_strength_score": 82,
+      "opportunity_score": 80,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 5,
+      "recommended_angle": "Complete reference guide — which brands, store brands, UPC/lot info, what Salmonella symptoms to watch for, and what to do with eggs already purchased. Largest 2026 egg recall; Class I = FDA's highest severity level. Clarify that fully cooked eggs are generally safe.",
+      "why_now": "Class I = FDA's highest severity level. Recall broke July 27 and escalated to Class I per The Healthy@Reader's Digest update. Eggs are a kitchen staple — universal consumer relevance. Salmonella from eggs causes ~79,000 illnesses/year. SERP has quick news hits but no structured brand-list + symptom + action guide.",
+      "primary_headline": "Over 19 Million Eggs Recalled for Salmonella Risk: Is Your Brand Affected?",
+      "next_steps": "Reconcile CBS (1.6M) vs. TODAY (19M) carton count via FDA primary page. Pull brand list and UPC codes. Assign immediately.",
+      "notes": "Confidence capped at Medium per Skill 02b — direct FDA primary page not verified in pre-fetch. Confirm current Class I status and complete brand/UPC list from FDA.gov. Do not overstate scope: 19M cartons ≠ 19M eggs. Salmonella risk is from raw/undercooked eggs — fully cooked eggs are generally safe."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Open-label pilot clinical trial of psilocybin-assisted therapy for treatment-resistant PTSD in veterans, published in Nature Communications Medicine",
+      "primary_entity": "Psilocybin-assisted therapy / veterans / treatment-resistant PTSD",
+      "signal_type": "clinical_trial",
+      "allowed_category": "Medical research and clinical trials / mental health and psychology",
+      "trend_strength_score": 74,
+      "opportunity_score": 78,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Rigorous explainer that takes the study seriously without overclaiming. What the trial design was (open-label, no placebo), what the results showed on validated PTSD scales, what 'treatment-resistant' means, and what still needs to be proven before this becomes a treatment option. Note: open-label pilot = preliminary design; single study.",
+      "why_now": "Published July 30, 2026 in Nature Communications Medicine. Psilocybin research is a high-interest topic with growing mainstream coverage. Veterans' mental health is a perennial high-engagement topic. Treatment-resistant PTSD has very few approved interventions.",
+      "primary_headline": "A Nature Study Tested Psilocybin Therapy for Treatment-Resistant PTSD in Veterans — Here's What It Found",
+      "next_steps": "Retrieve full DOI from Nature Communications Medicine July 30 issue. Pull sample size, effect size, and safety data from study. Assign to mental health reporter.",
+      "notes": "Open-label pilot = no control group, no placebo, small sample — headline must not imply this is a proven treatment. PTSD is a vulnerable population; framing must not minimize severity or suggest self-treatment with psilocybin. Psilocybin remains Schedule I federally; note legal status clearly."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "immediate",
+      "topic": "FDA recall of Rohto eye drop products (Google Trends #1 real-time trending health search as of August 1)",
+      "primary_entity": "Rohto eye drops / FDA recall",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 76,
+      "opportunity_score": 72,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Fast-reference guide: which exact Rohto products, the specific recall reason, what consumers should do, whether this affects popular OTC varieties (Rohto V, Cool, Hydra). Google Trends breakout #1 real-time US health search; breaking-recall exception applied.",
+      "why_now": "'fda rohto eye drop recall' is #1 trending search in Google Trends real-time health as of today. Eye drops have heightened consumer attention after 2023's contaminated eye drop recalls. SERP is thin — Google Trends breakout with low existing content = high-opportunity window.",
+      "primary_headline": "Rohto Eye Drop Recall: Which Products Are Affected and Why",
+      "next_steps": "Pull FDA recall page immediately — this is Trends #1. Confirm recall reason, product list, lot numbers. Assign to health news reporter. Publish before SERP fills.",
+      "notes": "Recall reason is UNCONFIRMED in pre-fetch data — do not speculate on contamination vs. sterility vs. labeling issue. Pull FDA.gov recall page first. Eye drop recalls carry elevated risk perception after 2023 contaminated-drop deaths — frame accurately based on actual FDA risk classification."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "SAMHSA 2025 National Survey on Drug Use and Health (NSDUH) — annual federal data release, published July 27, 2026",
+      "primary_entity": "SAMHSA / National Survey on Drug Use and Health 2025",
+      "signal_type": "data_release",
+      "allowed_category": "Mental health and psychology / public health and epidemiology",
+      "trend_strength_score": 68,
+      "opportunity_score": 74,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Data explainer: pull the 3–5 most newsworthy findings from the survey — changes in alcohol use, cannabis use, opioid statistics, depression/anxiety prevalence, treatment access gaps — and contextualize with prior-year comparisons.",
+      "why_now": "The NSDUH is the most authoritative annual snapshot of drug use and mental health in the US — data journalists, health reporters, and policy researchers all cite it. Published July 27; most coverage has been brief. A deep-dive data explainer with charts and reader-relevant takeaways has SERP opportunity and strong Discover/AI citation potential.",
+      "primary_headline": "SAMHSA's 2025 Drug Use Survey Is Out — Here Are the Key Numbers",
+      "next_steps": "Pull SAMHSA report PDF. Identify 3–5 most newsworthy datapoints with year-over-year comparisons. Assign to data/mental health reporter.",
+      "notes": "NSDUH uses self-reported data — note this limitation clearly; prevalence estimates carry standard errors. Year-over-year changes require statistical significance testing — do not characterize changes as 'rising' or 'falling' without checking confidence intervals. Include 988 Suicide & Crisis Lifeline and SAMHSA helpline in article."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Penn Medicine research finding that different GLP-1 receptor agonists can be tailored to individual metabolic profiles",
+      "primary_entity": "GLP-1 therapies / personalized metabolic medicine",
+      "signal_type": "medical_study",
+      "allowed_category": "Medical research and clinical trials / chronic disease management / nutrition and diet science",
+      "trend_strength_score": 65,
+      "opportunity_score": 75,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Consumer explainer: what the research found about metabolic differences between GLP-1 drugs, what biomarkers or patient profiles might predict response, and what this means for someone currently on or considering GLP-1 therapy. Frame around patient's question: 'Should I ask my doctor to switch?'",
+      "why_now": "GLP-1 drugs (Ozempic, Wegovy, Mounjaro, Zepbound) dominate health search. 'Weight loss' is up +10 on Google Trends 7-day delta. The clinical question of 'which GLP-1 is right for me?' has massive search demand with no authoritative consumer answer. Penn Medicine research provides a credible hook for a differentiated explainer.",
+      "primary_headline": "Not All GLP-1 Drugs Work the Same — New Research Explains Why Your Metabolism May Respond Differently",
+      "next_steps": "Pull journal citation from Penn Medicine release. Confirm study design. Assign to health/pharma reporter with GLP-1 beat familiarity.",
+      "notes": "Pull full journal citation — Penn Medicine press release framing may not capture study design or limitations. Note whether this is a clinical trial, observational study, or mechanistic research. Maintain editorial independence — do not name or rank specific drugs as 'better' without evidence. Association ≠ causation if study is observational."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Rising Google Trends query 'restricted eating hours brain health' + existing intermittent fasting / cognitive function research base",
+      "primary_entity": "Time-restricted eating / brain health / cognitive function",
+      "signal_type": "rising_search_interest",
+      "allowed_category": "Nutrition and diet science / aging and longevity",
+      "trend_strength_score": 62,
+      "opportunity_score": 68,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Evidence-based explainer: what current research says about time-restricted eating's effects on brain health markers (BDNF, neuroinflammation, autophagy), what the limitations are, and practical guidance on who might benefit and how.",
+      "why_now": "'Restricted eating hours brain health' is a rising Google Trends related query. The query reflects a growing consumer intersection of intermittent fasting (already high search volume) with cognitive health (also rising). Existing research supports a defensible explainer.",
+      "primary_headline": "Time-Restricted Eating May Benefit Brain Health — But the Research Has Limits",
+      "next_steps": "Verify whether a triggering study (Rutgers nutrition/cognition signal) relates to this query cluster. Assign to nutrition writer. Schedule within 5 days.",
+      "notes": "No single triggering study identified — this is a search-trend signal, not a breaking research story; frame as a research synthesis, not breaking news. Most TRE + brain health studies are animal models or small human trials; note clearly. Distinguish between general intermittent fasting and specific time-restricted eating windows."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Phase 3 investigational cell therapy trial showing slowed DMD progression — reported by UC Davis Health and Cedars-Sinai",
+      "primary_entity": "Duchenne muscular dystrophy / cell therapy / Phase 3 trial",
+      "signal_type": "clinical_trial",
+      "allowed_category": "Medical research and clinical trials / chronic disease management",
+      "trend_strength_score": 60,
+      "opportunity_score": 65,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Patient/family-facing explainer: what DMD is, what the cell therapy does differently from gene therapy, what Phase 3 showing means vs. approval, and what the timeline to availability might look like. Frame: 'Slowed progression' ≠ 'cure.'",
+      "why_now": "Two major medical centers (UC Davis, Cedars-Sinai) independently reported on a Phase 3 DMD cell therapy trial this week. DMD is a rare but devastating pediatric disease with very limited treatment options. Gene and cell therapy is a high-engagement topic.",
+      "primary_headline": "A Phase 3 Trial Shows Cell Therapy Can Slow Duchenne Muscular Dystrophy Progression",
+      "next_steps": "Confirm trial identity (same trial at both sites, or different). Pull ClinicalTrials.gov record. Assign to science/health reporter.",
+      "notes": "Confirm whether this is the same trial reported by both UC Davis and Cedars-Sinai or two different trials. 'Slowed progression' ≠ 'cure' — headline and framing must not overstate. Phase 3 trial ≠ approved treatment; note FDA approval pathway needed."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "WIRED investigation into wellness influencers promoting unproven supplements and nootropics as 'natural' Adderall alternatives",
+      "primary_entity": "Unproven Adderall alternatives / supplement misinformation / nootropics",
+      "signal_type": "supplement_claim",
+      "allowed_category": "Mental health and psychology / nutrition and diet science (watchdog angle — evaluating, not promoting)",
+      "trend_strength_score": 55,
+      "opportunity_score": 67,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "low",
+      "content_status": "new",
+      "source_count": 1,
+      "recommended_angle": "Science-based debunk/explainer: review the specific supplements WIRED identified (e.g., lion's mane, rhodiola, ashwagandha, L-theanine in high doses), what the actual clinical evidence shows for each, and what makes these claims particularly concerning for people who need ADHD treatment.",
+      "why_now": "WIRED published an investigation July 27. ADHD medication access has been a top health story for two years. The rise of influencer-promoted nootropics targeting ADHD demand is a timely and brand-safe watchdog topic with a clear evidence-based counter-angle.",
+      "primary_headline": "Wellness Influencers Are Selling 'Natural Adderall' Alternatives — Here's What Science Says",
+      "next_steps": "Find 2+ additional sources to corroborate the trend before framing as widespread. Assign to mental health/supplement beat writer.",
+      "notes": "Single source — confirm no other coverage before framing as widespread trend. Some adaptogens have real (if limited) evidence for mild cognitive effects; do not overclaim in either direction. Framing must make clear: this is NOT advice to stop or start any ADHD medication. Vulnerable population: people with undiagnosed or unmedicated ADHD; editorial sensitivity required."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "Celebrity GLP-1 queries (Kendra Wilkinson, JB Pritzker, Tammy Slaton, Jacob Batalon)",
+      "reason": "Brand safety: celebrity wellness gossip; no substantive health angle; weight_loss category but no evidence-based hook"
+    },
+    {
+      "topic": "Simone Biles health scare",
+      "reason": "Insufficient information in signal; 'health scare' + no corroborating news of substance = weak single-signal; celebrity health gossip risk"
+    },
+    {
+      "topic": "Red light therapy (WSMV)",
+      "reason": "Weak signal: single local TV source only; no national corroboration; borderline off-category without research angle"
+    },
+    {
+      "topic": "National Wellness Month",
+      "reason": "Off-category: marketing/promotional calendar event; no editorial content angle"
+    },
+    {
+      "topic": "Kaiser algorithm mental health triage (CalMatters)",
+      "reason": "Monitored: strong public health + AI angle, but leans institutional/policy; CalMatters is regional; insufficient national search demand to prioritize this run"
+    },
+    {
+      "topic": "HHS behavioral health pledge (HHS.gov)",
+      "reason": "Policy/regulatory, not consumer health content; insufficient audience relevance for general health-conscious reader"
+    },
+    {
+      "topic": "Soma integrative wellness / Greenheal.net wellness coach / Melaleuca wellness / Healthsciencesforum.com",
+      "reason": "Off-category: branded wellness company queries; supplement marketing or corporate wellness; brand safety risk"
+    },
+    {
+      "topic": "Ensemble Health Partners careers",
+      "reason": "Off-category: healthcare staffing/HR; no consumer health angle"
+    },
+    {
+      "topic": "Sutter Health Park",
+      "reason": "Off-category: sports venue reference; no health content"
+    },
+    {
+      "topic": "How to check hard drive health",
+      "reason": "Off-category: technology, not health"
+    },
+    {
+      "topic": "Kona ice nutrition / chipotle nutrition / diet coke ghost",
+      "reason": "Off-category: food/beverage brand queries with minimal editorial health angle; diet coke is brand query"
+    },
+    {
+      "topic": "Planet fitness summer pass",
+      "reason": "Off-category: gym business/promotional query"
+    },
+    {
+      "topic": "Sasha Obama fitness attire",
+      "reason": "Brand safety: celebrity gossip"
+    },
+    {
+      "topic": "Ascend Wellness cannabis strike",
+      "reason": "Off-category: cannabis business/labor; not a health content fit"
+    },
+    {
+      "topic": "Walmart product safety recalls",
+      "reason": "Off-category: general retail safety, not specifically health product recall; insufficient specificity"
+    },
+    {
+      "topic": "Local health admin news (St. Louis health director, NJ school insurance, San Diego wellness café)",
+      "reason": "Off-category: local/admin/business; no national consumer health angle"
+    },
+    {
+      "topic": "Medical Aid in Dying (NY.gov)",
+      "reason": "Monitored: legitimate health policy topic; single state policy update insufficient for national brief without broader news peg"
+    },
+    {
+      "topic": "Medicaid/CHIP enrollment tracker (KFF)",
+      "reason": "Data release but policy-framing heavy; not core consumer health; low audience relevance for general health reader"
+    },
+    {
+      "topic": "Mongabay endangered monkeys / medical research",
+      "reason": "Off-category: environmental/animal rights; medical research angle insufficient for consumer health audience"
+    },
+    {
+      "topic": "Huntington's disease clinical trial (HDBuzz)",
+      "reason": "Narrow specialty; single source (disease-specific publication); insufficient national search demand"
+    },
+    {
+      "topic": "Tricuspid heart valve repair study (dicardiology.com)",
+      "reason": "Narrow cardiology specialty; trade publication source; insufficient consumer angle"
+    },
+    {
+      "topic": "AI eroding doctors' thinking (AAMC)",
+      "reason": "Adjacent — interesting AI-in-medicine angle; not consumer health; edge category; audience relevance below 70 for general wellness reader"
+    },
+    {
+      "topic": "Phase 1 uveal melanoma drug study",
+      "reason": "Narrow oncology specialty; Phase 1 = very early; single specialty publication"
+    },
+    {
+      "topic": "Cyclospora / Salmonella food safety tips",
+      "reason": "Generalizing from specific outbreak to broad food safety tips; covered more specifically under E. coli blueberry recall; would be duplicate framing"
+    },
+    {
+      "topic": "Ebola vaccine clinical trial (Reuters)",
+      "reason": "International/global health; insufficient US consumer relevance for this niche without domestic angle"
+    },
+    {
+      "topic": "ALS Dallas clinical trial",
+      "reason": "Narrow/local; single NBC affiliate source; insufficient corroboration"
+    },
+    {
+      "topic": "Rutgers nutrition cognitive study (standalone)",
+      "reason": "Possible overlap with Brief 8 (time-restricted eating / brain health cluster); folded into research context for that brief rather than separate brief; insufficient independent source confirmation for standalone"
+    }
+  ]
+}</script>
+<script>
+function readPipelineData() {
+  const raw = document.getElementById('pipeline-json').textContent.trim();
+  if (!raw || raw === '__PIPELINE_' + 'DATA__') {
+    return {
+      run_date: '',
+      niche: 'Health & Wellness',
+      signal_summary: {
+        total_reviewed: 0,
+        total_retained: 0,
+        total_rejected: 0,
+        notes: 'This is the dashboard template. Run python run_pipeline.py --no-email to generate a filled dashboard, or open outputs/daily_newsroom_dashboard/dashboard_preview.html to view the design preview.'
+      },
+      candidates: [],
+      rejected: []
+    };
+  }
+  try {
+    return JSON.parse(raw);
+  } catch (error) {
+    return {
+      run_date: '',
+      niche: 'Health & Wellness',
+      signal_summary: {
+        total_reviewed: 0,
+        total_retained: 0,
+        total_rejected: 0,
+        notes: `Dashboard data could not be parsed: ${error.message}`
+      },
+      candidates: [],
+      rejected: []
+    };
+  }
+}
+const D = readPipelineData();
+const candidates = Array.isArray(D.candidates) ? D.candidates : [];
+const rejected = Array.isArray(D.rejected) ? D.rejected : [];
+const summary = D.signal_summary || {};
+
+const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({
+  '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+}[ch]));
+const clamp = n => Math.max(0, Math.min(100, Number(n) || 0));
+const fmtDate = value => value || new Date().toISOString().slice(0, 10);
+const urgencyClass = value => {
+  if (value === 'now') return 'now';
+  if (value === 'today') return 'today';
+  if (value === 'this_week') return 'week';
+  if (value === 'evergreen') return 'evergreen';
+  return 'monitor';
+};
+const serpClass = c => {
+  const avg = ((Number(c.trend_strength_score) || 0) + (Number(c.opportunity_score) || 0)) / 2;
+  if (avg >= 82) return 'easy';
+  if (avg >= 65) return 'med';
+  return 'hard';
+};
+const serpLabel = cls => ({ easy: 'Easy', med: 'Med', hard: 'Hard' }[cls] || 'Med');
+const velocity = c => clamp(Math.round(((Number(c.discover_score) || 0) / 5) * 100));
+const sourceLabels = c => {
+  const labels = [];
+  if (c.signal_type) labels.push(String(c.signal_type).replace(/_/g, ' '));
+  if (c.confidence) labels.push(`${c.confidence} conf`);
+  if (c.content_status) labels.push(c.content_status);
+  return labels.slice(0, 3);
+};
+
+document.getElementById('dek').textContent =
+  `${esc(D.niche || 'Health & Wellness')} · US · ${fmtDate(D.run_date)} · with Google Trends data`;
+document.getElementById('run-meta').textContent =
+  `Generated: ${fmtDate(D.run_date)} | retained ${candidates.length} | pipeline v2`;
+
+const p1 = candidates.filter(c => c.priority_level === 'P1').length;
+const flags = candidates.filter(c => String(c.notes || '').trim() || c.confidence === 'low').length;
+const statData = [
+  { label: 'Signals Processed', value: summary.total_reviewed ?? 0, cls: '' },
+  { label: 'Retained Topics', value: candidates.length, cls: 'green' },
+  { label: 'Publish NOW', value: p1, cls: 'amber' },
+  { label: 'Integrity Flags', value: flags, cls: 'violet' },
+];
+document.getElementById('stats').innerHTML = statData.map(s => `
+  <div class="stat ${s.cls}">
+    <div class="value">${esc(s.value)}</div>
+    <div class="label">${esc(s.label)}</div>
+  </div>
+`).join('');
+
+const notes = String(summary.notes || '').trim();
+if (notes) {
+  document.getElementById('insight').hidden = false;
+  document.getElementById('insight-title').textContent = 'Search Demand vs. Editorial Urgency — Key Insight';
+  document.getElementById('insight-copy').textContent = notes;
+}
+const fallbackMentioned = /site_url not configured|self-check skipped|competitor fallback/i.test(notes)
+  || candidates.some(c => /site_url not configured|self-check skipped|competitor fallback/i.test(String(c.notes || '')));
+document.getElementById('site-fallback-note').hidden = !fallbackMentioned;
+
+document.getElementById('priority-title').textContent =
+  `Priority Topics — All ${candidates.length} Retained`;
+
+const filters = ['All', 'P1', 'P2', 'P3', 'P4', 'P5'];
+document.getElementById('filters').innerHTML = filters.map((f, i) =>
+  `<button class="filter-btn ${i === 0 ? 'active' : ''}" data-filter="${f}">${f}</button>`
+).join('');
+
+function rowHtml(c, i) {
+  const trend = clamp(c.trend_strength_score);
+  const opp = clamp(c.opportunity_score);
+  const vel = velocity(c);
+  const velClass = vel >= 70 ? 'high' : vel >= 40 ? 'mid' : 'low';
+  const sc = serpClass(c);
+  const urgency = c.urgency || c.publish_timing || 'monitor';
+  const labels = sourceLabels(c).map(label => `<span class="source-chip">${esc(label)}</span>`).join('');
+  return `
+    <tr class="topic-row" data-priority="${esc(c.priority_level)}" data-detail="${i}">
+      <td class="rank">${String(i + 1).padStart(2, '0')}</td>
+      <td>
+        <div class="topic-title">${esc(c.topic)}</div>
+        <div class="topic-sub">${esc(c.primary_headline || c.primary_entity || c.recommended_angle || '')}</div>
+      </td>
+      <td><span class="num">${trend}</span><span class="mini-bar trend"><span style="width:${trend}%"></span></span></td>
+      <td><span class="num">${opp}</span><span class="mini-bar opp"><span style="width:${opp}%"></span></span></td>
+      <td><span class="num velocity ${velClass}">${vel}</span></td>
+      <td><span class="badge ${urgencyClass(urgency)}">${esc(urgency === 'this_week' ? 'today' : urgency)}</span></td>
+      <td><span class="badge serp ${sc}">${serpLabel(sc)}</span></td>
+      <td><span class="num">${esc(c.source_count ?? 0)}</span></td>
+      <td>${labels}</td>
+    </tr>
+    <tr class="detail-row" data-parent="${i}" hidden>
+      <td colspan="9">
+        <div class="detail">
+          <div><h4>Recommended Angle</h4><p>${esc(c.recommended_angle || 'No angle provided.')}</p></div>
+          <div><h4>Why Now</h4><p>${esc(c.why_now || 'No timing rationale provided.')}</p></div>
+          <div><h4>Next Steps</h4><p>${esc(c.next_steps || c.notes || 'No next steps provided.')}</p></div>
+        </div>
+      </td>
+    </tr>
+  `;
+}
+
+const tbody = document.getElementById('topic-rows');
+tbody.innerHTML = candidates.map(rowHtml).join('');
+document.getElementById('empty').hidden = candidates.length > 0;
+
+tbody.addEventListener('click', event => {
+  const row = event.target.closest('.topic-row');
+  if (!row) return;
+  const detail = tbody.querySelector(`.detail-row[data-parent="${row.dataset.detail}"]`);
+  if (detail) detail.hidden = !detail.hidden;
+});
+
+document.getElementById('filters').addEventListener('click', event => {
+  const btn = event.target.closest('.filter-btn');
+  if (!btn) return;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const filter = btn.dataset.filter;
+  document.querySelectorAll('.topic-row').forEach(row => {
+    const show = filter === 'All' || row.dataset.priority === filter;
+    row.hidden = !show;
+    const detail = tbody.querySelector(`.detail-row[data-parent="${row.dataset.detail}"]`);
+    if (detail) {
+      detail.hidden = true;
+      detail.classList.toggle('hidden', !show);
+    }
+  });
+});
+
+if (rejected.length) {
+  document.getElementById('rejected-section').hidden = false;
+  document.getElementById('rejected-rows').innerHTML = rejected.map(r => `
+    <tr><td>${esc(r.topic)}</td><td>${esc(r.reason)}</td></tr>
+  `).join('');
+}
+</script>
+</body>
+</html>

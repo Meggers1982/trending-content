@@ -3,6 +3,53 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-08-01'
+  niche: health and wellness
+  signals_reviewed: 144
+  topics_retained: 10
+  topics_rejected: 27
+  p1_count: 3
+  p2_count: 4
+  p3_count: 3
+  p4_count: 0
+  p5_count: 0
+  integrity_flags: 1
+  top_topic: Nationwide FDA recall of levothyroxine sodium tablets due to subpotency
+  key_themes:
+  - Nationwide FDA recall of levothyroxine sodium tablets due to subpotency
+  - Active E. coli outbreak investigation linked to frozen blueberries (FDA + CDC joint investigation,
+    July 2026)
+  - Class I FDA recall of 19M+ egg cartons sold at Kroger, Brookshire's, and other national retailers
+    due to Salmonella contamination risk
+  - Open-label pilot clinical trial of psilocybin-assisted therapy for treatment-resistant PTSD in veterans,
+    published in Nature Communications Medicine
+  - 'FDA recall of Rohto eye drop products (Google Trends #1 real-time trending health search as of August
+    1)'
+  - SAMHSA 2025 National Survey on Drug Use and Health (NSDUH) — annual federal data release, published
+    July 27, 2026
+  - Penn Medicine research finding that different GLP-1 receptor agonists can be tailored to individual
+    metabolic profiles
+  - Rising Google Trends query 'restricted eating hours brain health' + existing intermittent fasting
+    / cognitive function research base
+  - Phase 3 investigational cell therapy trial showing slowed DMD progression — reported by UC Davis Health
+    and Cedars-Sinai
+  - WIRED investigation into wellness influencers promoting unproven supplements and nootropics as 'natural'
+    Adderall alternatives
+  tools_used:
+  - web_search
+  - google_news
+  - google_trends
+  - serpapi
+  tools_unavailable:
+  - reddit_live
+  - twitter_live
+  - rss_live
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-08-01.html
+  notes: Google Trends pre-fetch used as primary search_velocity input. Google News Radar provided 60
+    of 144 signals as broad discovery layer. site_url not configured — self-check skipped; competitor-check
+    fallback active. No deferred topics past due. Run history not available from prior sessions; no recurring-theme
+    flags applied this run. Six Trends signals elevated without Google News corroboration were scored
+    conservatively (Low/Medium confidence).
 - run_date: '2026-07-14'
   niche: health and wellness
   signals_reviewed: 168
