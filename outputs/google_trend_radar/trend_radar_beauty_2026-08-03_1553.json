@@ -1,0 +1,1448 @@
+{
+  "run_date": "2026-08-03",
+  "generated_at": "2026-08-03T15:53:51",
+  "topic": "beauty",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "beauty",
+    "skincare",
+    "makeup",
+    "haircare",
+    "fragrance",
+    "clean beauty",
+    "retinol",
+    "niacinamide",
+    "peptides",
+    "hyaluronic acid",
+    "skin barrier",
+    "skin cycling",
+    "glass skin",
+    "slugging",
+    "scalp care",
+    "SPF",
+    "sunscreen",
+    "K-beauty",
+    "hair loss",
+    "acne treatment",
+    "beauty trends",
+    "beauty products",
+    "beauty news",
+    "beauty for beginners"
+  ],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 24,
+    "total_reviewed": 80,
+    "total_retained": 11,
+    "total_rejected": 88,
+    "breakouts": 3,
+    "emerging": 5,
+    "rising": 1,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "topic": "outset skincare",
+      "trend_stage": "emerging",
+      "urgency": "this_week",
+      "radar_score": 66,
+      "emergence_score": 82,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "+1150%",
+      "latest_interest": 0,
+      "peak_interest": 37,
+      "slope": 0,
+      "acceleration": 1,
+      "seed_terms": [
+        "skincare"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        37,
+        4,
+        2,
+        2,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +1150%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Build an angle this week and monitor the next 24-48 hours."
+    },
+    {
+      "rank": 2,
+      "topic": "beef tallow skincare effectiveness",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 54,
+      "emergence_score": 71,
+      "velocity_score": 40,
+      "confidence_score": 40,
+      "saturation_score": 0,
+      "opportunity_score": 83,
+      "confidence": "low",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "skincare"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; time-series validation was skipped or unavailable; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 3,
+      "topic": "daniel murphy paradigm peptides case",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 54,
+      "emergence_score": 71,
+      "velocity_score": 40,
+      "confidence_score": 40,
+      "saturation_score": 0,
+      "opportunity_score": 83,
+      "confidence": "low",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "peptides"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [],
+      "tags": {
+        "ingredients": [
+          "peptides"
+        ]
+      },
+      "why_now": "Google Trends labels it Breakout; time-series validation was skipped or unavailable; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 4,
+      "topic": "paradigm peptides",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 54,
+      "emergence_score": 71,
+      "velocity_score": 40,
+      "confidence_score": 40,
+      "saturation_score": 0,
+      "opportunity_score": 83,
+      "confidence": "low",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "peptides"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [],
+      "tags": {
+        "ingredients": [
+          "peptides"
+        ]
+      },
+      "why_now": "Google Trends labels it Breakout; time-series validation was skipped or unavailable; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 5,
+      "topic": "seth rollins hair loss",
+      "trend_stage": "emerging",
+      "urgency": "this_week",
+      "radar_score": 54,
+      "emergence_score": 71,
+      "velocity_score": 40,
+      "confidence_score": 40,
+      "saturation_score": 0,
+      "opportunity_score": 83,
+      "confidence": "low",
+      "rising_label": "+4650%",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "hair loss"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [],
+      "tags": {
+        "concerns": [
+          "hair loss"
+        ]
+      },
+      "why_now": "Google Trends labels it +4650%; time-series validation was skipped or unavailable; found through rising query",
+      "recommended_action": "Build an angle this week and monitor the next 24-48 hours."
+    },
+    {
+      "rank": 6,
+      "topic": "amazon affordable anti aging skincare",
+      "trend_stage": "emerging",
+      "urgency": "this_week",
+      "radar_score": 54,
+      "emergence_score": 71,
+      "velocity_score": 40,
+      "confidence_score": 40,
+      "saturation_score": 0,
+      "opportunity_score": 83,
+      "confidence": "low",
+      "rising_label": "+4600%",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "skincare"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [],
+      "tags": {},
+      "why_now": "Google Trends labels it +4600%; time-series validation was skipped or unavailable; found through rising query",
+      "recommended_action": "Build an angle this week and monitor the next 24-48 hours."
+    },
+    {
+      "rank": 7,
+      "topic": "elleybear skincare",
+      "trend_stage": "emerging",
+      "urgency": "this_week",
+      "radar_score": 54,
+      "emergence_score": 71,
+      "velocity_score": 40,
+      "confidence_score": 40,
+      "saturation_score": 0,
+      "opportunity_score": 83,
+      "confidence": "low",
+      "rising_label": "+4300%",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "skincare"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [],
+      "tags": {},
+      "why_now": "Google Trends labels it +4300%; time-series validation was skipped or unavailable; found through rising query",
+      "recommended_action": "Build an angle this week and monitor the next 24-48 hours."
+    },
+    {
+      "rank": 8,
+      "topic": "scarlett johansson skincare line",
+      "trend_stage": "emerging",
+      "urgency": "this_week",
+      "radar_score": 54,
+      "emergence_score": 71,
+      "velocity_score": 40,
+      "confidence_score": 40,
+      "saturation_score": 0,
+      "opportunity_score": 83,
+      "confidence": "low",
+      "rising_label": "+3450%",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "skincare"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [],
+      "tags": {},
+      "why_now": "Google Trends labels it +3450%; time-series validation was skipped or unavailable; found through rising query",
+      "recommended_action": "Build an angle this week and monitor the next 24-48 hours."
+    },
+    {
+      "rank": 9,
+      "topic": "best skincare for oily skin",
+      "trend_stage": "rising",
+      "urgency": "monitor",
+      "radar_score": 53,
+      "emergence_score": 42,
+      "velocity_score": 55,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 65,
+      "confidence": "high",
+      "rising_label": "+190%",
+      "latest_interest": 17,
+      "peak_interest": 91,
+      "slope": 17,
+      "acceleration": 8,
+      "seed_terms": [
+        "skincare"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        3,
+        0,
+        5,
+        6,
+        8,
+        9,
+        0,
+        0,
+        0,
+        0,
+        0,
+        8,
+        0,
+        6,
+        5,
+        0,
+        2,
+        2,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        5,
+        0,
+        0,
+        0,
+        21,
+        30,
+        16,
+        9,
+        9,
+        7,
+        8,
+        7,
+        6,
+        14,
+        18,
+        15,
+        13,
+        19,
+        21,
+        22,
+        17,
+        21,
+        24,
+        30,
+        41,
+        37,
+        56,
+        87,
+        91,
+        42,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        4,
+        4,
+        3,
+        8,
+        21,
+        27,
+        29,
+        57,
+        35,
+        50,
+        31,
+        21,
+        16,
+        8,
+        9,
+        9,
+        8,
+        10,
+        11,
+        14,
+        13,
+        10,
+        11,
+        13,
+        15,
+        20,
+        16,
+        22,
+        23,
+        26,
+        29,
+        40,
+        62,
+        65,
+        46,
+        27,
+        20,
+        14,
+        9,
+        13,
+        10,
+        10,
+        13,
+        11,
+        13,
+        12,
+        16,
+        15,
+        16,
+        6,
+        9,
+        33,
+        30,
+        36,
+        41,
+        64,
+        66,
+        54,
+        42,
+        31,
+        23,
+        15,
+        17
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +190%; interest moved from 0 to 17; found through rising query",
+      "recommended_action": "Track as a developing query and compare against existing coverage."
+    },
+    {
+      "rank": 10,
+      "topic": "skincare for oily skin",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 52,
+      "emergence_score": 41,
+      "velocity_score": 54,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 65,
+      "confidence": "high",
+      "rising_label": "+170%",
+      "latest_interest": 18,
+      "peak_interest": 97,
+      "slope": 15,
+      "acceleration": 8,
+      "seed_terms": [
+        "skincare"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        3,
+        0,
+        7,
+        3,
+        3,
+        0,
+        2,
+        3,
+        4,
+        5,
+        3,
+        5,
+        7,
+        9,
+        11,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        7,
+        5,
+        0,
+        3,
+        3,
+        0,
+        4,
+        6,
+        4,
+        3,
+        3,
+        4,
+        3,
+        4,
+        4,
+        6,
+        0,
+        8,
+        11,
+        26,
+        37,
+        20,
+        11,
+        11,
+        7,
+        9,
+        7,
+        8,
+        15,
+        17,
+        16,
+        16,
+        19,
+        22,
+        23,
+        17,
+        23,
+        27,
+        31,
+        43,
+        42,
+        57,
+        97,
+        93,
+        44,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        0,
+        0,
+        0,
+        0,
+        4,
+        7,
+        6,
+        0,
+        7,
+        19,
+        28,
+        32,
+        56,
+        27,
+        47,
+        36,
+        17,
+        16,
+        10,
+        9,
+        11,
+        8,
+        10,
+        10,
+        15,
+        15,
+        10,
+        13,
+        13,
+        17,
+        19,
+        20,
+        24,
+        23,
+        31,
+        33,
+        39,
+        60,
+        65,
+        37,
+        26,
+        23,
+        16,
+        11,
+        13,
+        10,
+        10,
+        14,
+        13,
+        15,
+        13,
+        16,
+        16,
+        17,
+        7,
+        7,
+        28,
+        34,
+        38,
+        45,
+        70,
+        66,
+        55,
+        65,
+        40,
+        26,
+        18,
+        18
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +170%; interest moved from 3 to 18; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it."
+    },
+    {
+      "rank": 11,
+      "topic": "how to stop hair loss",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 50,
+      "emergence_score": 39,
+      "velocity_score": 49,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 63,
+      "confidence": "high",
+      "rising_label": "+130%",
+      "latest_interest": 14,
+      "peak_interest": 100,
+      "slope": 9,
+      "acceleration": 6,
+      "seed_terms": [
+        "hair loss"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        5,
+        0,
+        4,
+        3,
+        2,
+        2,
+        0,
+        0,
+        5,
+        4,
+        5,
+        8,
+        9,
+        8,
+        0,
+        0,
+        0,
+        14,
+        0,
+        10,
+        8,
+        5,
+        6,
+        7,
+        3,
+        0,
+        3,
+        3,
+        3,
+        0,
+        3,
+        2,
+        0,
+        4,
+        6,
+        5,
+        6,
+        8,
+        0,
+        12,
+        15,
+        24,
+        35,
+        16,
+        15,
+        9,
+        9,
+        10,
+        6,
+        6,
+        12,
+        15,
+        15,
+        15,
+        18,
+        26,
+        24,
+        20,
+        21,
+        28,
+        36,
+        46,
+        43,
+        64,
+        82,
+        100,
+        46,
+        0,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        3,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        4,
+        5,
+        0,
+        5,
+        4,
+        9,
+        21,
+        26,
+        36,
+        45,
+        33,
+        41,
+        36,
+        23,
+        17,
+        12,
+        11,
+        8,
+        10,
+        11,
+        11,
+        13,
+        12,
+        12,
+        12,
+        14,
+        16,
+        18,
+        21,
+        24,
+        31,
+        32,
+        29,
+        38,
+        43,
+        60,
+        46,
+        24,
+        24,
+        14,
+        11,
+        10,
+        12,
+        13,
+        15,
+        14,
+        12,
+        13,
+        16,
+        16,
+        17,
+        6,
+        7,
+        23,
+        25,
+        34,
+        35,
+        54,
+        57,
+        70,
+        49,
+        38,
+        21,
+        23,
+        14
+      ],
+      "tags": {
+        "concerns": [
+          "hair loss"
+        ]
+      },
+      "why_now": "Google Trends labels it +130%; interest moved from 5 to 14; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "beauty",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "makeup",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "haircare",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "fragrance",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "clean beauty",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "retinol",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "niacinamide",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "skin barrier",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "skin cycling",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "slugging",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "scalp care",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "SPF",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "sunscreen",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "K-beauty",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "acne treatment",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "beauty trends",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "beauty products",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "beauty news",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "beauty for beginners",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "how to clean glass stovetop",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "glass skin"
+      ]
+    },
+    {
+      "topic": "what is a magnifying glass used for",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "glass skin"
+      ]
+    },
+    {
+      "topic": "medicube zero pore pad",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "glass skin"
+      ]
+    },
+    {
+      "topic": "scarlett johansson",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "how to clean shower glass",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "glass skin"
+      ]
+    },
+    {
+      "topic": "jacob batalon",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "hair loss"
+      ]
+    },
+    {
+      "topic": "biolongevity labs",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "peptides"
+      ]
+    },
+    {
+      "topic": "gardening",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "jacob batalon weight loss",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "hair loss"
+      ]
+    },
+    {
+      "topic": "does creatine cause weight gain",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "hair loss"
+      ]
+    },
+    {
+      "topic": "tesamorelin dosage",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "peptides"
+      ]
+    },
+    {
+      "topic": "bubble",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "anua",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "medicube",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "prequel",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "peptide",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "peptides"
+      ]
+    },
+    {
+      "topic": "able skincare anti-aging duo moisturizer",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "scarlett johansson skincare",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "the outset skincare reviews",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "the outset skincare",
+      "reason": "Weak radar score (49)"
+    },
+    {
+      "topic": "botox parent company skincare line",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "noble sciences peptides",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "teotl skincare",
+      "reason": "Weak radar score (40)"
+    },
+    {
+      "topic": "how to get glass skin naturally at home",
+      "reason": "Weak radar score (39)"
+    },
+    {
+      "topic": "jacob batalon hair loss",
+      "reason": "Weak radar score (39)"
+    },
+    {
+      "topic": "enok skincare",
+      "reason": "Weak radar score (38)"
+    },
+    {
+      "topic": "mad skincare hyper sheer spf 50 daily moisturizer",
+      "reason": "Weak radar score (38)"
+    },
+    {
+      "topic": "dr rogers skincare",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "how to get glass skin naturally",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "isomers skincare",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "how to achieve glass skin",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "mad skincare",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "venn skincare",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "prp injections for hair loss",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "bubs collagen peptides",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "true science peptides",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "hyaluronic acid dermal filler",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "hyaluronic acid powder",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "pca skin hyaluronic acid boosting serum",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "make wellness peptides",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "aminoclub peptides",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "weight loss peptides for women",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "wnp hyaluronic acid",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "hyaluronic acid pills",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "does alcohol cause hair loss",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "how much saw palmetto for hair loss",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "best skincare",
+      "reason": "Weak radar score (45)"
+    },
+    {
+      "topic": "korean skincare",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "skincare products",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "skincare routine",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "skin care",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "skincare near me",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "skincare brands",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "skincare makeup",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "anua skincare",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "bubble skincare",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "skincare set",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "skincare order",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "best korean skincare",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "ordinary skincare",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "best skincare products",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "medicube skincare",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "vitamin c skincare",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "image skincare",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "prequel skincare",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "collagen peptides",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "collagen",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "what are peptides",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "what is peptides",
+      "reason": "Weak radar score (31)"
+    }
+  ]
+}

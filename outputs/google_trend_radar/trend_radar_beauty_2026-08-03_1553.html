@@ -1,0 +1,1946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google Trend Radar</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  :root {
+    --ink: #171717;
+    --text: #2b2b2b;
+    --muted: #696969;
+    --paper: #fbfaf8;
+    --surface: #fff;
+    --soft: #f1f0ec;
+    --line: #dedbd4;
+    --red: #cf2f32;
+    --green: #1f9d55;
+    --amber: #d97706;
+    --blue: #2563eb;
+  }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--paper);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+  .topbar {
+    height: 48px;
+    background: #070707;
+    color: #f7f7f7;
+    display: flex;
+    align-items: center;
+    padding: 0 18px;
+    font-weight: 800;
+  }
+  .mark {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3px;
+  }
+  .mark span { background: #f7f7f7; border-radius: 999px; }
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 32px 28px 56px; }
+  .masthead {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 8px 0 28px;
+  }
+  h1 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 31px;
+    line-height: 1.1;
+    color: var(--ink);
+  }
+  h1 span { color: var(--red); }
+  .dek { margin-top: 10px; color: #555; }
+  .run-chip {
+    border: 1px solid var(--line);
+    background: var(--soft);
+    border-radius: 4px;
+    padding: 7px 10px;
+    color: #555;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin: 0 0 24px;
+  }
+  .stat {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--red);
+    border-radius: 6px;
+    padding: 18px 20px;
+    min-height: 96px;
+  }
+  .stat.green { border-top-color: var(--green); }
+  .stat.amber { border-top-color: var(--amber); }
+  .stat.blue { border-top-color: var(--blue); }
+  .stat .value {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 34px;
+    line-height: 1;
+    color: var(--red);
+    font-weight: 700;
+  }
+  .stat.green .value { color: var(--green); }
+  .stat.amber .value { color: var(--amber); }
+  .stat.blue .value { color: var(--blue); }
+  .stat .label { margin-top: 8px; color: #666; font-weight: 800; font-size: 13px; }
+  .insight {
+    background: #eff6ff;
+    border: 1px solid #b7d4ff;
+    border-left: 4px solid var(--blue);
+    border-radius: 6px;
+    padding: 16px 18px;
+    margin: 0 0 24px;
+    color: #183052;
+  }
+  .seed-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 12px;
+  }
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    min-height: 20px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    border: 1px solid #9fc2ff;
+    background: #dbeafe;
+    color: #1457d9;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  .toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 0 0 12px;
+  }
+  .section-title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .filters { display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end; }
+  .filter-btn {
+    appearance: none;
+    border: 1px solid var(--line);
+    background: #fff;
+    color: #555;
+    border-radius: 4px;
+    padding: 5px 9px;
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+  }
+  .filter-btn.active, .filter-btn:hover {
+    border-color: #9fc2ff;
+    background: #eff6ff;
+    color: #1457d9;
+  }
+  .table-shell {
+    overflow-x: auto;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+  }
+  table {
+    width: 100%;
+    min-width: 1060px;
+    border-collapse: collapse;
+  }
+  th {
+    background: var(--soft);
+    border-bottom: 1px solid var(--line);
+    color: #6a6a6a;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 11px 12px;
+  }
+  td {
+    border-bottom: 1px solid #e7e5e0;
+    padding: 12px;
+    vertical-align: top;
+    font-size: 13px;
+  }
+  tr.topic-row { cursor: pointer; }
+  tr.topic-row:hover td { background: #fcfcfb; }
+  .rank {
+    color: #777;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-weight: 800;
+    width: 44px;
+  }
+  .topic-title { font-weight: 800; color: #202020; }
+  .topic-sub { color: #606060; font-size: 12px; margin-top: 4px; }
+  .num {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-weight: 800;
+    color: #2b2b2b;
+    display: inline-block;
+    min-width: 28px;
+  }
+  .mini-bar {
+    display: inline-block;
+    width: 62px;
+    height: 5px;
+    background: #e4e1dc;
+    border-radius: 10px;
+    margin-left: 8px;
+    vertical-align: middle;
+    overflow: hidden;
+  }
+  .mini-bar span { display: block; height: 100%; border-radius: 10px; }
+  .radar span { background: var(--red); }
+  .emerge span { background: var(--green); }
+  .velocity span { background: var(--blue); }
+  .opportunity span { background: var(--amber); }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    min-height: 22px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .badge.breakout { color: #dc2626; background: #fff1f1; border: 1px solid #ffa6a6; }
+  .badge.emerging { color: #c26a00; background: #fff8e6; border: 1px solid #f4be4a; }
+  .badge.rising { color: #1457d9; background: #eff6ff; border: 1px solid #9fc2ff; }
+  .badge.watch { color: #6b7280; background: #f4f4f5; border: 1px solid #d4d4d8; }
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 4px 4px 0;
+    padding: 2px 7px;
+    min-height: 22px;
+    border-radius: 4px;
+    border: 1px solid #b7d4ff;
+    background: #eff6ff;
+    color: #1457d9;
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .detail-row[hidden] { display: none; }
+  .detail-row td {
+    background: #fbfbf9;
+    padding: 0;
+  }
+  .detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    padding: 16px 20px 18px 56px;
+    border-top: 1px solid #eeeae4;
+  }
+  .detail h4 {
+    margin: 0 0 6px;
+    color: #606060;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+  }
+  .detail p { margin: 0; font-size: 13px; color: #2c2c2c; }
+  .spark {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    align-items: end;
+    gap: 2px;
+    width: 96px;
+    height: 30px;
+  }
+  .spark span {
+    display: block;
+    background: #cf2f32;
+    min-height: 2px;
+    border-radius: 2px 2px 0 0;
+  }
+  .rejected { margin-top: 28px; }
+  .empty { padding: 28px; text-align: center; color: var(--muted); }
+  @media (max-width: 820px) {
+    .wrap { padding: 24px 16px 44px; }
+    .masthead { display: block; }
+    .run-chip { display: inline-block; margin-top: 18px; white-space: normal; }
+    .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .toolbar { align-items: flex-start; flex-direction: column; }
+    .filters { justify-content: flex-start; }
+    .detail { grid-template-columns: 1fr; padding-left: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="topbar"><span class="mark"><span></span><span></span><span></span><span></span></span>Google Trend Radar</div>
+<main class="wrap">
+  <header class="masthead">
+    <div>
+      <h1><span id="topic-title">Trend</span> Radar</h1>
+      <div class="dek" id="dek"></div>
+    </div>
+    <div class="run-chip" id="run-meta"></div>
+  </header>
+
+  <section class="stats" id="stats"></section>
+
+  <section class="insight">
+    <div><span class="pill">Method</span></div>
+    <div id="method-copy" style="margin-top:10px;"></div>
+    <div class="seed-list" id="seed-list"></div>
+  </section>
+
+  <section>
+    <div class="toolbar">
+      <div class="section-title" id="radar-title">Trend Radar</div>
+      <div class="filters" id="filters"></div>
+    </div>
+    <div class="table-shell">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Trend</th>
+            <th>Stage</th>
+            <th>Radar</th>
+            <th>Emergence</th>
+            <th>Velocity</th>
+            <th>Opportunity</th>
+            <th>Interest</th>
+            <th>Lift</th>
+            <th>Signals</th>
+          </tr>
+        </thead>
+        <tbody id="topic-rows"></tbody>
+      </table>
+      <div class="empty" id="empty" hidden>No trends cleared the radar threshold.</div>
+    </div>
+  </section>
+
+  <section class="rejected" id="rejected-section" hidden>
+    <div class="toolbar"><div class="section-title">Rejected Or Weak Signals</div></div>
+    <div class="table-shell">
+      <table>
+        <thead><tr><th>Topic</th><th>Reason</th><th>Seed</th></tr></thead>
+        <tbody id="rejected-rows"></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<script type="application/json" id="radar-json">{
+  "run_date": "2026-08-03",
+  "generated_at": "2026-08-03T15:53:51",
+  "topic": "beauty",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "beauty",
+    "skincare",
+    "makeup",
+    "haircare",
+    "fragrance",
+    "clean beauty",
+    "retinol",
+    "niacinamide",
+    "peptides",
+    "hyaluronic acid",
+    "skin barrier",
+    "skin cycling",
+    "glass skin",
+    "slugging",
+    "scalp care",
+    "SPF",
+    "sunscreen",
+    "K-beauty",
+    "hair loss",
+    "acne treatment",
+    "beauty trends",
+    "beauty products",
+    "beauty news",
+    "beauty for beginners"
+  ],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 24,
+    "total_reviewed": 80,
+    "total_retained": 11,
+    "total_rejected": 88,
+    "breakouts": 3,
+    "emerging": 5,
+    "rising": 1,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "topic": "outset skincare",
+      "trend_stage": "emerging",
+      "urgency": "this_week",
+      "radar_score": 66,
+      "emergence_score": 82,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "+1150%",
+      "latest_interest": 0,
+      "peak_interest": 37,
+      "slope": 0,
+      "acceleration": 1,
+      "seed_terms": [
+        "skincare"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        37,
+        4,
+        2,
+        2,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +1150%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Build an angle this week and monitor the next 24-48 hours."
+    },
+    {
+      "rank": 2,
+      "topic": "beef tallow skincare effectiveness",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 54,
+      "emergence_score": 71,
+      "velocity_score": 40,
+      "confidence_score": 40,
+      "saturation_score": 0,
+      "opportunity_score": 83,
+      "confidence": "low",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "skincare"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; time-series validation was skipped or unavailable; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 3,
+      "topic": "daniel murphy paradigm peptides case",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 54,
+      "emergence_score": 71,
+      "velocity_score": 40,
+      "confidence_score": 40,
+      "saturation_score": 0,
+      "opportunity_score": 83,
+      "confidence": "low",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "peptides"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [],
+      "tags": {
+        "ingredients": [
+          "peptides"
+        ]
+      },
+      "why_now": "Google Trends labels it Breakout; time-series validation was skipped or unavailable; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 4,
+      "topic": "paradigm peptides",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 54,
+      "emergence_score": 71,
+      "velocity_score": 40,
+      "confidence_score": 40,
+      "saturation_score": 0,
+      "opportunity_score": 83,
+      "confidence": "low",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "peptides"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [],
+      "tags": {
+        "ingredients": [
+          "peptides"
+        ]
+      },
+      "why_now": "Google Trends labels it Breakout; time-series validation was skipped or unavailable; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 5,
+      "topic": "seth rollins hair loss",
+      "trend_stage": "emerging",
+      "urgency": "this_week",
+      "radar_score": 54,
+      "emergence_score": 71,
+      "velocity_score": 40,
+      "confidence_score": 40,
+      "saturation_score": 0,
+      "opportunity_score": 83,
+      "confidence": "low",
+      "rising_label": "+4650%",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "hair loss"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [],
+      "tags": {
+        "concerns": [
+          "hair loss"
+        ]
+      },
+      "why_now": "Google Trends labels it +4650%; time-series validation was skipped or unavailable; found through rising query",
+      "recommended_action": "Build an angle this week and monitor the next 24-48 hours."
+    },
+    {
+      "rank": 6,
+      "topic": "amazon affordable anti aging skincare",
+      "trend_stage": "emerging",
+      "urgency": "this_week",
+      "radar_score": 54,
+      "emergence_score": 71,
+      "velocity_score": 40,
+      "confidence_score": 40,
+      "saturation_score": 0,
+      "opportunity_score": 83,
+      "confidence": "low",
+      "rising_label": "+4600%",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "skincare"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [],
+      "tags": {},
+      "why_now": "Google Trends labels it +4600%; time-series validation was skipped or unavailable; found through rising query",
+      "recommended_action": "Build an angle this week and monitor the next 24-48 hours."
+    },
+    {
+      "rank": 7,
+      "topic": "elleybear skincare",
+      "trend_stage": "emerging",
+      "urgency": "this_week",
+      "radar_score": 54,
+      "emergence_score": 71,
+      "velocity_score": 40,
+      "confidence_score": 40,
+      "saturation_score": 0,
+      "opportunity_score": 83,
+      "confidence": "low",
+      "rising_label": "+4300%",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "skincare"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [],
+      "tags": {},
+      "why_now": "Google Trends labels it +4300%; time-series validation was skipped or unavailable; found through rising query",
+      "recommended_action": "Build an angle this week and monitor the next 24-48 hours."
+    },
+    {
+      "rank": 8,
+      "topic": "scarlett johansson skincare line",
+      "trend_stage": "emerging",
+      "urgency": "this_week",
+      "radar_score": 54,
+      "emergence_score": 71,
+      "velocity_score": 40,
+      "confidence_score": 40,
+      "saturation_score": 0,
+      "opportunity_score": 83,
+      "confidence": "low",
+      "rising_label": "+3450%",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "skincare"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [],
+      "tags": {},
+      "why_now": "Google Trends labels it +3450%; time-series validation was skipped or unavailable; found through rising query",
+      "recommended_action": "Build an angle this week and monitor the next 24-48 hours."
+    },
+    {
+      "rank": 9,
+      "topic": "best skincare for oily skin",
+      "trend_stage": "rising",
+      "urgency": "monitor",
+      "radar_score": 53,
+      "emergence_score": 42,
+      "velocity_score": 55,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 65,
+      "confidence": "high",
+      "rising_label": "+190%",
+      "latest_interest": 17,
+      "peak_interest": 91,
+      "slope": 17,
+      "acceleration": 8,
+      "seed_terms": [
+        "skincare"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        3,
+        0,
+        5,
+        6,
+        8,
+        9,
+        0,
+        0,
+        0,
+        0,
+        0,
+        8,
+        0,
+        6,
+        5,
+        0,
+        2,
+        2,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        5,
+        0,
+        0,
+        0,
+        21,
+        30,
+        16,
+        9,
+        9,
+        7,
+        8,
+        7,
+        6,
+        14,
+        18,
+        15,
+        13,
+        19,
+        21,
+        22,
+        17,
+        21,
+        24,
+        30,
+        41,
+        37,
+        56,
+        87,
+        91,
+        42,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        4,
+        4,
+        3,
+        8,
+        21,
+        27,
+        29,
+        57,
+        35,
+        50,
+        31,
+        21,
+        16,
+        8,
+        9,
+        9,
+        8,
+        10,
+        11,
+        14,
+        13,
+        10,
+        11,
+        13,
+        15,
+        20,
+        16,
+        22,
+        23,
+        26,
+        29,
+        40,
+        62,
+        65,
+        46,
+        27,
+        20,
+        14,
+        9,
+        13,
+        10,
+        10,
+        13,
+        11,
+        13,
+        12,
+        16,
+        15,
+        16,
+        6,
+        9,
+        33,
+        30,
+        36,
+        41,
+        64,
+        66,
+        54,
+        42,
+        31,
+        23,
+        15,
+        17
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +190%; interest moved from 0 to 17; found through rising query",
+      "recommended_action": "Track as a developing query and compare against existing coverage."
+    },
+    {
+      "rank": 10,
+      "topic": "skincare for oily skin",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 52,
+      "emergence_score": 41,
+      "velocity_score": 54,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 65,
+      "confidence": "high",
+      "rising_label": "+170%",
+      "latest_interest": 18,
+      "peak_interest": 97,
+      "slope": 15,
+      "acceleration": 8,
+      "seed_terms": [
+        "skincare"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        3,
+        0,
+        7,
+        3,
+        3,
+        0,
+        2,
+        3,
+        4,
+        5,
+        3,
+        5,
+        7,
+        9,
+        11,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        7,
+        5,
+        0,
+        3,
+        3,
+        0,
+        4,
+        6,
+        4,
+        3,
+        3,
+        4,
+        3,
+        4,
+        4,
+        6,
+        0,
+        8,
+        11,
+        26,
+        37,
+        20,
+        11,
+        11,
+        7,
+        9,
+        7,
+        8,
+        15,
+        17,
+        16,
+        16,
+        19,
+        22,
+        23,
+        17,
+        23,
+        27,
+        31,
+        43,
+        42,
+        57,
+        97,
+        93,
+        44,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        0,
+        0,
+        0,
+        0,
+        4,
+        7,
+        6,
+        0,
+        7,
+        19,
+        28,
+        32,
+        56,
+        27,
+        47,
+        36,
+        17,
+        16,
+        10,
+        9,
+        11,
+        8,
+        10,
+        10,
+        15,
+        15,
+        10,
+        13,
+        13,
+        17,
+        19,
+        20,
+        24,
+        23,
+        31,
+        33,
+        39,
+        60,
+        65,
+        37,
+        26,
+        23,
+        16,
+        11,
+        13,
+        10,
+        10,
+        14,
+        13,
+        15,
+        13,
+        16,
+        16,
+        17,
+        7,
+        7,
+        28,
+        34,
+        38,
+        45,
+        70,
+        66,
+        55,
+        65,
+        40,
+        26,
+        18,
+        18
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +170%; interest moved from 3 to 18; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it."
+    },
+    {
+      "rank": 11,
+      "topic": "how to stop hair loss",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 50,
+      "emergence_score": 39,
+      "velocity_score": 49,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 63,
+      "confidence": "high",
+      "rising_label": "+130%",
+      "latest_interest": 14,
+      "peak_interest": 100,
+      "slope": 9,
+      "acceleration": 6,
+      "seed_terms": [
+        "hair loss"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        5,
+        0,
+        4,
+        3,
+        2,
+        2,
+        0,
+        0,
+        5,
+        4,
+        5,
+        8,
+        9,
+        8,
+        0,
+        0,
+        0,
+        14,
+        0,
+        10,
+        8,
+        5,
+        6,
+        7,
+        3,
+        0,
+        3,
+        3,
+        3,
+        0,
+        3,
+        2,
+        0,
+        4,
+        6,
+        5,
+        6,
+        8,
+        0,
+        12,
+        15,
+        24,
+        35,
+        16,
+        15,
+        9,
+        9,
+        10,
+        6,
+        6,
+        12,
+        15,
+        15,
+        15,
+        18,
+        26,
+        24,
+        20,
+        21,
+        28,
+        36,
+        46,
+        43,
+        64,
+        82,
+        100,
+        46,
+        0,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        3,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        4,
+        5,
+        0,
+        5,
+        4,
+        9,
+        21,
+        26,
+        36,
+        45,
+        33,
+        41,
+        36,
+        23,
+        17,
+        12,
+        11,
+        8,
+        10,
+        11,
+        11,
+        13,
+        12,
+        12,
+        12,
+        14,
+        16,
+        18,
+        21,
+        24,
+        31,
+        32,
+        29,
+        38,
+        43,
+        60,
+        46,
+        24,
+        24,
+        14,
+        11,
+        10,
+        12,
+        13,
+        15,
+        14,
+        12,
+        13,
+        16,
+        16,
+        17,
+        6,
+        7,
+        23,
+        25,
+        34,
+        35,
+        54,
+        57,
+        70,
+        49,
+        38,
+        21,
+        23,
+        14
+      ],
+      "tags": {
+        "concerns": [
+          "hair loss"
+        ]
+      },
+      "why_now": "Google Trends labels it +130%; interest moved from 5 to 14; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "beauty",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "makeup",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "haircare",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "fragrance",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "clean beauty",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "retinol",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "niacinamide",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "skin barrier",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "skin cycling",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "slugging",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "scalp care",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "SPF",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "sunscreen",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "K-beauty",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "acne treatment",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "beauty trends",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "beauty products",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "beauty news",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "beauty for beginners",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "how to clean glass stovetop",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "glass skin"
+      ]
+    },
+    {
+      "topic": "what is a magnifying glass used for",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "glass skin"
+      ]
+    },
+    {
+      "topic": "medicube zero pore pad",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "glass skin"
+      ]
+    },
+    {
+      "topic": "scarlett johansson",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "how to clean shower glass",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "glass skin"
+      ]
+    },
+    {
+      "topic": "jacob batalon",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "hair loss"
+      ]
+    },
+    {
+      "topic": "biolongevity labs",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "peptides"
+      ]
+    },
+    {
+      "topic": "gardening",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "jacob batalon weight loss",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "hair loss"
+      ]
+    },
+    {
+      "topic": "does creatine cause weight gain",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "hair loss"
+      ]
+    },
+    {
+      "topic": "tesamorelin dosage",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "peptides"
+      ]
+    },
+    {
+      "topic": "bubble",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "anua",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "medicube",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "prequel",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "peptide",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "peptides"
+      ]
+    },
+    {
+      "topic": "able skincare anti-aging duo moisturizer",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "scarlett johansson skincare",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "the outset skincare reviews",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "the outset skincare",
+      "reason": "Weak radar score (49)"
+    },
+    {
+      "topic": "botox parent company skincare line",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "noble sciences peptides",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "teotl skincare",
+      "reason": "Weak radar score (40)"
+    },
+    {
+      "topic": "how to get glass skin naturally at home",
+      "reason": "Weak radar score (39)"
+    },
+    {
+      "topic": "jacob batalon hair loss",
+      "reason": "Weak radar score (39)"
+    },
+    {
+      "topic": "enok skincare",
+      "reason": "Weak radar score (38)"
+    },
+    {
+      "topic": "mad skincare hyper sheer spf 50 daily moisturizer",
+      "reason": "Weak radar score (38)"
+    },
+    {
+      "topic": "dr rogers skincare",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "how to get glass skin naturally",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "isomers skincare",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "how to achieve glass skin",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "mad skincare",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "venn skincare",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "prp injections for hair loss",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "bubs collagen peptides",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "true science peptides",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "hyaluronic acid dermal filler",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "hyaluronic acid powder",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "pca skin hyaluronic acid boosting serum",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "make wellness peptides",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "aminoclub peptides",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "weight loss peptides for women",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "wnp hyaluronic acid",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "hyaluronic acid pills",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "does alcohol cause hair loss",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "how much saw palmetto for hair loss",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "best skincare",
+      "reason": "Weak radar score (45)"
+    },
+    {
+      "topic": "korean skincare",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "skincare products",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "skincare routine",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "skin care",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "skincare near me",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "skincare brands",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "skincare makeup",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "anua skincare",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "bubble skincare",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "skincare set",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "skincare order",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "best korean skincare",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "ordinary skincare",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "best skincare products",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "medicube skincare",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "vitamin c skincare",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "image skincare",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "prequel skincare",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "collagen peptides",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "collagen",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "what are peptides",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "what is peptides",
+      "reason": "Weak radar score (31)"
+    }
+  ]
+}</script>
+<script>
+function readRadarData() {
+  const raw = document.getElementById('radar-json').textContent.trim();
+  if (!raw || raw === '__RADAR_' + 'DATA__') {
+    return {
+      run_date: '',
+      generated_at: '',
+      topic: 'Topic',
+      geo: 'US',
+      date_window: 'now 7-d',
+      methodology: 'Dashboard template preview.',
+      summary: { total_reviewed: 0, total_retained: 0, total_rejected: 0, breakouts: 0, emerging: 0, notes: '' },
+      candidates: [],
+      rejected: []
+    };
+  }
+  return JSON.parse(raw);
+}
+
+const D = readRadarData();
+const candidates = Array.isArray(D.candidates) ? D.candidates : [];
+const rejected = Array.isArray(D.rejected) ? D.rejected : [];
+const summary = D.summary || {};
+const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({
+  '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+}[ch]));
+const clamp = n => Math.max(0, Math.min(100, Number(n) || 0));
+const stageClass = value => ['breakout', 'emerging', 'rising', 'watch'].includes(value) ? value : 'watch';
+
+document.getElementById('topic-title').textContent = D.topic || 'Trend';
+document.getElementById('dek').textContent = `${D.geo || 'US'} · ${D.date_window || 'now 7-d'} · ${D.run_date || ''}`;
+document.getElementById('run-meta').textContent = `Generated: ${(D.generated_at || '').replace('T', ' ')} | retained ${candidates.length}`;
+document.getElementById('method-copy').textContent = `${D.methodology}. ${summary.notes || ''}`;
+document.getElementById('radar-title').textContent = `Trend Radar — ${candidates.length} retained`;
+document.getElementById('seed-list').innerHTML = (Array.isArray(D.seed_terms) ? D.seed_terms : [])
+  .map(seed => `<span class="chip">${esc(seed)}</span>`)
+  .join('');
+
+const statData = [
+  { label: 'Signals Reviewed', value: summary.total_reviewed ?? 0, cls: '' },
+  { label: 'Retained Trends', value: candidates.length, cls: 'green' },
+  { label: 'Breakouts', value: summary.breakouts ?? 0, cls: 'amber' },
+  { label: 'Emerging', value: summary.emerging ?? 0, cls: 'blue' },
+];
+document.getElementById('stats').innerHTML = statData.map(s => `
+  <div class="stat ${s.cls}">
+    <div class="value">${esc(s.value)}</div>
+    <div class="label">${esc(s.label)}</div>
+  </div>
+`).join('');
+
+const filters = ['All', 'breakout', 'emerging', 'rising', 'watch'];
+document.getElementById('filters').innerHTML = filters.map((f, i) =>
+  `<button class="filter-btn ${i === 0 ? 'active' : ''}" data-filter="${esc(f)}">${esc(f)}</button>`
+).join('');
+
+function scoreCell(value, cls) {
+  const score = clamp(value);
+  return `<span class="num">${score}</span><span class="mini-bar ${cls}"><span style="width:${score}%"></span></span>`;
+}
+
+function sparkline(scores) {
+  const vals = Array.isArray(scores) ? scores.slice(-8) : [];
+  if (!vals.length) return '<span class="topic-sub">No time series</span>';
+  const max = Math.max(...vals, 1);
+  return `<div class="spark">${vals.map(v => `<span style="height:${Math.max(2, Math.round((v / max) * 30))}px"></span>`).join('')}</div>`;
+}
+
+function chips(values) {
+  return (Array.isArray(values) ? values : []).slice(0, 4).map(value => `<span class="chip">${esc(value)}</span>`).join('');
+}
+
+function tagChips(tags) {
+  const entries = tags && typeof tags === 'object' ? Object.entries(tags) : [];
+  if (!entries.length) return '<span class="topic-sub">No tags matched</span>';
+  return entries.map(([tagType, terms]) => `<span class="chip">${esc(tagType)}: ${esc((terms || []).join(', '))}</span>`).join(' ');
+}
+
+function rowHtml(c, i) {
+  const stage = stageClass(c.trend_stage);
+  const lift = c.rising_label || (Number(c.slope) > 0 ? `+${c.slope}` : String(c.slope ?? 0));
+  return `
+    <tr class="topic-row" data-stage="${esc(stage)}" data-detail="${i}">
+      <td class="rank">${String(c.rank || i + 1).padStart(2, '0')}</td>
+      <td>
+        <div class="topic-title">${esc(c.topic)}</div>
+        <div class="topic-sub">${esc(c.why_now || '')}</div>
+      </td>
+      <td><span class="badge ${esc(stage)}">${esc(stage)}</span></td>
+      <td>${scoreCell(c.radar_score, 'radar')}</td>
+      <td>${scoreCell(c.emergence_score, 'emerge')}</td>
+      <td>${scoreCell(c.velocity_score, 'velocity')}</td>
+      <td>${scoreCell(c.opportunity_score, 'opportunity')}</td>
+      <td>${sparkline(c.interest_scores)}</td>
+      <td><span class="num">${esc(lift)}</span></td>
+      <td>${chips(c.discovery_sources)}</td>
+    </tr>
+    <tr class="detail-row" data-parent="${i}" hidden>
+      <td colspan="10">
+        <div class="detail">
+          <div><h4>Recommended Action</h4><p>${esc(c.recommended_action || '')}</p></div>
+          <div><h4>Seed Terms</h4><p>${esc((c.seed_terms || []).join(', ') || 'None')}</p></div>
+          <div><h4>Confidence</h4><p>${esc(c.confidence || 'low')} confidence · score ${esc(c.confidence_score ?? 0)}</p></div>
+          <div><h4>Tags</h4><p>${tagChips(c.tags)}</p></div>
+        </div>
+      </td>
+    </tr>
+  `;
+}
+
+const tbody = document.getElementById('topic-rows');
+tbody.innerHTML = candidates.map(rowHtml).join('');
+document.getElementById('empty').hidden = candidates.length > 0;
+
+tbody.addEventListener('click', event => {
+  const row = event.target.closest('.topic-row');
+  if (!row) return;
+  const detail = tbody.querySelector(`.detail-row[data-parent="${row.dataset.detail}"]`);
+  if (detail) detail.hidden = !detail.hidden;
+});
+
+document.getElementById('filters').addEventListener('click', event => {
+  const btn = event.target.closest('.filter-btn');
+  if (!btn) return;
+  document.querySelectorAll('.filter-btn').forEach(button => button.classList.remove('active'));
+  btn.classList.add('active');
+  const filter = btn.dataset.filter;
+  document.querySelectorAll('.topic-row').forEach(row => {
+    const show = filter === 'All' || row.dataset.stage === filter;
+    row.hidden = !show;
+    const detail = tbody.querySelector(`.detail-row[data-parent="${row.dataset.detail}"]`);
+    if (detail) detail.hidden = true;
+  });
+});
+
+if (rejected.length) {
+  document.getElementById('rejected-section').hidden = false;
+  document.getElementById('rejected-rows').innerHTML = rejected.map(r => `
+    <tr><td>${esc(r.topic)}</td><td>${esc(r.reason)}</td><td>${esc((r.seed_terms || []).join(', '))}</td></tr>
+  `).join('');
+}
+</script>
+</body>
+</html>
