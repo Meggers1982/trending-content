@@ -1,0 +1,1440 @@
+{
+  "run_date": "2026-08-03",
+  "generated_at": "2026-08-03T16:09:27",
+  "topic": "fitness",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "fitness",
+    "strength training",
+    "cardio",
+    "HIIT workout",
+    "resistance training",
+    "mobility training",
+    "workout recovery",
+    "home workout",
+    "running",
+    "weightlifting",
+    "VO2 max",
+    "fitness trends",
+    "fitness products",
+    "fitness news",
+    "fitness for beginners",
+    "fitness routine",
+    "fitness benefits",
+    "fitness ideas",
+    "fitness reviews"
+  ],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 19,
+    "total_reviewed": 80,
+    "total_retained": 7,
+    "total_rejected": 84,
+    "breakouts": 2,
+    "emerging": 2,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "topic": "weightlifting area",
+      "trend_stage": "emerging",
+      "urgency": "this_week",
+      "radar_score": 66,
+      "emergence_score": 82,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "+2250%",
+      "latest_interest": 0,
+      "peak_interest": 100,
+      "slope": 0,
+      "acceleration": 1,
+      "seed_terms": [
+        "weightlifting"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        100,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        9,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +2250%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Build an angle this week and monitor the next 24-48 hours."
+    },
+    {
+      "rank": 2,
+      "topic": "arnold schwarzenegger weightlifting 79th birthday",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 54,
+      "emergence_score": 71,
+      "velocity_score": 40,
+      "confidence_score": 40,
+      "saturation_score": 0,
+      "opportunity_score": 83,
+      "confidence": "low",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "weightlifting"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; time-series validation was skipped or unavailable; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 3,
+      "topic": "kelly rowland adopted heavy weightlifting and quit drinking for wellness",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 54,
+      "emergence_score": 71,
+      "velocity_score": 40,
+      "confidence_score": 40,
+      "saturation_score": 0,
+      "opportunity_score": 83,
+      "confidence": "low",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "weightlifting"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; time-series validation was skipped or unavailable; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 4,
+      "topic": "resistance training near me",
+      "trend_stage": "emerging",
+      "urgency": "this_week",
+      "radar_score": 52,
+      "emergence_score": 66,
+      "velocity_score": 40,
+      "confidence_score": 40,
+      "saturation_score": 0,
+      "opportunity_score": 80,
+      "confidence": "low",
+      "rising_label": "+900%",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "resistance training"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [],
+      "tags": {},
+      "why_now": "Google Trends labels it +900%; time-series validation was skipped or unavailable; found through rising query",
+      "recommended_action": "Build an angle this week and monitor the next 24-48 hours."
+    },
+    {
+      "rank": 5,
+      "topic": "cloud fitness",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 52,
+      "emergence_score": 50,
+      "velocity_score": 41,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 70,
+      "confidence": "high",
+      "rising_label": "+300%",
+      "latest_interest": 2,
+      "peak_interest": 3,
+      "slope": 1,
+      "acceleration": 0,
+      "seed_terms": [
+        "fitness trends"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        2,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        2,
+        0,
+        2,
+        3,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        2,
+        0,
+        0,
+        0,
+        2,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        3,
+        0,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        2
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +300%; interest moved from 1 to 2; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it."
+    },
+    {
+      "rank": 6,
+      "topic": "home workout routines",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 52,
+      "emergence_score": 40,
+      "velocity_score": 55,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 64,
+      "confidence": "high",
+      "rising_label": "+200%",
+      "latest_interest": 19,
+      "peak_interest": 100,
+      "slope": 14,
+      "acceleration": 14,
+      "seed_terms": [
+        "workout recovery"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        5,
+        6,
+        5,
+        6,
+        5,
+        9,
+        10,
+        13,
+        11,
+        10,
+        9,
+        8,
+        13,
+        18,
+        23,
+        24,
+        29,
+        28,
+        17,
+        7,
+        4,
+        2,
+        4,
+        5,
+        6,
+        11,
+        12,
+        12,
+        12,
+        10,
+        11,
+        8,
+        8,
+        10,
+        8,
+        13,
+        19,
+        28,
+        37,
+        47,
+        46,
+        53,
+        42,
+        42,
+        30,
+        21,
+        17,
+        14,
+        13,
+        13,
+        13,
+        15,
+        14,
+        15,
+        14,
+        12,
+        10,
+        10,
+        8,
+        10,
+        11,
+        13,
+        22,
+        37,
+        47,
+        49,
+        27,
+        24,
+        23,
+        19,
+        18,
+        16,
+        19,
+        16,
+        17,
+        18,
+        17,
+        16,
+        14,
+        10,
+        10,
+        10,
+        11,
+        15,
+        24,
+        37,
+        43,
+        53,
+        57,
+        68,
+        47,
+        37,
+        36,
+        22,
+        21,
+        19,
+        14,
+        14,
+        12,
+        12,
+        13,
+        13,
+        12,
+        10,
+        8,
+        9,
+        9,
+        14,
+        20,
+        28,
+        39,
+        54,
+        63,
+        65,
+        63,
+        45,
+        39,
+        27,
+        22,
+        19,
+        18,
+        16,
+        18,
+        15,
+        15,
+        17,
+        13,
+        9,
+        8,
+        9,
+        11,
+        16,
+        26,
+        37,
+        51,
+        66,
+        89,
+        100,
+        89,
+        76,
+        51,
+        33,
+        28,
+        21,
+        21,
+        18,
+        18,
+        19,
+        17,
+        16,
+        14,
+        9,
+        11,
+        11,
+        15,
+        16,
+        24,
+        32,
+        44,
+        59,
+        69,
+        55,
+        50,
+        39,
+        31,
+        21,
+        17,
+        19
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +200%; interest moved from 5 to 19; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it."
+    },
+    {
+      "rank": 7,
+      "topic": "rep fitness",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 51,
+      "emergence_score": 48,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 69,
+      "confidence": "high",
+      "rising_label": "+250%",
+      "latest_interest": 1,
+      "peak_interest": 3,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "weightlifting"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        0,
+        0,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        0,
+        2,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        0,
+        2,
+        3,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        1,
+        1
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +250%; interest moved from 1 to 1; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "fitness",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "strength training",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "cardio",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "HIIT workout",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "home workout",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "running",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "VO2 max",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "fitness products",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "fitness for beginners",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "fitness routine",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "fitness reviews",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "database optimization",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "resistance training"
+      ]
+    },
+    {
+      "topic": "python data analysis",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "resistance training"
+      ]
+    },
+    {
+      "topic": "what is a virtual machine",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "resistance training"
+      ]
+    },
+    {
+      "topic": "what is a civil union",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "resistance training"
+      ]
+    },
+    {
+      "topic": "symptoms of vitamin d deficiency",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "resistance training"
+      ]
+    },
+    {
+      "topic": "internet of things examples",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "resistance training"
+      ]
+    },
+    {
+      "topic": "corporate training programs",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "resistance training"
+      ]
+    },
+    {
+      "topic": "mobile app development",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "resistance training"
+      ]
+    },
+    {
+      "topic": "how to mount tv on wall",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "resistance training"
+      ]
+    },
+    {
+      "topic": "how to export bookmarks chrome",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "resistance training"
+      ]
+    },
+    {
+      "topic": "how to boil pasta",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "resistance training"
+      ]
+    },
+    {
+      "topic": "what is a captcha test",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "resistance training"
+      ]
+    },
+    {
+      "topic": "web development best practices",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "resistance training"
+      ]
+    },
+    {
+      "topic": "backend development",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "resistance training"
+      ]
+    },
+    {
+      "topic": "python programming tutorial",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "resistance training"
+      ]
+    },
+    {
+      "topic": "book recommendations",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "workout recovery"
+      ]
+    },
+    {
+      "topic": "how to cook pasta",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "workout recovery"
+      ]
+    },
+    {
+      "topic": "best laptops 2025",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "workout recovery"
+      ]
+    },
+    {
+      "topic": "best restaurants near me",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "workout recovery"
+      ]
+    },
+    {
+      "topic": "popular movies 2025",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "workout recovery"
+      ]
+    },
+    {
+      "topic": "kitchen tech upgrades",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness trends"
+      ]
+    },
+    {
+      "topic": "vegetables",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness trends"
+      ]
+    },
+    {
+      "topic": "trending beauty hacks",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness trends"
+      ]
+    },
+    {
+      "topic": "minimalist lifestyle trend",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness trends"
+      ]
+    },
+    {
+      "topic": "travel destinations",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness trends"
+      ]
+    },
+    {
+      "topic": "k-pop trending",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness trends"
+      ]
+    },
+    {
+      "topic": "ai image enhancer",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness trends"
+      ]
+    },
+    {
+      "topic": "ai personal assistant",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness trends"
+      ]
+    },
+    {
+      "topic": "online courses",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness news"
+      ]
+    },
+    {
+      "topic": "alongside popular platforms like whatsapp",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness news"
+      ]
+    },
+    {
+      "topic": "trending tv series",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness news"
+      ]
+    },
+    {
+      "topic": "cheap flight",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness news"
+      ]
+    },
+    {
+      "topic": "making money online",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness news"
+      ]
+    },
+    {
+      "topic": "lovelolablog news",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness news"
+      ]
+    },
+    {
+      "topic": "subpoena",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness news"
+      ]
+    },
+    {
+      "topic": "pilates near me",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness benefits"
+      ]
+    },
+    {
+      "topic": "concerts",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness benefits"
+      ]
+    },
+    {
+      "topic": "lottery results today",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "resistance training"
+      ]
+    },
+    {
+      "topic": "what is a router",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "resistance training"
+      ]
+    },
+    {
+      "topic": "agile methodology",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "resistance training"
+      ]
+    },
+    {
+      "topic": "fatma elyan",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weightlifting"
+      ]
+    },
+    {
+      "topic": "stock markets",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness news"
+      ]
+    },
+    {
+      "topic": "new movies",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness news"
+      ]
+    },
+    {
+      "topic": "e-commerce",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness news"
+      ]
+    },
+    {
+      "topic": "gyms near me",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weightlifting"
+      ]
+    },
+    {
+      "topic": "technology news",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "workout recovery"
+      ]
+    },
+    {
+      "topic": "diy projects",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "workout recovery"
+      ]
+    },
+    {
+      "topic": "wellness gadgets",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness trends"
+      ]
+    },
+    {
+      "topic": "walmart near me",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "resistance training"
+      ]
+    },
+    {
+      "topic": "healthy recipes",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "workout recovery"
+      ]
+    },
+    {
+      "topic": "gardening ideas",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "workout recovery"
+      ]
+    },
+    {
+      "topic": "social commerce",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness trends"
+      ]
+    },
+    {
+      "topic": "pet care tips",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness news"
+      ]
+    },
+    {
+      "topic": "top songs this week",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "workout recovery"
+      ]
+    },
+    {
+      "topic": "coffee shops nearby",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "workout recovery"
+      ]
+    },
+    {
+      "topic": "non-toxic air fryer",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness trends"
+      ]
+    },
+    {
+      "topic": "upcoming events",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "workout recovery"
+      ]
+    },
+    {
+      "topic": "tech gadgets 2025",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness trends"
+      ]
+    },
+    {
+      "topic": "red light sauna benefits",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness benefits"
+      ]
+    },
+    {
+      "topic": "nike free metcon 6",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weightlifting"
+      ]
+    },
+    {
+      "topic": "digital side hustles",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness trends"
+      ]
+    },
+    {
+      "topic": "movies",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness news"
+      ]
+    },
+    {
+      "topic": "museums",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness benefits"
+      ]
+    },
+    {
+      "topic": "weightlifting gyms near me",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "fitness routines",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "planet fitness minneapolis",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "holiday fitness",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "ladder fitness",
+      "reason": "Weak radar score (49)"
+    },
+    {
+      "topic": "weightlifting near me",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "dozer weightlifting",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "fitness warrior nation",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "mobility training near me",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "luxury hamptons elite fitness guide",
+      "reason": "Weak radar score (42)"
+    }
+  ]
+}
