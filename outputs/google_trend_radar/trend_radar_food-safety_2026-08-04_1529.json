@@ -1,0 +1,113 @@
+{
+  "run_date": "2026-08-04",
+  "generated_at": "2026-08-04T15:29:36",
+  "topic": "food-safety",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "food-safety",
+    "food safety",
+    "food recall",
+    "foodborne illness",
+    "food contamination",
+    "listeria outbreak",
+    "salmonella outbreak",
+    "restaurant inspection",
+    "USDA recall",
+    "cross contamination",
+    "food-safety trends",
+    "food-safety products",
+    "food-safety news",
+    "food-safety for beginners",
+    "food-safety routine",
+    "food-safety benefits",
+    "food-safety ideas",
+    "food-safety reviews"
+  ],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 18,
+    "total_reviewed": 0,
+    "total_retained": 0,
+    "total_rejected": 18,
+    "breakouts": 0,
+    "emerging": 0,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [],
+  "rejected": [
+    {
+      "topic": "food-safety",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "food safety",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "food recall",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "foodborne illness",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "food contamination",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "listeria outbreak",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "salmonella outbreak",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "restaurant inspection",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "USDA recall",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "cross contamination",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "food-safety trends",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "food-safety products",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "food-safety news",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "food-safety for beginners",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "food-safety routine",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "food-safety benefits",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "food-safety ideas",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "food-safety reviews",
+      "reason": "No related_queries data returned"
+    }
+  ]
+}
