@@ -1,0 +1,113 @@
+{
+  "run_date": "2026-08-04",
+  "generated_at": "2026-08-04T15:56:56",
+  "topic": "weight-loss",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "weight-loss",
+    "weight loss",
+    "weight loss journey",
+    "fat loss",
+    "sustainable weight loss",
+    "weight loss surgery",
+    "GLP-1",
+    "semaglutide",
+    "weight loss plateau",
+    "weight loss medication",
+    "weight-loss trends",
+    "weight-loss products",
+    "weight-loss news",
+    "weight-loss for beginners",
+    "weight-loss routine",
+    "weight-loss benefits",
+    "weight-loss ideas",
+    "weight-loss reviews"
+  ],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 18,
+    "total_reviewed": 0,
+    "total_retained": 0,
+    "total_rejected": 18,
+    "breakouts": 0,
+    "emerging": 0,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [],
+  "rejected": [
+    {
+      "topic": "weight-loss",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "weight loss",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "weight loss journey",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "fat loss",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "sustainable weight loss",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "weight loss surgery",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "GLP-1",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "semaglutide",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "weight loss plateau",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "weight loss medication",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "weight-loss trends",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "weight-loss products",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "weight-loss news",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "weight-loss for beginners",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "weight-loss routine",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "weight-loss benefits",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "weight-loss ideas",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "weight-loss reviews",
+      "reason": "No related_queries data returned"
+    }
+  ]
+}
