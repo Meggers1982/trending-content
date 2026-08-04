@@ -1,0 +1,113 @@
+{
+  "run_date": "2026-08-04",
+  "generated_at": "2026-08-04T15:33:42",
+  "topic": "diet",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "diet",
+    "keto diet",
+    "intermittent fasting",
+    "low carb diet",
+    "Mediterranean diet",
+    "weight management",
+    "calorie deficit",
+    "macro tracking",
+    "elimination diet",
+    "anti-inflammatory diet",
+    "diet trends",
+    "diet products",
+    "diet news",
+    "diet for beginners",
+    "diet routine",
+    "diet benefits",
+    "diet ideas",
+    "diet reviews"
+  ],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 18,
+    "total_reviewed": 0,
+    "total_retained": 0,
+    "total_rejected": 18,
+    "breakouts": 0,
+    "emerging": 0,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [],
+  "rejected": [
+    {
+      "topic": "diet",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "keto diet",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "intermittent fasting",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "low carb diet",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "Mediterranean diet",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "weight management",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "calorie deficit",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "macro tracking",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "elimination diet",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "anti-inflammatory diet",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "diet trends",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "diet products",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "diet news",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "diet for beginners",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "diet routine",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "diet benefits",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "diet ideas",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "diet reviews",
+      "reason": "No related_queries data returned"
+    }
+  ]
+}
