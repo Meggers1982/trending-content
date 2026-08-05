@@ -16,6 +16,11 @@ The beauty profile additionally cross-checks Reddit (free, no API key) as a
 second signal source and tags candidates with ingredient/benefit/concern
 labels from configs/beauty_taxonomy.yaml, plus an opportunity_score
 estimating whitespace (high emergence, low saturation) alongside radar_score.
+
+Google Trends "Trending Now" real-time terms are folded in as extra seeds by
+default (set SERPAPI_TRENDING_NOW_ENABLED=true; disable with
+--skip-trending-now). Google Trends Autocomplete suggestions can optionally
+be added as further seeds via --include-autocomplete.
 """
 
 from __future__ import annotations
@@ -372,6 +377,71 @@ def serp_get(params: dict, timeout: int = DEFAULT_REQUEST_TIMEOUT, retries: int 
             print(f"SerpAPI error ({label}): {exc}", file=sys.stderr)
             return None
     return None
+
+
+def fetch_trending_now(geo: str = "US") -> list[str]:
+    """Fetch Google Trends 'Trending Now' (real-time breakout searches) as extra seeds.
+
+    Mirrors run_pipeline.py's fetch_trending_now(), reusing the same
+    SERPAPI_TRENDING_NOW_* env vars so both scripts share one config surface,
+    but calls this file's own serp_get() instead of duplicating retry logic.
+    """
+    if os.getenv("SERPAPI_TRENDING_NOW_ENABLED", "").strip().lower() not in {"1", "true", "yes"}:
+        return []
+    data = serp_get({
+        "engine": "google_trends_trending_now",
+        "geo": geo,
+        "hours": os.getenv("SERPAPI_TRENDING_NOW_HOURS", "24").strip() or "24",
+        "category_id": os.getenv("SERPAPI_TRENDING_NOW_CATEGORY_ID", "7").strip() or "7",
+        "only_active": "true",
+        "hl": "en",
+    })
+    if not data:
+        return []
+    terms = []
+    for item in data.get("trending_searches", [])[:20]:
+        query = item.get("query", "")
+        if query:
+            terms.append(query)
+    return terms
+
+
+def fetch_autocomplete(query: str, hl: str = "en") -> list[str]:
+    """Fetch Google Trends Autocomplete suggestions for a seed query.
+
+    A different signal than RELATED_QUERIES: these are literal phrasings
+    Google Trends' own search box suggests, which can surface candidate
+    wording that related-query discovery misses.
+    """
+    data = serp_get({
+        "engine": "google_trends_autocomplete",
+        "q": query,
+        "hl": hl,
+    })
+    if not data:
+        return []
+    suggestions = []
+    for item in data.get("suggestions", [])[:8]:
+        title = item.get("title") or item.get("q") or ""
+        if title:
+            suggestions.append(title)
+    return suggestions
+
+
+def tag_discovery_source(candidates: list[Candidate], terms: list[str], source_label: str) -> None:
+    """Mark candidates whose discovery seed came from an extra source (trending_now/autocomplete).
+
+    Candidates already track which seed(s) led to them via seed_terms; this
+    just cross-references that against the extra-source term list rather
+    than threading a source map through discover_candidates() itself.
+    """
+    keys = {normalize(term) for term in terms if normalize(term)}
+    if not keys:
+        return
+    for candidate in candidates:
+        seed_keys = {normalize(seed) for seed in candidate.seed_terms}
+        if seed_keys & keys:
+            candidate.discovery_sources.add(source_label)
 
 
 def print_request_summary() -> None:
@@ -836,6 +906,8 @@ def build_data(
     candidates: list[Candidate],
     rejected: list[dict],
     extra_anchor_terms: list[str] | None = None,
+    trending_now_terms: list[str] | None = None,
+    autocomplete_terms: list[str] | None = None,
 ) -> dict:
     anchors = relevance_anchors(topic, seeds)
     if extra_anchor_terms:
@@ -886,6 +958,8 @@ def build_data(
         "geo": geo,
         "date_window": date,
         "seed_terms": seeds,
+        "trending_now_terms_used": trending_now_terms or [],
+        "autocomplete_terms_used": autocomplete_terms or [],
         "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
         "summary": {
             "seed_count": len(seeds),
@@ -1086,6 +1160,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--include-related-topics", action="store_true", help="Also scan related topics. Slower, but can surface entity-level discoveries.")
     parser.add_argument("--skip-timeseries", action="store_true", help="Skip time-series validation. Faster for discovery runs when SerpAPI is slow.")
     parser.add_argument("--skip-reddit", action="store_true", help="Skip Reddit cross-validation. Reddit search is free/no-auth but rate-limited and can be slow or flaky.")
+    parser.add_argument("--skip-trending-now", action="store_true", help="Skip Google Trends 'Trending Now' real-time seed enrichment. On by default when SERPAPI_TRENDING_NOW_ENABLED=true.")
+    parser.add_argument("--include-autocomplete", action="store_true", help="Also fetch Google Trends Autocomplete suggestions for the top seeds as extra discovery input. Off by default (adds one SerpAPI call per seed scanned).")
     parser.add_argument("--verbose-errors", action="store_true", help="Print every skipped SerpAPI request instead of only the final summary.")
     parser.add_argument("--email", action="store_true", help="Email the generated dashboard to EMAIL_RECIPIENT with HTML, CSV, and JSON attached.")
     parser.add_argument("--output-dir", default=str(OUTPUT_DIR), help="Directory for dashboard, CSV, and JSON output.")
@@ -1113,6 +1189,22 @@ def main() -> None:
     seeds = build_seed_terms(args.topic, args.seeds, args.seed_profile, args.max_seeds)
     taxonomy = load_taxonomy()
 
+    trending_now_terms: list[str] = []
+    if not args.skip_trending_now:
+        trending_now_terms = fetch_trending_now(geo=args.geo)
+        if trending_now_terms:
+            print(f"Trending Now: {len(trending_now_terms)} real-time terms found")
+            seeds = list(dict.fromkeys(seeds + trending_now_terms))
+
+    autocomplete_terms: list[str] = []
+    if args.include_autocomplete:
+        for seed in seeds[:5]:
+            autocomplete_terms.extend(fetch_autocomplete(seed))
+        autocomplete_terms = list(dict.fromkeys(autocomplete_terms))
+        if autocomplete_terms:
+            print(f"Autocomplete: {len(autocomplete_terms)} suggestions found")
+            seeds = list(dict.fromkeys(seeds + autocomplete_terms))
+
     print(f"Scanning Google Trends for '{args.topic}' ({args.geo}, {args.date})...")
     print(f"Seed terms ({len(seeds)}): {', '.join(seeds)}")
     candidates, rejected = discover_candidates(
@@ -1125,6 +1217,8 @@ def main() -> None:
         request_timeout=args.timeout,
         request_retries=args.retries,
     )
+    tag_discovery_source(candidates, trending_now_terms, "trending_now")
+    tag_discovery_source(candidates, autocomplete_terms, "autocomplete")
 
     # Reddit cross-validation is only meaningful for the beauty profile today
     # (the taxonomy phrase pool is beauty-specific), and running it for
@@ -1156,7 +1250,12 @@ def main() -> None:
             continue
 
     extra_anchor_terms = sorted({term for terms in taxonomy.values() for term in terms}) if args.seed_profile == "beauty" else None
-    data = build_data(args.topic, args.geo, args.date, seeds, candidates, rejected, extra_anchor_terms=extra_anchor_terms)
+    data = build_data(
+        args.topic, args.geo, args.date, seeds, candidates, rejected,
+        extra_anchor_terms=extra_anchor_terms,
+        trending_now_terms=trending_now_terms,
+        autocomplete_terms=autocomplete_terms,
+    )
     stamp = datetime.now().strftime("%Y-%m-%d_%H%M")
     slug = re.sub(r"[^a-z0-9]+", "-", args.topic.lower()).strip("-") or "topic"
     base = f"trend_radar_{slug}_{stamp}"

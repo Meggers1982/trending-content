@@ -1,42 +1,9 @@
 import { getLatestRun, getReportText, getRunSummary, getSignalText, listRuns } from "@/lib/runs";
 import { getLatestRadarScanData } from "@/lib/radar";
+import { scoreBar, badge, stageBadge, tagChips } from "@/lib/dashboard-ui";
 import RunControls from "./components/RunControls";
 import RadarScan from "./components/RadarScan";
-
-function scoreBar(value, tone = "red") {
-  const width = Math.max(0, Math.min(100, Number(value) || 0));
-  return (
-    <span className="scorebar">
-      <span className={`scorefill ${tone}`} style={{ width: `${width}%` }} />
-    </span>
-  );
-}
-
-function badge(value) {
-  const normalized = `${value || ""}`.toLowerCase();
-  let className = "badge";
-  if (normalized.includes("p1") || normalized.includes("now") || normalized.includes("immediate")) className += " hot";
-  if (normalized.includes("p2") || normalized.includes("short")) className += " warm";
-  if (normalized.includes("high") || normalized.includes("easy")) className += " good";
-  if (normalized.includes("medium")) className += " mid";
-  if (normalized.includes("low") || normalized.includes("hard")) className += " risk";
-  return <span className={className}>{value || "—"}</span>;
-}
-
-function stageBadge(stage) {
-  const tone = { breakout: "hot", emerging: "warm", rising: "good", watch: "" }[stage] || "";
-  return <span className={`badge ${tone}`}>{stage || "watch"}</span>;
-}
-
-function tagChips(tags) {
-  const entries = tags && typeof tags === "object" ? Object.entries(tags) : [];
-  if (!entries.length) return <span>—</span>;
-  return entries.map(([tagType, terms]) => (
-    <span className="badge" key={tagType} style={{ marginRight: 4, marginBottom: 4 }}>
-      {tagType}: {(terms || []).join(", ")}
-    </span>
-  ));
-}
+import TrackedTopics from "./components/TrackedTopics";
 
 function inlineParts(text) {
   const parts = `${text || ""}`.split(/(\*\*[^*]+\*\*|`[^`]+`)/g).filter(Boolean);
@@ -334,6 +301,7 @@ export default function Home() {
           <a href="#runs">Runs</a>
           <a href="#ops">Ops</a>
           <a href="#scan">Scan</a>
+          <a href="#tracked">Tracked</a>
         </nav>
       </aside>
 
@@ -558,6 +526,16 @@ export default function Home() {
             </div>
           </div>
           <RadarScan />
+        </section>
+
+        <section className="scanSection" id="tracked">
+          <div className="sectionTitle">
+            <div>
+              <p className="eyebrow">Ad-hoc Research</p>
+              <h2>Tracked topics</h2>
+            </div>
+          </div>
+          <TrackedTopics />
         </section>
       </section>
     </main>

@@ -1,23 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import RadarResultsTable from "./RadarResultsTable";
+import { PROFILES } from "@/lib/radar-profiles";
 
 const RUN_TOKEN_STORAGE_KEY = "trending-content-os:run-token";
-const PROFILES = [
-  "auto",
-  "wellness",
-  "health",
-  "ai",
-  "beauty",
-  "nutrition",
-  "fitness",
-  "food-safety",
-  "diet",
-  "weight-loss",
-  "mental-health",
-  "gut-health",
-  "none"
-];
 
 function formatStatus(job) {
   if (job?.running) return `Scanning "${job.mode}"`;
@@ -34,6 +21,11 @@ export default function RadarScan() {
   const [geo, setGeo] = useState("US");
   const [profile, setProfile] = useState("auto");
   const [runToken, setRunToken] = useState("");
+  const [viewedScan, setViewedScan] = useState(null);
+  const [viewedLabel, setViewedLabel] = useState("");
+  const [viewLoading, setViewLoading] = useState(false);
+  const [lastScanParams, setLastScanParams] = useState(null);
+  const [trackMessage, setTrackMessage] = useState("");
 
   async function loadStatus() {
     const response = await fetch("/api/radar", { cache: "no-store" });
@@ -45,6 +37,9 @@ export default function RadarScan() {
   async function startScan(event) {
     event.preventDefault();
     setMessage("");
+    setTrackMessage("");
+    setViewedScan(null);
+    setLastScanParams({ topic, profile, geo });
     const response = await fetch("/api/radar", {
       method: "POST",
       headers: {
@@ -60,6 +55,37 @@ export default function RadarScan() {
     setJob(data.job);
   }
 
+  async function trackTopic() {
+    if (!lastScanParams) return;
+    setTrackMessage("");
+    const response = await fetch("/api/tracked-topics", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+        ...(runToken ? { "x-run-token": runToken } : {})
+      },
+      body: JSON.stringify(lastScanParams)
+    });
+    const data = await response.json();
+    setTrackMessage(data.ok ? "Tracked — see it in Tracked Topics below." : (data.message || "Could not track this topic."));
+  }
+
+  async function viewScan(jsonPath, label) {
+    setViewLoading(true);
+    setMessage("");
+    try {
+      const response = await fetch(`/api/radar-artifact/${jsonPath}`, { cache: "no-store" });
+      if (!response.ok) throw new Error("Result file not found.");
+      const data = await response.json();
+      setViewedScan(data);
+      setViewedLabel(label);
+    } catch (error) {
+      setMessage(error.message || "Could not load scan results.");
+    } finally {
+      setViewLoading(false);
+    }
+  }
+
   useEffect(() => {
     setRunToken(window.localStorage.getItem(RUN_TOKEN_STORAGE_KEY) || "");
     loadStatus();
@@ -70,6 +96,14 @@ export default function RadarScan() {
     const timer = setInterval(loadStatus, 2000);
     return () => clearInterval(timer);
   }, [job?.running]);
+
+  useEffect(() => {
+    if (job?.exitCode === 0 && job.resultFile) {
+      const jsonPath = job.resultFile.replace(/\.html$/, ".json");
+      viewScan(jsonPath, job.mode || topic);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [job?.resultFile, job?.exitCode]);
 
   const running = Boolean(job?.running);
   const logs = job?.logs || [];
@@ -130,7 +164,7 @@ export default function RadarScan() {
       {job?.exitCode === 0 && job.resultFile ? (
         <p>
           <a className="button" href={`/api/radar-artifact/${job.resultFile}`} target="_blank" rel="noreferrer">
-            View Scan Result
+            Open Raw HTML
           </a>
         </p>
       ) : null}
@@ -147,15 +181,37 @@ export default function RadarScan() {
           <ul>
             {recentScans.map((scan) => (
               <li key={scan.base}>
-                <a href={`/api/radar-artifact/${scan.htmlPath}`} target="_blank" rel="noreferrer">
-                  {scan.base.replace(/^trend_radar_/, "").replace(/_\d{4}-\d{2}-\d{2}_\d{4}$/, "")}
-                </a>
+                <span>{scan.base.replace(/^trend_radar_/, "").replace(/_\d{4}-\d{2}-\d{2}_\d{4}$/, "")}</span>
+                {scan.hasJson ? (
+                  <a href="#" onClick={(event) => { event.preventDefault(); viewScan(scan.jsonPath, scan.base); }}>
+                    View
+                  </a>
+                ) : null}
+                <a href={`/api/radar-artifact/${scan.htmlPath}`} target="_blank" rel="noreferrer">HTML</a>
                 {scan.hasCsv ? (
                   <a href={`/api/radar-artifact/${scan.csvPath}`} target="_blank" rel="noreferrer">CSV</a>
                 ) : null}
               </li>
             ))}
           </ul>
+        </div>
+      ) : null}
+      {viewLoading ? <p className="runMessage">Loading results…</p> : null}
+      {viewedScan ? (
+        <div className="radarViewedScan">
+          <div className="panelHeader">
+            <span>Results — {viewedLabel}</span>
+            <strong>{viewedScan.summary?.total_retained ?? viewedScan.candidates?.length ?? 0} retained</strong>
+          </div>
+          {lastScanParams ? (
+            <p>
+              <button type="button" className="button" onClick={trackTopic}>
+                Track this topic
+              </button>
+              {trackMessage ? <span style={{ marginLeft: 10, fontSize: 12, color: "var(--muted)" }}>{trackMessage}</span> : null}
+            </p>
+          ) : null}
+          <RadarResultsTable data={viewedScan} />
         </div>
       ) : null}
     </div>

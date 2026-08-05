@@ -1,0 +1,58 @@
+name: Run Tracked Topics
+
+on:
+  schedule:
+    - cron: '45 13 * * *'   # Daily ~7:45am CT (UTC-6) - after the staggered Mon-Wed profile-radar slots (13:00-13:30)
+  workflow_dispatch:
+    inputs:
+      topic_id:
+        description: Tracked topic id to scan (leave blank to scan all tracked topics)
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+jobs:
+  run-tracked-topics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    env:
+      SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
+      SERPAPI_TRENDING_NOW_ENABLED: ${{ vars.SERPAPI_TRENDING_NOW_ENABLED || 'true' }}
+      SERPAPI_TRENDING_NOW_HOURS: ${{ vars.SERPAPI_TRENDING_NOW_HOURS || '24' }}
+      SERPAPI_TRENDING_NOW_CATEGORY_ID: ${{ vars.SERPAPI_TRENDING_NOW_CATEGORY_ID || '7' }}
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run tracked topics
+        run: |
+          if [ -n "${{ github.event.inputs.topic_id }}" ]; then
+            python run_tracked_topics.py --topic-id "${{ github.event.inputs.topic_id }}"
+          else
+            python run_tracked_topics.py
+          fi
+
+      - name: Commit generated artifacts
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f outputs/google_trend_radar data/tracked_topics.json
+          if git diff --cached --quiet; then
+            echo "No generated artifacts changed."
+          else
+            git commit -m "Update tracked topics scan"
+            git pull --rebase
+            git push
+          fi

@@ -278,6 +278,41 @@ button.button:disabled {
 .radarScanHistory li { display: flex; gap: 10px; align-items: baseline; }
 .radarScanHistory a { color: var(--ink); }
 .radarScanHistory a + a { color: var(--muted); font-size: 11px; }
+.radarResultsTable { margin-top: 14px; }
+.radarResultsControls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.radarResultsControls input[type="text"],
+.radarResultsControls select {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 8px 10px;
+  font: inherit;
+  color: var(--ink);
+  background: #fff;
+}
+.radarResultsControls input[type="text"] { flex: 1 1 200px; }
+.radarResultsTable th { cursor: pointer; user-select: none; }
+.radarResultsCount { margin-top: 8px; font-size: 12px; color: var(--muted); }
+.radarViewedScan { margin-top: 16px; border-top: 1px solid var(--line); padding-top: 14px; }
+.trackedTopicsList { display: grid; gap: 10px; margin-top: 14px; }
+.trackedTopicRow {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px 14px;
+  background: #fff;
+}
+.trackedTopicHeader { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+.trackedTopicHeader strong { display: block; }
+.trackedTopicHeader span { color: var(--muted); font-size: 12px; }
+.trackedTopicActions { display: flex; gap: 6px; flex-wrap: wrap; }
+.trackedTopicHistory { margin-top: 10px; border-top: 1px solid var(--line); padding-top: 10px; }
+.trackedTopicHistory ul { list-style: none; margin: 0 0 10px; padding: 0; display: grid; gap: 6px; font-size: 12px; }
+.trackedTopicHistory li { display: flex; gap: 10px; align-items: baseline; color: var(--muted); }
+.trackedTopicHistory li a { color: var(--ink); }
 .reportGrid {
   display: grid;
   grid-template-columns: 1fr;

@@ -1,5 +1,6 @@
 import { spawn } from "node:child_process";
 import { NextResponse } from "next/server";
+import { checkRunToken } from "@/lib/auth";
 import { explainRunError } from "@/lib/error-messages";
 import { appendLog, finishJob, pipelineJob, resetJob } from "@/lib/job-state";
 
@@ -63,16 +64,8 @@ export async function GET() {
 }
 
 export async function POST(request) {
-  const runControlToken = process.env.RUN_CONTROL_TOKEN;
-  if (runControlToken) {
-    const providedToken = request.headers.get("x-run-token");
-    if (providedToken !== runControlToken) {
-      return NextResponse.json(
-        { ok: false, message: "Invalid or missing run token." },
-        { status: 401 }
-      );
-    }
-  }
+  const tokenError = checkRunToken(request);
+  if (tokenError) return tokenError;
 
   if (pipelineJob.running) {
     return NextResponse.json(
