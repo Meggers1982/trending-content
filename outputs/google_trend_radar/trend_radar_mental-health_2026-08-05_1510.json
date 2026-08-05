@@ -1,0 +1,118 @@
+{
+  "run_date": "2026-08-05",
+  "generated_at": "2026-08-05T15:10:02",
+  "topic": "mental-health",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "mental-health",
+    "mental health",
+    "anxiety",
+    "depression",
+    "therapy",
+    "burnout",
+    "stress management",
+    "mindfulness",
+    "cognitive behavioral therapy",
+    "mental health awareness",
+    "trauma recovery",
+    "mental-health trends",
+    "mental-health products",
+    "mental-health news",
+    "mental-health for beginners",
+    "mental-health routine",
+    "mental-health benefits",
+    "mental-health ideas",
+    "mental-health reviews"
+  ],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 19,
+    "total_reviewed": 0,
+    "total_retained": 0,
+    "total_rejected": 19,
+    "breakouts": 0,
+    "emerging": 0,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [],
+  "rejected": [
+    {
+      "topic": "mental-health",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "mental health",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "anxiety",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "depression",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "therapy",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "burnout",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "stress management",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "mindfulness",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "cognitive behavioral therapy",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "mental health awareness",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "trauma recovery",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "mental-health trends",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "mental-health products",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "mental-health news",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "mental-health for beginners",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "mental-health routine",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "mental-health benefits",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "mental-health ideas",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "mental-health reviews",
+      "reason": "No related_queries data returned"
+    }
+  ]
+}
