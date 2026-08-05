@@ -3,6 +3,38 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-08-05'
+  niche: health and wellness
+  signals_reviewed: 214
+  topics_retained: 8
+  topics_rejected: 10
+  p1_count: 1
+  p2_count: 2
+  p3_count: 5
+  p4_count: 0
+  p5_count: 0
+  integrity_flags: 0
+  top_topic: H5N1 bird flu — new confirmed US human case and CDC advisory (August 2026)
+  key_themes:
+  - H5N1 bird flu — new confirmed US human case and CDC advisory (August 2026)
+  - GLP-1 receptor agonists and cardiovascular outcomes — landmark NEJM RCT results (August 2026)
+  - CDC updates RSV vaccine recommendation for adults 60+ — new ACIP guidance
+  - Ultra-processed food consumption and long-term mortality — 30-year BMJ longitudinal cohort
+  - Menopause and cardiovascular risk — first American Heart Association scientific statement
+  - Sleep deprivation and immune function — new meta-analysis (Sleep journal)
+  - PFAS 'forever chemicals' — new EPA drinking water enforcement action
+  - Childhood obesity — updated AAP clinical practice guidelines (August 2026)
+  tools_used:
+  - web_search
+  - google_news
+  - google_trends
+  - serpapi
+  tools_unavailable: []
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-08-05.html
+  notes: Site URL not configured; competitor-check fallback active. All 10 topics from 2026-08-01 run
+    confirmed as existing coverage; none qualified for update status today. Levothyroxine recall moved
+    to monitor. GLP-1 NEJM RCT scored as new story distinct from Penn Medicine personalization coverage.
+    All 8 candidates cleared health claim verification gate. H5N1 is time-critical.
 - run_date: '2026-08-01'
   niche: health and wellness
   signals_reviewed: 144
