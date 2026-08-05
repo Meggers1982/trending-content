@@ -1,0 +1,118 @@
+{
+  "run_date": "2026-08-05",
+  "generated_at": "2026-08-05T15:24:50",
+  "topic": "gut-health",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "gut-health",
+    "gut health",
+    "microbiome",
+    "probiotics",
+    "prebiotics",
+    "gut bacteria",
+    "digestive health",
+    "IBS",
+    "bloating",
+    "gut brain axis",
+    "leaky gut",
+    "gut-health trends",
+    "gut-health products",
+    "gut-health news",
+    "gut-health for beginners",
+    "gut-health routine",
+    "gut-health benefits",
+    "gut-health ideas",
+    "gut-health reviews"
+  ],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 19,
+    "total_reviewed": 0,
+    "total_retained": 0,
+    "total_rejected": 19,
+    "breakouts": 0,
+    "emerging": 0,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [],
+  "rejected": [
+    {
+      "topic": "gut-health",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "gut health",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "microbiome",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "probiotics",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "prebiotics",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "gut bacteria",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "digestive health",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "IBS",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "bloating",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "gut brain axis",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "leaky gut",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "gut-health trends",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "gut-health products",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "gut-health news",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "gut-health for beginners",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "gut-health routine",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "gut-health benefits",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "gut-health ideas",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "gut-health reviews",
+      "reason": "No related_queries data returned"
+    }
+  ]
+}
