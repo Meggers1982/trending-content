@@ -1,0 +1,298 @@
+```json
+{
+  "run_date": "2026-08-06",
+  "niche": "health and wellness",
+  "signal_summary": {
+    "total_reviewed": 144,
+    "total_retained": 8,
+    "total_rejected": 136,
+    "tools_active": ["web_search", "google_news", "google_trends", "serpapi"],
+    "tools_unavailable": [],
+    "notes": "Google Trends rising queries for 'health' and 'mental health' show +12 and +8 deltas. Many top rising queries are celebrity-adjacent (Ariana Grande, Perez Hilton mental health) and were rejected as off-category. 'Low protein diet lifespan research' and 'diet coke study' surfaced in diet rising queries — retained one. 'Gut health' rising queries were almost entirely off-topic (finance, AI tech, travel) — likely a Trends data artifact; gut health candidates sourced from News Radar instead. Salmonella egg recall (Google Trends #1 real-time) was covered 08-01 but pistachio nut butter Walmart recall is a new product/recall event. Site_url not configured — self-check skipped; competitor coverage checked via News Radar. GLP-1 receptor agonists appeared in run history on 08-01 and 08-05; CVS GLP-1 expansion flagged as existing/rejected. Two strong P1 candidates from Nature publications represent clearest opportunity gap — well-sourced, peer-reviewed, thin SERP."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Dronabinol (THC) for PTSD nightmares — randomized controlled trial",
+      "primary_entity": "Dronabinol",
+      "signal_type": "medical_study",
+      "allowed_category": "medical research and clinical trials; mental health and psychology",
+      "trend_strength_score": 78,
+      "opportunity_score": 82,
+      "discover_score": 5,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "What a new clinical trial actually found — lead with the specific RCT result (effect size, responder rate), explain what dronabinol is and how it differs from cannabis, name what it means for PTSD patients who haven't responded to prazosin or image rehearsal therapy.",
+      "why_now": "Nature published a randomized controlled trial of dronabinol (synthetic THC) for PTSD-related nightmares on August 5, 2026 — yesterday. This is the highest-tier evidence type (RCT) for a condition (PTSD nightmares) with very limited FDA-approved treatment options. Mental health Google Trends delta is +8 this week. No major health publisher has yet produced a patient-facing explainer. SERP is currently thin: search results dominated by 2020–2023 observational studies and cannabis advocacy pages, not a peer-reviewed RCT explainer from a credible source.",
+      "primary_headline": "A Randomized Trial Found THC Reduced PTSD Nightmares. Here's What That Actually Means.",
+      "next_steps": "Assign immediately. Pull primary paper from Nature (08-05-2026). Confirm exact effect size and sample size. Add named researcher quote. Publish within 24 hours of this brief.",
+      "notes": "⚠️ RCT result — confirm effect size, sample size, and blinding method from primary paper before publishing. Do not generalize beyond the specific population studied. ⚠️ Dronabinol ≠ medical marijuana — distinguish clearly to avoid conflating with cannabis policy debate. ⚠️ Not FDA-approved for PTSD — state explicitly; do not imply patients can access this through standard prescribing. ⚠️ Single RCT — note this is promising but replication is needed before clinical adoption."
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Birth order and lifetime disease risk — Nature large-scale phenome study",
+      "primary_entity": "birth order",
+      "signal_type": "medical_study",
+      "allowed_category": "medical research and clinical trials; public health and epidemiology",
+      "trend_strength_score": 72,
+      "opportunity_score": 78,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "What your birth order actually predicts about your health — frame around specific disease associations found in the study, explain the biological and epidemiological mechanisms, note what is association vs. causation, and give readers a useful so-what.",
+      "why_now": "Nature published a large-scale study on August 3, 2026 mapping birth order to disease risk across the full human phenome. This is a rare, population-scale study with broad audience appeal — it answers a question almost every reader has. Health Google Trends delta is +12. Competitor coverage visible but thin — generic summaries, no patient-facing 'what this means for you' framing.",
+      "primary_headline": "New Study Maps Birth Order to Lifetime Disease Risk. What Does It Mean If You're the Oldest — or Youngest?",
+      "next_steps": "Assign immediately. Pull Nature paper (08-03-2026). Confirm specific disease phenotypes identified. Write within 24–36 hours of this brief.",
+      "notes": "⚠️ Association study — birth order association with disease does not establish causation. State clearly in article and headline framing. ⚠️ Population-level finding — individual risk depends on genetics, lifestyle, environment. Avoid implying readers can predict their own disease from birth order alone. ⚠️ Confirm specific disease associations from the primary paper — do not extrapolate beyond what the study measured."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Dementia risk after age 90 — who is most at risk and why",
+      "primary_entity": "dementia",
+      "signal_type": "medical_study",
+      "allowed_category": "medical research and clinical trials; aging and longevity; chronic disease management",
+      "trend_strength_score": 68,
+      "opportunity_score": 76,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Dementia risk after 90 is different — here's what the research now says changes — focus on what makes risk factors distinct in the oldest-old versus the 65–80 cohort most dementia research covers, and what this means for care decisions.",
+      "why_now": "Medical Xpress reported August 5, 2026 on a new study clarifying dementia risk factors specifically in adults over 90 — a population that was historically underrepresented in dementia research. This fills a meaningful clinical gap as life expectancy rises and 'oldest-old' is the fastest-growing age demographic. SERP for 'dementia risk after 90' is thin — dominated by general dementia content not targeted to this age group.",
+      "primary_headline": "After Age 90, Dementia Risk Looks Different. A New Study Explains Who's Most Vulnerable.",
+      "next_steps": "Locate primary paper through Medical Xpress article. Confirm journal and DOI. Publish within 2–3 days.",
+      "notes": "⚠️ Confidence Medium — primary study DOI not directly confirmed in signal window. Verify institution, journal, and full dataset before publishing. ⚠️ Oldest-old population findings may not generalize to 65–80 dementia research — state distinction clearly."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Heat illness prevention — WHO advisory, peak summer heat, what actually works",
+      "primary_entity": "heat illness",
+      "signal_type": "breaking_news",
+      "allowed_category": "public health and epidemiology; environmental health",
+      "trend_strength_score": 74,
+      "opportunity_score": 71,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 4,
+      "recommended_angle": "Evidence-based heat illness prevention — lead with WHO advisory context, explain the actual physiology of heat stroke vs. heat exhaustion (most readers conflate them), give actionable prevention steps ranked by evidence strength, flag high-risk populations (elderly, infants, outdoor workers, athletes, those on certain medications).",
+      "why_now": "WHO published a heat and health advisory July 31, 2026. Health Google Trends index is 95/100 with a +12 weekly delta — the highest of all tracked keywords. August 6 is peak summer in the US; heat-related illness is the leading weather-related killer. Existing SERP content is mostly listicles from 2022–2024 without WHO 2026 advisory integration.",
+      "primary_headline": "Heat Stroke vs. Heat Exhaustion: What the WHO Wants You to Know This Summer",
+      "next_steps": "Assign immediately — seasonal urgency peak. Pull WHO July 31 advisory. Publish within 24–48 hours.",
+      "notes": "⚠️ 'Heat stroke is an emergency' must be stated explicitly — do not soften for engagement. ⚠️ Medication interactions section requires pharmacist or physician review — confirm drug list against clinical sources, not consumer media."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Gen Z and millennials using AI as their first healthcare consultation — Aflac survey findings",
+      "primary_entity": "AI in healthcare (patient-facing)",
+      "signal_type": "data_release",
+      "allowed_category": "mental health and psychology; public health and epidemiology",
+      "trend_strength_score": 65,
+      "opportunity_score": 68,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Why young people are consulting AI before doctors — and what that means for their health — explain the survey findings, give context on when AI health guidance is appropriate vs. risky, include expert perspective on what this behavioral shift means for public health.",
+      "why_now": "Aflac's August 4, 2026 survey found 76% of Gen Z and 63% of millennials turn to AI before seeking professional medical care. Mental health Google Trends delta is +8; health delta is +12. AI health-seeking behavior is a rapidly emerging pattern with real public health implications (misinformation risk, delayed care, appropriate triage). SERP for this specific angle is open.",
+      "primary_headline": "76% of Gen Z Goes to AI Before a Doctor. Is That Dangerous — or Actually Useful?",
+      "next_steps": "Assign within 2 days. Verify Aflac survey methodology. Add physician or policy expert quote.",
+      "notes": "⚠️ Survey conducted by Aflac (insurance company with business interest in healthcare access) — note methodology and potential bias. Not peer-reviewed research. ⚠️ Correlation ≠ causation — surveyed behavior may not reflect actual health outcomes. Frame as behavioral trend, not health risk study."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Pistachio nut butter Walmart recall — Salmonella contamination",
+      "primary_entity": "pistachio nut butter recall",
+      "signal_type": "breaking_news",
+      "allowed_category": "FDA and CDC regulatory updates; nutrition and diet science",
+      "trend_strength_score": 70,
+      "opportunity_score": 65,
+      "discover_score": 3,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "What to do if you bought pistachio nut butter at Walmart — focus on actionable consumer steps: product identification, whether to consume or discard, Salmonella symptoms and when to seek care, FDA reporting link.",
+      "why_now": "Pistachio nut butter sold at Walmart recalled for Salmonella, reported August 3, 2026. Separate from the egg recall covered August 1. Salmonella Google Trends real-time trending. Readers who purchased this specific product need actionable information (product names, lot codes, what to do). Short shelf life for recall content.",
+      "primary_headline": "Pistachio Nut Butter Sold at Walmart Recalled Over Salmonella Risk — What to Do Now",
+      "next_steps": "Verify FDA recall notice immediately. Publish within 24 hours once lot codes confirmed. Update as FDA notice expands.",
+      "notes": "⚠️ Breaking recall exception — FDA.gov official recall notice must be verified before publishing. Do not publish specific product/lot code claims without FDA confirmation. ⚠️ Confidence Medium until FDA notice directly retrieved."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Legumes and heart health — what the evidence actually says",
+      "primary_entity": "legumes",
+      "signal_type": "evergreen",
+      "allowed_category": "nutrition and diet science; chronic disease management",
+      "trend_strength_score": 58,
+      "opportunity_score": 70,
+      "discover_score": 3,
+      "urgency": "evergreen",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Harvard Health published a legumes + heart health piece August 3, 2026 — use this as the editorial hook but go deeper: summarize the current evidence base (RCTs, meta-analyses, dietary pattern studies), address common reader objections (digestive issues, phytates, protein quality), and give practical serving guidance.",
+      "why_now": "Harvard Health Publishing article August 3, 2026 provides fresh hook for evergreen topic. SERP is dominated by general listicles; opportunity to own the evidence-based explainer angle.",
+      "primary_headline": "Are Legumes Actually Good for Your Heart? Here's What the Evidence Shows",
+      "next_steps": "Assign with normal scheduling. Incorporate Harvard Health source. Work with RDN or cardiologist for expert review.",
+      "notes": "⚠️ Distinguish between association studies (dietary pattern) and RCT evidence for LDL reduction — grade evidence level explicitly."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Ibogaine for neurological recovery — new Barrow Institute clinical study",
+      "primary_entity": "ibogaine",
+      "signal_type": "clinical_trial",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 55,
+      "opportunity_score": 67,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Ibogaine has attracted significant research interest after the 2024 Stanford study showing potential for PTSD and TBI in veterans. Barrow's new neurological recovery study is a logical extension. Opportunity to give readers a grounded explainer: what ibogaine is, where the evidence currently stands, why neurological recovery is a plausible target, and what the risks are.",
+      "why_now": "Barrow Neurological Institute launches clinical study — August 6, 2026. News-Medical coverage signals institutional announcement. SERP for ibogaine neurological recovery is very thin; prior psilocybin/PTSD coverage creates a good cluster opportunity.",
+      "primary_headline": "Barrow Institute Is Testing Ibogaine for Brain Recovery. What Do We Know So Far?",
+      "next_steps": "Assign with normal scheduling. Verify institutional announcement and early-stage study status before publishing.",
+      "notes": "⚠️ Early-stage clinical study — not peer-reviewed, not proven treatment. State clearly. ⚠️ Ibogaine = Schedule I + cardiac safety risk (QT prolongation). Both must be covered. Do not frame as accessible treatment option."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "H5N1 bird flu — US human case",
+      "reason": "existing"
+    },
+    {
+      "topic": "GLP-1 receptor agonists cardiovascular outcomes — NEJM RCT",
+      "reason": "existing"
+    },
+    {
+      "topic": "RSV vaccine recommendation adults 60+ — CDC ACIP",
+      "reason": "existing"
+    },
+    {
+      "topic": "Ultra-processed food + mortality — BMJ 30-year cohort",
+      "reason": "existing"
+    },
+    {
+      "topic": "Menopause and cardiovascular risk — AHA statement",
+      "reason": "existing"
+    },
+    {
+      "topic": "Sleep deprivation and immune function — meta-analysis",
+      "reason": "existing"
+    },
+    {
+      "topic": "PFAS drinking water enforcement — EPA",
+      "reason": "existing"
+    },
+    {
+      "topic": "Childhood obesity — updated AAP guidelines",
+      "reason": "existing"
+    },
+    {
+      "topic": "Levothyroxine recall",
+      "reason": "existing"
+    },
+    {
+      "topic": "E. coli outbreak frozen blueberries",
+      "reason": "existing"
+    },
+    {
+      "topic": "Egg carton Salmonella recall (Class I)",
+      "reason": "existing"
+    },
+    {
+      "topic": "Psilocybin-assisted therapy veterans — Nature Comm. Med.",
+      "reason": "existing"
+    },
+    {
+      "topic": "Rohto eye drop recall",
+      "reason": "existing"
+    },
+    {
+      "topic": "SAMHSA 2025 NSDUH data release",
+      "reason": "existing"
+    },
+    {
+      "topic": "GLP-1 tailoring to metabolic profiles — Penn Medicine",
+      "reason": "existing"
+    },
+    {
+      "topic": "Intermittent fasting / restricted eating + brain health",
+      "reason": "existing"
+    },
+    {
+      "topic": "DMD cell therapy Phase 3 trial",
+      "reason": "existing"
+    },
+    {
+      "topic": "Wellness influencers / nootropics 'natural Adderall'",
+      "reason": "existing"
+    },
+    {
+      "topic": "CVS Health GLP-1 direct-to-consumer expansion",
+      "reason": "existing"
+    },
+    {
+      "topic": "Low-protein diet lifespan — rising query",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "Coffee recall botulism risk (Class II)",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "Celebrity health queries (Ariana Grande, Perez Hilton)",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Medicaid California rollback",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Local wellness destinations / wellness centers",
+      "reason": "off-category"
+    },
+    {
+      "topic": "National Wellness Month generic coverage",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "AI in healthcare infrastructure / clinical trial simulations",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Ascend Wellness cannabis workers strike",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Medical research monkey protection policy",
+      "reason": "off-category"
+    },
+    {
+      "topic": "AI training psychiatrists — WVU study",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "ALS clinical trial Dallas",
+      "reason": "weak-signal"
+    }
+  ]
+}
+```

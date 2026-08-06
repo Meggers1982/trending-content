@@ -3,6 +3,44 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-08-06'
+  niche: health and wellness
+  signals_reviewed: 144
+  topics_retained: 8
+  topics_rejected: 30
+  p1_count: 2
+  p2_count: 4
+  p3_count: 2
+  p4_count: 0
+  p5_count: 0
+  integrity_flags: 1
+  top_topic: Dronabinol (THC) for PTSD nightmares — randomized controlled trial
+  key_themes:
+  - Dronabinol (THC) for PTSD nightmares — randomized controlled trial
+  - Birth order and lifetime disease risk — Nature large-scale phenome study
+  - Dementia risk after age 90 — who is most at risk and why
+  - Heat illness prevention — WHO advisory, peak summer heat, what actually works
+  - Gen Z and millennials using AI as their first healthcare consultation — Aflac survey findings
+  - Pistachio nut butter Walmart recall — Salmonella contamination
+  - Legumes and heart health — what the evidence actually says
+  - Ibogaine for neurological recovery — new Barrow Institute clinical study
+  tools_used:
+  - web_search
+  - google_news
+  - google_trends
+  - serpapi
+  tools_unavailable: []
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-08-06.html
+  notes: 'Google Trends rising queries for ''health'' and ''mental health'' show +12 and +8 deltas. Many
+    top rising queries are celebrity-adjacent (Ariana Grande, Perez Hilton mental health) and were rejected
+    as off-category. ''Low protein diet lifespan research'' and ''diet coke study'' surfaced in diet rising
+    queries — retained one. ''Gut health'' rising queries were almost entirely off-topic (finance, AI
+    tech, travel) — likely a Trends data artifact; gut health candidates sourced from News Radar instead.
+    Salmonella egg recall (Google Trends #1 real-time) was covered 08-01 but pistachio nut butter Walmart
+    recall is a new product/recall event. Site_url not configured — self-check skipped; competitor coverage
+    checked via News Radar. GLP-1 receptor agonists appeared in run history on 08-01 and 08-05; CVS GLP-1
+    expansion flagged as existing/rejected. Two strong P1 candidates from Nature publications represent
+    clearest opportunity gap — well-sourced, peer-reviewed, thin SERP.'
 - run_date: '2026-08-05'
   niche: health and wellness
   signals_reviewed: 214
