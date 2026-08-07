@@ -1,0 +1,262 @@
+```json
+{
+  "run_date": "2026-08-07",
+  "niche": "health and wellness",
+  "signal_summary": {
+    "total_reviewed": 164,
+    "total_retained": 9,
+    "total_rejected": 16,
+    "tools_active": ["web_search", "google_news", "google_trends", "serpapi"],
+    "tools_unavailable": [],
+    "notes": "SerpAPI pre-fetch injected Google News (144 signals) and Google Trends rising queries (~20). Site URL not configured; competitor fallback active. Google Trends gut health queries were data artifacts (unreal engine, digital nomad); excluded. Celebrity health searches excluded per brand safety. P&G/Thorne acquisition failed borderline criteria (pure pharma business, insufficient consumer health framing). Recurring themes (birth order, GLP-1 cardiovascular, dronabinol/PTSD) all set to existing; no 3+ consecutive run flags."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "FDA recalls blood thinners nationwide",
+      "primary_entity": "FDA blood thinner recall",
+      "signal_type": "recall",
+      "allowed_category": "FDA regulatory updates",
+      "trend_strength_score": 88,
+      "opportunity_score": 82,
+      "discover_score": 5,
+      "urgency": "now",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Practical patient action guide — what's recalled, what to do if you take blood thinners, what NOT to do (stop suddenly), when to call your doctor. Frame around reducing panic while ensuring action.",
+      "why_now": "EatingWell (08/06) and Prevention (08/01) reported nationwide FDA prescription blood thinner recall. ABC News (08/06) confirmed separate 3M+ eye drop recall same day, suggesting broader FDA recall wave. Blood thinner patients (warfarin ~3M US users) face immediate stroke/clotting risk if stopping without guidance.",
+      "primary_headline": "FDA Recalls Blood Thinners Nationwide: What Patients on Warfarin Need to Know Right Now",
+      "next_steps": "Retrieve FDA.gov recall database entry and add direct link before publishing. Specify which drugs/lots recalled. Emphasize patients must NOT stop medications without physician guidance.",
+      "notes": "Breaking-recall exception applied. Primary FDA notice URL not retrieved at scoring time — MUST verify FDA.gov recall database entry before publishing and add direct link. Blood thinner patients stopping abruptly face stroke risk — this must be stated prominently and early."
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Cyclospora outbreak — CDC links to iceberg lettuce",
+      "primary_entity": "Cyclospora outbreak / iceberg lettuce",
+      "signal_type": "recall",
+      "allowed_category": "public health and epidemiology",
+      "trend_strength_score": 82,
+      "opportunity_score": 80,
+      "discover_score": 5,
+      "urgency": "now",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 4,
+      "recommended_angle": "Public health safety guide — what Cyclospora is, what's affected, symptoms to know, when to seek treatment, what to do with iceberg lettuce currently in your refrigerator.",
+      "why_now": "CDC published active Cyclospora outbreak investigation page 08/05. Food & Wine reported 10 active FDA foodborne outbreak investigations simultaneously. Columbus Dispatch (08/06) confirmed FDA actively investigating. Cyclospora is not widely known to consumers, creating high educational and safety value. Iceberg lettuce is common grocery staple with broad audience reach.",
+      "primary_headline": "CDC Confirms Cyclospora Outbreak Linked to Iceberg Lettuce: What to Do Now",
+      "next_steps": "Retrieve CDC Cyclospora outbreak investigation URL and add direct link. Specify which iceberg lettuce products/brands/lots implicated per CDC. Clarify incubation period (~1 week) and treatment requirements (prescription antibiotic trimethoprim-sulfamethoxazole).",
+      "notes": "Breaking-recall exception applied. CDC outbreak page confirmed but direct URL unverified at scoring time. Cyclospora requires prescription antibiotic treatment — do not imply self-resolving. Distinguish from Salmonella/E. coli which readers know better."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Eye drops recall escalates — 3M+ bottles at CVS, Kroger",
+      "primary_entity": "Eye drops recall 2026",
+      "signal_type": "recall",
+      "allowed_category": "FDA regulatory updates",
+      "trend_strength_score": 79,
+      "opportunity_score": 75,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "update",
+      "source_count": 4,
+      "recommended_angle": "New recall expands beyond Rohto — different brands, same sterility concern. Practical guidance: what to do with affected products, which brands NOT recalled, how to check your cabinet.",
+      "why_now": "ABC News (08/06) confirmed 3M+ bottles across new brands at CVS, Kroger, other retailers — distinct from Rohto recall covered 08/01. Sterility concern appears systemic across multiple manufacturers. Second wave of eye drop recalls in one week warrants update article reframing full landscape.",
+      "primary_headline": "Eye Drop Recall Expands to 3 Million+ Bottles at CVS and Kroger: Check Your Cabinet",
+      "next_steps": "Retrieve FDA.gov recall database entry specific to THIS recall. Distinguish clearly which brands/lots affected in THIS recall vs. Rohto recall from 08/01. Verify sterility concern language from FDA (not confirmed contamination unless stated).",
+      "notes": "Breaking-recall exception applied. Primary FDA notice URL unverified at scoring time. Must distinguish clearly between THIS recall and prior Rohto recall — do not conflate without attribution. 'Sterility concern' ≠ confirmed contamination."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Middle age habits and dementia-free years — NYU Langone",
+      "primary_entity": "Midlife dementia prevention behaviors",
+      "signal_type": "medical_study",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 74,
+      "opportunity_score": 79,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Avoid these 3 modifiable behaviors in midlife to gain 13+ dementia-free years. Distinct from 08/06 dementia risk piece (that was age 90+; this is modifiable midlife behaviors).",
+      "why_now": "NYU Langone Health published findings 08/05 linking avoidance of 3 specific midlife behaviors to 13+ additional dementia-free years — actionable, specific, directly relevant to health-conscious adults 40s–60s (core audience). Dementia prevention is highest-engagement health category.",
+      "primary_headline": "Avoiding 3 Things in Middle Age May Give You 13 More Years Without Dementia",
+      "next_steps": "Retrieve full study citation, journal name, and DOI from NYU Langone press release before publishing. Confirm what the specific 3 behaviors are from primary source — do not speculate. Clearly state this is observational/epidemiological research (correlation ≠ causation).",
+      "notes": "Study is likely observational — must not be presented as causal. '13 more years' framing is population-level statistical association, not individual guarantee. Qualify clearly in article. Retrieve full study before writing to confirm methodology and specific findings."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Dormant cancer cells disarm immunotherapy — UT Austin",
+      "primary_entity": "Dormant cancer cells / immunotherapy resistance",
+      "signal_type": "medical_study",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 72,
+      "opportunity_score": 77,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Why some cancers stop responding to immunotherapy — and what researchers found. Likely preclinical/early-stage; explain mechanism without implying clinical readiness.",
+      "why_now": "UT Austin published findings 08/05 showing dormant cancer cells actively block immune cells, potentially explaining immunotherapy failure — one of most pressing unsolved problems in oncology. Immunotherapy major growth category in cancer treatment; gap between 'works brilliantly' and 'doesn't work at all' is high-engagement audience question.",
+      "primary_headline": "Dormant Cancer Cells May Be Blocking Your Immunotherapy From Working",
+      "next_steps": "Retrieve full study citation and DOI. Determine whether findings are from cell lines, animal models, or human tissue — specify in article. Include clear statement for immunotherapy patients: do not stop/change treatment based on one study.",
+      "notes": "Likely preclinical or early-stage research — must specify study level (cell lines, animal models, human tissue). Do NOT imply ready for clinical application. Do NOT suggest this explains all immunotherapy failure. Include prominent statement for current patients."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Diet soda and cognitive decline — rising search + research base",
+      "primary_entity": "Diet soda / artificial sweeteners / cognitive decline",
+      "signal_type": "rising_search_interest",
+      "allowed_category": "nutrition and diet science",
+      "trend_strength_score": 70,
+      "opportunity_score": 72,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "What the actual research says about artificial sweeteners and brain health. Skeptical framing — separating genuine evidence from social media hype.",
+      "why_now": "'diet soda cognitive decline' is rising Google Trends query this week. Multiple prior studies exist on artificial sweeteners and cognition; rising query likely reflects new study or viral social media framing of existing research. High-value evergreen angle with current search demand spike.",
+      "primary_headline": "Does Diet Soda Really Cause Cognitive Decline? Here's What the Research Says",
+      "next_steps": "Locate the specific study or social trigger driving current search spike before publishing. Anchor piece to that trigger. Retrieve key prior studies (Boston University observational study). Note aspartame IARC Group 2B classification separately from cognition question.",
+      "notes": "Most existing research is observational — correlation ≠ causation. Must be stated prominently. 'Diet soda causes cognitive decline' is NOT supported by consensus evidence. Identify specific study/trigger before writing. Avoid conflating aspartame IARC classification with cognition claims."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Low-protein diet and lifespan — rising longevity research signal",
+      "primary_entity": "Low-protein diet / dietary protein restriction / longevity",
+      "signal_type": "rising_search_interest",
+      "allowed_category": "aging and longevity",
+      "trend_strength_score": 65,
+      "opportunity_score": 70,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "The counterintuitive longevity finding on protein restriction. Genuine editorial tension: protein restriction may extend lifespan (animal models) BUT higher protein needed to preserve muscle in aging (mainstream guidance). Both sides matter.",
+      "why_now": "'low protein diet lifespan research' is rising Google Trends query (diet category). Topic intersects genuine scientific debate: protein restriction/mTOR longevity research (Valter Longo, Morgan Levine) vs. high-protein guidance for muscle preservation in aging (current mainstream). Contradiction is genuine tension readers want resolved.",
+      "primary_headline": "Could Eating Less Protein Help You Live Longer? The Science Is More Complicated Than You Think",
+      "next_steps": "Locate specific new study driving current search query before publishing. Retrieve key prior studies (Cell Metabolism — Levine et al.). Include protein guidance for older adults (sarcopenia prevention) as counterpoint. Do NOT frame as 'eat less protein.'",
+      "notes": "Most protein restriction lifespan data from animal models — human applicability uncertain. Direct tension with high-protein guidance for older adults — both sides must be represented. Do not frame conclusion as 'eat less protein' — evidence genuinely context-dependent and complex."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Annual wellness visits catching cognitive decline earlier",
+      "primary_entity": "Annual wellness visit / Medicare / cognitive screening",
+      "signal_type": "rising_search_interest",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 62,
+      "opportunity_score": 68,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Underused Medicare benefit that may catch dementia earlier. Practical action-oriented: how to book, what to expect, what to ask doctor to include in cognitive screening.",
+      "why_now": "Medscape published 08/07 that annual wellness visits 'may help flag cognitive issues' — timely clinical guidance with strong audience relevance. Pairs naturally with this week's dementia prevention theme (Brief 4). Free Medicare benefit with chronically low utilization (~40% of eligible use it) makes this genuinely actionable, underreported story.",
+      "primary_headline": "Your Annual Wellness Visit Can Catch Cognitive Decline — Most People Skip It",
+      "next_steps": "Retrieve Medscape article and underlying study/guideline cited. Verify CMS coverage details and eligibility. Confirm which cognitive assessment tools are typically used (Mini-Cog, MMSE, etc.) — note these vary by provider.",
+      "notes": "Annual wellness visits screen and refer — they do NOT diagnose dementia. Do not overstate. Cognitive screening tools vary by provider; not all conduct same assessment. Retrieve primary study/guideline before writing."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Peach recall — FDA update on 10M lbs",
+      "primary_entity": "Peach recall / FDA update 2026",
+      "signal_type": "recall",
+      "allowed_category": "FDA regulatory updates",
+      "trend_strength_score": 58,
+      "opportunity_score": 62,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Updated FDA guidance on the peach recall — what's changed. Consumers who saw earlier recall coverage may not know status has changed; new FDA guidance is distinct editorial event.",
+      "why_now": "The Healthy @Reader's Digest (08/04) reported important FDA update to 10M lb. peach recall. New FDA guidance on existing recall is distinct editorial event with practical consumer relevance.",
+      "primary_headline": "FDA Updates 10-Million-Pound Peach Recall: New Details on Affected Brands",
+      "next_steps": "Retrieve FDA.gov recall database entry specific to peach recall. Clarify from primary source what the 'update' specifically entails (escalation? expansion? new lots? clearance?). Specify brands, origin, distribution scope — do not blanket-warn against all peaches.",
+      "notes": "Single secondary source with FDA attribution — MUST verify FDA.gov recall database entry directly. Clarify nature of 'update' before writing. Do not imply all peaches recalled; specify affected brands and distribution scope."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "Birth order and disease risk (Nature 08/03)",
+      "reason": "content_status: existing — covered 08/06, no new development"
+    },
+    {
+      "topic": "Dronabinol for PTSD nightmares (Nature 08/05)",
+      "reason": "content_status: existing — covered 08/06"
+    },
+    {
+      "topic": "Ibogaine neurological recovery (News-Medical 08/06)",
+      "reason": "content_status: existing — covered 08/06"
+    },
+    {
+      "topic": "AI and mental health / young people (Harvard Gazette 08/03)",
+      "reason": "content_status: existing — substantially same as 08/06 Gen Z/AI healthcare consultation story; set to monitored"
+    },
+    {
+      "topic": "P&G acquires Thorne supplements for $3.8B",
+      "reason": "off-category: pure pharma/business story. Fails category filter (supplement marketing / pure pharma business) unless framed around consumer access; insufficient consumer health evidence angle in current sourcing"
+    },
+    {
+      "topic": "Medical Aid in Dying (NY State policy)",
+      "reason": "off-category: political/regulatory policy without new health data"
+    },
+    {
+      "topic": "HHS/HRSA health centers record care announcement",
+      "reason": "off-category: institutional announcement, not consumer health editorial"
+    },
+    {
+      "topic": "Trump admin foreign aid / maternal health (KFF)",
+      "reason": "off-category: pure political healthcare policy"
+    },
+    {
+      "topic": "California Medi-Cal rollback (CalMatters)",
+      "reason": "off-category: regional policy, no national consumer health angle"
+    },
+    {
+      "topic": "Senior wellness travel (Costa Rica) — Travel + Leisure",
+      "reason": "off-category: travel/lifestyle, not health evidence base"
+    },
+    {
+      "topic": "National Wellness Month (multiple local sources)",
+      "reason": "weak-signal: seasonal/local content across 6+ local government sources; no substantive health editorial angle strong enough for national audience"
+    },
+    {
+      "topic": "CVS weight management DTC expansion",
+      "reason": "off-category: corporate product news, not editorial health content"
+    },
+    {
+      "topic": "Crumbl dirty soda nutrition (Trends rising query)",
+      "reason": "off-category: celebrity food brand, not health/nutrition science"
+    },
+    {
+      "topic": "Google Trends gut health rising queries",
+      "reason": "data-artifact: rising queries clearly off-topic (digital nomad, unreal engine); not actionable health signals"
+    },
+    {
+      "topic": "Celebrity health searches (Ariana Grande, Perez Hilton)",
+      "reason": "brand-safety: celebrity gossip without evidence base"
+    },
+    {
+      "topic": "AI psychiatry training (WVU study)",
+      "reason": "weak-signal: niche academic/med-ed topic; insufficient audience relevance score; deferred to 2026-08-10"
+    }
+  ]
+}
+```

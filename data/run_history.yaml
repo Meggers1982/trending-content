@@ -3,6 +3,41 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-08-07'
+  niche: health and wellness
+  signals_reviewed: 164
+  topics_retained: 9
+  topics_rejected: 16
+  p1_count: 2
+  p2_count: 3
+  p3_count: 4
+  p4_count: 0
+  p5_count: 0
+  integrity_flags: 2
+  top_topic: FDA recalls blood thinners nationwide
+  key_themes:
+  - FDA recalls blood thinners nationwide
+  - Cyclospora outbreak — CDC links to iceberg lettuce
+  - Eye drops recall escalates — 3M+ bottles at CVS, Kroger
+  - Middle age habits and dementia-free years — NYU Langone
+  - Dormant cancer cells disarm immunotherapy — UT Austin
+  - Diet soda and cognitive decline — rising search + research base
+  - Low-protein diet and lifespan — rising longevity research signal
+  - Annual wellness visits catching cognitive decline earlier
+  - Peach recall — FDA update on 10M lbs
+  tools_used:
+  - web_search
+  - google_news
+  - google_trends
+  - serpapi
+  tools_unavailable: []
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-08-07.html
+  notes: SerpAPI pre-fetch injected Google News (144 signals) and Google Trends rising queries (~20).
+    Site URL not configured; competitor fallback active. Google Trends gut health queries were data artifacts
+    (unreal engine, digital nomad); excluded. Celebrity health searches excluded per brand safety. P&G/Thorne
+    acquisition failed borderline criteria (pure pharma business, insufficient consumer health framing).
+    Recurring themes (birth order, GLP-1 cardiovascular, dronabinol/PTSD) all set to existing; no 3+ consecutive
+    run flags.
 - run_date: '2026-08-06'
   niche: health and wellness
   signals_reviewed: 144
