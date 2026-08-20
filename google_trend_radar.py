@@ -991,6 +991,81 @@ def candidate_to_dict(candidate: Candidate, rank: int) -> dict:
     }
 
 
+CLUSTER_STOPWORDS = {"of", "the", "a", "an", "in", "on", "at", "to", "for", "and", "or", "with", "is", "are", "us", "new"}
+
+
+def cluster_significant_tokens_exclusions() -> set[str]:
+    """Words too generic to prove two candidates are the same story: the
+    curated seed/category vocabulary itself (every candidate in a niche
+    already shares this by construction - it says nothing about duplication),
+    intent modifiers, the existing false-positive-anchor blocklist, and a
+    small connector-word stoplist."""
+    vocab_words = set()
+    for terms in SEED_PROFILES.values():
+        for term in terms:
+            vocab_words.update(normalize(term).split())
+    vocab_words |= {normalize(modifier) for modifier in INTENT_MODIFIERS}
+    return GENERIC_ANCHOR_WORDS | vocab_words | CLUSTER_STOPWORDS
+
+
+def cluster_similar_candidates(candidates: list[Candidate]) -> list[list[Candidate]]:
+    """Group candidates that are different phrasings of the same underlying
+    story (e.g. "coraline beauty creations" / "coraline x beauty creations" /
+    "coraline cvs makeup") so the table shows one row per distinct trend
+    instead of flooding it with rewordings.
+
+    Two candidates link if they share at least one word outside the seed/
+    category vocabulary (retinol, makeup, hair, nail, etc.) and generic
+    connector words - what's left after stripping that vocabulary is the
+    actual distinguishing content (a brand, character, or campaign name),
+    a much stronger duplicate signal than raw word overlap in a domain
+    where every candidate already shares the category vocabulary by
+    construction. Confirmed against a real run: correctly grouped 4 Coraline
+    x Beauty Creations rewordings and 3 Ulta "21 Days of Beauty" rewordings
+    into two clusters, while leaving 7 genuinely distinct candidates
+    (including 3 that separately share the word "nail") as singletons.
+
+    Returns clusters sorted by their top-scoring member's radar_score
+    descending; each cluster's members are sorted the same way.
+    """
+    exclude = cluster_significant_tokens_exclusions()
+
+    def significant_tokens(topic: str) -> set[str]:
+        return {token for token in normalize(topic).split() if token not in exclude and len(token) >= 2}
+
+    tokens_by_index = [significant_tokens(c.query) for c in candidates]
+
+    parent = list(range(len(candidates)))
+
+    def find(i: int) -> int:
+        while parent[i] != i:
+            parent[i] = parent[parent[i]]
+            i = parent[i]
+        return i
+
+    def union(i: int, j: int) -> None:
+        root_i, root_j = find(i), find(j)
+        if root_i != root_j:
+            parent[root_j] = root_i
+
+    for i in range(len(candidates)):
+        if not tokens_by_index[i]:
+            continue
+        for j in range(i + 1, len(candidates)):
+            if tokens_by_index[i] & tokens_by_index[j]:
+                union(i, j)
+
+    groups: dict[int, list[Candidate]] = {}
+    for i, candidate in enumerate(candidates):
+        groups.setdefault(find(i), []).append(candidate)
+
+    clusters = list(groups.values())
+    for group in clusters:
+        group.sort(key=lambda c: c.radar_score, reverse=True)
+    clusters.sort(key=lambda group: group[0].radar_score, reverse=True)
+    return clusters
+
+
 def build_data(
     topic: str,
     geo: str,
@@ -1069,8 +1144,14 @@ def build_data(
         rejected.append({"topic": candidate.query, "reason": f"Weak radar score ({candidate.radar_score})"})
     retained.sort(key=lambda c: c.radar_score, reverse=True)
 
+    # Collapse rewordings of the same story into one row (see
+    # cluster_similar_candidates docstring) - stats below count distinct
+    # stories via the cluster representatives, not raw candidate rows.
+    clusters = cluster_similar_candidates(retained)
+    representatives = [group[0] for group in clusters]
+
     stages = {}
-    for candidate in retained:
+    for candidate in representatives:
         stages[candidate.trend_stage] = stages.get(candidate.trend_stage, 0) + 1
 
     return {
@@ -1096,14 +1177,28 @@ def build_data(
         "summary": {
             "seed_count": len(seeds),
             "total_reviewed": len(candidates),
-            "total_retained": len(retained),
+            "total_retained": len(representatives),
             "total_rejected": len(rejected),
             "breakouts": stages.get("breakout", 0),
             "emerging": stages.get("emerging", 0),
             "rising": stages.get("rising", 0),
             "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them.",
         },
-        "candidates": [candidate_to_dict(candidate, index + 1) for index, candidate in enumerate(retained)],
+        "candidates": [
+            {
+                **candidate_to_dict(group[0], rank + 1),
+                **({"similar": [
+                    {
+                        "topic": member.query,
+                        "trend_stage": member.trend_stage,
+                        "radar_score": member.radar_score,
+                        "why_now": member.why_now,
+                    }
+                    for member in group[1:]
+                ]} if len(group) > 1 else {}),
+            }
+            for rank, group in enumerate(clusters)
+        ],
         "rejected": rejected,
     }
 

@@ -279,6 +279,27 @@ button.button:disabled {
   letter-spacing: .02em;
   white-space: nowrap;
 }
+.similarToggle { display: block; margin-top: 6px; }
+.similarToggle summary {
+  cursor: pointer;
+  list-style: none;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--blue);
+  text-transform: uppercase;
+  letter-spacing: .02em;
+}
+.similarToggle summary::-webkit-details-marker { display: none; }
+.similarToggle summary::before { content: "▸ "; }
+.similarToggle[open] summary::before { content: "▾ "; }
+.similarList { margin: 6px 0 0; padding: 0; list-style: none; }
+.similarList li {
+  padding: 4px 0;
+  border-top: 1px dashed var(--line);
+  font-size: 12px;
+  color: #444;
+}
 .formattedReport > summary {
   cursor: pointer;
   list-style: none;

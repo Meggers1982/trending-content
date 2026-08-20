@@ -120,6 +120,8 @@ max_candidates_returned: 25
 
 If `run_pipeline.py` injects a `Google News Radar — Recent Health Topics` block, use it as the broad discovery layer for news-led health topics before narrowing to retained candidates. Cluster the headlines by topic and source pattern, then explicitly account for the main Google News clusters in `signal_summary.notes`: retained, monitored, rejected, or not actionable. Do not drop a Google News-only health topic just because it lacks Google Trends velocity; retain or monitor it when credible news coverage shows timely editorial demand, and disclose when search velocity is unavailable or inferred.
 
+Each article in that block carries a `Link:` line. When listing headlines in the GOOGLE NEWS RADAR COVERAGE SUMMARY (or any cluster/source table derived from it), cite each headline with a markdown link using that URL — e.g. `[NYT](https://...)` instead of a bare source name in parentheses — so every cited source is clickable. If an article's `Link:` is `not available`, name the source in plain text rather than fabricating a URL.
+
 **Google Trends call sequence:**
 
 If `run_pipeline.py` injects a `LIVE SIGNAL DATA — SerpAPI Pre-Fetch` section with `Google Trends — 7-Day Interest`, treat Google Trends as available and use that block as the primary search_velocity input. Do not mark Google Trends unavailable just because Claude Code tool actions are not directly callable.

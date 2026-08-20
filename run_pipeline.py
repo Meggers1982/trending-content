@@ -475,7 +475,8 @@ def build_serp_context() -> str:
             query_label = a.get("query", "").replace(" when:7d", "")
             article_lines.append(
                 f"  - ({query_label}) [{a['source']}] {a['date']} — {a['title']}\n"
-                f"    {a['snippet']}"
+                f"    {a['snippet']}\n"
+                f"    Link: {a.get('link') or 'not available'}"
             )
         sections.append(
             f"## Google News Radar — Recent Health Topics "

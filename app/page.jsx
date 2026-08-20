@@ -6,13 +6,27 @@ import RadarScan from "./components/RadarScan";
 import TrackedTopics from "./components/TrackedTopics";
 
 function inlineParts(text) {
-  const parts = `${text || ""}`.split(/(\*\*[^*]+\*\*|`[^`]+`)/g).filter(Boolean);
+  const parts = `${text || ""}`.split(/(\*\*[^*]+\*\*|`[^`]+`|\[[^\]]+\]\([^)]+\))/g).filter(Boolean);
   return parts.map((part, index) => {
     if (part.startsWith("**") && part.endsWith("**")) {
       return <strong key={index}>{part.slice(2, -2)}</strong>;
     }
     if (part.startsWith("`") && part.endsWith("`")) {
       return <code key={index}>{part.slice(1, -1)}</code>;
+    }
+    const linkMatch = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (linkMatch) {
+      const [, label, url] = linkMatch;
+      // Claude writes this markdown itself (not raw external API data), but
+      // validate the scheme anyway rather than trusting it into an href.
+      if (/^https?:\/\//i.test(url)) {
+        return (
+          <a key={index} href={url} target="_blank" rel="noopener noreferrer">
+            {label}
+          </a>
+        );
+      }
+      return <span key={index}>{label}</span>;
     }
     return <span key={index}>{part}</span>;
   });
@@ -513,6 +527,20 @@ export default function Home() {
                             </span>
                           ) : null}
                           <span>{candidate.why_now}</span>
+                          {candidate.similar?.length ? (
+                            <details className="similarToggle">
+                              <summary>
+                                +{candidate.similar.length} similar phrasing{candidate.similar.length > 1 ? "s" : ""}
+                              </summary>
+                              <ul className="similarList">
+                                {candidate.similar.map((s, sIndex) => (
+                                  <li key={`${s.topic}-${sIndex}`}>
+                                    {stageBadge(s.trend_stage)} {s.topic} <b>{s.radar_score}</b>
+                                  </li>
+                                ))}
+                              </ul>
+                            </details>
+                          ) : null}
                         </td>
                         <td>
                           <b>{candidate.radar_score}</b>
