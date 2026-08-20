@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { checkRunToken } from "@/lib/auth";
+import { explainRunError } from "@/lib/error-messages";
 import { MAX_TOPIC_LENGTH, normalizeGeo, normalizeProfile, validateTopic } from "@/lib/radar-profiles";
 import { addTrackedTopic, readTrackedTopics } from "@/lib/tracked-topics";
 
@@ -27,7 +28,13 @@ export async function POST(request) {
 
   const result = await addTrackedTopic({ topic, profile, geo });
   if (!result.ok) {
-    return NextResponse.json(result, { status: 409 });
+    // Only re-explain infra/credential failures (always prefixed "GitHub..."
+    // by lib/tracked-topics.js) - leave business-logic messages like
+    // "already tracked" exactly as they are.
+    const message = result.message?.toLowerCase().startsWith("github")
+      ? explainRunError(result.message, "track")
+      : result.message;
+    return NextResponse.json({ ...result, message }, { status: 409 });
   }
   return NextResponse.json(result);
 }
