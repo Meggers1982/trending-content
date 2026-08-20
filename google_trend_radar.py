@@ -168,6 +168,7 @@ SEED_PROFILES = {
         "K-beauty",
         "hair loss",
         "acne treatment",
+        "nail care",
     ],
     "nutrition": [
         "nutrition",
@@ -1002,9 +1003,23 @@ def build_data(
     trending_now_context: list[dict] | None = None,
     autocomplete_terms: list[str] | None = None,
     exclusion_terms: list[str] | None = None,
+    anchor_seeds: list[str] | None = None,
 ) -> dict:
     exclusions = {normalize(term) for term in (exclusion_terms or []) if normalize(term)}
-    anchors = relevance_anchors(topic, seeds)
+    # Anchors come from the curated seed list only (topic + profile terms +
+    # intent modifiers), NOT the full `seeds` list discovery used - that list
+    # also carries Trending Now / autocomplete terms, which are arbitrary
+    # real-time strings never vetted for topical relevance. Left unguarded,
+    # any such term becomes a trusted substring anchor for its own related-
+    # query results, which almost always echo the term back (confirmed in
+    # production 2026-08-20: the Trending Now term "heart" let "dog food"
+    # through via "food" from another such term, "plant food"; "king
+    # charles" let through "king charles nephew university" and "prince
+    # harry king charles balmoral" - none of it beauty content, just terms
+    # that happened to be breaking out under Google's Health/Beauty category
+    # that day). A candidate discovered via a Trending Now seed still has to
+    # earn its place through a real curated anchor or taxonomy term.
+    anchors = relevance_anchors(topic, anchor_seeds if anchor_seeds is not None else seeds)
     if extra_anchor_terms:
         # Reddit/taxonomy-sourced candidates (e.g. "ceramides") often aren't a
         # literal substring of the topic/seed anchors even though they're
@@ -1304,6 +1319,10 @@ def main() -> None:
             sys.exit("Choose a --profile (wellness, health, ai, beauty, nutrition, fitness, food-safety, diet, weight-loss, mental-health, gut-health), or provide --topic.")
 
     seeds = build_seed_terms(args.topic, args.seeds, args.seed_profile, args.max_seeds)
+    # Snapshot before Trending Now / autocomplete get merged into `seeds`
+    # below - those still expand discovery, but must not become relevance
+    # anchors themselves. See the comment in build_data().
+    core_seeds = list(seeds)
     taxonomy = load_taxonomy()
 
     trending_now_items: list[dict] = []
@@ -1407,6 +1426,7 @@ def main() -> None:
         trending_now_context=trending_now_items,
         autocomplete_terms=autocomplete_terms,
         exclusion_terms=exclusion_terms,
+        anchor_seeds=core_seeds,
     )
     stamp = datetime.now().strftime("%Y-%m-%d_%H%M")
     slug = re.sub(r"[^a-z0-9]+", "-", args.topic.lower()).strip("-") or "topic"
