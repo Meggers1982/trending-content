@@ -5,25 +5,25 @@
 runs:
 - run_date: '2026-08-20'
   niche: health and wellness
-  signals_reviewed: 90
+  signals_reviewed: 144
   topics_retained: 8
   topics_rejected: 21
-  p1_count: 2
+  p1_count: 1
   p2_count: 3
-  p3_count: 3
+  p3_count: 4
   p4_count: 0
   p5_count: 0
-  integrity_flags: 1
-  top_topic: FDA Class I Egg Recall — Salmonella Risk, 1.6 Million Cartons
+  integrity_flags: 2
+  top_topic: FDA Class I Egg Recall — Salmonella (19M cartons)
   key_themes:
-  - FDA Class I Egg Recall — Salmonella Risk, 1.6 Million Cartons
-  - Blueberry Recall Upgraded to Class I — FDA Highest Risk, 8 States
-  - FDA Eye Drop Recall — Contamination Risk
-  - Oregon Psilocybin Program — Real-World Study Shows Promise
-  - Medical Debt Linked to Advanced Cancer Stage and Worse Survival — ACS Study
-  - GLP-1 Medications May Treat Opioid Use Disorder — Vanderbilt Trial Now Enrolling
-  - Personalized Cancer Vaccine Shows Promise in Late-Stage Clinical Trial
-  - Eating Disorder Genomics — Nature Meta-Analysis Reveals Shared and Distinct Biology
+  - FDA Class I Egg Recall — Salmonella (19M cartons)
+  - Blueberry Recall Upgraded to FDA Class I in 8 States
+  - Oregon's Real-World Psilocybin Program Shows Promise for PTSD and Depression
+  - Medical Debt Linked to Advanced Cancer Diagnosis and Worse Survival
+  - Nature Publishes "Hallmarks of Skeletal Muscle Health" Framework
+  - Vanderbilt Study Tests GLP-1s for Opioid Use Disorder — Now Enrolling
+  - Personalized mRNA Cancer Vaccine (Intismeran) Shows Promise in Melanoma Trial
+  - HHS Awards $96M for Mental Health, Suicide Prevention, and Substance Use Services
   tools_used:
   - web_search
   - google_news
@@ -31,10 +31,10 @@ runs:
   - serpapi
   tools_unavailable: []
   dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-08-20.html
-  notes: Two Class I food recalls (eggs, blueberries) and one eye drop recall breaking same-day creates
-    unusual food/drug safety cluster. Mental health category strongest 7d-delta mover (+13). GLP-1 recurring
-    flag resolved; opioid use disorder application is distinct from weight loss coverage. Nutrition trending
-    +11. All recall briefs require FDA.gov primary source verification before publication.
+  notes: 'site_url not configured — self-check skipped; competitor fallback active. Google Trends pre-fetch
+    used as primary search_velocity source. Breaking-recall exception applied to egg and blueberry recalls.
+    Two simultaneous FDA Class I food recalls create high-urgency dual-recall news cycle. Mental health
+    search interest trending (+3 seven-day delta). All candidates set to content_status: new with disclosure.'
 - run_date: '2026-08-08'
   niche: health and wellness
   signals_reviewed: 144
