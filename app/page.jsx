@@ -368,13 +368,13 @@ export default function Home() {
 
         <RadarDashboard text={signals} />
 
-        <section className="formattedReport">
-          <div className="sectionTitle">
+        <details className="formattedReport">
+          <summary className="sectionTitle">
             <div>
               <p className="eyebrow">Formatted Report</p>
               <h2>Run decisions and safety routing</h2>
             </div>
-          </div>
+          </summary>
           <div className="reportGrid">
             {reportSections.length ? (
               reportSections.map((section) => <ReportSection key={section.title} section={section} />)
@@ -385,7 +385,7 @@ export default function Home() {
               </article>
             )}
           </div>
-        </section>
+        </details>
 
         <section className="board" id="board">
           <div className="sectionTitle">

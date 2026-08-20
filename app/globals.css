@@ -243,6 +243,20 @@ button.button:disabled {
 .logBox div + div { margin-top: 4px; }
 
 .board, .runs, .formattedReport, .scanSection { margin-top: 30px; }
+.formattedReport > summary {
+  cursor: pointer;
+  list-style: none;
+}
+.formattedReport > summary::-webkit-details-marker { display: none; }
+.formattedReport > summary::before {
+  content: "▸";
+  margin-right: 10px;
+  color: var(--muted);
+  transition: transform .15s ease;
+  display: inline-block;
+}
+.formattedReport[open] > summary::before { transform: rotate(90deg); }
+.formattedReport > .reportGrid { margin-top: 18px; }
 .radarScan {
   border: 1px solid var(--line);
   border-radius: 10px;
