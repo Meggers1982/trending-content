@@ -25,7 +25,7 @@ The Vercel app should not run the long Python pipeline directly inside a web req
 Instead, the **Start New Report** button triggers a GitHub Actions workflow:
 
 1. Vercel calls GitHub's workflow dispatch API
-2. GitHub Actions runs `python run_pipeline.py --no-email`
+2. GitHub Actions runs `python run_pipeline.py` (email is off by default — pass `--email` to opt in for a specific run)
 3. Generated artifacts are committed back to the repo
 4. Vercel redeploys from the new commit
 

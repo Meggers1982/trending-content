@@ -7,12 +7,13 @@ Runs the full 12-skill pipeline via the Anthropic API, then generates:
   outputs/daily_newsroom_dashboard/daily_report_YYYY-MM-DD.md ← full pipeline output
   outputs/daily_newsroom_dashboard/dashboard_YYYY-MM-DD.csv   ← spreadsheet export
 
-And optionally emails the results to EMAIL_RECIPIENT (set in .env).
+Email delivery is off by default — the dashboard is the primary interface.
+Pass --email to opt in for a specific run (requires EMAIL_RECIPIENT etc. in .env).
 
 Usage:
-    python run_pipeline.py                          # run once now
-    python run_pipeline.py --schedule --time 07:00  # run daily at 7am
-    python run_pipeline.py --no-email               # skip email this run
+    python run_pipeline.py                          # run once now, no email
+    python run_pipeline.py --schedule --time 07:00  # run daily at 7am, no email
+    python run_pipeline.py --email                  # run once now and email the result
 
 Cron (add with: crontab -e):
     0 7 * * * /usr/bin/python3 /path/to/run_pipeline.py >> /path/to/outputs/pipeline.log 2>&1
@@ -914,7 +915,7 @@ def run_prefetch_only() -> None:
         log.warning("Google Trends implementation check: no Trends block generated.")
     log.info(
         "Prefetch-only complete. To update the dashboard, run: "
-        "python run_pipeline.py --no-email"
+        "python run_pipeline.py"
     )
 
 
@@ -1347,7 +1348,7 @@ def send_email(
 
 # ── Main pipeline runner ──────────────────────────────────────────────────────
 
-def run_pipeline(send_email_flag: bool = True) -> None:
+def run_pipeline(send_email_flag: bool = False) -> None:
     try:
         import anthropic
     except ImportError:
@@ -1516,7 +1517,7 @@ def run_pipeline(send_email_flag: bool = True) -> None:
 
 # ── Scheduler ─────────────────────────────────────────────────────────────────
 
-def start_scheduler(run_time: str) -> None:
+def start_scheduler(run_time: str, send_email_flag: bool = False) -> None:
     try:
         import schedule
         import time
@@ -1524,10 +1525,10 @@ def start_scheduler(run_time: str) -> None:
         sys.exit("Missing dependency for scheduler: pip install schedule")
 
     log.info(f"Scheduler started — pipeline runs daily at {run_time}.")
-    schedule.every().day.at(run_time).do(lambda: _run_locked(run_pipeline))
+    schedule.every().day.at(run_time).do(lambda: _run_locked(run_pipeline, send_email_flag=send_email_flag))
 
     log.info("Running once now for verification...")
-    _run_locked(run_pipeline, send_email_flag=True)
+    _run_locked(run_pipeline, send_email_flag=send_email_flag)
 
     while True:
         schedule.run_pending()
@@ -1591,8 +1592,8 @@ def main() -> None:
                         help="Keep process alive and run daily at --time")
     parser.add_argument("--time", default="07:00",
                         help="Daily run time in 24h format (default: 07:00)")
-    parser.add_argument("--no-email", action="store_true",
-                        help="Skip email delivery for this run")
+    parser.add_argument("--email", action="store_true",
+                        help="Email the result for this run (off by default — the dashboard is the primary interface)")
     parser.add_argument("--prefetch-only", action="store_true",
                         help="Fetch SerpAPI Google News/Trends context and exit")
     args = parser.parse_args()
@@ -1602,9 +1603,9 @@ def main() -> None:
     elif args.schedule:
         # start_scheduler manages the lock itself, once per triggered run,
         # since it stays alive indefinitely rather than exiting after one run.
-        start_scheduler(args.time)
+        start_scheduler(args.time, send_email_flag=args.email)
     else:
-        _run_locked(run_pipeline, send_email_flag=not args.no_email)
+        _run_locked(run_pipeline, send_email_flag=args.email)
 
 
 if __name__ == "__main__":

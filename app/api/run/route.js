@@ -13,7 +13,7 @@ const PYTHON_BIN = process.env.PYTHON_BIN || "python3";
 
 function commandForMode(mode) {
   if (mode === "prefetch") return ["run_pipeline.py", "--prefetch-only"];
-  return ["run_pipeline.py", "--no-email"];
+  return ["run_pipeline.py"];
 }
 
 function shouldUseGithubActions() {
