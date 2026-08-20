@@ -423,7 +423,7 @@ def fetch_trending_now(geo: str = "US", category_id: str | None = None, hours: s
         "geo": geo,
         "hours": hours or os.getenv("SERPAPI_TRENDING_NOW_HOURS", "24").strip() or "24",
         "category_id": category_id or os.getenv("SERPAPI_TRENDING_NOW_CATEGORY_ID", "7").strip() or "7",
-        "only_active": "true",
+        "only_active": "false",  # TEMP diagnostic - reverting after this test
         "hl": "en",
     })
     if not data:
