@@ -75,6 +75,12 @@ VERBOSE_ERRORS = False
 # get enriched rather than all 20 fetched.
 TRENDING_NOW_NEWS_LIMIT = 5
 TRENDING_NEWS_REQUEST_DELAY_SECONDS = 1.0
+# Google Trends "Beauty and Fashion" category (see
+# https://serpapi.com/google-trends-trending-now-categories). The default
+# Trending Now category is Health (7, via SERPAPI_TRENDING_NOW_CATEGORY_ID) -
+# beauty runs additionally pull this category so the breakouts aren't just
+# health spillover with nothing actually beauty-specific in it.
+BEAUTY_TRENDING_NOW_CATEGORY_ID = "2"
 REQUEST_FAILURES: Counter[str] = Counter()
 
 SEED_PROFILES = {
@@ -385,12 +391,16 @@ def serp_get(params: dict, timeout: int = DEFAULT_REQUEST_TIMEOUT, retries: int 
     return None
 
 
-def fetch_trending_now(geo: str = "US") -> list[dict]:
+def fetch_trending_now(geo: str = "US", category_id: str | None = None) -> list[dict]:
     """Fetch Google Trends 'Trending Now' (real-time breakout searches) as extra seeds.
 
     Mirrors run_pipeline.py's fetch_trending_now(), reusing the same
     SERPAPI_TRENDING_NOW_* env vars so both scripts share one config surface,
     but calls this file's own serp_get() instead of duplicating retry logic.
+
+    `category_id` overrides SERPAPI_TRENDING_NOW_CATEGORY_ID for this call -
+    used to pull a second category (e.g. Beauty and Fashion) on top of the
+    configured default (e.g. Health) rather than only ever getting one.
 
     Returns a list of dicts (not bare strings): each item also carries the
     news_page_token needed to drill into *why* it's trending - see
@@ -402,7 +412,7 @@ def fetch_trending_now(geo: str = "US") -> list[dict]:
         "engine": "google_trends_trending_now",
         "geo": geo,
         "hours": os.getenv("SERPAPI_TRENDING_NOW_HOURS", "24").strip() or "24",
-        "category_id": os.getenv("SERPAPI_TRENDING_NOW_CATEGORY_ID", "7").strip() or "7",
+        "category_id": category_id or os.getenv("SERPAPI_TRENDING_NOW_CATEGORY_ID", "7").strip() or "7",
         "only_active": "true",
         "hl": "en",
     })
@@ -1281,9 +1291,28 @@ def main() -> None:
     if not args.skip_trending_now:
         trending_now_items = fetch_trending_now(geo=args.geo)
         if trending_now_items:
+            enrich_trending_now_news(trending_now_items, request_timeout=args.timeout, request_retries=args.retries)
+
+        if args.seed_profile == "beauty":
+            # The default category (Health) rarely surfaces anything
+            # actually beauty-specific, so pull the Beauty and Fashion
+            # category too instead of only ever getting health spillover.
+            # Enriched separately (not after merging) so beauty terms get
+            # their own news-lookup budget rather than losing every slot to
+            # whichever health terms happened to come first in the list.
+            beauty_trending_items = fetch_trending_now(geo=args.geo, category_id=BEAUTY_TRENDING_NOW_CATEGORY_ID)
+            if beauty_trending_items:
+                enrich_trending_now_news(beauty_trending_items, request_timeout=args.timeout, request_retries=args.retries)
+            seen_queries = {normalize(item["query"]) for item in trending_now_items}
+            for item in beauty_trending_items:
+                key = normalize(item["query"])
+                if key and key not in seen_queries:
+                    seen_queries.add(key)
+                    trending_now_items.append(item)
+
+        if trending_now_items:
             trending_now_terms = [item["query"] for item in trending_now_items]
             print(f"Trending Now: {len(trending_now_terms)} real-time terms found")
-            enrich_trending_now_news(trending_now_items, request_timeout=args.timeout, request_retries=args.retries)
             enriched_count = sum(1 for item in trending_now_items if item.get("news_headline"))
             if enriched_count:
                 print(f"Trending Now: found the driving news story for {enriched_count} term(s)")
