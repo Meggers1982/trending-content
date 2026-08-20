@@ -86,7 +86,7 @@ BEAUTY_TRENDING_NOW_CATEGORY_ID = "2"
 # 2026-08-20: Health returned 3 terms, Beauty and Fashion returned 0). Widen
 # to 48h for this category only - still fresh enough to call "trending,"
 # just less likely to be empty. SerpAPI only accepts 4/24/48/168 here.
-BEAUTY_TRENDING_NOW_HOURS = "48"
+BEAUTY_TRENDING_NOW_HOURS = "168"
 REQUEST_FAILURES: Counter[str] = Counter()
 
 SEED_PROFILES = {
