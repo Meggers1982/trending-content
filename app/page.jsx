@@ -285,6 +285,12 @@ export default function Home() {
   const radarScan = getLatestRadarScanData();
   const radarCandidates = radarScan?.candidates || [];
   const radarBreakouts = radarScan?.trending_now_context || [];
+  // Candidates traced back to a Trending Now term with a confirmed news
+  // story (i.e. present in trending_now_context) are a stronger signal
+  // than a bare Google Trends spike - flag them in the table below.
+  const groundedSeeds = new Set(radarBreakouts.map((b) => String(b.query || "").toLowerCase().trim()));
+  const isGrounded = (seedTerms) =>
+    (Array.isArray(seedTerms) ? seedTerms : []).some((s) => groundedSeeds.has(String(s).toLowerCase().trim()));
 
   return (
     <main id="top">
@@ -465,9 +471,8 @@ export default function Home() {
                     const safeLink = /^https?:\/\//i.test(b.link || "") ? b.link : null;
                     return (
                       <div className="breakoutCard" key={`${b.query}-${index}`}>
-                        <strong>{b.query}</strong>
-                        <span>
-                          "
+                        <span className="term">{b.query}</span>
+                        <div className="headline">
                           {safeLink ? (
                             <a href={safeLink} target="_blank" rel="noopener noreferrer">
                               {b.headline}
@@ -475,8 +480,8 @@ export default function Home() {
                           ) : (
                             b.headline
                           )}
-                          "{b.source ? ` — ${b.source}` : ""}
-                        </span>
+                          {b.source ? <span className="source"> — {b.source}</span> : null}
+                        </div>
                       </div>
                     );
                   })}
@@ -499,6 +504,14 @@ export default function Home() {
                         <td>{stageBadge(candidate.trend_stage)}</td>
                         <td>
                           <strong>{candidate.topic}</strong>
+                          {isGrounded(candidate.seed_terms) ? (
+                            <span
+                              className="sourcedBadge"
+                              title="Traced to a Trending Now term with a confirmed news story"
+                            >
+                              Sourced
+                            </span>
+                          ) : null}
                           <span>{candidate.why_now}</span>
                         </td>
                         <td>
