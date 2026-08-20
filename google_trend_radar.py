@@ -81,6 +81,12 @@ TRENDING_NEWS_REQUEST_DELAY_SECONDS = 1.0
 # beauty runs additionally pull this category so the breakouts aren't just
 # health spillover with nothing actually beauty-specific in it.
 BEAUTY_TRENDING_NOW_CATEGORY_ID = "2"
+# Beauty and Fashion is much lower-volume than Health, so the default 24h
+# "active breakouts" window can come back completely empty (confirmed live,
+# 2026-08-20: Health returned 3 terms, Beauty and Fashion returned 0). Widen
+# to 48h for this category only - still fresh enough to call "trending,"
+# just less likely to be empty. SerpAPI only accepts 4/24/48/168 here.
+BEAUTY_TRENDING_NOW_HOURS = "48"
 REQUEST_FAILURES: Counter[str] = Counter()
 
 SEED_PROFILES = {
@@ -391,7 +397,7 @@ def serp_get(params: dict, timeout: int = DEFAULT_REQUEST_TIMEOUT, retries: int 
     return None
 
 
-def fetch_trending_now(geo: str = "US", category_id: str | None = None) -> list[dict]:
+def fetch_trending_now(geo: str = "US", category_id: str | None = None, hours: str | None = None) -> list[dict]:
     """Fetch Google Trends 'Trending Now' (real-time breakout searches) as extra seeds.
 
     Mirrors run_pipeline.py's fetch_trending_now(), reusing the same
@@ -401,6 +407,10 @@ def fetch_trending_now(geo: str = "US", category_id: str | None = None) -> list[
     `category_id` overrides SERPAPI_TRENDING_NOW_CATEGORY_ID for this call -
     used to pull a second category (e.g. Beauty and Fashion) on top of the
     configured default (e.g. Health) rather than only ever getting one.
+    `hours` overrides SERPAPI_TRENDING_NOW_HOURS similarly - a smaller
+    category can have zero *active* breakouts in the default 24h window,
+    so a narrower/lower-volume category may want a wider lookback (SerpAPI
+    accepts 4, 24, 48, or 168).
 
     Returns a list of dicts (not bare strings): each item also carries the
     news_page_token needed to drill into *why* it's trending - see
@@ -411,7 +421,7 @@ def fetch_trending_now(geo: str = "US", category_id: str | None = None) -> list[
     data = serp_get({
         "engine": "google_trends_trending_now",
         "geo": geo,
-        "hours": os.getenv("SERPAPI_TRENDING_NOW_HOURS", "24").strip() or "24",
+        "hours": hours or os.getenv("SERPAPI_TRENDING_NOW_HOURS", "24").strip() or "24",
         "category_id": category_id or os.getenv("SERPAPI_TRENDING_NOW_CATEGORY_ID", "7").strip() or "7",
         "only_active": "true",
         "hl": "en",
@@ -1301,8 +1311,13 @@ def main() -> None:
             # Enriched separately (not after merging) so beauty terms get
             # their own news-lookup budget rather than losing every slot to
             # whichever health terms happened to come first in the list.
-            beauty_trending_items = fetch_trending_now(geo=args.geo, category_id=BEAUTY_TRENDING_NOW_CATEGORY_ID)
-            print(f"Trending Now (Beauty and Fashion, category_id=2): {len(beauty_trending_items)} term(s)")
+            beauty_trending_items = fetch_trending_now(
+                geo=args.geo, category_id=BEAUTY_TRENDING_NOW_CATEGORY_ID, hours=BEAUTY_TRENDING_NOW_HOURS,
+            )
+            print(
+                f"Trending Now (Beauty and Fashion, category_id=2, "
+                f"hours={BEAUTY_TRENDING_NOW_HOURS}): {len(beauty_trending_items)} term(s)"
+            )
             if beauty_trending_items:
                 enrich_trending_now_news(beauty_trending_items, request_timeout=args.timeout, request_retries=args.retries)
             seen_queries = {normalize(item["query"]) for item in trending_now_items}
