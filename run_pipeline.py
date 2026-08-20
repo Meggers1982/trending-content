@@ -158,6 +158,12 @@ MAX_NEWS_CONTEXT_ITEMS = 60
 PIPELINE_MAX_TOKENS = 20000
 EXTRACTION_MAX_TOKENS = 12000
 
+# Drilling into "why is this trending" costs one extra SerpAPI request per
+# term (see fetch_trending_news()), so only the top few Trending Now terms
+# get enriched rather than all 20 fetched.
+TRENDING_NOW_NEWS_LIMIT = 5
+TRENDING_NEWS_REQUEST_DELAY_SECONDS = 1.0
+
 # 1-hour TTL (vs. the 5-minute default) so a same-day manual rerun or
 # workflow_dispatch retry — not just the connection-failure fallback right
 # below — still reads the system-prompt cache instead of rewriting it.
@@ -327,10 +333,13 @@ def fetch_google_trends() -> list[dict]:
     return results
 
 
-def fetch_trending_now() -> list[str]:
+def fetch_trending_now() -> list[dict]:
     """
     Fetch Google Trends 'Trending Now' for the US to catch today's breakout topics.
-    Returns a list of trending search terms.
+    Returns a list of dicts (not bare strings): each item also carries the
+    news_page_token needed to drill into *why* it's trending, plus
+    search_volume/increase_percentage for picking which ones are worth that
+    drill-down call. See enrich_trending_now_news().
     """
     if os.getenv("SERPAPI_TRENDING_NOW_ENABLED", "").strip().lower() not in {"1", "true", "yes"}:
         log.info("Trending Now: skipped. Set SERPAPI_TRENDING_NOW_ENABLED=true to enable.")
@@ -346,13 +355,51 @@ def fetch_trending_now() -> list[str]:
     })
     if not data:
         return []
-    terms = []
+    items = []
     for item in data.get("trending_searches", [])[:20]:
         query = item.get("query", "")
         if query:
-            terms.append(query)
-    log.info(f"Trending Now: {len(terms)} real-time health trends found")
-    return terms
+            items.append({
+                "query": query,
+                "news_page_token": item.get("news_page_token", ""),
+                "search_volume": item.get("search_volume"),
+                "increase_percentage": item.get("increase_percentage"),
+            })
+    log.info(f"Trending Now: {len(items)} real-time health trends found")
+    return items
+
+
+def fetch_trending_news(page_token: str) -> dict | None:
+    """Drill into one Trending Now term via its news_page_token to find the
+    actual story behind the spike, instead of just a bare search term with
+    no context. Returns the top article ({title, link, source, date}), or
+    None if there's no token or SerpAPI has nothing for it."""
+    if not page_token:
+        return None
+    data = _serp_get({"engine": "google_trends_news", "page_token": page_token})
+    if not data:
+        return None
+    articles = data.get("news", [])
+    return articles[0] if articles else None
+
+
+def enrich_trending_now_news(items: list[dict], limit: int = TRENDING_NOW_NEWS_LIMIT) -> None:
+    """Attach the driving news headline to the top `limit` Trending Now
+    items, in place. Capped because each lookup is a separate SerpAPI
+    request - drilling into every term fetched would multiply request
+    volume for terms that mostly don't end up mattering to the run anyway."""
+    to_enrich = [item for item in items if item.get("news_page_token")][:limit]
+    for index, item in enumerate(to_enrich):
+        if index > 0:
+            time.sleep(TRENDING_NEWS_REQUEST_DELAY_SECONDS)
+        article = fetch_trending_news(item["news_page_token"])
+        if article:
+            item["news_headline"] = article.get("title", "")
+            item["news_source"] = article.get("source", "")
+            item["news_link"] = article.get("link", "")
+    enriched_count = sum(1 for item in items if item.get("news_headline"))
+    if enriched_count:
+        log.info(f"Trending Now: found the driving news story for {enriched_count} term(s)")
 
 
 def build_serp_context() -> str:
@@ -371,14 +418,23 @@ def build_serp_context() -> str:
     news_articles  = fetch_google_news()
     trends_data    = fetch_google_trends()
     trending_terms = fetch_trending_now()
+    if trending_terms:
+        enrich_trending_now_news(trending_terms)
 
     sections = []
 
     # ── Google Trending Now ───────────────────────────────────────────────────
     if trending_terms:
-        terms_str = "\n".join(f"  - {t}" for t in trending_terms)
+        term_lines = []
+        for t in trending_terms:
+            term_lines.append(f"  - {t['query']}")
+            if t.get("news_headline"):
+                term_lines.append(f"    Why: \"{t['news_headline']}\" — {t.get('news_source', '')}")
         sections.append(
-            f"## Google Trends — Trending Now (US / Health, real-time)\n{terms_str}"
+            "## Google Trends — Trending Now (US / Health, real-time)\n"
+            "Terms with a \"Why:\" line have a confirmed real-world news story driving "
+            "the spike; terms without one are a real-time signal only, not yet grounded "
+            "in a specific story.\n" + "\n".join(term_lines)
         )
 
     # ── Google Trends interest over time ─────────────────────────────────────

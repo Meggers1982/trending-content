@@ -69,6 +69,12 @@ DEFAULT_REQUEST_RETRIES = 0
 REDDIT_REQUEST_DELAY_SECONDS = 1.5
 REDDIT_MIN_MENTIONS = 2
 VERBOSE_ERRORS = False
+
+# Drilling into "why is this trending" costs one extra SerpAPI request per
+# term (see fetch_trending_news()), so only the top few Trending Now terms
+# get enriched rather than all 20 fetched.
+TRENDING_NOW_NEWS_LIMIT = 5
+TRENDING_NEWS_REQUEST_DELAY_SECONDS = 1.0
 REQUEST_FAILURES: Counter[str] = Counter()
 
 SEED_PROFILES = {
@@ -379,12 +385,16 @@ def serp_get(params: dict, timeout: int = DEFAULT_REQUEST_TIMEOUT, retries: int 
     return None
 
 
-def fetch_trending_now(geo: str = "US") -> list[str]:
+def fetch_trending_now(geo: str = "US") -> list[dict]:
     """Fetch Google Trends 'Trending Now' (real-time breakout searches) as extra seeds.
 
     Mirrors run_pipeline.py's fetch_trending_now(), reusing the same
     SERPAPI_TRENDING_NOW_* env vars so both scripts share one config surface,
     but calls this file's own serp_get() instead of duplicating retry logic.
+
+    Returns a list of dicts (not bare strings): each item also carries the
+    news_page_token needed to drill into *why* it's trending - see
+    enrich_trending_now_news().
     """
     if os.getenv("SERPAPI_TRENDING_NOW_ENABLED", "").strip().lower() not in {"1", "true", "yes"}:
         return []
@@ -398,12 +408,52 @@ def fetch_trending_now(geo: str = "US") -> list[str]:
     })
     if not data:
         return []
-    terms = []
+    items = []
     for item in data.get("trending_searches", [])[:20]:
         query = item.get("query", "")
         if query:
-            terms.append(query)
-    return terms
+            items.append({
+                "query": query,
+                "news_page_token": item.get("news_page_token", ""),
+                "search_volume": item.get("search_volume"),
+                "increase_percentage": item.get("increase_percentage"),
+            })
+    return items
+
+
+def fetch_trending_news(page_token: str, *, timeout: int = DEFAULT_REQUEST_TIMEOUT, retries: int = DEFAULT_REQUEST_RETRIES) -> dict | None:
+    """Drill into one Trending Now term via its news_page_token to find the
+    actual story behind the spike, instead of just a bare search term with no
+    context. Returns the top article ({title, link, source, date}), or None."""
+    if not page_token:
+        return None
+    data = serp_get({"engine": "google_trends_news", "page_token": page_token}, timeout=timeout, retries=retries)
+    if not data:
+        return None
+    articles = data.get("news", [])
+    return articles[0] if articles else None
+
+
+def enrich_trending_now_news(
+    items: list[dict],
+    *,
+    limit: int = TRENDING_NOW_NEWS_LIMIT,
+    request_timeout: int = DEFAULT_REQUEST_TIMEOUT,
+    request_retries: int = DEFAULT_REQUEST_RETRIES,
+) -> None:
+    """Attach the driving news headline to the top `limit` Trending Now
+    items, in place. Capped because each lookup is a separate SerpAPI
+    request - drilling into every term fetched would multiply request
+    volume for terms that mostly won't end up mattering to the run anyway."""
+    to_enrich = [item for item in items if item.get("news_page_token")][:limit]
+    for index, item in enumerate(to_enrich):
+        if index > 0:
+            time.sleep(TRENDING_NEWS_REQUEST_DELAY_SECONDS)
+        article = fetch_trending_news(item["news_page_token"], timeout=request_timeout, retries=request_retries)
+        if article:
+            item["news_headline"] = article.get("title", "")
+            item["news_source"] = article.get("source", "")
+            item["news_link"] = article.get("link", "")
 
 
 def fetch_autocomplete(query: str, hl: str = "en") -> list[str]:
@@ -919,6 +969,7 @@ def build_data(
     rejected: list[dict],
     extra_anchor_terms: list[str] | None = None,
     trending_now_terms: list[str] | None = None,
+    trending_now_context: list[dict] | None = None,
     autocomplete_terms: list[str] | None = None,
     exclusion_terms: list[str] | None = None,
 ) -> dict:
@@ -985,6 +1036,16 @@ def build_data(
         "date_window": date,
         "seed_terms": seeds,
         "trending_now_terms_used": trending_now_terms or [],
+        "trending_now_context": [
+            {
+                "query": item["query"],
+                "headline": item.get("news_headline", ""),
+                "source": item.get("news_source", ""),
+                "link": item.get("news_link", ""),
+            }
+            for item in (trending_now_context or [])
+            if item.get("news_headline")
+        ],
         "autocomplete_terms_used": autocomplete_terms or [],
         "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
         "summary": {
@@ -1215,11 +1276,17 @@ def main() -> None:
     seeds = build_seed_terms(args.topic, args.seeds, args.seed_profile, args.max_seeds)
     taxonomy = load_taxonomy()
 
+    trending_now_items: list[dict] = []
     trending_now_terms: list[str] = []
     if not args.skip_trending_now:
-        trending_now_terms = fetch_trending_now(geo=args.geo)
-        if trending_now_terms:
+        trending_now_items = fetch_trending_now(geo=args.geo)
+        if trending_now_items:
+            trending_now_terms = [item["query"] for item in trending_now_items]
             print(f"Trending Now: {len(trending_now_terms)} real-time terms found")
+            enrich_trending_now_news(trending_now_items, request_timeout=args.timeout, request_retries=args.retries)
+            enriched_count = sum(1 for item in trending_now_items if item.get("news_headline"))
+            if enriched_count:
+                print(f"Trending Now: found the driving news story for {enriched_count} term(s)")
             seeds = list(dict.fromkeys(seeds + trending_now_terms))
 
     autocomplete_terms: list[str] = []
@@ -1281,6 +1348,7 @@ def main() -> None:
         args.topic, args.geo, args.date, seeds, candidates, rejected,
         extra_anchor_terms=extra_anchor_terms,
         trending_now_terms=trending_now_terms,
+        trending_now_context=trending_now_items,
         autocomplete_terms=autocomplete_terms,
         exclusion_terms=exclusion_terms,
     )

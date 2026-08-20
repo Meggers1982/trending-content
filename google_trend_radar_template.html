@@ -110,6 +110,19 @@
     margin: 0 0 24px;
     color: #183052;
   }
+  .breakouts { margin: 0 0 24px; }
+  .breakout-card {
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--red);
+    border-radius: 6px;
+    background: var(--surface);
+    padding: 10px 14px;
+    margin: 0 0 8px;
+  }
+  .breakout-card .term { font-weight: 800; }
+  .breakout-card .headline { margin-top: 4px; font-size: 13px; color: #2c2c2c; }
+  .breakout-card .headline a { color: inherit; }
+  .breakout-card .source { color: #666; font-size: 11px; text-transform: uppercase; font-weight: 700; }
   .seed-list {
     display: flex;
     flex-wrap: wrap;
@@ -314,6 +327,11 @@
     <div class="seed-list" id="seed-list"></div>
   </section>
 
+  <section class="breakouts" id="breakouts-section" hidden>
+    <div class="toolbar"><div class="section-title">Real-Time Breakouts — Why Now</div></div>
+    <div id="breakouts-list"></div>
+  </section>
+
   <section>
     <div class="toolbar">
       <div class="section-title" id="radar-title">Trend Radar</div>
@@ -390,6 +408,23 @@ document.getElementById('radar-title').textContent = `Trend Radar — ${candidat
 document.getElementById('seed-list').innerHTML = (Array.isArray(D.seed_terms) ? D.seed_terms : [])
   .map(seed => `<span class="chip">${esc(seed)}</span>`)
   .join('');
+
+const breakouts = Array.isArray(D.trending_now_context) ? D.trending_now_context : [];
+if (breakouts.length) {
+  document.getElementById('breakouts-section').hidden = false;
+  document.getElementById('breakouts-list').innerHTML = breakouts.map(b => {
+    // Only render as a clickable link if it's actually http(s) - external
+    // API data shouldn't be trusted enough to drop straight into an href.
+    const safeLink = /^https?:\/\//i.test(b.link || '') ? b.link : '';
+    const headline = safeLink
+      ? `<a href="${esc(safeLink)}" target="_blank" rel="noopener noreferrer">${esc(b.headline)}</a>`
+      : esc(b.headline);
+    return `<div class="breakout-card">
+      <span class="term">${esc(b.query)}</span>
+      <div class="headline">"${headline}"${b.source ? ` <span class="source">— ${esc(b.source)}</span>` : ''}</div>
+    </div>`;
+  }).join('');
+}
 
 const statData = [
   { label: 'Signals Reviewed', value: summary.total_reviewed ?? 0, cls: '' },

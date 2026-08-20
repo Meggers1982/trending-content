@@ -243,6 +243,18 @@ button.button:disabled {
 .logBox div + div { margin-top: 4px; }
 
 .board, .runs, .formattedReport, .scanSection { margin-top: 30px; }
+.breakouts { margin-bottom: 14px; }
+.breakoutCard {
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--red);
+  border-radius: 6px;
+  background: var(--surface);
+  padding: 8px 12px;
+  margin: 0 0 6px;
+  font-size: 13px;
+}
+.breakoutCard strong { margin-right: 8px; }
+.breakoutCard a { color: inherit; }
 .formattedReport > summary {
   cursor: pointer;
   list-style: none;

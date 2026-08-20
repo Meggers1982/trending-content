@@ -284,6 +284,7 @@ export default function Home() {
   const candidates = latest?.candidates || [];
   const radarScan = getLatestRadarScanData();
   const radarCandidates = radarScan?.candidates || [];
+  const radarBreakouts = radarScan?.trending_now_context || [];
 
   return (
     <main>
@@ -454,6 +455,30 @@ export default function Home() {
                   </a>
                 ) : null}
               </p>
+              {radarBreakouts.length ? (
+                <div className="breakouts">
+                  <p className="eyebrow" style={{ marginBottom: 6 }}>Real-Time Breakouts — Why Now</p>
+                  {radarBreakouts.map((b, index) => {
+                    const safeLink = /^https?:\/\//i.test(b.link || "") ? b.link : null;
+                    return (
+                      <div className="breakoutCard" key={`${b.query}-${index}`}>
+                        <strong>{b.query}</strong>
+                        <span>
+                          "
+                          {safeLink ? (
+                            <a href={safeLink} target="_blank" rel="noopener noreferrer">
+                              {b.headline}
+                            </a>
+                          ) : (
+                            b.headline
+                          )}
+                          "{b.source ? ` — ${b.source}` : ""}
+                        </span>
+                      </div>
+                    );
+                  })}
+                </div>
+              ) : null}
               <div className="tableWrap">
                 <table>
                   <thead>
