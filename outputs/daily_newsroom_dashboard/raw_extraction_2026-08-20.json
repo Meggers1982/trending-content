@@ -1,0 +1,262 @@
+```json
+{
+  "run_date": "2026-08-20",
+  "niche": "health and wellness",
+  "signal_summary": {
+    "total_reviewed": 90,
+    "total_retained": 8,
+    "total_rejected": 21,
+    "tools_active": ["web_search", "google_news", "google_trends", "serpapi"],
+    "tools_unavailable": [],
+    "notes": "Two Class I food recalls (eggs, blueberries) and one eye drop recall breaking same-day creates unusual food/drug safety cluster. Mental health category strongest 7d-delta mover (+13). GLP-1 recurring flag resolved; opioid use disorder application is distinct from weight loss coverage. Nutrition trending +11. All recall briefs require FDA.gov primary source verification before publication."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "FDA Class I Egg Recall — Salmonella Risk, 1.6 Million Cartons",
+      "primary_entity": "FDA Class I Egg Recall",
+      "signal_type": "breaking_news",
+      "allowed_category": "FDA and CDC regulatory updates / public health and epidemiology",
+      "trend_strength_score": 88,
+      "opportunity_score": 85,
+      "discover_score": 5,
+      "urgency": "now",
+      "confidence": "medium",
+      "content_status": "update",
+      "source_count": 8,
+      "recommended_angle": "Consumer action guide: what the Class I designation actually means, which brands/lot codes are affected, exactly what to do (don't eat, return, clean surfaces), and what symptoms require medical attention — differentiated from news-only coverage by actionability.",
+      "why_now": "FDA upgraded the recall to Class I on or around 08/14 — its highest tier, meaning 'reasonable probability of serious adverse health consequences or death.' With 1.6 million cartons affected across the South and Southwest and salmonella symptoms easily confused with stomach flu, consumers need clear action steps, not just a news alert. Nutrition trend (+11 7d-delta on Google Trends) and 'egg nutrition' rising queries confirm active search interest.",
+      "primary_headline": "FDA Egg Recall Is Now Class I — Here's What That Means and What to Do With Your Eggs",
+      "next_steps": "Assign immediately. Retrieve FDA.gov recall notice URL for lot codes before publishing. Target publish within 4 hours.",
+      "notes": "Companion piece opportunity: 'A Week of Food Recalls — What's Going On With US Food Safety?' tying egg + blueberry recalls. Breaking-recall exception applied. Confidence capped at Medium pending direct FDA notice retrieval confirmed. Lot codes and specific brands must be verified against the live FDA.gov recall notice before publishing."
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Blueberry Recall Upgraded to Class I — FDA Highest Risk, 8 States",
+      "primary_entity": "Blueberry Recall 2026",
+      "signal_type": "breaking_news",
+      "allowed_category": "FDA and CDC regulatory updates / public health and epidemiology",
+      "trend_strength_score": 75,
+      "opportunity_score": 78,
+      "discover_score": 4,
+      "urgency": "now",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Fast, specific consumer alert: which blueberries, which states, what the Class I designation means, and what to do. Differentiate by combining blueberry-specific action with context from the concurrent egg recall — pattern-of-food-safety-concerns framing.",
+      "why_now": "Class I upgrade reported 08/20 — today. 'Blueberry recall' appears in Google Trends rising queries for food safety category. Two Class I food recalls in one week is an unusual pattern with genuine audience relevance. 8-state scope means significant geographic reach for US audience.",
+      "primary_headline": "Blueberry Recall Upgraded to FDA's Highest Risk Level in 8 States — What to Check",
+      "next_steps": "Assign immediately. Retrieve FDA.gov blueberry recall notice before writing. Can be published as short alert and updated with details. Optionally combine with egg recall as 'dual recall' story.",
+      "notes": "Breaking-recall exception applied. Single primary outlet source (11Alive). Confidence cap Medium. Contamination type not specified in available signal — do not assume salmonella without confirming. Strong candidate for internal link to/from egg recall article."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "today",
+      "topic": "FDA Eye Drop Recall — Contamination Risk",
+      "primary_entity": "Eye Drop Recall 2026",
+      "signal_type": "breaking_news",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 68,
+      "opportunity_score": 72,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Consumer safety guide: which eye drops are recalled, what contamination risk means for eye health, what OTC alternatives are safe, and when to see an eye doctor if you've already used the recalled product.",
+      "why_now": "Same-day recall (08/20). Consumers who use OTC eye drops for allergy/itch relief need to know immediately if their product is affected. Eye drop recalls have high anxiety potential given proximity to a sensitive organ — this is a high-engagement safety topic.",
+      "primary_headline": "FDA Recalls Eye Drops for Possible Contamination — Here's What to Know",
+      "next_steps": "Retrieve FDA.gov notice. Assign to writer familiar with OTC drug/device recalls. Target same-day publish.",
+      "notes": "Single specialized outlet retrieved (Ophthalmology Times Europe, 08/20) — breaking-recall exception applies. Tier-2 source; FDA.gov primary notice must be retrieved. Confidence capped at Medium. Do not speculate on contamination type without FDA confirmation. Can be combined with egg + blueberry recall into a weekly food/drug safety roundup if standalone word count feels thin after FDA verification."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "today",
+      "topic": "Oregon Psilocybin Program — Real-World Study Shows Promise",
+      "primary_entity": "Oregon Psilocybin Program",
+      "signal_type": "study_or_research",
+      "allowed_category": "mental health and psychology / medical research and clinical trials",
+      "trend_strength_score": 76,
+      "opportunity_score": 80,
+      "discover_score": 5,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "What the real-world Oregon data actually shows vs. what clinical trial conditions showed — distinguishing naturalistic outcomes from controlled-setting results, and what this means for other states considering similar programs. Skeptical/evaluative frame rather than pure hype.",
+      "why_now": "NPR published 08/19. Mental health category surged +13 7d-delta this week — the strongest Google Trends mover in this run. Psilocybin policy is actively spreading to other states; real-world (non-trial) outcome data is the key missing piece in the public debate. This is a high-Discover topic — AI systems are frequently asked 'does psilocybin work' and 'is psilocybin legal.'",
+      "primary_headline": "Oregon's Psilocybin Program Just Got Real-World Data — Here's What It Actually Shows",
+      "next_steps": "Retrieve full NPR article; identify primary study citation (journal/DOI/lead author). Assign to health writer with mental health/policy background.",
+      "notes": "High Discover score (5) — maps directly to AI queries about psilocybin legality and efficacy. Study is described as 'real-world' — likely observational, not RCT. Make this explicit; do not present as controlled efficacy evidence. Primary study citation (journal, DOI, lead researcher) must be confirmed from NPR article before publishing causal language. Companion content opportunity: 'Psilocybin FAQ: Is It Legal Where You Live?'"
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "today",
+      "topic": "Medical Debt Linked to Advanced Cancer Stage and Worse Survival — ACS Study",
+      "primary_entity": "Medical Debt Cancer Survival Study",
+      "signal_type": "study_or_research",
+      "allowed_category": "medical research and clinical trials / chronic disease management / public health and epidemiology",
+      "trend_strength_score": 72,
+      "opportunity_score": 78,
+      "discover_score": 5,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "'Financial toxicity' as a hidden cancer risk factor — medical debt is not just a financial hardship, it's a clinical outcome predictor. Frame around the mechanism: people delay care to avoid costs, present at later stages, survive less. Evaluative frame with systemic context, not just a data dump.",
+      "why_now": "ACS press release 08/18. County-level analysis gives this unusual geographic specificity — it's not a general association but a granular dataset linking local debt burdens to local cancer outcomes. Health insurance trends rising in Google Trends (related query). STAT News covers health costs vs. employers (same-week framing). Strong Discover score — AI systems are commonly asked about cancer disparities and why outcomes differ.",
+      "primary_headline": "Medical Debt Predicts Advanced Cancer Diagnosis — A New Study Explains the Deadly Mechanism",
+      "next_steps": "Locate underlying journal article or DOI from ACS press release. Assign to writer with health equity/oncology background. Include ACS financial assistance resource links.",
+      "notes": "Institutional press release — underlying journal/DOI must be located and cited before publishing causal language. County-level ecological study design — ecological correlation is not individual-level causation. State this clearly. Do not present 'medical debt causes cancer mortality' without qualifying the observational/ecological study design. High Discover score — maps to AI queries about cancer disparities, screening access, healthcare costs."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "GLP-1 Medications May Treat Opioid Use Disorder — Vanderbilt Trial Now Enrolling",
+      "primary_entity": "GLP-1 Opioid Use Disorder Trial",
+      "signal_type": "study_or_research",
+      "allowed_category": "medical research and clinical trials / chronic disease management",
+      "trend_strength_score": 65,
+      "opportunity_score": 74,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Beyond weight loss: GLP-1s are being tested for addiction — what the science behind this hypothesis is, what Vanderbilt's trial is specifically testing, and why this matters for the opioid crisis. Distinct from recurring GLP-1/weight loss coverage.",
+      "why_now": "Vanderbilt Health News published 08/18; trial now enrolling (ClinicalTrials.gov record implied). GLP-1 weight loss angle is recurring (flagged as stale), but GLP-1/addiction is a genuinely new application with emerging mechanistic evidence. Opioid crisis context provides strong public health hook.",
+      "primary_headline": "GLP-1 Drugs Like Ozempic Are Being Tested for Opioid Addiction — Here's What We Know So Far",
+      "next_steps": "Confirm ClinicalTrials.gov NCT number from Vanderbilt source before publishing. Assign to writer with addiction medicine background.",
+      "notes": "Trial is recruiting — no efficacy results exist yet. Frame as hypothesis-testing, not evidence of effectiveness. GLP-1 recurring flag resolved: opioid use disorder application is distinct from weight loss coverage. Confirm ClinicalTrials.gov NCT number before claiming specific endpoints or timeline."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Personalized Cancer Vaccine Shows Promise in Late-Stage Clinical Trial",
+      "primary_entity": "Personalized Cancer Vaccine",
+      "signal_type": "study_or_research",
+      "allowed_category": "medical research and clinical trials / chronic disease management",
+      "trend_strength_score": 62,
+      "opportunity_score": 70,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "low",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Plain-language explainer: what 'personalized cancer vaccine' actually means (mRNA-based, tumor neoantigen targeting), what 'late-stage trial' signals about timeline to approval, and what realistic expectations look like for patients following this research.",
+      "why_now": "Spectrum News reported 08/19. 'Late-stage' trial is a meaningful milestone — it implies Phase 3 data or equivalent, which moves this from early research to near-approval territory. Cancer vaccine topic has strong Discover potential as AI systems are frequently asked about cancer cure timelines.",
+      "primary_headline": "A Personalized Cancer Vaccine Just Showed Promise in a Late-Stage Trial — What That Actually Means",
+      "next_steps": "Locate Spectrum News article. Confirm trial sponsor, cancer type, and ClinicalTrials.gov record. Retrieve specific endpoints met before writing.",
+      "notes": "'Shows promise' language is often press-release hedging — confirm specific endpoints met (overall survival, disease-free survival, response rate) before writing. Spectrum News is tier-2; primary source required. Do not imply this is broadly applicable across cancer types without confirming scope. Institutional press release only — monitor for journal publication if not yet published."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Eating Disorder Genomics — Nature Meta-Analysis Reveals Shared and Distinct Biology",
+      "primary_entity": "Eating Disorder Genetics Study",
+      "signal_type": "study_or_research",
+      "allowed_category": "mental health and psychology / medical research and clinical trials",
+      "trend_strength_score": 60,
+      "opportunity_score": 68,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "What new genetic evidence tells us about why eating disorders develop — and what the shared biology between binge eating and anorexia means for treatment. Plain-language translation of a Nature genomics meta-analysis for a general health audience. Skeptical/evaluative frame: what this changes and what it doesn't.",
+      "why_now": "Nature published 08/19 — highest-tier journal (tier-1). Mental health category +13 7d-delta this week. Eating disorders affect ~30 million Americans (NEDA) and are chronically under-researched relative to prevalence. Genomic meta-analysis is the highest level of genetic evidence available.",
+      "primary_headline": "A New Nature Study Reveals the Genetic Overlap Between Binge Eating and Anorexia — What It Means",
+      "next_steps": "Search nature.com for 08/19/2026 eating disorder genomics publication. Retrieve DOI before publishing. Assign to health writer with mental health background.",
+      "notes": "Genomic association study — identifies variants correlated with phenotypes, not causation. State explicitly. Meta-analysis findings may be population-level and not predictive at individual level. Qualify accordingly. Avoid genetic determinism framing. Retrieve DOI from Nature (08/19) before publishing."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "FDA nominee Senate opposition",
+      "reason": "pure political/regulatory opinion without direct patient health content"
+    },
+    {
+      "topic": "AI in healthcare",
+      "reason": "off-category (tech/policy); not core health-wellness editorial"
+    },
+    {
+      "topic": "HHS primary care expansion",
+      "reason": "policy/funding announcement; no new health science content for audience"
+    },
+    {
+      "topic": "Health insurance rates rising — Minnesota",
+      "reason": "regional; health policy/business without clinical content"
+    },
+    {
+      "topic": "Dartmouth Health telehealth closure",
+      "reason": "local hospital/system operational news"
+    },
+    {
+      "topic": "Providence Health Plan closing",
+      "reason": "pure healthcare business"
+    },
+    {
+      "topic": "Gut health signs listicle",
+      "reason": "aggregator/listicle; no new research signal; evergreen listicle, not news-driven"
+    },
+    {
+      "topic": "Space travel women's health",
+      "reason": "very niche; low audience relevance for general health consumer"
+    },
+    {
+      "topic": "Molecular glue cancer driver — Stanford",
+      "reason": "preclinical/lab-stage; not yet patient-relevant"
+    },
+    {
+      "topic": "Ferrero acquires Purely Elizabeth",
+      "reason": "consumer brand M&A; no health science angle"
+    },
+    {
+      "topic": "Wellness brand/conference/app items",
+      "reason": "institutional/corporate PR; no editorial health value"
+    },
+    {
+      "topic": "Tribal Nation medical school launch",
+      "reason": "education/institutional milestone; not health content for audience"
+    },
+    {
+      "topic": "Mitch McConnell health",
+      "reason": "political figure health = excluded category (pure political)"
+    },
+    {
+      "topic": "Routine wellness shampoo and brand-specific wellness queries",
+      "reason": "product marketing; brand safety exclusion"
+    },
+    {
+      "topic": "Gut health listicle signals",
+      "reason": "low credibility; folk remedy / consumer product signals"
+    },
+    {
+      "topic": "Pilots/flight attendants radiation cancer risk",
+      "reason": "occupational health; narrow audience relevance; monitor for journal publication"
+    },
+    {
+      "topic": "Laser therapy brain tumors",
+      "reason": "institutional press release only; monitor for journal publication"
+    },
+    {
+      "topic": "COVID-19 treatment 3,000-person trial",
+      "reason": "state-funded trial; treatment specifics needed before scoring"
+    },
+    {
+      "topic": "Home hospital trial for dementia",
+      "reason": "early enrollment; monitor for trial results"
+    },
+    {
+      "topic": "FDA wellness peptides compounding",
+      "reason": "supplement/compounding regulatory; requires primary FDA source"
+    },
+    {
+      "topic": "Selena Gomez mental health company / celebrity mental health",
+      "reason": "celebrity wellness exclusion; no clinical content"
+    }
+  ]
+}
+```
