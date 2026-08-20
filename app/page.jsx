@@ -287,7 +287,10 @@ export default function Home() {
   const radarBreakouts = radarScan?.trending_now_context || [];
 
   return (
-    <main>
+    <main id="top">
+      <a href="#top" className="scrollTop" aria-label="Scroll to top">
+        &uarr;
+      </a>
       <aside className="rail">
         <div className="brandmark">
           <span />
