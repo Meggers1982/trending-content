@@ -1290,6 +1290,7 @@ def main() -> None:
     trending_now_terms: list[str] = []
     if not args.skip_trending_now:
         trending_now_items = fetch_trending_now(geo=args.geo)
+        print(f"Trending Now (Health, category_id=7): {len(trending_now_items)} term(s)")
         if trending_now_items:
             enrich_trending_now_news(trending_now_items, request_timeout=args.timeout, request_retries=args.retries)
 
@@ -1301,14 +1302,18 @@ def main() -> None:
             # their own news-lookup budget rather than losing every slot to
             # whichever health terms happened to come first in the list.
             beauty_trending_items = fetch_trending_now(geo=args.geo, category_id=BEAUTY_TRENDING_NOW_CATEGORY_ID)
+            print(f"Trending Now (Beauty and Fashion, category_id=2): {len(beauty_trending_items)} term(s)")
             if beauty_trending_items:
                 enrich_trending_now_news(beauty_trending_items, request_timeout=args.timeout, request_retries=args.retries)
             seen_queries = {normalize(item["query"]) for item in trending_now_items}
+            added = 0
             for item in beauty_trending_items:
                 key = normalize(item["query"])
                 if key and key not in seen_queries:
                     seen_queries.add(key)
                     trending_now_items.append(item)
+                    added += 1
+            print(f"Trending Now: merged {added} beauty term(s) not already present from Health")
 
         if trending_now_items:
             trending_now_terms = [item["query"] for item in trending_now_items]
