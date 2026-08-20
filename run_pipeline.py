@@ -158,6 +158,11 @@ MAX_NEWS_CONTEXT_ITEMS = 60
 PIPELINE_MAX_TOKENS = 20000
 EXTRACTION_MAX_TOKENS = 12000
 
+# 1-hour TTL (vs. the 5-minute default) so a same-day manual rerun or
+# workflow_dispatch retry — not just the connection-failure fallback right
+# below — still reads the system-prompt cache instead of rewriting it.
+SYSTEM_CACHE_CONTROL = {"type": "ephemeral", "ttl": "1h"}
+
 AUTOMATION_OUTPUT_CONSTRAINT = """
 Automation output mode:
 - Complete all pipeline skills internally, but do not print exhaustive intermediate analysis.
@@ -1338,7 +1343,7 @@ def run_pipeline(send_email_flag: bool = True) -> None:
             label="Pipeline call",
             model="claude-sonnet-4-6",
             max_tokens=PIPELINE_MAX_TOKENS,
-            system=[{"type": "text", "text": system_prompt, "cache_control": {"type": "ephemeral"}}],
+            system=[{"type": "text", "text": system_prompt, "cache_control": SYSTEM_CACHE_CONTROL}],
             messages=[{"role": "user", "content": pipeline_prompt}],
         )
     except Exception as e:
@@ -1352,15 +1357,17 @@ def run_pipeline(send_email_flag: bool = True) -> None:
                 label="Pipeline call without SerpAPI context",
                 model="claude-sonnet-4-6",
                 max_tokens=PIPELINE_MAX_TOKENS,
-                system=[{"type": "text", "text": system_prompt, "cache_control": {"type": "ephemeral"}}],
+                system=[{"type": "text", "text": system_prompt, "cache_control": SYSTEM_CACHE_CONTROL}],
                 messages=[{"role": "user", "content": build_pipeline_prompt("", history_context)}],
             )
         else:
             raise
     pipeline_output = extract_response_text(pipeline_response, label="Pipeline call")
+    usage = pipeline_response.usage
     log.info(
-        f"Pipeline complete. Tokens in: {pipeline_response.usage.input_tokens}, "
-        f"out: {pipeline_response.usage.output_tokens}"
+        f"Pipeline complete. Tokens in: {usage.input_tokens}, out: {usage.output_tokens}, "
+        f"cache read: {getattr(usage, 'cache_read_input_tokens', 0)}, "
+        f"cache write: {getattr(usage, 'cache_creation_input_tokens', 0)}"
     )
 
     # Write full markdown report
