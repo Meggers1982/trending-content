@@ -258,12 +258,17 @@ button.button:disabled {
 .formattedReport > summary {
   cursor: pointer;
   list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 14px;
 }
 .formattedReport > summary::-webkit-details-marker { display: none; }
 .formattedReport > summary::before {
   content: "▸";
-  margin-right: 10px;
   color: var(--muted);
+  font-size: 26px;
+  line-height: 1;
   transition: transform .15s ease;
   display: inline-block;
 }
