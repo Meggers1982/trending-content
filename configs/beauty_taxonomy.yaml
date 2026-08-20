@@ -72,3 +72,28 @@ concerns:
   - sun damage
   - sensitive skin
   - allergic reaction
+
+# Off-topic collisions: a candidate can match a beauty seed/anchor purely by
+# substring while actually being about something else entirely. Confirmed in
+# production 2026-08: the "peptides" seed (a skincare ingredient) also
+# surfaced "paradigm peptides" and "daniel murphy paradigm peptides case" -
+# injectable research-chemical peptides and an apparent legal case, not
+# skincare. If a candidate's query contains one of these terms, it's dropped
+# as off-topic even though it matched a beauty anchor. Add new terms here as
+# they show up in scans rather than hardcoding them in the script.
+exclusions:
+  - research peptides
+  - injectable peptides
+  - peptide injection
+  - paradigm peptides
+  - core peptides
+  - bpc-157
+  - bpc 157
+  - tb-500
+  - tb 500
+  - lawsuit
+  - indicted
+  - indictment
+  - sentenced
+  - criminal case
+  - arrested

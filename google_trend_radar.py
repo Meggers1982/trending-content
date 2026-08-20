@@ -471,6 +471,18 @@ def load_taxonomy(path: Path = BEAUTY_TAXONOMY_PATH) -> dict[str, list[str]]:
     return taxonomy
 
 
+def load_exclusion_terms(path: Path = BEAUTY_TAXONOMY_PATH) -> list[str]:
+    """Terms that mark a candidate off-topic even though it matched a beauty
+    anchor (see the "exclusions" comment in beauty_taxonomy.yaml)."""
+    if not path.exists():
+        return []
+    try:
+        data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    except yaml.YAMLError:
+        return []
+    return [str(term) for term in (data.get("exclusions") or []) if term]
+
+
 def tag_candidate(query: str, taxonomy: dict[str, list[str]]) -> dict[str, list[str]]:
     """Keyword-match a candidate's query text against the beauty taxonomy.
 
@@ -908,7 +920,9 @@ def build_data(
     extra_anchor_terms: list[str] | None = None,
     trending_now_terms: list[str] | None = None,
     autocomplete_terms: list[str] | None = None,
+    exclusion_terms: list[str] | None = None,
 ) -> dict:
+    exclusions = {normalize(term) for term in (exclusion_terms or []) if normalize(term)}
     anchors = relevance_anchors(topic, seeds)
     if extra_anchor_terms:
         # Reddit/taxonomy-sourced candidates (e.g. "ceramides") often aren't a
@@ -927,7 +941,19 @@ def build_data(
     relevant = []
     off_topic = []
     for candidate in candidates:
-        if is_relevant_candidate(candidate, anchors):
+        normalized_query = normalize(candidate.query)
+        excluded_term = next((term for term in exclusions if term in normalized_query), None)
+        if excluded_term:
+            # Anchor-matched but a different sense of the seed word (e.g.
+            # "peptides" the skincare ingredient vs. "peptides" the
+            # injectable research chemical) - see beauty_taxonomy.yaml.
+            off_topic.append(candidate)
+            rejected.append({
+                "topic": candidate.query,
+                "reason": f"Off-topic: matched exclusion term {excluded_term!r}",
+                "seed_terms": sorted(candidate.seed_terms),
+            })
+        elif is_relevant_candidate(candidate, anchors):
             relevant.append(candidate)
         else:
             off_topic.append(candidate)
@@ -1250,11 +1276,13 @@ def main() -> None:
             continue
 
     extra_anchor_terms = sorted({term for terms in taxonomy.values() for term in terms}) if args.seed_profile == "beauty" else None
+    exclusion_terms = load_exclusion_terms() if args.seed_profile == "beauty" else None
     data = build_data(
         args.topic, args.geo, args.date, seeds, candidates, rejected,
         extra_anchor_terms=extra_anchor_terms,
         trending_now_terms=trending_now_terms,
         autocomplete_terms=autocomplete_terms,
+        exclusion_terms=exclusion_terms,
     )
     stamp = datetime.now().strftime("%Y-%m-%d_%H%M")
     slug = re.sub(r"[^a-z0-9]+", "-", args.topic.lower()).strip("-") or "topic"
