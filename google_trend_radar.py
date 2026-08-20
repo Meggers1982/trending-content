@@ -80,13 +80,14 @@ TRENDING_NEWS_REQUEST_DELAY_SECONDS = 1.0
 # Trending Now category is Health (7, via SERPAPI_TRENDING_NOW_CATEGORY_ID) -
 # beauty runs additionally pull this category so the breakouts aren't just
 # health spillover with nothing actually beauty-specific in it.
+#
+# Also requests only_active=false for this category specifically (see the
+# only_active note on fetch_trending_now()): confirmed live 2026-08-20 that
+# only_active=true returned 0 Beauty and Fashion items even at the maximum
+# 168h window, while only_active=false found 2 at the default 24h window -
+# it's a much lower-volume category and the "active" filter was dropping
+# everything, not a staleness problem that needed a wider window.
 BEAUTY_TRENDING_NOW_CATEGORY_ID = "2"
-# Beauty and Fashion is much lower-volume than Health, so the default 24h
-# "active breakouts" window can come back completely empty (confirmed live,
-# 2026-08-20: Health returned 3 terms, Beauty and Fashion returned 0). Widen
-# to 48h for this category only - still fresh enough to call "trending,"
-# just less likely to be empty. SerpAPI only accepts 4/24/48/168 here.
-BEAUTY_TRENDING_NOW_HOURS = "24"  # TEMP diagnostic: testing if only_active=false alone is enough at the default window
 REQUEST_FAILURES: Counter[str] = Counter()
 
 SEED_PROFILES = {
@@ -1321,13 +1322,9 @@ def main() -> None:
             # their own news-lookup budget rather than losing every slot to
             # whichever health terms happened to come first in the list.
             beauty_trending_items = fetch_trending_now(
-                geo=args.geo, category_id=BEAUTY_TRENDING_NOW_CATEGORY_ID, hours=BEAUTY_TRENDING_NOW_HOURS,
-                only_active="false",
+                geo=args.geo, category_id=BEAUTY_TRENDING_NOW_CATEGORY_ID, only_active="false",
             )
-            print(
-                f"Trending Now (Beauty and Fashion, category_id=2, "
-                f"hours={BEAUTY_TRENDING_NOW_HOURS}): {len(beauty_trending_items)} term(s)"
-            )
+            print(f"Trending Now (Beauty and Fashion, category_id=2): {len(beauty_trending_items)} term(s)")
             if beauty_trending_items:
                 enrich_trending_now_news(beauty_trending_items, request_timeout=args.timeout, request_retries=args.retries)
             seen_queries = {normalize(item["query"]) for item in trending_now_items}
