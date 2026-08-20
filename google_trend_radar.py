@@ -86,7 +86,7 @@ BEAUTY_TRENDING_NOW_CATEGORY_ID = "2"
 # 2026-08-20: Health returned 3 terms, Beauty and Fashion returned 0). Widen
 # to 48h for this category only - still fresh enough to call "trending,"
 # just less likely to be empty. SerpAPI only accepts 4/24/48/168 here.
-BEAUTY_TRENDING_NOW_HOURS = "168"
+BEAUTY_TRENDING_NOW_HOURS = "24"  # TEMP diagnostic: testing if only_active=false alone is enough at the default window
 REQUEST_FAILURES: Counter[str] = Counter()
 
 SEED_PROFILES = {
@@ -397,7 +397,12 @@ def serp_get(params: dict, timeout: int = DEFAULT_REQUEST_TIMEOUT, retries: int 
     return None
 
 
-def fetch_trending_now(geo: str = "US", category_id: str | None = None, hours: str | None = None) -> list[dict]:
+def fetch_trending_now(
+    geo: str = "US",
+    category_id: str | None = None,
+    hours: str | None = None,
+    only_active: str = "true",
+) -> list[dict]:
     """Fetch Google Trends 'Trending Now' (real-time breakout searches) as extra seeds.
 
     Mirrors run_pipeline.py's fetch_trending_now(), reusing the same
@@ -407,10 +412,14 @@ def fetch_trending_now(geo: str = "US", category_id: str | None = None, hours: s
     `category_id` overrides SERPAPI_TRENDING_NOW_CATEGORY_ID for this call -
     used to pull a second category (e.g. Beauty and Fashion) on top of the
     configured default (e.g. Health) rather than only ever getting one.
-    `hours` overrides SERPAPI_TRENDING_NOW_HOURS similarly - a smaller
-    category can have zero *active* breakouts in the default 24h window,
-    so a narrower/lower-volume category may want a wider lookback (SerpAPI
-    accepts 4, 24, 48, or 168).
+    `hours` overrides SERPAPI_TRENDING_NOW_HOURS similarly (SerpAPI accepts
+    4, 24, 48, or 168).
+    `only_active` defaults to "true" (matches the prior hardcoded behavior)
+    but a smaller/niche category can come back completely empty under it -
+    confirmed live 2026-08-20: Beauty and Fashion returned 0 items with
+    only_active=true even at the max 168h window, and 9 with it off. Pass
+    "false" for lower-volume categories rather than assuming "true" is
+    always safe.
 
     Returns a list of dicts (not bare strings): each item also carries the
     news_page_token needed to drill into *why* it's trending - see
@@ -423,7 +432,7 @@ def fetch_trending_now(geo: str = "US", category_id: str | None = None, hours: s
         "geo": geo,
         "hours": hours or os.getenv("SERPAPI_TRENDING_NOW_HOURS", "24").strip() or "24",
         "category_id": category_id or os.getenv("SERPAPI_TRENDING_NOW_CATEGORY_ID", "7").strip() or "7",
-        "only_active": "false",  # TEMP diagnostic - reverting after this test
+        "only_active": only_active,
         "hl": "en",
     })
     if not data:
@@ -1313,6 +1322,7 @@ def main() -> None:
             # whichever health terms happened to come first in the list.
             beauty_trending_items = fetch_trending_now(
                 geo=args.geo, category_id=BEAUTY_TRENDING_NOW_CATEGORY_ID, hours=BEAUTY_TRENDING_NOW_HOURS,
+                only_active="false",
             )
             print(
                 f"Trending Now (Beauty and Fashion, category_id=2, "
