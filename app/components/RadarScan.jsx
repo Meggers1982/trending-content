@@ -2,15 +2,24 @@
 
 import { useEffect, useState } from "react";
 import RadarResultsTable from "./RadarResultsTable";
-import { PROFILES } from "@/lib/radar-profiles";
-
-const RUN_TOKEN_STORAGE_KEY = "trending-content-os:run-token";
+import RunTokenField, { readRunToken } from "./RunTokenField";
+import TopicScanForm from "./TopicScanForm";
 
 function formatStatus(job) {
   if (job?.running) return `Scanning "${job.mode}"`;
   if (job?.exitCode === 0) return "Complete";
   if (job?.exitCode) return "Needs attention";
   return "Ready";
+}
+
+// Scan artifacts are named trend_radar_<slug>_<date>_<HHMM>. The label used to
+// strip the timestamp off, which made every repeat scan of the same profile
+// render as an identical row with no way to tell them apart.
+function describeScan(base) {
+  const match = `${base}`.match(/^trend_radar_(.+)_(\d{4}-\d{2}-\d{2})_(\d{2})(\d{2})$/);
+  if (!match) return { name: `${base}`.replace(/^trend_radar_/, ""), when: "" };
+  const [, slug, date, hh, mm] = match;
+  return { name: slug.replace(/-/g, " "), when: `${date} ${hh}:${mm}` };
 }
 
 export default function RadarScan() {
@@ -20,7 +29,6 @@ export default function RadarScan() {
   const [topic, setTopic] = useState("");
   const [geo, setGeo] = useState("US");
   const [profile, setProfile] = useState("auto");
-  const [runToken, setRunToken] = useState("");
   const [viewedScan, setViewedScan] = useState(null);
   const [viewedLabel, setViewedLabel] = useState("");
   const [viewLoading, setViewLoading] = useState(false);
@@ -36,6 +44,9 @@ export default function RadarScan() {
 
   async function startScan(event) {
     event.preventDefault();
+    // Read at request time: the token lives in a shared field that any panel
+    // can edit, so a value captured at mount could be stale.
+    const token = readRunToken();
     setMessage("");
     setTrackMessage("");
     setViewedScan(null);
@@ -44,7 +55,7 @@ export default function RadarScan() {
       method: "POST",
       headers: {
         "content-type": "application/json",
-        ...(runToken ? { "x-run-token": runToken } : {})
+        ...(token ? { "x-run-token": token } : {})
       },
       body: JSON.stringify({ topic, geo, profile })
     });
@@ -57,12 +68,13 @@ export default function RadarScan() {
 
   async function trackTopic() {
     if (!lastScanParams) return;
+    const token = readRunToken();
     setTrackMessage("");
     const response = await fetch("/api/tracked-topics", {
       method: "POST",
       headers: {
         "content-type": "application/json",
-        ...(runToken ? { "x-run-token": runToken } : {})
+        ...(token ? { "x-run-token": token } : {})
       },
       body: JSON.stringify(lastScanParams)
     });
@@ -87,7 +99,6 @@ export default function RadarScan() {
   }
 
   useEffect(() => {
-    setRunToken(window.localStorage.getItem(RUN_TOKEN_STORAGE_KEY) || "");
     loadStatus();
   }, []);
 
@@ -115,49 +126,31 @@ export default function RadarScan() {
         <strong>{formatStatus(job)}</strong>
       </div>
       <p>
-        Runs google_trend_radar.py directly against SerpAPI for any topic — no Anthropic
-        API cost, not tied to the health/wellness niche. Local/self-hosted only. The
-        beauty profile also cross-checks Reddit and tags ingredient/benefit/concern terms.
+        Scan any topic for rising search terms — free of Anthropic API cost, and not limited to
+        health and wellness.
       </p>
-      <form className="radarScanForm" onSubmit={startScan}>
-        <input
-          type="text"
-          value={topic}
-          onChange={(event) => setTopic(event.target.value)}
-          placeholder="Topic, e.g. &quot;AI tools&quot; or &quot;gut health&quot;"
-          maxLength={100}
-          required
-        />
-        <select value={profile} onChange={(event) => setProfile(event.target.value)}>
-          {PROFILES.map((option) => (
-            <option key={option} value={option}>{option}</option>
-          ))}
-        </select>
-        <input
-          type="text"
-          value={geo}
-          onChange={(event) => setGeo(event.target.value)}
-          placeholder="Geo"
-          maxLength={5}
-          className="radarScanGeo"
-        />
-        <button className="button primary" type="submit" disabled={running || !topic.trim()}>
-          Scan
-        </button>
-      </form>
-      <label className="runTokenField">
-        Run token (only needed if deployed with RUN_CONTROL_TOKEN)
-        <input
-          type="password"
-          value={runToken}
-          onChange={(event) => {
-            setRunToken(event.target.value);
-            window.localStorage.setItem(RUN_TOKEN_STORAGE_KEY, event.target.value);
-          }}
-          autoComplete="off"
-          placeholder="optional"
-        />
-      </label>
+      <TopicScanForm
+        topic={topic}
+        onTopic={setTopic}
+        profile={profile}
+        onProfile={setProfile}
+        geo={geo}
+        onGeo={setGeo}
+        onSubmit={startScan}
+        submitLabel="Scan"
+        submitting={running}
+      />
+      <details className="panelNote">
+        <summary>How this works</summary>
+        <p>
+          Runs <code>google_trend_radar.py</code> directly against SerpAPI, scoring trends in code
+          rather than with Claude — so it costs nothing beyond the SerpAPI request. The{" "}
+          <code>beauty</code> profile additionally cross-checks Reddit and tags
+          ingredient/benefit/concern terms. Works locally or self-hosted; on Vercel the scan
+          endpoint returns 501 because there is no Python process to run.
+        </p>
+      </details>
+      <RunTokenField />
       {message || job?.friendlyError ? (
         <p className="runMessage">{message || job.friendlyError}</p>
       ) : null}
@@ -179,20 +172,34 @@ export default function RadarScan() {
         <div className="radarScanHistory">
           <span>Recent scans</span>
           <ul>
-            {recentScans.map((scan) => (
-              <li key={scan.base}>
-                <span>{scan.base.replace(/^trend_radar_/, "").replace(/_\d{4}-\d{2}-\d{2}_\d{4}$/, "")}</span>
-                {scan.hasJson ? (
-                  <a href="#" onClick={(event) => { event.preventDefault(); viewScan(scan.jsonPath, scan.base); }}>
-                    View
-                  </a>
-                ) : null}
-                <a href={`/api/radar-artifact/${scan.htmlPath}`} target="_blank" rel="noreferrer">HTML</a>
-                {scan.hasCsv ? (
-                  <a href={`/api/radar-artifact/${scan.csvPath}`} target="_blank" rel="noreferrer">CSV</a>
-                ) : null}
-              </li>
-            ))}
+            {recentScans.map((scan) => {
+              const { name, when } = describeScan(scan.base);
+              return (
+                <li key={scan.base}>
+                  {/* The whole row opens the results; the small links are the
+                      escape hatches to the raw files. */}
+                  {scan.hasJson ? (
+                    <button
+                      type="button"
+                      className="scanRowOpen"
+                      onClick={() => viewScan(scan.jsonPath, name)}
+                    >
+                      <strong>{name}</strong>
+                      <em>{when}</em>
+                    </button>
+                  ) : (
+                    <span className="scanRowOpen">
+                      <strong>{name}</strong>
+                      <em>{when}</em>
+                    </span>
+                  )}
+                  <a href={`/api/radar-artifact/${scan.htmlPath}`} target="_blank" rel="noreferrer">HTML</a>
+                  {scan.hasCsv ? (
+                    <a href={`/api/radar-artifact/${scan.csvPath}`} target="_blank" rel="noreferrer">CSV</a>
+                  ) : null}
+                </li>
+              );
+            })}
           </ul>
         </div>
       ) : null}

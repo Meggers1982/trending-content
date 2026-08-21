@@ -243,6 +243,65 @@ button.button:disabled {
   cursor: not-allowed;
   opacity: .55;
 }
+/* Labelled fields sized by how much you type into them: the topic gets the
+   room, geo is a country code. */
+.topicScanForm {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 190px 90px auto;
+  align-items: end;
+  gap: 8px;
+  margin: 14px 0 10px;
+}
+.topicScanForm label { display: grid; gap: 4px; min-width: 0; }
+.topicScanForm label span {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+.topicScanForm input,
+.topicScanForm select {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 9px 10px;
+  font: inherit;
+  color: var(--ink);
+  background: #fff;
+  min-width: 0;
+}
+.topicScanForm .button { min-height: 40px; padding: 0 20px; }
+
+/* Secondary detail — present for the curious, out of the way otherwise. */
+.panelNote, .runTokenDisclosure {
+  margin: 0 0 12px;
+  border-top: 1px solid var(--line);
+  padding-top: 10px;
+}
+.panelNote summary, .runTokenDisclosure summary {
+  cursor: pointer;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+.runTokenDisclosure summary .badge { margin-left: 8px; }
+.panelNote p { margin: 8px 0 0; color: var(--muted); font-size: 13px; line-height: 1.6; }
+.runTokenDisclosure label {
+  display: grid;
+  gap: 6px;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.runTokenDisclosure input {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 8px 10px;
+  font: inherit;
+  color: var(--ink);
+  background: #fff;
+}
+
 .runTokenField {
   display: grid;
   gap: 6px;
@@ -363,23 +422,6 @@ button.button:disabled {
   background: var(--surface);
   padding: 18px;
 }
-.radarScanForm {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 12px 0;
-}
-.radarScanForm input[type="text"],
-.radarScanForm select {
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  padding: 8px 10px;
-  font: inherit;
-  color: var(--ink);
-  background: #fff;
-}
-.radarScanForm input[type="text"] { flex: 1 1 220px; }
-.radarScanGeo { flex: 0 0 4.5em; }
 .radarScanHistory { margin-top: 14px; font-size: 12px; }
 .radarScanHistory > span {
   color: var(--muted);
@@ -389,9 +431,37 @@ button.button:disabled {
   font-weight: 700;
 }
 .radarScanHistory ul { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 6px; }
-.radarScanHistory li { display: flex; gap: 10px; align-items: baseline; }
-.radarScanHistory a { color: var(--ink); }
-.radarScanHistory a + a { color: var(--muted); font-size: 11px; }
+.radarScanHistory li {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 6px;
+}
+.radarScanHistory li:last-child { border-bottom: 0; }
+/* The row itself opens the results; the trailing links go to the raw files. */
+.scanRowOpen {
+  flex: 1;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  border: 0;
+  padding: 0;
+  background: none;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.scanRowOpen strong { font-size: 13px; text-transform: capitalize; }
+.scanRowOpen em {
+  font-style: normal;
+  color: var(--muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px;
+}
+button.scanRowOpen:hover strong { text-decoration: underline; }
+span.scanRowOpen { cursor: default; }
+.radarScanHistory a { color: var(--muted); font-size: 11px; font-weight: 800; }
 .radarResultsTable { margin-top: 14px; }
 /* Shared by the Priority Board and the Trend Scanner results table
    (app/components/TableControls.jsx). */
@@ -677,6 +747,9 @@ td b { display: inline-block; min-width: 28px; }
 
 @media (max-width: 900px) {
   main { display: block; }
+  /* Topic keeps the full width; profile/geo/button share the row below it. */
+  .topicScanForm { grid-template-columns: 1fr 90px auto; }
+  .topicScanForm .fieldTopic { grid-column: 1 / -1; }
   .rail { position: static; width: 100%; height: auto; flex-direction: row; justify-content: space-between; }
   .rail nav { display: flex; width: auto; }
   .rail a { padding: 8px 10px; }

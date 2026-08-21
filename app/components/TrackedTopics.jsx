@@ -2,14 +2,16 @@
 
 import { useEffect, useState } from "react";
 import RadarResultsTable from "./RadarResultsTable";
-import { PROFILES } from "@/lib/radar-profiles";
+import RunTokenField, { readRunToken } from "./RunTokenField";
+import TopicScanForm from "./TopicScanForm";
 
-const RUN_TOKEN_STORAGE_KEY = "trending-content-os:run-token";
-
-function authHeaders(runToken) {
+// Read at call time rather than from state: the token lives in a shared field
+// that any panel can edit, so a value captured at mount could be stale.
+function authHeaders() {
+  const token = readRunToken();
   return {
     "content-type": "application/json",
-    ...(runToken ? { "x-run-token": runToken } : {})
+    ...(token ? { "x-run-token": token } : {})
   };
 }
 
@@ -17,7 +19,6 @@ export default function TrackedTopics() {
   const [tracked, setTracked] = useState([]);
   const [loading, setLoading] = useState(true);
   const [message, setMessage] = useState("");
-  const [runToken, setRunToken] = useState("");
   const [newTopic, setNewTopic] = useState("");
   const [newProfile, setNewProfile] = useState("auto");
   const [newGeo, setNewGeo] = useState("US");
@@ -35,7 +36,6 @@ export default function TrackedTopics() {
   }
 
   useEffect(() => {
-    setRunToken(window.localStorage.getItem(RUN_TOKEN_STORAGE_KEY) || "");
     loadTracked();
   }, []);
 
@@ -69,7 +69,7 @@ export default function TrackedTopics() {
     setMessage("");
     const response = await fetch("/api/tracked-topics", {
       method: "POST",
-      headers: authHeaders(runToken),
+      headers: authHeaders(),
       body: JSON.stringify({ topic: newTopic, profile: newProfile, geo: newGeo })
     });
     const data = await response.json();
@@ -85,7 +85,7 @@ export default function TrackedTopics() {
     setMessage("");
     const response = await fetch(`/api/tracked-topics/${id}`, {
       method: "DELETE",
-      headers: authHeaders(runToken)
+      headers: authHeaders()
     });
     const data = await response.json();
     if (!response.ok) {
@@ -125,7 +125,7 @@ export default function TrackedTopics() {
     setStatusById((prev) => ({ ...prev, [id]: "Starting scan…" }));
     const response = await fetch(`/api/tracked-topics/${id}/scan`, {
       method: "POST",
-      headers: authHeaders(runToken)
+      headers: authHeaders()
     });
     const data = await response.json();
     if (!response.ok) {
@@ -151,32 +151,18 @@ export default function TrackedTopics() {
         when deployed, dispatches the scheduled GitHub Actions workflow for just that topic.
       </p>
 
-      <form className="radarScanForm" onSubmit={addTracked}>
-        <input
-          type="text"
-          value={newTopic}
-          onChange={(event) => setNewTopic(event.target.value)}
-          placeholder="Topic to track, e.g. &quot;GLP-1 news&quot;"
-          maxLength={100}
-          required
-        />
-        <select value={newProfile} onChange={(event) => setNewProfile(event.target.value)}>
-          {PROFILES.map((option) => (
-            <option key={option} value={option}>{option}</option>
-          ))}
-        </select>
-        <input
-          type="text"
-          value={newGeo}
-          onChange={(event) => setNewGeo(event.target.value)}
-          placeholder="Geo"
-          maxLength={5}
-          className="radarScanGeo"
-        />
-        <button className="button primary" type="submit" disabled={!newTopic.trim()}>
-          Track
-        </button>
-      </form>
+      <TopicScanForm
+        topic={newTopic}
+        onTopic={setNewTopic}
+        profile={newProfile}
+        onProfile={setNewProfile}
+        geo={newGeo}
+        onGeo={setNewGeo}
+        onSubmit={addTracked}
+        submitLabel="Track"
+        topicLabel="Topic to track"
+        topicPlaceholder="e.g. \u201cGLP-1 news\u201d"
+      />
 
       {message ? <p className="runMessage">{message}</p> : null}
 
@@ -236,19 +222,7 @@ export default function TrackedTopics() {
         <p>No tracked topics yet. Add one above, or use "Track this topic" after running an ad-hoc scan.</p>
       )}
 
-      <label className="runTokenField">
-        Run token (only needed if deployed with RUN_CONTROL_TOKEN)
-        <input
-          type="password"
-          value={runToken}
-          onChange={(event) => {
-            setRunToken(event.target.value);
-            window.localStorage.setItem(RUN_TOKEN_STORAGE_KEY, event.target.value);
-          }}
-          autoComplete="off"
-          placeholder="optional"
-        />
-      </label>
+      <RunTokenField />
     </div>
   );
 }

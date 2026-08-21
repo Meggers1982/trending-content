@@ -1255,6 +1255,29 @@ Note the two rejection counts differ legitimately and both are shown: `signal_su
 is what the model says it filtered (135), while `rejected[]` is what it bothered to itemize (30).
 Picking one number would misrepresent the run.
 
+### Scanner / Tracked Topics UX pass (2026-08-21)
+
+Three panels each rendered their own run-token input against the same
+`localStorage` key, so editing one left the other two showing stale text until a reload.
+`app/components/RunTokenField.jsx` is now the single implementation: it hides the field behind a
+disclosure (it only matters when deployed with `RUN_CONTROL_TOKEN`), shows saved/not-set at a
+glance, and keeps every instance in sync via a custom event plus the native `storage` event. The
+panels no longer hold the token in state at all — they call `readRunToken()` at request time, since
+a value captured at mount can now be changed by another panel.
+
+`app/components/TopicScanForm.jsx` replaces the two near-identical unlabelled forms in RadarScan and
+TrackedTopics. The fields are labelled and sized by what you type into them — the topic gets the
+room, geo is 90px for a country code; previously geo was as wide as the topic. `auto` in the profile
+dropdown now reads "auto (pick by topic)".
+
+Recent scans were rendered by stripping the timestamp off the artifact name, so two scans of the
+same profile produced two identical rows with no way to tell them apart (visible in the UI as two
+bare "beauty" entries). `describeScan()` parses `trend_radar_<slug>_<date>_<HHMM>` into a readable
+name plus timestamp, and the row itself is now the button that opens the results.
+
+The three ad-hoc sections also shared one eyebrow, "Ad-hoc Research"; they now read "Latest Scan",
+"Run a Scan", and "Saved & Scheduled".
+
 ### Rejection reasons are free text — normalize before counting (added 2026-08-21)
 
 Every run records why it cut each topic, but nothing aggregated it, so ~650 rejection decisions

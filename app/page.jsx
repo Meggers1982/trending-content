@@ -590,7 +590,7 @@ export default async function Home({ searchParams }) {
         <section className="board" id="keywords">
           <div className="sectionTitle">
             <div>
-              <p className="eyebrow">Ad-hoc Research</p>
+              <p className="eyebrow">Latest Scan</p>
               <h2>Trending keywords{radarScan?.topic ? ` — ${radarScan.topic}` : ""}</h2>
             </div>
           </div>
@@ -730,7 +730,7 @@ export default async function Home({ searchParams }) {
         <section className="scanSection" id="scan">
           <div className="sectionTitle">
             <div>
-              <p className="eyebrow">Ad-hoc Research</p>
+              <p className="eyebrow">Run a Scan</p>
               <h2>Trend scanner</h2>
             </div>
           </div>
@@ -740,7 +740,7 @@ export default async function Home({ searchParams }) {
         <section className="scanSection" id="tracked">
           <div className="sectionTitle">
             <div>
-              <p className="eyebrow">Ad-hoc Research</p>
+              <p className="eyebrow">Saved &amp; Scheduled</p>
               <h2>Tracked topics</h2>
             </div>
           </div>
