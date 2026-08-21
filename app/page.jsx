@@ -1,5 +1,6 @@
 import {
   getRecurrence,
+  getRejectionTrends,
   getReportText,
   getRunAgeDays,
   getRunSummary,
@@ -322,6 +323,7 @@ export default async function Home({ searchParams }) {
   const summary = getRunSummary(latest);
   const recurrence = getRecurrence(runs, latest);
   const trend = getRunTrend(runs);
+  const rejectionTrends = getRejectionTrends(runs);
   const signals = getSignalText(latest);
   const report = getReportText(latest);
   const reportSections = parseReportSections(report).filter((section) =>
@@ -536,6 +538,51 @@ export default async function Home({ searchParams }) {
                     </div>
                   ))}
               </div>
+            </details>
+          ) : null}
+
+          {/* Cross-run, not per-run: the reject log is only useful as feedback
+              once you can see which reason dominates and which is growing. */}
+          {rejectionTrends ? (
+            <details className="rejectedPanel">
+              <summary>
+                <strong>Why topics get cut</strong>
+                <span className="quiet">
+                  {" "}— {rejectionTrends.total} rejections across {rejectionTrends.runs} runs
+                </span>
+              </summary>
+              <div className="reasonList">
+                {rejectionTrends.reasons.map((item) => {
+                  const direction =
+                    item.delta > 0.5 ? "rising" : item.delta < -0.5 ? "falling" : "";
+                  return (
+                    <div className="reasonRow" key={item.reason}>
+                      <div className="reasonHead">
+                        <strong className={item.isRollup ? "quiet" : ""}>{item.reason}</strong>
+                        <span className="reasonCount">
+                          {item.count}
+                          <em>{item.share}%</em>
+                        </span>
+                      </div>
+                      <span className="scorebar">
+                        <span className="scorefill blue" style={{ width: `${item.share}%` }} />
+                      </span>
+                      <p className="reasonNote">
+                        {direction ? (
+                          <span className={`badge ${direction === "rising" ? "warm" : "good"}`}>
+                            {direction}
+                          </span>
+                        ) : null}
+                        {item.implication}
+                      </p>
+                    </div>
+                  );
+                })}
+              </div>
+              <p className="quiet">
+                Trend compares the last {rejectionTrends.recentRuns} runs against the{" "}
+                {rejectionTrends.priorRuns} before them, per run.
+              </p>
             </details>
           ) : null}
         </section>

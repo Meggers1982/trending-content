@@ -505,6 +505,15 @@ button.button:disabled {
 }
 .rejectedGroup { border-top: 1px solid var(--line); padding-top: 8px; }
 .rejectedGroup .cleanList li { font-size: 13px; color: #444; }
+
+.reasonList { margin-top: 12px; display: grid; gap: 12px; }
+.reasonRow { display: grid; gap: 4px; }
+.reasonHead { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.reasonHead strong { font-size: 14px; }
+.reasonCount { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; }
+.reasonCount em { font-style: normal; color: var(--muted); margin-left: 6px; }
+.reasonNote { margin: 2px 0 0; color: var(--muted); font-size: 12px; line-height: 1.5; }
+.reasonNote .badge { margin-right: 6px; }
 .trackedTopicsList { display: grid; gap: 10px; margin-top: 14px; }
 .trackedTopicRow {
   border: 1px solid var(--line);

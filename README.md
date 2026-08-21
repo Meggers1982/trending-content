@@ -42,6 +42,9 @@ Under it:
   steps, with a "Copy brief" button. Filter by priority or search across angles and headlines. A
   "day N" chip marks a story that has carried across consecutive runs.
 - **Rejected topics** — collapsed by default, grouped by rejection reason.
+- **Why topics get cut** — the same rejections aggregated across every run, with each reason's
+  share, whether it is rising or falling, and which config it implicates. Currently ~53% of all
+  rejections are off-category, which points at `GOOGLE_NEWS_QUERIES` rather than at the filter.
 - **Generated runs** — click any past date to load that whole run into the page
   (`/?run=YYYY-MM-DD`); the standalone HTML file is still there as a downloadable snapshot.
 

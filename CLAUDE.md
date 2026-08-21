@@ -1255,6 +1255,26 @@ Note the two rejection counts differ legitimately and both are shown: `signal_su
 is what the model says it filtered (135), while `rejected[]` is what it bothered to itemize (30).
 Picking one number would misrepresent the run.
 
+### Rejection reasons are free text — normalize before counting (added 2026-08-21)
+
+Every run records why it cut each topic, but nothing aggregated it, so ~650 rejection decisions
+were being thrown away as exhaust. `getRejectionTrends()` in `lib/runs.js` turns them into config
+feedback: each reason's share of all rejections, whether it is rising or falling, and which config
+file it implicates (`REASON_IMPLICATIONS`).
+
+The reasons are model-written free text, so **28 runs produced 398 distinct reason strings** for
+what is really six decisions. `normalizeRejectionReason()` cuts at the first detail separator
+(`— : / ( , ;`), collapses `_`/space to `-`, applies an alias table, and folds qualified variants
+onto their family (`off_category_product_marketing` → `off-category`). Reasons appearing fewer than
+`MIN_REASON_COUNT` (3) times across all history roll up into a single "N one-off reasons" row rather
+than crowding the families that matter.
+
+First result worth acting on: **53% of all rejections are off-category**, and falling, while
+`existing` is rising sharply. That implicates `GOOGLE_NEWS_QUERIES` pulling material the site was
+never going to cover — a query problem, not a filter problem. Any new reason vocabulary the model
+invents will show up in the one-off rollup; if a rollup row grows, add the family to
+`REASON_ALIASES` or `REASON_IMPLICATIONS`.
+
 ### Recurrence and staleness are computed from the runs, not run_history.yaml
 
 `data/run_history.yaml` records `signals_reviewed`/`topics_retained`/`key_themes` per run, but the
