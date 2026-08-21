@@ -1,0 +1,269 @@
+{
+  "run_date": "2026-06-19",
+  "niche": "health and wellness",
+  "signal_summary": {
+    "total_reviewed": 144,
+    "total_retained": 9,
+    "total_rejected": 135,
+    "tools_active": [
+      "web_search",
+      "google_news",
+      "google_trends",
+      "serpapi"
+    ],
+    "tools_unavailable": [],
+    "notes": "site_url not configured — content_status assignments use competitor-check fallback. deferred_topics.yaml and run_history.yaml not found — no cross-run staleness checks performed. Google Trends 7-day pre-fetch used as primary search_velocity for all scored candidates. Strongest positive 7d-delta observed in: fitness (+13), gut health (+12), nutrition (+9), weight loss (+7)."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Alfredo Sauce Salmonella Recall — FDA Class I (41+ States)",
+      "primary_entity": "Alfredo sauce salmonella recall",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 88,
+      "opportunity_score": 85,
+      "discover_score": 5,
+      "urgency": "now",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 7,
+      "recommended_angle": "Is Your Alfredo Sauce in the Recall? Here's What to Check Right Now — Action-first format with brand names, lot codes, states affected, salmonella symptoms, and what to do if exposed.",
+      "why_now": "FDA Class I classification (highest risk tier) with 41-state scope. Multi-outlet convergence (ABC News, NBC New York, LiveNOW FOX) confirms national consumer-safety event. Competitors lack actionable consumer guidance on symptoms and disposal.",
+      "primary_headline": "Is Your Alfredo Sauce Recalled? FDA Issues Highest-Risk Warning Across 41 States",
+      "next_steps": "Publish today; pull exact product names and lot codes directly from FDA recall page; link FDA enforcement report; include symptom checklist and refund process.",
+      "notes": "Specific brand name and lot codes must be confirmed from FDA.gov before publish. Do not publish generic recall article without exact product identifiers."
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Infant Formula Botulism Outbreak — FDA Investigation (June 2026)",
+      "primary_entity": "infant formula botulism outbreak",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates / pediatric health",
+      "trend_strength_score": 85,
+      "opportunity_score": 87,
+      "discover_score": 5,
+      "urgency": "now",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 4,
+      "recommended_angle": "FDA Is Investigating an Infant Botulism Outbreak Tied to Powdered Formula: What Parents Need to Know — Safety-first guide covering affected products, symptom checklist for caregivers, when to seek emergency care, and FDA reporting process.",
+      "why_now": "FDA published active outbreak investigation page on June 17, 2026. Infant botulism is rare but life-threatening if untreated. Parents need specific product identifiers and emergency symptom checklist immediately.",
+      "primary_headline": "FDA Investigating Infant Botulism Outbreak Linked to Powdered Formula: What Parents Should Do Now",
+      "next_steps": "Publish today; pull exact product names, lot codes, and NDC numbers from FDA outbreak investigation page; include symptom checklist and BabyBIG treatment information.",
+      "notes": "Active investigation — use language 'FDA is investigating a possible link' not 'formula causes botulism.' Infant botulism ≠ adult foodborne botulism; distinguish clearly. Verify FDA outbreak page URL is live before publish."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Generic Cymbalta (Duloxetine) Antidepressant Recalled Over Possible Carcinogen Risk",
+      "primary_entity": "duloxetine antidepressant carcinogen recall",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 78,
+      "opportunity_score": 80,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Your Antidepressant May Be Recalled: What to Know About Duloxetine and Carcinogen Risk — Patient-centered guide emphasizing the critical safety message: DO NOT abruptly stop duloxetine; consult prescriber before any changes. Most recall coverage misses discontinuation syndrome risk.",
+      "why_now": "Health.com and MedShadow reported recall on 06/15–06/16. Generic duloxetine is among the most widely prescribed antidepressants in the US. Patients may panic and stop medication, creating serious discontinuation syndrome risk. No competitor addresses this safety angle prominently.",
+      "primary_headline": "Popular Antidepressant Recalled Over Carcinogen Concern — Read This Before You Stop Taking It",
+      "next_steps": "Within 24 hours: verify FDA enforcement report URL; confirm manufacturer and lot codes; publish with prominent discontinuation warning; cite FDA medication guide on tapering.",
+      "notes": "FDA enforcement report URL must be confirmed before publish. Nitrosamine contamination is long-term/cumulative risk, not acute toxicity. Abruptly stopping duloxetine can cause serious withdrawal syndrome — prominently warn patients to consult prescriber."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Shingles Vaccine Linked to Reduced Dementia Risk — New Research",
+      "primary_entity": "shingles vaccine dementia risk",
+      "signal_type": "study_or_research",
+      "allowed_category": "medical research and clinical trials / aging and longevity",
+      "trend_strength_score": 76,
+      "opportunity_score": 78,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 4,
+      "recommended_angle": "Does the Shingles Vaccine Protect Your Brain? What a New Study Actually Found — Research translation with skeptical framing: what was measured, strength of evidence, who should update vaccination calculus. Differentiate from competitor hype-forward headlines with rigorous 'what this means and doesn't mean' framing.",
+      "why_now": "Brown University study announcement (06/15) generated credible coverage. Dementia prevention is highest-interest topic for 50+ audience. Shingrix already recommended for adults 50+, so finding has immediate actionability.",
+      "primary_headline": "New Study: Shingles Vaccine May Lower Dementia Risk — Here's What the Evidence Actually Shows",
+      "next_steps": "Locate DOI/PubMed record for Brown University study; confirm study design (observational vs. RCT); explain healthy vaccinee bias as key limitation; clarify vaccine recommendation context.",
+      "notes": "Observational study — association, not causation. Cannot claim vaccine 'prevents' dementia. Healthy vaccinee bias must be acknowledged. Journal DOI/PubMed must be found before publish."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "GLP-1 Drugs (Ozempic/Wegovy) May Save Over $192,000 in Lifetime Medical Costs for People With Obesity",
+      "primary_entity": "GLP-1 obesity treatment lifetime cost savings",
+      "signal_type": "study_or_research",
+      "allowed_category": "nutrition and diet science / chronic disease management",
+      "trend_strength_score": 74,
+      "opportunity_score": 76,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "GLP-1 Drugs for Obesity Could Save $192K in Lifetime Medical Costs — But There's a Catch — Frame around full picture: significant cost savings vs. high drug costs, insurance coverage gaps, access inequity. Include structural critique competitors omit.",
+      "why_now": "Fortune study coverage (06/14) within freshness window. GLP-1 search interest persistently high (weight loss +7 7d-delta in Trends). Cost-effectiveness data rare in GLP-1 coverage; addresses top audience financial question.",
+      "primary_headline": "GLP-1 Drugs Could Save People With Obesity $192,000+ Over Their Lifetime — But Access Remains the Problem",
+      "next_steps": "Confirm journal citation and DOI; break down what the $192K includes; address drug cost barriers and insurance coverage gaps; include policy debate perspective.",
+      "notes": "$192K is modeled projection, not observed real-world savings. Must frame as modeling study, not clinical trial. Journal citation and DOI must be confirmed before publish."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "NIH: Lifestyle Changes Cut Prediabetes Progression to Multiple Chronic Conditions",
+      "primary_entity": "prediabetes lifestyle intervention multiple chronic conditions",
+      "signal_type": "clinical_trial",
+      "allowed_category": "chronic disease management / medical research and clinical trials",
+      "trend_strength_score": 70,
+      "opportunity_score": 72,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Lifestyle Changes for Prediabetes Do More Than Prevent Diabetes, NIH Study Finds — Lead with multi-condition framing (heart disease, kidney disease, sleep apnea, NAFLD) rather than standard 'diet prevents diabetes' angle.",
+      "why_now": "NIH.gov published 06/15 (institutional primary source confirmed). Prediabetes affects 98 million US adults. High search interest in nutrition (+9) and gut health (+12) supports audience relevance.",
+      "primary_headline": "Lifestyle Changes for Prediabetes Do More Than Prevent Diabetes, NIH Study Finds",
+      "next_steps": "Locate NIH.gov news release (06/15); confirm conditions measured in study; cite ClinicalTrials.gov trial record; include structured program details vs. generic 'just eat better' framing.",
+      "notes": "Confirm whether this is DPP (Diabetes Prevention Program) analysis or new trial. Must frame as 'structured program' with diet + physical activity + behavior support, not casual lifestyle changes."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Pancreatic Cancer: Two Advances Fuel New Optimism in Treatment",
+      "primary_entity": "pancreatic cancer treatment advances 2026",
+      "signal_type": "study_or_research",
+      "allowed_category": "medical research and clinical trials / chronic disease management",
+      "trend_strength_score": 68,
+      "opportunity_score": 70,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 4,
+      "recommended_angle": "Two Breakthroughs in Pancreatic Cancer: What the Science Actually Promises (and What It Doesn't Yet) — Balanced progress narrative acknowledging worst survival rates while contextualizing what these advances change vs. persistent prognosis reality. Avoids both false hope and unnecessary pessimism.",
+      "why_now": "Mayo Clinic (06/18) and Cedars-Sinai (06/15) both reported advances in same cycle. Two institutional sources signal genuine clinical momentum. Pancreatic cancer affects 66,440 new US patients annually.",
+      "primary_headline": "Pancreatic Cancer Research Is Having a Breakthrough Moment — Here's What's Actually Changed",
+      "next_steps": "Confirm Mayo Clinic advance 1 and Cedars-Sinai drug candidate from institutional newsroom; verify drug name, trial phase, comparator, and patient population; contextualize with current 13% 5-year survival rate.",
+      "notes": "'Double survival time' is significant claim — confirm trial phase, comparator, and patient population before publish. Phase I findings must not be presented as standard-of-care ready."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Global Clinical Trial Identifies Safest, Most Effective Antibiotics for Staph Bloodstream Infections",
+      "primary_entity": "golden staph bloodstream infection antibiotic trial",
+      "signal_type": "clinical_trial",
+      "allowed_category": "medical research and clinical trials / infectious disease",
+      "trend_strength_score": 65,
+      "opportunity_score": 68,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Scientists Just Ran the World's Largest Staph Infection Trial — Here's What They Found About the Best Antibiotics — Translate clinical trial results for general audience: what Staphylococcus aureus is, why bloodstream infections are dangerous, what trial compared, what changed in standard of care. Include antimicrobial resistance (AMR) angle.",
+      "why_now": "Medical Xpress report (06/18) on global trial results. 'World's largest' framing provides differentiation. Antimicrobial resistance is growing public health priority.",
+      "primary_headline": "The World's Largest Staph Infection Trial Just Reported — Here's What Doctors Will Do Differently",
+      "next_steps": "Locate Medical Xpress article; find journal name and DOI from article; identify specific antibiotic names tested; confirm trial size and primary outcome; contextualize with 15–50% mortality rate.",
+      "notes": "Journal DOI must be found before publish. 'Most effective' claim requires quantified outcome data from primary source. Locate specific antibiotic names — do not publish without them."
+    },
+    {
+      "priority_level": "P4",
+      "publish_timing": "evergreen",
+      "topic": "RFK Jr.'s $700 Million Mental Health Announcement: What the Grants Actually Are",
+      "primary_entity": "RFK Jr mental health funding $700 million",
+      "signal_type": "policy_or_regulatory_change",
+      "allowed_category": "public health and epidemiology / mental health and psychology",
+      "trend_strength_score": 58,
+      "opportunity_score": 62,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "RFK Jr. Says He's Delivering $700M for Mental Health. Experts Say Much of It Was Already Funded. — Skeptical accountability angle: what is actual new money vs. repackaged existing grants? What real-world mental health services will this fund? Who benefits? STAT News skepticism angle is key differentiation.",
+      "why_now": "STAT News (06/17) reported expert skepticism; mental health search interest elevated (48, -4 7d-delta). Audience trust served better by skeptical clarity than press release amplification.",
+      "primary_headline": "RFK Jr. Says He's Delivering $700M for Mental Health. Experts Say Much of It Was Already Funded.",
+      "next_steps": "Locate STAT News article; identify specific grants called out as pre-existing; confirm HHS initiative context (GetActive.gov 06/15); quote expert analysis directly; queue for publication in evergreen mental health series.",
+      "notes": "Factual framing required; quote STAT expert skepticism directly. Do not editorialize against specific policy positions. Current Cabinet secretary context requires careful neutral language."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "Anne Hathaway pregnant",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Jeremy Clarkson health / David Bromstad health",
+      "reason": "off-category"
+    },
+    {
+      "topic": "California health insurance tax increase",
+      "reason": "off-category"
+    },
+    {
+      "topic": "AI making healthcare less affordable",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "Samsung VivaTech wellness solutions announcement",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Bank of America wellness spending trend",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Balenciaga wellness kick",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Wearables in clinical research",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "LungSMART bilingual digital health content",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "Novo Nordisk clinical trial data cyberattack",
+      "reason": "off-category"
+    },
+    {
+      "topic": "USF liver cancer drug funding",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "Northwestern Medicine cancer trial recruitment AI",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "Crumbl dirty soda nutrition facts",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Sauerkraut / Trump cabinet diet",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Global Wellness Day 2026",
+      "reason": "off-category"
+    },
+    {
+      "topic": "CMS office for health technology",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "Hutchinson/Berkeleyside wellness center closure",
+      "reason": "off-category"
+    }
+  ]
+}

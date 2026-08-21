@@ -1,0 +1,292 @@
+{
+  "run_date": "2026-06-05",
+  "niche": "health and wellness",
+  "signal_summary": {
+    "total_reviewed": 187,
+    "total_retained": 9,
+    "total_rejected": 178,
+    "tools_active": [
+      "serpapi_news",
+      "serpapi_search",
+      "google_trends_prefetch",
+      "exa_semantic",
+      "rss_feeds",
+      "reddit",
+      "competitor_scrape"
+    ],
+    "tools_unavailable": [
+      "content_database",
+      "youtube_api",
+      "arxiv"
+    ],
+    "notes": "Strong convergence signal on men's mental health (Google Trends +12 delta) with seasonal June awareness month driver. Nutrition and food safety keywords running as cluster (+11 and +10 deltas respectively). site_url not configured — competitor fallback used (Healthline, WebMD, STAT News). First run in session — no prior staleness flags."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Men's Mental Health Awareness Month — June 2026",
+      "primary_entity": "Men's Mental Health Awareness Month",
+      "signal_type": "seasonal_trend",
+      "allowed_category": "mental health and psychology",
+      "trend_strength_score": 82,
+      "opportunity_score": 78,
+      "discover_score": 5,
+      "urgency": "now",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 6,
+      "recommended_angle": "A practical, evidence-backed explainer on why men underutilize mental health resources — and what actually works to change that",
+      "why_now": "June IS Men's Mental Health Awareness Month. Google Trends shows 8 simultaneous rising queries on this exact topic, all peaking now. Zero high-quality explainers dominate the SERP. The moment is now — this content ages out of peak relevance after June 10.",
+      "primary_headline": "It's Men's Mental Health Awareness Month — Here's What the Data Says Is Actually Holding Men Back",
+      "next_steps": "Assign immediately. Draft today. Publish within 24 hours. Target 1,400–1,800 words.",
+      "notes": "Confidence capped Medium: verify DOI before publish. site_url not configured — self-check skipped; competitor coverage checked: Healthline and WebMD have evergreen articles but nothing optimized for June 2026 awareness window with fresh Pew + CNN data. Integrity flags: (1) 1.2B figure is global, not US — use CDC/SAMHSA US-specific data for US audience. (2) Distinguish self-reported stigma from structural barriers in solutions."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "'Natural' Food Preservatives Linked to Blood Pressure and Heart Attacks — What the Research Says",
+      "primary_entity": "natural food preservatives",
+      "signal_type": "study_or_research",
+      "allowed_category": "nutrition and diet science",
+      "trend_strength_score": 74,
+      "opportunity_score": 72,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 4,
+      "recommended_angle": "What specific preservatives are implicated, how the study was designed, what the magnitude of risk actually is — cutting through the fear-framing",
+      "why_now": "CNN published this study coverage 16 days ago (05/20/2026) and nutrition/food safety keywords are both in top-10 rising signals this week. The SERP shows no consumer-facing explainer that contextualizes the actual study findings vs. the alarming headline.",
+      "primary_headline": "'Natural' Preservatives and Heart Risk: What the Study Actually Found (And What It Didn't)",
+      "next_steps": "Assign to writer with nutrition/food science background. Verify study DOI before drafting. Publish within 48 hours.",
+      "notes": "⚠️ INTEGRITY: Verify primary study DOI from CNN article before briefing writer. Do not publish without primary source verification. Separate from 01/07/2026 CNN article on preservatives and cancer/T2D — those are different studies. Specify which preservatives were studied; do not generalize across category. Report absolute risk increase, not just relative risk."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "How to Actually Read a Nutrition Label in 2026",
+      "primary_entity": "nutrition label reading",
+      "signal_type": "rising_search_interest",
+      "allowed_category": "nutrition and diet science",
+      "trend_strength_score": 68,
+      "opportunity_score": 76,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 5,
+      "recommended_angle": "A 2026-specific guide that addresses the new FDA nutrition label format changes, ultra-processed food markers, and how to spot marketing language vs. regulatory terms",
+      "why_now": "Google Trends explicitly surfaces 'how to read nutrition labels' as a rising query this week. The nutrition keyword has its second-highest 7-day delta of all tracked terms (+11). The FDA's updated Nutrition Facts label rollout (added sugars, updated serving sizes, Vitamin D) is now fully in effect, but most existing guides predate the update.",
+      "primary_headline": "How to Read a Nutrition Label in 2026 (The Updated FDA Format, Explained)",
+      "next_steps": "Assign to health/nutrition writer. Relatively low research lift — primarily synthesizes FDA guidance with practical framing. Publish within 3 days.",
+      "notes": "Strong evergreen with seasonal search spike. High Discover potential. site_url not configured — self-check skipped. INTEGRITY: % Daily Value figures are based on 2,000-calorie diet — note this varies by individual; do not imply they are universal targets. 'Natural' has no FDA regulatory definition — present accurately."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Gut Health Fundamentals: Prebiotics vs. Probiotics — What the Evidence Actually Shows",
+      "primary_entity": "gut health / prebiotics vs. probiotics",
+      "signal_type": "rising_search_interest",
+      "allowed_category": "gut health and microbiome",
+      "trend_strength_score": 57,
+      "opportunity_score": 71,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 4,
+      "recommended_angle": "Evidence review distinguishing prebiotic vs. probiotic mechanisms with clear consumer-actionable guidance; skeptical of supplement marketing claims",
+      "why_now": "Gut health keyword 7d-delta +6; 'prebiotic vs probiotic' explicitly surfaces in Google Trends rising queries; multiple related gut health queries all rising. High AI-query topic with thin, supplement-ad-heavy SERP.",
+      "primary_headline": "Prebiotics vs. Probiotics: What They Actually Do (According to the Science)",
+      "next_steps": "Assign; moderate research lift. Publish within 5–7 days. Pair with internal links to nutrition label guide and food preservatives coverage.",
+      "notes": "Supplement marketing exclusion applies — frame around food sources and clinical evidence, not branded products. INTEGRITY: Most probiotic supplement evidence is strain-specific; do not generalize 'probiotics work' across all strains or conditions. Gut microbiome research is rapidly evolving — note observational vs. RCT evidence levels explicitly."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Arts, Culture, and Biological Aging — What the Study Actually Found",
+      "primary_entity": "arts and culture biological aging study",
+      "signal_type": "study_or_research",
+      "allowed_category": "aging and longevity",
+      "trend_strength_score": 55,
+      "opportunity_score": 66,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Accurate translation of what 'biological aging' measurement means, what 'engaging with arts' was operationalized as in the study, and what size effect was found — vs. how it was headline-framed",
+      "why_now": "Longevity is a sustained high-interest category. This study (05/14/2026) remains fresh (22 days) and the SERP has only aggregated news coverage with no analytical explainer. The 'as much as exercise' framing will drive continued searches.",
+      "primary_headline": "Can Culture Slow Aging? What the New Study Actually Measured (And What It Didn't)",
+      "next_steps": "Retrieve study DOI from CNN article before assigning. Verify biological aging measurement method (epigenetic clock? telomere length?). Publish within 7 days.",
+      "notes": "⚠️ INTEGRITY: Confidence capped at Medium pending DOI verification. 'Biological aging' encompasses multiple measurement methods — specify which was used; they are not equivalent. 'As much as exercise' framing requires absolute effect size comparison; do not reproduce without that context. Mild overstatement in CNN headline must be addressed in article body. Reverse causation is plausible (healthier people engage more with arts)."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Breast Cancer: What Rising Search Interest Tells Us About Content Gaps",
+      "primary_entity": "breast cancer",
+      "signal_type": "rising_search_interest",
+      "allowed_category": "chronic disease management",
+      "trend_strength_score": 53,
+      "opportunity_score": 63,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "What does breast cancer screening look like in 2026? Updated USPSTF guidelines (updated to recommend starting at 40) vs. ACS vs. ACR — the conflicting guidance problem explained",
+      "why_now": "Breast cancer in Trending Now without a specific breaking news event = audience-driven evergreen query spike. The 2024 USPSTF guideline change (start mammograms at 40) created lasting confusion across search. The SERP shows conflicting guideline summaries with no authoritative synthesis for a general audience.",
+      "primary_headline": "Breast Cancer Screening in 2026: Which Guidelines Should You Actually Follow?",
+      "next_steps": "Assign; low-to-moderate research lift. This is a guideline synthesis piece. Publish within 7–10 days. High long-tail value.",
+      "notes": "No specific news trigger confirmed — schedule rather than rush. site_url not configured — self-check skipped. INTEGRITY: Do not recommend a specific screening protocol — present guidelines neutrally and direct readers to discuss with their physician. Clearly date all guideline references; the USPSTF update is 2024."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Health Influencers: Who to Trust and Why the Science of Health Advice Matters",
+      "primary_entity": "health and wellness influencers",
+      "signal_type": "rising_search_interest",
+      "allowed_category": "public health and epidemiology",
+      "trend_strength_score": 51,
+      "opportunity_score": 65,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 4,
+      "recommended_angle": "Using Pew data to categorize who health influencers actually are, what trust patterns look like by demographic, and what criteria should govern whether a health claim merits action",
+      "why_now": "Pew Research published two simultaneous reports on health influencer trust on 05/07/2026. NYT covered the same topic next day. Deseret News added a young adult angle. This is a cluster signal, not a single story.",
+      "primary_headline": "Who Are America's Health Influencers — And Should You Trust Them?",
+      "next_steps": "Assign; medium research lift. Anchor to Pew data. Publish within 7–10 days.",
+      "notes": "Brand safety check: do not name or amplify specific influencers who spread unverified claims. Frame as a structural/media literacy piece. INTEGRITY: Pew data reflects self-reported trust — distinguish from evidence that influencer advice is accurate or effective. Avoid false equivalence between peer-reviewed health guidance and influencer recommendations."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "evergreen",
+      "topic": "Food Preservatives and Cancer Risk: What the Research Actually Says",
+      "primary_entity": "food preservatives cancer risk",
+      "signal_type": "evergreen_with_fresh_angle",
+      "allowed_category": "nutrition and diet science",
+      "trend_strength_score": 50,
+      "opportunity_score": 60,
+      "discover_score": 3,
+      "urgency": "evergreen",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Comprehensive, balanced review of the preservative-cancer evidence base: what's studied, what the effect sizes are, what regulatory agencies say, and how to contextualize risk",
+      "why_now": "This is an evergreen high-value topic with two fresh news pegs (01/07/2026 CNN; 05/20/2026 CNN on natural preservatives). The SERP has fear-based aggregator content but no measured, evidence-grounded review.",
+      "primary_headline": "Do Food Preservatives Cause Cancer? Here's What the Research Actually Shows",
+      "next_steps": "Add to evergreen backlog. Assign when bandwidth allows. Can be timed to a future FDA action or nutrition news peg.",
+      "notes": "⚠️ INTEGRITY: Requires heavy DOI verification for all cancer association claims before drafting. Do not recycle CNN headlines — these need primary source grounding. 'Linked to' cancer in observational studies ≠ 'causes' cancer; specify study type and effect size for every claim. Report absolute risk, not relative risk alone."
+    },
+    {
+      "priority_level": "P5",
+      "publish_timing": "monitor",
+      "topic": "Rapamycin as a 'Longevity Drug' — Impact on Exercise",
+      "primary_entity": "rapamycin",
+      "signal_type": "drug_or_treatment_claim",
+      "allowed_category": "aging and longevity",
+      "trend_strength_score": null,
+      "opportunity_score": null,
+      "discover_score": null,
+      "urgency": "monitor",
+      "confidence": "low",
+      "content_status": "new",
+      "source_count": 1,
+      "recommended_angle": null,
+      "why_now": "WaPo (04/29/2026) coverage uses 'longevity drug' framing that materially overstates rapamycin's indication. Rapamycin is an FDA-approved immunosuppressant for organ transplant rejection, used off-label in longevity contexts. The mechanism distortion creates safety implication concerns.",
+      "primary_headline": null,
+      "next_steps": "Re-evaluate when primary study DOI confirmed and clinical expert sourcing (geriatrician or exercise physiologist with pharmacology context) is available. Do not draft without this scaffolding. Could be a strong P2 with correct framing.",
+      "notes": "⚠️ ROUTED TO MONITOR — DO NOT PUBLISH WITHOUT REFRAMING. 'Longevity drug' is a material overstatement of rapamycin's regulatory status. The 'surprising impact on exercise' finding may be legitimate research but requires editorial reframing before briefing. Framing must be inverted to lead with what rapamycin actually is and how the study was designed before discussing exercise implications."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "Jesse Ridgway (Trending Now)",
+      "reason": "off-category — YouTube creator/entertainment content; no health angle"
+    },
+    {
+      "topic": "Longevity expert daily routine (CNBC, 02/06/2026)",
+      "reason": "stale — 4 months old; no new development; evergreen without fresh signal; single source"
+    },
+    {
+      "topic": "Five healthy habits longevity 40s–50s (Stanford, 01/07/2026)",
+      "reason": "stale — 5 months old; below freshness threshold for P1/P2; no new research peg; competitor-saturated SERP"
+    },
+    {
+      "topic": "Coffee protects against aging/disease (USA Today, 05/02/2026)",
+      "reason": "stale — 34 days old; study signal below trend threshold; coffee-health SERP heavily saturated; marginal opportunity score (47)"
+    },
+    {
+      "topic": "Combining diet, exercise, sleep extends life (CNN, 01/13/2026)",
+      "reason": "stale — 5 months old; no new development; extremely well-covered evergreen"
+    },
+    {
+      "topic": "Difficult people age you faster (WaPo, 03/08/2026)",
+      "reason": "stale — 89 days old; social stress-aging observational study; SERP saturated; opportunity score below threshold (48)"
+    },
+    {
+      "topic": "Beta-blockers after heart attack — lifelong question (CNN, 03/30/2026)",
+      "reason": "stale — 67 days old; outside freshness P2 window (14 days); requires cardiology expert sourcing not available"
+    },
+    {
+      "topic": "Marijuana and mental health — doesn't ease anxiety (CNN, 03/16/2026)",
+      "reason": "stale — 81 days old; below freshness ceiling for medical study P2 (14 days); trend signal not active this week"
+    },
+    {
+      "topic": "Experimental brain therapy for depression (CNN, 01/15/2026)",
+      "reason": "stale — 141 days old; clinical trial claim; opportunity score borderline (58) but freshness fails P2 ceiling"
+    },
+    {
+      "topic": "Pregnancy outcomes + men's health (GMA, 03/17/2026)",
+      "reason": "stale — 80 days old; trend signal not detected; opportunity score marginal (52)"
+    },
+    {
+      "topic": "IFT.org — What Consumers Want 2026 (01/12/2026)",
+      "reason": "stale — 5 months old; industry research report; B2B angle; off-category for consumer health audience"
+    },
+    {
+      "topic": "Health advice — doctors vs. phone (Deseret News, 05/11/2026)",
+      "reason": "absorbed into Health Influencers brief (Brief 007) as supporting source; not separate story"
+    },
+    {
+      "topic": "5 more minutes of exercise extends life (CNN, 02/13/2026)",
+      "reason": "stale — 4 months old; opportunity score 44; SERP saturated with exercise-longevity content"
+    },
+    {
+      "topic": "Wellness brand rising queries (stc wellness city, civana, vyora, lexi j)",
+      "reason": "off-category — brand/spa/resort search queries, not health content; brand safety flag"
+    },
+    {
+      "topic": "Crumbl dirty soda nutrition / Kona Ice nutrition",
+      "reason": "off-category — food brand calorie lookups, not editorial health content; insufficient signal for editorial brief"
+    },
+    {
+      "topic": "BCAA supplement rising queries (evlution, optimum nutrition BCAA)",
+      "reason": "off-category — supplement marketing category; excluded per category_rules.yaml"
+    },
+    {
+      "topic": "Planetary health diet (rising query)",
+      "reason": "weak-signal — no news corroboration; single trend query; opportunity score 41"
+    },
+    {
+      "topic": "Weight loss celebrity queries (Anna Faris, Chrissy Metz, Mollie Hemingway, Joyce Vance)",
+      "reason": "off-category — celebrity gossip; excluded per brand_safety_rules"
+    },
+    {
+      "topic": "Paragon Health Institute (rising query)",
+      "reason": "off-category — policy think-tank; pure political healthcare opinion without health data angle"
+    },
+    {
+      "topic": "8 dimensions of wellness (rising query)",
+      "reason": "weak-signal — wellness keyword delta marginal (+1); opportunity score 39; no news corroboration"
+    },
+    {
+      "topic": "Fitness trackers without monthly fees (rising query)",
+      "reason": "off-category — product/brand comparison query; off-category for health journalism focus"
+    }
+  ]
+}

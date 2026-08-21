@@ -1,0 +1,265 @@
+{
+  "run_date": "2026-08-20",
+  "niche": "health and wellness",
+  "signal_summary": {
+    "total_reviewed": 144,
+    "total_retained": 8,
+    "total_rejected": 136,
+    "tools_active": [
+      "web_search",
+      "google_news",
+      "google_trends",
+      "serpapi"
+    ],
+    "tools_unavailable": [],
+    "notes": "site_url not configured — self-check skipped; competitor fallback active. Google Trends pre-fetch used as primary search_velocity source. Breaking-recall exception applied to egg and blueberry recalls. Two simultaneous FDA Class I food recalls create high-urgency dual-recall news cycle. Mental health search interest trending (+3 seven-day delta). All candidates set to content_status: new with disclosure."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "FDA Class I Egg Recall — Salmonella (19M cartons)",
+      "primary_entity": "FDA Class I Egg Recall",
+      "signal_type": "breaking_news",
+      "allowed_category": "food safety",
+      "trend_strength_score": 88,
+      "opportunity_score": 82,
+      "discover_score": 5,
+      "urgency": "now",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 8,
+      "recommended_angle": "Consumer action guide: what the Class I designation means, how to check if your eggs are affected, salmonella symptoms to watch for, what to do with recalled eggs",
+      "why_now": "FDA upgraded to Class I (highest risk) within past 72 hours. Broad news coverage but no consumer-facing action guide yet. Direct public safety impact. 19M cartons affected across South and Southwest US.",
+      "primary_headline": "FDA Upgrades Egg Recall to Class I — Here's How to Check if Your Eggs Are Affected",
+      "next_steps": "Assign immediately. Pull official lot numbers from FDA.gov recall page. Verify Class I notice URL. Publish within 6 hours.",
+      "notes": "Breaking-recall exception used — verify FDA notice directly before publish. Do not overstate geographic scope without confirming current distribution list. Confidence capped at Medium per exception rule until directly verified."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Blueberry Recall Upgraded to FDA Class I in 8 States",
+      "primary_entity": "Blueberry Recall",
+      "signal_type": "breaking_news",
+      "allowed_category": "food safety",
+      "trend_strength_score": 74,
+      "opportunity_score": 72,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Consumer action guide: which states, which products, lot numbers, what to do. Brief explainer on Class I. Pair with egg recall as part of dual-recall food safety news cycle.",
+      "why_now": "Same-day Class I upgrade (2026-08-20). Separate recall from egg story. Eight-state scope means large affected population. Double-recall news cycle creates high search demand.",
+      "primary_headline": "Blueberry Recall Upgraded to FDA's Highest Risk Level in 8 States — What to Check Now",
+      "next_steps": "Pull FDA notice first. Confirm product name, brands, lot numbers, states. Publish same day if notice confirmed.",
+      "notes": "FDA notice URL not directly retrieved — do not publish specific lot numbers or brand names without confirming from fda.gov. Breaking-recall exception applies but confidence is Medium — confirm 3+ credible sources before assign."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Oregon's Real-World Psilocybin Program Shows Promise for PTSD and Depression",
+      "primary_entity": "Oregon psilocybin program",
+      "signal_type": "medical_study",
+      "allowed_category": "mental health",
+      "trend_strength_score": 72,
+      "opportunity_score": 78,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "What the real-world data actually shows — and why it differs from a controlled trial. Separate signal from hype. Explain real-world study design vs. RCT.",
+      "why_now": "NPR published 2026-08-19 reporting on real-world outcomes study from Oregon's first-in-nation legal psilocybin program. Mental health search interest +3 seven-day delta in Google Trends. This is distinct from clinical trial data — population-level real-world evidence.",
+      "primary_headline": "Oregon's Psilocybin Program Just Got Its First Real-World Data. Here's What It Actually Shows.",
+      "next_steps": "Retrieve underlying study from Oregon Health Authority or PubMed. Verify study design (observational, cross-sectional, longitudinal). Assign mental health writer with psychedelic-therapy familiarity.",
+      "notes": "Real-world study ≠ RCT — must distinguish design clearly. No control group means confounding is possible. Do not imply federal legalization is imminent; Oregon program is state-specific. Note psilocybin interaction risks and contraindications."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Medical Debt Linked to Advanced Cancer Diagnosis and Worse Survival",
+      "primary_entity": "Medical debt / cancer survival link",
+      "signal_type": "medical_study",
+      "allowed_category": "chronic disease",
+      "trend_strength_score": 70,
+      "opportunity_score": 76,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Reframe from 'medical debt is burden after cancer' to 'medical debt may be causing later cancer diagnoses because it prevents early screening and treatment.' Practical implications for screening access and patient action.",
+      "why_now": "American Cancer Society published 2026-08-18. Medical debt → health outcomes link is major public health policy conversation. SERP gap: most existing content focuses on medical debt after cancer diagnosis, not as barrier to early diagnosis.",
+      "primary_headline": "Your Medical Debt Could Be Raising Your Cancer Risk — New Study Shows a Troubling Link",
+      "next_steps": "Retrieve underlying study DOI from ACS press release. Confirm study design (county-level cross-sectional or longitudinal). Assign health disparities or oncology-adjacent writer.",
+      "notes": "County-level association ≠ individual causation — must be stated clearly. Do not headline as 'medical debt causes cancer' — link is observational. Retrieve underlying journal citation and DOI before publishing."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Nature Publishes \"Hallmarks of Skeletal Muscle Health\" Framework",
+      "primary_entity": "Skeletal muscle health",
+      "signal_type": "medical_study",
+      "allowed_category": "fitness and aging",
+      "trend_strength_score": 65,
+      "opportunity_score": 70,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Translate the 'hallmarks' framework into practical, evidence-based muscle health guidance. Distinguish from bodybuilding content — this is about healthspan and functional aging, not aesthetics.",
+      "why_now": "Nature published 2026-08-20. 'Hallmarks' frameworks signal scientific field consolidation — legitimizes muscle health as distinct medical discipline. Fitness + longevity audience high relevance.",
+      "primary_headline": "What the New Science Says You Actually Need to Keep Your Muscles Healthy as You Age",
+      "next_steps": "Retrieve full Nature article. List the hallmarks. Map each to a practical recommendation. Schedule within 3 days.",
+      "notes": "Framework/hallmarks paper describes markers — do not present as intervention study. Do not claim specific exercises are 'proven' by this paper. Retrieve full study to confirm hallmarks listed."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Vanderbilt Study Tests GLP-1s for Opioid Use Disorder — Now Enrolling",
+      "primary_entity": "GLP-1 drugs / opioid use disorder",
+      "signal_type": "clinical_trial",
+      "allowed_category": "chronic disease",
+      "trend_strength_score": 63,
+      "opportunity_score": 68,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Explain the biological hypothesis (GLP-1 receptors in reward circuitry) accessibly. Frame this as what we know vs. what the trial is designed to learn. Avoid suggesting this is proven or imminent.",
+      "why_now": "Vanderbilt announced 2026-08-18. GLP-1 audience is enormous and hungry for new use-case information. Opioid crisis remains top public health story. Active enrolling trial — not speculation.",
+      "primary_headline": "Could Ozempic-Class Drugs Help Treat Opioid Addiction? Vanderbilt Just Launched a Study to Find Out.",
+      "next_steps": "Retrieve ClinicalTrials.gov NCT number. Confirm trial phase and enrollment criteria. Schedule within 5 days.",
+      "notes": "Trial is enrolling — zero efficacy data yet; frame as hypothesis and research question, not finding. 'Could Ozempic treat addiction' framing is approved as question; body text must maintain hypothesis framing throughout."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Personalized mRNA Cancer Vaccine (Intismeran) Shows Promise in Melanoma Trial",
+      "primary_entity": "Intismeran / personalized mRNA cancer vaccine",
+      "signal_type": "clinical_trial",
+      "allowed_category": "medical research",
+      "trend_strength_score": 62,
+      "opportunity_score": 67,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Explain how a personalized cancer vaccine works (tumor sequencing → custom mRNA → immune targeting). Explain what Phase 3 means for timeline. Set honest expectations about 'shows promise.'",
+      "why_now": "mRNA vaccine technology is known to post-COVID audience. Personalized cancer vaccine reaching late-stage trials is concrete milestone. SERP gap: most content is COVID-focused or very early-stage.",
+      "primary_headline": "A Personalized Cancer Vaccine Made From Your Own Tumor DNA Just Advanced to Late-Stage Trials",
+      "next_steps": "Retrieve ClinicalTrials.gov record for intismeran. Identify trial sponsor and phase 3 endpoint. Confirm underlying data publication if available.",
+      "notes": "Late-stage trial ≠ approved treatment. FDA approval process and timeline must be explained. 'Personalized' means patient-specific manufacturing — explain cost and access implications honestly."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "HHS Awards $96M for Mental Health, Suicide Prevention, and Substance Use Services",
+      "primary_entity": "HHS mental health funding",
+      "signal_type": "policy",
+      "allowed_category": "mental health",
+      "trend_strength_score": 58,
+      "opportunity_score": 62,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Follow the money — explain what the $96M funds (crisis services, suicide prevention, SUD treatment), who can access services, whether investment is sufficient given scale of need.",
+      "why_now": "Mental health search interest +3 seven-day Google Trends delta. HHS announcement fresh (2026-08-17). Most coverage abstract; this translates into who benefits and where gaps remain.",
+      "primary_headline": "The Federal Government Just Invested $96 Million in Mental Health. Where Is It Going?",
+      "next_steps": "Pull grant breakdown from HHS release — which programs, which grantees, which states. Schedule within 5 days.",
+      "notes": "No material integrity flags. Policy announcement from tier-1 source. Note that grant funding effectiveness varies by implementation — avoid overstating impact."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "Hayden Panettiere mental health",
+      "reason": "off_category — celebrity wellness/gossip; no clinical or research angle"
+    },
+    {
+      "topic": "Mitch McConnell health",
+      "reason": "off_category — pure political news; no actionable health content for audience"
+    },
+    {
+      "topic": "AI in healthcare / Mayo-quality AI",
+      "reason": "off_category — adjacent but opinion-forward; no peer-reviewed backing; no direct patient health angle"
+    },
+    {
+      "topic": "Harvard pilot/flight attendant radiation cancer risk",
+      "reason": "weak_signal — occupational health niche audience; low general relevance; monitored for broader pickup"
+    },
+    {
+      "topic": "FDA nominee Senate reservations",
+      "reason": "off_category — primarily political opinion content; no new health data or patient-impact angle; monitored"
+    },
+    {
+      "topic": "FDA compounding approval for wellness peptides",
+      "reason": "unverified_claim — no primary FDA source retrieved; supplement-adjacent framing; monitored pending FDA primary source"
+    },
+    {
+      "topic": "Stanford molecular glue lymphoma kill switch",
+      "reason": "weak_signal — highly technical early-stage research; no consumer-facing gap identified; monitored for peer-reviewed publication"
+    },
+    {
+      "topic": "Eating disorder genomics meta-analysis (Nature)",
+      "reason": "weak_signal — niche audience; high integrity risk (genomics → causation framing); monitored for editorial review"
+    },
+    {
+      "topic": "Eye drop recall (contamination)",
+      "reason": "weak_signal — specialty recall; FDA Class I not confirmed; monitored pending confirmation"
+    },
+    {
+      "topic": "Laser therapy for brain tumors (WashU)",
+      "reason": "weak_signal — early-stage research signal; limited primary source detail; monitored"
+    },
+    {
+      "topic": "Local/institutional health news (VADOC, UNMC, Marquette, etc.)",
+      "reason": "off_category — too narrow, no national audience value"
+    },
+    {
+      "topic": "GQ wellness gap relationships",
+      "reason": "off_category — celebrity/lifestyle wellness without evidence base"
+    },
+    {
+      "topic": "Ferrero acquires Purely Elizabeth",
+      "reason": "off_category — pure business news; no patient health angle"
+    },
+    {
+      "topic": "Clinical trial access / CRO industry news",
+      "reason": "off_category — industry/operational clinical trial news; not patient-facing"
+    },
+    {
+      "topic": "VA EHR Oracle contract expansion",
+      "reason": "off_category — healthcare IT/political news"
+    },
+    {
+      "topic": "Health insurance premium increases (Minnesota)",
+      "reason": "off_category — local policy; too narrow geographically"
+    },
+    {
+      "topic": "Dartmouth Health telehealth closure",
+      "reason": "off_category — local institutional news"
+    },
+    {
+      "topic": "Gila River MD medical school launch",
+      "reason": "off_category — institutional/policy news; no direct audience health value"
+    },
+    {
+      "topic": "Planet fitness membership cancellation",
+      "reason": "off_category — commercial fitness brand; no health editorial value"
+    },
+    {
+      "topic": "Unicorn frappe nutrition facts, Chipotle nutrition",
+      "reason": "off_category — brand nutrition queries; no editorial health value"
+    },
+    {
+      "topic": "Supplemental nutrition assistance program",
+      "reason": "off_category — policy/administrative; not health content"
+    }
+  ]
+}

@@ -1,0 +1,341 @@
+{
+  "run_date": "2026-08-08",
+  "niche": "health and wellness",
+  "signal_summary": {
+    "total_reviewed": 144,
+    "total_retained": 9,
+    "total_rejected": 135,
+    "tools_active": [
+      "web_search",
+      "google_news",
+      "google_trends",
+      "serpapi"
+    ],
+    "tools_unavailable": [],
+    "notes": "Site URL not configured — self-check skipped; competitor fallback used for duplicate detection. Google Trends pre-fetch available via SerpAPI. Breaking-recall exception applied to 3 food safety candidates (Cyclospora, Salmonella, Cheese/Listeria). Recurring topics flagged: diet soda cognitive decline, low-protein diet lifespan, and dementia risk factors appear across multiple runs without new development — retained as existing. AI in clinical trials rejected as pharma-business-adjacent without clear patient-health framing. Crumbl dirty soda monitored only — rising search volume but insufficient editorial depth."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Louisiana Vibrio vulnificus outbreak",
+      "primary_entity": "Vibrio vulnificus",
+      "signal_type": "breaking_news",
+      "allowed_category": "public health and epidemiology",
+      "trend_strength_score": 88,
+      "opportunity_score": 82,
+      "discover_score": 5,
+      "urgency": "now",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Public health explainer with risk triage: who is at serious risk (immunocompromised, liver disease, open wounds) vs. general population, framed around Louisiana outbreak as news hook with actionable prevention steps.",
+      "why_now": "Google Trends shows Vibrio vulnificus Louisiana as real-time US breakout trend as of 08/08. Peak summer heat + Gulf Coast warm water + shellfish/water exposure season creates genuine public safety urgency. No prior coverage in last 7 days.",
+      "primary_headline": "Vibrio vulnificus Is Surging in Louisiana — Here's What You Need to Know Before Going Near the Water",
+      "next_steps": "Publish within 12 hours. Confirm Louisiana DHHS case count independently before going live. Verify CDC and Louisiana DHHS primary sources. Do not use 'flesh-eating bacteria' in headline without clarifying parenthetical.",
+      "notes": "⚠️ Confirm Louisiana DHHS case count before publishing. Do not conflate with Group A Strep necrotizing fasciitis; distinguish clearly. Integrity flag: case numbers from news coverage should be verified against official state advisory."
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Cyclospora outbreak — 28-state spread confirmed, Walmart and Jack in the Box",
+      "primary_entity": "Cyclospora cayetanensis / iceberg lettuce outbreak",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 84,
+      "opportunity_score": 79,
+      "discover_score": 5,
+      "urgency": "now",
+      "confidence": "medium",
+      "content_status": "update",
+      "source_count": 4,
+      "recommended_angle": "Update article: 'what to do now' framing — specific retailers and states confirmed, symptoms to watch, when to see a doctor. Avoid duplicating generic Cyclospora explainer content from 08/07; this piece is the geographic/retailer scope update.",
+      "why_now": "Material new development since 08/07 coverage: Consumer Reports (08/08) confirms outbreak now spans 28 states and has reached Walmart retail locations and Jack in the Box restaurants — significantly broader than prior reporting. New geographic scope and named retailers are actionable for readers.",
+      "primary_headline": "Cyclospora-Linked Lettuce Spread to 28 States — Walmart and Jack in the Box Among Affected Retailers",
+      "next_steps": "Publish within 6 hours of confirming FDA primary notice. This is an UPDATE to 08/07 coverage — frame as update, not duplicate. Verify state list via FDA or CDC directly.",
+      "notes": "⚠️ Breaking-recall exception used. FDA primary notice URL not directly retrieved; confirmed via Consumer Reports 08/08, CDC surveillance page, and Columbus Dispatch. Verify FDA.gov recall notice before publishing. Confirm the 28-state list via FDA or CDC directly."
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Salmonella outbreak — jalapeños at Chipotle expands to Qdoba",
+      "primary_entity": "Salmonella / jalapeños / Qdoba",
+      "signal_type": "breaking_news",
+      "allowed_category": "public health and epidemiology",
+      "trend_strength_score": 80,
+      "opportunity_score": 77,
+      "discover_score": 4,
+      "urgency": "now",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Breaking news update with 'should I be worried if I ate at these chains?' consumer angle. Include symptom timeline, what to do, FDA investigation status.",
+      "why_now": "ABC News + FDA confirmed 08/06 that Salmonella jalapeño outbreak is no longer limited to Chipotle — it has expanded to Qdoba. Not covered in recent run history. Two major fast-casual chains + fresh FDA action = high consumer urgency.",
+      "primary_headline": "Salmonella Outbreak From Chipotle Jalapeños Expands to Qdoba — What We Know",
+      "next_steps": "Confirm Qdoba's public statement and FDA's official case count before publishing. Do not describe either chain as broadly unsafe — the issue is jalapeño supply source.",
+      "notes": "⚠️ Breaking-recall exception. FDA primary outbreak investigation page is the required source — confirm URL and case count before publishing. Do not imply all Chipotle/Qdoba locations affected — specify it is the jalapeño supply, not the restaurant chains broadly."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Cheese / Listeria recall — Class I, FDA highest risk level, 30,000+ lbs",
+      "primary_entity": "Listeria monocytogenes / cheese recall",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 74,
+      "opportunity_score": 73,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Consumer-action piece: what Class I means, which cheeses/brands affected, who faces most serious risk from Listeria (pregnant women, immunocompromised). Listeria is more dangerous than most recall pathogens — this needs clear severity framing.",
+      "why_now": "The Healthy/Reader's Digest reported 08/05 that FDA has assigned Class I (highest risk) status to a recall of 30,000+ lbs of cheese. Columbus Dispatch corroborated 08/06. Not in recent run history. Class I designation signals FDA's highest concern level — editorial hook is severity classification plus Listeria's serious risk profile.",
+      "primary_headline": "FDA Issues Class I Recall for 30,000+ Lbs of Cheese Over Listeria Risk — What's Affected",
+      "next_steps": "Verify product names, lot numbers, and brand from FDA recall database before publishing. Include explicit guidance for pregnant women to consult OB/GYN. Publish within 24-48 hours.",
+      "notes": "⚠️ Breaking-recall exception. Verify FDA recall page — product names, lot numbers, distribution details required before publishing. Class I = highest concern category, but does not mean confirmed illness yet. Listeria especially dangerous in pregnancy — include this explicitly with appropriate medical guidance to consult OB."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Sleep AI foundation model — Nature study on health risk stratification",
+      "primary_entity": "Sleep AI foundation model / Nature",
+      "signal_type": "study_or_research",
+      "allowed_category": "sleep science",
+      "trend_strength_score": 71,
+      "opportunity_score": 76,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Evaluative explainer: what the model actually does, what outcomes it can predict, how far from clinical use it is, and what it means for future of sleep monitoring vs. current consumer wearables. Lead with genuine capability; temper with honest caveats about development stage.",
+      "why_now": "Published in Nature 08/03/2026. Not in recent run history. Sleep science is core category with strong audience engagement. Combination of AI + sleep + clinical outcome prediction is timely and differentiated from 08/05 'sleep deprivation and immunity' meta-analysis — this is about diagnostic potential, not just sleep habits.",
+      "primary_headline": "A New AI Model Can Predict Your Health Risks While You Sleep — What a Nature Study Found",
+      "next_steps": "Verify Nature DOI and publication date. Search for independent scientific commentary on study. Publish within 48-72 hours.",
+      "notes": "⚠️ Single study — Nature publication is high quality but this is one foundation model; broader validation needed. Distinguish risk stratification from diagnosis. Do not extrapolate to consumer sleep trackers (Fitbit, Oura) without confirming model was validated on consumer device data."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Neurocrine triple agonist GLP-1/GIP/Glucagon Phase 1 initiation",
+      "primary_entity": "NBIP-1968 / Neurocrine Biosciences / triple agonist",
+      "signal_type": "clinical_trial",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 68,
+      "opportunity_score": 74,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "'What comes after Ozempic?' explainer — place this in GLP-1 drug evolution context for health-literate general audience. Be honest that Phase 1 = safety/dosing in small groups; we are years from any approval. Angle is 'here's the science behind next generation of metabolic drugs' not 'new weight loss cure.'",
+      "why_now": "Neurocrine announced Phase 1 initiation of NBIP-1968 on 08/07/2026 — a triple receptor agonist (GLP-1 + GIP + glucagon) that could outperform current GLP-1-only agents on weight loss and metabolic outcomes. Distinct from 08/05 GLP-1 cardiovascular outcomes NEJM RCT — that was outcomes data on existing drugs; this is next-generation candidate entering human trials.",
+      "primary_headline": "A New Drug Is Targeting Weight Loss, Heart Health, and Blood Sugar Simultaneously — Here's What the Trial Data Shows",
+      "next_steps": "Verify ClinicalTrials.gov registration. Search for independent endocrinologist commentary. Publish within 48-72 hours.",
+      "notes": "⚠️ Phase 1 trial only — first-in-human safety study, not efficacy data. Do not present as treatment breakthrough. Primary source is manufacturer press release (PR Newswire / Neurocrine) — independent scientific commentary not yet available; note this limitation clearly. Do not compare efficacy to Ozempic/Wegovy — no head-to-head data exists. Confidence capped at Medium."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "AI use surging for mental health among young people — Harvard research",
+      "primary_entity": "AI mental health tools / youth",
+      "signal_type": "study_or_research",
+      "allowed_category": "mental health and psychology",
+      "trend_strength_score": 63,
+      "opportunity_score": 70,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Evaluative: what the research actually shows, why young people are turning to AI, what AI can and cannot do for mental health, and what clinicians say about appropriate use. Not a panic piece, not uncritical hype.",
+      "why_now": "Harvard Gazette (08/03) published new research on surging AI use for mental health among young people. Distinct from 08/06 Aflac survey (covered AI as first healthcare consultation broadly); this focuses on mental health specifically and is from academic source. Rising Trends signal supports audience relevance.",
+      "primary_headline": "Young People Are Turning to AI for Mental Health Help at Record Rates — What That Means and What to Watch Out For",
+      "next_steps": "Verify study design from Harvard Gazette piece — survey vs. clinical study distinction matters. Search for APA/clinical perspective on AI in therapy. Publish within this week.",
+      "notes": "⚠️ Distinguish correlation (young people using AI more) from causation — does this help or substitute for professional care? AI mental health tools vary enormously in quality; avoid generalizing 'AI' as monolithic. Observational signal — not definitive efficacy data."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Teen breakfast habits and diet quality — rising search interest",
+      "primary_entity": "Teen breakfast habits / adolescent nutrition",
+      "signal_type": "rising_search_interest",
+      "allowed_category": "nutrition and diet science",
+      "trend_strength_score": 58,
+      "opportunity_score": 65,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Research-grounded practical explainer: what actual science says about teen breakfast and diet quality outcomes (academic performance, energy, weight, metabolic health), what types of breakfast matter, what research limitations are.",
+      "why_now": "Google Trends shows 'teen diet breakfast benefits research' as rising related query on 'diet' keyword cluster (7-day window). Aligns with back-to-school timing (August) — parents and teens evaluating breakfast habits before school year. Strong evergreen potential with timely seasonal hook.",
+      "primary_headline": "Teen Breakfasts and Long-Term Diet Quality: What the Rising Search Interest Reveals About Real Evidence",
+      "next_steps": "Search PubMed for peer-reviewed teen breakfast and diet quality studies. Consult USDA school breakfast program data. Publish within this week.",
+      "notes": "⚠️ Many teen breakfast studies are observational — association with better diet quality does not prove breakfast causes outcomes. Distinguish breakfast skipping by choice from food insecurity context."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "2026 wellness trends — evidence-based evaluation of major trends",
+      "primary_entity": "2026 wellness trends",
+      "signal_type": "cultural_moment",
+      "allowed_category": "nutrition and diet science",
+      "trend_strength_score": 55,
+      "opportunity_score": 62,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Evidence audit: take major 2026 wellness trends circulating in media and assess each against published research. Clear 'evidence: strong / weak / none' ratings per trend. Practical, skeptical, not preachy.",
+      "why_now": "The Guardian published editorial roundup of '11 biggest wellness trends of 2026' on 08/07. List includes trends ranging from credible to dubious ('parasite cleanses,' 'AI wellness,' 'boy kibble'). Creates opportunity for differentiated, evidence-evaluation piece — not trend recap, but fact-check-style assessment of which 2026 wellness trends have research backing.",
+      "primary_headline": "The 11 Biggest Wellness Trends of 2026 — Which Ones Are Backed by Science (and Which Aren't)",
+      "next_steps": "Source The Guardian piece. Search PubMed for evidence per trend. Consult CDC guidance for debunked claims. Publish within this week.",
+      "notes": "⚠️ Distinguish evidence-based wellness from wellness marketing — avoid lending credibility to claims without research support. 'Boy kibble' and 'parasite cleanses' — if covering, debunk clearly with sourced science; do not describe neutrally as 'trends worth exploring.' AI wellness tools highly variable; avoid blanket endorsement or rejection."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "FDA blood thinner recall",
+      "reason": "existing"
+    },
+    {
+      "topic": "Eye drops recall (CVS/Kroger 3M+ bottles)",
+      "reason": "existing"
+    },
+    {
+      "topic": "Cyclospora outbreak — CDC links to iceberg lettuce (base story)",
+      "reason": "existing"
+    },
+    {
+      "topic": "Middle age habits and dementia-free years",
+      "reason": "existing"
+    },
+    {
+      "topic": "Dormant cancer cells disarm immunotherapy",
+      "reason": "existing"
+    },
+    {
+      "topic": "Diet soda and cognitive decline",
+      "reason": "existing"
+    },
+    {
+      "topic": "Low-protein diet and lifespan",
+      "reason": "existing"
+    },
+    {
+      "topic": "Peach recall — FDA update on 10M lbs",
+      "reason": "existing"
+    },
+    {
+      "topic": "Birth order and disease risk (Nature)",
+      "reason": "existing"
+    },
+    {
+      "topic": "Ibogaine neurological recovery (Barrow)",
+      "reason": "existing"
+    },
+    {
+      "topic": "AI as first healthcare consultation (Aflac survey)",
+      "reason": "existing"
+    },
+    {
+      "topic": "GLP-1 cardiovascular outcomes NEJM RCT",
+      "reason": "existing"
+    },
+    {
+      "topic": "RSV vaccine adult 60+ CDC update",
+      "reason": "existing"
+    },
+    {
+      "topic": "Sleep deprivation and immune function meta-analysis",
+      "reason": "existing"
+    },
+    {
+      "topic": "PFAS drinking water EPA enforcement",
+      "reason": "existing"
+    },
+    {
+      "topic": "Childhood obesity AAP guidelines",
+      "reason": "existing"
+    },
+    {
+      "topic": "H5N1 bird flu US human case",
+      "reason": "existing"
+    },
+    {
+      "topic": "Menopause cardiovascular risk AHA",
+      "reason": "existing"
+    },
+    {
+      "topic": "UPF and long-term mortality BMJ",
+      "reason": "existing"
+    },
+    {
+      "topic": "Psilocybin PTSD veterans trial",
+      "reason": "existing"
+    },
+    {
+      "topic": "Dronabinol (THC) for PTSD nightmares",
+      "reason": "existing"
+    },
+    {
+      "topic": "FDA egg recall (19M+ cartons)",
+      "reason": "existing"
+    },
+    {
+      "topic": "FDA levothyroxine recall",
+      "reason": "existing"
+    },
+    {
+      "topic": "Frozen blueberry E. coli investigation",
+      "reason": "existing"
+    },
+    {
+      "topic": "Rohto eye drops recall",
+      "reason": "existing"
+    },
+    {
+      "topic": "GLP-1 individual metabolic profiling (Penn Medicine)",
+      "reason": "existing"
+    },
+    {
+      "topic": "AI in oncology clinical trials (Nature)",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Crumbl dirty soda nutrition facts",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "HHS foreign aid maternal/child health review",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Medi-Cal rollback (CalMatters)",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Hospital workforce news",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Medical Aid in Dying (NY state)",
+      "reason": "off_category"
+    },
+    {
+      "topic": "General wellness roundup topics (wellness center openings, events, local programs)",
+      "reason": "off_category"
+    },
+    {
+      "topic": "AI in psychiatric training (WVU study)",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "NBA Achilles injury playing time study",
+      "reason": "weak_signal"
+    }
+  ]
+}

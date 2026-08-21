@@ -131,6 +131,37 @@ h2 { font-size: 24px; }
 .metrics article:nth-child(3) { border-top-color: var(--green); }
 .metrics article:nth-child(4) { border-top-color: var(--blue); }
 .metrics span, .panelHeader span { color: var(--muted); font-weight: 800; font-size: 12px; text-transform: uppercase; letter-spacing: .05em; }
+.runmeta em { font-style: normal; color: var(--muted); font-size: 11px; }
+.runmeta.stale { border-color: var(--amber); background: #fdf6e9; }
+.runmeta.stale em { color: var(--amber); font-weight: 800; }
+
+/* Reviewed-vs-retained per run. The outer bar is signals reviewed (scaled to
+   the tallest run); the filled portion is what survived. */
+.trendStrip {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  height: 78px;
+  margin-bottom: 22px;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+.trendCol { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 100%; gap: 4px; }
+.trendBar { width: 100%; max-width: 26px; background: var(--soft); border-radius: 3px; display: flex; align-items: flex-end; min-height: 3px; }
+.trendKept { width: 100%; background: var(--green); border-radius: 3px; min-height: 2px; }
+.trendCol span { font-size: 9px; color: var(--muted); }
+
+.insightPanel {
+  margin-bottom: 22px;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--blue);
+  border-radius: 8px;
+  background: var(--surface);
+  padding: 14px 16px;
+}
+.insightPanel p:last-child { margin: 0; color: #3c3c3c; line-height: 1.6; }
 .metrics strong { display: block; margin-top: 10px; font: 700 34px/1 Georgia, "Times New Roman", serif; }
 .metrics p { margin: 8px 0 0; color: var(--muted); }
 
@@ -362,14 +393,16 @@ button.button:disabled {
 .radarScanHistory a { color: var(--ink); }
 .radarScanHistory a + a { color: var(--muted); font-size: 11px; }
 .radarResultsTable { margin-top: 14px; }
-.radarResultsControls {
+/* Shared by the Priority Board and the Trend Scanner results table
+   (app/components/TableControls.jsx). */
+.tableControls {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 10px;
 }
-.radarResultsControls input[type="text"],
-.radarResultsControls select {
+.tableControls input[type="text"],
+.tableControls select {
   border: 1px solid var(--line);
   border-radius: 6px;
   padding: 8px 10px;
@@ -377,10 +410,90 @@ button.button:disabled {
   color: var(--ink);
   background: #fff;
 }
-.radarResultsControls input[type="text"] { flex: 1 1 200px; }
+.tableControls input[type="text"] { flex: 1 1 200px; }
 .radarResultsTable th { cursor: pointer; user-select: none; }
 .radarResultsCount { margin-top: 8px; font-size: 12px; color: var(--muted); }
 .radarViewedScan { margin-top: 16px; border-top: 1px solid var(--line); padding-top: 14px; }
+
+/* ── Priority Board ─────────────────────────────────────────────────────── */
+.quiet { color: var(--muted); font-size: 12px; font-weight: 500; }
+.emptyState { color: var(--muted); padding: 18px; border: 1px dashed var(--line); border-radius: 8px; }
+.resultCount { margin-top: 10px; font-size: 12px; color: var(--muted); }
+.boardList { display: grid; gap: 8px; }
+.boardCard {
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  overflow: hidden;
+}
+/* Priority is the first thing you scan for, so it drives the edge color. */
+.boardCard.P1 { border-left-color: var(--red); }
+.boardCard.P2 { border-left-color: var(--amber); }
+.boardCard.P3 { border-left-color: var(--blue); }
+.boardCard.P4, .boardCard.P5 { border-left-color: var(--line); }
+.boardCardHead {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 14px;
+  background: none;
+  border: 0;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.boardCardHead:hover { background: #fbfaf7; }
+.boardCardMain { display: grid; gap: 6px; min-width: 0; }
+.boardCardTitle { font-weight: 700; font-size: 15px; line-height: 1.35; }
+.chevron { color: var(--muted); margin-right: 6px; font-size: 11px; }
+.boardCardMeta { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.boardCardScores { display: flex; align-items: center; gap: 14px; flex: 0 0 auto; }
+.boardCardScores > span { display: grid; gap: 3px; justify-items: center; min-width: 54px; }
+.boardCardScores b { font-size: 13px; }
+.boardCardScores .discover {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px;
+  color: var(--muted);
+}
+.boardCardBody { border-top: 1px solid var(--line); padding: 14px; background: #fbfaf7; display: grid; gap: 12px; }
+.detailField { display: grid; gap: 3px; }
+.detailLabel {
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: var(--muted);
+}
+.detailBody { margin: 0; line-height: 1.55; color: #333; }
+.integrityNote {
+  border: 1px solid #f0d59a;
+  border-radius: 6px;
+  background: #fdf6e9;
+  padding: 10px 12px;
+  display: grid;
+  gap: 3px;
+}
+.detailActions { display: flex; align-items: center; gap: 12px; }
+
+.rejectedPanel {
+  margin-top: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  padding: 12px 14px;
+}
+.rejectedPanel summary { cursor: pointer; }
+.rejectedGroups {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 14px;
+}
+.rejectedGroup { border-top: 1px solid var(--line); padding-top: 8px; }
+.rejectedGroup .cleanList li { font-size: 13px; color: #444; }
 .trackedTopicsList { display: grid; gap: 10px; margin-top: 14px; }
 .trackedTopicRow {
   border: 1px solid var(--line);
@@ -512,6 +625,10 @@ td b { display: inline-block; min-width: 28px; }
   margin-top: 14px;
 }
 .runList article { padding: 16px; }
+.runList article.activeRun { border-color: var(--ink); box-shadow: inset 3px 0 0 var(--ink); }
+/* Block link, not one of the bordered artifact chips `.runList a` styles below. */
+.runList .runPick { display: block; border: 0; padding: 0; font-weight: inherit; font-size: inherit; }
+.runList .runPick:hover strong { text-decoration: underline; }
 .runList strong { display: block; font-size: 18px; }
 .runList span { display: block; color: var(--muted); margin: 4px 0 12px; }
 .runList div { display: flex; gap: 8px; flex-wrap: wrap; }

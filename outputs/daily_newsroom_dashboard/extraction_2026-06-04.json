@@ -1,0 +1,287 @@
+{
+  "run_date": "2026-06-04",
+  "niche": "health and wellness",
+  "signal_summary": {
+    "total_reviewed": 87,
+    "total_retained": 9,
+    "total_rejected": 78,
+    "tools_active": [
+      "web_search",
+      "google_trends",
+      "google_news"
+    ],
+    "tools_unavailable": [
+      "exa",
+      "reddit_api"
+    ],
+    "notes": "Site URL not configured; competitor fallback used for SERP gap analysis. Dominant convergent signal: Men's Mental Health Month (June) with breakout Google Trends velocity across 7 rising queries. Secondary signals: natural preservatives/food safety and GLP-1/rapamycin longevity cluster. Self-check skipped; run history and deferred topics files not found (first run)."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Men's Mental Health Month: What the Research Actually Says",
+      "primary_entity": "Men's Mental Health Month (June)",
+      "signal_type": "seasonal_trend",
+      "allowed_category": "mental health and psychology",
+      "trend_strength_score": 88,
+      "opportunity_score": 82,
+      "discover_score": 5,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 6,
+      "recommended_angle": "Reframe June's awareness moment through hard epidemiological data — focus on why the diagnostic/treatment gap exists (stigma, symptom presentation differences, help-seeking behavior) backed by research, then pivot to what science says actually works for men specifically (exercise, peer support, structured therapy modalities). Competitors missing evidence-grounded angle.",
+      "why_now": "June 2026 = Men's Mental Health Awareness Month. Google Trends shows breakout interest on related queries rising sharply as of June 1. This is a 7-day evergreen window where search intent is extremely high and most SERP results are shallow awareness lists. CNN May 21 report on 1.2 billion people with mental disorders provides fresh data anchor.",
+      "primary_headline": "Men's Mental Health Month: What the Science Says About Why Men Struggle — and What Actually Helps",
+      "next_steps": "Assign immediately. Publish by EOD June 4. Add FAQ schema and internal links to existing mental health articles.",
+      "notes": "Breakout Google Trends velocity across 7 rising queries. CNN + Nature + Pew Research data all within freshness window. 3+ independent channels (search, news, institutional). Integrity flags: verify official designation status of Men's Mental Health Month; source men-specific statistics separately (do not apply global 1.2B figure to men); note study type for exercise-mental health claims."
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Natural Preservatives Linked to High Blood Pressure and Heart Attacks",
+      "primary_entity": "natural preservatives in food",
+      "signal_type": "study_or_research",
+      "allowed_category": "nutrition and diet science",
+      "trend_strength_score": 76,
+      "opportunity_score": 78,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 4,
+      "recommended_angle": "Skeptical evaluative — challenge 'natural = safe' assumption. Lead with study finding, explain specific compounds involved, cardiovascular mechanism, and what it means for consumer food choices. SERP gap: existing coverage is wire-report reprints; no outlet has produced accessible explainer on which preservatives, what mechanism, and what consumers should actually do.",
+      "why_now": "CNN published May 20, 2026 — within freshness window. Google Trends 'food safety' is rising (+1 delta). The 'natural = safe' halo is a durable consumer misconception, making this both timely (study just published) and evergreen (ongoing confusion).",
+      "primary_headline": "'Natural' Preservatives in Food Are Linked to High Blood Pressure and Heart Attacks. Here's What the Research Found.",
+      "next_steps": "Assign immediately. Retrieve full study citation from CNN article before writing. Verify which specific preservatives are named. Publish within 24 hours while CNN signal is fresh.",
+      "notes": "CNN is tier-1 health journalism. Skill 02b: PASSED. Integrity flags: confirm observational vs. RCT study design and note association ≠ causation if observational; identify specific preservatives named in study (do not generalize); do not claim safe/unsafe intake threshold without study data."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "GLP-1 Medications and Long-Term Weight Management: What New Evidence Shows",
+      "primary_entity": "GLP-1 medications (semaglutide / GLP-1 receptor agonists)",
+      "signal_type": "drug_or_treatment_claim",
+      "allowed_category": "chronic disease management",
+      "trend_strength_score": 71,
+      "opportunity_score": 74,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 4,
+      "recommended_angle": "Patient-facing practical explainer addressing #1 question GLP-1 users have: what happens when I stop, reduce, or change medication? UT Southwestern's March 2026 research on 'medication changes' supporting long-term weight management is news peg. Translate research into what it means for people currently on or considering these drugs with clear distinction between study findings and physician discussion.",
+      "why_now": "GLP-1 interest remains among highest-sustained search categories in health. 'Ozempic shortage,' dosing regimens, and long-term sustainability questions actively searched. UT Southwestern research (March 2026) is within extended freshness window with SERP gap for patient-facing explainer.",
+      "primary_headline": "GLP-1 Medications and Long-Term Weight Management: What New Research Says About Staying on Them",
+      "next_steps": "Retrieve full study citation from UT Southwestern press release. Assign to writer with metabolic/endocrinology familiarity. Publish within 2–3 days.",
+      "notes": "UT Southwestern is institutional tier-1 source. Skill 02b: PASSED. Confidence capped at Medium pending full primary journal citation retrieval (not RCT confirmed from signal alone). Integrity flags: confirm study design; include explicit physician-consultation disclaimer for medication guidance; distinguish drug class from brand names."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Arts, Culture, and Biological Aging: What a New Study Found",
+      "primary_entity": "arts and culture engagement / biological aging",
+      "signal_type": "study_or_research",
+      "allowed_category": "aging and longevity",
+      "trend_strength_score": 65,
+      "opportunity_score": 72,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Curiosity-driven explainer with rigorous skepticism baked in. The claim ('as much as exercise') is headline-grabbing and likely overstated — use that as entry point: here's what the study actually found, how they measured biological aging, and what limitations are. Competitors missing the mark by repeating headline without interrogating methodology.",
+      "why_now": "CNN published May 14, 2026. Aging and longevity is sustained high-interest category. Arts-aging angle is novel enough to generate genuine audience curiosity; SERP currently thin on evidence-based explainers that interrogate study methodology.",
+      "primary_headline": "Engaging With Arts and Culture May Slow Biological Aging as Much as Exercise. Here's What the Study Found.",
+      "next_steps": "Retrieve primary study citation from CNN article. Assign within 48 hours.",
+      "notes": "Skill 02b: PASSED. Integrity flags: confirm whether 'as much as exercise' is direct study comparison or editorial framing; identify biological aging biomarker used (epigenetic clock, etc.) and its validity profile; confirm observational design and note association ≠ causation."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Rapamycin and Exercise: What the Longevity Drug Research Actually Shows",
+      "primary_entity": "rapamycin (longevity drug)",
+      "signal_type": "drug_or_treatment_claim",
+      "allowed_category": "aging and longevity",
+      "trend_strength_score": 63,
+      "opportunity_score": 68,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 4,
+      "recommended_angle": "Skeptical and clarifying — WaPo headline is intriguing but likely creates confusion. Explain what rapamycin is, why longevity researchers are interested, what exercise interaction means mechanistically, and what it implies for people experimenting with it. SERP gap between news article and patient/consumer-facing guidance.",
+      "why_now": "WaPo published April 29, 2026. Longevity and 'biohacking' drugs are at peak audience interest. Exercise-rapamycin interaction is novel and counterintuitive angle not yet well-explained in accessible content.",
+      "primary_headline": "Rapamycin May Have a Surprising Effect on Exercise. Here's What the Longevity Research Actually Shows.",
+      "next_steps": "Retrieve primary study citation from WaPo article. Confirm animal vs. human study before framing. Assign within 48 hours.",
+      "notes": "Confidence capped at Medium per Skill 02b: off-label research claim. Integrity flags: state clearly rapamycin is not FDA-approved for longevity/aging (off-label use); do not present off-label use as established clinical practice; if animal study, note explicitly that results cannot be directly generalized to humans."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Exercise and Alzheimer's Risk: The Mechanism Scientists Just Discovered",
+      "primary_entity": "exercise and Alzheimer's risk reduction",
+      "signal_type": "study_or_research",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 61,
+      "opportunity_score": 70,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Move beyond 'exercise is good for your brain' cliché. WaPo (March 24, 2026) reports scientists may have identified specific biological mechanism linking exercise to reduced Alzheimer's risk. Lead with mechanism discovery, explain accessibly, connect to actionable guidance. SERP gap: existing coverage is headline-only; no accessible mechanism explainer found.",
+      "why_now": "WaPo March 24, 2026 is within freshness window. Mechanism discovery is fresh news peg. Audience actively searches Alzheimer's prevention strategies.",
+      "primary_headline": "Why Exercise Lowers Alzheimer's Risk — Scientists Think They've Finally Found the Mechanism",
+      "next_steps": "Retrieve primary study from WaPo citation. Schedule for days 3–5.",
+      "notes": "Integrity flags: confirm whether mechanism is established or proposed (language 'may have discovered' suggests preliminary); reflect uncertainty in body copy; do not conflate risk reduction with prevention — note exercise reduces risk but is not guaranteed preventive."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Coffee, Gut Health, and Aging: What New Studies Found",
+      "primary_entity": "coffee / gut health / aging",
+      "signal_type": "study_or_research",
+      "allowed_category": "gut health and microbiome",
+      "trend_strength_score": 58,
+      "opportunity_score": 65,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 4,
+      "recommended_angle": "Cluster two related coffee-health studies (USA Today May 2 on aging/disease protection; USA Today April 23 on gut health without caffeine) into single comprehensive explainer. What specifically does coffee do to your body based on current research — and does type matter? Combines gut health (rising Trends interest) with aging (high evergreen interest).",
+      "why_now": "Both USA Today articles within freshness window. Coffee-health research is sustained high-interest category. Clustered angle differentiates from standalone coverage.",
+      "primary_headline": "Coffee Keeps Delivering Good News for Your Health — But Here's What the Science Actually Shows",
+      "next_steps": "Retrieve primary study citations from both USA Today articles. Schedule for days 4–6.",
+      "notes": "USA Today is tier-2 health journalism — retrieve primary studies before finalizing. Integrity flags: both studies likely observational (note association ≠ causation); coffee consumption correlates with many lifestyle factors; define what biomarker 'protection from aging' refers to."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "How Young Adults Are Getting Health Advice in 2026 — and Why It Matters",
+      "primary_entity": "health information sources / young adults",
+      "signal_type": "data_release",
+      "allowed_category": "public health and epidemiology",
+      "trend_strength_score": 54,
+      "opportunity_score": 62,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 4,
+      "recommended_angle": "Synthesize Pew Research Center data (May 7: trust in health influencers; April 7: Americans value health but face barriers) with Deseret News (May 11: young adults' health advice sources). Data-driven portrait of how health information seeking has shifted, why it matters for health outcomes, what consumers should know about evaluating sources. Highly shareable, AI-citation-friendly.",
+      "why_now": "Multiple recent data releases (May 2026). Topic addresses immediate audience pain point. Clear SERP gap for synthesized data explainer.",
+      "primary_headline": "Doctor, Phone, or Influencer? How Young Adults Are Getting Their Health Advice — and What the Research Says About the Risks",
+      "next_steps": "Retrieve Pew Research report PDFs for full statistics. Schedule for days 4–7.",
+      "notes": "Pew Research is tier-1 for survey data. Integrity flags: survey responses reflect self-reported behavior which may not match actual health-seeking behavior; avoid implying influencer-sourced health advice is uniformly bad — reflect nuance accurately."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Plastics and Preterm Birth: What Parents Need to Know",
+      "primary_entity": "plastic chemicals / phthalates and preterm birth",
+      "signal_type": "study_or_research",
+      "allowed_category": "environmental health",
+      "trend_strength_score": 52,
+      "opportunity_score": 61,
+      "discover_score": 3,
+      "urgency": "evergreen",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Parent-facing explainer on CNN March 31 2026 study linking plastic chemicals to preterm births and infant deaths. Translate epidemiological finding into what it means for pregnant women and families — specifically which chemicals, which exposure routes, and what evidence-based precautions exist. Strong evergreen potential.",
+      "why_now": "CNN March 31, 2026 provides fresh study peg. Plastic/chemical exposure is sustained consumer concern. Strong evergreen potential.",
+      "primary_headline": "Millions of Preterm Births Linked to Plastic Chemicals. Here's What the Research Shows — and What Families Can Do.",
+      "next_steps": "Retrieve primary study and confirm chemical class from CNN article. Evergreen; schedule for days 5–7.",
+      "notes": "Integrity flags: 'linked to' = association only; do not imply causation; confirm whether 'millions' figure is projection or direct count; balance risk communication with actionable, evidence-based precaution guidance (do not generate fear without solutions)."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "STC Wellness City / Lion Zen Spa / Vyora Wellness",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Samuel Monroe Jr. health deterioration",
+      "reason": "brand_safety"
+    },
+    {
+      "topic": "Kona Ice nutrition / Panda Express nutrition",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Jelly Roll weight loss / Joyce Vance weight loss",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "Jiva Fitness / Fitness Warrior Nation / Planet fitness summer pass",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Baking soda for weight loss",
+      "reason": "unverified_claim"
+    },
+    {
+      "topic": "Kashrut diet / La tulipe noire",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Dr. Ken Berry carnivore diet",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "How to read nutrition labels (general query)",
+      "reason": "stale"
+    },
+    {
+      "topic": "Evlution Nutrition BCAA / Optimum Nutrition BCAA",
+      "reason": "off-category"
+    },
+    {
+      "topic": "FDA food additive loophole safety",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "Peptides for health (influencers) — NPR Feb 2026",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "Marijuana and mental health (CNN March 2026)",
+      "reason": "stale"
+    },
+    {
+      "topic": "Beta-blockers after heart attack (CNN March 2026)",
+      "reason": "stale"
+    },
+    {
+      "topic": "Difficult people / aging faster (WaPo March 2026)",
+      "reason": "stale"
+    },
+    {
+      "topic": "Pregnancy outcomes and men's health (GMA March 2026)",
+      "reason": "stale"
+    },
+    {
+      "topic": "Nature interventions for higher education neurodivergent students",
+      "reason": "off-category"
+    },
+    {
+      "topic": "5 more minutes of exercise / longevity (CNN Feb 2026)",
+      "reason": "stale"
+    },
+    {
+      "topic": "Trust in health influencers (Pew May 7) — standalone",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "UH Study: Nature reduces negative emotions",
+      "reason": "stale"
+    },
+    {
+      "topic": "CNBC longevity expert daily routine",
+      "reason": "weak-signal"
+    }
+  ]
+}

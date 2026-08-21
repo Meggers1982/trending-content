@@ -1,0 +1,269 @@
+{
+  "run_date": "2026-07-13",
+  "niche": "health and wellness",
+  "signal_summary": {
+    "total_reviewed": 144,
+    "total_retained": 8,
+    "total_rejected": 136,
+    "tools_active": [
+      "web_search",
+      "google_news",
+      "google_trends",
+      "serpapi"
+    ],
+    "tools_unavailable": [],
+    "notes": "Google Trends pre-fetch treated as primary velocity source. Gut health +20 delta is strongest Trends movement but SERP fully saturated and topic covered 07-10. Fitness +17 delta driven by non-health queries. Weight loss -26 delta driven by celebrity queries — excluded. Medical mistrust/wellness/politics cluster monitored due to political drift risk. site_url not configured — competitor coverage checked instead."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "New World Screwworm — USDA Confirmed Detections Expanding in United States",
+      "primary_entity": "New World Screwworm (Cochliomyia hominivorax)",
+      "signal_type": "policy_or_regulatory_change",
+      "allowed_category": "environmental health",
+      "trend_strength_score": 74,
+      "opportunity_score": 78,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Frame as consumer health story: what the screwworm is, how it affects humans, what USDA's confirmed detections mean geographically, and practical steps people can take — especially pet owners and outdoor workers in affected regions. Distinguish livestock/pet risk from rare human risk explicitly.",
+      "why_now": "USDA APHIS posted confirmed detections update 2026-07-12. Google Trends shows 'new world screwworm pet safety' rising under food safety cluster. Screwworm is a One Health/zoonotic story with direct human health implications beyond agriculture.",
+      "primary_headline": "New World Screwworm Is Spreading in the US — What USDA's Confirmed Detections Mean for You",
+      "next_steps": "Publish today. Confirm USDA APHIS detection page URL before publishing. Do not list specific states without checking live APHIS map at publish time — detection data updates frequently.",
+      "notes": "Flesh-eating parasite can cause myiasis in humans, but no confirmed human cases in current US outbreak. Geographic scope is dynamic — link to USDA APHIS page rather than summarizing locations."
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Zeke Emanuel's Case for Ice Cream and the Science of Longevity Diets",
+      "primary_entity": "Ezekiel Emanuel (bioethicist, physician, longevity researcher)",
+      "signal_type": "rising_search_interest",
+      "allowed_category": "aging and longevity",
+      "trend_strength_score": 71,
+      "opportunity_score": 75,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Evaluate Emanuel's claim against longevity nutrition research. Use as lens to explain what legitimate longevity nutrition research actually shows (Mediterranean diet, Valter Longo's fasting-mimicking diet, Blue Zones patterns) and where Emanuel's framing fits or diverges. Emanuel is a bioethicist, not a clinical nutritionist — his view is a perspective, not a prescription.",
+      "why_now": "NPR published wellness story today (2026-07-13) on Emanuel's ice cream and longevity position. Google Trends shows 'zeke emanuel ice cream wellness' and broader wellness cluster +8 delta. Rising query cluster includes 'university of southern california longevity diet.'",
+      "primary_headline": "A Doctor Says Eat Ice Cream for Longevity — Here's What the Science Actually Says",
+      "next_steps": "Publish today — NPR story is today's news. Confirm NPR article URL. Cite PREDIMED trial and Longo fasting-mimicking diet studies as primary evidence base. Do not make clinical dietary recommendations.",
+      "notes": "Longevity diet evidence is largely observational. Distinguish PREDIMED and Longo trials (strongest evidence) from general dietary guidance. Psychological sustainability of dietary flexibility is legitimate point but requires careful framing."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "OTC Skin Cream Recalls — FDA Manufacturing Violations",
+      "primary_entity": "FDA OTC skin cream recall — manufacturing violations (July 2026)",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 66,
+      "opportunity_score": 72,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Consumer action guide: which products, what manufacturing violations mean, what to do if you have affected products. Frame manufacturing violations as GMP failures with sterility/contamination implications.",
+      "why_now": "MedShadow Foundation reported 2026-07-08 on multiple OTC skin cream recalls over serious manufacturing violations. Distinct from eye drop recall (covered × 5 days) and cream cheese recall. Manufacturing violations indicate potential patient safety issues.",
+      "primary_headline": "Multiple OTC Skin Creams Recalled Over Serious FDA Manufacturing Violations — What to Check",
+      "next_steps": "DO NOT PUBLISH until FDA.gov primary recall notice is confirmed. Verify exact product names, lot numbers, and FDA risk classification (Class I/II/III) at FDA MedWatch page. If Class I confirmed, elevate to P1/today urgency.",
+      "notes": "Breaking-recall exception applied — FDA.gov primary notice not directly retrieved. Skill 02b: confidence cap maintained at Medium. Must verify with second outlet or direct FDA notice. Product list must come from FDA.gov only, not secondary sources."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "AMA Survey: Most Physicians Now Support Consumer Wearables for Patient Care",
+      "primary_entity": "American Medical Association (AMA) wearables survey",
+      "signal_type": "data_release",
+      "allowed_category": "fitness and exercise science",
+      "trend_strength_score": 62,
+      "opportunity_score": 70,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Shift in medical attitudes: what physicians find most useful in wearable data (heart rate, sleep, activity, SpO2), what they remain cautious about (accuracy, over-reliance, liability). Practical guidance for patients on how to use wearable data in clinical appointments.",
+      "why_now": "AMA published physician survey on consumer wearables 2026-07-08 (within freshness window). AMA is Tier 1 source. Google Trends fitness +17 delta. Physician attitudes directly affect how patients present device data clinically — high practical value.",
+      "primary_headline": "Most Doctors Now Support Patient Wearables — Here's What the AMA Survey Found",
+      "next_steps": "Confirm AMA survey URL from AMA newsroom. Verify sample size and international scope before generalizing to US clinical context.",
+      "notes": "Survey data reflects physician attitudes, not clinical outcomes evidence. International survey — note if findings differ by country before generalizing. Strong AI citation candidate for queries like 'Do doctors use wearable data?'"
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Marie-Pierre St-Onge and the Sleep-Diet Connection: What the Research Shows",
+      "primary_entity": "Marie-Pierre St-Onge, PhD (Columbia University sleep and nutrition researcher)",
+      "signal_type": "rising_search_interest",
+      "allowed_category": "sleep science",
+      "trend_strength_score": 65,
+      "opportunity_score": 68,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "What you eat affects how well you sleep — focus on foods with evidence (kiwi, tart cherry, complex carbs) vs. foods that worsen sleep (high fat, high sugar, caffeine timing). Explain tryptophan/melatonin pathway carefully without overstating conversion mechanisms.",
+      "why_now": "Google Trends rising related query today: 'marie-pierre st-onge sleep diet.' Fresh angle distinct from recent Columbia sleep/weight study (covered × 3 days). Rising search demand with strong primary institutional source.",
+      "primary_headline": "The Sleep-Diet Connection: What Researcher Marie-Pierre St-Onge's Work Tells Us About Eating and Sleep",
+      "next_steps": "Verify DOIs for St-Onge published studies via PubMed. Cite kiwi/sleep and tart cherry/sleep studies with small-sample caveats. Cross-reference Columbia sleep lab publications.",
+      "notes": "Sleep-diet research largely observational and small-cohort. Distinguish RCT evidence from observational data. Tryptophan/serotonin claims commonly overstated — dietary tryptophan conversion to brain serotonin is complex. Strong AI citation candidate for 'What foods help you sleep?'"
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Lung Transplant for Terminal Lung Cancer — What We Now Know About Patient Selection",
+      "primary_entity": "Northwestern Medicine lung transplant study",
+      "signal_type": "medical_study",
+      "allowed_category": "chronic disease management",
+      "trend_strength_score": 58,
+      "opportunity_score": 65,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "update",
+      "source_count": 2,
+      "recommended_angle": "Update from initial 07-09 coverage: shift focus to patient selection criteria — who qualifies, what survival data shows, what questions oncologists and patients should ask. Move from 'breakthrough announcement' to 'what does this mean for patients.'",
+      "why_now": "Northwestern Medicine study published 2026-07-08. Brief coverage in run history (07-09). New angle available on eligibility criteria and clinical applicability.",
+      "primary_headline": "Lung Transplant for Terminal Lung Cancer: What We Now Know About Who Qualifies",
+      "next_steps": "Obtain exact survival statistics from primary Northwestern study before publishing. Distinguish which lung cancer types were included. Verify clinical criteria for patient eligibility.",
+      "notes": "'Dramatically improves survival' language requires exact figures from study. Must be quantified with specific percentages/timeframes."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Glioma Progression: What Weill Cornell's Cancer Evolution Study Reveals",
+      "primary_entity": "Weill Cornell Medicine cancer evolution study on glioma progression",
+      "signal_type": "medical_study",
+      "allowed_category": "medical research",
+      "trend_strength_score": 55,
+      "opportunity_score": 60,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "recommended_angle": "Early-stage mechanistic research on how gliomas evolve biologically. Frame for general audience: what glioma is, why understanding evolution matters for treatment, what this research means for future therapy development. Emphasize this is biological/research-level insight, not clinical application.",
+      "why_now": "Weill Cornell Medicine published cancer evolution study 2026-07-10. New primary institutional source not previously covered as standalone topic.",
+      "primary_headline": "What Weill Cornell's Cancer Evolution Study Reveals About Glioma — and What It Means for Patients",
+      "next_steps": "Verify primary journal source cited in Weill Cornell press release. Cite study authors. Clearly state this is early-stage research.",
+      "notes": "Mechanistic/biological research — not a treatment result or clinical trial. Must state explicitly that research-to-treatment pipeline is long. Do not imply near-term clinical application. Single institutional source — confidence capped at Medium."
+    },
+    {
+      "priority_level": "P5",
+      "publish_timing": "monitor",
+      "topic": "Fentanyl Vaccine — Evidence Claims vs. What the Trial Data Actually Shows",
+      "primary_entity": "Fentanyl vaccine clinical trial",
+      "signal_type": "drug_or_treatment_claim",
+      "allowed_category": "public health",
+      "trend_strength_score": null,
+      "opportunity_score": null,
+      "discover_score": null,
+      "urgency": null,
+      "confidence": "low",
+      "content_status": "monitor",
+      "source_count": 1,
+      "recommended_angle": null,
+      "why_now": "Clinical Trial Vanguard piece (2026-07-09) questions the evidence strategy around fentanyl vaccine efficacy claims. Rising opioid/treatment interest justifies monitoring.",
+      "primary_headline": null,
+      "next_steps": "Monitor — do not publish. Skill 02b gate flagged: circulating claim materially overstates mechanism certainty. Primary clinical trial source referenced but requires editorial interpretation and accuracy verification before any publication.",
+      "notes": "Drug/treatment claim requiring gate review. Material overstatement of vaccine efficacy detected. Hold pending additional primary source verification and expert editorial review. Risk of publishing inaccurate medical claim — confidence insufficient for publication at this time."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "Eye Drops Recall (2.5M bottles)",
+      "reason": "stale — 5 consecutive run days (07-08 through 07-12); no new development detected"
+    },
+    {
+      "topic": "E. coli / Frozen Blueberries",
+      "reason": "stale — 5 consecutive run days; no new agency action or case count update"
+    },
+    {
+      "topic": "GLP-1 online prescriptions (Yale study)",
+      "reason": "stale — 4 consecutive run days; same study, no new data"
+    },
+    {
+      "topic": "Cream Cheese Recall",
+      "reason": "stale — 3 consecutive run days; no new product additions"
+    },
+    {
+      "topic": "Sleep deprivation / weight gain (Columbia)",
+      "reason": "stale — 3 consecutive run days; same study"
+    },
+    {
+      "topic": "Stanford opioid taper",
+      "reason": "stale — 3 consecutive run days"
+    },
+    {
+      "topic": "Ebola DRC / Bundibugyo trial",
+      "reason": "stale — 3 consecutive run days; NPR/Mongabay coverage same story"
+    },
+    {
+      "topic": "Biological Aging Clocks (Nature)",
+      "reason": "stale — covered 07-11"
+    },
+    {
+      "topic": "Pediatric Mental Health ERs",
+      "reason": "stale — covered 07-12"
+    },
+    {
+      "topic": "Super Mover Walking / Longevity",
+      "reason": "stale — covered 07-12"
+    },
+    {
+      "topic": "PCOS Nutrition / Wellness",
+      "reason": "stale — covered 07-11"
+    },
+    {
+      "topic": "PCOS (general, non-nutrition)",
+      "reason": "stale — covered 07-11"
+    },
+    {
+      "topic": "Politicization of Medical Research (NYT)",
+      "reason": "off-category — pure political/policy opinion; no new health data; brand safety flag"
+    },
+    {
+      "topic": "DOJ Adderall digital health fraud",
+      "reason": "off-category — criminal/legal story; no direct patient health angle; brand safety risk"
+    },
+    {
+      "topic": "Yale Health System CEO ousted",
+      "reason": "off-category — hospital administration; no patient health angle"
+    },
+    {
+      "topic": "ACA enrollment decline (PBS/KFF)",
+      "reason": "off-category — insurance policy; no clinical health content"
+    },
+    {
+      "topic": "School-based health clinics closing (Virginia)",
+      "reason": "off-category — regional policy; too narrow"
+    },
+    {
+      "topic": "AMA Healthcare Spending Trends",
+      "reason": "off-category — business/healthcare economics; no direct patient health angle"
+    },
+    {
+      "topic": "Nanox Cardiac AI",
+      "reason": "weak-signal — single-source clinical study promo; insufficient signal"
+    },
+    {
+      "topic": "Medical Mistrust + Wellness + Politics (Medscape)",
+      "reason": "monitored — borderline political drift risk; insufficient primary health data source to score safely; brand safety concerns"
+    },
+    {
+      "topic": "Gut Health (general)",
+      "reason": "monitored — covered extensively 07-10; SERP fully saturated; no new study today despite +20 Trends delta"
+    },
+    {
+      "topic": "Enteral Nutrition",
+      "reason": "weak-signal — rising Trends query only; insufficient news volume"
+    }
+  ]
+}

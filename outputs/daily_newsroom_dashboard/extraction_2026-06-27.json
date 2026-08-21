@@ -1,0 +1,281 @@
+{
+  "run_date": "2026-06-27",
+  "niche": "health and wellness",
+  "signal_summary": {
+    "total_reviewed": 153,
+    "total_retained": 9,
+    "total_rejected": 19,
+    "tools_active": [
+      "web_search",
+      "google_news",
+      "google_trends",
+      "serpapi"
+    ],
+    "tools_unavailable": [
+      "composio_search_trends",
+      "browsernavigate_rss",
+      "exasearch"
+    ],
+    "notes": "Google Trends available via SerpAPI prefetch. Real-time #1 trending: Ebola (US). Site self-check skipped; competitor fallback applied. Run history and deferred topics files not directly readable this session — no staleness cross-check performed. Keyword contamination detected in diet/health Trends clusters (crossword clues, SSD tech, political figures) — excluded from signal intake. AI-in-healthcare cluster monitored at P5 pending category rule clarification."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Ebola Travel Advisory — CDC Issues Warning for US Travelers",
+      "primary_entity": "Ebola virus disease",
+      "signal_type": "breaking_news",
+      "allowed_category": "infectious disease / public health and epidemiology",
+      "trend_strength_score": 88,
+      "opportunity_score": 82,
+      "discover_score": 4,
+      "urgency": "now",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 4,
+      "recommended_angle": "Practical traveler guidance — what to know, where not to go, what symptoms to watch for — anchored to the CDC advisory, not speculation",
+      "why_now": "Ebola is the #1 trending health search in the US right now (Google Trends Trending Now). CDC issued a traveler advisory on June 25. Kenya's health minister was found in contempt of court over a US-backed Ebola facility. The combination of a real institutional alert and search breakout creates an immediate reader-need gap.",
+      "primary_headline": "CDC Issues Ebola Travel Warning: What You Need to Know Before You Fly",
+      "next_steps": "Assign to health news writer immediately. Publish within 4 hours. Link to CDC advisory directly. Do not hold for additional research — the traveler guidance is the story.",
+      "notes": "Do not conflate Kenya political story with US outbreak. No domestic Ebola outbreak. Frame strictly as travel advisory. Do not speculate about outbreak spread. Stick to CDC advisory language and confirmed affected areas."
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Chlorthalidone Blood Pressure Medication Recall — 11,460 Bottles",
+      "primary_entity": "chlorthalidone",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates / chronic disease management",
+      "trend_strength_score": 85,
+      "opportunity_score": 88,
+      "discover_score": 5,
+      "urgency": "now",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 9,
+      "recommended_angle": "Consumer action brief — exactly which bottles are recalled, what patients should do, and whether to stop taking the medication (they should NOT stop without consulting a doctor)",
+      "why_now": "11,460 bottles of a widely-used blood pressure drug have been recalled due to a manufacturing issue as of this week. 9 outlets have confirmed coverage including FDA.gov and TODAY.com. This is a direct patient-safety story with an immediate action requirement. Blood pressure medications are among the most commonly prescribed drugs in the US — this has mass audience relevance.",
+      "primary_headline": "11,000+ Bottles of Blood Pressure Medication Recalled: How to Check If Yours Is Affected",
+      "next_steps": "Pull FDA.gov recall notice for exact lot numbers and NDC codes before publishing. Assign to health news writer. Publish within 4 hours. Prioritize mobile-readable format — patients will be checking on their phones.",
+      "notes": "Medium confidence cap applied per Skill 02b breaking-recall exception. Do NOT advise patients to stop taking chlorthalidone without consulting their doctor. Stopping blood pressure medication abruptly can be dangerous — must appear prominently. Verify lot numbers and NDC codes against FDA.gov recall database before publishing. Confirm recall still active and not yet resolved."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "HHS Launches Operation Trailblazer — Clinical Trial Reforms to Speed Up Phase 1 Drug Research",
+      "primary_entity": "Operation Trailblazer (HHS clinical trial initiative)",
+      "signal_type": "policy_or_regulatory_change",
+      "allowed_category": "medical research and clinical trials / FDA and CDC regulatory updates",
+      "trend_strength_score": 72,
+      "opportunity_score": 74,
+      "discover_score": 3,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 6,
+      "recommended_angle": "Patient-access explainer — what this policy change means for people who need experimental treatments, told through the lens of what phase 1 trials actually are and why timeline matters",
+      "why_now": "HHS announced a department-wide initiative on June 22 to cut phase 1 clinical trial timelines by 6–12 months. The stated goal: compete with China's faster trial speeds. The patient-access angle is underserved in coverage so far — most outlets covered the geopolitical framing. Our angle: what does this mean for a patient with a rare disease, cancer, or treatment-resistant condition who is waiting for an experimental drug?",
+      "primary_headline": "HHS Wants to Cut Drug Trial Times by a Year — Here's What That Could Mean for Patients",
+      "next_steps": "Assign within 24 hours. No source verification blockers — HHS.gov is directly confirmed. Strong evergreen component makes this valuable beyond the news cycle.",
+      "notes": "This is a policy announcement, not a trial result. Do not imply specific treatments will be approved faster. The China-competition framing is political context — do not make it the primary frame; lead with patient impact."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "COVID Vaccine Study Blocked by CDC — Now Published in Major Medical Journal",
+      "primary_entity": "CDC COVID vaccine study (blocked and subsequently published)",
+      "signal_type": "study_or_research",
+      "allowed_category": "medical research and clinical trials / public health and epidemiology",
+      "trend_strength_score": 74,
+      "opportunity_score": 78,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 4,
+      "recommended_angle": "What the study actually found — not the political drama. Separate the research findings from the censorship controversy, then explain both clearly.",
+      "why_now": "A COVID vaccine study was blocked from publication in a CDC journal, then published elsewhere. The Washington Post broke the story June 23. This sits at the intersection of two things health-conscious readers care about: COVID vaccine science and institutional trust. The SERP gap: most coverage focuses on the suppression angle. We can own the 'what does the study actually say' gap.",
+      "primary_headline": "The COVID Vaccine Study CDC Tried to Suppress — And What It Actually Shows",
+      "next_steps": "Pull Washington Post article for study name, journal, and authors before writing. Assign within 24 hours. Strongest if published within 48 hours of the WaPo story (June 23).",
+      "notes": "Do not misrepresent what the study found. Medscape's framing is editorialized — lead with actual research. This is politically sensitive — do not editorialize about CDC leadership motives. Report facts: study was blocked, published elsewhere, here's what it says. Verify journal name and study authors before publishing."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "FDA Listeria Outbreak Investigation — Soft Cheese (June 2026)",
+      "primary_entity": "Listeria monocytogenes (soft cheese outbreak)",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates / nutrition and diet science",
+      "trend_strength_score": 70,
+      "opportunity_score": 76,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Consumer safety action guide — which cheeses to check, Listeria symptoms to watch for, who is at highest risk (pregnant women, elderly, immunocompromised)",
+      "why_now": "The FDA opened a Listeria outbreak investigation linked to soft cheese on June 24. Listeria is one of the deadliest foodborne illnesses — 1 in 5 people who get it die. Soft cheese is a common household item. This story has direct consumer action value and falls in a category (food safety) with a proven audience in our niche.",
+      "primary_headline": "FDA Investigates Listeria Outbreak Linked to Soft Cheese: What to Avoid Right Now",
+      "next_steps": "Pull FDA.gov outbreak page immediately to confirm whether a specific brand/product has been identified. Assign within 48 hours. Strong evergreen utility even as outbreak news ages.",
+      "notes": "Specific brand/product not identified in injected signals — do NOT name a brand unless confirmed by FDA outbreak page. If no specific product identified, frame clearly: 'FDA is investigating; specific products not yet identified — check FDA.gov for updates.'"
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Medical Journal Retraction — Cancer Therapy Morning Timing Study",
+      "primary_entity": "cancer therapy circadian timing study (retracted)",
+      "signal_type": "study_or_research",
+      "allowed_category": "medical research and clinical trials / chronic disease management",
+      "trend_strength_score": 60,
+      "opportunity_score": 66,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Science self-correction explainer — use this retraction to explain how peer review works, why retractions happen, and what it means for patients who heard about the original study",
+      "why_now": "The NYT reported on June 25 that a medical journal retracted a study claiming cancer therapy is more effective when given in the morning. The original study was widely covered. Readers who acted on or shared that coverage now need clarity. The retraction is the hook; the real story is how to evaluate medical research.",
+      "primary_headline": "A Widely Covered Cancer Study Was Just Retracted. Here's What That Tells Us About Medical Research",
+      "next_steps": "Identify specific journal and study name before publishing. Assign within 7 days.",
+      "notes": "Identify the specific journal and study before publishing. Do not imply cancer therapy timing is now 'debunked' — retraction of one study does not close scientific question. Note what other research on circadian dosing exists."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Gut Health in Midlife — Nature Blood Metabolome Study + Practical Guidance",
+      "primary_entity": "gut microbiome / blood metabolome / midlife brain health",
+      "signal_type": "study_or_research",
+      "allowed_category": "gut health and microbiome / aging and longevity",
+      "trend_strength_score": 58,
+      "opportunity_score": 68,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 4,
+      "recommended_angle": "What midlife gut health research actually recommends — anchored to the Nature metabolome study, enriched with fermented foods evidence and NPR context",
+      "why_now": "A Nature study published June 25 links the blood metabolome (gut-related metabolites) to brain health in midlife, implicating genes, microbiome, and environmental exposures. Cedars-Sinai and NPR simultaneously published gut health content this week. The research angle differentiates from evergreen gut health content.",
+      "primary_headline": "New Research Links Your Gut Microbiome to Brain Health in Midlife — Here's What to Do About It",
+      "next_steps": "Assign within 7 days. Pull Nature study for verification before publishing.",
+      "notes": "The Nature study is observational — do not present associations as causal mechanisms. 'Blood metabolome' is technical — translate accurately without oversimplifying to 'gut bacteria control your brain.'"
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "BIPOC Mental Health Awareness Month — July 2026 Resource Guide",
+      "primary_entity": "BIPOC mental health / Minority Mental Health Awareness Month",
+      "signal_type": "seasonal_trend",
+      "allowed_category": "mental health and psychology",
+      "trend_strength_score": 55,
+      "opportunity_score": 65,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Practical resource guide — how to find culturally competent care, what 'culturally competent' actually means, and why BIPOC communities face distinct mental health barriers",
+      "why_now": "July is Minority Mental Health Awareness Month (also called BIPOC Mental Health Month). Mental health search interest is rising (+4 delta in Google Trends this week). Readers need actionable guidance, not awareness-only content.",
+      "primary_headline": "BIPOC Mental Health Month: Finding Culturally Competent Care and Resources That Actually Help",
+      "next_steps": "Publish by July 1 to capture full month of search demand. Assign within 7 days.",
+      "notes": "Do not generalize BIPOC mental health experiences — distinguish between communities where data exists. Avoid homogenizing a diverse audience."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Severe Pregnancy Nausea (Hyperemesis Gravidarum) — Stanford Study Links to Complications",
+      "primary_entity": "hyperemesis gravidarum (HG)",
+      "signal_type": "study_or_research",
+      "allowed_category": "women's health",
+      "trend_strength_score": 56,
+      "opportunity_score": 62,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Validation and information for pregnant people — HG is often dismissed as 'just morning sickness'; this study reframes it as a serious condition with documented complication risk",
+      "why_now": "A Stanford Medicine study published June 22 links severe pregnancy nausea to birth complications. HG affects an estimated 3% of pregnancies and is frequently undertreated. The SERP gap: most content on pregnancy nausea focuses on morning sickness remedies, not clinical severity.",
+      "primary_headline": "Severe Pregnancy Nausea Is More Dangerous Than We Thought, Stanford Study Finds",
+      "next_steps": "Verify journal and DOI from Stanford press release before publishing. Assign within 7 days.",
+      "notes": "Stanford press release sourcing — verify journal and DOI before publishing. Press releases can overstate findings. Distinguish clearly between morning sickness (common, manageable) and hyperemesis gravidarum (clinical condition requiring treatment)."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "Rural hospital $50B fund / hospital shrinkage",
+      "reason": "off_category: health systems policy without direct patient health angle"
+    },
+    {
+      "topic": "Medicaid/CHIP monthly enrollment tracker",
+      "reason": "off_category: policy data release; no direct health content angle"
+    },
+    {
+      "topic": "Jamieson Wellness exploring sale (M&A)",
+      "reason": "off_category: supplement marketing/business news"
+    },
+    {
+      "topic": "Gotham FC x Nature's Garden partnership",
+      "reason": "off_category: brand partnership, no health evidence base"
+    },
+    {
+      "topic": "Sauna/cold plunge DIY room",
+      "reason": "off_category: adjacent wellness but lacks health research anchor"
+    },
+    {
+      "topic": "Ascend Wellness employee strike",
+      "reason": "off_category: labor dispute at cannabis company"
+    },
+    {
+      "topic": "Cannabis Teamsters ULP strike",
+      "reason": "off_category: labor/cannabis, not health content"
+    },
+    {
+      "topic": "Assort Health $120M funding round",
+      "reason": "off_category: AI healthcare business news"
+    },
+    {
+      "topic": "Heart surgery kit recall",
+      "reason": "off_category: surgical device recall; too narrow/specialized for general audience"
+    },
+    {
+      "topic": "OTC drug highest-risk level",
+      "reason": "weak_signal: story 7 days old; specific drug not identified; routed to P5 Monitor"
+    },
+    {
+      "topic": "Prime Day beauty/wellness deals",
+      "reason": "off_category: retail/affiliate content"
+    },
+    {
+      "topic": "Alfred University Wellness Center / Nurses Week",
+      "reason": "off_category: institutional PR; no national audience relevance"
+    },
+    {
+      "topic": "Springfield sports/wellness center construction",
+      "reason": "off_category: local story; no national audience relevance"
+    },
+    {
+      "topic": "Penn State / UNC Asheville wellness programs",
+      "reason": "off_category: institutional PR; no national audience relevance"
+    },
+    {
+      "topic": "Mitch McConnell health / Sean Hannity health queries",
+      "reason": "brand_safety: celebrity/political health gossip excluded by brand safety rules"
+    },
+    {
+      "topic": "Alka Yagnik health",
+      "reason": "brand_safety: celebrity health excluded by brand safety rules"
+    },
+    {
+      "topic": "Meat heavy diet name crossword / klutzy",
+      "reason": "weak_signal: crossword clues contaminating 'diet' keyword; not health content"
+    },
+    {
+      "topic": "SNAP / supplemental nutrition assistance queries",
+      "reason": "off_category: policy program, not nutrition science content"
+    },
+    {
+      "topic": "How to check SSD health",
+      "reason": "weak_signal: technology query contaminating 'health' keyword; not health content"
+    }
+  ]
+}

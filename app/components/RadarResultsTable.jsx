@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { scoreBar, stageBadge, tagChips } from "@/lib/dashboard-ui";
+import TableControls from "./TableControls";
 
 const SORT_OPTIONS = [
   { key: "radar_score", label: "Radar score" },
@@ -62,31 +63,20 @@ export default function RadarResultsTable({ data }) {
 
   return (
     <div className="radarResultsTable">
-      <div className="radarResultsControls">
-        <input
-          type="text"
-          value={filterText}
-          onChange={(event) => setFilterText(event.target.value)}
-          placeholder="Filter by topic…"
-        />
-        <select value={filterStage} onChange={(event) => setFilterStage(event.target.value)}>
-          {stages.map((stage) => (
-            <option key={stage} value={stage}>{stage === "all" ? "All stages" : stage}</option>
-          ))}
-        </select>
-        <select value={sortKey} onChange={(event) => toggleSort(event.target.value)}>
-          {SORT_OPTIONS.map((option) => (
-            <option key={option.key} value={option.key}>Sort: {option.label}</option>
-          ))}
-        </select>
-        <button
-          type="button"
-          className="button"
-          onClick={() => setSortDir((dir) => (dir === "asc" ? "desc" : "asc"))}
-        >
-          {sortDir === "asc" ? "↑ Asc" : "↓ Desc"}
-        </button>
-      </div>
+      <TableControls
+        filterText={filterText}
+        onFilterText={setFilterText}
+        filterPlaceholder="Filter by topic…"
+        groupValue={filterStage}
+        onGroupValue={setFilterStage}
+        groupOptions={stages}
+        groupAllLabel="All stages"
+        sortKey={sortKey}
+        onSortKey={toggleSort}
+        sortOptions={SORT_OPTIONS}
+        sortDir={sortDir}
+        onToggleSortDir={() => setSortDir((dir) => (dir === "asc" ? "desc" : "asc"))}
+      />
       <div className="tableWrap">
         <table>
           <thead>

@@ -1,0 +1,300 @@
+{
+  "run_date": "2026-06-21",
+  "niche": "health and wellness",
+  "signal_summary": {
+    "total_reviewed": 144,
+    "total_retained": 9,
+    "total_rejected": 135,
+    "tools_active": [
+      "web_search",
+      "google_news",
+      "google_trends",
+      "serpapi"
+    ],
+    "tools_unavailable": [
+      "reddit_api",
+      "social_search"
+    ],
+    "notes": "Google Trends real-time shows 'hussein yassine usc study' as breakout signal. Food recall cluster represents unusually dense week (Alfredo sauce + infant formula + antidepressant). No deferred topics or run history files found on disk; cross-run staleness check skipped. Site URL not configured; competitor-check fallback active."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Alfredo Sauce Salmonella Recall — FDA Class I",
+      "primary_entity": "Alfredo sauce (brand TBD — verify FDA.gov)",
+      "signal_type": "recall",
+      "allowed_category": "food safety",
+      "trend_strength_score": 82,
+      "opportunity_score": 78,
+      "discover_score": 4,
+      "urgency": "now",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 7,
+      "recommended_angle": "FDA Class I Recall Explained: What the Alfredo Sauce Salmonella Warning Means and What to Do Now",
+      "why_now": "FDA classified as Class I recall (highest risk tier) spanning 41 states. Multiple Tier-1 outlets (ABC News, PBS, NBC NY) coverage confirms. Class I food recalls are highest-urgency in food safety journalism.",
+      "primary_headline": "Alfredo Sauce Recalled in 41 States Over Salmonella Risk — FDA Calls It Most Serious Level",
+      "next_steps": "Pull FDA.gov recall notice immediately for brand name and lot codes. Assign writer. Publish within 3 hours. Add internal links to existing food safety or salmonella content.",
+      "notes": "⚠️ Brand name and lot codes not confirmed in signal data — must pull directly from FDA.gov notice before publication. Do not publish without confirming product name."
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "USC Fish Oil Study: No Alzheimer's Benefit",
+      "primary_entity": "Hussein Yassine, MD (USC Keck Medicine researcher)",
+      "signal_type": "medical_study",
+      "allowed_category": "medical research",
+      "trend_strength_score": 88,
+      "opportunity_score": 85,
+      "discover_score": 5,
+      "urgency": "now",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "The USC Fish Oil Study Explained: What It Found, What It Didn't, and What You Should Actually Do",
+      "why_now": "'Hussein yassine usc study' is #1 Google Trends real-time breakout signal. Study found fish oil supplements may not prevent Alzheimer's-related decline — high-search finding challenging widespread supplement belief. SERP likely thin on consumer-friendly explainers within first 24 hours.",
+      "primary_headline": "Fish Oil Won't Prevent Alzheimer's, USC Study Finds — What It Actually Showed",
+      "next_steps": "Locate peer-reviewed journal publication (DOI/PubMed). Verify study design. Assign writer immediately. Publish within 4 hours while search spike is active. Flag for nutrition/aging content cluster.",
+      "notes": "⚠️ Confidence Medium — primary signal is university press release. Journal publication and DOI not yet confirmed. Do not generalize to all omega-3 uses; finding specific to Alzheimer's claim only."
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Infant Formula Recalled — Botulism Cases Linked",
+      "primary_entity": "Recalled infant formula (brand TBD — verify FDA.gov)",
+      "signal_type": "recall",
+      "allowed_category": "FDA/CDC regulatory",
+      "trend_strength_score": 80,
+      "opportunity_score": 82,
+      "discover_score": 5,
+      "urgency": "now",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 4,
+      "recommended_angle": "Infant Formula Recall 2026: What the Botulism Warning Means and What Parents Should Do Immediately",
+      "why_now": "Botulism in infants is pediatric emergency-level signal. Three confirmed cases tied to single product. Nationwide recall confirmed by FDA. Parent audience will have maximum urgency and share demand.",
+      "primary_headline": "Infant Formula Recalled Nationwide After FDA Links It to Three Botulism Cases",
+      "next_steps": "Pull FDA.gov recall notice immediately for brand and lot codes. Assign senior writer with pediatric health experience. Publish within 3 hours. Flag for pediatric health content cluster.",
+      "notes": "⚠️ Brand/lot codes not confirmed in signal data — pull directly from FDA.gov. Botulism is serious but treatable — avoid fear language; frame around 'what to do' not just danger."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Antidepressant Recall — Carcinogen Risk (375K Bottles)",
+      "primary_entity": "Recalled antidepressant (specific drug name TBD — verify FDA.gov)",
+      "signal_type": "drug_or_treatment_claim",
+      "allowed_category": "FDA/CDC regulatory",
+      "trend_strength_score": 74,
+      "opportunity_score": 76,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Antidepressant Recalled for Carcinogen Risk: A Practical Guide for Patients on What to Do Next",
+      "why_now": "375,000 bottles is large-scale drug recall. Carcinogen angle will drive significant patient anxiety. Mental health patients stopping medication abruptly is known clinical risk.",
+      "primary_headline": "Popular Antidepressant Recalled: What to Know About the Carcinogen Risk in 375,000 Bottles",
+      "next_steps": "Confirm drug name and lot codes via FDA.gov. Assign writer. Brief mental health editor on withdrawal safety messaging. Publish within 24–36 hours.",
+      "notes": "⚠️ DO NOT name drug until confirmed via FDA.gov. ⚠️ CRITICAL: Must prominently advise readers NOT to stop medication without physician consultation — antidepressant withdrawal is medically serious. ⚠️ Carcinogen risk from short-term recall-level contamination is typically very low — do not overstate."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Retatrutide Trial: 30% Weight Loss, On Par With Surgery",
+      "primary_entity": "Retatrutide (Eli Lilly investigational drug)",
+      "signal_type": "clinical_trial",
+      "allowed_category": "medical research",
+      "trend_strength_score": 72,
+      "opportunity_score": 80,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Retatrutide Explained: What the 30% Weight-Loss Trial Result Means and How It Compares to Surgery and Ozempic",
+      "why_now": "GLP-1 and weight-loss drug interest at sustained high search volume. Retatrutide is next-generation triple-receptor agonist beyond semaglutide/tirzepatide. Trial data showing 30% body weight loss on par with surgery is significant clinical benchmark.",
+      "primary_headline": "New Weight-Loss Drug Retatrutide Helped People Lose 30% of Body Weight — Matching Bariatric Surgery",
+      "next_steps": "Locate trial publication or conference source. Assign writer with GLP-1/obesity beat experience. Publish within 36–48 hours. Strong internal linking to existing Ozempic/tirzepatide coverage.",
+      "notes": "⚠️ Trial data from UCHealth reporting — verify whether peer-reviewed publication or conference presentation. ⚠️ Drug is not FDA approved — do not frame as available. ⚠️ 'On par with surgery' comparative frame requires verification of specific surgical outcome benchmark used in trial."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "NIH Study: Lifestyle Changes Cut Prediabetes Progression to Multiple Chronic Diseases",
+      "primary_entity": "NIH prediabetes lifestyle intervention study",
+      "signal_type": "clinical_trial",
+      "allowed_category": "medical research",
+      "trend_strength_score": 68,
+      "opportunity_score": 82,
+      "discover_score": 5,
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "NIH Study: For People With Prediabetes, Lifestyle Changes Cut Risk of Multiple Chronic Diseases — Not Just Diabetes",
+      "why_now": "NIH.gov is Tier-1 primary source — direct institutional announcement. Prediabetes affects ~96 million Americans. Finding that lifestyle changes reduce risk of multiple chronic diseases (not just diabetes) broadens public health relevance significantly. High search durability.",
+      "primary_headline": "NIH Study: Lifestyle Changes Alone Cut the Risk of Multiple Chronic Diseases in People With Prediabetes",
+      "next_steps": "Pull NIH announcement for specific chronic conditions and intervention details. Assign writer. Strong evergreen cluster opportunity — connect to existing prediabetes, diabetes, and metabolic health content.",
+      "notes": "⚠️ Verify specific chronic conditions studied — signal says 'multiple chronic conditions' without specifying. Do not generalize to conditions not studied."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Shingles Vaccine Linked to Lower Dementia Risk, New Study Finds",
+      "primary_entity": "Shingles vaccine (Shingrix / zoster vaccine recombinant adjuvanted)",
+      "signal_type": "medical_study",
+      "allowed_category": "medical research",
+      "trend_strength_score": 62,
+      "opportunity_score": 72,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Cautious explainer — what the study found, what type of study it was (observational), what the proposed mechanism is, and what it does NOT mean (not proven prevention).",
+      "why_now": "Medical research momentum in aging/vaccine space; Shingrix already CDC-recommended for adults 50+. This adds to the case.",
+      "primary_headline": "Shingles Vaccine May Lower Dementia Risk — Here's What a New Study Found",
+      "next_steps": "Verify journal and DOI. Confirm study design. Assign writer. Publish mid-week.",
+      "notes": "⚠️ Source is Medical Xpress (Tier 2 aggregator) — must verify journal, DOI, study design before publish. ⚠️ Observational study — cannot claim causation; use 'associated with' language."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "FDA Flags Highest-Risk Safety Alert for Common OTC Drug",
+      "primary_entity": "OTC drug (specific name TBD — verify FDA.gov)",
+      "signal_type": "dosage_or_safety_guidance",
+      "allowed_category": "FDA/CDC regulatory",
+      "trend_strength_score": 60,
+      "opportunity_score": 68,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "recommended_angle": "Consumer explainer — what the highest-risk FDA classification means, what the drug is, what the risk is, what to do.",
+      "why_now": "Unusual for OTC drugs to carry FDA's most serious warning tier — consumer interest will spike.",
+      "primary_headline": "FDA Issues Highest-Risk Safety Alert for a Common OTC Drug — What It Means",
+      "next_steps": "Confirm drug name and FDA source. If FDA primary source found, upgrade to P2. If unconfirmed after 24h, defer or kill.",
+      "notes": "⚠️ Single source (The Healthy, Tier 2). Specific drug name NOT confirmed in signal data. DO NOT publish without confirming via FDA.gov. P3 status partly due to weak source confidence."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "USC Launches First Psilocybin Mental Health Clinical Study",
+      "primary_entity": "USC Keck School of Medicine psilocybin clinical study",
+      "signal_type": "clinical_trial",
+      "allowed_category": "mental health",
+      "trend_strength_score": 58,
+      "opportunity_score": 70,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Forward-looking explainer — what is known about psilocybin for mental health, what this USC study adds, legal status, realistic timeline to availability.",
+      "why_now": "Sustained public interest in psychedelic-assisted mental health research; institutional credibility of USC announcement.",
+      "primary_headline": "USC Launches First Clinical Study of Psilocybin for Mental Health — Here's What We Know",
+      "next_steps": "Pull specific mental health condition being studied. Verify ClinicalTrials.gov registration. Assign writer with mental health/psychedelic science background. Publish Thursday–Friday.",
+      "notes": "⚠️ This is a funding announcement for study launch — NOT results. Do not imply treatment efficacy. ⚠️ Psilocybin is Schedule I federally; clinical access is research-only. Include legal status context."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "California health insurance tax increase",
+      "reason": "off-category — pure state policy/political; no new health data or patient clinical angle"
+    },
+    {
+      "topic": "Gallup: US adults' ability to afford healthcare at 5-year low",
+      "reason": "weak-signal — policy-adjacent; limited health content angle; insufficient audience relevance for science-forward site"
+    },
+    {
+      "topic": "AI in health / therapy / clinical trials",
+      "reason": "off-category — technology/AI category, not core health science; no actionable clinical or consumer health angle"
+    },
+    {
+      "topic": "RFK Jr. Mental Health Funding ($700M)",
+      "reason": "brand_safety — political adjacency; no new health data behind headline; experts note grants aren't new"
+    },
+    {
+      "topic": "RFK Jr. goes after journal that removed vaccine study",
+      "reason": "brand_safety — political/controversy framing; anti-vaccine misinformation adjacency"
+    },
+    {
+      "topic": "Wellness commercial noise (Balenciaga, Hilton, Samsung VivaTech, Costco, MSC cruises)",
+      "reason": "off-category — commercial/brand wellness marketing; not health science"
+    },
+    {
+      "topic": "Celebrity health gossip (Jeremy Clarkson, Mitch McConnell, Joan Cusack)",
+      "reason": "brand_safety — celebrity fluff, no medical content; excluded category"
+    },
+    {
+      "topic": "Planet Fitness Juneteenth hours",
+      "reason": "off-category — retail/logistics query"
+    },
+    {
+      "topic": "Crumbl cookie/drink nutrition facts",
+      "reason": "off-category — consumer food product; no health science angle"
+    },
+    {
+      "topic": "Sauerkraut diet / RFK Jr. sauerkraut diet",
+      "reason": "off-category — political figure diet trend; celebrity wellness fads without evidence"
+    },
+    {
+      "topic": "Study challenges conventional pet aging thinking",
+      "reason": "off-category — pet health excluded unless zoonotic; no zoonotic angle"
+    },
+    {
+      "topic": "NOAA North Atlantic Right Whale health",
+      "reason": "off-category — wildlife conservation, not human health"
+    },
+    {
+      "topic": "Pauline Newman judicial fitness challenge",
+      "reason": "off-category — legal/political, not health"
+    },
+    {
+      "topic": "Fewer employees skip work where medical marijuana is legal",
+      "reason": "weak-signal — workplace policy, not clinical health; single source; insufficient category fit and audience relevance"
+    },
+    {
+      "topic": "LungSMART bilingual digital health content",
+      "reason": "off-category — clinical trial methodology/recruitment operations; not consumer health"
+    },
+    {
+      "topic": "Wearables in clinical research",
+      "reason": "off-category — health technology/industry; not consumer health or research findings"
+    },
+    {
+      "topic": "Human-AI collaboration for cancer trial recruitment",
+      "reason": "off-category — health tech/business"
+    },
+    {
+      "topic": "Biotech turned trial failure into AI model",
+      "reason": "off-category — biotech/business"
+    },
+    {
+      "topic": "Czechia clinical trials hub",
+      "reason": "off-category — international health industry"
+    },
+    {
+      "topic": "Mac and cheese recall (526,000 packages)",
+      "reason": "duplicate — merged into food safety recall cluster; covered by Alfredo sauce brief"
+    },
+    {
+      "topic": "Ice cream recall (3 states)",
+      "reason": "weak-signal — signal too narrow (3 states); lower urgency than Class I recalls; deferred to P4 monitor"
+    },
+    {
+      "topic": "Adaptive deep brain stimulation / Parkinson's gait (Nature)",
+      "reason": "weak-signal — strong signal but very technical depth required; single Nature study without secondary coverage yet; deferred to P4 evergreen"
+    },
+    {
+      "topic": "University of Michigan Paradromics brain-computer interface",
+      "reason": "weak-signal — groundbreaking but highly technical; single institutional source; no secondary coverage detected; deferred to P4"
+    },
+    {
+      "topic": "Global clinical trial for golden staph bloodstream infections",
+      "reason": "weak-signal — strong study but very clinical/technical; low consumer search demand; deferred to P4 evergreen"
+    }
+  ]
+}

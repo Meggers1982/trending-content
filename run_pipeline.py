@@ -1449,9 +1449,13 @@ def run_pipeline(send_email_flag: bool = False) -> None:
         }],
     )
     raw_json = extract_response_text(extraction_response, label="Extraction call").strip()
-    raw_json_path = OUTPUT_DIR / f"raw_extraction_{today_str}.json"
+    # Raw model text, kept for debugging only — it is usually wrapped in a
+    # ```json fence, so it is NOT valid JSON and never was. The parsed,
+    # post-processed dict is written as extraction_<date>.json below; that is
+    # the file the dashboard reads.
+    raw_json_path = OUTPUT_DIR / f"raw_extraction_{today_str}.txt"
     raw_json_path.write_text(raw_json, encoding="utf-8")
-    log.info(f"Raw extraction JSON → {raw_json_path}")
+    log.info(f"Raw extraction text → {raw_json_path}")
 
     try:
         data = parse_extraction_json(raw_json)
@@ -1468,7 +1472,7 @@ def run_pipeline(send_email_flag: bool = False) -> None:
             }],
         )
         repaired_json = extract_response_text(repair_response, label="Extraction JSON repair call").strip()
-        repaired_json_path = OUTPUT_DIR / f"repaired_extraction_{today_str}.json"
+        repaired_json_path = OUTPUT_DIR / f"repaired_extraction_{today_str}.txt"
         repaired_json_path.write_text(repaired_json, encoding="utf-8")
         log.info(f"Repaired extraction JSON → {repaired_json_path}")
         try:
@@ -1491,6 +1495,16 @@ def run_pipeline(send_email_flag: bool = False) -> None:
     # Cap at max_candidates_returned, deferring overflow for a later recheck.
     max_candidates = load_project_config().get("max_candidates_returned", 25)
     data = update_deferred_topics(data, today_str, max_candidates)
+
+    # The parsed, deduplicated, capped run data — written after the filtering
+    # above so it matches the CSV and HTML exactly. This is what lib/runs.js
+    # reads for the run summary (signals reviewed vs. retained vs. rejected),
+    # the rejected-topics list, and the run notes, none of which the CSV carries.
+    extraction_path = OUTPUT_DIR / f"extraction_{today_str}.json"
+    extraction_path.write_text(
+        json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+    )
+    log.info(f"Parsed extraction JSON → {extraction_path}")
 
     # ── Step 3: Write HTML dashboard + CSV ────────────────────────────────────
     log.info("Step 3/4 — Generating HTML dashboard and CSV...")

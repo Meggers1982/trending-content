@@ -1,0 +1,333 @@
+{
+  "run_date": "2026-08-01",
+  "niche": "health and wellness",
+  "signal_summary": {
+    "total_reviewed": 144,
+    "total_retained": 10,
+    "total_rejected": 134,
+    "tools_active": [
+      "web_search",
+      "google_news",
+      "google_trends",
+      "serpapi"
+    ],
+    "tools_unavailable": [
+      "reddit_live",
+      "twitter_live",
+      "rss_live"
+    ],
+    "notes": "Google Trends pre-fetch used as primary search_velocity input. Google News Radar provided 60 of 144 signals as broad discovery layer. site_url not configured — self-check skipped; competitor-check fallback active. No deferred topics past due. Run history not available from prior sessions; no recurring-theme flags applied this run. Six Trends signals elevated without Google News corroboration were scored conservatively (Low/Medium confidence)."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Nationwide FDA recall of levothyroxine sodium tablets due to subpotency",
+      "primary_entity": "Levothyroxine sodium tablets",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates / chronic disease management",
+      "trend_strength_score": 88,
+      "opportunity_score": 85,
+      "discover_score": 5,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 6,
+      "recommended_angle": "Patient action guide: what to do if you take levothyroxine — check your bottle, contact your pharmacy, call your doctor. Include manufacturer name, affected lot numbers, NDC codes from FDA.gov. Frame as dosing-strength issue, not contamination. Do NOT advise stopping without physician consultation.",
+      "why_now": "Levothyroxine is one of the most-prescribed drugs in the US (27M+ patients). Nationwide recall for low potency means patients may have been undertreated for hypothyroidism — a condition where underdosing has direct health consequences. Recall broke July 27–28 and remains active as of August 1. High consumer search intent; SERP currently dominated by brief news briefs without patient action guidance.",
+      "primary_headline": "Levothyroxine Recalled Nationwide: What to Do If You Take Thyroid Medication",
+      "next_steps": "Pull exact lot numbers and manufacturer from FDA.gov before writing. Assign to health reporter with pharmacy/drug beat. Publish within 4 hours.",
+      "notes": "Confidence capped at Medium per Skill 02b breaking-recall exception. Verify manufacturer name, affected lot numbers, and NDC codes from FDA.gov primary page before publishing. Do NOT rely solely on secondary coverage."
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Active E. coli outbreak investigation linked to frozen blueberries (FDA + CDC joint investigation, July 2026)",
+      "primary_entity": "Frozen blueberries / E. coli outbreak",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates / public health and epidemiology",
+      "trend_strength_score": 85,
+      "opportunity_score": 82,
+      "discover_score": 5,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 4,
+      "recommended_angle": "Check-your-freezer consumer action guide — which brands, what E. coli symptoms look like, when to seek care, and how to safely handle recalled product. Outbreak is under active investigation — affected brands/lots may expand; recommend adding update timestamp and link to live FDA page.",
+      "why_now": "FDA and CDC simultaneously published outbreak investigation notices dated July 30, 2026 — two days ago and still active. Frozen blueberries are a staple in health-conscious households. E. coli STEC can cause serious illness, especially in children and older adults. Investigation is ongoing, meaning affected brands/lot numbers may expand. SERP currently has only brief news reports; no comprehensive patient-facing explainer exists.",
+      "primary_headline": "E. coli Outbreak Linked to Frozen Blueberries: What You Need to Know",
+      "next_steps": "Pull confirmed brands and lot numbers from FDA outbreak page. Assign immediately. Update article if FDA expands recall scope.",
+      "notes": "Outbreak is under active investigation — affected brands/lots may expand after publication. Do not characterize the outbreak scale without directly citing FDA/CDC numbers. Specify E. coli strain (STEC / O157:H7 or other) once confirmed in primary sources."
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Class I FDA recall of 19M+ egg cartons sold at Kroger, Brookshire's, and other national retailers due to Salmonella contamination risk",
+      "primary_entity": "Egg recall / Salmonella",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates / public health and epidemiology",
+      "trend_strength_score": 82,
+      "opportunity_score": 80,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 5,
+      "recommended_angle": "Complete reference guide — which brands, store brands, UPC/lot info, what Salmonella symptoms to watch for, and what to do with eggs already purchased. Largest 2026 egg recall; Class I = FDA's highest severity level. Clarify that fully cooked eggs are generally safe.",
+      "why_now": "Class I = FDA's highest severity level. Recall broke July 27 and escalated to Class I per The Healthy@Reader's Digest update. Eggs are a kitchen staple — universal consumer relevance. Salmonella from eggs causes ~79,000 illnesses/year. SERP has quick news hits but no structured brand-list + symptom + action guide.",
+      "primary_headline": "Over 19 Million Eggs Recalled for Salmonella Risk: Is Your Brand Affected?",
+      "next_steps": "Reconcile CBS (1.6M) vs. TODAY (19M) carton count via FDA primary page. Pull brand list and UPC codes. Assign immediately.",
+      "notes": "Confidence capped at Medium per Skill 02b — direct FDA primary page not verified in pre-fetch. Confirm current Class I status and complete brand/UPC list from FDA.gov. Do not overstate scope: 19M cartons ≠ 19M eggs. Salmonella risk is from raw/undercooked eggs — fully cooked eggs are generally safe."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Open-label pilot clinical trial of psilocybin-assisted therapy for treatment-resistant PTSD in veterans, published in Nature Communications Medicine",
+      "primary_entity": "Psilocybin-assisted therapy / veterans / treatment-resistant PTSD",
+      "signal_type": "clinical_trial",
+      "allowed_category": "Medical research and clinical trials / mental health and psychology",
+      "trend_strength_score": 74,
+      "opportunity_score": 78,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Rigorous explainer that takes the study seriously without overclaiming. What the trial design was (open-label, no placebo), what the results showed on validated PTSD scales, what 'treatment-resistant' means, and what still needs to be proven before this becomes a treatment option. Note: open-label pilot = preliminary design; single study.",
+      "why_now": "Published July 30, 2026 in Nature Communications Medicine. Psilocybin research is a high-interest topic with growing mainstream coverage. Veterans' mental health is a perennial high-engagement topic. Treatment-resistant PTSD has very few approved interventions.",
+      "primary_headline": "A Nature Study Tested Psilocybin Therapy for Treatment-Resistant PTSD in Veterans — Here's What It Found",
+      "next_steps": "Retrieve full DOI from Nature Communications Medicine July 30 issue. Pull sample size, effect size, and safety data from study. Assign to mental health reporter.",
+      "notes": "Open-label pilot = no control group, no placebo, small sample — headline must not imply this is a proven treatment. PTSD is a vulnerable population; framing must not minimize severity or suggest self-treatment with psilocybin. Psilocybin remains Schedule I federally; note legal status clearly."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "immediate",
+      "topic": "FDA recall of Rohto eye drop products (Google Trends #1 real-time trending health search as of August 1)",
+      "primary_entity": "Rohto eye drops / FDA recall",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 76,
+      "opportunity_score": 72,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Fast-reference guide: which exact Rohto products, the specific recall reason, what consumers should do, whether this affects popular OTC varieties (Rohto V, Cool, Hydra). Google Trends breakout #1 real-time US health search; breaking-recall exception applied.",
+      "why_now": "'fda rohto eye drop recall' is #1 trending search in Google Trends real-time health as of today. Eye drops have heightened consumer attention after 2023's contaminated eye drop recalls. SERP is thin — Google Trends breakout with low existing content = high-opportunity window.",
+      "primary_headline": "Rohto Eye Drop Recall: Which Products Are Affected and Why",
+      "next_steps": "Pull FDA recall page immediately — this is Trends #1. Confirm recall reason, product list, lot numbers. Assign to health news reporter. Publish before SERP fills.",
+      "notes": "Recall reason is UNCONFIRMED in pre-fetch data — do not speculate on contamination vs. sterility vs. labeling issue. Pull FDA.gov recall page first. Eye drop recalls carry elevated risk perception after 2023 contaminated-drop deaths — frame accurately based on actual FDA risk classification."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "SAMHSA 2025 National Survey on Drug Use and Health (NSDUH) — annual federal data release, published July 27, 2026",
+      "primary_entity": "SAMHSA / National Survey on Drug Use and Health 2025",
+      "signal_type": "data_release",
+      "allowed_category": "Mental health and psychology / public health and epidemiology",
+      "trend_strength_score": 68,
+      "opportunity_score": 74,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Data explainer: pull the 3–5 most newsworthy findings from the survey — changes in alcohol use, cannabis use, opioid statistics, depression/anxiety prevalence, treatment access gaps — and contextualize with prior-year comparisons.",
+      "why_now": "The NSDUH is the most authoritative annual snapshot of drug use and mental health in the US — data journalists, health reporters, and policy researchers all cite it. Published July 27; most coverage has been brief. A deep-dive data explainer with charts and reader-relevant takeaways has SERP opportunity and strong Discover/AI citation potential.",
+      "primary_headline": "SAMHSA's 2025 Drug Use Survey Is Out — Here Are the Key Numbers",
+      "next_steps": "Pull SAMHSA report PDF. Identify 3–5 most newsworthy datapoints with year-over-year comparisons. Assign to data/mental health reporter.",
+      "notes": "NSDUH uses self-reported data — note this limitation clearly; prevalence estimates carry standard errors. Year-over-year changes require statistical significance testing — do not characterize changes as 'rising' or 'falling' without checking confidence intervals. Include 988 Suicide & Crisis Lifeline and SAMHSA helpline in article."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Penn Medicine research finding that different GLP-1 receptor agonists can be tailored to individual metabolic profiles",
+      "primary_entity": "GLP-1 therapies / personalized metabolic medicine",
+      "signal_type": "medical_study",
+      "allowed_category": "Medical research and clinical trials / chronic disease management / nutrition and diet science",
+      "trend_strength_score": 65,
+      "opportunity_score": 75,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Consumer explainer: what the research found about metabolic differences between GLP-1 drugs, what biomarkers or patient profiles might predict response, and what this means for someone currently on or considering GLP-1 therapy. Frame around patient's question: 'Should I ask my doctor to switch?'",
+      "why_now": "GLP-1 drugs (Ozempic, Wegovy, Mounjaro, Zepbound) dominate health search. 'Weight loss' is up +10 on Google Trends 7-day delta. The clinical question of 'which GLP-1 is right for me?' has massive search demand with no authoritative consumer answer. Penn Medicine research provides a credible hook for a differentiated explainer.",
+      "primary_headline": "Not All GLP-1 Drugs Work the Same — New Research Explains Why Your Metabolism May Respond Differently",
+      "next_steps": "Pull journal citation from Penn Medicine release. Confirm study design. Assign to health/pharma reporter with GLP-1 beat familiarity.",
+      "notes": "Pull full journal citation — Penn Medicine press release framing may not capture study design or limitations. Note whether this is a clinical trial, observational study, or mechanistic research. Maintain editorial independence — do not name or rank specific drugs as 'better' without evidence. Association ≠ causation if study is observational."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Rising Google Trends query 'restricted eating hours brain health' + existing intermittent fasting / cognitive function research base",
+      "primary_entity": "Time-restricted eating / brain health / cognitive function",
+      "signal_type": "rising_search_interest",
+      "allowed_category": "Nutrition and diet science / aging and longevity",
+      "trend_strength_score": 62,
+      "opportunity_score": 68,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Evidence-based explainer: what current research says about time-restricted eating's effects on brain health markers (BDNF, neuroinflammation, autophagy), what the limitations are, and practical guidance on who might benefit and how.",
+      "why_now": "'Restricted eating hours brain health' is a rising Google Trends related query. The query reflects a growing consumer intersection of intermittent fasting (already high search volume) with cognitive health (also rising). Existing research supports a defensible explainer.",
+      "primary_headline": "Time-Restricted Eating May Benefit Brain Health — But the Research Has Limits",
+      "next_steps": "Verify whether a triggering study (Rutgers nutrition/cognition signal) relates to this query cluster. Assign to nutrition writer. Schedule within 5 days.",
+      "notes": "No single triggering study identified — this is a search-trend signal, not a breaking research story; frame as a research synthesis, not breaking news. Most TRE + brain health studies are animal models or small human trials; note clearly. Distinguish between general intermittent fasting and specific time-restricted eating windows."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Phase 3 investigational cell therapy trial showing slowed DMD progression — reported by UC Davis Health and Cedars-Sinai",
+      "primary_entity": "Duchenne muscular dystrophy / cell therapy / Phase 3 trial",
+      "signal_type": "clinical_trial",
+      "allowed_category": "Medical research and clinical trials / chronic disease management",
+      "trend_strength_score": 60,
+      "opportunity_score": 65,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Patient/family-facing explainer: what DMD is, what the cell therapy does differently from gene therapy, what Phase 3 showing means vs. approval, and what the timeline to availability might look like. Frame: 'Slowed progression' ≠ 'cure.'",
+      "why_now": "Two major medical centers (UC Davis, Cedars-Sinai) independently reported on a Phase 3 DMD cell therapy trial this week. DMD is a rare but devastating pediatric disease with very limited treatment options. Gene and cell therapy is a high-engagement topic.",
+      "primary_headline": "A Phase 3 Trial Shows Cell Therapy Can Slow Duchenne Muscular Dystrophy Progression",
+      "next_steps": "Confirm trial identity (same trial at both sites, or different). Pull ClinicalTrials.gov record. Assign to science/health reporter.",
+      "notes": "Confirm whether this is the same trial reported by both UC Davis and Cedars-Sinai or two different trials. 'Slowed progression' ≠ 'cure' — headline and framing must not overstate. Phase 3 trial ≠ approved treatment; note FDA approval pathway needed."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "WIRED investigation into wellness influencers promoting unproven supplements and nootropics as 'natural' Adderall alternatives",
+      "primary_entity": "Unproven Adderall alternatives / supplement misinformation / nootropics",
+      "signal_type": "supplement_claim",
+      "allowed_category": "Mental health and psychology / nutrition and diet science (watchdog angle — evaluating, not promoting)",
+      "trend_strength_score": 55,
+      "opportunity_score": 67,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "low",
+      "content_status": "new",
+      "source_count": 1,
+      "recommended_angle": "Science-based debunk/explainer: review the specific supplements WIRED identified (e.g., lion's mane, rhodiola, ashwagandha, L-theanine in high doses), what the actual clinical evidence shows for each, and what makes these claims particularly concerning for people who need ADHD treatment.",
+      "why_now": "WIRED published an investigation July 27. ADHD medication access has been a top health story for two years. The rise of influencer-promoted nootropics targeting ADHD demand is a timely and brand-safe watchdog topic with a clear evidence-based counter-angle.",
+      "primary_headline": "Wellness Influencers Are Selling 'Natural Adderall' Alternatives — Here's What Science Says",
+      "next_steps": "Find 2+ additional sources to corroborate the trend before framing as widespread. Assign to mental health/supplement beat writer.",
+      "notes": "Single source — confirm no other coverage before framing as widespread trend. Some adaptogens have real (if limited) evidence for mild cognitive effects; do not overclaim in either direction. Framing must make clear: this is NOT advice to stop or start any ADHD medication. Vulnerable population: people with undiagnosed or unmedicated ADHD; editorial sensitivity required."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "Celebrity GLP-1 queries (Kendra Wilkinson, JB Pritzker, Tammy Slaton, Jacob Batalon)",
+      "reason": "Brand safety: celebrity wellness gossip; no substantive health angle; weight_loss category but no evidence-based hook"
+    },
+    {
+      "topic": "Simone Biles health scare",
+      "reason": "Insufficient information in signal; 'health scare' + no corroborating news of substance = weak single-signal; celebrity health gossip risk"
+    },
+    {
+      "topic": "Red light therapy (WSMV)",
+      "reason": "Weak signal: single local TV source only; no national corroboration; borderline off-category without research angle"
+    },
+    {
+      "topic": "National Wellness Month",
+      "reason": "Off-category: marketing/promotional calendar event; no editorial content angle"
+    },
+    {
+      "topic": "Kaiser algorithm mental health triage (CalMatters)",
+      "reason": "Monitored: strong public health + AI angle, but leans institutional/policy; CalMatters is regional; insufficient national search demand to prioritize this run"
+    },
+    {
+      "topic": "HHS behavioral health pledge (HHS.gov)",
+      "reason": "Policy/regulatory, not consumer health content; insufficient audience relevance for general health-conscious reader"
+    },
+    {
+      "topic": "Soma integrative wellness / Greenheal.net wellness coach / Melaleuca wellness / Healthsciencesforum.com",
+      "reason": "Off-category: branded wellness company queries; supplement marketing or corporate wellness; brand safety risk"
+    },
+    {
+      "topic": "Ensemble Health Partners careers",
+      "reason": "Off-category: healthcare staffing/HR; no consumer health angle"
+    },
+    {
+      "topic": "Sutter Health Park",
+      "reason": "Off-category: sports venue reference; no health content"
+    },
+    {
+      "topic": "How to check hard drive health",
+      "reason": "Off-category: technology, not health"
+    },
+    {
+      "topic": "Kona ice nutrition / chipotle nutrition / diet coke ghost",
+      "reason": "Off-category: food/beverage brand queries with minimal editorial health angle; diet coke is brand query"
+    },
+    {
+      "topic": "Planet fitness summer pass",
+      "reason": "Off-category: gym business/promotional query"
+    },
+    {
+      "topic": "Sasha Obama fitness attire",
+      "reason": "Brand safety: celebrity gossip"
+    },
+    {
+      "topic": "Ascend Wellness cannabis strike",
+      "reason": "Off-category: cannabis business/labor; not a health content fit"
+    },
+    {
+      "topic": "Walmart product safety recalls",
+      "reason": "Off-category: general retail safety, not specifically health product recall; insufficient specificity"
+    },
+    {
+      "topic": "Local health admin news (St. Louis health director, NJ school insurance, San Diego wellness café)",
+      "reason": "Off-category: local/admin/business; no national consumer health angle"
+    },
+    {
+      "topic": "Medical Aid in Dying (NY.gov)",
+      "reason": "Monitored: legitimate health policy topic; single state policy update insufficient for national brief without broader news peg"
+    },
+    {
+      "topic": "Medicaid/CHIP enrollment tracker (KFF)",
+      "reason": "Data release but policy-framing heavy; not core consumer health; low audience relevance for general health reader"
+    },
+    {
+      "topic": "Mongabay endangered monkeys / medical research",
+      "reason": "Off-category: environmental/animal rights; medical research angle insufficient for consumer health audience"
+    },
+    {
+      "topic": "Huntington's disease clinical trial (HDBuzz)",
+      "reason": "Narrow specialty; single source (disease-specific publication); insufficient national search demand"
+    },
+    {
+      "topic": "Tricuspid heart valve repair study (dicardiology.com)",
+      "reason": "Narrow cardiology specialty; trade publication source; insufficient consumer angle"
+    },
+    {
+      "topic": "AI eroding doctors' thinking (AAMC)",
+      "reason": "Adjacent — interesting AI-in-medicine angle; not consumer health; edge category; audience relevance below 70 for general wellness reader"
+    },
+    {
+      "topic": "Phase 1 uveal melanoma drug study",
+      "reason": "Narrow oncology specialty; Phase 1 = very early; single specialty publication"
+    },
+    {
+      "topic": "Cyclospora / Salmonella food safety tips",
+      "reason": "Generalizing from specific outbreak to broad food safety tips; covered more specifically under E. coli blueberry recall; would be duplicate framing"
+    },
+    {
+      "topic": "Ebola vaccine clinical trial (Reuters)",
+      "reason": "International/global health; insufficient US consumer relevance for this niche without domestic angle"
+    },
+    {
+      "topic": "ALS Dallas clinical trial",
+      "reason": "Narrow/local; single NBC affiliate source; insufficient corroboration"
+    },
+    {
+      "topic": "Rutgers nutrition cognitive study (standalone)",
+      "reason": "Possible overlap with Brief 8 (time-restricted eating / brain health cluster); folded into research context for that brief rather than separate brief; insufficient independent source confirmation for standalone"
+    }
+  ]
+}

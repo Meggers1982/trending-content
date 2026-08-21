@@ -1187,6 +1187,39 @@ in `run_pipeline.py` and the underlying `serp_signals_*.md` collection are untou
 the dashboard's *rendering* of that fixed-category depth data was removed, not the collection
 itself (still feeds the "Rising Related Searches" aggregate, which is derived from it).
 
+### The run's own numbers were unreadable on disk (fixed 2026-08-21)
+
+`run_pipeline.py` wrote `raw_extraction_<date>.json` straight from the model — still wrapped in a
+```json fence, so **none of the 28 committed files parsed as JSON** despite the extension. The
+parsed dict was never persisted, so `lib/runs.js` could only read `dashboard_<date>.csv`, and the
+CSV structurally cannot carry `signal_summary` or `rejected[]`. Result: the dashboard showed 9
+retained topics and nothing about the 144 reviewed or 135 cut, and `getRunSummary()` faked its
+"signals" metric as `retained`.
+
+Now the pipeline writes `extraction_<date>.json` — the parsed dict, dumped *after*
+`filter_recent_duplicates()` and `update_deferred_topics()` so it matches the CSV and HTML exactly —
+and the raw text moves to `raw_extraction_<date>.txt`, which is what it always was. All 28 historical
+runs were backfilled by re-parsing their raw files through `parse_extraction_json()`, so run history
+works from day one rather than only going forward. `readExtraction()` in `lib/runs.js` returns null
+when the file is absent and every consumer falls back to CSV-only rendering, so a run predating this
+change still displays.
+
+Note the two rejection counts differ legitimately and both are shown: `signal_summary.total_rejected`
+is what the model says it filtered (135), while `rejected[]` is what it bothered to itemize (30).
+Picking one number would misrepresent the run.
+
+### Recurrence and staleness are computed from the runs, not run_history.yaml
+
+`data/run_history.yaml` records `signals_reviewed`/`topics_retained`/`key_themes` per run, but the
+app never reads it — it would need a YAML parser as a new dependency to restate data the
+`extraction_*.json` files already carry. `getRecurrence()` and `getRunTrend()` in `lib/runs.js`
+derive both from the runs already loaded. `run_history.yaml` remains the *model's* memory, consumed
+by `build_history_context()` on the Python side; it is not the dashboard's data source.
+
+`getRecurrence()`'s `sameStory()` matcher is deliberately looser than `filter_recent_duplicates()`
+in `run_pipeline.py` (60% overlap of distinctive words vs. difflib on the full string): a false
+positive here mislabels a "day 3" chip, whereas a false positive there silently drops a story.
+
 ### Google News Radar panel headlines were never clickable (fixed 2026-08-21)
 
 The `Link:` line added to the radar block the day before (see the commit that carried news URLs

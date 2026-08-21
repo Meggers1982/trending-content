@@ -1,0 +1,333 @@
+{
+  "run_date": "2026-07-08",
+  "niche": "health and wellness",
+  "signal_summary": {
+    "total_reviewed": 144,
+    "total_retained": 11,
+    "total_rejected": 133,
+    "tools_active": [
+      "web_search",
+      "google_news",
+      "google_trends",
+      "serpapi"
+    ],
+    "tools_unavailable": [],
+    "notes": "Google Trends pre-fetch active. site_url not configured — self-check skipped; competitor-check fallback active. Deferred topics and run history files not readable in this session — no staleness flags applied. Dominant cluster: FDA recalls (food, devices, OTC). GLP-1 oversight remains high-opportunity. Gut health trending (+4 delta). Fitness cluster dominated by July 4th noise."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Utz Potato Chip Salmonella Recall — FDA Class I (Highest Risk)",
+      "primary_entity": "Utz Brands",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 88,
+      "opportunity_score": 85,
+      "discover_score": 5,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 8,
+      "recommended_angle": "Consumer safety checklist: which Utz chip products are recalled, how to identify affected lots, what to do if you've eaten them, what salmonella symptoms look like, and when to seek care.",
+      "why_now": "FDA elevated the Utz potato chip recall to its highest risk classification (Class I) on or around July 2, 2026, meaning there is a reasonable probability the product will cause serious adverse health consequences or death. Multiple major outlets — NBC News, The Guardian, The Hill, Fox Business, CBS News, TODAY — confirmed the same product, same risk, same recall tier. This is a high-urgency consumer safety story with active search demand.",
+      "primary_headline": "Utz Potato Chip Recall: FDA Issues Highest-Risk Alert for Salmonella — Here's What to Do",
+      "next_steps": "Assign immediately. Pull FDA notice for exact product/lot list before writing. Publish within 24 hours.",
+      "notes": "Breaking recall exception used — confirm FDA.gov notice URL and specific lot codes before publishing. Do not list affected products without pulling directly from the official FDA recall notice."
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "E. coli Outbreak — FDA Investigation into Frozen Blueberries (July 2026)",
+      "primary_entity": "Frozen Blueberries / FDA Outbreak Investigation",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 84,
+      "opportunity_score": 82,
+      "discover_score": 5,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 4,
+      "recommended_angle": "Active outbreak explainer: what FDA has found so far, which products may be involved, what E. coli O157:H7 symptoms look like, and what consumers should do with frozen blueberries in their freezer right now.",
+      "why_now": "FDA.gov posted an active outbreak investigation page on July 6, 2026: 'Outbreak Investigation of E. coli: Frozen Blueberries (July 2026).' This is an open, evolving public health situation. E. coli outbreaks linked to produce are a recurring high-priority food safety story. Consumers who have recently bought or eaten frozen blueberries need guidance now.",
+      "primary_headline": "FDA Investigating E. coli Outbreak Linked to Frozen Blueberries: What to Do Now",
+      "next_steps": "Assign immediately. Monitor FDA page daily — update article when recall is issued or additional products named. This story has a 72-hour P1 window.",
+      "notes": "Active investigation — this story will evolve. Add 'Last updated' timestamp and plan to update when a recall is issued or investigation concludes. Do not name specific brands unless they appear on the FDA investigation page at time of writing. Note antibiotic risks for E. coli O157:H7."
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "GLP-1 Weight-Loss Drugs Online — Yale Secret-Shopper Study Finds Low Clinical Oversight",
+      "primary_entity": "GLP-1 / Online Prescribing Platforms",
+      "signal_type": "study_or_research",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 79,
+      "opportunity_score": 84,
+      "discover_score": 5,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 5,
+      "recommended_angle": "What the Yale secret-shopper study actually found about online GLP-1 prescribing — the specific gaps in oversight, what that means for patient safety, and what questions to ask before getting a prescription online.",
+      "why_now": "STAT News (July 6) and The Washington Post (July 7) both covered a Yale study using secret shoppers to evaluate GLP-1 prescriptions from online telehealth platforms. The findings: easy, fast access with minimal clinical oversight. GLP-1 drugs remain among the highest-search health topics of 2025–2026. This study adds a critical safety and consumer-protection angle that differentiates from pure 'ozempic works' coverage.",
+      "primary_headline": "Yale Secret-Shopper Study Reveals Major Safety Gaps in Online GLP-1 Prescriptions",
+      "next_steps": "Assign to senior writer with health/pharma background. Pull Yale study directly from STAT News and WaPo for specific data points before writing. This piece has a 48-hour relevance window before broader media saturation.",
+      "notes": "Confirm whether Yale study is peer-reviewed publication or preprint/press release. Do not present access barriers as universally bad — telehealth GLP-1 access has genuine benefits. 'Alarming' framing should be supported by specific findings."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Eye Drop Recall — Over 2.5 Million Bottles Recalled Nationwide",
+      "primary_entity": "Eye Drops (recalled brands)",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 76,
+      "opportunity_score": 80,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Which brands are recalled, what the contamination risk is, what symptoms could indicate a problem, and what consumers should do with recalled drops.",
+      "why_now": "Prevention reported on July 7, 2026 that over 2.5 million bottles of eye drops have been recalled nationwide, citing an FDA warning. Eye drops are a ubiquitous consumer product with broad audience reach. The 2023–2024 eye drop recall cycles established this as a high-engagement health safety category.",
+      "primary_headline": "Over 2.5 Million Bottles of Eye Drops Recalled: FDA Warns Consumers to Stop Using These Products",
+      "next_steps": "Pull FDA notice for specific brands before writing. Publish within 48 hours.",
+      "notes": "Confidence capped at Medium — primary FDA notice not directly retrieved; confirm brand names and lot codes from FDA.gov before publishing. Past eye drop recall coverage has sometimes attributed recalls to wrong brands."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "COVID-19 Vaccines Cut Hospitalizations by More Than 50% — New Real-World Data",
+      "primary_entity": "COVID-19 Vaccines",
+      "signal_type": "study_or_research",
+      "allowed_category": "public health and epidemiology",
+      "trend_strength_score": 72,
+      "opportunity_score": 76,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 4,
+      "recommended_angle": "What the new real-world data shows about COVID vaccine effectiveness against hospitalization in 2026 — including which vaccines, which variants, which populations showed the strongest benefit, and what it means for fall 2026 booster decisions.",
+      "why_now": "UCHealth (University of Colorado Health) published July 6, 2026, citing a new study showing COVID-19 vaccines cut hospitalizations by more than 50%. Real-world effectiveness data is highly valued by health-conscious readers who want to understand how vaccines perform in actual populations.",
+      "primary_headline": "COVID Vaccines Still Cut Hospitalizations by More Than 50%, New Real-World Study Shows",
+      "next_steps": "Confirm primary journal publication before writing. Publish within 3 days.",
+      "notes": "Confirm whether UCHealth study is peer-reviewed or institutional press release only. Confirm observational vs. RCT design. Present relative risk reduction with absolute risk context. Do not speculate on fall 2026 boosters without current CDC guidance."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Pacemaker Recall — FDA Issues Warning After Injuries and Deaths",
+      "primary_entity": "Pacemakers (recalled models)",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 70,
+      "opportunity_score": 78,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Which pacemaker models are recalled, what the malfunction is, what the reported injuries and deaths involve, and what FDA says affected patients and their doctors should do.",
+      "why_now": "UCHealth reported July 2, 2026 that the FDA recalled malfunctioning pacemakers after injuries and deaths, with patient guidance issued. Pacemaker recalls with confirmed adverse outcomes are among the highest-stakes medical device safety stories.",
+      "primary_headline": "FDA Recalls Pacemakers After Reports of Injuries and Deaths — What Patients Need to Know",
+      "next_steps": "Pull FDA recall notice for device specifics before writing. Assign to writer with medical device experience. Publish within 48 hours.",
+      "notes": "Confidence capped at Medium. Critical: do NOT advise patients to stop using their pacemaker without cardiologist guidance — device-dependent patients face life-threatening risk if they misinterpret recall guidance. Confirm device names and malfunction from FDA.gov before publishing."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Intermittent Fasting Maintains Long-Term Weight Loss Regardless of Meal Timing",
+      "primary_entity": "Intermittent Fasting",
+      "signal_type": "study_or_research",
+      "allowed_category": "nutrition and diet science",
+      "trend_strength_score": 68,
+      "opportunity_score": 72,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "What this study says about intermittent fasting and meal timing — the specific finding that challenges conventional IF advice — and what it means practically for people doing IF.",
+      "why_now": "Medical Xpress (July 3) reported a new study finding intermittent fasting maintains long-term weight loss regardless of when meals are eaten — challenging the meal-timing orthodoxy. The 'diet' Google Trends cluster is active and intermittent fasting remains a top-search nutrition topic.",
+      "primary_headline": "New Study: Intermittent Fasting Works for Long-Term Weight Loss — But When You Eat Doesn't Matter",
+      "next_steps": "Pull primary journal citation from Medical Xpress. Publish within 3–5 days.",
+      "notes": "Confirm study design from Medical Xpress — if observational, do not state IF 'causes' weight maintenance. Confirm whether 'long-term' is 12 months, 24 months, or longer. Do not generalize to populations with eating disorder history, insulin-dependent diabetes, or children without explicit qualification."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Psilocybin Randomized Clinical Trial — Single Dose Reduced Cocaine Use",
+      "primary_entity": "Psilocybin",
+      "signal_type": "clinical_trial",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 65,
+      "opportunity_score": 70,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "What the randomized trial found about a single psilocybin dose and cocaine use reduction — the specific design, effect size, and what it means for where psychedelic therapy stands as a legitimate treatment pathway.",
+      "why_now": "TMX Newsfile reported July 5, 2026 the publication of a randomized clinical trial showing a single dose of psilocybin reduced cocaine use, with Filament Health holding the exclusive IP license. A published RCT on psilocybin for substance use disorder is a significant research milestone.",
+      "primary_headline": "Single Dose of Psilocybin Reduced Cocaine Use in Randomized Trial — What the Study Found",
+      "next_steps": "Pull primary journal publication before writing. Flag commercial interest disclosure (Filament Health) as mandatory editorial requirement.",
+      "notes": "Disclose Filament Health commercial IP interest — mandatory. Confirm sample size from primary publication. Single clinical trial — do not present as definitive proof. Do not generalize beyond cocaine use disorder."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Cyclosporiasis Outbreak 2026 — Rising Search Interest",
+      "primary_entity": "Cyclosporiasis",
+      "signal_type": "rising_search_interest",
+      "allowed_category": "public health and epidemiology",
+      "trend_strength_score": 62,
+      "opportunity_score": 65,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "What cyclosporiasis actually is — how people get infected, what the 2026 outbreak involves, which produce has been linked historically, and how to protect yourself.",
+      "why_now": "Cyclosporiasis appears in Google Trends Trending Now (US health, real-time) on July 8, indicating a search spike — likely linked to an active outbreak or seasonal increase. Cyclosporiasis has a distinct seasonal pattern in the US (late spring/summer, linked to fresh produce).",
+      "primary_headline": "Cyclosporiasis Outbreak 2026: What Is It, How Do You Get It, and Should You Be Worried?",
+      "next_steps": "Verify current outbreak status with CDC before writing. Assign as evergreen-adjacent explainer that can be updated as outbreak develops.",
+      "notes": "Confirm current outbreak details from CDC before publishing — Google Trends signal alone does not confirm an active CDC-declared outbreak. Do not name produce sources without CDC/FDA confirmation."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Heart Disease and Cognitive Decline — New Research on the Heart-Brain Link",
+      "primary_entity": "Cardiovascular Health / Cognitive Function",
+      "signal_type": "study_or_research",
+      "allowed_category": "chronic disease management",
+      "trend_strength_score": 58,
+      "opportunity_score": 63,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "What the new research adds to our understanding of why cardiovascular health protects cognitive function — and the specific lifestyle factors that address both simultaneously.",
+      "why_now": "News-Medical reported July 6 on a study exploring heart issues and cognitive function. Heart disease is the #1 killer in the US; cognitive decline is a top aging fear. The intersection is a high-engagement topic. The 'best exercises for heart health' query is rising in Google Trends this week.",
+      "primary_headline": "New Study: Heart Problems Are Linked to Faster Cognitive Decline — Here's What Protects Both",
+      "next_steps": "Pull primary journal citation from News-Medical article. Can pair with 'best exercises for heart health' angle to capture rising Google Trends query. Publish within 5–7 days.",
+      "notes": "Confirm study is published in peer-reviewed journal — News-Medical headline does not identify the journal. Present as association, not causation. Confirm population studied — if elderly-only, qualify generalizability."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Shigella Vaccine Trial — 89% Protection Rate",
+      "primary_entity": "Shigella Vaccine",
+      "signal_type": "clinical_trial",
+      "allowed_category": "public health and epidemiology",
+      "trend_strength_score": 55,
+      "opportunity_score": 60,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "What the 89% protection result means, who shigella affects (travelers, children, vulnerable communities), and where this vaccine is in the development pipeline.",
+      "why_now": "PR Newswire and CIDRAP reported a clinical trial showing 89% protection from a Shigella vaccine. Shigella infects ~450,000 Americans annually; antimicrobial resistance is rising in Shigella strains, making a vaccine more urgent than ever. Trial results at this efficacy level are newsworthy.",
+      "primary_headline": "Shigella Vaccine Trial Shows 89% Protection — What This Means for a Disease Affecting Millions",
+      "next_steps": "Confirm journal publication or ClinicalTrials.gov registration. Pull efficacy endpoint definition. SERP difficulty is Easy — low competition, clear opportunity.",
+      "notes": "Confidence capped at Medium — PR Newswire is a press release, not peer-reviewed. Verify journal or ClinicalTrials.gov. Clarify whether 89% efficacy is against any infection, symptomatic disease, or severe disease. Distinguish trial results from approved vaccine."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "Mitch McConnell Health Status",
+      "reason": "brand_safety / off-category — celebrity/political figure health; no generalizable health content angle"
+    },
+    {
+      "topic": "Katie Couric (Trending Now)",
+      "reason": "off-category — celebrity; no health content angle relevant to this site"
+    },
+    {
+      "topic": "Space Radiation / Accelerated Aging (UCF)",
+      "reason": "off-category — not actionable for health-conscious general audience without clinical bridge"
+    },
+    {
+      "topic": "NYC 450K Losing Health Coverage",
+      "reason": "off-category — pure healthcare policy/access story; no new health data angle"
+    },
+    {
+      "topic": "Reproductive Health Litigation (KFF)",
+      "reason": "off-category — pure legal/policy; excluded category for this niche"
+    },
+    {
+      "topic": "AMA Healthcare Spending Trends",
+      "reason": "weak-signal — institutional/systemic; no direct actionable health content for general audience"
+    },
+    {
+      "topic": "Digital Health Fraud / Adderall Scheme (DOJ)",
+      "reason": "off-category — legal/crime news; not a health content angle"
+    },
+    {
+      "topic": "Fitness cluster (July 4th gym hours)",
+      "reason": "weak-signal — search noise around holiday hours; not actionable health content"
+    },
+    {
+      "topic": "Wellness cluster (local programs)",
+      "reason": "off-category — local scope (Purdue, UW Extension, Evanston, Palo Alto); not national audience"
+    },
+    {
+      "topic": "EMA Women's Health steps up",
+      "reason": "off-category — EU regulatory body; limited US audience relevance"
+    },
+    {
+      "topic": "Game of Thrones star / wellness cult",
+      "reason": "off-category — celebrity gossip; excluded category"
+    },
+    {
+      "topic": "Ascend Wellness ULP strike",
+      "reason": "off-category — labor news; not health content"
+    },
+    {
+      "topic": "Yale hospital CEO ousted",
+      "reason": "off-category — institutional/administrative; no patient health angle"
+    },
+    {
+      "topic": "Urban motifs / population health (Nature)",
+      "reason": "weak-signal — low trend velocity; insufficient hook for general audience"
+    },
+    {
+      "topic": "Cervical Cancer (WHO July 3)",
+      "reason": "stale — no new data or study this week; evergreen but not trending"
+    },
+    {
+      "topic": "Bundibugyo/Ebola Trial DR Congo",
+      "reason": "off-category — global health emergency; limited US audience relevance now"
+    },
+    {
+      "topic": "Neurodegenerative Drug Target",
+      "reason": "unverified_claim — early-stage drug target; requires peer-reviewed primary source verification"
+    },
+    {
+      "topic": "Stress/Gut-Brain/Mice Study",
+      "reason": "weak-signal — animal model only; cannot responsibly generalize to humans without qualification"
+    },
+    {
+      "topic": "Snapchatplanet.com / wellness domains",
+      "reason": "off-category — spam/SEO noise in Google Trends wellness queries"
+    },
+    {
+      "topic": "'1776 diet,' 'Kashrut diet,' 'Haaland diet'",
+      "reason": "weak-signal — rising queries with no credible health content signal; not actionable"
+    },
+    {
+      "topic": "Mark Zuckerberg wagyu cattle diet",
+      "reason": "off-category — celebrity wellness; excluded category"
+    },
+    {
+      "topic": "Planet Fitness July 4th hours",
+      "reason": "weak-signal — search noise; not health content"
+    },
+    {
+      "topic": "Twisted tea nutrition facts",
+      "reason": "weak-signal — low health value; consumer curiosity not aligned with site niche"
+    }
+  ]
+}

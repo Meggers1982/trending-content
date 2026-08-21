@@ -1,6 +1,15 @@
-import { getLatestRun, getReportText, getRunSummary, getSignalText, listRuns } from "@/lib/runs";
+import {
+  getRecurrence,
+  getReportText,
+  getRunAgeDays,
+  getRunSummary,
+  getRunTrend,
+  getSignalText,
+  listRuns
+} from "@/lib/runs";
 import { getLatestRadarScanData } from "@/lib/radar";
-import { scoreBar, badge, stageBadge, tagChips } from "@/lib/dashboard-ui";
+import { scoreBar, stageBadge, tagChips } from "@/lib/dashboard-ui";
+import PriorityBoard from "./components/PriorityBoard";
 import RunControls from "./components/RunControls";
 import RadarScan from "./components/RadarScan";
 import TrackedTopics from "./components/TrackedTopics";
@@ -301,10 +310,18 @@ function RadarDashboard({ text }) {
   );
 }
 
-export default function Home() {
+export default async function Home({ searchParams }) {
   const runs = listRuns();
-  const latest = getLatestRun();
+  // ?run=YYYY-MM-DD browses a past run; everything on the page reflects the
+  // selected one, so history is readable in-app instead of as raw artifacts.
+  const params = await searchParams;
+  const requestedDate = typeof params?.run === "string" ? params.run : "";
+  const latest = runs.find((run) => run.date === requestedDate) || runs[0] || null;
+  const isViewingPast = Boolean(latest) && latest.date !== runs[0]?.date;
+  const ageDays = getRunAgeDays(latest);
   const summary = getRunSummary(latest);
+  const recurrence = getRecurrence(runs, latest);
+  const trend = getRunTrend(runs);
   const signals = getSignalText(latest);
   const report = getReportText(latest);
   const reportSections = parseReportSections(report).filter((section) =>
@@ -350,9 +367,17 @@ export default function Home() {
             <p className="eyebrow">Health & Wellness Editorial Intelligence</p>
             <h1>Trending Content OS</h1>
           </div>
-          <div className="runmeta">
-            <span>Latest run</span>
+          <div className={`runmeta ${ageDays !== null && ageDays > 1 && !isViewingPast ? "stale" : ""}`}>
+            <span>{isViewingPast ? "Viewing past run" : "Latest run"}</span>
             <strong>{latest?.date || "No run found"}</strong>
+            {latest ? (
+              <em>
+                {ageDays === 0 ? "today" : ageDays === 1 ? "yesterday" : `${ageDays} days old`}
+                {summary.toolsUnavailable.length
+                  ? ` · ${summary.toolsUnavailable.length} tool${summary.toolsUnavailable.length > 1 ? "s" : ""} unavailable`
+                  : ""}
+              </em>
+            ) : null}
           </div>
         </header>
 
@@ -365,14 +390,19 @@ export default function Home() {
               Trending Content OS and turns them into an editorial command center.
             </p>
             <div className="actions">
-              {latest?.hasDashboard ? (
-                <a className="button primary" href={`/api/artifact/${latest.dashboardPath}`} target="_blank">
-                  Open Dashboard
+              {isViewingPast ? (
+                <a className="button primary" href="/">
+                  ← Back to latest run
                 </a>
               ) : null}
               {latest?.hasReport ? (
                 <a className="button" href={`/api/artifact/${latest.reportPath}`} target="_blank">
                   Full Report
+                </a>
+              ) : null}
+              {latest?.hasDashboard ? (
+                <a className="button" href={`/api/artifact/${latest.dashboardPath}`} target="_blank">
+                  Download snapshot
                 </a>
               ) : null}
             </div>
@@ -382,28 +412,65 @@ export default function Home() {
           </div>
         </section>
 
+        {/* The funnel, stated plainly: what was looked at, what survived, what
+            was cut. The reviewed and rejected counts come from the run's
+            extraction JSON and were invisible before. */}
         <section className="metrics">
+          <article>
+            <span>Signals Reviewed</span>
+            <strong>{summary.reviewed || "—"}</strong>
+            <p>{summary.reviewed ? "before filtering" : "not recorded for this run"}</p>
+          </article>
           <article>
             <span>Retained</span>
             <strong>{summary.retained}</strong>
-            <p>topics on board</p>
+            <p>
+              {summary.reviewed
+                ? `${Math.round((summary.retained / summary.reviewed) * 100)}% of reviewed`
+                : "topics on board"}
+            </p>
+          </article>
+          <article>
+            <span>Rejected</span>
+            <strong>{summary.rejected || summary.rejectedItemized || "—"}</strong>
+            <p>
+              {summary.rejectedItemized
+                ? `${summary.rejectedItemized} itemized below`
+                : "none itemized"}
+            </p>
           </article>
           <article>
             <span>Publish Now</span>
             <strong>{summary.immediate}</strong>
-            <p>P1 candidates</p>
-          </article>
-          <article>
-            <span>High Confidence</span>
-            <strong>{summary.highConfidence}</strong>
-            <p>verified signal quality</p>
-          </article>
-          <article>
-            <span>Integrity Flags</span>
-            <strong>{summary.flags}</strong>
-            <p>need review</p>
+            <p>P1 · {summary.highConfidence} high confidence</p>
           </article>
         </section>
+
+        {trend.length > 1 ? (
+          <section className="trendStrip" aria-label="Signals reviewed and retained per run">
+            {trend.map((point) => {
+              const peak = Math.max(...trend.map((p) => p.reviewed), 1);
+              return (
+                <div className="trendCol" key={point.date} title={`${point.date}: ${point.reviewed} reviewed, ${point.retained} retained`}>
+                  <div className="trendBar" style={{ height: `${Math.round((point.reviewed / peak) * 100)}%` }}>
+                    <div
+                      className="trendKept"
+                      style={{ height: `${Math.round((point.retained / Math.max(point.reviewed, 1)) * 100)}%` }}
+                    />
+                  </div>
+                  <span>{point.date.slice(5)}</span>
+                </div>
+              );
+            })}
+          </section>
+        ) : null}
+
+        {summary.notes ? (
+          <section className="insightPanel">
+            <p className="eyebrow">Run Insight</p>
+            <p>{summary.notes}</p>
+          </section>
+        ) : null}
 
         <RadarDashboard text={signals} />
 
@@ -432,46 +499,44 @@ export default function Home() {
               <p className="eyebrow">Priority Board</p>
               <h2>{candidates.length} retained topics</h2>
             </div>
+            <p className="quiet">Click a topic to see the angle, the headline, and why it matters now.</p>
           </div>
-          <div className="tableWrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>Priority</th>
-                  <th>Topic</th>
-                  <th>Trend</th>
-                  <th>Opp</th>
-                  <th>Discover</th>
-                  <th>Timing</th>
-                  <th>Confidence</th>
-                  <th>Sources</th>
-                </tr>
-              </thead>
-              <tbody>
-                {candidates.map((candidate, index) => (
-                  <tr key={`${candidate.topic}-${index}`}>
-                    <td>{badge(candidate.priority_level)}</td>
-                    <td>
-                      <strong>{candidate.topic}</strong>
-                      <span>{candidate.primary_entity}</span>
-                    </td>
-                    <td>
-                      <b>{candidate.trend_strength_score}</b>
-                      {scoreBar(candidate.trend_strength_score, "red")}
-                    </td>
-                    <td>
-                      <b>{candidate.opportunity_score}</b>
-                      {scoreBar(candidate.opportunity_score, "blue")}
-                    </td>
-                    <td>{badge(candidate.discover_score)}</td>
-                    <td>{badge(candidate.publish_timing)}</td>
-                    <td>{badge(candidate.confidence)}</td>
-                    <td>{candidate.source_count || "—"}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <PriorityBoard candidates={candidates} recurrence={recurrence} />
+
+          {latest?.rejected?.length ? (
+            <details className="rejectedPanel">
+              <summary>
+                <strong>{latest.rejected.length} rejected topics</strong>
+                <span className="quiet">
+                  {summary.rejected > latest.rejected.length
+                    ? ` — itemized from ${summary.rejected} filtered out`
+                    : " — what the filter cut, and why"}
+                </span>
+              </summary>
+              <div className="rejectedGroups">
+                {Object.entries(
+                  latest.rejected.reduce((groups, item) => {
+                    const reason = `${item.reason || "unspecified"}`.trim() || "unspecified";
+                    (groups[reason] ||= []).push(item.topic);
+                    return groups;
+                  }, {})
+                )
+                  .sort((a, b) => b[1].length - a[1].length)
+                  .map(([reason, topics]) => (
+                    <div className="rejectedGroup" key={reason}>
+                      <p className="detailLabel">
+                        {reason} <span className="quiet">({topics.length})</span>
+                      </p>
+                      <ul className="cleanList">
+                        {topics.map((topic, index) => (
+                          <li key={`${topic}-${index}`}>{topic}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+              </div>
+            </details>
+          ) : null}
         </section>
 
         <section className="board" id="keywords">
@@ -588,17 +653,29 @@ export default function Home() {
             </div>
           </div>
           <div className="runList">
-            {runs.map((run) => (
-              <article key={run.date}>
-                <strong>{run.date}</strong>
-                <span>{run.candidateCount} retained</span>
-                <div>
-                  {run.hasDashboard ? <a href={`/api/artifact/${run.dashboardPath}`} target="_blank">Dashboard</a> : null}
-                  {run.hasReport ? <a href={`/api/artifact/${run.reportPath}`} target="_blank">Report</a> : null}
-                  {run.hasSignals ? <a href={`/api/artifact/${run.signalPath}`} target="_blank">Signals</a> : null}
-                </div>
-              </article>
-            ))}
+            {runs.map((run) => {
+              const active = run.date === latest?.date;
+              return (
+                <article key={run.date} className={active ? "activeRun" : ""}>
+                  {/* Selecting a run re-renders the whole page against it, so
+                      past runs are browsable in-app rather than as raw files. */}
+                  <a className="runPick" href={run.date === runs[0]?.date ? "/#board" : `/?run=${run.date}#board`}>
+                    <strong>{run.date}</strong>
+                    <span>
+                      {run.summary?.total_reviewed
+                        ? `${run.summary.total_reviewed} reviewed · ${run.candidateCount} retained`
+                        : `${run.candidateCount} retained`}
+                    </span>
+                  </a>
+                  <div>
+                    {active ? <span className="badge good">viewing</span> : null}
+                    {run.hasDashboard ? <a href={`/api/artifact/${run.dashboardPath}`} target="_blank">Snapshot</a> : null}
+                    {run.hasReport ? <a href={`/api/artifact/${run.reportPath}`} target="_blank">Report</a> : null}
+                    {run.hasSignals ? <a href={`/api/artifact/${run.signalPath}`} target="_blank">Signals</a> : null}
+                  </div>
+                </article>
+              );
+            })}
           </div>
         </section>
 

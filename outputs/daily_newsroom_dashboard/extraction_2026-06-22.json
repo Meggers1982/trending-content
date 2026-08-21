@@ -1,0 +1,340 @@
+{
+  "run_date": "2026-06-22",
+  "niche": "health and wellness",
+  "signal_summary": {
+    "total_reviewed": 144,
+    "total_retained": 9,
+    "total_rejected": 135,
+    "tools_active": [
+      "web_search",
+      "google_news",
+      "google_trends",
+      "serpapi"
+    ],
+    "tools_unavailable": [
+      "exasearch",
+      "reddit"
+    ],
+    "notes": "Google Trends 'food safety' +11, 'mental health' +12, 'weight loss' +12 rising. SerpAPI pre-fetch used as primary search velocity source. No site_url configured — competitor fallback active. No run_history.yaml or deferred_topics.yaml found."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Blood Pressure Medication Recall — Chlorthalidone, 11,000+ Prescriptions",
+      "primary_entity": "Chlorthalidone",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 88,
+      "opportunity_score": 82,
+      "discover_score": 5,
+      "urgency": "now",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 4,
+      "recommended_angle": "Patient action guide — what chlorthalidone is, who's affected, what to do right now",
+      "why_now": "Google Trends shows 'rising pharma chlorthalidone recall' as breakout query today. 11,000+ prescriptions recalled nationwide; blood pressure medication is among the most commonly prescribed drug classes in the US. Patients need actionable guidance now.",
+      "primary_headline": "Blood Pressure Medication Recalled: What to Do If You Take Chlorthalidone",
+      "next_steps": "Verify FDA recall notice URL at fda.gov before publish. Confirm lot numbers, manufacturer, and specific contamination reason. Add cardiologist or pharmacist quote from published source.",
+      "notes": "Breaking-recall exception applied. FDA.gov primary notice URL must be verified before publish. Do not state specific health risk magnitude until contaminant and recall class confirmed."
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Infant Formula Recall — Powdered Formula, Botulism Outbreak Investigation",
+      "primary_entity": "Powdered Infant Formula",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates / pediatric health",
+      "trend_strength_score": 85,
+      "opportunity_score": 85,
+      "discover_score": 5,
+      "urgency": "now",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "What parents need to know — which formula, what botulism risk means for infants, exact steps to take",
+      "why_now": "FDA has an active outbreak investigation page for infant botulism linked to powdered formula as of June 17, 2026. Infant botulism is rare but severe — parents of formula-fed infants need specific product information and action steps immediately.",
+      "primary_headline": "Infant Formula Recalled Over Botulism Risk: What Parents Need to Know Right Now",
+      "next_steps": "Pull FDA.gov outbreak investigation URL directly. Confirm brand name, lot codes, and states affected. Add AAP or pediatrician published guidance on infant botulism.",
+      "notes": "FDA.gov primary source confirmed. Brand name and lot codes must be pulled from FDA.gov before publish. Distinguish infant botulism (spore-related) from foodborne botulism in adults."
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Popular Antidepressant Recalled Over Carcinogen Risk — 375,000 Bottles",
+      "primary_entity": "Antidepressant (brand TBD from FDA notice)",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates / mental health",
+      "trend_strength_score": 82,
+      "opportunity_score": 80,
+      "discover_score": 5,
+      "urgency": "now",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 4,
+      "recommended_angle": "Safety explainer: what carcinogen risk actually means, who should act, and what not to do",
+      "why_now": "375,000 bottles recalled nationally. Antidepressants are among the most commonly prescribed medications in the US. Patients will be alarmed — they need calibrated risk information and clear action steps, not panic.",
+      "primary_headline": "Antidepressant Recalled Over Carcinogen: What the Risk Actually Means for Patients",
+      "next_steps": "Retrieve FDA.gov recall notice — confirm drug name, carcinogen (likely NDMA or similar nitrosamine), recall class, lot numbers. Do NOT publish without drug name confirmed. Add psychiatrist or pharmacist sourced quote.",
+      "notes": "Breaking-recall exception applied. 3+ credible outlets confirm (WCNC, Health.com, Prevention). CRITICAL: Do not advise patients to stop medication abruptly — discontinuation syndrome and relapse risk are real dangers."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Shingles Vaccine Linked to Lower Dementia Risk",
+      "primary_entity": "Shingles Vaccine (Shingrix)",
+      "signal_type": "medical_study",
+      "allowed_category": "medical research and clinical trials / aging and longevity",
+      "trend_strength_score": 72,
+      "opportunity_score": 78,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Evidence review: what the study actually found, how strong the evidence is, and what it means for vaccination decisions",
+      "why_now": "Dementia is among the most feared health outcomes for adults 50+. Shingrix is already widely recommended — a new potential dementia-prevention benefit gives hesitant patients a concrete additional reason to vaccinate.",
+      "primary_headline": "Shingles Vaccine May Lower Dementia Risk — Here's What the Research Actually Shows",
+      "next_steps": "Find and link the primary study via PubMed. Confirm journal, DOI, study design. Add geriatrician or neurologist published quote.",
+      "notes": "Medical Xpress is secondary aggregator. Journal and DOI not confirmed yet — must verify peer-reviewed publication before elevated claims. Maintain 'may lower' hedging."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Fish Oil Supplements May Not Prevent Alzheimer's-Related Cognitive Decline",
+      "primary_entity": "Fish Oil Supplements (Omega-3)",
+      "signal_type": "medical_study",
+      "allowed_category": "medical research and clinical trials / aging and longevity / nutrition and diet science",
+      "trend_strength_score": 68,
+      "opportunity_score": 74,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Supplement reality check: what fish oil actually does and doesn't do, based on current evidence",
+      "why_now": "Fish oil is one of the top-selling supplements globally. Alzheimer's fear drives supplement purchases. A high-quality study showing no benefit is an important consumer decision-making signal.",
+      "primary_headline": "Fish Oil Won't Prevent Alzheimer's, Study Finds — What the Evidence Actually Shows",
+      "next_steps": "Find and link USC/Keck primary study via PubMed. Confirm journal, DOI, design. Add geriatrician, neurologist, or registered dietitian quote from existing coverage.",
+      "notes": "Keck Medicine of USC institutional press release (06/18). Institutional press release only at this stage — verify peer-reviewed publication before elevated claims. Absence of Alzheimer's benefit does not eliminate cardiovascular benefits."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "FDA Food Safety Recalls Round-Up — Mac & Cheese, Alfredo Sauce, Soft Cheese, Ice Cream (June 2026)",
+      "primary_entity": "Multiple FDA Food Recalls (June 2026)",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates / nutrition and diet science",
+      "trend_strength_score": 74,
+      "opportunity_score": 70,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 6,
+      "recommended_angle": "Consumer action guide: everything recalled right now, what the risk is, what to throw out",
+      "why_now": "Food safety Google Trends interest +11 this week. Four simultaneous major food recalls is genuinely unusual and creates consumer confusion. A consolidated guide answers 'what do I need to check in my kitchen right now?'",
+      "primary_headline": "4 Major Food Recalls Right Now: Mac & Cheese, Alfredo Sauce, Soft Cheese, and Ice Cream",
+      "next_steps": "Pull each FDA.gov recall page and confirm: product names, lot codes, states affected, recall class, contamination type. Link all four FDA notices before publish.",
+      "notes": "Breaking-recall exception applied for aggregate article. Multiple outlets confirm: PBS (alfredo/salmonella), NewsNation (mac & cheese 526,000 packages), FDA.gov (listeria soft cheese), The Healthy (ice cream). Mac & cheese = Class II (lower urgency); calibrate language per class."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "FDA Announces Pilot to Speed Up Phase 1 Clinical Trials by 6–12 Months",
+      "primary_entity": "FDA Clinical Trial Acceleration Pilot",
+      "signal_type": "policy_or_regulatory_change",
+      "allowed_category": "FDA and CDC regulatory updates / medical research and clinical trials",
+      "trend_strength_score": 65,
+      "opportunity_score": 68,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "What faster trials mean for patients waiting on new treatments — and what it won't change",
+      "why_now": "Announced today (STAT News + Fierce Biotech, 06/22). First-day coverage opportunity. Patient advocacy angle is underserved in early trade coverage.",
+      "primary_headline": "FDA Is Moving to Speed Up Early Drug Trials — What It Means for Patients",
+      "next_steps": "Link STAT News and Fierce Biotech primary articles. Find FDA.gov official announcement or press release. Add patient advocate or clinical researcher published perspective.",
+      "notes": "Trade press coverage. Verify FDA official announcement or Federal Register notice before detailing specific timelines. Do not overstate speed of change for patients currently enrolled in trials."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "General-Purpose AI Chatbots Outperform Specialized Clinical AI on Physicians' Real-World Questions",
+      "primary_entity": "AI in Healthcare / Clinical AI Benchmarking",
+      "signal_type": "study_or_research",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 62,
+      "opportunity_score": 65,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Skeptical take: what this Nature study actually shows — and what it doesn't mean for patients",
+      "why_now": "Nature publication (06/17) — peer-reviewed, top-tier journal. AI in medicine is high-audience-interest topic. Finding is counterintuitive (general-purpose beats specialized) and invites scrutiny.",
+      "primary_headline": "ChatGPT Outperforms Clinical AI Tools on Doctor Questions — What That Actually Means",
+      "next_steps": "Find and link Nature study DOI. Add clinical AI researcher or physician published perspective. Distinguish benchmark performance from patient care application.",
+      "notes": "Benchmark performance ≠ clinical deployment safety. Explicitly disclaim: do not imply patients should use ChatGPT instead of physicians. Study measures question-answering performance — not diagnostic accuracy, patient safety, or real-world outcomes."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Mental Health Is Now a Major Factor in Whether People Choose to Have Children",
+      "primary_entity": "Mental Health and Reproductive Decision-Making",
+      "signal_type": "study_or_research",
+      "allowed_category": "mental health and psychology / women's health",
+      "trend_strength_score": 60,
+      "opportunity_score": 63,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Explainer: what's driving this shift, what the research shows, and what it means for people navigating this decision",
+      "why_now": "NYT Well (06/17) + Yale School of Medicine study signal (06/16). Mental health search interest +12 this week. Reproductive decision-making is a sustained cultural conversation.",
+      "primary_headline": "More People Are Factoring Mental Health Into Whether to Have Children — Here's What the Research Shows",
+      "next_steps": "Find Yale study citation and link. Add clinical psychologist or reproductive psychiatrist published perspective. Frame inclusively — relevant to all genders.",
+      "notes": "NYT Well is primary signal. Verify whether Yale study is directly about childbearing decisions or if NYT is using separate sourcing. Confirm study citation before elevated claims."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "Marketa Vondrousova (Google Trends trending)",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Jeremy Clarkson / Joan Cusack / David Bromstad health searches",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Crumbl cookie/drink nutrition facts",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "Sauerkraut / Trump cabinet sauerkraut diet",
+      "reason": "brand-safety / off-category"
+    },
+    {
+      "topic": "Erling Haaland diet",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Balenciaga wellness",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Midjourney sauna (Union Square)",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Samsung connected care / VivaTech",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Asheville 'best wellness town'",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Aura points / aura slang",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Trending beauty hacks / kitchen tech",
+      "reason": "off-category"
+    },
+    {
+      "topic": "AI personal assistant / streaming shows",
+      "reason": "off-category"
+    },
+    {
+      "topic": "UNC Health new hospital / VCU Health leader obituary",
+      "reason": "off-category"
+    },
+    {
+      "topic": "North Atlantic Right Whale health",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Psilocybin clinical trial USC",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "RFK Jr. mental health funding $700M",
+      "reason": "brand-safety"
+    },
+    {
+      "topic": "Gallup healthcare affordability 5-year low",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "California health insurance tax",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Fewer sick days where medical marijuana legal",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "Multiple myeloma treatment delay (Atrium Health)",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "Brain-computer interface (Michigan Medicine)",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "Traffic fatality study",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Pet aging study",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Digestive health coaching (Marquette)",
+      "reason": "off-category"
+    },
+    {
+      "topic": "San Diego wellness industry",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Black Girl Wellness Fest",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Chimaeras health/wellness (UVA)",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "OpenAI ChatGPT health intelligence (duplicate)",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "CJG wellness / Centauri health / Sutter Health Park",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Federal employees health benefits / Carter Page / Pauline Newman",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Planet fitness Juneteenth hours",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Michelle Obama / Shania Twain / Jelly Roll weight loss",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Baking soda and lemon juice for weight loss",
+      "reason": "brand-safety"
+    },
+    {
+      "topic": "Low carb cruise",
+      "reason": "off-category"
+    }
+  ]
+}

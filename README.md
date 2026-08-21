@@ -30,6 +30,25 @@ Locally, those controls run Python directly. In Vercel, they trigger the GitHub 
 If `RUN_CONTROL_TOKEN` is set in the environment, the run-trigger endpoint (`POST /api/run`) requires that
 token in the dashboard's "Run token" field. See `VERCEL_DEPLOY.md` for why this matters once deployed.
 
+## Reading a run
+
+The dashboard leads with the funnel — how many signals were reviewed, how many survived, how many
+were cut — because the ratio (typically ~144 reviewed to ~9 retained) is the point of the system.
+Under it:
+
+- **Trend strip** — reviewed vs. retained for the last 14 runs.
+- **Run Insight** — the model's own notes about the run.
+- **Priority Board** — click any topic to expand its angle, working headline, why-now, and next
+  steps, with a "Copy brief" button. Filter by priority or search across angles and headlines. A
+  "day N" chip marks a story that has carried across consecutive runs.
+- **Rejected topics** — collapsed by default, grouped by rejection reason.
+- **Generated runs** — click any past date to load that whole run into the page
+  (`/?run=YYYY-MM-DD`); the standalone HTML file is still there as a downloadable snapshot.
+
+Each run's numbers come from `outputs/daily_newsroom_dashboard/extraction_<date>.json`, the parsed
+run data. `raw_extraction_<date>.txt` beside it is the raw model text kept for debugging — it is
+fence-wrapped and was never valid JSON despite previously carrying a `.json` extension.
+
 Headlines in the dashboard's "Google News Radar" panel link out to the original article, using
 the `Link:` line the pipeline writes under each headline in
 `outputs/daily_newsroom_dashboard/serp_signals_*.md`. Signal files generated before that line

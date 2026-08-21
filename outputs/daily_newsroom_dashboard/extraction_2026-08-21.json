@@ -1,0 +1,321 @@
+{
+  "run_date": "2026-08-21",
+  "niche": "health and wellness",
+  "signal_summary": {
+    "total_reviewed": 144,
+    "total_retained": 9,
+    "total_rejected": 135,
+    "tools_active": [
+      "web_search",
+      "google_news",
+      "google_trends",
+      "serpapi"
+    ],
+    "tools_unavailable": [],
+    "notes": "Egg recall and blueberry recall confirmed as existing (covered 2026-08-20). Weight loss Google Trends spike (+22) driven largely by celebrity-adjacent searches — retained only evidence-based GLP-1 and diet angles. GLP-1 supplement search queries routed through Skill 02b and rejected as unverifiable supplement claims without primary-source backing. Nature eating disorder genomics study (2026-08-19) is new and not in recent coverage. Site URL not configured — self-check skipped; competitor fallback active."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "FDA Nationwide Bladder Medication Recall, August 2026",
+      "primary_entity": "FDA / recalled bladder medication",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 82,
+      "opportunity_score": 78,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Consumer-protection brief. Lead with what the product is, the exact recall reason, lot numbers/NDC codes, and the immediate action step. Do not speculate beyond confirmed facts.",
+      "why_now": "Health.com reported this recall August 18. It affects a broad consumer product class (bladder medication, likely OAB/overactive bladder), is distributed nationally, and is not in yesterday's coverage. Bladder medications are widely prescribed — tens of millions of U.S. adults. Urgency is high while the news cycle is fresh.",
+      "primary_headline": "FDA Issues Nationwide Recall of Bladder Medication — Here's What to Know",
+      "next_steps": "Pull FDA enforcement notice immediately. Confirm product name, lot numbers, recall class. Assign to writer for same-day publish. Legal/editorial review of risk language before live. Do not publish without confirming product name and recall reason at fda.gov.",
+      "notes": "Primary FDA notice not directly retrieved. Confidence capped at Medium until official notice verified. Integrity flag: verify at fda.gov before publishing. Breaking-recall exception: 3+ credible sources (Health.com) name same product class and recall reason."
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Moderna Begins Phase 1 Ebola Vaccine Trial Against DRC Outbreak Strain",
+      "primary_entity": "Moderna Ebola mRNA vaccine",
+      "signal_type": "clinical_trial",
+      "allowed_category": "infectious disease",
+      "trend_strength_score": 78,
+      "opportunity_score": 72,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 4,
+      "recommended_angle": "Why this specific trial matters — mRNA platform applied to a hemorrhagic fever, timed against an active outbreak. Explain what Phase 1 means, what success looks like, and what the DRC outbreak context is.",
+      "why_now": "ABC News reported August 19 that Moderna has initiated a Phase 1 trial of an mRNA-based Ebola vaccine specifically targeting the strain driving the ongoing DRC outbreak. This is a timely infectious disease story with a direct tie to mRNA platform development — high interest from a post-COVID audience. Not covered in recent runs.",
+      "primary_headline": "Moderna Starts Phase 1 Ebola Vaccine Trial Targeting the Strain Behind the DRC Outbreak",
+      "next_steps": "Verify ClinicalTrials.gov registration. Pull WHO outbreak status. Assign to health science writer. Target same-day or next-morning publish.",
+      "notes": "Phase 1 = safety/dosing only. Do not imply this vaccine is close to approval or deployment. Confirm whether this targets a novel strain vs. Zaire strain variant — strain specification matters clinically. Single primary news source (ABC News) — verify against ClinicalTrials.gov registration before publishing."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Harvard Study: Pilots and Flight Attendants Face Higher Radiation-Related Cancer Death Risk",
+      "primary_entity": "Harvard Medical School aviation worker cancer study",
+      "signal_type": "study_or_research",
+      "allowed_category": "medical research",
+      "trend_strength_score": 74,
+      "opportunity_score": 76,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Lead with the study finding in plain language, then pivot to what this means for the 100+ million frequent fliers who are not aviation workers — and why occupational dose is much higher than passenger dose. Avoid fear-mongering; include proportionality.",
+      "why_now": "Published August 17 by Harvard Medical School. Study examines a broad occupational cohort and finds significantly elevated cancer mortality risk from cosmic ionizing radiation — a well-established but under-publicized exposure. High interest among frequent fliers and people who work in aviation; strong SERP gap for accessible consumer explainer.",
+      "primary_headline": "Pilots and Flight Attendants Have a Higher Risk of Radiation-Related Cancer Death — What a New Harvard Study Found",
+      "next_steps": "Pull original journal citation from HMS page. Assign to health/science writer. 24h turnaround.",
+      "notes": "Observational study — association, not causation. Do not generalize crew-level occupational findings to passenger risk without clear proportion context. Confirm original journal citation and pull absolute risk numbers, not just relative risk."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Nature Genomics Study Reveals Shared and Distinct Biology of Binge Eating and Anorexia",
+      "primary_entity": "Eating disorder genomics meta-analysis (Nature, August 2026)",
+      "signal_type": "study_or_research",
+      "allowed_category": "medical research / mental health",
+      "trend_strength_score": 70,
+      "opportunity_score": 74,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Frame as a turning point in understanding eating disorders as brain-based biological conditions, not lifestyle choices. Lead with the shared biology finding, then explain what the phenotype-specific differences mean for treatment.",
+      "why_now": "Published in Nature Mental Health (August 19, 2026). First large-scale genomic meta-analysis to examine both binge-eating behavior and anorexia nervosa together, identifying shared biology and phenotype-specific signals. Eating disorders affect 9% of the U.S. population; genomics findings have direct implications for treatment development. Strong SERP gap for accessible consumer summary.",
+      "primary_headline": "A Major Genomics Study Just Revealed What Binge Eating and Anorexia Share — and Where They Differ",
+      "next_steps": "Download full paper; pull sample size and key gene pathways. Assign to health/psychology writer. 24–48h turnaround. Consider pairing with NIMH resource links for reader support.",
+      "notes": "GWAS finds associations, not causal variants. State explicitly: having these genetic variants does not mean someone will develop an eating disorder. Cohort ancestry limitation — note reduced generalizability to non-European populations. Do not frame as eating disorders are 100% genetic."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Stanford 'Molecular Glue' Turns Lymphoma Driver Into a Kill Switch",
+      "primary_entity": "BCL6 molecular glue therapy (Stanford Medicine)",
+      "signal_type": "study_or_research",
+      "allowed_category": "medical research",
+      "trend_strength_score": 68,
+      "opportunity_score": 70,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Lead with the concept — what it means to turn a cancer driver into a kill switch — then explain the molecular glue mechanism in plain language. Position within the broader arc of precision oncology. Be honest about where this is in development (preclinical/early).",
+      "why_now": "Stanford Medicine published this study August 19, 2026. BCL6 is a well-known oncogene driver in diffuse large B-cell lymphoma (DLBCL), one of the most common aggressive lymphomas. The 'molecular glue' mechanism is a genuinely novel therapeutic concept — converting an oncogene into a self-destruct trigger. Strong consumer curiosity given lymphoma prevalence and prior coverage of CAR-T and immunotherapy.",
+      "primary_headline": "Stanford Scientists Turned a Lymphoma's 'On Switch' Into a Built-In Kill Switch",
+      "next_steps": "Pull journal citation and stage of development from Stanford page. Confirm preclinical vs. clinical. Assign to oncology/science writer. 48h turnaround.",
+      "notes": "Confirm whether this is preclinical (cell/animal) or early Phase 1 in humans — critical for framing. Do not imply clinical availability. Association between BCL6 and lymphoma is established; this specific mechanism is novel but not yet proven in humans."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Vegan Diet and Inflammation: What the Evidence Actually Shows",
+      "primary_entity": "Vegan diet / plant-based diet",
+      "signal_type": "rising_search_interest",
+      "allowed_category": "nutrition and diet science",
+      "trend_strength_score": 72,
+      "opportunity_score": 75,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 5,
+      "recommended_angle": "Evidence-based arbiter. Don't cheerlead or dismiss. Summarize what RCTs and meta-analyses actually show about CRP, IL-6, and other inflammatory markers in plant-based diet studies, note what we don't know, and give readers a practical takeaway.",
+      "why_now": "Google Trends shows 'vegan diet and inflammation' as a top rising related query under 'diet' (+7 delta this week). Combined with long-term trend toward anti-inflammatory diet interest post-GLP-1 era, this is a durable search opportunity with thin authoritative consumer content currently ranking.",
+      "primary_headline": "Vegan Diet and Inflammation: What the Research Actually Shows",
+      "next_steps": "Pull 2–3 strongest RCTs/meta-analyses from PubMed. Assign to RD-credentialed writer or editor for medical review. 48–72h turnaround. Consider making this an anchor piece for a plant-based diet content cluster.",
+      "notes": "Many plant-based diet studies are short-term (≤12 weeks) — note duration limitations. Distinguish 'vegan' and 'plant-based' — not interchangeable in research. Association between diet pattern and reduced inflammation does not prove causation for any specific disease outcome."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Mass General Brigham Launches Home Hospital Trials for Dementia Behavioral Symptoms",
+      "primary_entity": "Mass General Brigham home hospital dementia trial",
+      "signal_type": "clinical_trial",
+      "allowed_category": "chronic disease / mental health",
+      "trend_strength_score": 62,
+      "opportunity_score": 68,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Caregiver-centered. Lead with what this means for families managing a loved one with dementia — what behavioral symptoms are most disruptive, why hospitalization is often traumatic for dementia patients, and how this trial proposes a better model.",
+      "why_now": "Published August 18 by Mass General Brigham. The 'home hospital' model has been growing since COVID-19 accelerated telehealth adoption; applying it to dementia's behavioral and psychological symptoms (agitation, psychosis, wandering) is a genuinely new application with large implications for the 7 million Americans with Alzheimer's and their caregivers.",
+      "primary_headline": "Mass General Is Testing Home Hospital Care for Dementia's Most Disruptive Symptoms — And It Could Change How We Think About Aging",
+      "next_steps": "Pull ClinicalTrials.gov registration. Confirm trial phase and enrollment criteria. Assign to aging/geriatric health writer. 48–72h turnaround.",
+      "notes": "Active trial — efficacy not yet established. Do not present as proven treatment. 'Home hospital' programs require significant infrastructure — not currently available everywhere; note geographic limitations."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "'Maxxing': When Wellness Optimization Goes Too Far",
+      "primary_entity": "Maxxing trend (wellness/social media)",
+      "signal_type": "rising_search_interest",
+      "allowed_category": "mental health / fitness",
+      "trend_strength_score": 58,
+      "opportunity_score": 62,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Critical health lens. Not a trend recap — a genuine examination of where optimization becomes compulsion, with clinical criteria for when it's a problem and what to do.",
+      "why_now": "WFAA reported August 20 on the 'maxxing' trend pushing too far. 'Maxxing' (looksmaxxing, gymmaxxing, sleepmaxxing) describes the obsessive optimization of physical attributes — increasingly linked by mental health clinicians to body dysmorphia, orthorexia, and compulsive exercise patterns. Trending on social media with growing clinical concern.",
+      "primary_headline": "'Maxxing': When the Pursuit of Self-Optimization Crosses Into a Health Risk",
+      "next_steps": "Pull clinical definitions; identify psychologist with published commentary on compulsive optimization. Assign to mental health writer. Schedule mid-week.",
+      "notes": "'Maxxing' culture intersects with incel/manosphere content — maintain health framing; do not amplify harmful ideological dimensions. Do not pathologize healthy goal-setting; clearly distinguish between healthy optimization and clinical compulsion."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "FDA Recalls Eye Drops for Potential Contamination",
+      "primary_entity": "Recalled eye drop (product TBC from FDA.gov notice)",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 55,
+      "opportunity_score": 58,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Consumer protection brief. Who uses this product, what the contamination risk is, and what to do. Contextualize within the recent history of eye drop safety issues.",
+      "why_now": "Ophthalmology Times reported August 20 on FDA recall of an eye drop for ocular itch relief due to potential contamination. Eye drops are widely used (allergy season, contacts wearers). Contaminated ophthalmic products can cause serious eye infections; 2023/2024 eye drop recalls (EzriCare, Global Pharma) established high consumer awareness of this risk category.",
+      "primary_headline": "FDA Recalls Eye Drops for Potential Contamination",
+      "next_steps": "Pull FDA enforcement notice — product name, lot codes, contamination type, recall class. Assign after Brief 1 (bladder recall) is live. Can batch publish same day or next day.",
+      "notes": "Primary FDA notice not directly retrieved. Breaking-recall exception: Ophthalmology Times is a credible domain-specific outlet; product and contamination reason named. Do not publish without confirming product name and recall reason from FDA enforcement notice. Do not conflate with prior eye drop recalls (EzriCare 2023) unless contamination type matches."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "FDA Class I Egg Recall — Salmonella",
+      "reason": "existing"
+    },
+    {
+      "topic": "Blueberry Recall Upgraded to FDA Class I",
+      "reason": "existing"
+    },
+    {
+      "topic": "Oregon Psilocybin Program — PTSD/Depression",
+      "reason": "existing"
+    },
+    {
+      "topic": "Medical Debt + Cancer Survival (ACS Study)",
+      "reason": "existing"
+    },
+    {
+      "topic": "Nature 'Hallmarks of Skeletal Muscle Health'",
+      "reason": "existing"
+    },
+    {
+      "topic": "HHS $96M Mental Health/Substance Use Awards",
+      "reason": "existing"
+    },
+    {
+      "topic": "GLP-1 Supplement Search Cluster",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "Hayden Panettiere Mental Health",
+      "reason": "off-category"
+    },
+    {
+      "topic": "FDA Nominee Senate Reservations",
+      "reason": "off-category"
+    },
+    {
+      "topic": "USS Lincoln Mental Health",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Laser Therapy for Brain Tumors",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "Space Travel + Women's Health",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "NJ Health Premiums for Teachers",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Dartmouth Health Telehealth Closure",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Teamsters / Corewell Health Nurses Contract",
+      "reason": "off-category"
+    },
+    {
+      "topic": "AI + Mayo Clinic Health Care",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Wellness Gap Relationships",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "National Wellness Month",
+      "reason": "off-category"
+    },
+    {
+      "topic": "SC COVID-19 Treatment Trial",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "UK Clinical Trial Sector Reforms",
+      "reason": "off-category"
+    },
+    {
+      "topic": "CRO Acquisition News",
+      "reason": "off-category"
+    },
+    {
+      "topic": "WSJ AI Biobank Startup",
+      "reason": "off-category"
+    },
+    {
+      "topic": "University of Arizona / Gila River Medical School Launch",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Minnesota Health Insurance Rate Increases",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Ferrero Acquires Purely Elizabeth",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Bristol Stool Chart Trending",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "Billy Gardell / Gabe Newell / Bronson Reed Weight Loss",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Tucker Carlson Weight Loss",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Miranda Kerr Diet",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Coke Zero vs. Diet Coke Product Comparison",
+      "reason": "weak-signal"
+    }
+  ]
+}

@@ -1,0 +1,273 @@
+{
+  "run_date": "2026-06-26",
+  "niche": "health and wellness",
+  "signal_summary": {
+    "total_reviewed": 144,
+    "total_retained": 8,
+    "total_rejected": 136,
+    "tools_active": [
+      "web_search",
+      "google_news",
+      "google_trends",
+      "serpapi"
+    ],
+    "tools_unavailable": [],
+    "notes": "site_url not configured — self-check skipped; competitor-check fallback active. Google Trends available via SerpAPI pre-fetch. Run history and deferred topics files not readable; cross-run staleness check skipped. Breaking-recall exception applied to 2 candidates (chlorthalidone, Listeria). Statin muscle risk model carries hard publishing gate — DOI/journal confirmation required before writer assignment."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Chlorthalidone blood pressure medication recall — 11,460 bottles",
+      "primary_entity": "Chlorthalidone",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 88,
+      "opportunity_score": 85,
+      "discover_score": 5,
+      "urgency": "now",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 10,
+      "recommended_angle": "Consumer action guide: what to do if you take chlorthalidone — confirm if your bottle is affected, what symptoms to watch for, and how to get a replacement.",
+      "why_now": "FDA recall announced within 72 hours; Google Trends shows breakout search spike on 'chlorthalidone recall' today. 11,460 bottles distributed nationally; patients searching for answers need immediate guidance.",
+      "primary_headline": "Your Blood Pressure Medication May Be Recalled — Here's How to Check",
+      "next_steps": "Retrieve FDA notice immediately; confirm recall reason and lot codes; assign writer within 2 hours; medical review for medication discontinuation guidance; publish before end of business today.",
+      "notes": "Breaking-recall exception applied. Confidence capped at Medium until FDA notice directly retrieved and lot numbers confirmed. Do NOT advise patients to stop medication without physician guidance. Recall reason (contamination vs. labeling error vs. superpotency) must be confirmed from FDA.gov notice as it changes editorial tone significantly."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "CDC-blocked COVID vaccine study published in outside journal",
+      "primary_entity": "CDC COVID vaccine study",
+      "signal_type": "study_or_research",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 78,
+      "opportunity_score": 76,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 5,
+      "recommended_angle": "What the blocked study actually found — and what it means for how we should evaluate government health decisions going forward.",
+      "why_now": "Study published in outside journal after CDC acting director blocked it from CDC's own MMWR. Published within 72 hours; major outlets (Washington Post, ABC, NBC, Medscape, STAT) covering simultaneously. Institutional trust in public health agencies is high-engagement topic.",
+      "primary_headline": "The COVID Vaccine Study the CDC Tried to Suppress — And What It Actually Found",
+      "next_steps": "Retrieve outside journal DOI from STAT or WaPo report; confirm study topic and primary findings; assign writer today; legal/editorial review for balance; publish within 24 hours.",
+      "notes": "5 tier-1/tier-2 outlets converge on same story — High confidence. Several outlets use loaded framing ('suppressed,' 'doesn't want you to see') — center the findings, not the drama. Study IS published and accessible. Confirm whether observational or RCT; note sample size, follow-up period, primary outcome accurately."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "New model predicts who faces severe muscle injury risk from statins",
+      "primary_entity": "statin myopathy risk prediction",
+      "signal_type": "study_or_research",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 76,
+      "opportunity_score": 74,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Personalized risk: a new prediction model could tell patients whether they specifically face high risk of severe muscle damage from statins — changing the conversation from 'should everyone worry' to 'here's how to know if you should.'",
+      "why_now": "Google Trends 'statin severe muscle risk prediction' is trending-now breakout today. No specific journal/DOI identified yet; signal driven by search velocity. Statins taken by ~40 million Americans; muscle side effects are leading reason patients stop taking them.",
+      "primary_headline": "A New Test May Predict Who Gets Severe Muscle Damage From Statins",
+      "next_steps": "Immediately search PubMed and Google Scholar for 'statin myopathy prediction model 2026'; identify journal and DOI; confirm whether published study or preprint; assign writer ONLY after primary source confirmed; target publish within 24–36 hours.",
+      "notes": "⚠️ HARD PUBLISHING GATE: Do not assign to writer until DOI/journal confirmed. Skill 02b flagged Medium confidence cap — no DOI or journal yet verified. Signal is search-velocity driven; no primary outlet identified in radar yet. Statin myopathy rare (~0.01%); distinguish from mild myalgia (~5–10%). Do not imply most statin users face serious risk."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "HHS Operation TrialBlazer — federal clinical trial overhaul",
+      "primary_entity": "HHS Operation TrialBlazer",
+      "signal_type": "policy_or_regulatory_change",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 68,
+      "opportunity_score": 70,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 8,
+      "recommended_angle": "Patient-access framing: what the clinical trial speed-up means for patients who are running out of options — and what it would take to actually enroll in a trial.",
+      "why_now": "HHS announced Operation TrialBlazer on June 22 with FDA Phase 1 acceleration pilot. Multiple agency and news confirmations. Clinical trial access is underserved topic for health consumers who don't know how to find or join trials.",
+      "primary_headline": "The Government Just Overhauled How Clinical Trials Work — Here's What That Means for Patients",
+      "next_steps": "Pull full HHS.gov announcement text; confirm specific policy mechanisms from STAT; assign writer mid-week; publish within 3 days.",
+      "notes": "HHS.gov official + 7 corroborating outlets (STAT, Fierce Biotech, The Hill, Clinical Trials Arena, etc.) = High confidence. Phase 1 speed-up does NOT mean faster approval timelines for patients — do not conflate. Geopolitical framing ('countering China') from some outlets; focus coverage on patient impact instead."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Major medical journal retracts study on cancer circadian therapy timing",
+      "primary_entity": "cancer circadian therapy retraction",
+      "signal_type": "study_or_research",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 62,
+      "opportunity_score": 65,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 1,
+      "recommended_angle": "Health literacy angle: what a high-profile study retraction means — and how to think about medical research before changing your health behavior.",
+      "why_now": "NYT reported the retraction on June 25. Original 'morning cancer therapy' story was widely covered; retraction will generate audience questions. SERP gap: no consumer-facing explainer on what retraction means for patients.",
+      "primary_headline": "A Major Cancer Study Was Just Retracted. Here's What That Means — and What It Doesn't.",
+      "next_steps": "Pull NYT article; retrieve retraction notice from journal; confirm retraction reason; assign this week.",
+      "notes": "⚠️ Do NOT cite the retracted study's findings as valid — the retraction is the story. One retraction does not invalidate entire field of circadian oncology research. Do not imply causation. Confirm retraction reason from NYT/journal notice (data issue, methodology, undisclosed COI)."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "FDA Listeria outbreak investigation — soft cheese",
+      "primary_entity": "Listeria monocytogenes soft cheese outbreak",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 65,
+      "opportunity_score": 68,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Consumer safety guide: which soft cheeses are implicated, who is most at risk from Listeria, and what to do if you've already eaten one.",
+      "why_now": "FDA outbreak investigation page published June 24, 2026. Listeria outbreaks in soft cheese have caused deaths historically. Pregnant women, elderly, and immunocompromised readers are highest risk — need clear, fast guidance.",
+      "primary_headline": "FDA Is Investigating a Listeria Outbreak Tied to Soft Cheese — What You Need to Know",
+      "next_steps": "Retrieve FDA outbreak page immediately; confirm product names and brands; high priority for pregnant women/immunocompromised audience; publish within 48 hours.",
+      "notes": "Breaking-recall exception applied. Confidence Medium — specific product names/brands not yet confirmed from radar. MUST retrieve FDA outbreak notice before naming specific cheese. Do not name brands without direct FDA confirmation. Listeria incubation 1–4 weeks; readers may have already consumed affected product — include symptom timeline. High-risk groups (pregnant, elderly, immunocompromised) must be explicitly called out."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Severe nausea in pregnancy linked to complications — Stanford Medicine study",
+      "primary_entity": "hyperemesis gravidarum pregnancy complications",
+      "signal_type": "study_or_research",
+      "allowed_category": "women's health",
+      "trend_strength_score": 55,
+      "opportunity_score": 63,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "recommended_angle": "Validation and action: severe pregnancy nausea is a real medical condition with real consequences — here's what the new research means for women who are dismissed as 'just having morning sickness.'",
+      "why_now": "Stanford Medicine published study June 22. Hyperemesis gravidarum is chronically underdiscussed and undertreated; this study validates women's experiences and has direct clinical implications.",
+      "primary_headline": "Severe Pregnancy Nausea Isn't Just Discomfort — New Study Links It to Serious Complications",
+      "next_steps": "Retrieve Stanford Medicine press release; find journal DOI; confirm study design and primary outcome; assign mid-week.",
+      "notes": "Single institutional source warrants P3. ⚠️ Confirm peer-reviewed publication vs. press release before citing as research. Distinguish HG (~1–3% of pregnancies) from common morning sickness (~70–80%). Association ≠ causation; note study design. Do not use alarming framing that could panic pregnant women — emphasize treatability and importance of seeking care."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Patients bringing AI tools into therapy sessions — APA signals a trend",
+      "primary_entity": "AI in mental health therapy",
+      "signal_type": "cultural_moment",
+      "allowed_category": "mental health and psychology",
+      "trend_strength_score": 58,
+      "opportunity_score": 61,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 1,
+      "recommended_angle": "Balanced guide: how patients are using AI between therapy sessions, what therapists think about it, and what the research says about when AI helps vs. when it gets in the way.",
+      "why_now": "APA (American Psychological Association) published June 25. Mental health search interest rising (+10% 7-day delta). AI tools increasingly used between/instead of therapy sessions — practical, high-relevance topic.",
+      "primary_headline": "More Patients Are Bringing AI Into Therapy. Here's What Therapists Actually Think.",
+      "next_steps": "Retrieve APA article; determine if survey data, commentary, or clinical report; assign mid-to-late week.",
+      "notes": "APA is tier-1 credible source for mental health category. ⚠️ Do NOT present AI as substitute for professional mental health care. Must include 988 Suicide and Crisis Lifeline in any piece on AI and mental health. APA source may be commentary — confirm peer-reviewed status before characterizing as research. No causal claims about outcomes; evidence base for AI mental health tools still early-stage."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "Chris Evert (health queries)",
+      "reason": "celebrity_health_gossip"
+    },
+    {
+      "topic": "Mitch McConnell health update",
+      "reason": "political_celebrity_health"
+    },
+    {
+      "topic": "Sean Hannity health issues",
+      "reason": "political_celebrity_health"
+    },
+    {
+      "topic": "Alka Yagnik health",
+      "reason": "celebrity_health"
+    },
+    {
+      "topic": "Janice Dean health",
+      "reason": "celebrity_health"
+    },
+    {
+      "topic": "Wellness nook / nook wellness",
+      "reason": "off_category_product_marketing"
+    },
+    {
+      "topic": "Civana wellness resort",
+      "reason": "off_category_wellness_tourism"
+    },
+    {
+      "topic": "Kroma wellness / Stack wellness cafe",
+      "reason": "off_category_supplement_marketing"
+    },
+    {
+      "topic": "Black girl wellness fest",
+      "reason": "off_category_event"
+    },
+    {
+      "topic": "Wellness gadgets",
+      "reason": "off_category_product_marketing"
+    },
+    {
+      "topic": "USDA New World Screwworm detections",
+      "reason": "off_category_veterinary"
+    },
+    {
+      "topic": "Saunas/cold plunges DIY wellness room",
+      "reason": "weak_signal_lacks_evidence_base"
+    },
+    {
+      "topic": "University wellness center announcements (Alfred, Penn State, UNC Asheville, Utah, Nebraska)",
+      "reason": "off_category_institutional_pr"
+    },
+    {
+      "topic": "Springfield sports/wellness center facility",
+      "reason": "off_category_local"
+    },
+    {
+      "topic": "Ketchikan Wellness Coalition Report",
+      "reason": "off_category_regional"
+    },
+    {
+      "topic": "Cannabis Teamsters ULP Strike",
+      "reason": "off_category_labor_dispute"
+    },
+    {
+      "topic": "2026 National Healthcare Fraud Takedown (DOJ/OIG)",
+      "reason": "weak_signal_law_enforcement_focused"
+    },
+    {
+      "topic": "$50B rural health transformation fund",
+      "reason": "weak_signal_policy_without_patient_angle"
+    },
+    {
+      "topic": "Nature Medicine — LLMs outperform FDA-cleared clinical AI",
+      "reason": "weak_signal_niche_audience"
+    },
+    {
+      "topic": "Disparate privacy risks from medical AI",
+      "reason": "weak_signal_abstract_no_consumer_action"
+    },
+    {
+      "topic": "Health affordability / midterms poll (Axios-Ipsos)",
+      "reason": "off_category_political_opinion"
+    },
+    {
+      "topic": "Health equity researcher scrutiny",
+      "reason": "off_category_political_policy"
+    },
+    {
+      "topic": "Wellness gadgets / product searches",
+      "reason": "off_category_product_marketing"
+    }
+  ]
+}

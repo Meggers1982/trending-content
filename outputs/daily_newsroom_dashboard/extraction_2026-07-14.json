@@ -1,0 +1,280 @@
+{
+  "run_date": "2026-07-14",
+  "niche": "health and wellness",
+  "signal_summary": {
+    "total_reviewed": 168,
+    "total_retained": 8,
+    "total_rejected": 24,
+    "tools_active": [
+      "web_search",
+      "google_news",
+      "google_trends",
+      "serpapi"
+    ],
+    "tools_unavailable": [
+      "reddit",
+      "exa"
+    ],
+    "notes": "Site URL not configured; self-check skipped. Deferred topics file not accessible in automation mode. Recurring themes (E. coli, eye drops, GLP-1 Yale study, cream cheese, sleep/weight, Ebola) all suppressed as existing unless new development present. Cyclosporiasis retained as update due to West Virginia-specific breakout on Google Trends Trending Now."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "West Virginia Cyclosporiasis Outbreak — Update",
+      "primary_entity": "Cyclosporiasis (Cyclospora cayetanensis)",
+      "signal_type": "breaking_news",
+      "allowed_category": "public health and epidemiology",
+      "trend_strength_score": 88,
+      "opportunity_score": 78,
+      "discover_score": 4,
+      "urgency": "now",
+      "confidence": "medium",
+      "content_status": "update",
+      "source_count": 4,
+      "recommended_angle": "Lead with real-time search spike and CDC context. Establish what cyclosporiasis is, transmission routes (contaminated produce), symptoms, incubation period, treatment, and historical outbreak context. Include actionable CDC guidance for West Virginia residents.",
+      "why_now": "Google Trends Trending Now shows 'west virginia cyclosporiasis outbreak' and 'parasite outbreak' as #1 and #2 real-time trending searches as of 2026-07-14. New geographic specificity (West Virginia) indicates escalating local outbreak cluster justifying update coverage.",
+      "primary_headline": "West Virginia Cyclosporiasis Outbreak: What the CDC Says and How to Protect Yourself",
+      "next_steps": "Verify CDC.gov for West Virginia-specific outbreak notice before publishing case counts. Call WV DHHR for official confirmation if possible. Publish within 4 hours.",
+      "notes": "Outbreak scope not yet quantifiable from available signals — avoid specific case count claims until CDC confirms. 'Parasite outbreak' framing in Google searches may reflect media alarm more than confirmed case volume — lead with CDC language. Source count is medium — KAKE/WLOS regional; CDC.gov primary source should be verified and linked before publishing."
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Medical Cannabis for Dementia Agitation",
+      "primary_entity": "Medical cannabis (dementia agitation treatment)",
+      "signal_type": "study_or_research",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 80,
+      "opportunity_score": 82,
+      "discover_score": 5,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Lead with clinical problem: agitation affects up to 60% of dementia patients; current antipsychotics carry serious risks. Introduce new study findings suggesting medical cannabis may offer meaningful relief. Frame as emerging treatment option with balanced evidence discussion.",
+      "why_now": "NYT reported July 14, 2026 on new study suggesting medical cannabis helps with dementia agitation. No prior coverage in recent runs. Dementia agitation is major unmet clinical need. High AI citation potential with specific condition and treatment question.",
+      "primary_headline": "Medical Cannabis May Ease Agitation in Dementia, New Study Finds — Here's What the Research Shows",
+      "next_steps": "Retrieve NYT article to confirm journal name, DOI, and study design before publishing. Confidence upgrades to High once primary source confirmed. Do not publish specific outcome statistics until primary source retrieved.",
+      "notes": "'Study suggests' framing — confirm study design (RCT vs observational) before claims. Medical cannabis is state-regulated — note that legal access varies; do not imply universal availability. Dementia agitation drugs (antipsychotics) carry black-box warnings; this context matters for comparison claims. Direct DOI/journal not confirmed — marked [URL unverified] for primary study until retrieved. Confidence capped at Medium (NYT secondary; primary journal not directly retrieved)."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Heat Waves and Mental Health Hospitalizations",
+      "primary_entity": "Heat-related mental health hospitalizations",
+      "signal_type": "study_or_research",
+      "allowed_category": "public health and epidemiology",
+      "trend_strength_score": 74,
+      "opportunity_score": 80,
+      "discover_score": 5,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Open with counterintuitive finding: extreme heat significantly increases psychiatric hospitalizations including for psychosis, depression, and self-harm. Explain biological mechanisms, vulnerable populations (especially those on psychiatric medications), WHO and CDC guidance, and practical mitigation strategies.",
+      "why_now": "Nature published peer-reviewed multi-country study July 11, 2026. WHO published heat-and-health advisory July 13. Peak summer heat season in US — July is highest-risk month. Convergence of primary institutional source, UN agency confirmation, and seasonal timing.",
+      "primary_headline": "Extreme Heat Is Sending People to the Hospital for Mental Health Crises — New Research Explains Why",
+      "next_steps": "Retrieve Nature article URL and confirm methodology before publishing. Strong evergreen potential beyond summer — climate plus mental health is growing content cluster.",
+      "notes": "Multi-country study — ensure findings are not over-generalized to U.S. context specifically if U.S. data is subset. Clarify direction of causation — sustained heat correlates with hospitalizations; mechanism is biologically supported but confirm study does not claim direct causation. Confounders: heat events co-occur with other stressors (economic, displacement); note if study controlled for these."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Dementia Rising in Latino Populations — WashU Multidecade Study",
+      "primary_entity": "Dementia in Latino Americans",
+      "signal_type": "study_or_research",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 70,
+      "opportunity_score": 79,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Open with human scale: dementia affects 7 million Americans, but new multidecade study shows disease rising disproportionately in Latino communities with accelerating trend. Explore risk factors (cardiovascular disease, diabetes, socioeconomic stress), historical underrepresentation in dementia research, early detection challenges, and community interventions.",
+      "why_now": "WashU Medicine published findings July 13, 2026 from multidecade study on dementia rates in Latino populations. Latino Americans are fastest-growing demographic group and historically under-studied in dementia research. Strong audience relevance; SERP gap exists for consumer-facing explainers.",
+      "primary_headline": "Dementia Is Rising Sharply Among Latino Americans, Decades-Long Study Finds",
+      "next_steps": "Retrieve specific WashU study URL and journal of publication before publishing. Consider as strong cluster anchor for related opportunities in cognitive health for Latino communities.",
+      "notes": "Confirm whether study controls for known risk factors (diabetes, cardiovascular disease, socioeconomic status) — these are elevated in Latino populations and could explain variation. 'Latino' is heterogeneous category — note if study distinguishes subgroups (Mexican-American, Puerto Rican, Cuban-American, etc.) as risk profiles differ. Confidence capped at Medium — primary study URL not directly retrieved; WashU press release is institutional but not peer-reviewed journal."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "HHS/VA Psychedelic Trials for Veterans — MOU Announcement",
+      "primary_entity": "VA/HHS psychedelic mental health partnership",
+      "signal_type": "clinical_trial",
+      "allowed_category": "mental health and psychology",
+      "trend_strength_score": 68,
+      "opportunity_score": 74,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Open with veteran mental health crisis as context (17-22 veteran suicides daily; PTSD affects 30% of combat veterans). Introduce MOU as formal research partnership on rapid-acting treatments including psychedelics. Explain current regulatory status of specific therapies, what's available now versus what's coming, science behind psychedelic mechanisms for trauma.",
+      "why_now": "HHS and VA signed formal MOU July 13, 2026 to advance rapid-acting mental health treatments for veterans, including psychedelic drug trials. American Legion confirmed July 13. This is direct policy action from two federal agencies — first federal-level institutional commitment of this scale to psychedelic therapy research.",
+      "primary_headline": "VA and HHS Are Partnering on Psychedelic Drug Trials for Veterans — What It Means",
+      "next_steps": "Retrieve HHS.gov press release URL to confirm MOU language before publishing. Strong cluster opportunity for series on psychedelic medicine (psilocybin, MDMA, ketamine — their current status and what research shows).",
+      "notes": "MOU is partnership agreement — not drug approval. Clearly distinguish between 'partnering to advance trials' and 'approving psychedelic treatment.' MDMA-assisted therapy was rejected by FDA in 2024 — important regulatory context; psilocybin still in Phase 2/3. Note current regulatory status. Do not imply veterans can currently access these treatments through VA."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Shampoo Recall — Bacterial Contamination",
+      "primary_entity": "Shampoo recall (bacterial contamination)",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 65,
+      "opportunity_score": 68,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "Consumer safety angle: what the recall means, which products/lots are affected, what to do with recalled product, and what bacterial contamination in shampoo can cause (scalp/skin infection risk). Include checklist for consumers.",
+      "why_now": "FDA recall announced July 13, 2026 per KAKE report. Bacterial contamination in personal care products is consumer-safety topic with strong search intent.",
+      "primary_headline": "FDA Announces Recall of Popular Shampoo Brand Over Bacterial Contamination Risk",
+      "next_steps": "Retrieve FDA.gov primary notice and confirm brand name and lot codes before publishing. Do not name brand until FDA notice retrieved.",
+      "notes": "Specific brand name and lot codes not confirmed from primary FDA source — do not name the brand until FDA.gov notice is retrieved. Breaking-recall exception used — confidence capped at Medium."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "FDA Infant Formula Safety Advisory — Botulism Risk",
+      "primary_entity": "Infant formula safety (FDA advisory 2026)",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 62,
+      "opportunity_score": 70,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "What FDA is telling formula makers and why it matters after 2022's formula shortage and Abbott recall. What parents should know about formula safety today. How to check for recalls. Include parent FAQ and action checklist.",
+      "why_now": "Reuters reported July 13, 2026 that FDA urged infant formula manufacturers to tighten supplier oversight after product recalls and botulism outbreaks. FDA advisory on infant formula safety has high consumer relevance — parents actively search this topic.",
+      "primary_headline": "FDA Warns Infant Formula Makers to Tighten Safety Controls After Recalls and Botulism Outbreaks",
+      "next_steps": "Retrieve FDA advisory before stating specific recalls or case counts. Verify botulism outbreaks referenced. Do not create undue alarm beyond what FDA actually stated.",
+      "notes": "Reuters summary only — specific recalls and botulism cases not fully detailed from Reuters summary alone. Do not state specific case counts or imply current market risk without retrieving FDA advisory. This is regulatory advisory, not new contamination event per available signals — do not alarm readers beyond what FDA actually stated."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "GLP-1 Illegal Prescribing — Enforcement Action",
+      "primary_entity": "GLP-1 illegal prescribing (wellness business enforcement)",
+      "signal_type": "drug_or_treatment_claim",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 55,
+      "opportunity_score": 62,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "low",
+      "content_status": "new",
+      "source_count": 1,
+      "recommended_angle": "Use enforcement case as news peg to explain: what federal law says about prescribing GLP-1s, what telehealth prescribing gray areas exist, how to verify a provider's prescribing authority, and red flags in wellness-clinic weight loss programs. Framing as illustrative of broader pattern, not just local story.",
+      "why_now": "WLOS (ABC affiliate, Asheville NC) reported July 13 that wellness business owner accused of illegally prescribing GLP-1 drugs. Distinct from Yale/online-prescribing coverage — this is criminal enforcement action. Consumer-relevant angle differentiates from prior coverage.",
+      "primary_headline": "Wellness Business Owner Accused of Illegally Prescribing GLP-1 Drugs — What Patients Should Know",
+      "next_steps": "Seek second source corroboration before publishing. Retrieve WLOS article for full context. Confirm any public records before naming individuals. Emphasize 'accused' and 'alleged' throughout.",
+      "notes": "Single regional source (WLOS) — confidence Low; do not present as established trend without additional corroboration. Accused does not equal convicted — use 'accused' and 'alleged' throughout; do not name individuals without confirming public records. This is geographically local but editorially relevant nationally — frame as illustrating broader pattern, not just local story."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "New World Screwworm — USDA",
+      "reason": "existing"
+    },
+    {
+      "topic": "E. coli frozen blueberries",
+      "reason": "existing"
+    },
+    {
+      "topic": "FDA eye drops recall (2.5M bottles)",
+      "reason": "existing"
+    },
+    {
+      "topic": "Cream cheese recall",
+      "reason": "existing"
+    },
+    {
+      "topic": "GLP-1 Yale study (online prescribing oversight)",
+      "reason": "existing"
+    },
+    {
+      "topic": "Sleep deprivation / weight gain (Columbia)",
+      "reason": "existing"
+    },
+    {
+      "topic": "Ebola DRC clinical trial",
+      "reason": "existing"
+    },
+    {
+      "topic": "Glioma / Weill Cornell evolution study",
+      "reason": "existing"
+    },
+    {
+      "topic": "AMA wearables survey",
+      "reason": "existing"
+    },
+    {
+      "topic": "Stanford opioid taper",
+      "reason": "existing"
+    },
+    {
+      "topic": "Zeke Emanuel / longevity diets",
+      "reason": "existing"
+    },
+    {
+      "topic": "Marie-Pierre St-Onge sleep-diet",
+      "reason": "existing"
+    },
+    {
+      "topic": "Lung transplant / terminal lung cancer",
+      "reason": "existing"
+    },
+    {
+      "topic": "Fentanyl vaccine trial",
+      "reason": "existing"
+    },
+    {
+      "topic": "Jimmy Kimmel / Mitch McConnell health searches",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Brandy Norwood / Charlize Theron weight loss",
+      "reason": "off-category"
+    },
+    {
+      "topic": "ACA premiums 2027 (KFF)",
+      "reason": "off-category"
+    },
+    {
+      "topic": "HHS trans care Medicare/Medicaid",
+      "reason": "brand-safety"
+    },
+    {
+      "topic": "Male wellness / peptides (FT)",
+      "reason": "brand-safety"
+    },
+    {
+      "topic": "DOJ digital health CEO sentencing (Adderall)",
+      "reason": "outside-freshness"
+    },
+    {
+      "topic": "Peanut allergy trial (Children's Healthcare Atlanta)",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "Wellness influencers / Pew Research",
+      "reason": "weak-signal"
+    },
+    {
+      "topic": "Google AI / global health (blog.google)",
+      "reason": "off-category"
+    },
+    {
+      "topic": "Cucumbers nutrition facts",
+      "reason": "weak-signal"
+    }
+  ]
+}

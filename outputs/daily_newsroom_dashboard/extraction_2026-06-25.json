@@ -1,0 +1,301 @@
+{
+  "run_date": "2026-06-25",
+  "niche": "health and wellness",
+  "signal_summary": {
+    "total_reviewed": 144,
+    "total_retained": 9,
+    "total_rejected": 135,
+    "tools_active": [
+      "web_search",
+      "google_news",
+      "google_trends",
+      "serpapi"
+    ],
+    "tools_unavailable": [
+      "exa",
+      "rss",
+      "reddit"
+    ],
+    "notes": "Google News Radar served as primary discovery layer (144 headlines across 12 queries). Google Trends search_velocity from SerpAPI pre-fetch. Mental health trend velocity notably elevated (+13 delta, 7-day). Ebola is real-time 'Trending Now' breakout. Site URL not configured; content_status assessments use competitor-fallback inference. Four retained candidates require DOI/journal retrieval before writing commences. Alfredo sauce salmonella recall and FDA OTC drug signal deferred pending FDA.gov primary source confirmation."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "FDA Recalls 11,460 Bottles of Chlorthalidone Blood Pressure Medication",
+      "primary_entity": "Chlorthalidone",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 82,
+      "opportunity_score": 88,
+      "discover_score": 5,
+      "urgency": "now",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 9,
+      "recommended_angle": "Patient action guide: how to check whether your blood pressure medication is affected — and what to do next",
+      "why_now": "FDA recall is active. 11,460 bottles of chlorthalidone tablets nationwide. Multiple major outlets (TODAY, Houston Chronicle, Good Housekeeping, Yahoo Finance) reporting. Patients need clear, actionable guidance immediately.",
+      "primary_headline": "Is Your Blood Pressure Medication Recalled? Here's How to Check",
+      "next_steps": "Assign immediately. Verify specific lot numbers and manufacturer name from FDA.gov recall notice before publishing. Add link to FDA recall page.",
+      "notes": "Breaking-recall exception used in Skill 02b. Confidence capped at Medium — primary FDA notice URL must be retrieved and linked before publishing. Competitors have basic news coverage; opportunity is in clear patient-action framing. CRITICAL: Do not publish without confirmed FDA lot numbers. Include safety note: patients should NOT abruptly stop blood pressure medication without prescriber guidance."
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Ebola Cases Reported Near France — CDC Issues Travel Advisory for US Travelers",
+      "primary_entity": "Ebola",
+      "signal_type": "breaking_news",
+      "allowed_category": "infectious disease",
+      "trend_strength_score": 90,
+      "opportunity_score": 80,
+      "discover_score": 4,
+      "urgency": "now",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "What US travelers need to know right now: Ebola risk, CDC guidance, symptoms to watch for",
+      "why_now": "Google Trends 'Trending Now' breakout for 'ebola cases france' as of today. CDC issued traveler advisory June 21. Public alarm is active and rising.",
+      "primary_headline": "Ebola Near France: CDC Issues Travel Warning — What You Need to Know",
+      "next_steps": "Assign immediately. Retrieve full CDC travel advisory and identify the specific Ebola-affected areas travelers are returning from. Confirm case count and geographic scope before publishing.",
+      "notes": "Confidence Medium — two strong sources (CDC.gov + Google Trends breakout) but specific case details, affected countries, and transmission chain not yet confirmed from available signals. Do not speculate on outbreak severity. CRITICAL: Clearly state Ebola is NOT airborne in first 100 words. Distinguish imported cases vs. European community transmission."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "CDC-Blocked COVID Vaccine Study Is Now Published in Independent Peer-Reviewed Journal",
+      "primary_entity": "COVID-19 vaccine myocarditis study",
+      "signal_type": "study_or_research",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 78,
+      "opportunity_score": 82,
+      "discover_score": 5,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 5,
+      "recommended_angle": "What the suppressed COVID vaccine study actually found — and why the methodology debate matters more than the headlines",
+      "why_now": "Multiple tier-1 outlets (WaPo, NBC, ABC, STAT) reporting simultaneously on June 23. Acting CDC director blocked the study from the CDC's own journal; it was then published elsewhere. High public interest in COVID vaccine safety data.",
+      "primary_headline": "The COVID Vaccine Study the CDC Blocked Has Been Published. Here's What It Actually Says.",
+      "next_steps": "Retrieve the published study (identify journal from WaPo/NBC reporting). Confirm: study design (observational vs. RCT), sample size, specific finding on myocarditis risk, and how it compares to prior CDC/FDA data.",
+      "notes": "High confidence — 5 independent tier-1 outlets, all June 23. Key editorial task: lead with actual study findings, not the suppression narrative. Suppression is context, not the story. CRITICAL: Lead with findings, not suppression narrative. Include benefit-risk comparison (COVID myocarditis vs. vaccine-related myocarditis). Clearly label study design. High misinformation risk — requires editor review before publish."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Operation Trailblazer: HHS and FDA Plan to Cut Clinical Trial Timelines by 6–12 Months",
+      "primary_entity": "Operation Trailblazer",
+      "signal_type": "policy_or_regulatory_change",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 70,
+      "opportunity_score": 74,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 8,
+      "recommended_angle": "What faster clinical trials actually mean for patients waiting on new treatments",
+      "why_now": "HHS formally announced Operation Trailblazer on June 22 with FDA backing. WSJ, STAT, and Fierce Biotech all reporting. Framed as response to China competition — but patient access is the story for our audience.",
+      "primary_headline": "The Government Wants to Speed Up Drug Trials by a Year. Here's What That Means for Patients.",
+      "next_steps": "Retrieve HHS.gov announcement and FDA pilot program details. Identify which disease areas or trial phases are targeted first.",
+      "notes": "High confidence — 8 sources including HHS.gov and FDA direct. Strong audience angle is patient access, not geopolitics. CRITICAL: Faster trials ≠ less safe — address proactively. Confirm Phase 2/3 not compressed (Phase 1 only) before publishing."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "World's First HIV-to-HIV Lung Transplant Performed at NYU Langone Health",
+      "primary_entity": "HIV-to-HIV lung transplant",
+      "signal_type": "drug_or_treatment_claim",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 62,
+      "opportunity_score": 72,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "recommended_angle": "What this surgical first means for HIV-positive patients waiting for organ transplants — and how the HOPE Act made it possible",
+      "why_now": "Announced June 19 at NYU Langone — a genuine medical first in transplant medicine. Under-covered relative to significance; competitor deep-dive content is absent.",
+      "primary_headline": "World's First HIV-to-HIV Lung Transplant: What It Means for Patients With HIV",
+      "next_steps": "Retrieve full NYU Langone press release. Identify the surgical team, patient outcome details (if disclosed), and connection to the HOPE Act (HIV Organ Policy Equity Act). Check for any published case report or journal submission.",
+      "notes": "Confidence Medium — single institutional source (NYU Langone, tier-1). Confirmed by Google News radar. Proceed with explicit sourcing disclosure. If journal publication found, upgrade confidence. CRITICAL: Single institutional source — disclose in article. One patient case; do not generalize outcomes."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Severe Pregnancy Nausea Linked to Birth Complications — Stanford Medicine Study",
+      "primary_entity": "Hyperemesis gravidarum",
+      "signal_type": "study_or_research",
+      "allowed_category": "women's health",
+      "trend_strength_score": 58,
+      "opportunity_score": 68,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "recommended_angle": "HG is not just severe morning sickness — new research shows it can affect pregnancy outcomes, and here's what patients and doctors should know",
+      "why_now": "Stanford Medicine published June 22. Hyperemesis gravidarum is chronically underdiagnosed and undertreated; Princess of Wales raised awareness in 2022 but search interest remains high. Strong evergreen + news hook combination.",
+      "primary_headline": "Severe Pregnancy Nausea Isn't Just Miserable — It May Raise Risk of Birth Complications, Study Finds",
+      "next_steps": "Retrieve Stanford Medicine press release. Identify journal, study design (retrospective? prospective?), sample size, specific complications found. Retrieve DOI or PubMed ID.",
+      "notes": "Confidence Medium — Stanford Medicine tier-1 newsroom but journal/DOI not confirmed in available signals. Retrieve before publishing. CRITICAL: Retrieve study design before writing; observational framing required if not RCT. HG diagnostic criteria must be included — not all severe nausea is HG."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Patients Are Bringing AI Into Therapy Sessions — APA Report",
+      "primary_entity": "AI in mental health therapy",
+      "signal_type": "expert_conversation",
+      "allowed_category": "mental health and psychology",
+      "trend_strength_score": 65,
+      "opportunity_score": 70,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "recommended_angle": "What it means when patients use AI tools between therapy sessions — benefits, risks, and what therapists actually think",
+      "why_now": "APA published June 24. Mental health is the highest-velocity trend in this run (+13 delta over 7 days). AI tools like ChatGPT are increasingly used for emotional support; therapists are encountering this in sessions. No authoritative patient-facing explainer exists.",
+      "primary_headline": "Patients Are Using AI Between Therapy Sessions. Therapists Have Thoughts.",
+      "next_steps": "Retrieve full APA report or article. Identify specific AI tools mentioned, specific use cases (journaling, CBT prompts, crisis support), therapist concerns, and any data on patient outcomes.",
+      "notes": "APA is tier-2 professional org but primary institutional source for this topic. Mental health trend velocity confirms timing. CRITICAL: Do not frame AI chatbots as therapeutic tools; no general-purpose LLM is FDA-cleared for mental health treatment."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Childhood Adversity Changes How Cells Produce Energy — With Lifelong Health Effects (UCLA Study)",
+      "primary_entity": "Childhood adversity mitochondrial function",
+      "signal_type": "study_or_research",
+      "allowed_category": "mental health and psychology",
+      "trend_strength_score": 55,
+      "opportunity_score": 65,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "recommended_angle": "New research explains a biological mechanism linking early trauma to adult health conditions — and what it means for prevention",
+      "why_now": "Published June 18 at UCLA. ACEs (adverse childhood experiences) research is an established content cluster with strong evergreen demand. A specific cellular mechanism (mitochondrial energy production) is a novel, differentiated hook.",
+      "primary_headline": "How Childhood Trauma Changes Your Cells — And What That Means for Your Health Decades Later",
+      "next_steps": "Retrieve UCLA Newsroom press release. Identify journal, study type, specific cellular mechanism (likely mitochondrial), sample population. Retrieve DOI or PubMed ID.",
+      "notes": "Confidence Medium — UCLA tier-1 newsroom, June 18 (within freshness window). Journal/DOI not confirmed. Single source. CRITICAL: Retrieve study design urgently; if animal model, qualify findings explicitly. Do not overstate reversibility without cited evidence."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Fish Oil Supplements Don't Prevent Alzheimer's Cognitive Decline, Study Finds",
+      "primary_entity": "Fish oil Alzheimer's prevention",
+      "signal_type": "supplement_claim",
+      "allowed_category": "aging and longevity",
+      "trend_strength_score": 60,
+      "opportunity_score": 66,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "recommended_angle": "Fish oil won't protect your brain from Alzheimer's — what actually might, based on current evidence",
+      "why_now": "Keck/USC published June 18. Fish oil is one of the most commonly taken supplements (77M American adults). 'Does fish oil prevent dementia?' is a perennial high-intent search query. A new negative finding is a strong opportunity to provide the definitive evidence-based answer.",
+      "primary_headline": "Fish Oil Won't Protect Your Brain From Alzheimer's, New Study Finds — Here's What Might",
+      "next_steps": "Retrieve Keck Medicine press release. Identify journal, study design (RCT? observational? meta-analysis?), sample size, duration, specific cognitive endpoints. Retrieve DOI or PubMed ID.",
+      "notes": "Confidence Medium — Keck Medicine (USC-affiliated, tier-2 adjacent) single source. Fish oil supplement claim triggered Skill 02b; passed with Medium cap. Retrieve journal publication before publishing. CRITICAL: Retrieve study design urgently — if observational, 'may not prevent' is correct; 'doesn't prevent' is premature. Scope specifically to Alzheimer's — fish oil has other documented cardiovascular benefits."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "Healthcare Fraud Takedown (DOJ/OIG)",
+      "reason": "off-category — law enforcement/legal news; no direct patient health content angle"
+    },
+    {
+      "topic": "California Health Insurance Tax Increase",
+      "reason": "off-category — state insurance policy/finance; political-adjacent without clinical health content"
+    },
+    {
+      "topic": "Axios-Ipsos Poll: Health Affordability Midterms",
+      "reason": "off-category — political framing; polling story not health content"
+    },
+    {
+      "topic": "Jamieson Wellness Explores Sale (BMO/Canaccord)",
+      "reason": "excluded-category — pure pharma/supplement M&A business news"
+    },
+    {
+      "topic": "Bon Secours Wellness Arena $282M Makeover",
+      "reason": "off-category — sports facility; not health content"
+    },
+    {
+      "topic": "Cold Plunges, Saunas in Home Construction",
+      "reason": "off-category — brand/facility news, lifestyle real estate trend; no evidence-based health content angle"
+    },
+    {
+      "topic": "$24M Springfield Sports/Wellness Center Construction",
+      "reason": "off-category — local facility news"
+    },
+    {
+      "topic": "Black Girl Wellness Fest at UIC Forum",
+      "reason": "off-category — event announcement"
+    },
+    {
+      "topic": "Gotham FC Nature's Garden Wellness Partnership",
+      "reason": "excluded-category — brand partnership"
+    },
+    {
+      "topic": "Penn State Wellness Director Appointment",
+      "reason": "off-category — administrative/institutional news"
+    },
+    {
+      "topic": "Alfred University Wellness Center Nurses Week",
+      "reason": "off-category — local institutional event"
+    },
+    {
+      "topic": "Midjourney Saunas Union Square SF",
+      "reason": "off-category — tech/real estate"
+    },
+    {
+      "topic": "NPR World Cup Public Health Team",
+      "reason": "weak-signal — too event-specific and thin; no primary source available"
+    },
+    {
+      "topic": "Alfredo Sauce Salmonella Recall",
+      "reason": "unverified-claim — signal only from local outlet (WVIR); no FDA.gov confirmation found in available signals; deferred pending FDA primary source"
+    },
+    {
+      "topic": "FDA Highest Risk Level for OTC Drug",
+      "reason": "weak-signal — signal only from secondary outlet (The Healthy/Reader's Digest); specific drug not identified; insufficient sourcing; deferred pending FDA.gov primary source"
+    },
+    {
+      "topic": "Trump Cabinet Sauerkraut Diet / Haaland Diet",
+      "reason": "excluded-category — celebrity/political diet"
+    },
+    {
+      "topic": "How to Check Hard Drive / SSD / Laptop Battery Health",
+      "reason": "off-category — technology"
+    },
+    {
+      "topic": "Planet Fitness Juneteenth Hours",
+      "reason": "off-category — operational query"
+    },
+    {
+      "topic": "Kroma Wellness / Civana Wellness Resort",
+      "reason": "excluded-category — brand/facility"
+    },
+    {
+      "topic": "Supplemental Nutrition Assistance Program (SNAP)",
+      "reason": "off-category — policy/government program; no direct health impact angle"
+    },
+    {
+      "topic": "Bank of America Institute Wellness: Lost in the Scroll",
+      "reason": "off-category — financial services research framing"
+    },
+    {
+      "topic": "University of Utah Student Wellness Questionnaire",
+      "reason": "off-category — institutional/local"
+    },
+    {
+      "topic": "Mitch McConnell Health Update",
+      "reason": "excluded-category — celebrity/political health speculation"
+    },
+    {
+      "topic": "Alka Yagnik Health",
+      "reason": "excluded-category — celebrity health"
+    }
+  ]
+}

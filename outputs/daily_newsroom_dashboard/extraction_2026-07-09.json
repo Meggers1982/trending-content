@@ -1,0 +1,289 @@
+{
+  "run_date": "2026-07-09",
+  "niche": "health and wellness",
+  "signal_summary": {
+    "total_reviewed": 144,
+    "total_retained": 8,
+    "total_rejected": 136,
+    "tools_active": [
+      "web_search",
+      "google_news",
+      "google_trends",
+      "serpapi"
+    ],
+    "tools_unavailable": [],
+    "notes": "site_url not configured — self-check skipped; competitor coverage checked instead. Google Trends pre-fetch treated as available. food_safety Trends spike +22 is the largest 7d-delta in the dataset and directly aligns with active FDA recall cluster. mental_health +4 and gut_health +3 show steady rising interest supporting evergreen candidates. fitness -5 is declining week-over-week (post-July 4th holiday effect). ACA premium hike cluster monitored: credible sources but pure policy framing without new clinical data triggers brand_safety borderline; not briefed this run. Inaugural run — no prior run history file present."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "E. coli Outbreak — FDA Frozen Blueberries (July 2026)",
+      "primary_entity": "FDA / Frozen Blueberries E. coli Outbreak",
+      "signal_type": "breaking_news",
+      "allowed_category": "FDA and CDC regulatory updates; public health and epidemiology",
+      "trend_strength_score": 88,
+      "opportunity_score": 85,
+      "discover_score": 5,
+      "urgency": "now",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 4,
+      "recommended_angle": "Consumer safety action guide. Structured decision tool: Is your product affected? What are the symptoms? When should you go to the ER?",
+      "why_now": "Active, ongoing outbreak investigation. Both FDA.gov and CDC.gov issued simultaneous outbreak investigation pages on July 6–7, 2026. Google Trends 'food safety' spiked +22 7d-delta — the largest gain in the entire dataset. Consumers need actionable guidance today; the recall window is open and expanding.",
+      "primary_headline": "FDA Confirms E. coli Outbreak Linked to Frozen Blueberries: What to Do Right Now",
+      "next_steps": "Assign immediately; monitor FDA recall page for brand/lot code updates; add standing update timestamp in article header",
+      "notes": "None. FDA.gov and CDC.gov are primary, direct sources."
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Utz Potato Chip Recall — FDA Class I (Highest Risk) Upgrade",
+      "primary_entity": "Utz Brands / Salmonella Recall (Class I)",
+      "signal_type": "breaking_news",
+      "allowed_category": "FDA and CDC regulatory updates; food safety",
+      "trend_strength_score": 82,
+      "opportunity_score": 78,
+      "discover_score": 4,
+      "urgency": "now",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 6,
+      "recommended_angle": "Actionable consumer recall guide emphasizing what Class I means (not all recalls are equal), which specific SKUs are affected, Salmonella symptoms, and return/refund process.",
+      "why_now": "FDA upgraded recall to Class I — highest risk level — meaning reasonable probability of serious adverse health consequences. Major consumer product in wide distribution. NBC, CBS, AP, TODAY, Fox Business all covered; Google Trends 'food safety' spike +22 aligns. Story broke July 2 but the Class I upgrade is the newsworthy escalation.",
+      "primary_headline": "Utz Potato Chip Recall Upgraded to FDA's Highest Risk Level Over Salmonella — Full Brand and Lot Code List",
+      "next_steps": "Assign immediately; pull exact lot codes from FDA notice; note article was first reported July 2 — add 'updated [date]' note",
+      "notes": "None. Class I designation is FDA's official classification."
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Eye Drops Recall — 2.5M Bottles Nationwide",
+      "primary_entity": "Eye Drops Recall — FDA (July 2026)",
+      "signal_type": "breaking_news",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 78,
+      "opportunity_score": 76,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 4,
+      "recommended_angle": "Consumer action guide — what foreign substance means for eye health risk, which products are affected, what to do if you've used them, and how this fits the broader pattern of eye drop quality issues.",
+      "why_now": "2.5 million units is an unusually large eye drop recall. Eye drops are a category with recent high-profile contamination history (2023 EzriCare recall caused vision loss and deaths). Consumer concern is high; 'check your medicine cabinet' framing serves immediate audience need.",
+      "primary_headline": "FDA Recalls 2.5 Million Bottles of Eye Drops Nationwide — Check Your Medicine Cabinet",
+      "next_steps": "Verify FDA.gov notice for exact brand names, lot codes, and foreign substance identity before assigning to writer; assign same day once verified",
+      "notes": "⚠️ Confidence capped at Medium. Primary FDA recall notice not directly retrieved during this run. Breaking recall exception applied. Three+ credible outlets (Prevention, NJ.com, TODAY) confirm product description but lot codes and specific brand names must be verified against FDA.gov notice before publication."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "STAT Investigation: GLP-1 Online Prescriptions — Fast, Easy, Low Oversight",
+      "primary_entity": "GLP-1 medications / online telehealth prescribing oversight",
+      "signal_type": "drug_or_treatment_claim",
+      "allowed_category": "chronic disease management; FDA and CDC regulatory updates",
+      "trend_strength_score": 74,
+      "opportunity_score": 82,
+      "discover_score": 5,
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 4,
+      "recommended_angle": "Explainer + consumer warning: What STAT found, what clinical oversight is supposed to look like for GLP-1 prescribing, what questions patients should ask their telehealth provider, and red flags that suggest a platform is cutting corners. Not a scare piece — a decision tool.",
+      "why_now": "STAT News — gold-standard health journalism outlet — published an investigation on July 6 finding online GLP-1 prescriptions are 'fast, easy, and low on clinical oversight.' GLP-1 drugs remain the most searched drug category in consumer health. This investigation adds the critical safety/oversight angle that differentiates from competitor coverage.",
+      "primary_headline": "GLP-1 Drugs Are Easy to Get Online — Experts Say Clinical Oversight Is Dangerously Thin",
+      "next_steps": "Assign to writer familiar with GLP-1 landscape; pull STAT investigation quotes carefully; do not extrapolate findings to all telehealth platforms",
+      "notes": "This is investigative journalism, not a clinical trial. STAT's findings describe practices observed, not quantified outcomes. Frame as 'what the investigation found' rather than universal claims about all online prescribers."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Nature Trial: Biomarker-Guided Antidepressant Selection for MDD",
+      "primary_entity": "Bupropion / Sertraline biomarker-guided MDD trial (Nature)",
+      "signal_type": "medical_study",
+      "allowed_category": "medical research and clinical trials; mental health and psychology",
+      "trend_strength_score": 71,
+      "opportunity_score": 80,
+      "discover_score": 5,
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Patient-centered explainer: What did the trial actually find (not what headlines may overstate), what biomarkers were used, what this means practically for people currently taking or starting antidepressants, and how far this is from changing clinical practice.",
+      "why_now": "Published in Nature on July 6, 2026 — the highest-impact journal in science. The study uses a sophisticated sequential multiple-assignment randomized design (SMART), which is a methodological advance. Mental health Trends rising (+4 7d-delta). High Discover score.",
+      "primary_headline": "A Nature Trial Just Changed How Doctors Might Choose Your Antidepressant",
+      "next_steps": "Retrieve full Nature DOI; verify biomarker type from paper before assigning; flag as evergreen update candidate once trial results are replicated",
+      "notes": "⚠️ This is a precision medicine trial, not an FDA-approved protocol change. 'Biomarker-guided' does not mean patients can request biomarker testing at their psychiatrist today. Frame carefully: promising research direction, not a treatment breakthrough yet."
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Columbia Study: Sleep Deprivation Drives Weight Gain",
+      "primary_entity": "Sleep deprivation / weight gain (Columbia University Irving Medical Center)",
+      "signal_type": "medical_study",
+      "allowed_category": "sleep science; nutrition and diet science",
+      "trend_strength_score": 68,
+      "opportunity_score": 77,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Mechanism explainer — not just 'sleep affects weight' but the specific biological pathway this study identifies: what happens hormonally and metabolically during sleep deprivation that drives weight gain.",
+      "why_now": "Columbia University Irving Medical Center published on July 6, 2026. Sleep science is a core category; gut_health +3 and nutrition Trends +2 are adjacent signals supporting audience interest. Fresh institutional peg to re-enter the cluster.",
+      "primary_headline": "Columbia Scientists Confirm: Skimping on Sleep Makes You Gain Weight — Here's the Mechanism",
+      "next_steps": "Confirm peer-reviewed publication from Columbia press release link; verify study design before causal framing; assign to writer with sleep science background",
+      "notes": "⚠️ Source is institutional press release. Peer-reviewed publication status and study design (observational vs. interventional) must be confirmed before publishing. Do NOT write 'sleep deprivation causes weight gain' without confirming RCT design; if observational, frame as 'associated with.'"
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Northwestern: Lung Transplant Improves Survival in Terminal Lung Cancer",
+      "primary_entity": "Lung transplant / terminal lung cancer (Northwestern Medicine)",
+      "signal_type": "medical_study",
+      "allowed_category": "medical research and clinical trials; chronic disease management",
+      "trend_strength_score": 63,
+      "opportunity_score": 72,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "recommended_angle": "Patient-context explainer — who qualifies for this approach, what the survival improvement looked like, and what the ethical/access considerations are for a scarce organ resource.",
+      "why_now": "Northwestern Medicine Newsroom + Medical Xpress, July 8, 2026. Published in peer-reviewed journal (confirm journal name). Novel institutional peg.",
+      "primary_headline": "Lung Transplant Extends Life for Terminal Lung Cancer Patients — What the Northwestern Study Found",
+      "next_steps": "Retrieve journal name and DOI from Northwestern press release; verify patient selection criteria; note organ scarcity angle prominently",
+      "notes": "⚠️ Lung transplant for terminal cancer is not standard of care — this is a study showing survival benefit in a specific, highly selected patient population. Do not frame as broadly available treatment option. Organ scarcity context required."
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Ebola DRC Treatment Trial Begins — First for Bundibugyo Strain",
+      "primary_entity": "Bundibugyo Ebola strain treatment trial (DRC)",
+      "signal_type": "medical_study",
+      "allowed_category": "infectious disease; public health and epidemiology",
+      "trend_strength_score": 61,
+      "opportunity_score": 68,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 5,
+      "recommended_angle": "Public health explainer — why no treatment exists specifically for Bundibugyo (vs. Zaire strain), what this trial is testing, what DRC communities face, and why global health audiences should care about Ebola preparedness.",
+      "why_now": "Trial start confirmed: AP July 5, NPR July 7, Reuters July 2, WHO advisory, Mongabay July 8, 2026. Multi-source convergence validates signal.",
+      "primary_headline": "The First Clinical Trial for the Bundibugyo Ebola Strain Has Begun in DRC — What Makes This One Different",
+      "next_steps": "Retrieve exact trial registration from ClinicalTrials.gov; confirm trial sponsor and treatment compound name from WHO/AP sources; assign to writer with infectious disease background",
+      "notes": "⚠️ Early-phase trial initiation only — no efficacy or safety data available. Do not frame as treatment breakthrough. Frame as 'trial has begun' with honest uncertainty about outcomes and timeline."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "Mitch McConnell health status",
+      "reason": "brand_safety: political figure health without clinical/research angle; excluded: celebrity/political"
+    },
+    {
+      "topic": "Brian Johnson health (Trends rising)",
+      "reason": "off_category: celebrity wellness — no evidence base; excluded category"
+    },
+    {
+      "topic": "Atrium Health Pixel Settlement (Trends rising)",
+      "reason": "off_category: healthcare legal/business; no direct patient health angle for general audience"
+    },
+    {
+      "topic": "Wellness cluster (retreats, university programs, fire district, digital detox)",
+      "reason": "off_category: institutional/local coverage; no national signal; excluded: local hospital/program news"
+    },
+    {
+      "topic": "AI in Clinical Trials (Nature, Clinical Leader, Five-agent AI team)",
+      "reason": "off_category: pharma/research infrastructure; research methodology, not patient health"
+    },
+    {
+      "topic": "HHS Operation TrialBlazer",
+      "reason": "weak_signal: health policy infrastructure — borderline; insufficient audience health value without clinical data"
+    },
+    {
+      "topic": "ACA Premium Hikes 2027 (KFF, NYT, PBS)",
+      "reason": "weak_signal: monitored rather than briefed — credible sources but pure policy framing without new clinical data triggers brand_safety borderline"
+    },
+    {
+      "topic": "Psilocybin + Cocaine Use RCT (TMX/Red Light Holland)",
+      "reason": "weak_signal: monitored pending journal publication — single commercial press release with IP claims; source is PR Newswire via corporate issuer, not peer-reviewed publication"
+    },
+    {
+      "topic": "Alzheimer's Gene Therapy Grant (Weill Cornell)",
+      "reason": "weak_signal: monitored — grant award, not results; no study data yet; retain as future watch"
+    },
+    {
+      "topic": "Snapchatplanet.com / Rachael Ray health (Trends)",
+      "reason": "off_category: social chatter / celebrity; off-category"
+    },
+    {
+      "topic": "Planet Fitness holiday hours queries",
+      "reason": "off_category: business/operations, not health"
+    },
+    {
+      "topic": "Digital detox challenge (Marquette Today)",
+      "reason": "off_category: institutional/local; no novel research peg"
+    },
+    {
+      "topic": "'Game of Thrones' wellness cult",
+      "reason": "off_category: celebrity; excluded category"
+    },
+    {
+      "topic": "Connor Murphy fitness/mental health (Trends)",
+      "reason": "off_category: social-only spike; celebrity personal story"
+    },
+    {
+      "topic": "Haaland / Zuckerberg diet (Trends rising)",
+      "reason": "off_category: celebrity wellness without evidence base"
+    },
+    {
+      "topic": "Traditional 1776 American diet (Trends)",
+      "reason": "off_category: novelty/political cultural moment; no health science basis"
+    },
+    {
+      "topic": "Mark Zuckerberg wagyu cattle diet",
+      "reason": "off_category: celebrity wellness; excluded category"
+    },
+    {
+      "topic": "Corn on the cob / cream of wheat nutrition (Trends)",
+      "reason": "weak_signal: generic nutrition queries; no news peg; insufficient trend velocity"
+    },
+    {
+      "topic": "Yale health system CEO ouster",
+      "reason": "off_category: pure institutional/business news"
+    },
+    {
+      "topic": "Insilico Medicine Phase III trial (IPF)",
+      "reason": "off_category: pharma business/early phase; no patient guidance angle yet"
+    },
+    {
+      "topic": "Nanox Cardiac AI Solution study (dicardiology.com)",
+      "reason": "off_category: specialty medical trade; narrow audience fit"
+    },
+    {
+      "topic": "Five-agent AI clinical trial design",
+      "reason": "off_category: research methodology; off-category"
+    },
+    {
+      "topic": "OSU nursing study abroad",
+      "reason": "off_category: educational/local; off-category"
+    },
+    {
+      "topic": "UCF microgravity/space radiation aging",
+      "reason": "off_category: peripheral; no consumer health application"
+    },
+    {
+      "topic": "WHO global health emergencies overview",
+      "reason": "off_category: evergreen institutional; no fresh news peg beyond general advisory"
+    },
+    {
+      "topic": "WHO cervical cancer",
+      "reason": "off_category: evergreen topic without fresh study peg this week"
+    },
+    {
+      "topic": "DOJ digital health company fraud (Adderall pills)",
+      "reason": "off_category: legal/criminal case; not a health guidance topic"
+    }
+  ]
+}
