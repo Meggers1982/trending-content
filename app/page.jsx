@@ -468,6 +468,27 @@ export default async function Home({ searchParams }) {
           </section>
         ) : null}
 
+        {latest?.factCheck ? (
+          <section className="factCheckBar">
+            <span className="detailLabel">Fact check</span>
+            {[
+              ["accurate", "verified", "good"],
+              ["minor_issues", "minor issues", "warm"],
+              ["significant_issues", "check before writing", "risk"],
+              ["unverifiable", "unverified", ""]
+            ]
+              .filter(([key]) => latest.factCheck[key])
+              .map(([key, label, tone]) => (
+                <span key={key}>
+                  <span className={`badge ${tone}`}>{latest.factCheck[key]}</span> {label}
+                </span>
+              ))}
+            <span className="quiet">
+              Each retained topic checked against the evidence this run collected.
+            </span>
+          </section>
+        ) : null}
+
         {summary.notes ? (
           <section className="insightPanel">
             <p className="eyebrow">Run Insight</p>

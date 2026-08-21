@@ -48,6 +48,11 @@ Under it:
 - **Generated runs** — click any past date to load that whole run into the page
   (`/?run=YYYY-MM-DD`); the standalone HTML file is still there as a downloadable snapshot.
 
+Each retained topic is also fact-checked against the evidence the run collected, and carries a
+verdict badge — verified, minor issues, check before writing, or unverified (meaning the run's own
+evidence did not cover the claim, which is normal for search-interest topics). Pass
+`--skip-fact-check` to skip that pass.
+
 Expanded rows also carry the source links, any ⚠️ integrity notes, and a one-line reason behind each
 score (hover the score to see it). The run header shows what the run cost to produce.
 

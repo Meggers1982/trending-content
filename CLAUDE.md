@@ -1255,6 +1255,36 @@ Note the two rejection counts differ legitimately and both are shown: `signal_su
 is what the model says it filtered (135), while `rejected[]` is what it bothered to itemize (30).
 Picking one number would misrepresent the run.
 
+### Fact-check pass (added 2026-08-21)
+
+`run_fact_check()` verifies each retained candidate against the evidence the run actually
+collected, producing a structured verdict per topic: `accurate` / `minor_issues` /
+`significant_issues` / `unverifiable`. Adapted from `senior-research-digest`'s second Claude pass,
+but with the verdict as a schema enum rather than an emoji parsed out of prose — that repo's
+`verdictClass()` keys styling off literal ✅/⚠️/❌ in model text, which breaks silently on any
+wording drift.
+
+**Scope is deliberately narrow.** There is no web access in this pipeline, so the only ground truth
+is the pre-fetched signal file plus whatever the candidate itself cites. The prompt therefore
+forbids using outside knowledge to *confirm* a claim: recognizing a story that is not in the
+evidence is `unverifiable`, not `accurate`. `unverifiable` is not a criticism — it is the expected
+verdict for topics drawn from search-interest signals rather than news, and the UI says so.
+
+Verdicts are matched back to candidates by normalized topic string (punctuation stripped), since
+the model echoes the topic rather than an index; unmatched candidates log a warning and render no
+badge rather than borrowing someone else's verdict.
+
+Runs on the pipeline model (verification is judgment, not reformatting) with adaptive thinking, and
+is wrapped so any failure logs a warning and continues — a fact-check problem must cost the run its
+verdicts, not its dashboard. `--skip-fact-check` disables it.
+
+**Cost: ~$0.14 per run** on the first real pass (9 candidates, ~7.6k-token prompt), against a
+~$0.34 baseline — call it a 40% increase. Lower `output_config.effort` or switch `FACT_CHECK_MODEL`
+to Haiku if that stops being worth it.
+
+First live run over real candidates: 8 accurate, 1 minor_issues — the flagged one claimed more
+about an FDA recall than the single Health.com headline in the evidence supported.
+
 ### `/api/radar` works on Vercel now — `run-radar.yml` (added 2026-08-21)
 
 The eight per-profile radar workflows each hardcode one profile on a weekly cron, so none could

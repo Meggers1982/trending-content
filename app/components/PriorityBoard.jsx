@@ -57,6 +57,30 @@ function priorityTone(level) {
   return `${level || ""}`.toUpperCase();
 }
 
+// Structured verdicts from the fact-check pass. Deliberately not parsed out of
+// emoji in prose — see CLAUDE.md on why the sibling repo's approach was not
+// copied. "unverifiable" is not a criticism: it means the run's own evidence
+// did not cover the claim, which is expected for search-interest topics.
+const VERDICTS = {
+  accurate: { label: "verified", tone: "good", blurb: "Claims match the evidence this run collected." },
+  minor_issues: { label: "minor issues", tone: "warm", blurb: "Defensible, but the framing overstates something." },
+  significant_issues: { label: "check before writing", tone: "risk", blurb: "A claim materially distorts the evidence." },
+  unverifiable: { label: "unverified", tone: "", blurb: "This run's evidence does not cover the claim either way." }
+};
+
+function factCheckOf(candidate) {
+  // The array form comes from extraction_<date>.json; the CSV flattens it.
+  const raw = candidate.fact_check;
+  const verdict = raw?.verdict || candidate.fact_check_verdict || "";
+  if (!verdict || !VERDICTS[verdict]) return null;
+  return {
+    ...VERDICTS[verdict],
+    verdict,
+    issues: asList(raw?.issues ?? candidate.fact_check_issues),
+    checkedAgainst: raw?.checked_against || ""
+  };
+}
+
 function scoreTitle(label, reason) {
   const explanation = `${reason || ""}`.trim();
   return explanation ? `${label}: ${explanation}` : label;
@@ -161,6 +185,7 @@ export default function PriorityBoard({ candidates = [], recurrence = {} }) {
           const flags = asList(candidate.integrity_flags);
           const flagged = flags.length ? flags : notes ? [notes] : [];
           const sources = asList(candidate.source_urls).filter(isHttpUrl);
+          const factCheck = factCheckOf(candidate);
           return (
             <article
               key={key}
@@ -185,6 +210,14 @@ export default function PriorityBoard({ candidates = [], recurrence = {} }) {
                     {days > 1 ? (
                       <span className="badge warm" title="Consecutive runs carrying this story">
                         day {days}
+                      </span>
+                    ) : null}
+                    {factCheck ? (
+                      <span
+                        className={`badge ${factCheck.tone}`}
+                        title={`${factCheck.blurb}${factCheck.checkedAgainst ? ` Checked against: ${factCheck.checkedAgainst}` : ""}`}
+                      >
+                        {factCheck.label}
                       </span>
                     ) : null}
                     {flagged.length ? (
@@ -233,6 +266,19 @@ export default function PriorityBoard({ candidates = [], recurrence = {} }) {
                       {flagged.map((flag, flagIndex) => (
                         <p className="detailBody" key={`${flag}-${flagIndex}`}>{flag}</p>
                       ))}
+                    </div>
+                  ) : null}
+                  {factCheck?.issues.length ? (
+                    <div className="factCheckNote">
+                      <span className="detailLabel">
+                        Fact check — {factCheck.label}
+                      </span>
+                      {factCheck.issues.map((issue, issueIndex) => (
+                        <p className="detailBody" key={`${issue}-${issueIndex}`}>{issue}</p>
+                      ))}
+                      {factCheck.checkedAgainst ? (
+                        <p className="quiet">Checked against {factCheck.checkedAgainst}</p>
+                      ) : null}
                     </div>
                   ) : null}
                   {sources.length ? (

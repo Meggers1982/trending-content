@@ -37,6 +37,7 @@ import csv
 import json
 import re
 import html
+import collections
 import difflib
 import argparse
 import logging
@@ -168,6 +169,10 @@ EXTRACTION_MAX_TOKENS = 12000
 # adaptive thinking; extraction is mechanical reformatting and runs on Haiku.
 PIPELINE_MODEL = "claude-sonnet-5"
 EXTRACTION_MODEL = "claude-haiku-4-5"
+# Verifying a claim against evidence is a judgment task, not reformatting, so
+# the fact-check runs on the pipeline model rather than the extraction one.
+FACT_CHECK_MODEL = PIPELINE_MODEL
+FACT_CHECK_MAX_TOKENS = 8000
 
 # Published $/MTok, used only for the per-run cost estimate logged and stored
 # with the run. Cache reads bill at ~0.1x input and cache writes at ~1.25x.
@@ -1201,6 +1206,154 @@ JSON_SCHEMA = """
 }
 """
 
+# ── Fact-check pass ───────────────────────────────────────────────────────────
+
+FACT_CHECK_VERDICTS = ["accurate", "minor_issues", "significant_issues", "unverifiable"]
+
+FACT_CHECK_JSON_SCHEMA = {
+    "type": "object",
+    "additionalProperties": False,
+    "required": ["verdicts"],
+    "properties": {
+        "verdicts": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "additionalProperties": False,
+                "required": ["topic", "verdict", "issues", "checked_against"],
+                "properties": {
+                    "topic": _string("The candidate topic, copied exactly so it can be matched back"),
+                    "verdict": {"type": "string", "enum": FACT_CHECK_VERDICTS},
+                    "issues": {
+                        "type": "array",
+                        "items": {"type": "string"},
+                        "description": (
+                            "What does not hold up, one short sentence each. Empty for an "
+                            "accurate verdict. Never invent an issue to fill this."
+                        ),
+                    },
+                    "checked_against": _string(
+                        "Which evidence the check used, e.g. 'Reuters headline + FDA notice in signal file'"
+                    ),
+                },
+            },
+        }
+    },
+}
+
+
+def build_fact_check_prompt(candidates: list[dict], serp_context: str) -> str:
+    """Check each retained candidate against the evidence the run actually had.
+
+    Deliberately narrow: there is no web access here, so the only ground truth
+    is the pre-fetched signal file and whatever sources the candidate itself
+    cites. A claim that cannot be checked against that is `unverifiable`, which
+    is a different statement from "wrong" — the point is to tell an editor which
+    topics need a look before writing, not to re-report the story.
+    """
+    lines = []
+    for index, c in enumerate(candidates, start=1):
+        lines.append(
+            f"{index}. TOPIC: {c.get('topic', '')}\n"
+            f"   HEADLINE: {c.get('primary_headline', '')}\n"
+            f"   WHY NOW: {c.get('why_now', '')}\n"
+            f"   ANGLE: {c.get('recommended_angle', '')}\n"
+            f"   ENTITY: {c.get('primary_entity', '')}\n"
+            f"   SIGNAL TYPE: {c.get('signal_type', '')}\n"
+            f"   CLAIMED SOURCES: {', '.join(c.get('source_urls') or []) or 'none recorded'}\n"
+            f"   EXISTING FLAGS: {'; '.join(c.get('integrity_flags') or []) or 'none'}"
+        )
+    candidate_block = "\n\n".join(lines)
+
+    return f"""You are fact-checking today's editorial candidates against the evidence this run
+actually collected. Return one verdict per candidate.
+
+THE EVIDENCE — this is the only ground truth you have. You cannot browse.
+{serp_context or "(No pre-fetched signal data was available for this run.)"}
+
+---
+
+THE CANDIDATES
+{candidate_block}
+
+---
+
+For each candidate, decide whether its topic, headline, and "why now" are supported by the evidence
+above.
+
+- `accurate` — the claims match the evidence. `issues` is empty.
+- `minor_issues` — defensible, but the framing overstates or compresses something. Say what.
+- `significant_issues` — a claim materially distorts the evidence: correlation reported as
+  causation, a small study generalized to a population, a safety implication the source does not
+  support, or a date/number that does not match.
+- `unverifiable` — the evidence here does not cover this claim either way. This is expected for
+  topics drawn from search-interest signals rather than news, and is NOT a criticism.
+
+Rules:
+- Judge only against the evidence above. Do not use outside knowledge to confirm a claim; if you
+  recognize a story but it is not in the evidence, that is `unverifiable`.
+- Do not invent issues to seem thorough. An accurate candidate gets an empty `issues` array.
+- Copy each `topic` back exactly as given so verdicts can be matched to candidates.
+- Do not repeat a caveat that is already listed under EXISTING FLAGS unless the evidence
+  contradicts it.
+"""
+
+
+def run_fact_check(client, data: dict, serp_context: str) -> list[dict]:
+    """Verify retained candidates; returns per-candidate usage-bearing verdicts.
+
+    Never fatal: a failure here degrades the run to "no verdicts shown" rather
+    than losing the dashboard, same principle as the structured-output fallback.
+    """
+    candidates = data.get("candidates", [])
+    if not candidates:
+        return []
+
+    response = create_message_with_connection_fallback(
+        client,
+        label="Fact-check call",
+        stream=True,
+        model=FACT_CHECK_MODEL,
+        max_tokens=FACT_CHECK_MAX_TOKENS,
+        thinking={"type": "adaptive"},
+        output_config={"format": {"type": "json_schema", "schema": FACT_CHECK_JSON_SCHEMA}},
+        messages=[{"role": "user", "content": build_fact_check_prompt(candidates, serp_context)}],
+    )
+    parsed = parse_extraction_json(extract_response_text(response, label="Fact-check call"))
+    verdicts = parsed.get("verdicts", [])
+
+    # Match verdicts back by topic. The model echoes the topic string, so
+    # compare on a normalized form rather than trusting exact punctuation.
+    def key(text: str) -> str:
+        return re.sub(r"[^a-z0-9]+", "", str(text).lower())
+
+    by_topic = {key(v.get("topic", "")): v for v in verdicts}
+    matched = 0
+    for c in candidates:
+        verdict = by_topic.get(key(c.get("topic", "")))
+        if not verdict:
+            continue
+        matched += 1
+        c["fact_check"] = {
+            "verdict": verdict.get("verdict", "unverifiable"),
+            "issues": [i for i in (verdict.get("issues") or []) if str(i).strip()],
+            "checked_against": verdict.get("checked_against", ""),
+        }
+
+    if matched < len(candidates):
+        log.warning(
+            f"Fact-check matched {matched}/{len(candidates)} candidates by topic; "
+            "the rest will show no verdict."
+        )
+
+    counts = collections.Counter(
+        c.get("fact_check", {}).get("verdict", "unchecked") for c in candidates
+    )
+    data["fact_check_summary"] = dict(counts)
+    log.info("Fact check: " + ", ".join(f"{n} {name}" for name, n in counts.most_common()))
+    return [usage_cost(FACT_CHECK_MODEL, response.usage)]
+
+
 def build_extraction_prompt(pipeline_output: str) -> str:
     return f"""You just ran the Trending Content OS pipeline. Below is the full output.
 
@@ -1267,7 +1420,7 @@ CSV_HEADER = (
     "signal_type,allowed_category,trend_strength_score,opportunity_score,"
     "discover_score,urgency,confidence,content_status,source_count,source_urls,"
     "recommended_angle,why_now,primary_headline,next_steps,integrity_flags,"
-    "trend_score_reason,opportunity_score_reason,discover_score_reason,notes"
+    "trend_score_reason,opportunity_score_reason,discover_score_reason,fact_check_verdict,fact_check_issues,notes"
 )
 
 
@@ -1314,6 +1467,8 @@ def generate_csv(data: dict) -> str:
             esc(c.get("trend_score_reason", "")),
             esc(c.get("opportunity_score_reason", "")),
             esc(c.get("discover_score_reason", "")),
+            esc((c.get("fact_check") or {}).get("verdict", "")),
+            esc(_join_list((c.get("fact_check") or {}).get("issues"))),
             esc(c.get("notes", "")),
         ])
         rows.append(row)
@@ -1612,7 +1767,7 @@ def send_email(
 
 # ── Main pipeline runner ──────────────────────────────────────────────────────
 
-def run_pipeline(send_email_flag: bool = False) -> None:
+def run_pipeline(send_email_flag: bool = False, fact_check_flag: bool = True) -> None:
     try:
         import anthropic
     except ImportError:
@@ -1793,6 +1948,18 @@ def run_pipeline(send_email_flag: bool = False) -> None:
     # Ensure run_date is set
     data.setdefault("run_date", today_str)
 
+    # Verify the retained candidates against the evidence this run collected.
+    # Wrapped because a fact-check failure should cost the run its verdicts, not
+    # its dashboard.
+    if fact_check_flag:
+        log.info(f"Step 2b/4 — Fact-checking {len(data.get('candidates', []))} candidates...")
+        try:
+            run_costs.extend(run_fact_check(client, data, serp_context))
+        except Exception as e:  # noqa: BLE001 — any failure here is non-fatal by design
+            log.warning(f"Fact-check pass failed ({e.__class__.__name__}: {e}). Continuing without verdicts.")
+    else:
+        log.info("Fact-check pass skipped (--skip-fact-check).")
+
     total_cost = round(sum(call["estimated_cost_usd"] for call in run_costs), 4)
     data["run_cost"] = {"total_usd": total_cost, "calls": run_costs}
     log.info(f"Run cost estimate: ${total_cost:.4f} across {len(run_costs)} calls")
@@ -1844,7 +2011,7 @@ def run_pipeline(send_email_flag: bool = False) -> None:
 
 # ── Scheduler ─────────────────────────────────────────────────────────────────
 
-def start_scheduler(run_time: str, send_email_flag: bool = False) -> None:
+def start_scheduler(run_time: str, send_email_flag: bool = False, fact_check_flag: bool = True) -> None:
     try:
         import schedule
         import time
@@ -1852,10 +2019,12 @@ def start_scheduler(run_time: str, send_email_flag: bool = False) -> None:
         sys.exit("Missing dependency for scheduler: pip install schedule")
 
     log.info(f"Scheduler started — pipeline runs daily at {run_time}.")
-    schedule.every().day.at(run_time).do(lambda: _run_locked(run_pipeline, send_email_flag=send_email_flag))
+    schedule.every().day.at(run_time).do(
+        lambda: _run_locked(run_pipeline, send_email_flag=send_email_flag, fact_check_flag=fact_check_flag)
+    )
 
     log.info("Running once now for verification...")
-    _run_locked(run_pipeline, send_email_flag=send_email_flag)
+    _run_locked(run_pipeline, send_email_flag=send_email_flag, fact_check_flag=fact_check_flag)
 
     while True:
         schedule.run_pending()
@@ -1923,6 +2092,8 @@ def main() -> None:
                         help="Email the result for this run (off by default — the dashboard is the primary interface)")
     parser.add_argument("--prefetch-only", action="store_true",
                         help="Fetch SerpAPI Google News/Trends context and exit")
+    parser.add_argument("--skip-fact-check", action="store_true",
+                        help="Skip verifying retained candidates against the run's evidence (saves one API call)")
     args = parser.parse_args()
 
     if args.prefetch_only:
@@ -1930,9 +2101,9 @@ def main() -> None:
     elif args.schedule:
         # start_scheduler manages the lock itself, once per triggered run,
         # since it stays alive indefinitely rather than exiting after one run.
-        start_scheduler(args.time, send_email_flag=args.email)
+        start_scheduler(args.time, send_email_flag=args.email, fact_check_flag=not args.skip_fact_check)
     else:
-        _run_locked(run_pipeline, send_email_flag=args.email)
+        _run_locked(run_pipeline, send_email_flag=args.email, fact_check_flag=not args.skip_fact_check)
 
 
 if __name__ == "__main__":
