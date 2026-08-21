@@ -159,6 +159,18 @@ MAX_NEWS_CONTEXT_ITEMS = 60
 PIPELINE_MAX_TOKENS = 20000
 EXTRACTION_MAX_TOKENS = 12000
 
+# The 12-stage editorial pipeline is a judgment task, so it runs on Sonnet with
+# adaptive thinking; extraction is mechanical reformatting and runs on Haiku.
+PIPELINE_MODEL = "claude-sonnet-5"
+EXTRACTION_MODEL = "claude-haiku-4-5"
+
+# Published $/MTok, used only for the per-run cost estimate logged and stored
+# with the run. Cache reads bill at ~0.1x input and cache writes at ~1.25x.
+MODEL_PRICING = {
+    "claude-sonnet-5":  {"input": 3.00, "output": 15.00},
+    "claude-haiku-4-5": {"input": 1.00, "output": 5.00},
+}
+
 # Drilling into "why is this trending" costs one extra SerpAPI request per
 # term (see fetch_trending_news()), so only the top few Trending Now terms
 # get enriched rather than all 20 fetched.
@@ -520,15 +532,26 @@ def build_pipeline_prompt(serp_context: str = "", history_context: str = "") -> 
     return prefix + base
 
 
-def create_message_with_connection_fallback(client, *, label: str, **kwargs):
+def _create_message(client, *, stream: bool, **kwargs):
+    """One request, streamed or not. Streaming is required for the pipeline
+    call: with adaptive thinking and a 20k output budget a single response can
+    outrun the non-streaming HTTP timeout, which would surface as a spurious
+    APITimeoutError partway through a run that was actually progressing."""
+    if not stream:
+        return client.messages.create(**kwargs)
+    with client.messages.stream(**kwargs) as stream_handle:
+        return stream_handle.get_final_message()
+
+
+def create_message_with_connection_fallback(client, *, label: str, stream: bool = False, **kwargs):
     """Run an Anthropic request with one explicit retry after SDK retries."""
     try:
-        return client.messages.create(**kwargs)
+        return _create_message(client, stream=stream, **kwargs)
     except Exception as e:
         if e.__class__.__name__ not in {"APIConnectionError", "APITimeoutError"}:
             raise
         log.warning(f"{label} connection failed after SDK retries: {e}. Retrying once...")
-        return client.messages.create(**kwargs)
+        return _create_message(client, stream=stream, **kwargs)
 
 
 def extract_response_text(response, *, label: str) -> str:
@@ -544,14 +567,27 @@ def extract_response_text(response, *, label: str) -> str:
     if not content:
         log.error(f"{label}: Claude API returned empty content — cannot continue.")
         raise SystemExit(1)
-    block = content[0]
-    if getattr(block, "type", None) != "text" or not hasattr(block, "text"):
+
+    if getattr(response, "stop_reason", None) == "refusal":
+        details = getattr(response, "stop_details", None)
         log.error(
-            f"{label}: Claude API returned a non-text content block "
-            f"(type={getattr(block, 'type', 'unknown')}) — cannot continue."
+            f"{label}: Claude declined the request "
+            f"(category={getattr(details, 'category', 'unknown')}) — cannot continue."
         )
         raise SystemExit(1)
-    return block.text
+
+    # Scan for the first text block rather than assuming content[0]: with
+    # adaptive thinking enabled the response opens with a thinking block, so
+    # indexing position 0 would reject every successful response.
+    for block in content:
+        if getattr(block, "type", None) == "text" and hasattr(block, "text"):
+            return block.text
+
+    log.error(
+        f"{label}: Claude API returned no text content block "
+        f"(types={[getattr(b, 'type', 'unknown') for b in content]}) — cannot continue."
+    )
+    raise SystemExit(1)
 
 
 def parse_extraction_json(raw_json: str) -> dict:
@@ -824,9 +860,42 @@ def update_deferred_topics(data: dict, today_str: str, max_candidates: int) -> d
     return data
 
 
+def usage_cost(model: str, usage) -> dict:
+    """Token counts and an estimated USD cost for one API call. Cache reads
+    bill at ~0.1x the input rate and cache writes at ~1.25x, which is most of
+    why this run is cheap — worth showing rather than discarding."""
+    price = MODEL_PRICING.get(model, {"input": 0.0, "output": 0.0})
+    fresh_in = getattr(usage, "input_tokens", 0) or 0
+    out = getattr(usage, "output_tokens", 0) or 0
+    cache_read = getattr(usage, "cache_read_input_tokens", 0) or 0
+    cache_write = getattr(usage, "cache_creation_input_tokens", 0) or 0
+    cost = (
+        fresh_in * price["input"]
+        + cache_read * price["input"] * 0.1
+        + cache_write * price["input"] * 1.25
+        + out * price["output"]
+    ) / 1_000_000
+    return {
+        "model": model,
+        "input_tokens": fresh_in,
+        "output_tokens": out,
+        "cache_read_tokens": cache_read,
+        "cache_write_tokens": cache_write,
+        "estimated_cost_usd": round(cost, 4),
+    }
+
+
 def _integrity_flag_count(candidates: list[dict]) -> int:
+    """Candidates carrying an editorial caveat. Prefers the structured
+    integrity_flags array; the notes string-match is the fallback for runs
+    extracted before that field existed."""
     count = 0
     for c in candidates:
+        flags = c.get("integrity_flags")
+        if isinstance(flags, list):
+            if any(str(flag).strip() for flag in flags):
+                count += 1
+            continue
         text = f"{c.get('notes', '')} {c.get('confidence', '')}".lower()
         if "verify" in text or "flag" in str(c.get("notes", "")).lower():
             count += 1
@@ -867,6 +936,7 @@ def archive_run_to_history(data: dict, today_str: str, dashboard_file: str) -> N
         "tools_used": summary.get("tools_active", []),
         "tools_unavailable": summary.get("tools_unavailable", []),
         "dashboard_file": dashboard_file,
+        "estimated_cost_usd": (data.get("run_cost") or {}).get("total_usd", 0),
         "notes": summary.get("notes", ""),
     }
 
@@ -925,6 +995,105 @@ def run_prefetch_only() -> None:
 
 # ── JSON extraction prompt ────────────────────────────────────────────────────
 
+# Enforced server-side via output_config, so the response is schema-valid by
+# construction rather than parsed hopefully and repaired on failure. Every
+# property is required — the model writes "" or [] when a field doesn't apply,
+# which keeps the CSV columns and dashboard fields consistently populated.
+def _string(description: str) -> dict:
+    return {"type": "string", "description": description}
+
+
+_CANDIDATE_PROPERTIES = {
+    "priority_level": {"type": "string", "enum": list(PRIORITY_LEVELS)},
+    "publish_timing": {
+        "type": "string",
+        "enum": ["immediate", "short_term", "scheduled", "evergreen", "monitor"],
+    },
+    "topic": _string("Full topic string"),
+    "primary_entity": _string("Single most important named entity"),
+    "signal_type": _string("e.g. breaking_news, recall, study_or_research"),
+    "allowed_category": _string("Category from category_rules"),
+    # Numeric bounds live in the description: structured outputs reject
+    # `minimum`/`maximum` on integer properties with a 400.
+    "trend_strength_score": {"type": "integer", "description": "0-100"},
+    "opportunity_score": {"type": "integer", "description": "0-100"},
+    "discover_score": {"type": "integer", "description": "1-5"},
+    "urgency": {"type": "string", "enum": ["now", "today", "this_week", "evergreen"]},
+    "confidence": {"type": "string", "enum": ["high", "medium", "low"]},
+    "content_status": {"type": "string", "enum": ["new", "existing", "update"]},
+    "source_count": {"type": "integer", "description": "Count of source_evidence items"},
+    "source_urls": {
+        "type": "array",
+        "items": {"type": "string"},
+        "description": "Top 2-3 primary source URLs. Full https:// URLs only, never bare domains.",
+    },
+    "recommended_angle": _string("One-line editorial angle"),
+    "why_now": _string("Why this matters today specifically"),
+    "primary_headline": _string("Working headline"),
+    "next_steps": _string("Assigned action"),
+    "integrity_flags": {
+        "type": "array",
+        "items": {"type": "string"},
+        "description": (
+            "Editorial caveats a writer must respect: association-vs-causation, "
+            "single-study claims, unverified press releases, relative risk without "
+            "absolute context. Full readable sentences as they appear in the report, "
+            "not slugs. Empty array when there are none."
+        ),
+    },
+    "trend_score_reason": _string("One line: why this trend_strength_score"),
+    "opportunity_score_reason": _string("One line: why this opportunity_score"),
+    "discover_score_reason": _string("One line: why this discover_score"),
+    "notes": _string("Any other flags or override reasons"),
+}
+
+EXTRACTION_JSON_SCHEMA = {
+    "type": "object",
+    "additionalProperties": False,
+    "required": ["run_date", "niche", "signal_summary", "candidates", "rejected"],
+    "properties": {
+        "run_date": _string("YYYY-MM-DD"),
+        "niche": _string("Site niche"),
+        "signal_summary": {
+            "type": "object",
+            "additionalProperties": False,
+            "required": [
+                "total_reviewed", "total_retained", "total_rejected",
+                "tools_active", "tools_unavailable", "notes",
+            ],
+            "properties": {
+                "total_reviewed": {"type": "integer", "description": "Signals reviewed before filtering"},
+                "total_retained": {"type": "integer", "description": "Candidates kept"},
+                "total_rejected": {"type": "integer", "description": "Signals filtered out"},
+                "tools_active": {"type": "array", "items": {"type": "string"}},
+                "tools_unavailable": {"type": "array", "items": {"type": "string"}},
+                "notes": _string("Run notes surfaced on the dashboard"),
+            },
+        },
+        "candidates": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "additionalProperties": False,
+                "required": list(_CANDIDATE_PROPERTIES),
+                "properties": _CANDIDATE_PROPERTIES,
+            },
+        },
+        "rejected": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "additionalProperties": False,
+                "required": ["topic", "reason"],
+                "properties": {
+                    "topic": _string("Rejected topic"),
+                    "reason": _string("off_category / brand_safety / duplicate / weak_signal / etc."),
+                },
+            },
+        },
+    },
+}
+
 JSON_SCHEMA = """
 {
   "run_date": "YYYY-MM-DD",
@@ -952,10 +1121,15 @@ JSON_SCHEMA = """
       "confidence": "high",
       "content_status": "new",
       "source_count": 3,
+      "source_urls": ["https://..."],
       "recommended_angle": "...",
       "why_now": "...",
       "primary_headline": "...",
       "next_steps": "...",
+      "integrity_flags": ["Association only — study cannot show causation"],
+      "trend_score_reason": "...",
+      "opportunity_score_reason": "...",
+      "discover_score_reason": "...",
       "notes": ""
     }
   ],
@@ -982,6 +1156,16 @@ Rules:
 - discover_score: integer 1–5
 - trend_strength_score and opportunity_score: integer 0–100
 - source_count: integer (count of source_evidence items, or estimate)
+- source_urls: the top 2–3 primary source URLs for the candidate, copied from the report's source
+  evidence. Full https:// URLs only — never bare domains, never invented links. Empty array if the
+  report has none.
+- integrity_flags: the ⚠️ editorial caveats the report already raised for that candidate
+  (association vs. causation, single-study claims, unverified press releases, relative risk without
+  absolute context). Copy them from the report; do not invent new ones. Empty array if none.
+- trend_score_reason / opportunity_score_reason / discover_score_reason: one short line each
+  explaining what drove that score, taken from the report's reasoning. These are shown to an editor
+  as the justification for the ranking, so be specific ("3 tier-1 outlets in 24h, Trends +22")
+  rather than generic ("strong signal").
 - tools_active and tools_unavailable: short lowercase names (e.g. "web_search", "google_news", "google_trends", "serpapi", "ahrefs"). Always list "google_news" and "google_trends" separately when SerpAPI pre-fetch data was present in the pipeline context.
 - Include ALL retained candidates and ALL rejected topics from the output
 
@@ -1019,9 +1203,18 @@ def generate_html(data: dict, today_str: str) -> str:
 CSV_HEADER = (
     "date_detected,priority_level,publish_timing,topic,primary_entity,"
     "signal_type,allowed_category,trend_strength_score,opportunity_score,"
-    "discover_score,urgency,confidence,content_status,source_count,"
-    "recommended_angle,why_now,primary_headline,next_steps,notes"
+    "discover_score,urgency,confidence,content_status,source_count,source_urls,"
+    "recommended_angle,why_now,primary_headline,next_steps,integrity_flags,"
+    "trend_score_reason,opportunity_score_reason,discover_score_reason,notes"
 )
+
+
+def _join_list(value) -> str:
+    """Array fields flatten to one CSV cell; the dashboard reads the array form
+    from extraction_<date>.json, so this is only for spreadsheet use."""
+    if isinstance(value, list):
+        return " | ".join(str(item) for item in value if str(item).strip())
+    return str(value or "")
 
 def generate_csv(data: dict) -> str:
     def esc(val):
@@ -1050,10 +1243,15 @@ def generate_csv(data: dict) -> str:
             esc(c.get("confidence", "")),
             esc(c.get("content_status", "")),
             esc(c.get("source_count", "")),
+            esc(_join_list(c.get("source_urls"))),
             esc(c.get("recommended_angle", "")),
             esc(c.get("why_now", "")),
             esc(c.get("primary_headline", "")),
             esc(c.get("next_steps", "")),
+            esc(_join_list(c.get("integrity_flags"))),
+            esc(c.get("trend_score_reason", "")),
+            esc(c.get("opportunity_score_reason", "")),
+            esc(c.get("discover_score_reason", "")),
             esc(c.get("notes", "")),
         ])
         rows.append(row)
@@ -1386,7 +1584,7 @@ def run_pipeline(send_email_flag: bool = False) -> None:
         log.info("SerpAPI signals not available — pipeline will use Ahrefs + WebSearch only.")
 
     # ── Step 1: Run the full pipeline ──────────────────────────────────────────
-    log.info("Step 1/4 — Running full pipeline (claude-sonnet-4-6)...")
+    log.info(f"Step 1/4 — Running full pipeline ({PIPELINE_MODEL})...")
     # Fetched once and reused for filter_recent_duplicates() below — both
     # need the same "recent dashboard topics" list, and OUTPUT_DIR doesn't
     # gain new dashboard CSVs between here and there within a single run.
@@ -1402,8 +1600,10 @@ def run_pipeline(send_email_flag: bool = False) -> None:
         pipeline_response = create_message_with_connection_fallback(
             client,
             label="Pipeline call",
-            model="claude-sonnet-4-6",
+            stream=True,
+            model=PIPELINE_MODEL,
             max_tokens=PIPELINE_MAX_TOKENS,
+            thinking={"type": "adaptive"},
             system=[{"type": "text", "text": system_prompt, "cache_control": SYSTEM_CACHE_CONTROL}],
             messages=[{"role": "user", "content": pipeline_prompt}],
         )
@@ -1416,8 +1616,10 @@ def run_pipeline(send_email_flag: bool = False) -> None:
             pipeline_response = create_message_with_connection_fallback(
                 client,
                 label="Pipeline call without SerpAPI context",
-                model="claude-sonnet-4-6",
+                stream=True,
+                model=PIPELINE_MODEL,
                 max_tokens=PIPELINE_MAX_TOKENS,
+                thinking={"type": "adaptive"},
                 system=[{"type": "text", "text": system_prompt, "cache_control": SYSTEM_CACHE_CONTROL}],
                 messages=[{"role": "user", "content": build_pipeline_prompt("", history_context)}],
             )
@@ -1425,10 +1627,12 @@ def run_pipeline(send_email_flag: bool = False) -> None:
             raise
     pipeline_output = extract_response_text(pipeline_response, label="Pipeline call")
     usage = pipeline_response.usage
+    run_costs = [usage_cost(PIPELINE_MODEL, usage)]
     log.info(
         f"Pipeline complete. Tokens in: {usage.input_tokens}, out: {usage.output_tokens}, "
         f"cache read: {getattr(usage, 'cache_read_input_tokens', 0)}, "
-        f"cache write: {getattr(usage, 'cache_creation_input_tokens', 0)}"
+        f"cache write: {getattr(usage, 'cache_creation_input_tokens', 0)}, "
+        f"est. cost: ${run_costs[0]['estimated_cost_usd']:.4f}"
     )
 
     # Write full markdown report
@@ -1437,17 +1641,36 @@ def run_pipeline(send_email_flag: bool = False) -> None:
     log.info(f"Full report → {report_path}")
 
     # ── Step 2: Extract structured JSON from the output ───────────────────────
-    log.info("Step 2/4 — Extracting structured data (claude-haiku-4-5-20251001)...")
-    extraction_response = create_message_with_connection_fallback(
-        client,
-        label="Extraction call",
-        model="claude-haiku-4-5-20251001",   # cheap + fast for extraction
-        max_tokens=EXTRACTION_MAX_TOKENS,
-        messages=[{
+    log.info(f"Step 2/4 — Extracting structured data ({EXTRACTION_MODEL})...")
+    extraction_kwargs = {
+        "model": EXTRACTION_MODEL,   # cheap + fast for extraction
+        "max_tokens": EXTRACTION_MAX_TOKENS,
+        "messages": [{
             "role": "user",
             "content": build_extraction_prompt(pipeline_output),
         }],
-    )
+    }
+    try:
+        extraction_response = create_message_with_connection_fallback(
+            client,
+            label="Extraction call",
+            output_config={"format": {"type": "json_schema", "schema": EXTRACTION_JSON_SCHEMA}},
+            **extraction_kwargs,
+        )
+    except Exception as e:
+        # A rejected schema must not take down the daily run: fall back to the
+        # prompted-JSON path below, which still has the parse-and-repair net.
+        if e.__class__.__name__ not in {"BadRequestError", "UnprocessableEntityError"}:
+            raise
+        log.warning(
+            f"Structured-output extraction rejected ({e}). "
+            "Falling back to prompted JSON + repair."
+        )
+        extraction_response = create_message_with_connection_fallback(
+            client,
+            label="Extraction call (unstructured fallback)",
+            **extraction_kwargs,
+        )
     raw_json = extract_response_text(extraction_response, label="Extraction call").strip()
     # Raw model text, kept for debugging only — it is usually wrapped in a
     # ```json fence, so it is NOT valid JSON and never was. The parsed,
@@ -1464,13 +1687,14 @@ def run_pipeline(send_email_flag: bool = False) -> None:
         repair_response = create_message_with_connection_fallback(
             client,
             label="Extraction JSON repair call",
-            model="claude-haiku-4-5-20251001",
+            model=EXTRACTION_MODEL,
             max_tokens=EXTRACTION_MAX_TOKENS,
             messages=[{
                 "role": "user",
                 "content": build_json_repair_prompt(raw_json),
             }],
         )
+        run_costs.append(usage_cost(EXTRACTION_MODEL, repair_response.usage))
         repaired_json = extract_response_text(repair_response, label="Extraction JSON repair call").strip()
         repaired_json_path = OUTPUT_DIR / f"repaired_extraction_{today_str}.txt"
         repaired_json_path.write_text(repaired_json, encoding="utf-8")
@@ -1485,8 +1709,14 @@ def run_pipeline(send_email_flag: bool = False) -> None:
             )
             raise SystemExit(1)
 
+    run_costs.append(usage_cost(EXTRACTION_MODEL, extraction_response.usage))
+
     # Ensure run_date is set
     data.setdefault("run_date", today_str)
+
+    total_cost = round(sum(call["estimated_cost_usd"] for call in run_costs), 4)
+    data["run_cost"] = {"total_usd": total_cost, "calls": run_costs}
+    log.info(f"Run cost estimate: ${total_cost:.4f} across {len(run_costs)} calls")
 
     # Drop candidates that closely match a topic from a recent run — see
     # filter_recent_duplicates() docstring for why this exists.

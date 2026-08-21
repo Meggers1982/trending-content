@@ -54,6 +54,33 @@ function priorityTone(level) {
   return `${level || ""}`.toUpperCase();
 }
 
+function scoreTitle(label, reason) {
+  const explanation = `${reason || ""}`.trim();
+  return explanation ? `${label}: ${explanation}` : label;
+}
+
+// The CSV flattens arrays to "a | b" while extraction_<date>.json keeps them as
+// arrays, and older runs have neither field — normalize all three to a list.
+function asList(value) {
+  if (Array.isArray(value)) return value.filter((item) => `${item}`.trim());
+  return `${value || ""}`
+    .split("|")
+    .map((item) => item.trim())
+    .filter(Boolean);
+}
+
+function isHttpUrl(value) {
+  return /^https?:\/\//i.test(`${value}`.trim());
+}
+
+function hostOf(url) {
+  try {
+    return new URL(url).hostname.replace(/^www\./, "");
+  } catch {
+    return url;
+  }
+}
+
 export default function PriorityBoard({ candidates = [], recurrence = {} }) {
   const [filterText, setFilterText] = useState("");
   const [priority, setPriority] = useState("all");
@@ -125,7 +152,12 @@ export default function PriorityBoard({ candidates = [], recurrence = {} }) {
           const key = `${candidate.topic}-${index}`;
           const isOpen = expanded.has(key);
           const days = recurrence[candidate.topic] || 1;
-          const flagged = `${candidate.notes || ""}`.trim();
+          const notes = `${candidate.notes || ""}`.trim();
+          // Prefer the structured field; fall back to notes for runs extracted
+          // before integrity_flags existed.
+          const flags = asList(candidate.integrity_flags);
+          const flagged = flags.length ? flags : notes ? [notes] : [];
+          const sources = asList(candidate.source_urls).filter(isHttpUrl);
           return (
             <article
               key={key}
@@ -152,19 +184,28 @@ export default function PriorityBoard({ candidates = [], recurrence = {} }) {
                         day {days}
                       </span>
                     ) : null}
-                    {flagged ? <span className="badge risk" title={flagged}>⚠ flagged</span> : null}
+                    {flagged.length ? (
+                      <span className="badge risk" title={flagged.join(" · ")}>
+                        ⚠ {flagged.length > 1 ? `${flagged.length} flags` : "flagged"}
+                      </span>
+                    ) : null}
                   </span>
                 </span>
+                {/* Each score's tooltip carries the model's own reason for it,
+                    so "why did this rank here" is answerable in place. */}
                 <span className="boardCardScores">
-                  <span title="Trend strength">
+                  <span title={scoreTitle("Trend strength", candidate.trend_score_reason)}>
                     <b>{candidate.trend_strength_score || "—"}</b>
                     {scoreBar(candidate.trend_strength_score, "red")}
                   </span>
-                  <span title="Opportunity">
+                  <span title={scoreTitle("Opportunity", candidate.opportunity_score_reason)}>
                     <b>{candidate.opportunity_score || "—"}</b>
                     {scoreBar(candidate.opportunity_score, "blue")}
                   </span>
-                  <span className="discover" title="Discover score (1–5)">
+                  <span
+                    className="discover"
+                    title={scoreTitle("Discover score (1–5)", candidate.discover_score_reason)}
+                  >
                     D{candidate.discover_score || "—"}
                   </span>
                 </span>
@@ -181,10 +222,31 @@ export default function PriorityBoard({ candidates = [], recurrence = {} }) {
                       </div>
                     );
                   })}
-                  {flagged ? (
+                  {flagged.length ? (
                     <div className="integrityNote">
-                      <span className="detailLabel">⚠️ Integrity note</span>
-                      <p className="detailBody">{flagged}</p>
+                      <span className="detailLabel">
+                        ⚠️ Integrity {flagged.length > 1 ? "notes" : "note"}
+                      </span>
+                      {flagged.map((flag, flagIndex) => (
+                        <p className="detailBody" key={`${flag}-${flagIndex}`}>{flag}</p>
+                      ))}
+                    </div>
+                  ) : null}
+                  {sources.length ? (
+                    <div className="detailField">
+                      <span className="detailLabel">Sources</span>
+                      <div className="sourceLinks">
+                        {sources.map((url, urlIndex) => (
+                          <a
+                            key={`${url}-${urlIndex}`}
+                            href={url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {hostOf(url)}
+                          </a>
+                        ))}
+                      </div>
                     </div>
                   ) : null}
                   <div className="detailActions">
@@ -196,7 +258,11 @@ export default function PriorityBoard({ candidates = [], recurrence = {} }) {
                       {copied === key ? "Copied!" : "Copy brief"}
                     </button>
                     <span className="quiet">
-                      {candidate.source_count ? `${candidate.source_count} sources` : "source count unavailable"}
+                      {sources.length
+                        ? `${sources.length} linked`
+                        : candidate.source_count
+                          ? `${candidate.source_count} sources, no URLs recorded`
+                          : "source count unavailable"}
                     </span>
                   </div>
                 </div>

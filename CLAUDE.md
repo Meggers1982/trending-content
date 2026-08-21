@@ -1187,6 +1187,53 @@ in `run_pipeline.py` and the underlying `serp_signals_*.md` collection are untou
 the dashboard's *rendering* of that fixed-category depth data was removed, not the collection
 itself (still feeds the "Rising Related Searches" aggregate, which is derived from it).
 
+### Extraction is schema-enforced; `source_urls` and `integrity_flags` are now real (2026-08-21)
+
+The extraction step asked for JSON in prose, stripped fences, and on a parse failure spent a second
+Haiku call asking the model to repair its own output. It now passes `output_config={"format":
+{"type": "json_schema", "schema": EXTRACTION_JSON_SCHEMA}}`, so the response is schema-valid by
+construction. The parse-and-repair path is still there as a fallback: if the API rejects the schema
+(`BadRequestError`/`UnprocessableEntityError`) the call is retried without `output_config`, because
+a schema problem must never take down the daily run.
+
+**Structured outputs reject `minimum`/`maximum` on integer properties** — `output_config.format.
+schema: For 'integer' type, property 'minimum' is not supported`, a 400. Numeric ranges live in each
+property's `description` instead. Caught by validating the schema against the live API; without that
+check every run would have silently fallen through to the unstructured fallback forever.
+
+The schema is the single source of truth for the candidate fields, and `CSV_HEADER` mirrors it
+exactly (verified both directions). Three fields are new and close gaps this document had already
+described as done in the Dashboard Schema section:
+- `source_urls` — rendered as clickable host chips on the expanded board row.
+- `integrity_flags` — a real array, so `_integrity_flag_count()` and its JS twin in `lib/runs.js`
+  no longer have to string-match "verify"/"flag" in the notes. Both keep the old heuristic as a
+  fallback for runs extracted before the field existed.
+- `trend_score_reason` / `opportunity_score_reason` / `discover_score_reason` — one line each,
+  surfaced as the score badge's `title` so "why did this rank here" is answerable in place.
+
+Array fields flatten to `a | b` in the CSV (`_join_list()`); the dashboard reads the array form from
+`extraction_<date>.json`, and `PriorityBoard`'s `asList()` accepts both plus the absent-field case.
+
+### Pipeline runs on Sonnet 5 with adaptive thinking, streamed (2026-08-21)
+
+`PIPELINE_MODEL = "claude-sonnet-5"` with `thinking={"type": "adaptive"}`; extraction stays on Haiku
+(`claude-haiku-4-5` — the old ID carried a date suffix that current IDs don't use).
+
+Two things this required, both of which would have broken the daily run:
+
+- **`extract_response_text()` assumed `content[0]` was the text block.** With thinking enabled a
+  response can open with a thinking block, and the old code raised `SystemExit(1)` on any non-text
+  block at position 0 — i.e. it would have failed every successful response. It now scans for the
+  first text block, and handles `stop_reason == "refusal"` explicitly.
+- **The pipeline call is streamed** (`create_message_with_connection_fallback(..., stream=True)` →
+  `client.messages.stream(...).get_final_message()`). With adaptive thinking and a 20k output budget
+  a single response can outrun the non-streaming HTTP timeout, which would surface as a spurious
+  `APITimeoutError` mid-run.
+
+`usage_cost()` turns each call's usage into an estimated USD cost (cache reads ~0.1x input, writes
+~1.25x), stored on the run as `run_cost` and shown in the dashboard header. It was previously logged
+to stdout and discarded.
+
 ### The run's own numbers were unreadable on disk (fixed 2026-08-21)
 
 `run_pipeline.py` wrote `raw_extraction_<date>.json` straight from the model — still wrapped in a

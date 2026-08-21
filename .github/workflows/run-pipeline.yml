@@ -17,6 +17,15 @@ on:
 permissions:
   contents: write
 
+# The outputs/.pipeline.lock file stops a locally-triggered run from overlapping
+# the scheduled one, but it can't stop a manual workflow_dispatch racing the cron
+# inside Actions — both would commit the same day's artifacts. Queue instead of
+# cancelling: a run that is already part-way through has usually paid for the
+# expensive API call.
+concurrency:
+  group: run-pipeline
+  cancel-in-progress: false
+
 jobs:
   run-pipeline:
     runs-on: ubuntu-latest
@@ -48,10 +57,14 @@ jobs:
 
       - name: Run radar prefetch
         if: ${{ inputs.mode == 'prefetch' }}
+        timeout-minutes: 10
         run: python run_pipeline.py --prefetch-only
 
+      # Healthy runs finish well inside this; the cap makes a hung API call fail
+      # fast rather than sit until the job-level timeout.
       - name: Run full pipeline
         if: ${{ inputs.mode == 'full' || github.event_name == 'schedule' }}
+        timeout-minutes: 20
         run: python run_pipeline.py
 
       - name: Commit generated artifacts
@@ -66,3 +79,24 @@ jobs:
             git pull --rebase
             git push
           fi
+
+      # Without this a failed daily run is only visible as a red mark in the
+      # Actions tab, so the dashboard silently serves yesterday's board.
+      - name: Notify on failure
+        if: failure()
+        run: |
+          if [ -z "$RESEND_API_KEY" ] || [ -z "$EMAIL_RECIPIENT" ] || [ -z "$EMAIL_SENDER" ]; then
+            echo "Resend not configured — skipping failure email."
+            exit 0
+          fi
+          RUN_URL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          curl -sS -X POST https://api.resend.com/emails \
+            -H "Authorization: Bearer $RESEND_API_KEY" \
+            -H "Content-Type: application/json" \
+            -d "$(jq -n \
+                  --arg from "$EMAIL_SENDER" \
+                  --arg to "$EMAIL_RECIPIENT" \
+                  --arg url "$RUN_URL" \
+                  '{from: $from, to: [$to],
+                    subject: "Trending Content pipeline failed",
+                    html: ("The daily run did not complete. <a href=\"" + $url + "\">View the logs</a>.")}')"

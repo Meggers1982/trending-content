@@ -376,6 +376,7 @@ export default async function Home({ searchParams }) {
                 {summary.toolsUnavailable.length
                   ? ` · ${summary.toolsUnavailable.length} tool${summary.toolsUnavailable.length > 1 ? "s" : ""} unavailable`
                   : ""}
+                {latest.cost?.total_usd ? ` · $${latest.cost.total_usd.toFixed(2)} to run` : ""}
               </em>
             ) : null}
           </div>

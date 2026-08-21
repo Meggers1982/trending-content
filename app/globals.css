@@ -477,6 +477,17 @@ button.button:disabled {
   gap: 3px;
 }
 .detailActions { display: flex; align-items: center; gap: 12px; }
+.sourceLinks { display: flex; flex-wrap: wrap; gap: 6px; }
+.sourceLinks a {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 3px 10px;
+  background: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--blue);
+}
+.sourceLinks a:hover { border-color: var(--blue); }
 
 .rejectedPanel {
   margin-top: 18px;

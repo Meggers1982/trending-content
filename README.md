@@ -45,6 +45,9 @@ Under it:
 - **Generated runs** — click any past date to load that whole run into the page
   (`/?run=YYYY-MM-DD`); the standalone HTML file is still there as a downloadable snapshot.
 
+Expanded rows also carry the source links, any ⚠️ integrity notes, and a one-line reason behind each
+score (hover the score to see it). The run header shows what the run cost to produce.
+
 Each run's numbers come from `outputs/daily_newsroom_dashboard/extraction_<date>.json`, the parsed
 run data. `raw_extraction_<date>.txt` beside it is the raw model text kept for debugging — it is
 fence-wrapped and was never valid JSON despite previously carrying a `.json` extension.
