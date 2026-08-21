@@ -554,6 +554,63 @@ def create_message_with_connection_fallback(client, *, label: str, stream: bool 
         return _create_message(client, stream=stream, **kwargs)
 
 
+MAX_PIPELINE_CONTINUATIONS = 3
+
+
+def complete_truncated_response(client, response, *, label: str, messages: list, **kwargs):
+    """Concatenate continuations until the model stops hitting max_tokens.
+
+    Without this, a report that overruns PIPELINE_MAX_TOKENS ships silently
+    truncated: extraction still succeeds on the partial text, so the run looks
+    healthy while quietly dropping whatever candidates came after the cutoff.
+
+    The continuation turn ends with a *user* message, not an assistant prefill
+    (which Sonnet 5 rejects), and echoes the previous turn's content blocks back
+    unchanged — thinking blocks included, as required when continuing on the
+    same model.
+
+    Returns (full_text, [usage, ...]) for the continuation calls only; the
+    caller already has the first response's usage.
+    """
+    text = extract_response_text(response, label=label)
+    usages = []
+    history = list(messages)
+
+    for attempt in range(1, MAX_PIPELINE_CONTINUATIONS + 1):
+        if getattr(response, "stop_reason", None) != "max_tokens":
+            return text, usages
+        log.warning(
+            f"{label} hit max_tokens — requesting continuation "
+            f"{attempt}/{MAX_PIPELINE_CONTINUATIONS}..."
+        )
+        history = history + [
+            {"role": "assistant", "content": response.content},
+            {
+                "role": "user",
+                "content": (
+                    "Continue exactly where you left off. Do not repeat any text you "
+                    "have already written, and do not restate the preceding section."
+                ),
+            },
+        ]
+        response = create_message_with_connection_fallback(
+            client,
+            label=f"{label} continuation {attempt}",
+            stream=True,
+            messages=history,
+            **kwargs,
+        )
+        usages.append(response.usage)
+        text += extract_response_text(response, label=f"{label} continuation {attempt}")
+
+    if getattr(response, "stop_reason", None) == "max_tokens":
+        log.error(
+            f"{label} still truncated after {MAX_PIPELINE_CONTINUATIONS} continuations. "
+            "The report is incomplete — candidates after the cutoff are missing."
+        )
+    return text, usages
+
+
 def extract_response_text(response, *, label: str) -> str:
     """
     Safely pull the text out of a Claude API response.
@@ -1596,16 +1653,20 @@ def run_pipeline(send_email_flag: bool = False) -> None:
         f"Prompt sizes — system: {len(system_prompt):,} chars, "
         f"user: {len(pipeline_prompt):,} chars"
     )
+    pipeline_kwargs = {
+        "model": PIPELINE_MODEL,
+        "max_tokens": PIPELINE_MAX_TOKENS,
+        "thinking": {"type": "adaptive"},
+        "system": [{"type": "text", "text": system_prompt, "cache_control": SYSTEM_CACHE_CONTROL}],
+    }
+    pipeline_messages = [{"role": "user", "content": pipeline_prompt}]
     try:
         pipeline_response = create_message_with_connection_fallback(
             client,
             label="Pipeline call",
             stream=True,
-            model=PIPELINE_MODEL,
-            max_tokens=PIPELINE_MAX_TOKENS,
-            thinking={"type": "adaptive"},
-            system=[{"type": "text", "text": system_prompt, "cache_control": SYSTEM_CACHE_CONTROL}],
-            messages=[{"role": "user", "content": pipeline_prompt}],
+            messages=pipeline_messages,
+            **pipeline_kwargs,
         )
     except Exception as e:
         if serp_context and e.__class__.__name__ in {"APIConnectionError", "APITimeoutError"}:
@@ -1613,21 +1674,29 @@ def run_pipeline(send_email_flag: bool = False) -> None:
                 "Pipeline call still failed with SerpAPI context. "
                 "Retrying once with the cached SerpAPI file omitted from the prompt."
             )
+            pipeline_messages = [
+                {"role": "user", "content": build_pipeline_prompt("", history_context)}
+            ]
             pipeline_response = create_message_with_connection_fallback(
                 client,
                 label="Pipeline call without SerpAPI context",
                 stream=True,
-                model=PIPELINE_MODEL,
-                max_tokens=PIPELINE_MAX_TOKENS,
-                thinking={"type": "adaptive"},
-                system=[{"type": "text", "text": system_prompt, "cache_control": SYSTEM_CACHE_CONTROL}],
-                messages=[{"role": "user", "content": build_pipeline_prompt("", history_context)}],
+                messages=pipeline_messages,
+                **pipeline_kwargs,
             )
         else:
             raise
-    pipeline_output = extract_response_text(pipeline_response, label="Pipeline call")
+
+    pipeline_output, continuation_usages = complete_truncated_response(
+        client,
+        pipeline_response,
+        label="Pipeline call",
+        messages=pipeline_messages,
+        **pipeline_kwargs,
+    )
     usage = pipeline_response.usage
     run_costs = [usage_cost(PIPELINE_MODEL, usage)]
+    run_costs.extend(usage_cost(PIPELINE_MODEL, extra) for extra in continuation_usages)
     log.info(
         f"Pipeline complete. Tokens in: {usage.input_tokens}, out: {usage.output_tokens}, "
         f"cache read: {getattr(usage, 'cache_read_input_tokens', 0)}, "
@@ -1670,6 +1739,11 @@ def run_pipeline(send_email_flag: bool = False) -> None:
             client,
             label="Extraction call (unstructured fallback)",
             **extraction_kwargs,
+        )
+    if getattr(extraction_response, "stop_reason", None) == "max_tokens":
+        log.warning(
+            f"Extraction hit max_tokens ({EXTRACTION_MAX_TOKENS}) — the JSON is likely "
+            "truncated and candidates may be missing. Consider raising EXTRACTION_MAX_TOKENS."
         )
     raw_json = extract_response_text(extraction_response, label="Extraction call").strip()
     # Raw model text, kept for debugging only — it is usually wrapped in a
