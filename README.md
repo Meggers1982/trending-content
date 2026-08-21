@@ -30,10 +30,10 @@ Locally, those controls run Python directly. In Vercel, they trigger the GitHub 
 If `RUN_CONTROL_TOKEN` is set in the environment, the run-trigger endpoint (`POST /api/run`) requires that
 token in the dashboard's "Run token" field. See `VERCEL_DEPLOY.md` for why this matters once deployed.
 
-Headlines in the dashboard's "Google News Radar" panel link out to the original article. The
-URL comes from the `URL:` line the pipeline now writes under each headline in
-`outputs/daily_newsroom_dashboard/serp_signals_*.md`; signal files generated before that change
-have no URLs, so their headlines stay plain text until the next run.
+Headlines in the dashboard's "Google News Radar" panel link out to the original article, using
+the `Link:` line the pipeline writes under each headline in
+`outputs/daily_newsroom_dashboard/serp_signals_*.md`. Signal files generated before that line
+existed have no URLs, so their headlines stay plain text until the next run.
 
 ## Ad-hoc Trend Scanner
 

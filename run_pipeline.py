@@ -473,18 +473,14 @@ def build_serp_context() -> str:
         article_lines = []
         for a in news_articles[:MAX_NEWS_CONTEXT_ITEMS]:   # cap to control context size
             query_label = a.get("query", "").replace(" when:7d", "")
-            entry = (
+            # The Link: line feeds two things: the markdown source links Claude
+            # writes into the report, and the clickable headlines in the
+            # dashboard's Google News Radar panel (parseSignalRadar in page.jsx).
+            article_lines.append(
                 f"  - ({query_label}) [{a['source']}] {a['date']} — {a['title']}\n"
                 f"    {a['snippet']}\n"
                 f"    Link: {a.get('link') or 'not available'}"
             )
-            # The article URL is what makes the headline clickable in the
-            # dashboard's Google News Radar panel, and gives the model real
-            # source links to carry into briefs instead of reconstructing them.
-            link = (a.get("link") or "").strip()
-            if link.startswith(("http://", "https://")):
-                entry += f"\n    URL: {link}"
-            article_lines.append(entry)
         sections.append(
             f"## Google News Radar — Recent Health Topics "
             f"({len(news_articles)} unique across {len(GOOGLE_NEWS_QUERIES)} queries; "

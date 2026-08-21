@@ -222,10 +222,11 @@ function parseSignalRadar(text) {
       newsRows.push({ query: news[1], source: news[2], date: news[3], title: news[4], url: "" });
       continue;
     }
-    // The article URL follows its headline on an indented "URL: ..." line
+    // The article URL follows its headline on an indented "Link: ..." line
     // (see build_serp_context() in run_pipeline.py). Signal files written
-    // before that line existed simply leave the headline unlinked.
-    const url = line.match(/^\s+URL:\s+(https?:\/\/\S+)/);
+    // before that line existed — and articles SerpAPI returned without a link,
+    // which write "Link: not available" — leave the headline unlinked.
+    const url = line.match(/^\s+Link:\s+(https?:\/\/\S+)/);
     if (url && newsRows.length) {
       newsRows[newsRows.length - 1].url = url[1];
     }

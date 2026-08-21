@@ -1187,20 +1187,21 @@ in `run_pipeline.py` and the underlying `serp_signals_*.md` collection are untou
 the dashboard's *rendering* of that fixed-category depth data was removed, not the collection
 itself (still feeds the "Rising Related Searches" aggregate, which is derived from it).
 
-### Google News Radar headlines were never clickable (fixed 2026-08-21)
+### Google News Radar panel headlines were never clickable (fixed 2026-08-21)
 
-`fetch_google_news()` had always captured each article's `link`, but `build_serp_context()`
-dropped it when formatting the `## Google News Radar` block — so the URL existed nowhere in
-`serp_signals_*.md`, and the dashboard panel (`RadarDashboard` in `app/page.jsx`) rendered
-headlines as plain `<strong>` text because it had nothing to link to. Fixed by emitting an
-indented `    URL: <link>` line under each headline (only for `http(s)://` links) and having
-`parseSignalRadar()` attach it to the preceding headline row, rendered as an `<a target="_blank"
-rel="noopener noreferrer">`. The `http(s)://` prefix check is what keeps a scraped
+The `Link:` line added to the radar block the day before (see the commit that carried news URLs
+through to Claude's report) made headlines clickable in the *report* sections, since Claude cites
+them as markdown links there. The dashboard's own "Google News Radar" panel still rendered every
+headline as plain `<strong>` text — `parseSignalRadar()` in `app/page.jsx` only matched the
+headline line and ignored the `Link:` line under it.
+
+`parseSignalRadar()` now attaches a `Link: <url>` line to the headline row above it, and
+`RadarDashboard` renders the title as `<a target="_blank" rel="noopener noreferrer">` when a URL
+is present. The match requires an `http(s)://` prefix, which is what keeps a scraped
 `javascript:`-style URL out of an `href` — same untrusted-signal-text principle as the escaping
-rules above. Headlines without a parsed URL still render as plain text, so pre-existing signal
-files (which have no URL lines and can't be backfilled — the links were never stored) degrade
-gracefully rather than breaking. Side benefit: the model now sees real article URLs in the radar
-block, instead of having to reconstruct them for Skill 10's mandatory source-link rule.
+rules above — and also makes the `Link: not available` placeholder fall through to plain text.
+Pre-existing signal files have no `Link:` lines at all and can't be backfilled (the URLs were
+never stored), so their headlines stay unlinked rather than breaking the panel.
 
 ### Recent-run memory: how "check deferred topics" / "archive run to history" actually work
 
