@@ -36,10 +36,23 @@ jobs:
       - name: Install Python dependencies
         run: pip install -r requirements.txt
 
+      # topic_id goes through the environment rather than being interpolated
+      # into the script: `${{ github.event.inputs.topic_id }}` is substituted
+      # before the shell runs, so a dispatch value like `"; rm -rf . #` would
+      # execute as a command. Ids created through the dashboard are slugs
+      # ([a-z0-9-] only, see slugifyTopic) and the API rejects unknown ones, but
+      # the Actions "Run workflow" form accepts free text.
       - name: Run tracked topics
+        # github.event.inputs rather than the inputs context: this workflow also
+        # runs on a schedule, where `inputs` is not populated. On a scheduled
+        # run github.event has no inputs key, so this is empty and every tracked
+        # topic is scanned. Interpolating here is safe — env values are set by
+        # the runner, not spliced into the script text.
+        env:
+          TOPIC_ID: ${{ github.event.inputs.topic_id }}
         run: |
-          if [ -n "${{ github.event.inputs.topic_id }}" ]; then
-            python run_tracked_topics.py --topic-id "${{ github.event.inputs.topic_id }}"
+          if [ -n "$TOPIC_ID" ]; then
+            python run_tracked_topics.py --topic-id "$TOPIC_ID"
           else
             python run_tracked_topics.py
           fi

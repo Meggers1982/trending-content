@@ -1264,12 +1264,15 @@ on-demand counterpart, taking `topic` / `profile` / `geo` as `workflow_dispatch`
 now dispatches it whenever `shouldUseGithubActions()` is true, exactly as `/api/run` and
 tracked-topic re-scans already did.
 
-**The topic reaches the shell through `env:`, not `${{ inputs.topic }}`.** Interpolating a
-dispatch input directly into a `run:` script pastes it into the shell before execution, so a topic
-like `"; rm -rf . #` would run as a command. `run-tracked-topics.yml` still interpolates its
-`topic_id` that way; it is lower risk (dispatch requires repo write access, and the value is an id
-rather than free text) but it is the same pattern and worth fixing if that workflow ever takes
-richer input.
+**Dispatch inputs reach the shell through `env:`, never `${{ inputs.x }}` inside `run:`.**
+Interpolating an input into a `run:` script substitutes it into the script text before the shell
+executes, so a value like `"; rm -rf . #` runs as its own command — verified by executing both
+forms: the interpolated one ran the injected command, the env one passed the string through as a
+single argv element. `run-tracked-topics.yml` was fixed the same way (2026-08-21); it uses
+`github.event.inputs.topic_id` rather than the `inputs` context because that workflow also runs on
+a schedule, where `inputs` is not populated. Interpolating inside `env:` is safe — the runner sets
+the variable rather than splicing it into the script. An audit of every workflow found no other
+instance; re-run it before adding a `run:` step that touches an input.
 
 Two other details: input validation now runs *before* the dispatch branch, so a bad topic gets a
 400 rather than being handed to Actions; and the workflow shares a `concurrency: trend-radar` group
