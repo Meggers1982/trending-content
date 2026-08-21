@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "prefetch": "python run_pipeline.py --prefetch-only",
-    "pipeline": "python run_pipeline.py --no-email"
+    "pipeline": "python run_pipeline.py"
   },
   "dependencies": {
     "next": "^15.3.3",
