@@ -219,7 +219,15 @@ function parseSignalRadar(text) {
   for (const line of newsLines) {
     const news = line.match(/^\s+-\s+\((.+?)\)\s+\[(.+?)\]\s+(.+?)\s+—\s+(.+)/);
     if (news) {
-      newsRows.push({ query: news[1], source: news[2], date: news[3], title: news[4] });
+      newsRows.push({ query: news[1], source: news[2], date: news[3], title: news[4], url: "" });
+      continue;
+    }
+    // The article URL follows its headline on an indented "URL: ..." line
+    // (see build_serp_context() in run_pipeline.py). Signal files written
+    // before that line existed simply leave the headline unlinked.
+    const url = line.match(/^\s+URL:\s+(https?:\/\/\S+)/);
+    if (url && newsRows.length) {
+      newsRows[newsRows.length - 1].url = url[1];
     }
   }
 
@@ -276,7 +284,13 @@ function RadarDashboard({ text }) {
           {newsRows.map((item, index) => (
             <div className="newsItem" key={`${item.title}-${index}`}>
               <span>{item.query}</span>
-              <strong>{item.title}</strong>
+              <strong>
+                {item.url ? (
+                  <a href={item.url} target="_blank" rel="noopener noreferrer">{item.title}</a>
+                ) : (
+                  item.title
+                )}
+              </strong>
               <p>{item.source} · {item.date}</p>
             </div>
           ))}

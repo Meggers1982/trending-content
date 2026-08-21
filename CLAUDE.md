@@ -1187,6 +1187,21 @@ in `run_pipeline.py` and the underlying `serp_signals_*.md` collection are untou
 the dashboard's *rendering* of that fixed-category depth data was removed, not the collection
 itself (still feeds the "Rising Related Searches" aggregate, which is derived from it).
 
+### Google News Radar headlines were never clickable (fixed 2026-08-21)
+
+`fetch_google_news()` had always captured each article's `link`, but `build_serp_context()`
+dropped it when formatting the `## Google News Radar` block — so the URL existed nowhere in
+`serp_signals_*.md`, and the dashboard panel (`RadarDashboard` in `app/page.jsx`) rendered
+headlines as plain `<strong>` text because it had nothing to link to. Fixed by emitting an
+indented `    URL: <link>` line under each headline (only for `http(s)://` links) and having
+`parseSignalRadar()` attach it to the preceding headline row, rendered as an `<a target="_blank"
+rel="noopener noreferrer">`. The `http(s)://` prefix check is what keeps a scraped
+`javascript:`-style URL out of an `href` — same untrusted-signal-text principle as the escaping
+rules above. Headlines without a parsed URL still render as plain text, so pre-existing signal
+files (which have no URL lines and can't be backfilled — the links were never stored) degrade
+gracefully rather than breaking. Side benefit: the model now sees real article URLs in the radar
+block, instead of having to reconstruct them for Skill 10's mandatory source-link rule.
+
 ### Recent-run memory: how "check deferred topics" / "archive run to history" actually work
 
 For a while (until 2026-07-12), `data/run_history.yaml` and `data/deferred_topics.yaml` were purely documentation — Skill 01 Step 2 and Daily Run Step 9 above described steps the model was never actually given data for, because `run_pipeline.py` never read or wrote either file. `build_system_prompt()` only loaded `CLAUDE.md` + `configs/*.yaml` + skill files. Combined with `GOOGLE_NEWS_QUERIES` using a rolling `when:7d` window, this caused the same stories to be re-surfaced and re-scored as `content_status: new` for several consecutive days (confirmed 2026-07-12: 6+ of 9 candidates were repeats of the prior 1–2 days). `run_history.yaml`'s original seed content (references to `WebSearch`/`WebFetch`/`COMPOSIO_SEARCH_TRENDS`) was leftover from before this automated harness existed and had had exactly one commit (the initial one) the entire time.
