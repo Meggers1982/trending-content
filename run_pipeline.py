@@ -156,7 +156,12 @@ GOOGLE_TRENDS_KEYWORDS = [
 
 MAX_NEWS_RESULTS_PER_QUERY = 12
 MAX_NEWS_CONTEXT_ITEMS = 60
-PIPELINE_MAX_TOKENS = 20000
+# Headroom, not a reservation — you are billed for tokens generated, not for the
+# ceiling. Sonnet 4.6 reports ran 10.4k-14.1k tokens; Sonnet 5's first run spent
+# 11.8k on a 6-candidate signal-less day (~26% more per candidate), which puts a
+# normal 9-candidate day close to 20k. Adaptive thinking also counts against
+# this budget. The call is streamed, so a larger ceiling costs nothing.
+PIPELINE_MAX_TOKENS = 32000
 EXTRACTION_MAX_TOKENS = 12000
 
 # The 12-stage editorial pipeline is a judgment task, so it runs on Sonnet with

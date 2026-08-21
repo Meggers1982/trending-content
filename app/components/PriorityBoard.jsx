@@ -40,10 +40,13 @@ function compareValues(a, b, key) {
 }
 
 function briefText(candidate) {
-  const lines = [candidate.primary_headline || candidate.topic];
+  const title = candidate.primary_headline || candidate.topic;
+  const lines = [title];
   for (const field of DETAIL_FIELDS) {
     const value = `${candidate[field.key] || ""}`.trim();
-    if (value) lines.push(`${field.label}: ${value}`);
+    // The title line already carries the headline; don't paste it twice.
+    if (!value || value === title) continue;
+    lines.push(`${field.label}: ${value}`);
   }
   const notes = `${candidate.notes || ""}`.trim();
   if (notes) lines.push(`Notes: ${notes}`);
