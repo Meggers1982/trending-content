@@ -309,6 +309,12 @@ button.button:disabled {
   color: #9f1d20 !important;
   font-weight: 700;
 }
+/* Queued-successfully is not a failure — .runMessage is styled as an error. */
+.runMessage.ok {
+  border-color: #a7d8bb;
+  background: #f0faf4;
+  color: #14663c !important;
+}
 .logBox {
   margin-top: 12px;
   max-height: 190px;

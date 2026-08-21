@@ -2,61 +2,18 @@ import { spawn } from "node:child_process";
 import { NextResponse } from "next/server";
 import { checkRunToken } from "@/lib/auth";
 import { explainRunError } from "@/lib/error-messages";
+import { shouldUseGithubActions, triggerGithubWorkflow } from "@/lib/github-dispatch";
 import { appendLog, finishJob, pipelineJob, resetJob } from "@/lib/job-state";
 
 export const dynamic = "force-dynamic";
 
 const ROOT = process.cwd();
-const REPO = process.env.GITHUB_REPOSITORY || "Meggers1982/trending-content";
 const WORKFLOW_ID = process.env.GITHUB_PIPELINE_WORKFLOW || "run-pipeline.yml";
 const PYTHON_BIN = process.env.PYTHON_BIN || "python3";
 
 function commandForMode(mode) {
   if (mode === "prefetch") return ["run_pipeline.py", "--prefetch-only"];
   return ["run_pipeline.py"];
-}
-
-function shouldUseGithubActions() {
-  return Boolean(process.env.VERCEL || process.env.GITHUB_PIPELINE_TOKEN);
-}
-
-async function triggerGithubWorkflow(mode) {
-  const token = process.env.GITHUB_PIPELINE_TOKEN;
-  if (!token) {
-    return {
-      ok: false,
-      status: 500,
-      message: "GITHUB_PIPELINE_TOKEN is not configured in Vercel."
-    };
-  }
-
-  const response = await fetch(
-    `https://api.github.com/repos/${REPO}/actions/workflows/${WORKFLOW_ID}/dispatches`,
-    {
-      method: "POST",
-      headers: {
-        accept: "application/vnd.github+json",
-        authorization: `Bearer ${token}`,
-        "content-type": "application/json",
-        "x-github-api-version": "2022-11-28"
-      },
-      body: JSON.stringify({
-        ref: process.env.GITHUB_PIPELINE_REF || "main",
-        inputs: { mode }
-      })
-    }
-  );
-
-  if (!response.ok) {
-    const detail = await response.text();
-    return {
-      ok: false,
-      status: response.status,
-      message: `GitHub workflow dispatch failed: ${detail}`
-    };
-  }
-
-  return { ok: true };
 }
 
 export async function GET() {
@@ -80,7 +37,7 @@ export async function POST(request) {
 
   if (shouldUseGithubActions()) {
     appendLog(`Triggering GitHub Actions workflow for ${mode} run...`);
-    const trigger = await triggerGithubWorkflow(mode);
+    const trigger = await triggerGithubWorkflow(WORKFLOW_ID, { mode });
     if (!trigger.ok) {
       appendLog(trigger.message);
       const friendly = explainRunError(trigger.message, mode);

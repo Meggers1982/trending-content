@@ -94,9 +94,10 @@ Each of the other 7 profiles has its own weekly scheduled workflow too
 (and push) at the same time. All of them show up individually in the GitHub Actions tab and
 can be triggered manually from there ("Run workflow") in addition to their schedule.
 
-This only works where the request is actually handled — i.e. locally or on a self-hosted server
-with a `SERPAPI_API_KEY` set. It's not available when the app is deployed to Vercel (`POST /api/radar`
-returns a 501 there), since there's no GitHub Actions equivalent wired up for ad-hoc scans.
+Locally the Scan button runs Python directly. Deployed, it dispatches
+`.github/workflows/run-radar.yml` — a generic, on-demand counterpart to the per-profile workflows
+that accepts any topic/profile/geo — which commits its results back and triggers a fresh deploy.
+Either way you need a `SERPAPI_API_KEY`: locally in `.env`, deployed as a repo secret.
 
 ## Vercel
 

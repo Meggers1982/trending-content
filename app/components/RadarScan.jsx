@@ -26,6 +26,7 @@ export default function RadarScan() {
   const [job, setJob] = useState(null);
   const [recentScans, setRecentScans] = useState([]);
   const [message, setMessage] = useState("");
+  const [messageTone, setMessageTone] = useState("error");
   const [topic, setTopic] = useState("");
   const [geo, setGeo] = useState("US");
   const [profile, setProfile] = useState("auto");
@@ -48,6 +49,7 @@ export default function RadarScan() {
     // can edit, so a value captured at mount could be stale.
     const token = readRunToken();
     setMessage("");
+    setMessageTone("error");
     setTrackMessage("");
     setViewedScan(null);
     setLastScanParams({ topic, profile, geo });
@@ -62,6 +64,14 @@ export default function RadarScan() {
     const data = await response.json();
     if (!response.ok) {
       setMessage(data.message || "Could not start the scan.");
+      return;
+    }
+    // Deployed, the scan runs as a GitHub Actions workflow: there is no local
+    // job to poll, so report the queue instead of clearing the panel.
+    if (data.dispatched) {
+      setMessageTone("ok");
+      setMessage(data.message || "Scan queued in GitHub Actions.");
+      return;
     }
     setJob(data.job);
   }
@@ -146,13 +156,16 @@ export default function RadarScan() {
           Runs <code>google_trend_radar.py</code> directly against SerpAPI, scoring trends in code
           rather than with Claude — so it costs nothing beyond the SerpAPI request. The{" "}
           <code>beauty</code> profile additionally cross-checks Reddit and tags
-          ingredient/benefit/concern terms. Works locally or self-hosted; on Vercel the scan
-          endpoint returns 501 because there is no Python process to run.
+          ingredient/benefit/concern terms. Locally the scan runs here; deployed, it is queued as a
+          GitHub Actions workflow that commits results back, so they appear under Recent scans a few
+          minutes later.
         </p>
       </details>
       <RunTokenField />
       {message || job?.friendlyError ? (
-        <p className="runMessage">{message || job.friendlyError}</p>
+        <p className={`runMessage ${message && messageTone === "ok" ? "ok" : ""}`}>
+          {message || job.friendlyError}
+        </p>
       ) : null}
       {job?.exitCode === 0 && job.resultFile ? (
         <p>

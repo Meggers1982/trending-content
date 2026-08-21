@@ -1,0 +1,96 @@
+name: Run Ad-hoc Trend Radar
+
+# Generic, on-demand counterpart to the per-profile radar workflows: those each
+# hardcode one profile on a weekly cron, so none of them can scan an arbitrary
+# topic. Without this, the dashboard's "Scan" button had no remote path and
+# /api/radar returned 501 whenever the app was deployed to Vercel.
+on:
+  workflow_dispatch:
+    inputs:
+      topic:
+        description: Topic to scan, e.g. "gut health"
+        required: true
+      profile:
+        description: Seed profile ("auto" picks one from the topic)
+        required: false
+        default: auto
+        type: choice
+        options:
+          - auto
+          - wellness
+          - health
+          - ai
+          - beauty
+          - nutrition
+          - fitness
+          - food-safety
+          - diet
+          - weight-loss
+          - mental-health
+          - gut-health
+          - none
+      geo:
+        description: Two-letter geo code
+        required: false
+        default: US
+
+permissions:
+  contents: write
+
+# Every radar workflow commits into outputs/google_trend_radar; queue rather
+# than race a scheduled profile scan or another ad-hoc dispatch.
+concurrency:
+  group: trend-radar
+  cancel-in-progress: false
+
+jobs:
+  run-radar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    env:
+      SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
+      SERPAPI_TRENDING_NOW_ENABLED: ${{ vars.SERPAPI_TRENDING_NOW_ENABLED || 'true' }}
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      # The topic is free text from the dashboard, so it goes through the
+      # environment rather than being interpolated into the run: script, where
+      # `${{ inputs.topic }}` would be pasted straight into the shell.
+      # --skip-reddit: GitHub runners are datacenter IPs, which Reddit's
+      # anonymous JSON search blocks (see run-beauty-radar.yml).
+      - name: Run trend radar
+        env:
+          RADAR_TOPIC: ${{ inputs.topic }}
+          RADAR_PROFILE: ${{ inputs.profile }}
+          RADAR_GEO: ${{ inputs.geo }}
+        run: |
+          python google_trend_radar.py \
+            --topic "$RADAR_TOPIC" \
+            --profile "${RADAR_PROFILE:-auto}" \
+            --geo "${RADAR_GEO:-US}" \
+            --date "now 7-d" \
+            --skip-reddit
+
+      - name: Commit generated artifacts
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f outputs/google_trend_radar
+          if git diff --cached --quiet; then
+            echo "No generated artifacts changed."
+          else
+            git commit -m "Update ad-hoc trend radar scan"
+            git pull --rebase
+            git push
+          fi

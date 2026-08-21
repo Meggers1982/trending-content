@@ -1114,7 +1114,7 @@ It initially looked orphaned (nothing in `run_pipeline.py`, `package.json`, or t
 
 **Given a home in the app 2026-07-12**: the dashboard's "Trend scanner" panel (`app/components/RadarScan.jsx`, `#scan`) lets you run it on demand from the browser instead of only via CLI. `app/api/radar/route.js` spawns it locally with array-form `spawn` args (topic is user input — validated for length and a leading `-`, which would otherwise be parsed as a CLI flag) and shares the same optional `RUN_CONTROL_TOKEN` auth as `/api/run`. Results are served through `app/api/radar-artifact/[file]/route.js`, reading from `outputs/google_trend_radar/` (a completely separate directory from the daily pipeline's `outputs/daily_newsroom_dashboard/`). `lib/job-state.js` now exposes two independent job slots (`pipelineJob`, `radarJob`) via a shared `createJobState()` factory, so a scan doesn't block on / get blocked by a daily pipeline run.
 
-This only works locally/self-hosted (spawns a real Python process) — there's no GitHub Actions equivalent, so on Vercel `POST /api/radar` returns `501` immediately. See `VERCEL_DEPLOY.md`.
+Locally this spawns a real Python process; deployed it dispatches `.github/workflows/run-radar.yml` instead (added 2026-08-21 — it used to return `501` on Vercel). See `VERCEL_DEPLOY.md`.
 
 ### `beauty` profile: cross-platform signal + whitespace scoring (added 2026-07-14)
 
@@ -1130,7 +1130,7 @@ Reddit's anonymous JSON API is rate-limited and can be flaky; `discover_reddit_c
 
 The Trend Scanner panel (above) previously only linked out to a separate HTML file per scan, so results were easy to miss. `lib/radar.js` now also exports `getLatestRadarScanData()`, which reads the most recently modified `*.json` file in `outputs/google_trend_radar/` (any topic/profile) and returns its parsed `candidates` array. `app/page.jsx` renders this directly in a new "Trending keywords" section (`#keywords`, also added to the left nav) — a plain keyword/stage/radar-score/opportunity-score/tags table, no Claude involved, sourced from whatever the last scan produced. Empty state (no scan run yet) points the user at the `#scan` panel. This is read-only display of already-generated data; it doesn't trigger a scan itself.
 
-**Important:** unlike the daily pipeline, nothing refreshed this data automatically until `.github/workflows/run-beauty-radar.yml` was added (below). Ad-hoc scans (the "Scan" button / manual CLI runs) are the only way this data changes, and `outputs/google_trend_radar/` is entirely gitignored — so on Vercel, "Trending keywords" would sit on the empty state forever without the scheduled job, since `/api/radar` returns 501 there and nothing else ever wrote to that (untracked) directory in the deployed repo.
+**Important:** unlike the daily pipeline, nothing refreshed this data automatically until `.github/workflows/run-beauty-radar.yml` was added (below). Ad-hoc scans (the "Scan" button / manual CLI runs) are the only way this data changes, and `outputs/google_trend_radar/` is entirely gitignored — so on Vercel, "Trending keywords" would sit on the empty state forever without the scheduled job, since at the time `/api/radar` returned 501 there and nothing else ever wrote to that (untracked) directory in the deployed repo. Ad-hoc scans can now write to it in production too, via `run-radar.yml`.
 
 ### Scheduled beauty radar job (added 2026-07-14)
 
@@ -1254,6 +1254,34 @@ change still displays.
 Note the two rejection counts differ legitimately and both are shown: `signal_summary.total_rejected`
 is what the model says it filtered (135), while `rejected[]` is what it bothered to itemize (30).
 Picking one number would misrepresent the run.
+
+### `/api/radar` works on Vercel now — `run-radar.yml` (added 2026-08-21)
+
+The eight per-profile radar workflows each hardcode one profile on a weekly cron, so none could
+scan an arbitrary topic; that is why `POST /api/radar` returned `501` when deployed and the
+dashboard's Scan button was dead in production. `.github/workflows/run-radar.yml` is the generic
+on-demand counterpart, taking `topic` / `profile` / `geo` as `workflow_dispatch` inputs. The route
+now dispatches it whenever `shouldUseGithubActions()` is true, exactly as `/api/run` and
+tracked-topic re-scans already did.
+
+**The topic reaches the shell through `env:`, not `${{ inputs.topic }}`.** Interpolating a
+dispatch input directly into a `run:` script pastes it into the shell before execution, so a topic
+like `"; rm -rf . #` would run as a command. `run-tracked-topics.yml` still interpolates its
+`topic_id` that way; it is lower risk (dispatch requires repo write access, and the value is an id
+rather than free text) but it is the same pattern and worth fixing if that workflow ever takes
+richer input.
+
+Two other details: input validation now runs *before* the dispatch branch, so a bad topic gets a
+400 rather than being handed to Actions; and the workflow shares a `concurrency: trend-radar` group
+with nothing else yet — the per-profile workflows are staggered by schedule instead, so add them to
+the group if they ever start colliding on `outputs/google_trend_radar`.
+
+`shouldUseGithubActions()` / `triggerGithubWorkflow()` moved to `lib/github-dispatch.js`. `/api/run`
+and `/api/tracked-topics/[id]/scan` each had a copy; this route would have been the third.
+
+Deployed scans have no local job to poll, so the response carries `dispatched: true` and the panel
+reports "queued" in green instead of streaming logs — `.runMessage` is styled as an error, hence
+the `.ok` variant.
 
 ### Scanner / Tracked Topics UX pass (2026-08-21)
 
