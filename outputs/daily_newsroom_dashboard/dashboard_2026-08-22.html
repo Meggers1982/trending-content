@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trending Content OS — Daily Dashboard</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  :root {
+    --ink: #171717;
+    --text: #262626;
+    --muted: #686868;
+    --faint: #8a8a8a;
+    --paper: #fbfaf8;
+    --surface: #ffffff;
+    --soft: #f2f1ee;
+    --line: #dfddd8;
+    --red: #cf2f32;
+    --green: #1f9d55;
+    --amber: #d97706;
+    --blue: #2563eb;
+    --violet: #7c3aed;
+  }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--paper);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+  .topbar {
+    height: 48px;
+    background: #070707;
+    color: #f7f7f7;
+    display: flex;
+    align-items: center;
+    padding: 0 18px;
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+  .mark {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3px;
+  }
+  .mark span { background: #f7f7f7; border-radius: 999px; }
+  .wrap { max-width: 1232px; margin: 0 auto; padding: 32px 28px 56px; }
+  .masthead {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 8px 0 28px;
+  }
+  h1 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    line-height: 1.1;
+    color: var(--ink);
+    letter-spacing: 0;
+  }
+  h1 span { color: var(--red); }
+  .dek {
+    margin-top: 10px;
+    color: #555;
+    font-size: 14px;
+  }
+  .run-chip {
+    margin-top: 2px;
+    border: 1px solid var(--line);
+    background: var(--soft);
+    border-radius: 4px;
+    padding: 7px 10px;
+    color: #555;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin: 0 0 28px;
+  }
+  .stat {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--red);
+    border-radius: 6px;
+    padding: 18px 20px;
+    min-height: 100px;
+  }
+  .stat.green { border-top-color: var(--green); }
+  .stat.amber { border-top-color: var(--amber); }
+  .stat.violet { border-top-color: var(--violet); }
+  .stat .value {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 36px;
+    line-height: 1;
+    color: var(--red);
+    font-weight: 700;
+  }
+  .stat.green .value { color: var(--green); }
+  .stat.amber .value { color: var(--amber); }
+  .stat.violet .value { color: var(--violet); }
+  .stat .label {
+    margin-top: 8px;
+    color: #666;
+    font-weight: 700;
+    font-size: 13px;
+  }
+  .insight {
+    background: #eff6ff;
+    border: 1px solid #b7d4ff;
+    border-left: 4px solid var(--blue);
+    border-radius: 6px;
+    padding: 18px 20px 17px;
+    margin: 0 0 28px;
+    color: #183052;
+  }
+  .insight-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    color: #1457d9;
+    font-weight: 800;
+  }
+  .status-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: #fff8e6;
+    border: 1px solid #f4be4a;
+    border-left: 4px solid var(--amber);
+    border-radius: 6px;
+    padding: 12px 14px;
+    margin: -12px 0 28px;
+    color: #5f3900;
+    font-size: 13px;
+  }
+  .status-note strong {
+    color: #9a5700;
+  }
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    min-height: 20px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    border: 1px solid #9fc2ff;
+    background: #dbeafe;
+    color: #1457d9;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  .toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 0 0 12px;
+  }
+  .section-title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: flex-end;
+  }
+  .filter-btn {
+    appearance: none;
+    border: 1px solid var(--line);
+    background: #fff;
+    color: #555;
+    border-radius: 4px;
+    padding: 5px 9px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .filter-btn.active, .filter-btn:hover {
+    border-color: #9fc2ff;
+    background: #eff6ff;
+    color: #1457d9;
+  }
+  .table-shell {
+    overflow-x: auto;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1040px;
+  }
+  th {
+    background: var(--soft);
+    border-bottom: 1px solid var(--line);
+    color: #6a6a6a;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 11px 12px;
+  }
+  td {
+    border-bottom: 1px solid #e7e5e0;
+    padding: 12px;
+    vertical-align: top;
+    font-size: 13px;
+  }
+  tr.topic-row { cursor: pointer; }
+  tr.topic-row:hover td { background: #fcfcfb; }
+  tr.hidden { display: none; }
+  tr.detail-row td {
+    background: #fbfbf9;
+    padding: 0;
+  }
+  .detail-row[hidden] { display: none; }
+  .rank {
+    color: #777;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-weight: 700;
+    width: 44px;
+  }
+  .topic-title { font-weight: 800; color: #202020; }
+  .topic-sub { color: #606060; font-size: 12px; margin-top: 4px; }
+  .num {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-weight: 800;
+    color: #2b2b2b;
+    display: inline-block;
+    min-width: 28px;
+  }
+  .mini-bar {
+    display: inline-block;
+    width: 58px;
+    height: 5px;
+    background: #e4e1dc;
+    border-radius: 10px;
+    margin-left: 8px;
+    vertical-align: middle;
+    overflow: hidden;
+  }
+  .mini-bar span { display: block; height: 100%; border-radius: 10px; }
+  .trend span { background: var(--red); }
+  .opp span { background: var(--blue); }
+  .velocity.high { color: var(--green); }
+  .velocity.mid { color: var(--amber); }
+  .velocity.low { color: #777; }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    min-height: 22px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .badge.now, .badge.p1 { color: #dc2626; background: #fff1f1; border: 1px solid #ffa6a6; }
+  .badge.today, .badge.p2 { color: #c26a00; background: #fff8e6; border: 1px solid #f4be4a; }
+  .badge.week, .badge.p3 { color: #1457d9; background: #eff6ff; border: 1px solid #9fc2ff; }
+  .badge.evergreen, .badge.p4 { color: #16874a; background: #effaf2; border: 1px solid #75d99b; }
+  .badge.monitor, .badge.p5 { color: #6b7280; background: #f4f4f5; border: 1px solid #d4d4d8; }
+  .serp.easy { color: #16874a; background: #effaf2; border: 1px solid #75d99b; }
+  .serp.med { color: #c26a00; background: #fff8e6; border: 1px solid #f4be4a; }
+  .serp.hard { color: #dc2626; background: #fff1f1; border: 1px solid #ffa6a6; }
+  .source-chip {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 4px 4px 0;
+    padding: 2px 7px;
+    min-height: 22px;
+    border-radius: 4px;
+    border: 1px solid #b7d4ff;
+    background: #eff6ff;
+    color: #1457d9;
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    padding: 16px 20px 18px 56px;
+    border-top: 1px solid #eeeae4;
+  }
+  .detail h4 {
+    margin: 0 0 6px;
+    color: #606060;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+  }
+  .detail p {
+    margin: 0;
+    font-size: 13px;
+    color: #2c2c2c;
+  }
+  .rejected { margin-top: 28px; }
+  .empty {
+    padding: 28px;
+    text-align: center;
+    color: var(--muted);
+  }
+  @media (max-width: 820px) {
+    .wrap { padding: 24px 16px 44px; }
+    .masthead { display: block; }
+    .run-chip { display: inline-block; margin-top: 18px; white-space: normal; }
+    .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .toolbar { align-items: flex-start; flex-direction: column; }
+    .filters { justify-content: flex-start; }
+    .detail { grid-template-columns: 1fr; padding-left: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="topbar"><span class="mark"><span></span><span></span><span></span><span></span></span>Trending Content OS</div>
+<main class="wrap">
+  <header class="masthead">
+    <div>
+      <h1>Trending <span>Content OS</span></h1>
+      <div class="dek" id="dek"></div>
+    </div>
+    <div class="run-chip" id="run-meta"></div>
+  </header>
+
+  <section class="stats" id="stats"></section>
+
+  <section class="insight" id="insight" hidden>
+    <div class="insight-head"><span class="pill">Google Trends</span><span id="insight-title">Run Insight</span></div>
+    <div id="insight-copy"></div>
+  </section>
+
+  <section class="status-note" id="site-fallback-note" hidden>
+    <strong>Duplicate check:</strong>
+    <span>site_url not configured — competitor fallback used (Healthline, WebMD, STAT News).</span>
+  </section>
+
+  <section>
+    <div class="toolbar">
+      <div class="section-title" id="priority-title">Priority Topics</div>
+      <div class="filters" id="filters"></div>
+    </div>
+    <div class="table-shell">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Topic</th>
+            <th>Trend</th>
+            <th>Opp</th>
+            <th>Velocity</th>
+            <th>Urgency</th>
+            <th>SERP</th>
+            <th>Src</th>
+            <th>Key Sources</th>
+          </tr>
+        </thead>
+        <tbody id="topic-rows"></tbody>
+      </table>
+      <div class="empty" id="empty" hidden>No candidates to show. Check the raw report or extraction JSON.</div>
+    </div>
+  </section>
+
+  <section class="rejected" id="rejected-section" hidden>
+    <div class="toolbar">
+      <div class="section-title">Rejected Topics</div>
+    </div>
+    <div class="table-shell">
+      <table>
+        <thead><tr><th>Topic</th><th>Reason</th></tr></thead>
+        <tbody id="rejected-rows"></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<script type="application/json" id="pipeline-json">{
+  "run_date": "2026-08-22",
+  "niche": "health and wellness",
+  "signal_summary": {
+    "total_reviewed": 144,
+    "total_retained": 5,
+    "total_rejected": 139,
+    "tools_active": [
+      "web_search",
+      "google_news",
+      "google_trends",
+      "serpapi"
+    ],
+    "tools_unavailable": [],
+    "notes": "Heavy overlap with last-7-day coverage (14 near-duplicate stories rejected as existing). Food-safety recall cluster now in 3rd consecutive day — only Cyclospora escalation is genuinely new. site_url not configured; competitor-list fallback used. GLP-1/weight-loss topics recurring for 2nd+ day; angle differentiated toward patient behavior/misinformation. All tools operational."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Cyclospora Outbreak Linked to Iceberg Lettuce",
+      "primary_entity": "Cyclospora outbreak (iceberg lettuce)",
+      "signal_type": "breaking_news",
+      "allowed_category": "public health and epidemiology",
+      "trend_strength_score": 82,
+      "opportunity_score": 78,
+      "discover_score": 4,
+      "urgency": "now",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 3,
+      "source_urls": [
+        "https://www.cdc.gov/cyclosporiasis/outbreaks/07-26",
+        "https://www.usatoday.com"
+      ],
+      "recommended_angle": "Explain what Cyclospora is, how it spreads via produce, and what to do if you've eaten iceberg lettuce recently — grounded in CDC's live outbreak tracker.",
+      "why_now": "CDC confirms Cyclospora case count approaching 16,000 nationally, tied to iceberg lettuce; Google Trends shows real-time breakout search interest as of Aug 22.",
+      "primary_headline": "Cyclospora Outbreak Tied to Iceberg Lettuce Nears 16,000 Cases — What to Know",
+      "next_steps": "Assign immediate turnaround; pull latest case count directly from CDC page at time of publish (totals shift daily).",
+      "integrity_flags": [
+        "Verify exact case count against CDC's live page at time of publish — outbreak totals are actively changing."
+      ],
+      "trend_score_reason": "82: Real-time CDC case escalation (~16K cases) + Google Trends Trending Now breakout + multi-outlet coverage (CDC, USA Today, news cycle).",
+      "opportunity_score_reason": "78: High reader urgency (produce safety), broad audience relevance, actionable guidance angle, strong SEO potential.",
+      "discover_score_reason": "4: Emerging national outbreak with viral search trend, consumer-facing safety angle, distinct from prior day's coverage.",
+      "notes": "Alternate headlines: 'Cyclospora Cases Surge Past 16,000 — Here's How the Parasite Spreads Through Lettuce' / 'What Is Cyclospora? The Parasite Behind a Growing Lettuce Outbreak.' Key data: CDC outbreak page. SEO: primary keyword 'cyclospora outbreak lettuce'; supporting: 'cyclospora symptoms,' 'is iceberg lettuce recalled.'",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "CDC Cyclosporiasis outbreak page (iceberg lettuce) + USA Today ~16,000 cases + Google Trends 'cyclospora' breakout signal"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Bacteria Found in Lung Tumors May Boost Immune Response to Cancer",
+      "primary_entity": "Intratumoral bacteria / lung cancer immune response (Johns Hopkins)",
+      "signal_type": "study_or_research",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 58,
+      "opportunity_score": 66,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://hopkinsmedicine.org"
+      ],
+      "recommended_angle": "Explain the mechanism in plain language and frame clearly as early-stage/preclinical — not a treatment yet.",
+      "why_now": "Johns Hopkins Medicine published new findings Aug 19 showing bacteria living inside lung tumors may enhance anti-cancer immune response — a new avenue for immunotherapy research.",
+      "primary_headline": "Bacteria Living Inside Lung Tumors Might Help Your Immune System Fight Cancer, Study Finds",
+      "next_steps": "Confirm underlying peer-reviewed journal/DOI before publishing; seek independent oncologist quote for balance.",
+      "integrity_flags": [
+        "Single-source institutional release — confirm peer-reviewed publication before treating findings as established; clarify preclinical stage."
+      ],
+      "trend_score_reason": "58: Institutional release (Johns Hopkins tier-1), novel immunotherapy mechanism, but single-source and pre-clinical stage limits immediate news velocity.",
+      "opportunity_score_reason": "66: Cancer immunotherapy high reader interest, explains novel biological mechanism, expert-source credibility, SEO potential for oncology angle.",
+      "discover_score_reason": "3: New research institution finding, but requires corroboration and journal confirmation; academic pace not breaking-news speed.",
+      "notes": "Source: hopkinsmedicine.org [institutional/tier1]. Single-source — corroborate before running as fact-forward. SEO: 'tumor bacteria immune response,' 'lung cancer immunotherapy research.'",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Johns Hopkins Medicine press release dated 08/19/2026 on intratumoral bacteria and immune response"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "The Hidden Health Cost of Dollar Store Groceries",
+      "primary_entity": "Dollar-store food environment health study (UC Riverside)",
+      "signal_type": "study_or_research",
+      "allowed_category": "nutrition and diet science",
+      "trend_strength_score": 52,
+      "opportunity_score": 70,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://news.ucr.edu"
+      ],
+      "recommended_angle": "Evidence-based look at food-access/quality gaps in dollar-store-dependent grocery environments, with practical, non-judgmental swaps.",
+      "why_now": "New UC Riverside research (published Aug 18) quantifies health impacts of dollar-store food access — increasingly relevant amid inflation-driven shopping shifts.",
+      "primary_headline": "The Hidden Health Cost of Shopping at Dollar Stores, According to New Research",
+      "next_steps": "Verify study design (observational vs. controlled); pair with an RDN quote on budget-nutrition strategies.",
+      "integrity_flags": [
+        "Confirm study is correlational, not causal — avoid implying dollar stores directly cause poor health outcomes without controlling for socioeconomic confounders."
+      ],
+      "trend_score_reason": "52: Institutional research from established university, timely socioeconomic angle, but single-source and observational design requires careful framing.",
+      "opportunity_score_reason": "70: Broad consumer relevance (inflation, budget shopping), actionable nutrition guidance, strong audience engagement on economic/health intersection.",
+      "discover_score_reason": "3: New published study from respected institution, relevant to current economic trends, but not breaking news urgency.",
+      "notes": "Source: news.ucr.edu [institutional]. SEO: 'dollar store food health,' 'budget grocery nutrition.'",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "UC Riverside news release dated 08/18/2026 on dollar-store food environment health study"
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Weight-Loss Drug Users Turn to Social Media Over Doctors, Study Finds",
+      "primary_entity": "GLP-1 weight-loss drug users / social media reliance",
+      "signal_type": "study_or_research",
+      "allowed_category": "chronic disease management",
+      "trend_strength_score": 61,
+      "opportunity_score": 72,
+      "discover_score": 3,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://medicalxpress.com/news/2026-08-weight-loss-drug-users-social.html"
+      ],
+      "recommended_angle": "Frame social-media reliance as a patient-safety/misinformation risk amid record GLP-1 demand — not an endorsement of crowdsourced dosing advice.",
+      "why_now": "New study (reported Aug 19) finds a majority of GLP-1 users rely on social platforms rather than clinicians for guidance, amid ongoing high search interest in weight-loss drugs.",
+      "primary_headline": "Why GLP-1 Users Are Turning to Social Media Instead of Their Doctors — And Why That's Risky",
+      "next_steps": "Trace Medical Xpress summary back to underlying journal before publishing.",
+      "integrity_flags": [
+        "Verify original journal source behind Medical Xpress summary before publishing."
+      ],
+      "trend_score_reason": "61: Recurring GLP-1 theme with new behavioral angle; high search interest in weight-loss drugs, but secondary outlet requires journal verification.",
+      "opportunity_score_reason": "72: Timely patient-safety angle amid GLP-1 demand surge, strong misinformation/education hook, high reader concern about medical guidance credibility.",
+      "discover_score_reason": "3: New behavioral study dimension on familiar GLP-1 topic, deliberately differentiated from drug-mechanism coverage in prior runs.",
+      "notes": "Recurring theme flag: GLP-1/weight-loss topics have appeared in 2+ recent runs — differentiate angle (behavior/misinformation, not drug mechanism). Source: Medical Xpress (secondary outlet).",
+      "fact_check": {
+        "verdict": "minor_issues",
+        "issues": [
+          "Headline/angle assert a 'majority' of GLP-1 users rely on social media, but the evidence only shows a Medical Xpress headline stating users 'turn to social media over doctors' without a quantified majority figure."
+        ],
+        "checked_against": "Medical Xpress headline dated 08/19/2026 on weight-loss drug users and social media"
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Laser Therapy Offers New Weapon Against Deadly Brain Tumors",
+      "primary_entity": "Laser ablation therapy (WashU/Monteris Medical NeuroBlate study)",
+      "signal_type": "study_or_research",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 56,
+      "opportunity_score": 64,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "source_urls": [
+        "https://medicine.washu.edu/news/laser-therapy-offers-weapon-against-deadly-brain-tumors/",
+        "https://www.massdevice.com/monteris-medical-nueroblate-brain-tumor-study/"
+      ],
+      "recommended_angle": "Explain what laser ablation therapy does for brain tumor patients and what survival data actually shows — separate manufacturer framing from independent findings.",
+      "why_now": "WashU Medicine (Aug 17) and MassDevice (Aug 20) both cover new survival-factor findings for laser ablation therapy, a rising alternative to open brain surgery.",
+      "primary_headline": "Laser Therapy Emerges as a New Option Against Deadly Brain Tumors — Here's What the Data Shows",
+      "next_steps": "Independent physician quote needed to balance device-manufacturer-linked data.",
+      "integrity_flags": [
+        "MassDevice coverage stems from Monteris Medical's own study (device manufacturer) — disclose potential conflict of interest."
+      ],
+      "trend_score_reason": "56: Two-outlet coverage (institutional + trade press) on emerging neurosurgical technology, but manufacturer-linked sources and modest trend velocity.",
+      "opportunity_score_reason": "64: High reader interest in novel cancer treatments, explains surgical alternative with outcome data, balances innovation with medical credibility angle.",
+      "discover_score_reason": "3: New medical technology research, reasonable audience relevance, but requires independent expert voice to counter manufacturer framing.",
+      "notes": "Sources: WashU Medicine [institutional], MassDevice [device-maker-adjacent]. SEO: 'laser therapy brain tumor,' 'minimally invasive brain surgery alternatives.'",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "WashU Medicine release (08/17/2026) and MassDevice coverage of Monteris Medical NeuroBlate study (08/20/2026)"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "FDA Class I Egg Recall",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Blueberry Recall Class I",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Clear Eyes Eye Drops Recall",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Oregon Psilocybin PTSD Study",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Stanford Molecular Glue Lymphoma",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Mass General Brigham Dementia Trial",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Vegan Diet & Inflammation",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "'Maxxing' Wellness Trend",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "HHS $96M Mental Health Award",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Nature 'Hallmarks of Skeletal Muscle'",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Vanderbilt GLP-1/Opioid Trial",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Alfalfa Sprouts Outbreak",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Hayden Panettiere Mental Health",
+      "reason": "brand_safety"
+    },
+    {
+      "topic": "Mitch McConnell Health",
+      "reason": "brand_safety"
+    },
+    {
+      "topic": "QC Cofounder Pierre Thomas Heart Attack",
+      "reason": "brand_safety"
+    },
+    {
+      "topic": "USDA Screwworm Detections",
+      "reason": "off_category"
+    },
+    {
+      "topic": "USF Space Travel & Women's Health",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Nature AI-Guided Liver Diagnosis",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Clinical Trial CRO Acquisitions",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Wellness Retreats, Digital Wellness, Dating 'Wellness Gap,' Financial Wellness",
+      "reason": "off_category"
+    },
+    {
+      "topic": "'Medvi' Health/Quad Mentions",
+      "reason": "weak_signal"
+    }
+  ],
+  "fact_check_summary": {
+    "accurate": 4,
+    "minor_issues": 1
+  },
+  "run_cost": {
+    "total_usd": 0.5603,
+    "calls": [
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11692,
+        "output_tokens": 19614,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 40942,
+        "estimated_cost_usd": 0.4828
+      },
+      {
+        "model": "claude-haiku-4-5",
+        "input_tokens": 7741,
+        "output_tokens": 2905,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0223
+      },
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 12294,
+        "output_tokens": 1223,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0552
+      }
+    ]
+  }
+}</script>
+<script>
+function readPipelineData() {
+  const raw = document.getElementById('pipeline-json').textContent.trim();
+  if (!raw || raw === '__PIPELINE_' + 'DATA__') {
+    return {
+      run_date: '',
+      niche: 'Health & Wellness',
+      signal_summary: {
+        total_reviewed: 0,
+        total_retained: 0,
+        total_rejected: 0,
+        notes: 'This is the dashboard template. Run python run_pipeline.py --no-email to generate a filled dashboard, or open outputs/daily_newsroom_dashboard/dashboard_preview.html to view the design preview.'
+      },
+      candidates: [],
+      rejected: []
+    };
+  }
+  try {
+    return JSON.parse(raw);
+  } catch (error) {
+    return {
+      run_date: '',
+      niche: 'Health & Wellness',
+      signal_summary: {
+        total_reviewed: 0,
+        total_retained: 0,
+        total_rejected: 0,
+        notes: `Dashboard data could not be parsed: ${error.message}`
+      },
+      candidates: [],
+      rejected: []
+    };
+  }
+}
+const D = readPipelineData();
+const candidates = Array.isArray(D.candidates) ? D.candidates : [];
+const rejected = Array.isArray(D.rejected) ? D.rejected : [];
+const summary = D.signal_summary || {};
+
+const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({
+  '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+}[ch]));
+const clamp = n => Math.max(0, Math.min(100, Number(n) || 0));
+const fmtDate = value => value || new Date().toISOString().slice(0, 10);
+const urgencyClass = value => {
+  if (value === 'now') return 'now';
+  if (value === 'today') return 'today';
+  if (value === 'this_week') return 'week';
+  if (value === 'evergreen') return 'evergreen';
+  return 'monitor';
+};
+const serpClass = c => {
+  const avg = ((Number(c.trend_strength_score) || 0) + (Number(c.opportunity_score) || 0)) / 2;
+  if (avg >= 82) return 'easy';
+  if (avg >= 65) return 'med';
+  return 'hard';
+};
+const serpLabel = cls => ({ easy: 'Easy', med: 'Med', hard: 'Hard' }[cls] || 'Med');
+const velocity = c => clamp(Math.round(((Number(c.discover_score) || 0) / 5) * 100));
+const sourceLabels = c => {
+  const labels = [];
+  if (c.signal_type) labels.push(String(c.signal_type).replace(/_/g, ' '));
+  if (c.confidence) labels.push(`${c.confidence} conf`);
+  if (c.content_status) labels.push(c.content_status);
+  return labels.slice(0, 3);
+};
+
+document.getElementById('dek').textContent =
+  `${esc(D.niche || 'Health & Wellness')} · US · ${fmtDate(D.run_date)} · with Google Trends data`;
+document.getElementById('run-meta').textContent =
+  `Generated: ${fmtDate(D.run_date)} | retained ${candidates.length} | pipeline v2`;
+
+const p1 = candidates.filter(c => c.priority_level === 'P1').length;
+const flags = candidates.filter(c => String(c.notes || '').trim() || c.confidence === 'low').length;
+const statData = [
+  { label: 'Signals Processed', value: summary.total_reviewed ?? 0, cls: '' },
+  { label: 'Retained Topics', value: candidates.length, cls: 'green' },
+  { label: 'Publish NOW', value: p1, cls: 'amber' },
+  { label: 'Integrity Flags', value: flags, cls: 'violet' },
+];
+document.getElementById('stats').innerHTML = statData.map(s => `
+  <div class="stat ${s.cls}">
+    <div class="value">${esc(s.value)}</div>
+    <div class="label">${esc(s.label)}</div>
+  </div>
+`).join('');
+
+const notes = String(summary.notes || '').trim();
+if (notes) {
+  document.getElementById('insight').hidden = false;
+  document.getElementById('insight-title').textContent = 'Search Demand vs. Editorial Urgency — Key Insight';
+  document.getElementById('insight-copy').textContent = notes;
+}
+const fallbackMentioned = /site_url not configured|self-check skipped|competitor fallback/i.test(notes)
+  || candidates.some(c => /site_url not configured|self-check skipped|competitor fallback/i.test(String(c.notes || '')));
+document.getElementById('site-fallback-note').hidden = !fallbackMentioned;
+
+document.getElementById('priority-title').textContent =
+  `Priority Topics — All ${candidates.length} Retained`;
+
+const filters = ['All', 'P1', 'P2', 'P3', 'P4', 'P5'];
+document.getElementById('filters').innerHTML = filters.map((f, i) =>
+  `<button class="filter-btn ${i === 0 ? 'active' : ''}" data-filter="${f}">${f}</button>`
+).join('');
+
+function rowHtml(c, i) {
+  const trend = clamp(c.trend_strength_score);
+  const opp = clamp(c.opportunity_score);
+  const vel = velocity(c);
+  const velClass = vel >= 70 ? 'high' : vel >= 40 ? 'mid' : 'low';
+  const sc = serpClass(c);
+  const urgency = c.urgency || c.publish_timing || 'monitor';
+  const labels = sourceLabels(c).map(label => `<span class="source-chip">${esc(label)}</span>`).join('');
+  return `
+    <tr class="topic-row" data-priority="${esc(c.priority_level)}" data-detail="${i}">
+      <td class="rank">${String(i + 1).padStart(2, '0')}</td>
+      <td>
+        <div class="topic-title">${esc(c.topic)}</div>
+        <div class="topic-sub">${esc(c.primary_headline || c.primary_entity || c.recommended_angle || '')}</div>
+      </td>
+      <td><span class="num">${trend}</span><span class="mini-bar trend"><span style="width:${trend}%"></span></span></td>
+      <td><span class="num">${opp}</span><span class="mini-bar opp"><span style="width:${opp}%"></span></span></td>
+      <td><span class="num velocity ${velClass}">${vel}</span></td>
+      <td><span class="badge ${urgencyClass(urgency)}">${esc(urgency === 'this_week' ? 'today' : urgency)}</span></td>
+      <td><span class="badge serp ${sc}">${serpLabel(sc)}</span></td>
+      <td><span class="num">${esc(c.source_count ?? 0)}</span></td>
+      <td>${labels}</td>
+    </tr>
+    <tr class="detail-row" data-parent="${i}" hidden>
+      <td colspan="9">
+        <div class="detail">
+          <div><h4>Recommended Angle</h4><p>${esc(c.recommended_angle || 'No angle provided.')}</p></div>
+          <div><h4>Why Now</h4><p>${esc(c.why_now || 'No timing rationale provided.')}</p></div>
+          <div><h4>Next Steps</h4><p>${esc(c.next_steps || c.notes || 'No next steps provided.')}</p></div>
+        </div>
+      </td>
+    </tr>
+  `;
+}
+
+const tbody = document.getElementById('topic-rows');
+tbody.innerHTML = candidates.map(rowHtml).join('');
+document.getElementById('empty').hidden = candidates.length > 0;
+
+tbody.addEventListener('click', event => {
+  const row = event.target.closest('.topic-row');
+  if (!row) return;
+  const detail = tbody.querySelector(`.detail-row[data-parent="${row.dataset.detail}"]`);
+  if (detail) detail.hidden = !detail.hidden;
+});
+
+document.getElementById('filters').addEventListener('click', event => {
+  const btn = event.target.closest('.filter-btn');
+  if (!btn) return;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const filter = btn.dataset.filter;
+  document.querySelectorAll('.topic-row').forEach(row => {
+    const show = filter === 'All' || row.dataset.priority === filter;
+    row.hidden = !show;
+    const detail = tbody.querySelector(`.detail-row[data-parent="${row.dataset.detail}"]`);
+    if (detail) {
+      detail.hidden = true;
+      detail.classList.toggle('hidden', !show);
+    }
+  });
+});
+
+if (rejected.length) {
+  document.getElementById('rejected-section').hidden = false;
+  document.getElementById('rejected-rows').innerHTML = rejected.map(r => `
+    <tr><td>${esc(r.topic)}</td><td>${esc(r.reason)}</td></tr>
+  `).join('');
+}
+</script>
+</body>
+</html>

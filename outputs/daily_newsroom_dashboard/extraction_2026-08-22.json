@@ -1,0 +1,312 @@
+{
+  "run_date": "2026-08-22",
+  "niche": "health and wellness",
+  "signal_summary": {
+    "total_reviewed": 144,
+    "total_retained": 5,
+    "total_rejected": 139,
+    "tools_active": [
+      "web_search",
+      "google_news",
+      "google_trends",
+      "serpapi"
+    ],
+    "tools_unavailable": [],
+    "notes": "Heavy overlap with last-7-day coverage (14 near-duplicate stories rejected as existing). Food-safety recall cluster now in 3rd consecutive day — only Cyclospora escalation is genuinely new. site_url not configured; competitor-list fallback used. GLP-1/weight-loss topics recurring for 2nd+ day; angle differentiated toward patient behavior/misinformation. All tools operational."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Cyclospora Outbreak Linked to Iceberg Lettuce",
+      "primary_entity": "Cyclospora outbreak (iceberg lettuce)",
+      "signal_type": "breaking_news",
+      "allowed_category": "public health and epidemiology",
+      "trend_strength_score": 82,
+      "opportunity_score": 78,
+      "discover_score": 4,
+      "urgency": "now",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 3,
+      "source_urls": [
+        "https://www.cdc.gov/cyclosporiasis/outbreaks/07-26",
+        "https://www.usatoday.com"
+      ],
+      "recommended_angle": "Explain what Cyclospora is, how it spreads via produce, and what to do if you've eaten iceberg lettuce recently — grounded in CDC's live outbreak tracker.",
+      "why_now": "CDC confirms Cyclospora case count approaching 16,000 nationally, tied to iceberg lettuce; Google Trends shows real-time breakout search interest as of Aug 22.",
+      "primary_headline": "Cyclospora Outbreak Tied to Iceberg Lettuce Nears 16,000 Cases — What to Know",
+      "next_steps": "Assign immediate turnaround; pull latest case count directly from CDC page at time of publish (totals shift daily).",
+      "integrity_flags": [
+        "Verify exact case count against CDC's live page at time of publish — outbreak totals are actively changing."
+      ],
+      "trend_score_reason": "82: Real-time CDC case escalation (~16K cases) + Google Trends Trending Now breakout + multi-outlet coverage (CDC, USA Today, news cycle).",
+      "opportunity_score_reason": "78: High reader urgency (produce safety), broad audience relevance, actionable guidance angle, strong SEO potential.",
+      "discover_score_reason": "4: Emerging national outbreak with viral search trend, consumer-facing safety angle, distinct from prior day's coverage.",
+      "notes": "Alternate headlines: 'Cyclospora Cases Surge Past 16,000 — Here's How the Parasite Spreads Through Lettuce' / 'What Is Cyclospora? The Parasite Behind a Growing Lettuce Outbreak.' Key data: CDC outbreak page. SEO: primary keyword 'cyclospora outbreak lettuce'; supporting: 'cyclospora symptoms,' 'is iceberg lettuce recalled.'",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "CDC Cyclosporiasis outbreak page (iceberg lettuce) + USA Today ~16,000 cases + Google Trends 'cyclospora' breakout signal"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Bacteria Found in Lung Tumors May Boost Immune Response to Cancer",
+      "primary_entity": "Intratumoral bacteria / lung cancer immune response (Johns Hopkins)",
+      "signal_type": "study_or_research",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 58,
+      "opportunity_score": 66,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://hopkinsmedicine.org"
+      ],
+      "recommended_angle": "Explain the mechanism in plain language and frame clearly as early-stage/preclinical — not a treatment yet.",
+      "why_now": "Johns Hopkins Medicine published new findings Aug 19 showing bacteria living inside lung tumors may enhance anti-cancer immune response — a new avenue for immunotherapy research.",
+      "primary_headline": "Bacteria Living Inside Lung Tumors Might Help Your Immune System Fight Cancer, Study Finds",
+      "next_steps": "Confirm underlying peer-reviewed journal/DOI before publishing; seek independent oncologist quote for balance.",
+      "integrity_flags": [
+        "Single-source institutional release — confirm peer-reviewed publication before treating findings as established; clarify preclinical stage."
+      ],
+      "trend_score_reason": "58: Institutional release (Johns Hopkins tier-1), novel immunotherapy mechanism, but single-source and pre-clinical stage limits immediate news velocity.",
+      "opportunity_score_reason": "66: Cancer immunotherapy high reader interest, explains novel biological mechanism, expert-source credibility, SEO potential for oncology angle.",
+      "discover_score_reason": "3: New research institution finding, but requires corroboration and journal confirmation; academic pace not breaking-news speed.",
+      "notes": "Source: hopkinsmedicine.org [institutional/tier1]. Single-source — corroborate before running as fact-forward. SEO: 'tumor bacteria immune response,' 'lung cancer immunotherapy research.'",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Johns Hopkins Medicine press release dated 08/19/2026 on intratumoral bacteria and immune response"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "The Hidden Health Cost of Dollar Store Groceries",
+      "primary_entity": "Dollar-store food environment health study (UC Riverside)",
+      "signal_type": "study_or_research",
+      "allowed_category": "nutrition and diet science",
+      "trend_strength_score": 52,
+      "opportunity_score": 70,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://news.ucr.edu"
+      ],
+      "recommended_angle": "Evidence-based look at food-access/quality gaps in dollar-store-dependent grocery environments, with practical, non-judgmental swaps.",
+      "why_now": "New UC Riverside research (published Aug 18) quantifies health impacts of dollar-store food access — increasingly relevant amid inflation-driven shopping shifts.",
+      "primary_headline": "The Hidden Health Cost of Shopping at Dollar Stores, According to New Research",
+      "next_steps": "Verify study design (observational vs. controlled); pair with an RDN quote on budget-nutrition strategies.",
+      "integrity_flags": [
+        "Confirm study is correlational, not causal — avoid implying dollar stores directly cause poor health outcomes without controlling for socioeconomic confounders."
+      ],
+      "trend_score_reason": "52: Institutional research from established university, timely socioeconomic angle, but single-source and observational design requires careful framing.",
+      "opportunity_score_reason": "70: Broad consumer relevance (inflation, budget shopping), actionable nutrition guidance, strong audience engagement on economic/health intersection.",
+      "discover_score_reason": "3: New published study from respected institution, relevant to current economic trends, but not breaking news urgency.",
+      "notes": "Source: news.ucr.edu [institutional]. SEO: 'dollar store food health,' 'budget grocery nutrition.'",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "UC Riverside news release dated 08/18/2026 on dollar-store food environment health study"
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Weight-Loss Drug Users Turn to Social Media Over Doctors, Study Finds",
+      "primary_entity": "GLP-1 weight-loss drug users / social media reliance",
+      "signal_type": "study_or_research",
+      "allowed_category": "chronic disease management",
+      "trend_strength_score": 61,
+      "opportunity_score": 72,
+      "discover_score": 3,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://medicalxpress.com/news/2026-08-weight-loss-drug-users-social.html"
+      ],
+      "recommended_angle": "Frame social-media reliance as a patient-safety/misinformation risk amid record GLP-1 demand — not an endorsement of crowdsourced dosing advice.",
+      "why_now": "New study (reported Aug 19) finds a majority of GLP-1 users rely on social platforms rather than clinicians for guidance, amid ongoing high search interest in weight-loss drugs.",
+      "primary_headline": "Why GLP-1 Users Are Turning to Social Media Instead of Their Doctors — And Why That's Risky",
+      "next_steps": "Trace Medical Xpress summary back to underlying journal before publishing.",
+      "integrity_flags": [
+        "Verify original journal source behind Medical Xpress summary before publishing."
+      ],
+      "trend_score_reason": "61: Recurring GLP-1 theme with new behavioral angle; high search interest in weight-loss drugs, but secondary outlet requires journal verification.",
+      "opportunity_score_reason": "72: Timely patient-safety angle amid GLP-1 demand surge, strong misinformation/education hook, high reader concern about medical guidance credibility.",
+      "discover_score_reason": "3: New behavioral study dimension on familiar GLP-1 topic, deliberately differentiated from drug-mechanism coverage in prior runs.",
+      "notes": "Recurring theme flag: GLP-1/weight-loss topics have appeared in 2+ recent runs — differentiate angle (behavior/misinformation, not drug mechanism). Source: Medical Xpress (secondary outlet).",
+      "fact_check": {
+        "verdict": "minor_issues",
+        "issues": [
+          "Headline/angle assert a 'majority' of GLP-1 users rely on social media, but the evidence only shows a Medical Xpress headline stating users 'turn to social media over doctors' without a quantified majority figure."
+        ],
+        "checked_against": "Medical Xpress headline dated 08/19/2026 on weight-loss drug users and social media"
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Laser Therapy Offers New Weapon Against Deadly Brain Tumors",
+      "primary_entity": "Laser ablation therapy (WashU/Monteris Medical NeuroBlate study)",
+      "signal_type": "study_or_research",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 56,
+      "opportunity_score": 64,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "source_urls": [
+        "https://medicine.washu.edu/news/laser-therapy-offers-weapon-against-deadly-brain-tumors/",
+        "https://www.massdevice.com/monteris-medical-nueroblate-brain-tumor-study/"
+      ],
+      "recommended_angle": "Explain what laser ablation therapy does for brain tumor patients and what survival data actually shows — separate manufacturer framing from independent findings.",
+      "why_now": "WashU Medicine (Aug 17) and MassDevice (Aug 20) both cover new survival-factor findings for laser ablation therapy, a rising alternative to open brain surgery.",
+      "primary_headline": "Laser Therapy Emerges as a New Option Against Deadly Brain Tumors — Here's What the Data Shows",
+      "next_steps": "Independent physician quote needed to balance device-manufacturer-linked data.",
+      "integrity_flags": [
+        "MassDevice coverage stems from Monteris Medical's own study (device manufacturer) — disclose potential conflict of interest."
+      ],
+      "trend_score_reason": "56: Two-outlet coverage (institutional + trade press) on emerging neurosurgical technology, but manufacturer-linked sources and modest trend velocity.",
+      "opportunity_score_reason": "64: High reader interest in novel cancer treatments, explains surgical alternative with outcome data, balances innovation with medical credibility angle.",
+      "discover_score_reason": "3: New medical technology research, reasonable audience relevance, but requires independent expert voice to counter manufacturer framing.",
+      "notes": "Sources: WashU Medicine [institutional], MassDevice [device-maker-adjacent]. SEO: 'laser therapy brain tumor,' 'minimally invasive brain surgery alternatives.'",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "WashU Medicine release (08/17/2026) and MassDevice coverage of Monteris Medical NeuroBlate study (08/20/2026)"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "FDA Class I Egg Recall",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Blueberry Recall Class I",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Clear Eyes Eye Drops Recall",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Oregon Psilocybin PTSD Study",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Stanford Molecular Glue Lymphoma",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Mass General Brigham Dementia Trial",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Vegan Diet & Inflammation",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "'Maxxing' Wellness Trend",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "HHS $96M Mental Health Award",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Nature 'Hallmarks of Skeletal Muscle'",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Vanderbilt GLP-1/Opioid Trial",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Alfalfa Sprouts Outbreak",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Hayden Panettiere Mental Health",
+      "reason": "brand_safety"
+    },
+    {
+      "topic": "Mitch McConnell Health",
+      "reason": "brand_safety"
+    },
+    {
+      "topic": "QC Cofounder Pierre Thomas Heart Attack",
+      "reason": "brand_safety"
+    },
+    {
+      "topic": "USDA Screwworm Detections",
+      "reason": "off_category"
+    },
+    {
+      "topic": "USF Space Travel & Women's Health",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Nature AI-Guided Liver Diagnosis",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Clinical Trial CRO Acquisitions",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Wellness Retreats, Digital Wellness, Dating 'Wellness Gap,' Financial Wellness",
+      "reason": "off_category"
+    },
+    {
+      "topic": "'Medvi' Health/Quad Mentions",
+      "reason": "weak_signal"
+    }
+  ],
+  "fact_check_summary": {
+    "accurate": 4,
+    "minor_issues": 1
+  },
+  "run_cost": {
+    "total_usd": 0.5603,
+    "calls": [
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11692,
+        "output_tokens": 19614,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 40942,
+        "estimated_cost_usd": 0.4828
+      },
+      {
+        "model": "claude-haiku-4-5",
+        "input_tokens": 7741,
+        "output_tokens": 2905,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0223
+      },
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 12294,
+        "output_tokens": 1223,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0552
+      }
+    ]
+  }
+}
