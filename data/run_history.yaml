@@ -3,6 +3,34 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-08-23'
+  niche: Health & Wellness
+  signals_reviewed: 160
+  topics_retained: 2
+  topics_rejected: 37
+  p1_count: 1
+  p2_count: 1
+  p3_count: 0
+  p4_count: 0
+  p5_count: 0
+  integrity_flags: 2
+  top_topic: Brain-eating amoeba (Naegleria fowleri) case sparks search surge
+  key_themes:
+  - Brain-eating amoeba (Naegleria fowleri) case sparks search surge
+  - Summer 2026 COVID-19 case increase across nearly all US states
+  tools_used:
+  - google_trends
+  - google_news
+  - web_search
+  - serpapi
+  tools_unavailable: []
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-08-23.html
+  estimated_cost_usd: 0.7208
+  notes: site_url not configured — self-check skipped; competitor-list fallback used for SERP-gap context.
+    FDA recall cluster and GLP-1/weight-loss-drug coverage flagged as recurring 3+ consecutive days —
+    monitor for staleness. Most fresh medical-study press releases (Nature, UT Southwestern) passed Skill
+    02b but failed Trend Scorer velocity threshold due to single-source/no search-spread — routed to Monitor.
+    Two Trends-only queries lack corroborating articles and are deferred pending research.
 - run_date: '2026-08-22'
   niche: health and wellness
   signals_reviewed: 144
