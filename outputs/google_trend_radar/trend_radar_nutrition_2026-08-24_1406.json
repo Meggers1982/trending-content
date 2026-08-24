@@ -1,0 +1,1242 @@
+{
+  "run_date": "2026-08-24",
+  "generated_at": "2026-08-24T14:06:44",
+  "topic": "nutrition",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "nutrition",
+    "macronutrients",
+    "meal prep",
+    "whole foods",
+    "fiber intake",
+    "added sugar",
+    "ultra-processed foods",
+    "nutrient deficiency",
+    "mindful eating",
+    "portion control",
+    "plant-based diet",
+    "nutrition trends",
+    "nutrition products",
+    "nutrition news",
+    "nutrition for beginners",
+    "nutrition routine",
+    "nutrition benefits",
+    "nutrition ideas",
+    "nutrition reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 19,
+    "total_reviewed": 80,
+    "total_retained": 4,
+    "total_rejected": 78,
+    "breakouts": 0,
+    "emerging": 0,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "topic": "whole foods montgomery nj",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 50,
+      "emergence_score": 46,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 68,
+      "confidence": "high",
+      "rising_label": "+200%",
+      "latest_interest": 0,
+      "peak_interest": 18,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "whole foods"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        11,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        18,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +200%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it."
+    },
+    {
+      "rank": 2,
+      "topic": "benefits of mindful eating",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 50,
+      "emergence_score": 46,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 68,
+      "confidence": "high",
+      "rising_label": "+200%",
+      "latest_interest": 0,
+      "peak_interest": 42,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "mindful eating"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        13,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        42,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +200%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it."
+    },
+    {
+      "rank": 3,
+      "topic": "portion control definition",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 50,
+      "emergence_score": 46,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 68,
+      "confidence": "high",
+      "rising_label": "+200%",
+      "latest_interest": 0,
+      "peak_interest": 16,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "portion control"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        16,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +200%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it."
+    },
+    {
+      "rank": 4,
+      "topic": "nutrition kid",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 50,
+      "emergence_score": 45,
+      "velocity_score": 41,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 67,
+      "confidence": "high",
+      "rising_label": "+190%",
+      "latest_interest": 0,
+      "peak_interest": 66,
+      "slope": 0,
+      "acceleration": 5,
+      "seed_terms": [
+        "nutrition"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        9,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        56,
+        66,
+        53,
+        30,
+        37,
+        27,
+        22,
+        23,
+        12,
+        11,
+        10,
+        8,
+        16,
+        8,
+        13,
+        10,
+        15,
+        18,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +190%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "nutrition products",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "nutrition news",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "curtain up",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition"
+      ]
+    },
+    {
+      "topic": "generation channel",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition"
+      ]
+    },
+    {
+      "topic": "curtain up channel",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition"
+      ]
+    },
+    {
+      "topic": "sundance kid",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition"
+      ]
+    },
+    {
+      "topic": "outshine recall",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "added sugar"
+      ]
+    },
+    {
+      "topic": "outshine fruit bars recall",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "added sugar"
+      ]
+    },
+    {
+      "topic": "outshine popsicles recall",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "added sugar"
+      ]
+    },
+    {
+      "topic": "outshine recall 2026",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "added sugar"
+      ]
+    },
+    {
+      "topic": "pecans health benefits",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition benefits"
+      ]
+    },
+    {
+      "topic": "manuka honey benefits",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition benefits"
+      ]
+    },
+    {
+      "topic": "action kid",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition"
+      ]
+    },
+    {
+      "topic": "sundance",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition"
+      ]
+    },
+    {
+      "topic": "action channel",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition"
+      ]
+    },
+    {
+      "topic": "water kid",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition"
+      ]
+    },
+    {
+      "topic": "blue moon",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition"
+      ]
+    },
+    {
+      "topic": "shilajit benefits",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition benefits"
+      ]
+    },
+    {
+      "topic": "is stevia bad for you",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "added sugar"
+      ]
+    },
+    {
+      "topic": "outshine fruit bars",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "added sugar"
+      ]
+    },
+    {
+      "topic": "pomegranate juice benefits",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition benefits"
+      ]
+    },
+    {
+      "topic": "chia seeds benefits",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fiber intake"
+      ]
+    },
+    {
+      "topic": "pomegranate juice",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition benefits"
+      ]
+    },
+    {
+      "topic": "glutathione benefits",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition benefits"
+      ]
+    },
+    {
+      "topic": "coconut water benefits",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition benefits"
+      ]
+    },
+    {
+      "topic": "kombucha benefits",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition benefits"
+      ]
+    },
+    {
+      "topic": "hemavex",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition reviews"
+      ]
+    },
+    {
+      "topic": "health",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "macronutrients"
+      ]
+    },
+    {
+      "topic": "sauerkraut benefits",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition benefits"
+      ]
+    },
+    {
+      "topic": "how is alzheimer's disease diagnosed definitively",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrient deficiency"
+      ]
+    },
+    {
+      "topic": "coq10 benefits",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition benefits"
+      ]
+    },
+    {
+      "topic": "ashwagandha benefits",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition benefits"
+      ]
+    },
+    {
+      "topic": "plum benefits fruit",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition benefits"
+      ]
+    },
+    {
+      "topic": "ag1 reviews",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition reviews"
+      ]
+    },
+    {
+      "topic": "cooked versus raw vegetables nutrition",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "micronutrients definition",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "definition of micronutrients",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "do potatoes have fiber",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "fishwife whole foods tote bag",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "mindful eating script",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "define macronutrients",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "outshine fruit bars no sugar added",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "mindful eating book",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "nutrition channel",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "banana macronutrients",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "no sugar added apple pie filling",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "portion control containers for weight loss",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "flaxseed nutrition facts",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "aspire nutrition reviews",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "best sources of fiber",
+      "reason": "Weak radar score (49)"
+    },
+    {
+      "topic": "total sugars vs added sugars",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "whole foods skillman nj",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "no sugar added apple pie",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "nutritional yeast nutrition facts",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "nutrients",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "outshine no sugar added",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "dunkin nutrition calculator",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "apple fiber content",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "no sugar added pie filling",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "supplemental nutrition assistance program",
+      "reason": "Weak radar score (36)"
+    },
+    {
+      "topic": "blueberry french 75 whole foods",
+      "reason": "Weak radar score (36)"
+    },
+    {
+      "topic": "what is mindful eating",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "plant-based diet food list",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "eggplant nutrition",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "quinoa nutrition facts",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "macronutrients definition",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "mindful eating pdf",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "tofu nutrition",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "eggplant nutrition benefits",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "applied nutrition green tea fat burner reviews",
+      "reason": "Weak radar score (36)"
+    },
+    {
+      "topic": "ello glass meal prep containers",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "signs of nutrient deficiency",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "bok choy nutrition",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "organised nutrition reviews",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "shred tradesman nutrition",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "macronutrients and micronutrients",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "micronutrients vs macronutrients",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "whole foods tote bag",
+      "reason": "Weak radar score (47)"
+    }
+  ]
+}
