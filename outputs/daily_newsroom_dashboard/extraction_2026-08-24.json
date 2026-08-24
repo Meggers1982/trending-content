@@ -1,0 +1,222 @@
+{
+  "run_date": "2026-08-24",
+  "niche": "Health & Wellness",
+  "signal_summary": {
+    "total_reviewed": 144,
+    "total_retained": 1,
+    "total_rejected": 136,
+    "tools_active": [
+      "google_news",
+      "google_trends",
+      "web_search"
+    ],
+    "tools_unavailable": [],
+    "notes": "Food-safety/recall cluster appeared 3 consecutive days; retained candidate is distinct meta-angle (pattern explainer), not duplicate of individual recalls. Most radar clusters (business/labor/policy/lifestyle) failed category fit or trend-strength thresholds. Genuinely thin day for net-new, well-sourced health signal beyond recall story. Two Trends-only queries ('tofa weight loss UC Berkeley,' 'Dr. Andrew Chan soda study') show search interest but no primary source found — flagged for targeted follow-up."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Why Are There So Many Food Recalls Lately? — 2026 Recall Surge Explainer",
+      "primary_entity": "FDA/CDC food recall pattern",
+      "signal_type": "audience_pain_point",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 90,
+      "opportunity_score": 89,
+      "discover_score": 5,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 8,
+      "source_urls": [
+        "https://www.fda.gov",
+        "https://www.cdc.gov/cyclosporiasis/outbreaks/07-26/index.html",
+        "https://www.nytimes.com/2026/08/14/health/fda-egg-recall-salmonella.html"
+      ],
+      "recommended_angle": "Data-driven, skeptical explainer: assess whether recall frequency is actually rising or just detection/classification improving, using the Aug 2026 egg/blueberry/lettuce cluster as the hook.",
+      "why_now": "Google Trends 'food safety' hit 99/100 with a +78-point 7-day spike — the largest movement of any tracked category — directly driven by three concurrent Class I/outbreak events (egg Salmonella, Publix blueberry upgrade, Cyclospora lettuce) plus NewsNation already asking the same question publicly.",
+      "primary_headline": "Why Do There Suddenly Seem to Be So Many Food Recalls? Here's What the Data Shows",
+      "next_steps": "Assign to writer today; pull FDA recall database counts YoY for the causation-vs-detection framing; confirm blueberry contaminant type before publishing.",
+      "integrity_flags": [
+        "Do not imply causation between the egg, blueberry, and lettuce recalls — each has a distinct pathogen/root cause; frame as a volume/pattern observation only.",
+        "Confirm exact contaminant in the Publix blueberry recall (not specified in current source set) before publishing.",
+        "Attribute the 'recalls aren't a success story' framing directly to the named former FDA official quoted by NewsNation — do not present as unattributed staff opinion."
+      ],
+      "trend_score_reason": "Google Trends 'food safety' 99/100 with +78 7-day delta; three concurrent Class I/outbreak events (egg, blueberry, lettuce) in one month.",
+      "opportunity_score_reason": "High audience pain point (grocery shopper concern); strong news cycle velocity; data-explainer format fits core editorial strength; SEO keyword demand evident from Trends spike.",
+      "discover_score_reason": "Highest possible: pattern-angle is differentiated from individual recall coverage; meta-question ('why so many?') is what audience is already searching for; tier-1 sources available.",
+      "notes": "Distinct from prior existing coverage of individual recalls (egg 8/20, blueberry 8/20, lettuce 8/22) — this is the aggregate/pattern angle, not a repeat. Estimated word count 1,100–1,400; schema Article + FAQPage; primary keyword 'why are there so many food recalls'.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Google Trends 7-day 'food safety' category (99/100, +78 delta, largest movement among tracked categories); Google News Radar entries for NYT egg recall Class I, CIDRAP egg recall, CBS/Axios/WaPo/Healthline/11Alive Publix blueberry Class I upgrade, CDC Cyclospora lettuce outbreak page, and NewsNation 'food recalls aren't a success story' article"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "Egg recall (individual)",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Blueberry recall (individual)",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Cyclospora lettuce recall (individual)",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "HHS $96M mental health funding",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Oregon psilocybin",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Hopkins lung bacteria",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Stanford molecular glue",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "WashU laser therapy",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "UCR dollar-store study",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Becton Dickinson device recall",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Nature AI liver-diagnosis study",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "UMass Chan psychedelic medication for adjustment disorder",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "USDA New World Screwworm",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Corewell nurses Teamsters contract",
+      "reason": "off_category"
+    },
+    {
+      "topic": "NJ health premiums",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Axios employer costs",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Curavit/Lindus Health acquisition",
+      "reason": "off_category"
+    },
+    {
+      "topic": "CRO market reports",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Galmed PR",
+      "reason": "off_category"
+    },
+    {
+      "topic": "WSJ biobanks startup",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Dolly Parton health",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Mitch McConnell health",
+      "reason": "off_category"
+    },
+    {
+      "topic": "King Charles health",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Wellness stacking",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Measles vaccine-preventable tracker",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Nature MoBa genetics study",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Dating 'wellness gap'",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Wellness retreats",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Digital wellness",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Medvi GLP-1 telehealth",
+      "reason": "brand_safety"
+    },
+    {
+      "topic": "Tofa weight loss UC Berkeley study",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Dr. Andrew Chan soda/gut-health study",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Wellness-Industrial Complex critique",
+      "reason": "weak_signal"
+    }
+  ],
+  "fact_check_summary": {
+    "accurate": 1
+  },
+  "run_cost": {
+    "total_usd": 0.5908,
+    "calls": [
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11711,
+        "output_tokens": 22934,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 40942,
+        "estimated_cost_usd": 0.5327
+      },
+      {
+        "model": "claude-haiku-4-5",
+        "input_tokens": 7264,
+        "output_tokens": 1438,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0145
+      },
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 10844,
+        "output_tokens": 739,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0436
+      }
+    ]
+  }
+}

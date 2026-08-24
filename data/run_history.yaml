@@ -3,6 +3,32 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-08-24'
+  niche: Health & Wellness
+  signals_reviewed: 144
+  topics_retained: 1
+  topics_rejected: 33
+  p1_count: 1
+  p2_count: 0
+  p3_count: 0
+  p4_count: 0
+  p5_count: 0
+  integrity_flags: 1
+  top_topic: Why Are There So Many Food Recalls Lately? — 2026 Recall Surge Explainer
+  key_themes:
+  - Why Are There So Many Food Recalls Lately? — 2026 Recall Surge Explainer
+  tools_used:
+  - google_news
+  - google_trends
+  - web_search
+  tools_unavailable: []
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-08-24.html
+  estimated_cost_usd: 0.5908
+  notes: Food-safety/recall cluster appeared 3 consecutive days; retained candidate is distinct meta-angle
+    (pattern explainer), not duplicate of individual recalls. Most radar clusters (business/labor/policy/lifestyle)
+    failed category fit or trend-strength thresholds. Genuinely thin day for net-new, well-sourced health
+    signal beyond recall story. Two Trends-only queries ('tofa weight loss UC Berkeley,' 'Dr. Andrew Chan
+    soda study') show search interest but no primary source found — flagged for targeted follow-up.
 - run_date: '2026-08-23'
   niche: Health & Wellness
   signals_reviewed: 160
