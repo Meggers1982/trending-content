@@ -1,0 +1,4412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google Trend Radar</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  :root {
+    --ink: #171717;
+    --text: #2b2b2b;
+    --muted: #696969;
+    --paper: #fbfaf8;
+    --surface: #fff;
+    --soft: #f1f0ec;
+    --line: #dedbd4;
+    --red: #cf2f32;
+    --green: #1f9d55;
+    --amber: #d97706;
+    --blue: #2563eb;
+  }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--paper);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+  .topbar {
+    height: 48px;
+    background: #070707;
+    color: #f7f7f7;
+    display: flex;
+    align-items: center;
+    padding: 0 18px;
+    font-weight: 800;
+  }
+  .mark {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3px;
+  }
+  .mark span { background: #f7f7f7; border-radius: 999px; }
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 32px 28px 56px; }
+  .masthead {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 8px 0 28px;
+  }
+  h1 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 31px;
+    line-height: 1.1;
+    color: var(--ink);
+  }
+  h1 span { color: var(--red); }
+  .dek { margin-top: 10px; color: #555; }
+  .run-chip {
+    border: 1px solid var(--line);
+    background: var(--soft);
+    border-radius: 4px;
+    padding: 7px 10px;
+    color: #555;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin: 0 0 24px;
+  }
+  .stat {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--red);
+    border-radius: 6px;
+    padding: 18px 20px;
+    min-height: 96px;
+  }
+  .stat.green { border-top-color: var(--green); }
+  .stat.amber { border-top-color: var(--amber); }
+  .stat.blue { border-top-color: var(--blue); }
+  .stat .value {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 34px;
+    line-height: 1;
+    color: var(--red);
+    font-weight: 700;
+  }
+  .stat.green .value { color: var(--green); }
+  .stat.amber .value { color: var(--amber); }
+  .stat.blue .value { color: var(--blue); }
+  .stat .label { margin-top: 8px; color: #666; font-weight: 800; font-size: 13px; }
+  .insight {
+    background: #eff6ff;
+    border: 1px solid #b7d4ff;
+    border-left: 4px solid var(--blue);
+    border-radius: 6px;
+    padding: 16px 18px;
+    margin: 0 0 24px;
+    color: #183052;
+  }
+  .breakouts { margin: 0 0 24px; }
+  .breakout-card {
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--red);
+    border-radius: 6px;
+    background: var(--surface);
+    padding: 10px 14px;
+    margin: 0 0 8px;
+  }
+  .breakout-card .term {
+    display: block;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    color: var(--muted);
+    margin-bottom: 3px;
+  }
+  .breakout-card .headline { font-size: 15px; font-weight: 600; line-height: 1.4; color: var(--ink); }
+  .breakout-card .headline a { color: inherit; text-decoration: none; }
+  .breakout-card .headline a:hover { text-decoration: underline; }
+  .breakout-card .source { color: #666; font-size: 11px; font-weight: 700; margin-left: 6px; }
+  .sourced-badge {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 6px;
+    padding: 1px 6px;
+    border-radius: 4px;
+    border: 1px solid var(--green);
+    color: var(--green);
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+    white-space: nowrap;
+  }
+  .seed-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 12px;
+  }
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    min-height: 20px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    border: 1px solid #9fc2ff;
+    background: #dbeafe;
+    color: #1457d9;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  .toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 0 0 12px;
+  }
+  .section-title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .filters { display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end; }
+  .filter-btn {
+    appearance: none;
+    border: 1px solid var(--line);
+    background: #fff;
+    color: #555;
+    border-radius: 4px;
+    padding: 5px 9px;
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+  }
+  .filter-btn.active, .filter-btn:hover {
+    border-color: #9fc2ff;
+    background: #eff6ff;
+    color: #1457d9;
+  }
+  .table-shell {
+    overflow-x: auto;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+  }
+  table {
+    width: 100%;
+    min-width: 1060px;
+    border-collapse: collapse;
+  }
+  th {
+    background: var(--soft);
+    border-bottom: 1px solid var(--line);
+    color: #6a6a6a;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 11px 12px;
+  }
+  td {
+    border-bottom: 1px solid #e7e5e0;
+    padding: 12px;
+    vertical-align: top;
+    font-size: 13px;
+  }
+  tr.topic-row { cursor: pointer; }
+  tr.topic-row:hover td { background: #fcfcfb; }
+  .rank {
+    color: #777;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-weight: 800;
+    width: 44px;
+  }
+  .topic-title { font-weight: 800; color: #202020; }
+  .topic-sub { color: #606060; font-size: 12px; margin-top: 4px; }
+  .similar-toggle { margin-top: 6px; }
+  .similar-toggle summary {
+    cursor: pointer;
+    list-style: none;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--blue);
+    text-transform: uppercase;
+    letter-spacing: .02em;
+  }
+  .similar-toggle summary::-webkit-details-marker { display: none; }
+  .similar-toggle summary::before { content: "▸ "; }
+  .similar-toggle[open] summary::before { content: "▾ "; }
+  .similar-list { margin: 6px 0 0; padding: 0 0 0 4px; list-style: none; }
+  .similar-list li {
+    padding: 4px 0;
+    border-top: 1px dashed var(--line);
+    font-size: 12px;
+    color: #444;
+  }
+  .similar-list .badge { transform: scale(0.85); margin-right: 4px; }
+  .num {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-weight: 800;
+    color: #2b2b2b;
+    display: inline-block;
+    min-width: 28px;
+  }
+  .mini-bar {
+    display: inline-block;
+    width: 62px;
+    height: 5px;
+    background: #e4e1dc;
+    border-radius: 10px;
+    margin-left: 8px;
+    vertical-align: middle;
+    overflow: hidden;
+  }
+  .mini-bar span { display: block; height: 100%; border-radius: 10px; }
+  .radar span { background: var(--red); }
+  .emerge span { background: var(--green); }
+  .velocity span { background: var(--blue); }
+  .opportunity span { background: var(--amber); }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    min-height: 22px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .badge.breakout { color: #dc2626; background: #fff1f1; border: 1px solid #ffa6a6; }
+  .badge.emerging { color: #c26a00; background: #fff8e6; border: 1px solid #f4be4a; }
+  .badge.rising { color: #1457d9; background: #eff6ff; border: 1px solid #9fc2ff; }
+  .badge.watch { color: #6b7280; background: #f4f4f5; border: 1px solid #d4d4d8; }
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 4px 4px 0;
+    padding: 2px 7px;
+    min-height: 22px;
+    border-radius: 4px;
+    border: 1px solid #b7d4ff;
+    background: #eff6ff;
+    color: #1457d9;
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .detail-row[hidden] { display: none; }
+  .detail-row td {
+    background: #fbfbf9;
+    padding: 0;
+  }
+  .detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    padding: 16px 20px 18px 56px;
+    border-top: 1px solid #eeeae4;
+  }
+  .detail h4 {
+    margin: 0 0 6px;
+    color: #606060;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+  }
+  .detail p { margin: 0; font-size: 13px; color: #2c2c2c; }
+  .spark {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    align-items: end;
+    gap: 2px;
+    width: 96px;
+    height: 30px;
+  }
+  .spark span {
+    display: block;
+    background: #cf2f32;
+    min-height: 2px;
+    border-radius: 2px 2px 0 0;
+  }
+  .rejected { margin-top: 28px; }
+  .rejected > summary {
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+  .rejected > summary::-webkit-details-marker { display: none; }
+  .rejected > summary::before {
+    content: "▸";
+    color: var(--muted);
+    font-size: 20px;
+    line-height: 1;
+    transition: transform .15s ease;
+    display: inline-block;
+  }
+  .rejected[open] > summary::before { transform: rotate(90deg); }
+  .rejected > .table-shell { margin-top: 12px; }
+  .table-hint { margin: 8px 2px 0; font-size: 12px; color: var(--muted); }
+  .empty { padding: 28px; text-align: center; color: var(--muted); }
+  @media (max-width: 820px) {
+    .wrap { padding: 24px 16px 44px; }
+    .masthead { display: block; }
+    .run-chip { display: inline-block; margin-top: 18px; white-space: normal; }
+    .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .toolbar { align-items: flex-start; flex-direction: column; }
+    .filters { justify-content: flex-start; }
+    .detail { grid-template-columns: 1fr; padding-left: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="topbar"><span class="mark"><span></span><span></span><span></span><span></span></span>Google Trend Radar</div>
+<main class="wrap">
+  <header class="masthead">
+    <div>
+      <h1><span id="topic-title">Trend</span> Radar</h1>
+      <div class="dek" id="dek"></div>
+    </div>
+    <div class="run-chip" id="run-meta"></div>
+  </header>
+
+  <section class="stats" id="stats"></section>
+
+  <section class="insight">
+    <div><span class="pill">Method</span></div>
+    <div id="method-copy" style="margin-top:10px;"></div>
+    <div class="seed-list" id="seed-list"></div>
+  </section>
+
+  <section class="breakouts" id="breakouts-section" hidden>
+    <div class="toolbar"><div class="section-title">Real-Time Breakouts — Why Now</div></div>
+    <div id="breakouts-list"></div>
+  </section>
+
+  <section>
+    <div class="toolbar">
+      <div class="section-title" id="radar-title">Trend Radar</div>
+      <div class="filters" id="filters"></div>
+    </div>
+    <div class="table-shell">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Trend</th>
+            <th>Stage</th>
+            <th>Radar</th>
+            <th>Signals</th>
+          </tr>
+        </thead>
+        <tbody id="topic-rows"></tbody>
+      </table>
+      <div class="empty" id="empty" hidden>No trends cleared the radar threshold.</div>
+    </div>
+    <p class="table-hint">Click a row for emergence/velocity/opportunity, interest history, seed terms, and confidence.</p>
+  </section>
+
+  <details class="rejected" id="rejected-section" hidden>
+    <summary class="toolbar"><div class="section-title">Rejected Or Weak Signals</div></summary>
+    <div class="table-shell">
+      <table>
+        <thead><tr><th>Topic</th><th>Reason</th><th>Seed</th></tr></thead>
+        <tbody id="rejected-rows"></tbody>
+      </table>
+    </div>
+  </details>
+</main>
+
+<script type="application/json" id="radar-json">{
+  "run_date": "2026-08-24",
+  "generated_at": "2026-08-24T14:02:19",
+  "topic": "beauty",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "beauty",
+    "skincare",
+    "makeup",
+    "haircare",
+    "fragrance",
+    "clean beauty",
+    "retinol",
+    "niacinamide",
+    "peptides",
+    "hyaluronic acid",
+    "skin barrier",
+    "skin cycling",
+    "glass skin",
+    "slugging",
+    "scalp care",
+    "SPF",
+    "sunscreen",
+    "K-beauty",
+    "hair loss",
+    "acne treatment",
+    "nail care",
+    "beauty trends",
+    "beauty products",
+    "beauty news",
+    "connor storrie",
+    "jessica alba"
+  ],
+  "trending_now_terms_used": [
+    "connor storrie",
+    "jessica alba"
+  ],
+  "trending_now_context": [
+    {
+      "query": "connor storrie",
+      "headline": "Connor Storrie Cuts Off Signature Curls Amid ‘Heated Rivalry’ Season 2 Filming",
+      "source": "IMDb",
+      "link": "https://www.imdb.com/news/ni65984851/?ref_=nmnw_art_perm"
+    },
+    {
+      "query": "jessica alba",
+      "headline": "Jessica Alba Just Made a Sweatshirt Look Surprisingly Fashionable — Try Off-the-Shoulder Tops from $15",
+      "source": "People.com",
+      "link": "https://people.com/jessica-alba-off-the-shoulder-top-amazon-august-2026-12025901"
+    }
+  ],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 26,
+    "total_reviewed": 80,
+    "total_retained": 17,
+    "total_rejected": 57,
+    "breakouts": 4,
+    "emerging": 5,
+    "rising": 1,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "topic": "connor storrie haircut",
+      "trend_stage": "emerging",
+      "urgency": "this_week",
+      "radar_score": 77,
+      "emergence_score": 91,
+      "velocity_score": 45,
+      "confidence_score": 100,
+      "saturation_score": 0,
+      "opportunity_score": 95,
+      "confidence": "high",
+      "rising_label": "+2050%",
+      "latest_interest": 6,
+      "peak_interest": 6,
+      "slope": 6,
+      "acceleration": 0,
+      "seed_terms": [
+        "connor storrie"
+      ],
+      "discovery_sources": [
+        "rising query",
+        "trending_now"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +2050%; interest moved from 0 to 6; found through rising query, trending_now",
+      "recommended_action": "Build an angle this week and monitor the next 24-48 hours.",
+      "similar": [
+        {
+          "topic": "connor storrie hairstyle inspiration",
+          "trend_stage": "emerging",
+          "radar_score": 75,
+          "why_now": "Google Trends labels it +3200%; interest moved from 0 to 0; found through rising query, trending_now"
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "topic": "holafly us states natural beauty",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 66,
+      "emergence_score": 82,
+      "velocity_score": 39,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 43,
+      "slope": 0,
+      "acceleration": -3,
+      "seed_terms": [
+        "beauty"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        29,
+        25,
+        21,
+        23,
+        24,
+        30,
+        16,
+        21,
+        10,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        43,
+        22,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        10,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 3,
+      "topic": "yuaia haircare",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 66,
+      "emergence_score": 82,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 36,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "haircare"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        36,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 4,
+      "topic": "human zoo bottle fragrance",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 66,
+      "emergence_score": 82,
+      "velocity_score": 39,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 40,
+      "slope": 0,
+      "acceleration": -3,
+      "seed_terms": [
+        "fragrance"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        37,
+        40,
+        31,
+        32,
+        21,
+        17,
+        23,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        13,
+        9,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing.",
+      "similar": [
+        {
+          "topic": "human zoo fragrance",
+          "trend_stage": "breakout",
+          "radar_score": 65,
+          "why_now": "Google Trends labels it Breakout; interest moved from 0 to 0; found through rising query"
+        },
+        {
+          "topic": "human race skincare",
+          "trend_stage": "emerging",
+          "radar_score": 58,
+          "why_now": "Google Trends labels it +600%; interest moved from 0 to 0; found through rising query"
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "topic": "allure fall fragrance trends",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 66,
+      "emergence_score": 82,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 47,
+      "slope": 0,
+      "acceleration": 2,
+      "seed_terms": [
+        "fragrance"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        13,
+        21,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        45,
+        36,
+        47,
+        17,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 6,
+      "topic": "ufna niacinamide",
+      "trend_stage": "emerging",
+      "urgency": "this_week",
+      "radar_score": 66,
+      "emergence_score": 82,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "+2200%",
+      "latest_interest": 0,
+      "peak_interest": 37,
+      "slope": 0,
+      "acceleration": -1,
+      "seed_terms": [
+        "niacinamide"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        37,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        18,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {
+        "ingredients": [
+          "niacinamide"
+        ]
+      },
+      "why_now": "Google Trends labels it +2200%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Build an angle this week and monitor the next 24-48 hours."
+    },
+    {
+      "rank": 7,
+      "topic": "scalp massager",
+      "trend_stage": "emerging",
+      "urgency": "this_week",
+      "radar_score": 63,
+      "emergence_score": 79,
+      "velocity_score": 35,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 87,
+      "confidence": "high",
+      "rising_label": "+1200%",
+      "latest_interest": 0,
+      "peak_interest": 100,
+      "slope": 0,
+      "acceleration": -19,
+      "seed_terms": [
+        "scalp care"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        12,
+        7,
+        12,
+        25,
+        42,
+        30,
+        33,
+        32,
+        46,
+        36,
+        20,
+        17,
+        26,
+        7,
+        57,
+        58,
+        0,
+        100,
+        87,
+        0,
+        68,
+        40,
+        34,
+        23,
+        25,
+        0,
+        23,
+        39,
+        47,
+        44,
+        60,
+        65,
+        55,
+        67,
+        62,
+        6,
+        5,
+        7,
+        0,
+        0,
+        32,
+        97,
+        0,
+        0,
+        33,
+        0,
+        13,
+        11,
+        0,
+        9,
+        15,
+        36,
+        51,
+        65,
+        99,
+        60,
+        4,
+        0,
+        6,
+        4,
+        0,
+        9,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        3,
+        3,
+        3,
+        0,
+        0,
+        5,
+        0,
+        0,
+        0,
+        5,
+        9,
+        7,
+        6,
+        0,
+        0,
+        19,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        4,
+        3,
+        4,
+        0,
+        0,
+        0,
+        0,
+        4,
+        0,
+        6,
+        0,
+        7,
+        6,
+        0,
+        0,
+        12,
+        17,
+        0,
+        0,
+        0,
+        0,
+        9,
+        7,
+        0,
+        5,
+        5,
+        5,
+        6,
+        7,
+        3,
+        5,
+        6,
+        4,
+        5,
+        5,
+        5,
+        9,
+        10,
+        14,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        7,
+        0,
+        0,
+        0,
+        4,
+        0,
+        0,
+        3,
+        5,
+        5,
+        4,
+        5,
+        5,
+        4,
+        7,
+        8,
+        0,
+        14,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +1200%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Build an angle this week and monitor the next 24-48 hours."
+    },
+    {
+      "rank": 8,
+      "topic": "hair care comb",
+      "trend_stage": "emerging",
+      "urgency": "this_week",
+      "radar_score": 63,
+      "emergence_score": 78,
+      "velocity_score": 36,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 87,
+      "confidence": "high",
+      "rising_label": "+950%",
+      "latest_interest": 0,
+      "peak_interest": 100,
+      "slope": 0,
+      "acceleration": -14,
+      "seed_terms": [
+        "scalp care"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        25,
+        46,
+        37,
+        31,
+        37,
+        55,
+        33,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        96,
+        0,
+        49,
+        0,
+        0,
+        0,
+        0,
+        32,
+        59,
+        45,
+        58,
+        61,
+        44,
+        60,
+        44,
+        0,
+        0,
+        0,
+        0,
+        0,
+        100,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        18,
+        35,
+        41,
+        67,
+        73,
+        59,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        24,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +950%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Build an angle this week and monitor the next 24-48 hours."
+    },
+    {
+      "rank": 9,
+      "topic": "cvs coraline makeup",
+      "trend_stage": "emerging",
+      "urgency": "this_week",
+      "radar_score": 56,
+      "emergence_score": 63,
+      "velocity_score": 35,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 78,
+      "confidence": "high",
+      "rising_label": "+600%",
+      "latest_interest": 0,
+      "peak_interest": 29,
+      "slope": -7,
+      "acceleration": -4,
+      "seed_terms": [
+        "makeup"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        7,
+        0,
+        6,
+        9,
+        10,
+        8,
+        0,
+        13,
+        12,
+        15,
+        18,
+        12,
+        11,
+        9,
+        10,
+        20,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        11,
+        0,
+        9,
+        6,
+        6,
+        7,
+        0,
+        5,
+        7,
+        11,
+        8,
+        11,
+        9,
+        12,
+        11,
+        10,
+        0,
+        0,
+        29,
+        0,
+        0,
+        0,
+        0,
+        0,
+        8,
+        7,
+        7,
+        8,
+        7,
+        9,
+        6,
+        6,
+        8,
+        8,
+        9,
+        12,
+        8,
+        0,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        0,
+        0,
+        8,
+        0,
+        0,
+        0,
+        0,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6,
+        0,
+        7,
+        7,
+        7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        20,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +600%; interest moved from 7 to 0; found through rising query",
+      "recommended_action": "Build an angle this week and monitor the next 24-48 hours."
+    },
+    {
+      "rank": 10,
+      "topic": "21 days of beauty",
+      "trend_stage": "rising",
+      "urgency": "monitor",
+      "radar_score": 55,
+      "emergence_score": 45,
+      "velocity_score": 57,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 67,
+      "confidence": "high",
+      "rising_label": "+450%",
+      "latest_interest": 43,
+      "peak_interest": 100,
+      "slope": 17,
+      "acceleration": -2,
+      "seed_terms": [
+        "beauty"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        26,
+        20,
+        22,
+        16,
+        21,
+        18,
+        23,
+        33,
+        23,
+        42,
+        48,
+        62,
+        92,
+        94,
+        75,
+        98,
+        63,
+        67,
+        65,
+        50,
+        81,
+        89,
+        60,
+        62,
+        52,
+        42,
+        41,
+        33,
+        31,
+        30,
+        24,
+        26,
+        22,
+        29,
+        50,
+        57,
+        64,
+        84,
+        83,
+        91,
+        85,
+        67,
+        52,
+        89,
+        61,
+        81,
+        66,
+        68,
+        45,
+        43,
+        37,
+        49,
+        37,
+        41,
+        34,
+        36,
+        40,
+        41,
+        44,
+        48,
+        59,
+        55,
+        70,
+        58,
+        66,
+        76,
+        49,
+        51,
+        65,
+        79,
+        60,
+        56,
+        43,
+        54,
+        42,
+        36,
+        41,
+        41,
+        35,
+        36,
+        37,
+        35,
+        49,
+        49,
+        53,
+        74,
+        100,
+        81,
+        51,
+        39,
+        32,
+        37,
+        58,
+        60,
+        53,
+        42,
+        42,
+        38,
+        38,
+        31,
+        37,
+        38,
+        33,
+        36,
+        33,
+        33,
+        43,
+        39,
+        39,
+        47,
+        45,
+        55,
+        31,
+        49,
+        0,
+        36,
+        33,
+        39,
+        49,
+        47,
+        51,
+        34,
+        43,
+        25,
+        36,
+        35,
+        38,
+        33,
+        34,
+        34,
+        30,
+        44,
+        71,
+        62,
+        57,
+        67,
+        70,
+        78,
+        46,
+        56,
+        57,
+        56,
+        85,
+        80,
+        72,
+        65,
+        59,
+        56,
+        89,
+        77,
+        58,
+        56,
+        57,
+        54,
+        48,
+        43,
+        56,
+        60,
+        60,
+        68,
+        64,
+        55,
+        39,
+        36,
+        50,
+        39,
+        43
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +450%; interest moved from 26 to 43; found through rising query",
+      "recommended_action": "Track as a developing query and compare against existing coverage.",
+      "similar": [
+        {
+          "topic": "21 days of beauty ulta",
+          "trend_stage": "watch",
+          "radar_score": 53,
+          "why_now": "Google Trends labels it +450%; interest moved from 27 to 34; found through rising query"
+        },
+        {
+          "topic": "21 days of beauty ulta 2026",
+          "trend_stage": "watch",
+          "radar_score": 50,
+          "why_now": "Google Trends labels it +350%; interest moved from 23 to 24; found through rising query"
+        }
+      ]
+    },
+    {
+      "rank": 11,
+      "topic": "kkw beauty",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 53,
+      "emergence_score": 52,
+      "velocity_score": 41,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 71,
+      "confidence": "high",
+      "rising_label": "+350%",
+      "latest_interest": 0,
+      "peak_interest": 43,
+      "slope": 0,
+      "acceleration": 4,
+      "seed_terms": [
+        "beauty"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        16,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        14,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        7,
+        0,
+        9,
+        14,
+        20,
+        19,
+        14,
+        0,
+        36,
+        0,
+        43,
+        0,
+        0,
+        0,
+        26,
+        0,
+        13,
+        12,
+        0,
+        0,
+        12,
+        12,
+        11,
+        10,
+        7,
+        0,
+        8,
+        0,
+        13,
+        15,
+        17,
+        23,
+        29,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +350%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it."
+    },
+    {
+      "rank": 12,
+      "topic": "glamfox rice niacinamide cream",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 53,
+      "emergence_score": 53,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 72,
+      "confidence": "high",
+      "rising_label": "+350%",
+      "latest_interest": 0,
+      "peak_interest": 21,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "niacinamide"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        14,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        21,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {
+        "ingredients": [
+          "niacinamide"
+        ]
+      },
+      "why_now": "Google Trends labels it +350%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it."
+    },
+    {
+      "rank": 13,
+      "topic": "humanrace skincare",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 52,
+      "emergence_score": 50,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 70,
+      "confidence": "high",
+      "rising_label": "+300%",
+      "latest_interest": 0,
+      "peak_interest": 39,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "skincare"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        39,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +300%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it."
+    },
+    {
+      "rank": 14,
+      "topic": "txa 6 niacinamide 10 retinal serum",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 52,
+      "emergence_score": 50,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 70,
+      "confidence": "high",
+      "rising_label": "+300%",
+      "latest_interest": 0,
+      "peak_interest": 100,
+      "slope": 0,
+      "acceleration": -1,
+      "seed_terms": [
+        "niacinamide"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        100,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        50,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {
+        "ingredients": [
+          "niacinamide"
+        ]
+      },
+      "why_now": "Google Trends labels it +300%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it."
+    },
+    {
+      "rank": 15,
+      "topic": "weleda skin food",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 52,
+      "emergence_score": 50,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 70,
+      "confidence": "high",
+      "rising_label": "+300%",
+      "latest_interest": 0,
+      "peak_interest": 50,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "skin barrier"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        32,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        50,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        40,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        42,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        44,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +300%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it."
+    },
+    {
+      "rank": 16,
+      "topic": "new hair loss drug",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 52,
+      "emergence_score": 50,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 70,
+      "confidence": "high",
+      "rising_label": "+300%",
+      "latest_interest": 0,
+      "peak_interest": 16,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "hair loss"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        10,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        16,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {
+        "concerns": [
+          "hair loss"
+        ]
+      },
+      "why_now": "Google Trends labels it +300%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it."
+    },
+    {
+      "rank": 17,
+      "topic": "beauty brands salon",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 50,
+      "emergence_score": 46,
+      "velocity_score": 42,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 68,
+      "confidence": "high",
+      "rising_label": "+250%",
+      "latest_interest": 0,
+      "peak_interest": 95,
+      "slope": 0,
+      "acceleration": 9,
+      "seed_terms": [
+        "beauty"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        12,
+        0,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        12,
+        12,
+        11,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        16,
+        34,
+        41,
+        61,
+        76,
+        69,
+        71,
+        29,
+        23,
+        16,
+        15,
+        9,
+        9,
+        6,
+        0,
+        0,
+        8,
+        0,
+        6,
+        9,
+        11,
+        12,
+        14,
+        21,
+        18,
+        28,
+        28,
+        48,
+        77,
+        76,
+        50,
+        22,
+        19,
+        13,
+        12,
+        18,
+        9,
+        7,
+        0,
+        9,
+        0,
+        7,
+        8,
+        11,
+        10,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        59,
+        95,
+        41,
+        0,
+        16,
+        11,
+        0,
+        8,
+        8,
+        0,
+        0,
+        9,
+        9,
+        0,
+        14,
+        16,
+        8,
+        13,
+        14,
+        15,
+        19,
+        24,
+        40,
+        38,
+        54,
+        43,
+        77,
+        28,
+        20,
+        18,
+        14,
+        17,
+        12,
+        7,
+        12,
+        11,
+        10,
+        12,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +250%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it.",
+      "similar": [
+        {
+          "topic": "beauty brands coupon",
+          "trend_stage": "watch",
+          "radar_score": 50,
+          "why_now": "Google Trends labels it +250%; interest moved from 0 to 0; found through rising query"
+        }
+      ]
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "human zoo perfume",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fragrance"
+      ]
+    },
+    {
+      "topic": "tatcha the essence",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "clean beauty"
+      ]
+    },
+    {
+      "topic": "la roche-posay toleriane double repair face moisturizer",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skin barrier"
+      ]
+    },
+    {
+      "topic": "sungboon editor",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skin barrier"
+      ]
+    },
+    {
+      "topic": "zeroid intensive cream",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skin barrier"
+      ]
+    },
+    {
+      "topic": "gardening",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skin cycling"
+      ]
+    },
+    {
+      "topic": "camping",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skin cycling"
+      ]
+    },
+    {
+      "topic": "hospitals",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skin cycling"
+      ]
+    },
+    {
+      "topic": "baking",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skin cycling"
+      ]
+    },
+    {
+      "topic": "all chemicals in the lab are to be considered dangerous",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "glass skin"
+      ]
+    },
+    {
+      "topic": "healthy recipes",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "beauty news"
+      ]
+    },
+    {
+      "topic": "air fryer",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "beauty news"
+      ]
+    },
+    {
+      "topic": "book recommendations",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "beauty news"
+      ]
+    },
+    {
+      "topic": "gardening ideas",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "beauty news"
+      ]
+    },
+    {
+      "topic": "freevee",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "beauty news"
+      ]
+    },
+    {
+      "topic": "connor storrie buzz cut",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "connor storrie"
+      ]
+    },
+    {
+      "topic": "erling haaland",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "connor storrie"
+      ]
+    },
+    {
+      "topic": "gold derby tv awards 2026",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "connor storrie"
+      ]
+    },
+    {
+      "topic": "sam reid",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "connor storrie"
+      ]
+    },
+    {
+      "topic": "shane hollander actor",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "connor storrie"
+      ]
+    },
+    {
+      "topic": "christina chang",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "connor storrie"
+      ]
+    },
+    {
+      "topic": "roll bounce",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "jessica alba"
+      ]
+    },
+    {
+      "topic": "olay regenerist micro-sculpting cream",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "niacinamide"
+      ]
+    },
+    {
+      "topic": "jessica alba tattoos",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "jessica alba"
+      ]
+    },
+    {
+      "topic": "destination human zoo perfume",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fragrance"
+      ]
+    },
+    {
+      "topic": "did connor storrie learn russian for heated rivalry",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "connor storrie"
+      ]
+    },
+    {
+      "topic": "connor storrie birthplace",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "connor storrie"
+      ]
+    },
+    {
+      "topic": "skepta",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "jessica alba"
+      ]
+    },
+    {
+      "topic": "jessica alba tattoo",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "jessica alba"
+      ]
+    },
+    {
+      "topic": "connor storrie shaved head",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "connor storrie"
+      ]
+    },
+    {
+      "topic": "connor storrie saint laurent campaign",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "connor storrie"
+      ]
+    },
+    {
+      "topic": "jessica alba daughter",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "jessica alba"
+      ]
+    },
+    {
+      "topic": "jessica bowie",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "jessica alba"
+      ]
+    },
+    {
+      "topic": "jessica pegula",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "jessica alba"
+      ]
+    },
+    {
+      "topic": "versed rich barrier cream",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "3m cavilon durable barrier cream",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "pat mcgrath glass skin setting spray",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "kimoco glass skin",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "consumer reports k-beauty sunscreen test",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "hair loss elastin protein research",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "funny dog nail clipping video",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "nail care baker la",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "contemporary vanilla fragrance trends",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "dua lipa beauty evolution photos",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "elizabeth taylor fragrance and confidence",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "american sciences peptides",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "anthemy makeup",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "beauty trends for 2015",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "icon skincare",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "coraline makeup",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "bouf haircare",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "ready 24 skincare",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "how do you clean a beauty blender",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "does tresemme shampoo cause hair loss",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "davines essential haircare",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "ulta 21 days of beauty fall 2026",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "coraline makeup collection",
+      "reason": "Weak radar score (44)"
+    }
+  ]
+}</script>
+<script>
+function readRadarData() {
+  const raw = document.getElementById('radar-json').textContent.trim();
+  if (!raw || raw === '__RADAR_' + 'DATA__') {
+    return {
+      run_date: '',
+      generated_at: '',
+      topic: 'Topic',
+      geo: 'US',
+      date_window: 'now 7-d',
+      methodology: 'Dashboard template preview.',
+      summary: { total_reviewed: 0, total_retained: 0, total_rejected: 0, breakouts: 0, emerging: 0, notes: '' },
+      candidates: [],
+      rejected: []
+    };
+  }
+  return JSON.parse(raw);
+}
+
+const D = readRadarData();
+const candidates = Array.isArray(D.candidates) ? D.candidates : [];
+const rejected = Array.isArray(D.rejected) ? D.rejected : [];
+const summary = D.summary || {};
+const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({
+  '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+}[ch]));
+const clamp = n => Math.max(0, Math.min(100, Number(n) || 0));
+const stageClass = value => ['breakout', 'emerging', 'rising', 'watch'].includes(value) ? value : 'watch';
+
+document.getElementById('topic-title').textContent = D.topic || 'Trend';
+document.getElementById('dek').textContent = `${D.geo || 'US'} · ${D.date_window || 'now 7-d'} · ${D.run_date || ''}`;
+document.getElementById('run-meta').textContent = `Generated: ${(D.generated_at || '').replace('T', ' ')} | retained ${candidates.length}`;
+document.getElementById('method-copy').textContent = `${D.methodology}. ${summary.notes || ''}`;
+document.getElementById('radar-title').textContent = `Trend Radar — ${candidates.length} retained`;
+document.getElementById('seed-list').innerHTML = (Array.isArray(D.seed_terms) ? D.seed_terms : [])
+  .map(seed => `<span class="chip">${esc(seed)}</span>`)
+  .join('');
+
+const breakouts = Array.isArray(D.trending_now_context) ? D.trending_now_context : [];
+if (breakouts.length) {
+  document.getElementById('breakouts-section').hidden = false;
+  document.getElementById('breakouts-list').innerHTML = breakouts.map(b => {
+    // Only render as a clickable link if it's actually http(s) - external
+    // API data shouldn't be trusted enough to drop straight into an href.
+    const safeLink = /^https?:\/\//i.test(b.link || '') ? b.link : '';
+    const headline = safeLink
+      ? `<a href="${esc(safeLink)}" target="_blank" rel="noopener noreferrer">${esc(b.headline)}</a>`
+      : esc(b.headline);
+    return `<div class="breakout-card">
+      <span class="term">${esc(b.query)}</span>
+      <div class="headline">${headline}${b.source ? ` <span class="source">— ${esc(b.source)}</span>` : ''}</div>
+    </div>`;
+  }).join('');
+}
+
+// Trending Now terms with a confirmed news story (i.e. present in
+// trending_now_context) are a stronger signal than a bare Google Trends
+// spike - flag candidates traced back to one of them.
+const groundedSeeds = new Set(breakouts.map(b => String(b.query || '').toLowerCase().trim()));
+function isGrounded(seedTerms) {
+  return (Array.isArray(seedTerms) ? seedTerms : []).some(s => groundedSeeds.has(String(s).toLowerCase().trim()));
+}
+
+const statData = [
+  { label: 'Signals Reviewed', value: summary.total_reviewed ?? 0, cls: '' },
+  { label: 'Retained Trends', value: candidates.length, cls: 'green' },
+  { label: 'Breakouts', value: summary.breakouts ?? 0, cls: 'amber' },
+  { label: 'Emerging', value: summary.emerging ?? 0, cls: 'blue' },
+];
+document.getElementById('stats').innerHTML = statData.map(s => `
+  <div class="stat ${s.cls}">
+    <div class="value">${esc(s.value)}</div>
+    <div class="label">${esc(s.label)}</div>
+  </div>
+`).join('');
+
+const filters = ['All', 'breakout', 'emerging', 'rising', 'watch'];
+document.getElementById('filters').innerHTML = filters.map((f, i) =>
+  `<button class="filter-btn ${i === 0 ? 'active' : ''}" data-filter="${esc(f)}">${esc(f)}</button>`
+).join('');
+
+function scoreCell(value, cls) {
+  const score = clamp(value);
+  return `<span class="num">${score}</span><span class="mini-bar ${cls}"><span style="width:${score}%"></span></span>`;
+}
+
+function sparkline(scores) {
+  const vals = Array.isArray(scores) ? scores.slice(-8) : [];
+  if (!vals.length) return '<span class="topic-sub">No time series</span>';
+  const max = Math.max(...vals, 1);
+  return `<div class="spark">${vals.map(v => `<span style="height:${Math.max(2, Math.round((v / max) * 30))}px"></span>`).join('')}</div>`;
+}
+
+function chips(values) {
+  return (Array.isArray(values) ? values : []).slice(0, 4).map(value => `<span class="chip">${esc(value)}</span>`).join('');
+}
+
+function tagChips(tags) {
+  const entries = tags && typeof tags === 'object' ? Object.entries(tags) : [];
+  if (!entries.length) return '<span class="topic-sub">No tags matched</span>';
+  return entries.map(([tagType, terms]) => `<span class="chip">${esc(tagType)}: ${esc((terms || []).join(', '))}</span>`).join(' ');
+}
+
+function similarHtml(similar) {
+  if (!Array.isArray(similar) || !similar.length) return '';
+  const items = similar.map(s => {
+    const sStage = stageClass(s.trend_stage);
+    return `<li><span class="badge ${esc(sStage)}">${esc(sStage)}</span> ${esc(s.topic)} <span class="num">${esc(s.radar_score)}</span></li>`;
+  }).join('');
+  return `
+    <details class="similar-toggle">
+      <summary>+${similar.length} similar phrasing${similar.length > 1 ? 's' : ''}</summary>
+      <ul class="similar-list">${items}</ul>
+    </details>
+  `;
+}
+
+function rowHtml(c, i) {
+  const stage = stageClass(c.trend_stage);
+  const lift = c.rising_label || (Number(c.slope) > 0 ? `+${c.slope}` : String(c.slope ?? 0));
+  const sourced = isGrounded(c.seed_terms)
+    ? '<span class="sourced-badge" title="Traced to a Trending Now term with a confirmed news story">Sourced</span>'
+    : '';
+  return `
+    <tr class="topic-row" data-stage="${esc(stage)}" data-detail="${i}">
+      <td class="rank">${String(c.rank || i + 1).padStart(2, '0')}</td>
+      <td>
+        <div class="topic-title">${esc(c.topic)}${sourced}</div>
+        <div class="topic-sub">${esc(c.why_now || '')}</div>
+        ${similarHtml(c.similar)}
+      </td>
+      <td><span class="badge ${esc(stage)}">${esc(stage)}</span></td>
+      <td>${scoreCell(c.radar_score, 'radar')}</td>
+      <td>${chips(c.discovery_sources)}</td>
+    </tr>
+    <tr class="detail-row" data-parent="${i}" hidden>
+      <td colspan="5">
+        <div class="detail">
+          <div><h4>Emergence</h4><p>${scoreCell(c.emergence_score, 'emerge')}</p></div>
+          <div><h4>Velocity</h4><p>${scoreCell(c.velocity_score, 'velocity')}</p></div>
+          <div><h4>Opportunity</h4><p>${scoreCell(c.opportunity_score, 'opportunity')}</p></div>
+          <div><h4>Interest / Lift</h4><p>${sparkline(c.interest_scores)}<span class="num">${esc(lift)}</span></p></div>
+          <div><h4>Recommended Action</h4><p>${esc(c.recommended_action || '')}</p></div>
+          <div><h4>Seed Terms</h4><p>${esc((c.seed_terms || []).join(', ') || 'None')}</p></div>
+          <div><h4>Confidence</h4><p>${esc(c.confidence || 'low')} confidence · score ${esc(c.confidence_score ?? 0)}</p></div>
+          <div><h4>Tags</h4><p>${tagChips(c.tags)}</p></div>
+        </div>
+      </td>
+    </tr>
+  `;
+}
+
+const tbody = document.getElementById('topic-rows');
+tbody.innerHTML = candidates.map(rowHtml).join('');
+document.getElementById('empty').hidden = candidates.length > 0;
+
+tbody.addEventListener('click', event => {
+  if (event.target.closest('.similar-toggle')) return; // its own <details> handles itself
+  const row = event.target.closest('.topic-row');
+  if (!row) return;
+  const detail = tbody.querySelector(`.detail-row[data-parent="${row.dataset.detail}"]`);
+  if (detail) detail.hidden = !detail.hidden;
+});
+
+document.getElementById('filters').addEventListener('click', event => {
+  const btn = event.target.closest('.filter-btn');
+  if (!btn) return;
+  document.querySelectorAll('.filter-btn').forEach(button => button.classList.remove('active'));
+  btn.classList.add('active');
+  const filter = btn.dataset.filter;
+  document.querySelectorAll('.topic-row').forEach(row => {
+    const show = filter === 'All' || row.dataset.stage === filter;
+    row.hidden = !show;
+    const detail = tbody.querySelector(`.detail-row[data-parent="${row.dataset.detail}"]`);
+    if (detail) detail.hidden = true;
+  });
+});
+
+if (rejected.length) {
+  document.getElementById('rejected-section').hidden = false;
+  document.getElementById('rejected-rows').innerHTML = rejected.map(r => `
+    <tr><td>${esc(r.topic)}</td><td>${esc(r.reason)}</td><td>${esc((r.seed_terms || []).join(', '))}</td></tr>
+  `).join('');
+}
+</script>
+</body>
+</html>
