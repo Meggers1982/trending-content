@@ -3,6 +3,44 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-08-25'
+  niche: Health & Wellness
+  signals_reviewed: 153
+  topics_retained: 6
+  topics_rejected: 35
+  p1_count: 1
+  p2_count: 1
+  p3_count: 3
+  p4_count: 1
+  p5_count: 0
+  integrity_flags: 5
+  top_topic: Maryland measles outbreak declared in three counties
+  key_themes:
+  - Maryland measles outbreak declared in three counties
+  - Mount Sinai chemo-free treatment for metastatic breast cancer
+  - 'FDA opens outbreak investigation: E. coli and Salmonella linked to sprouts'
+  - Illicit fentanyl use more than double medical use in the US, Ohio State study finds
+  - Is a wellness drink worth it? Decoding functional beverage labels
+  - What to know before joining a clinical trial
+  tools_used:
+  - serpapi_google_trends
+  - serpapi_google_news
+  - serpapi_google_search
+  tools_unavailable:
+  - reddit_api
+  - social_search
+  - arxiv_search
+  - youtube_api
+  - content_database
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-08-25.html
+  estimated_cost_usd: 0.6472
+  notes: Site URL not configured — competitor-list fallback used for duplicate/SERP-gap context. Reddit/social
+    collectors not injected this run; search velocity sourced entirely from Google Trends prefetch. Recall
+    fatigue is a live editorial risk — 6 of the last 6 days' recent-coverage list contain FDA recalls,
+    and the 8/24 recall-surge explainer already covers the meta-question. Only the sprouts outbreak cleared
+    as genuinely distinct. Psychedelic-medicine research is recurring (Oregon 8/20 → UMass Chan 8/25)
+    — flagged for staleness watch. No Reddit/X data this run; confidence capped at medium on several single-source
+    institutional items.
 - run_date: '2026-08-24'
   niche: Health & Wellness
   signals_reviewed: 144

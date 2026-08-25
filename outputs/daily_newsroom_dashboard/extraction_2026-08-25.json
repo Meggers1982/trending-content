@@ -1,0 +1,407 @@
+{
+  "run_date": "2026-08-25",
+  "niche": "Health & Wellness",
+  "signal_summary": {
+    "total_reviewed": 153,
+    "total_retained": 6,
+    "total_rejected": 147,
+    "tools_active": [
+      "serpapi_google_trends",
+      "serpapi_google_news",
+      "serpapi_google_search"
+    ],
+    "tools_unavailable": [
+      "reddit_api",
+      "social_search",
+      "arxiv_search",
+      "youtube_api",
+      "content_database"
+    ],
+    "notes": "Site URL not configured — competitor-list fallback used for duplicate/SERP-gap context. Reddit/social collectors not injected this run; search velocity sourced entirely from Google Trends prefetch. Recall fatigue is a live editorial risk — 6 of the last 6 days' recent-coverage list contain FDA recalls, and the 8/24 recall-surge explainer already covers the meta-question. Only the sprouts outbreak cleared as genuinely distinct. Psychedelic-medicine research is recurring (Oregon 8/20 → UMass Chan 8/25) — flagged for staleness watch. No Reddit/X data this run; confidence capped at medium on several single-source institutional items."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Maryland measles outbreak declared in three counties",
+      "primary_entity": "Maryland Department of Health",
+      "signal_type": "breaking_news",
+      "allowed_category": "Public health & epidemiology",
+      "trend_strength_score": 68,
+      "opportunity_score": 75,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "source_urls": [
+        "https://health.maryland.gov/newsroom/Pages/Maryland%20Department%20of%20Health%20declares%20measles%20outbreak%20in%20three%20Maryland%20counties.aspx",
+        "https://www.thinkglobalhealth.org/article/vaccine-preventable-disease-a-global-tracker"
+      ],
+      "recommended_angle": "Explain the outbreak in context of broader 2026 measles resurgence and falling vaccination rates — why this is happening now, not just what happened.",
+      "why_now": "MDH declared outbreak 8/24; measles trending nationally as vaccine-preventable disease concern; search interest in 'measles outbreak' spikes fast once local cases confirmed.",
+      "primary_headline": "Measles Outbreak Declared in Three Maryland Counties — What to Know About Symptoms, Risk, and Vaccination",
+      "next_steps": "Publish within 24 hours; update case counts before final copy edit; confirm vaccination status breakdown and live case count directly from MDH.",
+      "integrity_flags": [
+        "Confirm vaccination status breakdown of cases (vaccinated vs. unvaccinated) directly from MDH before publishing — do not assume unvaccinated without sourcing.",
+        "Case count is likely to change; use MDH's live count, not the 8/24 snapshot, at time of publish."
+      ],
+      "trend_score_reason": "Outbreak declaration from tier-2 state health authority; measles is part of broader 2026 vaccine-preventable disease resurgence.",
+      "opportunity_score_reason": "High reader relevance (local to affected region, national vaccine context); clear search intent; timeliness advantage vs. competitor coverage.",
+      "discover_score_reason": "High AI-citation potential — specific named entity (MDH), natural query format, durable through outbreak resolution.",
+      "notes": "Time-sensitive; moderate evidence requirements — public health advisory plus CDC guidance, no peer-reviewed study required.",
+      "fact_check": {
+        "verdict": "minor_issues",
+        "issues": [
+          "The claim that measles search interest 'spikes fast' nationally is not supported by the Google Trends data provided, which does not list measles among trending terms.",
+          "The 'broader 2026 measles resurgence and falling vaccination rates' framing is asserted as context but not directly substantiated by the cited Think Global Health tracker link in the evidence."
+        ],
+        "checked_against": "Maryland.gov MDH outbreak declaration + Think Global Health vaccine-preventable disease tracker in Google News Radar; Google Trends Trending Now/7-day sections"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Mount Sinai chemo-free treatment for metastatic breast cancer",
+      "primary_entity": "Mount Sinai",
+      "signal_type": "study_or_research",
+      "allowed_category": "Chronic disease management",
+      "trend_strength_score": 55,
+      "opportunity_score": 68,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.mountsinai.org/about/newsroom/2026/mount-sinai-study-finds-chemotherapy-free-treatment-shows-promise-for-some-patients-with-metastatic-breast-cancer"
+      ],
+      "recommended_angle": "Lead with what the study actually showed (which patient subgroup, what endpoints) rather than 'chemo-free' headline hook — most competitor coverage will oversimplify.",
+      "why_now": "New institutional announcement (8/23/26), not yet in recent coverage; fits ongoing reader interest in less-toxic cancer treatment options.",
+      "primary_headline": "A Chemotherapy-Free Treatment Is Showing Promise for Some Patients With Metastatic Breast Cancer",
+      "next_steps": "Hold for peer-reviewed/journal citation confirmation before publishing if possible; confirm study design and patient subgroup applicability with lead researcher.",
+      "integrity_flags": [
+        "Confirm whether this is an observational study or randomized controlled trial, and disclose accordingly.",
+        "Clarify which specific molecular/biomarker subtype qualifies for the chemo-free approach — avoid implying broad applicability to all metastatic breast cancer patients."
+      ],
+      "trend_score_reason": "Institutional announcement from tier-1 cancer research center; fits ongoing reader interest in less-toxic oncology options.",
+      "opportunity_score_reason": "Strong reader interest in cancer treatment alternatives; expert validation potential; some competitive advantage if published with proper caveats.",
+      "discover_score_reason": "Good citation potential with named institution plus specific treatment, but needs journal DOI to reach top discover tier.",
+      "notes": "Single-source risk noted. Heavy evidence requirements — treatment claim requires peer-reviewed publication confirmation and trial-design disclosure.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Mount Sinai newsroom article in Google News Radar (medical study category)"
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "short_term",
+      "topic": "FDA opens outbreak investigation: E. coli and Salmonella linked to sprouts",
+      "primary_entity": "FDA",
+      "signal_type": "recall",
+      "allowed_category": "FDA/CDC regulatory updates",
+      "trend_strength_score": 58,
+      "opportunity_score": 62,
+      "discover_score": 3,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "update",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-shiga-toxin-producing-e-coli-salmonella-sprouts-august-2026"
+      ],
+      "recommended_angle": "Frame as active, evolving investigation with clear consumer action steps — distinct pathogen/product from egg and blueberry recalls already covered.",
+      "why_now": "New FDA outbreak investigation opened August 2026; distinct from prior recalls due to specific pathogen and product pairing.",
+      "primary_headline": "FDA Investigates E. coli and Salmonella Outbreak Linked to Sprouts",
+      "next_steps": "Publish as news update (400-500 words); verify case count and implicated brands against FDA.gov at publish time.",
+      "integrity_flags": [
+        "Investigation is ongoing — case count and implicated brands may expand; verify against FDA.gov before publish."
+      ],
+      "trend_score_reason": "Direct FDA outbreak investigation authority; distinct new pathogen/product combination from recent recall coverage.",
+      "opportunity_score_reason": "Immediate consumer relevance; food safety topic with clear action steps; completes recall-coverage diversity.",
+      "discover_score_reason": "Moderate — active investigation with fluid case data; strong primary source but lower discovery longevity than static recalls.",
+      "notes": "Only sprouts outbreak cleared as genuinely new this run; egg/blueberry/ice-pop/lettuce items rejected as existing, absorbed into 8/24 recall-surge explainer.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "FDA.gov outbreak investigation page in Google News Radar (FDA recall health category)"
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Illicit fentanyl use more than double medical use in the US, Ohio State study finds",
+      "primary_entity": "Ohio State University",
+      "signal_type": "data_release",
+      "allowed_category": "Public health & epidemiology",
+      "trend_strength_score": 52,
+      "opportunity_score": 58,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://news.osu.edu/illicit-fentanyl-use-is-more-than-double-medical-use-in-us/"
+      ],
+      "recommended_angle": "Ground the statistic in what it means for overdose-prevention policy and public awareness, not just the number itself.",
+      "why_now": "New research data released 8/24/26; timely for ongoing opioid-policy conversations.",
+      "primary_headline": "Illicit Fentanyl Use Now More Than Double Medical Use in the US, Study Finds",
+      "next_steps": "Develop as data explainer (500-600 words); ground context in policy/prevention implications.",
+      "integrity_flags": [
+        "Clarify data source/methodology (self-report vs. toxicology-based) and avoid implying causation with overdose trends without direct citation."
+      ],
+      "trend_score_reason": "Epidemiological data from institutional research; relevance to ongoing opioid-crisis narrative.",
+      "opportunity_score_reason": "Policy and public-health relevance; addresses reader understanding of fentanyl scale; moderate competitive advantage if methodology clearly explained.",
+      "discover_score_reason": "Moderate — solid institutional source and relevant keywords, but epidemiological data has lower discovery velocity than clinical trials or treatment breakthroughs.",
+      "notes": "Single institutional source; confidence capped at medium due to lack of social/corroborating data sources this run.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Ohio State News article in Google News Radar (medical study category)"
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Is a wellness drink worth it? Decoding functional beverage labels",
+      "primary_entity": "UCLA Health",
+      "signal_type": "audience_pain_point",
+      "allowed_category": "Nutrition and diet science",
+      "trend_strength_score": 52,
+      "opportunity_score": 64,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.uclahealth.org/news/article/wellness-drink-worth-it-decoding-functional-beverage-labels"
+      ],
+      "recommended_angle": "Skeptical/evaluative — most existing coverage of functional beverages is marketing-driven; this fills a genuine evidence-based gap.",
+      "why_now": "UCLA Health guidance piece released 8/24/26; addresses reader confusion around functional beverage claims.",
+      "primary_headline": "Is That Wellness Drink Worth It? How to Actually Read a Functional Beverage Label",
+      "next_steps": "Develop as evaluative guide (600-800 words); emphasize distinction between regulated nutrition claims and unregulated marketing language.",
+      "integrity_flags": [
+        "Distinguish regulated nutrition claims from unregulated marketing language (e.g., 'gut health,' 'immunity boost')."
+      ],
+      "trend_score_reason": "Evidence-based wellness guidance from credible institutional source; addresses mainstream reader confusion about functional beverages.",
+      "opportunity_score_reason": "Strong SEO opportunity ('are functional beverages worth it'); skeptical angle differentiates from competitor coverage; high reader engagement potential.",
+      "discover_score_reason": "Moderate — practical consumer guidance with good search intent, but institutional source limits discoverability vs. broader diet trend coverage.",
+      "notes": "Single source; credible but uncorroborated. No social/Trends amplification detected this run.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "UCLA Health article in Google News Radar (wellness category)"
+      }
+    },
+    {
+      "priority_level": "P4",
+      "publish_timing": "evergreen",
+      "topic": "What to know before joining a clinical trial",
+      "primary_entity": "KFF Health News",
+      "signal_type": "audience_pain_point",
+      "allowed_category": "Medical research & clinical trials",
+      "trend_strength_score": 50,
+      "opportunity_score": 60,
+      "discover_score": 4,
+      "urgency": "evergreen",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://kffhealthnews.org/health-industry/clinical-trials-patients-hhs-easier-advice-on-how-to-enroll-seriously-ill-cancer/"
+      ],
+      "recommended_angle": "Practical how-to for patients navigating enrollment hurdles, especially for serious illness — evergreen with fresh news hook.",
+      "why_now": "KFF Health News guide published 8/19/26; evergreen utility with news peg in HHS trial-enrollment initiatives.",
+      "primary_headline": "Thinking About Joining a Clinical Trial? Here's What to Know First",
+      "next_steps": "Develop as evergreen how-to guide (800-1000 words); suitable for ongoing SEO value and reader utility beyond immediate news cycle.",
+      "integrity_flags": [],
+      "trend_score_reason": "Evergreen how-to from credible health-policy source; modest trend score reflects non-breaking nature.",
+      "opportunity_score_reason": "High evergreen SEO potential; fills reader need for practical trial-enrollment guidance; durable content value.",
+      "discover_score_reason": "Good discovery potential — 'how to join a clinical trial' is high-intent search query with consistent traffic; evergreen format supports sustained AI citation.",
+      "notes": "Single institutional source; no social amplification. Suitable for scheduled publication and long-term SEO value rather than immediate news cycle.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "KFF Health News article in Google News Radar (clinical trial health category)"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "Atrium Health $700M commitment to Morehouse School of Medicine",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Raiders $25M gift to Intermountain Health for Nevada children's hospital",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Corewell Health East nurses ratify first Teamsters contract",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Employer health costs rising — Axios analysis",
+      "reason": "off_category"
+    },
+    {
+      "topic": "New Jersey teacher health insurance premiums increase",
+      "reason": "off_category"
+    },
+    {
+      "topic": "University of Arizona and Gila River med school partnership",
+      "reason": "off_category"
+    },
+    {
+      "topic": "CDC Ebola traveler guidance update",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Moderna Ebola vaccine trial",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "USDA New World Screwworm detections",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Egg salmonella recall",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Blueberry FDA recall",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Ice pops/Outshine fruit bars recall",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Cyclospora lettuce outbreak investigation",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Vitruvias Therapeutics thyroid medication recall",
+      "reason": "unverified_claim"
+    },
+    {
+      "topic": "Stanford molecular glue lymphoma study",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Oregon psilocybin PTSD/depression/anxiety treatment study",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Monteris Medical NeuroBlate brain tumor study",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Senate Health Panel reservations on FDA nominee Heidi Overton",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Curavit and Lindus clinical trial acquisition",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Clinical Trials Arena industry news",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Straits Research clinical trial market sizing report",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Ochsner and Paradigm clinical trial partnership",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Wellness retreat real estate trend",
+      "reason": "off_category"
+    },
+    {
+      "topic": "VA labyrinth wellness activity",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Police wellness-check incident coverage",
+      "reason": "off_category"
+    },
+    {
+      "topic": "New York Times 'Spa Weekend' travel review",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Stargazing wellness travel guide",
+      "reason": "off_category"
+    },
+    {
+      "topic": "UNMC fitness center opening",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Waterfront Wellness Baltimore center",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Wellness stacking psychology article (Yahoo Creators)",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Eric Topol and Deborah Cohen 'Wellness-Industrial Complex' essay",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Nature AI liver malignancy diagnosis study",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "UC Riverside tick-borne antibody therapy study",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Robotic-assisted knee replacement clinical trial",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "UMass Chan psychedelic medication for adjustment disorder study",
+      "reason": "off_category"
+    }
+  ],
+  "fact_check_summary": {
+    "minor_issues": 1,
+    "accurate": 5
+  },
+  "run_cost": {
+    "total_usd": 0.6472,
+    "calls": [
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11727,
+        "output_tokens": 24790,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 40942,
+        "estimated_cost_usd": 0.5606
+      },
+      {
+        "model": "claude-haiku-4-5",
+        "input_tokens": 10102,
+        "output_tokens": 3610,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0282
+      },
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 12362,
+        "output_tokens": 1420,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0584
+      }
+    ]
+  }
+}
