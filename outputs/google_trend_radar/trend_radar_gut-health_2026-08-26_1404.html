@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google Trend Radar</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  :root {
+    --ink: #171717;
+    --text: #2b2b2b;
+    --muted: #696969;
+    --paper: #fbfaf8;
+    --surface: #fff;
+    --soft: #f1f0ec;
+    --line: #dedbd4;
+    --red: #cf2f32;
+    --green: #1f9d55;
+    --amber: #d97706;
+    --blue: #2563eb;
+  }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--paper);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+  .topbar {
+    height: 48px;
+    background: #070707;
+    color: #f7f7f7;
+    display: flex;
+    align-items: center;
+    padding: 0 18px;
+    font-weight: 800;
+  }
+  .mark {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3px;
+  }
+  .mark span { background: #f7f7f7; border-radius: 999px; }
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 32px 28px 56px; }
+  .masthead {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 8px 0 28px;
+  }
+  h1 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 31px;
+    line-height: 1.1;
+    color: var(--ink);
+  }
+  h1 span { color: var(--red); }
+  .dek { margin-top: 10px; color: #555; }
+  .run-chip {
+    border: 1px solid var(--line);
+    background: var(--soft);
+    border-radius: 4px;
+    padding: 7px 10px;
+    color: #555;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin: 0 0 24px;
+  }
+  .stat {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--red);
+    border-radius: 6px;
+    padding: 18px 20px;
+    min-height: 96px;
+  }
+  .stat.green { border-top-color: var(--green); }
+  .stat.amber { border-top-color: var(--amber); }
+  .stat.blue { border-top-color: var(--blue); }
+  .stat .value {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 34px;
+    line-height: 1;
+    color: var(--red);
+    font-weight: 700;
+  }
+  .stat.green .value { color: var(--green); }
+  .stat.amber .value { color: var(--amber); }
+  .stat.blue .value { color: var(--blue); }
+  .stat .label { margin-top: 8px; color: #666; font-weight: 800; font-size: 13px; }
+  .insight {
+    background: #eff6ff;
+    border: 1px solid #b7d4ff;
+    border-left: 4px solid var(--blue);
+    border-radius: 6px;
+    padding: 16px 18px;
+    margin: 0 0 24px;
+    color: #183052;
+  }
+  .breakouts { margin: 0 0 24px; }
+  .breakout-card {
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--red);
+    border-radius: 6px;
+    background: var(--surface);
+    padding: 10px 14px;
+    margin: 0 0 8px;
+  }
+  .breakout-card .term {
+    display: block;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    color: var(--muted);
+    margin-bottom: 3px;
+  }
+  .breakout-card .headline { font-size: 15px; font-weight: 600; line-height: 1.4; color: var(--ink); }
+  .breakout-card .headline a { color: inherit; text-decoration: none; }
+  .breakout-card .headline a:hover { text-decoration: underline; }
+  .breakout-card .source { color: #666; font-size: 11px; font-weight: 700; margin-left: 6px; }
+  .sourced-badge {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 6px;
+    padding: 1px 6px;
+    border-radius: 4px;
+    border: 1px solid var(--green);
+    color: var(--green);
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+    white-space: nowrap;
+  }
+  .seed-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 12px;
+  }
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    min-height: 20px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    border: 1px solid #9fc2ff;
+    background: #dbeafe;
+    color: #1457d9;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  .toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 0 0 12px;
+  }
+  .section-title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .filters { display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end; }
+  .filter-btn {
+    appearance: none;
+    border: 1px solid var(--line);
+    background: #fff;
+    color: #555;
+    border-radius: 4px;
+    padding: 5px 9px;
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+  }
+  .filter-btn.active, .filter-btn:hover {
+    border-color: #9fc2ff;
+    background: #eff6ff;
+    color: #1457d9;
+  }
+  .table-shell {
+    overflow-x: auto;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+  }
+  table {
+    width: 100%;
+    min-width: 1060px;
+    border-collapse: collapse;
+  }
+  th {
+    background: var(--soft);
+    border-bottom: 1px solid var(--line);
+    color: #6a6a6a;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 11px 12px;
+  }
+  td {
+    border-bottom: 1px solid #e7e5e0;
+    padding: 12px;
+    vertical-align: top;
+    font-size: 13px;
+  }
+  tr.topic-row { cursor: pointer; }
+  tr.topic-row:hover td { background: #fcfcfb; }
+  .rank {
+    color: #777;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-weight: 800;
+    width: 44px;
+  }
+  .topic-title { font-weight: 800; color: #202020; }
+  .topic-sub { color: #606060; font-size: 12px; margin-top: 4px; }
+  .similar-toggle { margin-top: 6px; }
+  .similar-toggle summary {
+    cursor: pointer;
+    list-style: none;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--blue);
+    text-transform: uppercase;
+    letter-spacing: .02em;
+  }
+  .similar-toggle summary::-webkit-details-marker { display: none; }
+  .similar-toggle summary::before { content: "▸ "; }
+  .similar-toggle[open] summary::before { content: "▾ "; }
+  .similar-list { margin: 6px 0 0; padding: 0 0 0 4px; list-style: none; }
+  .similar-list li {
+    padding: 4px 0;
+    border-top: 1px dashed var(--line);
+    font-size: 12px;
+    color: #444;
+  }
+  .similar-list .badge { transform: scale(0.85); margin-right: 4px; }
+  .num {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-weight: 800;
+    color: #2b2b2b;
+    display: inline-block;
+    min-width: 28px;
+  }
+  .mini-bar {
+    display: inline-block;
+    width: 62px;
+    height: 5px;
+    background: #e4e1dc;
+    border-radius: 10px;
+    margin-left: 8px;
+    vertical-align: middle;
+    overflow: hidden;
+  }
+  .mini-bar span { display: block; height: 100%; border-radius: 10px; }
+  .radar span { background: var(--red); }
+  .emerge span { background: var(--green); }
+  .velocity span { background: var(--blue); }
+  .opportunity span { background: var(--amber); }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    min-height: 22px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .badge.breakout { color: #dc2626; background: #fff1f1; border: 1px solid #ffa6a6; }
+  .badge.emerging { color: #c26a00; background: #fff8e6; border: 1px solid #f4be4a; }
+  .badge.rising { color: #1457d9; background: #eff6ff; border: 1px solid #9fc2ff; }
+  .badge.watch { color: #6b7280; background: #f4f4f5; border: 1px solid #d4d4d8; }
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 4px 4px 0;
+    padding: 2px 7px;
+    min-height: 22px;
+    border-radius: 4px;
+    border: 1px solid #b7d4ff;
+    background: #eff6ff;
+    color: #1457d9;
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .detail-row[hidden] { display: none; }
+  .detail-row td {
+    background: #fbfbf9;
+    padding: 0;
+  }
+  .detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    padding: 16px 20px 18px 56px;
+    border-top: 1px solid #eeeae4;
+  }
+  .detail h4 {
+    margin: 0 0 6px;
+    color: #606060;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+  }
+  .detail p { margin: 0; font-size: 13px; color: #2c2c2c; }
+  .spark {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    align-items: end;
+    gap: 2px;
+    width: 96px;
+    height: 30px;
+  }
+  .spark span {
+    display: block;
+    background: #cf2f32;
+    min-height: 2px;
+    border-radius: 2px 2px 0 0;
+  }
+  .rejected { margin-top: 28px; }
+  .rejected > summary {
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+  .rejected > summary::-webkit-details-marker { display: none; }
+  .rejected > summary::before {
+    content: "▸";
+    color: var(--muted);
+    font-size: 20px;
+    line-height: 1;
+    transition: transform .15s ease;
+    display: inline-block;
+  }
+  .rejected[open] > summary::before { transform: rotate(90deg); }
+  .rejected > .table-shell { margin-top: 12px; }
+  .table-hint { margin: 8px 2px 0; font-size: 12px; color: var(--muted); }
+  .empty { padding: 28px; text-align: center; color: var(--muted); }
+  @media (max-width: 820px) {
+    .wrap { padding: 24px 16px 44px; }
+    .masthead { display: block; }
+    .run-chip { display: inline-block; margin-top: 18px; white-space: normal; }
+    .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .toolbar { align-items: flex-start; flex-direction: column; }
+    .filters { justify-content: flex-start; }
+    .detail { grid-template-columns: 1fr; padding-left: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="topbar"><span class="mark"><span></span><span></span><span></span><span></span></span>Google Trend Radar</div>
+<main class="wrap">
+  <header class="masthead">
+    <div>
+      <h1><span id="topic-title">Trend</span> Radar</h1>
+      <div class="dek" id="dek"></div>
+    </div>
+    <div class="run-chip" id="run-meta"></div>
+  </header>
+
+  <section class="stats" id="stats"></section>
+
+  <section class="insight">
+    <div><span class="pill">Method</span></div>
+    <div id="method-copy" style="margin-top:10px;"></div>
+    <div class="seed-list" id="seed-list"></div>
+  </section>
+
+  <section class="breakouts" id="breakouts-section" hidden>
+    <div class="toolbar"><div class="section-title">Real-Time Breakouts — Why Now</div></div>
+    <div id="breakouts-list"></div>
+  </section>
+
+  <section>
+    <div class="toolbar">
+      <div class="section-title" id="radar-title">Trend Radar</div>
+      <div class="filters" id="filters"></div>
+    </div>
+    <div class="table-shell">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Trend</th>
+            <th>Stage</th>
+            <th>Radar</th>
+            <th>Signals</th>
+          </tr>
+        </thead>
+        <tbody id="topic-rows"></tbody>
+      </table>
+      <div class="empty" id="empty" hidden>No trends cleared the radar threshold.</div>
+    </div>
+    <p class="table-hint">Click a row for emergence/velocity/opportunity, interest history, seed terms, and confidence.</p>
+  </section>
+
+  <details class="rejected" id="rejected-section" hidden>
+    <summary class="toolbar"><div class="section-title">Rejected Or Weak Signals</div></summary>
+    <div class="table-shell">
+      <table>
+        <thead><tr><th>Topic</th><th>Reason</th><th>Seed</th></tr></thead>
+        <tbody id="rejected-rows"></tbody>
+      </table>
+    </div>
+  </details>
+</main>
+
+<script type="application/json" id="radar-json">{
+  "run_date": "2026-08-26",
+  "generated_at": "2026-08-26T14:04:59",
+  "topic": "gut-health",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "gut-health",
+    "gut health",
+    "microbiome",
+    "probiotics",
+    "prebiotics",
+    "gut bacteria",
+    "digestive health",
+    "IBS",
+    "bloating",
+    "gut brain axis",
+    "leaky gut",
+    "gut-health trends",
+    "gut-health products",
+    "gut-health news",
+    "gut-health for beginners",
+    "gut-health routine",
+    "gut-health benefits",
+    "gut-health ideas",
+    "gut-health reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 19,
+    "total_reviewed": 80,
+    "total_retained": 4,
+    "total_rejected": 76,
+    "breakouts": 2,
+    "emerging": 1,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "topic": "dolly parton health issues",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 54,
+      "emergence_score": 71,
+      "velocity_score": 40,
+      "confidence_score": 40,
+      "saturation_score": 0,
+      "opportunity_score": 83,
+      "confidence": "low",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "digestive health"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; time-series validation was skipped or unavailable; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing.",
+      "similar": [
+        {
+          "topic": "dolly parton health",
+          "trend_stage": "emerging",
+          "radar_score": 54,
+          "why_now": "Google Trends labels it +2750%; time-series validation was skipped or unavailable; found through rising query"
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "topic": "what is leaky gut and how do you fix it",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 54,
+      "emergence_score": 71,
+      "velocity_score": 40,
+      "confidence_score": 40,
+      "saturation_score": 0,
+      "opportunity_score": 83,
+      "confidence": "low",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "leaky gut"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; time-series validation was skipped or unavailable; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing.",
+      "similar": [
+        {
+          "topic": "do prebiotics help you lose weight",
+          "trend_stage": "watch",
+          "radar_score": 50,
+          "why_now": "Google Trends labels it +200%; interest moved from 0 to 0; found through rising query"
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "topic": "medvi health",
+      "trend_stage": "emerging",
+      "urgency": "this_week",
+      "radar_score": 54,
+      "emergence_score": 71,
+      "velocity_score": 40,
+      "confidence_score": 40,
+      "saturation_score": 0,
+      "opportunity_score": 83,
+      "confidence": "low",
+      "rising_label": "+2950%",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "probiotics"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [],
+      "tags": {},
+      "why_now": "Google Trends labels it +2950%; time-series validation was skipped or unavailable; found through rising query",
+      "recommended_action": "Build an angle this week and monitor the next 24-48 hours."
+    },
+    {
+      "rank": 4,
+      "topic": "began public health and sanitation systems",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 51,
+      "emergence_score": 43,
+      "velocity_score": 48,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 66,
+      "confidence": "high",
+      "rising_label": "+140%",
+      "latest_interest": 11,
+      "peak_interest": 11,
+      "slope": 11,
+      "acceleration": 0,
+      "seed_terms": [
+        "gut health"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        11
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +140%; interest moved from 0 to 11; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "gut-health trends",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "gut-health news",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "used acupuncture to relieve pain and congestion",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "gut health"
+      ]
+    },
+    {
+      "topic": "tucson desert human remains findings",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "microbiome"
+      ]
+    },
+    {
+      "topic": "calf muscles second heart function",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "microbiome"
+      ]
+    },
+    {
+      "topic": "em glp 1",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "probiotics"
+      ]
+    },
+    {
+      "topic": "resilia",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "gut bacteria"
+      ]
+    },
+    {
+      "topic": "founder of modern nursing",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "gut health"
+      ]
+    },
+    {
+      "topic": "joinem reviews",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "probiotics"
+      ]
+    },
+    {
+      "topic": "parisian fashion",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "probiotics"
+      ]
+    },
+    {
+      "topic": "liquidation channel",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "probiotics"
+      ]
+    },
+    {
+      "topic": "embody reviews",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "probiotics"
+      ]
+    },
+    {
+      "topic": "elixamd",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "probiotics"
+      ]
+    },
+    {
+      "topic": "medvi reviews",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "probiotics"
+      ]
+    },
+    {
+      "topic": "quad medvi",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "probiotics"
+      ]
+    },
+    {
+      "topic": "embody",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "probiotics"
+      ]
+    },
+    {
+      "topic": "embody tirzepatide",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "probiotics"
+      ]
+    },
+    {
+      "topic": "joinem",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "probiotics"
+      ]
+    },
+    {
+      "topic": "medvi quad reviews",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "probiotics"
+      ]
+    },
+    {
+      "topic": "lc jewelry",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "probiotics"
+      ]
+    },
+    {
+      "topic": "who used acupuncture to relieve pain and congestion",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "gut health"
+      ]
+    },
+    {
+      "topic": "shop lc",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "probiotics"
+      ]
+    },
+    {
+      "topic": "shop lc jewelry",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "probiotics"
+      ]
+    },
+    {
+      "topic": "embody glp-1",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "probiotics"
+      ]
+    },
+    {
+      "topic": "seneca",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "gut health"
+      ]
+    },
+    {
+      "topic": "artist who used dissection to draw the human body",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "gut health"
+      ]
+    },
+    {
+      "topic": "anti inflammatory diet",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "leaky gut"
+      ]
+    },
+    {
+      "topic": "bioma",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "probiotics"
+      ]
+    },
+    {
+      "topic": "vagus nerve",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "leaky gut"
+      ]
+    },
+    {
+      "topic": "jerusalem artichoke",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "prebiotics"
+      ]
+    },
+    {
+      "topic": "h pylori symptoms",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "IBS"
+      ]
+    },
+    {
+      "topic": "vh essentials",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "prebiotics"
+      ]
+    },
+    {
+      "topic": "medication effects on gut microbiome",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "composite biomarker gut microbiome score",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "microbiome def",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "what do scientists who study the human microbiome hope to achieve?",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "can prebiotics help you lose weight",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "what is one type of bacteria found in a healthy gut microbiome",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "is farting a sign of good gut health",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "who began public health and sanitation systems",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "leaky gut syndrom",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "earliest people known to maintain accurate health records",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "can you take prebiotics and probiotics together",
+      "reason": "Weak radar score (49)"
+    },
+    {
+      "topic": "what do bacteria do in a healthy gut microbiome",
+      "reason": "Weak radar score (49)"
+    },
+    {
+      "topic": "best time to eat sauerkraut for gut health",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "what do harmful bacteria do in the gut microbiome?",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "how to diagnose leaky gut",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "vh essentials probiotics with prebiotics & cranberry reviews",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "begin health growing up prebiotics",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "how to test for leaky gut at home",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "growing up prebiotics",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "best tea for bloating and gas",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "vh probiotics with prebiotics & cranberry reviews",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "foods high in prebiotics",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "list of prebiotics",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "iberogast for ibs",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "is there a test for ibs",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "bioma probiotics",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "vh essentials probiotics with prebiotics & cranberry",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "vh probiotics with prebiotics & cranberry",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "pro and prebiotics for women",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "benefits of prebiotics and probiotics",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "how to tell if you have ibs",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "signs of ibs in women",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "stress induced ibs",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "how to get rid of leaky gut",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "gut microbiome",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "vh essentials probiotics with prebiotics",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "vh essentials probiotics",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "how to get good bacteria in gut",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "what is ibs and what causes it",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "ibs d treatment",
+      "reason": "Weak radar score (46)"
+    },
+    {
+      "topic": "how to prevent gas and bloating",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "icd 10 code for bloating",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "does broccoli cause bloating",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "does peppermint tea help with bloating",
+      "reason": "Weak radar score (41)"
+    }
+  ]
+}</script>
+<script>
+function readRadarData() {
+  const raw = document.getElementById('radar-json').textContent.trim();
+  if (!raw || raw === '__RADAR_' + 'DATA__') {
+    return {
+      run_date: '',
+      generated_at: '',
+      topic: 'Topic',
+      geo: 'US',
+      date_window: 'now 7-d',
+      methodology: 'Dashboard template preview.',
+      summary: { total_reviewed: 0, total_retained: 0, total_rejected: 0, breakouts: 0, emerging: 0, notes: '' },
+      candidates: [],
+      rejected: []
+    };
+  }
+  return JSON.parse(raw);
+}
+
+const D = readRadarData();
+const candidates = Array.isArray(D.candidates) ? D.candidates : [];
+const rejected = Array.isArray(D.rejected) ? D.rejected : [];
+const summary = D.summary || {};
+const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({
+  '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+}[ch]));
+const clamp = n => Math.max(0, Math.min(100, Number(n) || 0));
+const stageClass = value => ['breakout', 'emerging', 'rising', 'watch'].includes(value) ? value : 'watch';
+
+document.getElementById('topic-title').textContent = D.topic || 'Trend';
+document.getElementById('dek').textContent = `${D.geo || 'US'} · ${D.date_window || 'now 7-d'} · ${D.run_date || ''}`;
+document.getElementById('run-meta').textContent = `Generated: ${(D.generated_at || '').replace('T', ' ')} | retained ${candidates.length}`;
+document.getElementById('method-copy').textContent = `${D.methodology}. ${summary.notes || ''}`;
+document.getElementById('radar-title').textContent = `Trend Radar — ${candidates.length} retained`;
+document.getElementById('seed-list').innerHTML = (Array.isArray(D.seed_terms) ? D.seed_terms : [])
+  .map(seed => `<span class="chip">${esc(seed)}</span>`)
+  .join('');
+
+const breakouts = Array.isArray(D.trending_now_context) ? D.trending_now_context : [];
+if (breakouts.length) {
+  document.getElementById('breakouts-section').hidden = false;
+  document.getElementById('breakouts-list').innerHTML = breakouts.map(b => {
+    // Only render as a clickable link if it's actually http(s) - external
+    // API data shouldn't be trusted enough to drop straight into an href.
+    const safeLink = /^https?:\/\//i.test(b.link || '') ? b.link : '';
+    const headline = safeLink
+      ? `<a href="${esc(safeLink)}" target="_blank" rel="noopener noreferrer">${esc(b.headline)}</a>`
+      : esc(b.headline);
+    return `<div class="breakout-card">
+      <span class="term">${esc(b.query)}</span>
+      <div class="headline">${headline}${b.source ? ` <span class="source">— ${esc(b.source)}</span>` : ''}</div>
+    </div>`;
+  }).join('');
+}
+
+// Trending Now terms with a confirmed news story (i.e. present in
+// trending_now_context) are a stronger signal than a bare Google Trends
+// spike - flag candidates traced back to one of them.
+const groundedSeeds = new Set(breakouts.map(b => String(b.query || '').toLowerCase().trim()));
+function isGrounded(seedTerms) {
+  return (Array.isArray(seedTerms) ? seedTerms : []).some(s => groundedSeeds.has(String(s).toLowerCase().trim()));
+}
+
+const statData = [
+  { label: 'Signals Reviewed', value: summary.total_reviewed ?? 0, cls: '' },
+  { label: 'Retained Trends', value: candidates.length, cls: 'green' },
+  { label: 'Breakouts', value: summary.breakouts ?? 0, cls: 'amber' },
+  { label: 'Emerging', value: summary.emerging ?? 0, cls: 'blue' },
+];
+document.getElementById('stats').innerHTML = statData.map(s => `
+  <div class="stat ${s.cls}">
+    <div class="value">${esc(s.value)}</div>
+    <div class="label">${esc(s.label)}</div>
+  </div>
+`).join('');
+
+const filters = ['All', 'breakout', 'emerging', 'rising', 'watch'];
+document.getElementById('filters').innerHTML = filters.map((f, i) =>
+  `<button class="filter-btn ${i === 0 ? 'active' : ''}" data-filter="${esc(f)}">${esc(f)}</button>`
+).join('');
+
+function scoreCell(value, cls) {
+  const score = clamp(value);
+  return `<span class="num">${score}</span><span class="mini-bar ${cls}"><span style="width:${score}%"></span></span>`;
+}
+
+function sparkline(scores) {
+  const vals = Array.isArray(scores) ? scores.slice(-8) : [];
+  if (!vals.length) return '<span class="topic-sub">No time series</span>';
+  const max = Math.max(...vals, 1);
+  return `<div class="spark">${vals.map(v => `<span style="height:${Math.max(2, Math.round((v / max) * 30))}px"></span>`).join('')}</div>`;
+}
+
+function chips(values) {
+  return (Array.isArray(values) ? values : []).slice(0, 4).map(value => `<span class="chip">${esc(value)}</span>`).join('');
+}
+
+function tagChips(tags) {
+  const entries = tags && typeof tags === 'object' ? Object.entries(tags) : [];
+  if (!entries.length) return '<span class="topic-sub">No tags matched</span>';
+  return entries.map(([tagType, terms]) => `<span class="chip">${esc(tagType)}: ${esc((terms || []).join(', '))}</span>`).join(' ');
+}
+
+function similarHtml(similar) {
+  if (!Array.isArray(similar) || !similar.length) return '';
+  const items = similar.map(s => {
+    const sStage = stageClass(s.trend_stage);
+    return `<li><span class="badge ${esc(sStage)}">${esc(sStage)}</span> ${esc(s.topic)} <span class="num">${esc(s.radar_score)}</span></li>`;
+  }).join('');
+  return `
+    <details class="similar-toggle">
+      <summary>+${similar.length} similar phrasing${similar.length > 1 ? 's' : ''}</summary>
+      <ul class="similar-list">${items}</ul>
+    </details>
+  `;
+}
+
+function rowHtml(c, i) {
+  const stage = stageClass(c.trend_stage);
+  const lift = c.rising_label || (Number(c.slope) > 0 ? `+${c.slope}` : String(c.slope ?? 0));
+  const sourced = isGrounded(c.seed_terms)
+    ? '<span class="sourced-badge" title="Traced to a Trending Now term with a confirmed news story">Sourced</span>'
+    : '';
+  return `
+    <tr class="topic-row" data-stage="${esc(stage)}" data-detail="${i}">
+      <td class="rank">${String(c.rank || i + 1).padStart(2, '0')}</td>
+      <td>
+        <div class="topic-title">${esc(c.topic)}${sourced}</div>
+        <div class="topic-sub">${esc(c.why_now || '')}</div>
+        ${similarHtml(c.similar)}
+      </td>
+      <td><span class="badge ${esc(stage)}">${esc(stage)}</span></td>
+      <td>${scoreCell(c.radar_score, 'radar')}</td>
+      <td>${chips(c.discovery_sources)}</td>
+    </tr>
+    <tr class="detail-row" data-parent="${i}" hidden>
+      <td colspan="5">
+        <div class="detail">
+          <div><h4>Emergence</h4><p>${scoreCell(c.emergence_score, 'emerge')}</p></div>
+          <div><h4>Velocity</h4><p>${scoreCell(c.velocity_score, 'velocity')}</p></div>
+          <div><h4>Opportunity</h4><p>${scoreCell(c.opportunity_score, 'opportunity')}</p></div>
+          <div><h4>Interest / Lift</h4><p>${sparkline(c.interest_scores)}<span class="num">${esc(lift)}</span></p></div>
+          <div><h4>Recommended Action</h4><p>${esc(c.recommended_action || '')}</p></div>
+          <div><h4>Seed Terms</h4><p>${esc((c.seed_terms || []).join(', ') || 'None')}</p></div>
+          <div><h4>Confidence</h4><p>${esc(c.confidence || 'low')} confidence · score ${esc(c.confidence_score ?? 0)}</p></div>
+          <div><h4>Tags</h4><p>${tagChips(c.tags)}</p></div>
+        </div>
+      </td>
+    </tr>
+  `;
+}
+
+const tbody = document.getElementById('topic-rows');
+tbody.innerHTML = candidates.map(rowHtml).join('');
+document.getElementById('empty').hidden = candidates.length > 0;
+
+tbody.addEventListener('click', event => {
+  if (event.target.closest('.similar-toggle')) return; // its own <details> handles itself
+  const row = event.target.closest('.topic-row');
+  if (!row) return;
+  const detail = tbody.querySelector(`.detail-row[data-parent="${row.dataset.detail}"]`);
+  if (detail) detail.hidden = !detail.hidden;
+});
+
+document.getElementById('filters').addEventListener('click', event => {
+  const btn = event.target.closest('.filter-btn');
+  if (!btn) return;
+  document.querySelectorAll('.filter-btn').forEach(button => button.classList.remove('active'));
+  btn.classList.add('active');
+  const filter = btn.dataset.filter;
+  document.querySelectorAll('.topic-row').forEach(row => {
+    const show = filter === 'All' || row.dataset.stage === filter;
+    row.hidden = !show;
+    const detail = tbody.querySelector(`.detail-row[data-parent="${row.dataset.detail}"]`);
+    if (detail) detail.hidden = true;
+  });
+});
+
+if (rejected.length) {
+  document.getElementById('rejected-section').hidden = false;
+  document.getElementById('rejected-rows').innerHTML = rejected.map(r => `
+    <tr><td>${esc(r.topic)}</td><td>${esc(r.reason)}</td><td>${esc((r.seed_terms || []).join(', '))}</td></tr>
+  `).join('');
+}
+</script>
+</body>
+</html>
