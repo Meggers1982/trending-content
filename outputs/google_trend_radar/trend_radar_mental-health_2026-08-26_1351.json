@@ -1,0 +1,1027 @@
+{
+  "run_date": "2026-08-26",
+  "generated_at": "2026-08-26T13:51:59",
+  "topic": "mental-health",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "mental-health",
+    "mental health",
+    "anxiety",
+    "depression",
+    "therapy",
+    "burnout",
+    "stress management",
+    "mindfulness",
+    "cognitive behavioral therapy",
+    "mental health awareness",
+    "trauma recovery",
+    "mental-health trends",
+    "mental-health products",
+    "mental-health news",
+    "mental-health for beginners",
+    "mental-health routine",
+    "mental-health benefits",
+    "mental-health ideas",
+    "mental-health reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 19,
+    "total_reviewed": 80,
+    "total_retained": 3,
+    "total_rejected": 80,
+    "breakouts": 0,
+    "emerging": 0,
+    "rising": 1,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "topic": "suicide awareness month",
+      "trend_stage": "rising",
+      "urgency": "monitor",
+      "radar_score": 55,
+      "emergence_score": 38,
+      "velocity_score": 65,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 63,
+      "confidence": "high",
+      "rising_label": "+60%",
+      "latest_interest": 33,
+      "peak_interest": 40,
+      "slope": 33,
+      "acceleration": 2,
+      "seed_terms": [
+        "mental health awareness"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        20,
+        27,
+        24,
+        16,
+        23,
+        23,
+        17,
+        17,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        27,
+        17,
+        23,
+        0,
+        0,
+        0,
+        22,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        27,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        40,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        20,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        29,
+        33,
+        24,
+        25,
+        24,
+        30,
+        25,
+        19,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        31,
+        29,
+        40,
+        32,
+        35,
+        26,
+        17,
+        20,
+        0,
+        21,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        33
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +60%; interest moved from 0 to 33; found through rising query",
+      "recommended_action": "Track as a developing query and compare against existing coverage.",
+      "similar": [
+        {
+          "topic": "bipoc mental health awareness month",
+          "trend_stage": "watch",
+          "radar_score": 52,
+          "why_now": "Google Trends labels it +300%; interest moved from 0 to 0; found through rising query"
+        },
+        {
+          "topic": "domestic violence awareness month",
+          "trend_stage": "watch",
+          "radar_score": 50,
+          "why_now": "Google Trends labels it +200%; interest moved from 0 to 0; found through rising query"
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "topic": "stress management skills definition",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 51,
+      "emergence_score": 48,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 69,
+      "confidence": "high",
+      "rising_label": "+250%",
+      "latest_interest": 0,
+      "peak_interest": 18,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "stress management"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        18,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +250%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it.",
+      "similar": [
+        {
+          "topic": "health skills",
+          "trend_stage": "watch",
+          "radar_score": 51,
+          "why_now": "Google Trends labels it +110%; interest moved from 68 to 79; found through rising query"
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "topic": "dodge demon burnout",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 50,
+      "emergence_score": 46,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 68,
+      "confidence": "high",
+      "rising_label": "+200%",
+      "latest_interest": 0,
+      "peak_interest": 58,
+      "slope": 0,
+      "acceleration": 1,
+      "seed_terms": [
+        "burnout"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        58,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +200%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "mental health",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "depression",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "therapy",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "mindfulness",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "mental-health products",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "mental-health ideas",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "autistic limerence",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "burnout"
+      ]
+    },
+    {
+      "topic": "definition of conflict resolution",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "stress management"
+      ]
+    },
+    {
+      "topic": "definition of character",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "stress management"
+      ]
+    },
+    {
+      "topic": "connective tissue disorders",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "burnout"
+      ]
+    },
+    {
+      "topic": "pathological demand avoidance",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "burnout"
+      ]
+    },
+    {
+      "topic": "rejection sensitive dysphoria",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "burnout"
+      ]
+    },
+    {
+      "topic": "interpersonal communication",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "stress management"
+      ]
+    },
+    {
+      "topic": "the body keeps the score",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "trauma recovery"
+      ]
+    },
+    {
+      "topic": "when is suicide prevention month",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "mental health awareness"
+      ]
+    },
+    {
+      "topic": "organization",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "stress management"
+      ]
+    },
+    {
+      "topic": "values",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "stress management"
+      ]
+    },
+    {
+      "topic": "suicide prevention month",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "mental health awareness"
+      ]
+    },
+    {
+      "topic": "emdr",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "trauma recovery"
+      ]
+    },
+    {
+      "topic": "lexapro",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "anxiety"
+      ]
+    },
+    {
+      "topic": "panic attack",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "anxiety"
+      ]
+    },
+    {
+      "topic": "propranolol",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "anxiety"
+      ]
+    },
+    {
+      "topic": "the burnout society pdf",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "harvest trauma recovery center",
+      "reason": "Weak radar score (49)"
+    },
+    {
+      "topic": "mental health awareness clothing",
+      "reason": "Weak radar score (49)"
+    },
+    {
+      "topic": "burnout nationals",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "stress management worksheets",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "define stress",
+      "reason": "Weak radar score (49)"
+    },
+    {
+      "topic": "is september mental health awareness month",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "stress management books",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "burnout assessment tool",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "mental health hotline",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "september awareness month",
+      "reason": "Weak radar score (49)"
+    },
+    {
+      "topic": "how long does autistic burnout last",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "cognitive behavioral therapy exercises",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "is it mental health awareness month",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "benefits of stress management",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "stress management skills",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "definition of stress management",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "mental health awareness shirt",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "september mental health awareness",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "trauma recovery coach",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "stress management definition",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "mens mental health awareness month",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "breast cancer awareness month",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "stress definition",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "explain cognitive behavioral therapy",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "what awareness month is september",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "suicide awareness ribbon",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "judith herman trauma and recovery",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "what is stress management",
+      "reason": "Weak radar score (40)"
+    },
+    {
+      "topic": "how does cognitive behavioral therapy work",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "mental health awareness days",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "color for mental health awareness",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "mental illness awareness week",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "mental health awareness colors",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "burnout velvet",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "mental health",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "workplace stress management",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "stress management techniques",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "when is mental health awareness month",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "what is anxiety",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "depression",
+      "reason": "Weak radar score (38)"
+    },
+    {
+      "topic": "anxiety medication",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "anxiety disorder",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "anxiety symptoms",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "social anxiety",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "anxiety meds",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "anxiety attack",
+      "reason": "Weak radar score (40)"
+    },
+    {
+      "topic": "high anxiety",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "health anxiety",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "separation anxiety",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "medication for anxiety",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "anxiety treatment",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "anxiety therapy",
+      "reason": "Weak radar score (40)"
+    },
+    {
+      "topic": "severe anxiety",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "symptoms of anxiety",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "anxiety medicine",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "anxiety test",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "meds for anxiety",
+      "reason": "Weak radar score (31)"
+    }
+  ]
+}
