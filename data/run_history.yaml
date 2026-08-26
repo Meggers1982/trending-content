@@ -3,6 +3,38 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-08-26'
+  niche: health and wellness
+  signals_reviewed: 144
+  topics_retained: 5
+  topics_rejected: 12
+  p1_count: 1
+  p2_count: 2
+  p3_count: 2
+  p4_count: 0
+  p5_count: 0
+  integrity_flags: 3
+  top_topic: Two unvaccinated people die from measles in Pennsylvania amid multi-state outbreak
+  key_themes:
+  - Two unvaccinated people die from measles in Pennsylvania amid multi-state outbreak
+  - New brain activity signature linked to Parkinson's motor symptoms
+  - Depression stalls formation of new brain cells, Columbia study finds
+  - School performance proposed as a measurable indicator of children's health
+  - Epidemiologist critiques the wellness industry's use of pseudo-science
+  tools_used:
+  - serpapi_news
+  - serpapi_trends
+  - google_news_radar
+  tools_unavailable:
+  - reddit_api
+  - exa_social_search
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-08-26.html
+  estimated_cost_usd: 0.6095
+  notes: 'Heavy duplicate overlap with last 7 days of coverage — FDA/food-recall stories have appeared
+    in 6 of the last 7 runs. Dolly Parton health/death is dominant real-time Trends spike but excluded
+    on brand safety + category grounds. Vitruvias Therapeutics recall is trending but only one source
+    available — recommend adding to deferred_topics.yaml with 3-day recheck. Recurring theme flag: consider
+    a recall roundup evergreen format to reduce reader fatigue.'
 - run_date: '2026-08-25'
   niche: Health & Wellness
   signals_reviewed: 153
