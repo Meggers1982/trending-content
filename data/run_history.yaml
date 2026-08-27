@@ -3,6 +3,38 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-08-27'
+  niche: health and wellness
+  signals_reviewed: 144
+  topics_retained: 5
+  topics_rejected: 29
+  p1_count: 2
+  p2_count: 1
+  p3_count: 1
+  p4_count: 1
+  p5_count: 0
+  integrity_flags: 2
+  top_topic: Low-carb/keto diet shows added liver benefits beyond weight loss vs. Mediterranean diet,
+    WashU trial finds
+  key_themes:
+  - Low-carb/keto diet shows added liver benefits beyond weight loss vs. Mediterranean diet, WashU trial
+    finds
+  - Cyclospora outbreak confirmed across 48 states — what's changed since the lettuce recall
+  - 'FDA recall: nationwide levothyroxine (thyroid) tablets over ''superpotency'' risk'
+  - New Nature Medicine study links oligodendrocyte dysfunction to age-related cognitive decline
+  - AMA says it's time to rethink regulation of wellness apps and wearable devices
+  tools_used:
+  - google_news
+  - google_trends
+  - web_search
+  tools_unavailable: []
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-08-27.html
+  estimated_cost_usd: 0.6515
+  notes: 'Recurring themes flagged: food recall surge (4th consecutive appearance — treat future individual
+    recalls as updates, not new stories, unless casualty/scale changes), wellness-industry skepticism
+    (3rd appearance), measles outbreak (3rd appearance, still no new casualty data today). Baxter IV bag
+    recall is likely real but under-sourced in this run''s radar pull — recommend recheck within 24–48h
+    rather than permanent rejection.'
 - run_date: '2026-08-26'
   niche: health and wellness
   signals_reviewed: 144
