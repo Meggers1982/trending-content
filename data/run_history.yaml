@@ -3,6 +3,42 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-08-28'
+  niche: health and wellness
+  signals_reviewed: 153
+  topics_retained: 8
+  topics_rejected: 30
+  p1_count: 2
+  p2_count: 4
+  p3_count: 2
+  p4_count: 0
+  p5_count: 0
+  integrity_flags: 6
+  top_topic: Rare Naegleria fowleri (brain-eating amoeba) infection confirmed in NC teen after swimming
+  key_themes:
+  - Rare Naegleria fowleri (brain-eating amoeba) infection confirmed in NC teen after swimming
+  - FDA recall of Baxter IV saline bags over possible fiberglass contamination
+  - FDA classifies Whole Foods guacamole recall as highest risk over Salmonella-linked jalapeño supplier
+  - Aficamten shows positive results for hypertrophic cardiomyopathy in ACACIA-HCM trial, published in
+    NEJM
+  - New study finds GLP-1 drugs do not cause major psychiatric harm
+  - FDA recalls 12 herbal supplements
+  - Zepbound linked to lower healthcare costs in older adults with obesity, real-world study finds
+  - 'Data analysis: are FDA food recalls actually increasing under RFK Jr.''s HHS?'
+  tools_used:
+  - google_trends_prefetch
+  - google_news_radar
+  tools_unavailable:
+  - reddit_live
+  - twitter_live
+  - content_database
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-08-28.html
+  estimated_cost_usd: 0.6716
+  notes: Recall cluster remains dominant recurring theme (6th consecutive appearance); USA Today RFK/recall-data
+    piece retained as update addressing fatigue. GLP-1/weight-loss cluster aligns with Google Trends rising
+    queries. Self-check skipped due to unset site_url; competitor-list fallback used. Reddit/X live pulls
+    not executed; social_spread estimated. Three recall candidates carry Medium confidence caps — verify
+    against FDA.gov before publish.
 - run_date: '2026-08-27'
   niche: health and wellness
   signals_reviewed: 144
