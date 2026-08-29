@@ -1,0 +1,260 @@
+{
+  "run_date": "2026-08-29",
+  "niche": "Health & Wellness",
+  "signal_summary": {
+    "total_reviewed": 150,
+    "total_retained": 2,
+    "total_rejected": 19,
+    "tools_active": [
+      "web_search",
+      "google_news",
+      "google_trends",
+      "serpapi"
+    ],
+    "tools_unavailable": [
+      "data/run_history.yaml direct read",
+      "data/deferred_topics.yaml direct read"
+    ],
+    "notes": "Recall cluster and wellness-industry-skepticism cluster are both recurring 3+ consecutive days — treat as saturated; do not add new entries without a materially new development. All five scored candidates returned source_count: 1 — reflect of radar sample depth rather than source scarcity. Recommend full Skill 06 cross-verification pass before promoting P4 items. No P1 topics today; genuinely new academic signals lacked strong search/social velocity."
+  },
+  "candidates": [
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Recombinant shingles vaccination linked to lower cardiovascular event risk",
+      "primary_entity": "Recombinant shingles vaccine (Shingrix-class)",
+      "signal_type": "study_or_research",
+      "allowed_category": "medical research and clinical trials / chronic disease management",
+      "trend_strength_score": 53,
+      "opportunity_score": 81,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "low",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.nature.com/articles/s41591-026-xxxxx"
+      ],
+      "recommended_angle": "The shingles vaccine may protect more than skin — new peer-reviewed research links recombinant vaccination to reduced cardiovascular event risk, adding to a growing body of evidence on vaccines' protective effects beyond their primary target.",
+      "why_now": "Nature Medicine published this finding Aug 26, 2026 — directly relevant to an aging, cardiovascular-risk-conscious audience and offers an actionable, positive framing for vaccine-hesitant older adults.",
+      "primary_headline": "Can the Shingles Vaccine Protect Your Heart? New Study Finds a Surprising Link",
+      "next_steps": "Confirm study design (cohort vs. RCT-derived) against the full journal text; seek secondary corroborating coverage before elevating to P1; identify a cardiologist or vaccine epidemiologist for quote per expert_sources.yaml.",
+      "integrity_flags": [
+        "Association study — do not imply the vaccine causally prevents heart attacks; frame as reduced risk association pending replication."
+      ],
+      "trend_score_reason": "Nature Medicine tier-1 publication (Aug 26), measured language ('risk of cardiovascular events'), but modest search velocity.",
+      "opportunity_score_reason": "High editorial angle relevance to aging, cardiovascular-risk-conscious audience; actionable positive framing for vaccine education.",
+      "discover_score_reason": "Peer-reviewed journal source with clear health relevance; emerging research angle with replication potential.",
+      "notes": "Study design confirmation required before publishing; consult vaccine epidemiologist for expert balance.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Nature 'Recombinant shingles vaccination and the risk of cardiovascular events' (08/26/2026) in Google News Radar"
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Meta's settlement-driven product changes for teen users and mental health impact",
+      "primary_entity": "Meta / Instagram youth product changes",
+      "signal_type": "policy_or_regulatory_change",
+      "allowed_category": "mental health and psychology",
+      "trend_strength_score": 57,
+      "opportunity_score": 58,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.nytimes.com/2026/08/26/..."
+      ],
+      "recommended_angle": "Skepticism-driven explainer: what specifically is changing on Instagram for teens, and does the evidence support it actually improving mental health outcomes — or is this PR framing ahead of substantiation?",
+      "why_now": "NYT reported (Aug 26) on settlement-driven changes; taps into sustained public concern over social media and teen mental health, but the space is competitive.",
+      "primary_headline": "Meta Is Changing How Teens Use Instagram. Will It Actually Help Their Mental Health?",
+      "next_steps": "Confirm settlement terms and specific product changes; consult an adolescent psychologist; check competitor coverage (Well+Good, NYT Well) for differentiation before committing full word count.",
+      "integrity_flags": [
+        "Avoid conflating correlation between social media use and youth mental health outcomes with proven causation from these specific changes."
+      ],
+      "trend_score_reason": "NYT tier-1 coverage (Aug 26) taps sustained public concern; moderate search velocity on social-media-mental-health theme.",
+      "opportunity_score_reason": "Competitive space with differentiation potential; skepticism angle fills editorial niche against PR-friendly coverage.",
+      "discover_score_reason": "Policy-driven product change with measurable health relevance; audience interest in social media regulation impact.",
+      "notes": "Settlement terms and specific product changes must be confirmed; differentiation strategy essential given competitive coverage.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "NYT 'Will Meta's Changes Benefit Young Users' Mental Health?' (08/26/2026) in Google News Radar"
+      }
+    },
+    {
+      "priority_level": "P4",
+      "publish_timing": "monitor",
+      "topic": "Healthcare spending gap widens between high- and low-income Americans",
+      "primary_entity": "UChicago study",
+      "signal_type": "study_or_research",
+      "allowed_category": "public health and epidemiology",
+      "trend_strength_score": 34,
+      "opportunity_score": 71,
+      "discover_score": 0,
+      "urgency": "this_week",
+      "confidence": "low",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.uchicago.edu/news/..."
+      ],
+      "recommended_angle": "What the widening healthcare-spending gap between high- and low-income Americans means for access to care.",
+      "why_now": "New UChicago-published study quantifying disparity; addresses sustained public concern over healthcare equity.",
+      "primary_headline": "The Healthcare Spending Gap Between Rich and Poor Americans Is Widening — Here's Why It Matters.",
+      "next_steps": "Hold in backlog pending secondary source pickup; confidence too low for scheduled slot yet; verify underlying study/institution by name before advancing.",
+      "integrity_flags": [],
+      "trend_score_reason": "Single institutional press release source (UChicago News); no secondary outlet pickup yet — weak search velocity.",
+      "opportunity_score_reason": "High editorial relevance to healthcare equity audience; substantive policy-impact angle.",
+      "discover_score_reason": "Not scored — monitor status; single-source capture limits discoverability confidence.",
+      "notes": "Single-source radar capture; confidence low; require secondary-source confirmation before advancing past monitor status.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "University of Chicago News 'Health care spending gap between high- and low-income Americans widens, study finds' (08/28/2026)"
+      }
+    },
+    {
+      "priority_level": "P4",
+      "publish_timing": "monitor",
+      "topic": "LGBTQ Americans face barriers to healthcare access and cost",
+      "primary_entity": "LGBTQ healthcare access barriers",
+      "signal_type": "study_or_research",
+      "allowed_category": "public health and epidemiology",
+      "trend_strength_score": 48,
+      "opportunity_score": 65,
+      "discover_score": 0,
+      "urgency": "this_week",
+      "confidence": "low",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.washingtonpost.com/..."
+      ],
+      "recommended_angle": "New study details specific financial and access barriers LGBTQ Americans face getting needed healthcare.",
+      "why_now": "WaPo tier-1 reporting on survey-based study; aligns with ongoing public health equity discourse.",
+      "primary_headline": "LGBTQ Americans Are Struggling to Access and Afford Healthcare, Study Finds.",
+      "next_steps": "Name and verify underlying study/institution before promoting past monitor status; consult LGBTQ health advocacy organizations for context.",
+      "integrity_flags": [],
+      "trend_score_reason": "WaPo tier-1 outlet (Aug 28) reporting on named study; moderate search velocity on healthcare-equity theme.",
+      "opportunity_score_reason": "High relevance to underserved-population health advocacy; actionable policy angle.",
+      "discover_score_reason": "Not scored — monitor status; single-source capture limits discoverability confidence.",
+      "notes": "Single-source radar capture; confidence low; require secondary-source confirmation before advancing past monitor status.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Washington Post 'LGBTQ people struggle to get needed health care and pay for it, study finds' (08/28/2026)"
+      }
+    },
+    {
+      "priority_level": "P4",
+      "publish_timing": "monitor",
+      "topic": "Wellness stacking habit-building trend",
+      "primary_entity": "Wellness stacking behavioral trend",
+      "signal_type": "evergreen_with_fresh_angle",
+      "allowed_category": "mental health and psychology",
+      "trend_strength_score": 31,
+      "opportunity_score": 64,
+      "discover_score": 0,
+      "urgency": "evergreen",
+      "confidence": "low",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.yahoo.com/creators/..."
+      ],
+      "recommended_angle": "Is 'wellness stacking' actually better than willpower for building habits? What psychologists say.",
+      "why_now": "Fresh lifestyle-behavior trend angle with weak velocity; evergreen appeal pending corroboration.",
+      "primary_headline": "Forget Willpower — 'Wellness Stacking' Might Be the Habit Hack That Actually Works.",
+      "next_steps": "Verify credentials of cited psychologists; candidate for evergreen backlog with SEO optimization, not time-sensitive; hold pending secondary source pickup.",
+      "integrity_flags": [],
+      "trend_score_reason": "Low-velocity lifestyle trend reported via lifestyle outlet (Yahoo Creators); no peer-reviewed validation yet.",
+      "opportunity_score_reason": "Evergreen self-improvement angle with broad audience appeal; SEO potential for habit-formation keywords.",
+      "discover_score_reason": "Not scored — monitor status; single-source behavioral trend, insufficient velocity for scored placement.",
+      "notes": "Single-source radar capture; confidence low; candidate for evergreen backlog with SEO optimization rather than time-sensitive coverage.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Yahoo Creators 'Wellness stacking: why psychologists say it beats willpower for building healthy habits' (08/29/2026) plus Google Trends 'wellness' 7-day interest showing weak/declining velocity"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "FDA recalls: Baxter IV saline, Whole Foods guacamole, levothyroxine, herbal supplements, Cyclospora/lettuce, sprouts outbreak, RFK recall-data explainer",
+      "reason": "existing"
+    },
+    {
+      "topic": "Nut butter (Botticelli Foods) Salmonella recall",
+      "reason": "deferred_on_saturation"
+    },
+    {
+      "topic": "Clear Eyes eye-drop recall",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Zepbound healthcare-cost study, GLP-1 psychiatric-safety study, Cytokinetics ACACIA-HCM",
+      "reason": "existing"
+    },
+    {
+      "topic": "Keto vs. Mediterranean diet liver study (WashU)",
+      "reason": "existing"
+    },
+    {
+      "topic": "AMA wellness-app regulation, Topol/Cohen Wellness-Industrial Complex essay, epidemiologist wellness critique",
+      "reason": "existing_recurring"
+    },
+    {
+      "topic": "Maryland measles outbreak declaration",
+      "reason": "existing"
+    },
+    {
+      "topic": "Clinical-trial evergreen explainers",
+      "reason": "existing"
+    },
+    {
+      "topic": "Rural health funding grants (AR, AL), NASA moon-base RFI, Raiders children's-hospital gift, CA Social Health Council, university/local wellness events",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Stanford gene-editing tool (TIGR), NYU ketamine-pain trial, OHSU inherited heart-disease trial, loneliness/alcohol preclinical study, WTTW Chicago heat/ER study",
+      "reason": "other"
+    }
+  ],
+  "fact_check_summary": {
+    "accurate": 5
+  },
+  "run_cost": {
+    "total_usd": 0.6668,
+    "calls": [
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 12122,
+        "output_tokens": 25258,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 40942,
+        "estimated_cost_usd": 0.5688
+      },
+      {
+        "model": "claude-haiku-4-5",
+        "input_tokens": 7426,
+        "output_tokens": 2464,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0197
+      },
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11851,
+        "output_tokens": 2852,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0783
+      }
+    ]
+  }
+}

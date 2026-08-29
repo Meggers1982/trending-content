@@ -3,6 +3,39 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-08-29'
+  niche: Health & Wellness
+  signals_reviewed: 150
+  topics_retained: 5
+  topics_rejected: 10
+  p1_count: 0
+  p2_count: 1
+  p3_count: 1
+  p4_count: 3
+  p5_count: 0
+  integrity_flags: 2
+  top_topic: Recombinant shingles vaccination linked to lower cardiovascular event risk
+  key_themes:
+  - Recombinant shingles vaccination linked to lower cardiovascular event risk
+  - Meta's settlement-driven product changes for teen users and mental health impact
+  - Healthcare spending gap widens between high- and low-income Americans
+  - LGBTQ Americans face barriers to healthcare access and cost
+  - Wellness stacking habit-building trend
+  tools_used:
+  - web_search
+  - google_news
+  - google_trends
+  - serpapi
+  tools_unavailable:
+  - data/run_history.yaml direct read
+  - data/deferred_topics.yaml direct read
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-08-29.html
+  estimated_cost_usd: 0.6668
+  notes: 'Recall cluster and wellness-industry-skepticism cluster are both recurring 3+ consecutive days
+    — treat as saturated; do not add new entries without a materially new development. All five scored
+    candidates returned source_count: 1 — reflect of radar sample depth rather than source scarcity. Recommend
+    full Skill 06 cross-verification pass before promoting P4 items. No P1 topics today; genuinely new
+    academic signals lacked strong search/social velocity.'
 - run_date: '2026-08-28'
   niche: health and wellness
   signals_reviewed: 153
