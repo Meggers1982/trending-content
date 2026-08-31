@@ -1,0 +1,912 @@
+{
+  "run_date": "2026-08-31",
+  "generated_at": "2026-08-31T19:39:03",
+  "topic": "fitness",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "fitness",
+    "strength training",
+    "cardio",
+    "HIIT workout",
+    "resistance training",
+    "mobility training",
+    "workout recovery",
+    "home workout",
+    "running",
+    "weightlifting",
+    "VO2 max",
+    "fitness trends",
+    "fitness products",
+    "fitness news",
+    "fitness for beginners",
+    "fitness routine",
+    "fitness benefits",
+    "fitness ideas",
+    "fitness reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 19,
+    "total_reviewed": 80,
+    "total_retained": 2,
+    "total_rejected": 88,
+    "breakouts": 0,
+    "emerging": 1,
+    "rising": 1,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "topic": "weightlifting area",
+      "trend_stage": "emerging",
+      "urgency": "this_week",
+      "radar_score": 59,
+      "emergence_score": 66,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 80,
+      "confidence": "high",
+      "rising_label": "+650%",
+      "latest_interest": 0,
+      "peak_interest": 100,
+      "slope": 0,
+      "acceleration": 1,
+      "seed_terms": [
+        "weightlifting"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        100,
+        0,
+        0,
+        11,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +650%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Build an angle this week and monitor the next 24-48 hours."
+    },
+    {
+      "rank": 2,
+      "topic": "crossfit workouts",
+      "trend_stage": "rising",
+      "urgency": "monitor",
+      "radar_score": 55,
+      "emergence_score": 38,
+      "velocity_score": 65,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 63,
+      "confidence": "high",
+      "rising_label": "+90%",
+      "latest_interest": 34,
+      "peak_interest": 100,
+      "slope": 34,
+      "acceleration": -1,
+      "seed_terms": [
+        "HIIT workout"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        14,
+        17,
+        0,
+        0,
+        17,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        17,
+        0,
+        0,
+        16,
+        0,
+        13,
+        0,
+        0,
+        0,
+        0,
+        17,
+        0,
+        19,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        25,
+        21,
+        19,
+        0,
+        0,
+        0,
+        0,
+        0,
+        17,
+        0,
+        16,
+        17,
+        29,
+        36,
+        25,
+        31,
+        37,
+        48,
+        0,
+        0,
+        100,
+        0,
+        62,
+        0,
+        0,
+        26,
+        27,
+        22,
+        0,
+        0,
+        0,
+        15,
+        16,
+        27,
+        18,
+        21,
+        24,
+        0,
+        29,
+        34,
+        52,
+        69,
+        0,
+        0,
+        98,
+        0,
+        76,
+        44,
+        0,
+        22,
+        18,
+        0,
+        0,
+        0,
+        19,
+        0,
+        16,
+        0,
+        23,
+        26,
+        16,
+        0,
+        0,
+        36,
+        60,
+        51,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        26,
+        0,
+        0,
+        19,
+        17,
+        18,
+        0,
+        24,
+        21,
+        18,
+        18,
+        30,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        29,
+        19,
+        18,
+        29,
+        27,
+        0,
+        16,
+        16,
+        16,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        34
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +90%; interest moved from 0 to 34; found through rising query",
+      "recommended_action": "Track as a developing query and compare against existing coverage."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "workout recovery",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "home workout",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "running",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "VO2 max",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "fitness news",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "fitness for beginners",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "fitness routine",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "fitness benefits",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "fitness ideas",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "fitness reviews",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "nam joo-hyuk",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weightlifting"
+      ]
+    },
+    {
+      "topic": "non-toxic air fryer",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness trends"
+      ]
+    },
+    {
+      "topic": "kitchen tech upgrades",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness trends"
+      ]
+    },
+    {
+      "topic": "minimalist lifestyle trend",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness trends"
+      ]
+    },
+    {
+      "topic": "influencer marketing trends",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness trends"
+      ]
+    },
+    {
+      "topic": "tech gadgets 2025",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness trends"
+      ]
+    },
+    {
+      "topic": "k-pop trending",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness trends"
+      ]
+    },
+    {
+      "topic": "aura points / aura slang",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness trends"
+      ]
+    },
+    {
+      "topic": "social commerce",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness trends"
+      ]
+    },
+    {
+      "topic": "ai video generator",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness trends"
+      ]
+    },
+    {
+      "topic": "best productivity apps 2025",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness trends"
+      ]
+    },
+    {
+      "topic": "streaming shows trending",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness trends"
+      ]
+    },
+    {
+      "topic": "trending beauty hacks",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness trends"
+      ]
+    },
+    {
+      "topic": "wellness gadgets",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness trends"
+      ]
+    },
+    {
+      "topic": "ai agents",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness trends"
+      ]
+    },
+    {
+      "topic": "pizza",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness products"
+      ]
+    },
+    {
+      "topic": "ice cream",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness products"
+      ]
+    },
+    {
+      "topic": "fishing",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness products"
+      ]
+    },
+    {
+      "topic": "adidas dropset 3",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weightlifting"
+      ]
+    },
+    {
+      "topic": "healthy cooking tools",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness trends"
+      ]
+    },
+    {
+      "topic": "ai personal assistant",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness trends"
+      ]
+    },
+    {
+      "topic": "fruit",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness products"
+      ]
+    },
+    {
+      "topic": "adidas powerlift 5",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weightlifting"
+      ]
+    },
+    {
+      "topic": "restaurants",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness products"
+      ]
+    },
+    {
+      "topic": "viral tiktok trends",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness trends"
+      ]
+    },
+    {
+      "topic": "soup",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness products"
+      ]
+    },
+    {
+      "topic": "hiking",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness"
+      ]
+    },
+    {
+      "topic": "bowflex",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "strength training"
+      ]
+    },
+    {
+      "topic": "osteoporosis",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "resistance training"
+      ]
+    },
+    {
+      "topic": "photography",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness products"
+      ]
+    },
+    {
+      "topic": "meditation",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness"
+      ]
+    },
+    {
+      "topic": "camping",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness"
+      ]
+    },
+    {
+      "topic": "what is circuit training",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "resistance training"
+      ]
+    },
+    {
+      "topic": "cycling",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness products"
+      ]
+    },
+    {
+      "topic": "events",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness products"
+      ]
+    },
+    {
+      "topic": "tea",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness"
+      ]
+    },
+    {
+      "topic": "cscs",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "strength training"
+      ]
+    },
+    {
+      "topic": "stores",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness products"
+      ]
+    },
+    {
+      "topic": "chocolate",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness products"
+      ]
+    },
+    {
+      "topic": "glute bridges",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "strength training"
+      ]
+    },
+    {
+      "topic": "world fitness project leaderboard",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "world fitness project",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "adidas adipower weightlifting shoes",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "is weightlifting good for your heart",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "adipower weightlifting shoes",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "adidas powerlift 5 weightlifting shoes",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "bike fitness",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "powerlift 5 weightlifting shoes",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "cardio vascular surgery",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "fitness warrior nation",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "gage strength training",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "holiday fitness",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "how does resistance training prevent osteoporosis?",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "benefits of strength training for women",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "is resistance training the same as strength training",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "physical fitness program",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "fitness focus",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "cloud fitness",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "subway surfers cardio",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "hiit workout ideas",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "hiit workouts for women",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "resistance training for seniors",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "fitness advice lwspeakfit",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "cardio vascular technology",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "cardio before or after weights for weight loss",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "what cardio machine burns the most calories",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "what does hiit workout stand for",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "adidas weightlifting shoes",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "home fitness trends",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "is yoga considered strength training",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "strength training workouts for runners",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "does yoga count as strength training",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "quick hiit workout",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "metabolic resistance training",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "flexibility and mobility training",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "running",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "fitness centre",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "zone 2 cardio examples",
+      "reason": "Weak radar score (42)"
+    }
+  ]
+}
