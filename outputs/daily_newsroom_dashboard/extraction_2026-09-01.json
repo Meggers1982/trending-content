@@ -1,0 +1,334 @@
+{
+  "run_date": "2026-09-01",
+  "niche": "Health & Wellness",
+  "signal_summary": {
+    "total_reviewed": 144,
+    "total_retained": 5,
+    "total_rejected": 139,
+    "tools_active": [
+      "web_search",
+      "google_news",
+      "google_trends",
+      "serpapi"
+    ],
+    "tools_unavailable": [],
+    "notes": "Recurring healthcare-disparities framing flagged for staleness across 3 consecutive runs. site_url absent — competitor-list fallback used for SERP/duplicate context. Two high-risk health claims (xylitol/CVD, tofu recall) routed to Monitor via Skill 02b verification gate rather than scored."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Medtronic Bravo CF reflux-monitor device recall following 184 serious injury reports",
+      "primary_entity": "Medtronic Bravo CF reflux capsule",
+      "signal_type": "breaking_news",
+      "allowed_category": "medical device safety",
+      "trend_strength_score": 64,
+      "opportunity_score": 78,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "low",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.startribune.com/medtronic-recall-bravo-cf-reflux-gastroesophageal/601883787"
+      ],
+      "recommended_angle": "Explain the device, the recall trigger, injury pattern, and clear patient action steps — not just a recall notice restatement.",
+      "why_now": "FDA safety alert following 184 reported serious injuries tied to the Bravo CF capsule, reported 08/31/2026. Breaking-recall exception applied provisionally on high injury count and explicit FDA safety-alert language.",
+      "primary_headline": "FDA Flags Medtronic Bravo Reflux Monitor After 184 Serious Injury Reports — What Patients Should Know",
+      "next_steps": "Verify FDA.gov MedWatch/safety communication directly before publishing; do not cite injury count without direct FDA verification. Assign to health/medical reporter for same-day confirmation and briefing.",
+      "integrity_flags": [
+        "Primary FDA notice not directly retrieved in this run's data — confirm via FDA.gov MedWatch/safety communication before publishing; do not cite injury count without direct verification."
+      ],
+      "trend_score_reason": "Breaking recall with high injury count (184) and explicit FDA safety-alert language in tier-2 source (Star Tribune).",
+      "opportunity_score_reason": "Specific named device + high injury count + FDA safety framing + clear consumer question ('is my Bravo device recalled') = strong search intent and reader urgency.",
+      "discover_score_reason": "Named device + FDA safety alert + specific consumer question = strong AI-citation candidate once primary source confirmed.",
+      "notes": "Confidence capped low due to primary FDA source not directly retrieved in data pull; injury count unverified against FDA primary. This is a sourcing thinness risk, not a signal weakness. Execution contingent on FDA.gov verification.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Star Tribune headline 'Medtronic recall prompts FDA safety alert after 184 serious injuries' in Google News Radar"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "CTE prevalence in former NFL players who died 2016–2021: 1 in 4 had chronic traumatic encephalopathy",
+      "primary_entity": "Chronic Traumatic Encephalopathy (CTE)",
+      "signal_type": "study_or_research",
+      "allowed_category": "medical research",
+      "trend_strength_score": 58,
+      "opportunity_score": 75,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "low",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://hms.harvard.edu/news/least-1-4-former-nfl-players-who-died-2016-2021-had-cte-death-study-finds"
+      ],
+      "recommended_angle": "Contextualize the statistic against brain-donor cohort selection bias; connect to current CTE diagnostic/prevention research, not just alarm.",
+      "why_now": "Harvard Medical School release (08/25/2026) with timing aligned to NFL season start, which renews public attention to player brain health.",
+      "primary_headline": "1 in 4 Former NFL Players Who Died Had CTE — What the New Data Really Shows",
+      "next_steps": "Trace to underlying peer-reviewed journal publication (likely Boston University CTE Center) before briefing writer. Assign to sports/neuroscience health reporter with expertise in CTE research.",
+      "integrity_flags": [
+        "Brain-bank donor cohorts are not representative of all NFL players — families more likely to donate brains of symptomatic players — do not present 1-in-4 as general prevalence.",
+        "Confirm underlying peer-reviewed publication and methodology before citing specific statistics."
+      ],
+      "trend_score_reason": "Tier-1 institutional source (Harvard Medical School) + NFL season relevance + specific statistic + established public interest in player brain health.",
+      "opportunity_score_reason": "Named condition + specific statistic + natural reader question ('how common is CTE in NFL players') + research-explainer format = strong search and AI-citation potential.",
+      "discover_score_reason": "Specific data point (1 in 4) from credible institutional source + seasonal relevance to NFL coverage + mental health/wellness category interest.",
+      "notes": "Confidence low because underlying peer-reviewed journal not yet confirmed in source data. Selection-bias caveat is mandatory for credibility — do not publish without explaining cohort limitations plainly to readers.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Harvard Medical School headline 'At Least 1 in 4 Former NFL Players Who Died in 2016-2021 Had CTE at Death, Study Finds' in Google News Radar"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "September Suicide Prevention Awareness Month evidence-based prevention strategies",
+      "primary_entity": "Suicide Prevention Awareness Month",
+      "signal_type": "recurring_observance",
+      "allowed_category": "mental health prevention",
+      "trend_strength_score": 70,
+      "opportunity_score": 76,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "source_urls": [
+        "https://www.cdc.gov/suicide/",
+        "https://988lifeline.org"
+      ],
+      "recommended_angle": "Skip generic warning-sign listicles; lead with what controlled research shows reduces suicide risk (means restriction, gatekeeper training, follow-up care after crisis contact) vs. awareness-only messaging.",
+      "why_now": "Google Trends shows mental-health search interest at seasonal peak (100/100, +15% w/w) with 'suicide prevention month' among top rising queries as September begins.",
+      "primary_headline": "What Actually Prevents Suicide? The Evidence Behind September's Awareness Month",
+      "next_steps": "Assign to mental health reporter with research expertise. Source CDC/SAMHSA prevention program evaluations and expert interview with clinical psychologist on intervention efficacy. Must include 988 Lifeline prominently and follow safe-messaging guidelines.",
+      "integrity_flags": [
+        "Must include 988 Suicide & Crisis Lifeline prominently and follow safe-messaging guidelines — no methods detail — per standard health-media practice."
+      ],
+      "trend_score_reason": "Google Trends seasonal peak (mental health category 100/100, +15% w/w) + 'suicide prevention month' among top rising queries + established editorial interest in evidence-based mental health content.",
+      "opportunity_score_reason": "High search intent for 'suicide prevention month' + differentiation opportunity via evidence-of-effectiveness framing vs. generic symptom lists + crisis-resource utility.",
+      "discover_score_reason": "Seasonal observance + mental health category peak interest + evidence-based angle distinguishes from crowded prevention-awareness answer space.",
+      "notes": "Confidence medium due to established editorial expertise and clear sourcing pathway (CDC/SAMHSA). Avoid generic 'warning signs' framing; emphasis on intervention effectiveness is the differentiation.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Google Trends mental health category (100/100, +15% w/w) with 'suicide prevention month' and 'suicide awareness month' among rising related queries"
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "September Food Safety Education Month: practical home food-safety guidance framed against 2026's active recall cycle",
+      "primary_entity": "Food Safety Education Month",
+      "signal_type": "recurring_observance",
+      "allowed_category": "food safety",
+      "trend_strength_score": 59,
+      "opportunity_score": 78,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "source_urls": [
+        "https://www.fsis.usda.gov",
+        "https://www.fda.gov/food"
+      ],
+      "recommended_angle": "Practical home food-safety guidance framed against this year's unusually active recall news (Cyclospora, guacamole, tofu, thyroid meds) rather than a generic annual listicle.",
+      "why_now": "Google Trends shows 'food safety' category +13% w/w with 'national food safety education month' among top rising queries. 2026 has seen unusually active recall cycle (Cyclospora, guacamole, levothyroxine, herbal supplements, tofu ink contamination).",
+      "primary_headline": "It's Food Safety Education Month — Here's What 2026's Recall Wave Actually Teaches You",
+      "next_steps": "Assign to food safety or nutrition reporter. Source USDA FSIS and FDA directly for recall statistics. Interview registered dietitian or food safety scientist for practical home-handling guidance tied to this year's active recalls.",
+      "integrity_flags": [
+        "Verify any cited recall statistics against FDA/USDA sources directly — do not rely on secondary aggregation."
+      ],
+      "trend_score_reason": "Seasonal observance + elevated 'food safety' search interest (+13% w/w) + 2026's active recall cycle providing topical news hook vs. generic annual coverage.",
+      "opportunity_score_reason": "Practical how-to format + timely recall context + strong consumer search intent + natural educational angle = high utility and shareability.",
+      "discover_score_reason": "Named observance + specific year's recall data + practical consumer guidance + strong seasonal search interest.",
+      "notes": "Confidence medium because sourcing pathway is clear (USDA/FDA) and editorial approach is straightforward. Differentiate from past-year Food Safety Month coverage by tying to 2026's specific recall activity.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Google Trends 'food safety' +13% w/w with 'national food safety education month' rising query, cross-checked against Google News Radar recall stories (Cyclospora/CDC, guacamole/People.com, tofu/health.com, thyroid tablets/The Hill and MedShadow)"
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Heat-related illness patterns driving emergency room visits during heat waves: new study on condition-specific ER spikes",
+      "primary_entity": "Heat-related emergency room visits",
+      "signal_type": "study_or_research",
+      "allowed_category": "public health",
+      "trend_strength_score": 51,
+      "opportunity_score": 67,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "low",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://abcnews.com/Technology/wireStory/heat-makes-emergency-rooms-busier-study-shows-illness-135982188"
+      ],
+      "recommended_angle": "Break down specific conditions (heat stroke, cardiac events, kidney strain) driving ER spikes; practical risk-reduction as summer heat tapers into fall.",
+      "why_now": "AP/ABC News wire-reported study (08/26/2026) on illness/injury patterns during hot spells; timely for end-of-summer heat season and public health preparedness messaging.",
+      "primary_headline": "The Illnesses Driving ER Visits During Heat Waves, According to New Data",
+      "next_steps": "Confirm underlying data source (likely CDC syndromic surveillance or state health department data) and observational study design before briefing. Assign to health or emergency medicine reporter. Source emergency medicine physician expert.",
+      "integrity_flags": [
+        "Confirm study design (observational) before publishing — avoid single-cause framing."
+      ],
+      "trend_score_reason": "Wire-reported study (AP/ABC) + seasonal relevance to late-summer heat + specific data angle on condition-driven ER spikes.",
+      "opportunity_score_reason": "Public health data relevance + practical risk-reduction angle + strong health-conscious audience interest in heat-illness prevention.",
+      "discover_score_reason": "Specific data on heat-related conditions + practical reader application + modest but genuine seasonal search interest.",
+      "notes": "Confidence low because underlying data source not yet confirmed in source data (likely CDC syndromic surveillance). Study design must be verified as observational before publishing. Avoid implying heat is the sole or primary driver of observed ER patterns without confirming methodology.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "ABC News wire story 'Heat makes emergency rooms busier. Study shows which illness and injuries rise during hot spells' dated 08/26/2026 in Google News Radar"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "Healthcare spending gap between high and low income Americans",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "LGBTQ healthcare access barriers study",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "American Indians and Alaska Natives healthcare access barriers (UCLA study)",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Shingles vaccine and cardiovascular risk (Nature Medicine study)",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "ACACIA-HCM aficamten trial (NEJM)",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "GLP-1 psychiatric safety study",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Low-carb/keto liver benefits (WashU) and Scientific American Mediterranean diet comparison",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Cyclospora outbreak recall",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Baxter IV saline recall",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Whole Foods guacamole recall",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Levothyroxine recall",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Herbal supplements recall (12 items)",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "RFK recall-data analysis",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Meta settlement and teen mental health",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Wellness stacking / habit-building psychology",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Dolly Parton death and health/caregiving coverage",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Clinical trial access and participation how-to pieces",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Kroger wellness events and PR announcements",
+      "reason": "off_category"
+    },
+    {
+      "topic": "VA and Army.mil wellness pieces",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Corewell health system investment announcements",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Arkansas rural health funding",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Labor Department association health plans policy",
+      "reason": "off_category"
+    },
+    {
+      "topic": "UnityPoint health system lawsuit",
+      "reason": "off_category"
+    },
+    {
+      "topic": "CDC Monkeypox situation summary page",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "UW research funding cuts (KUOW local report)",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Xylitol and cardiovascular risk (Trending Now USA Today framing)",
+      "reason": "unverified_claim"
+    },
+    {
+      "topic": "Tofu ink-contamination recall",
+      "reason": "weak_signal"
+    }
+  ],
+  "fact_check_summary": {
+    "accurate": 5
+  },
+  "run_cost": {
+    "total_usd": 0.747,
+    "calls": [
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11738,
+        "output_tokens": 31057,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 40942,
+        "estimated_cost_usd": 0.6546
+      },
+      {
+        "model": "claude-haiku-4-5",
+        "input_tokens": 9081,
+        "output_tokens": 3233,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0252
+      },
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 12075,
+        "output_tokens": 2062,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0672
+      }
+    ]
+  }
+}
