@@ -1398,6 +1398,34 @@ For a while (until 2026-07-12), `data/run_history.yaml` and `data/deferred_topic
 
 `filter_recent_duplicates()` (the `difflib`-based lexical dedup, still in place) is now a backstop for cases where the model doesn't act on the history context correctly, not the primary defense. It still has the false-negative ceiling described in its docstring — two headlines about the same story can slip through if reworded heavily enough (~40% word overlap observed on one story, below the 0.6 threshold) — but with real history now in the prompt, the model itself should catch most of what the lexical filter would otherwise miss.
 
+### Tracked topics moved off `data/tracked_topics.json` onto Neon (2026-09-02)
+
+`lib/tracked-topics.js` used to work around Vercel's read-only deployed filesystem by committing
+`data/tracked_topics.json` through GitHub's Contents API on every add/remove (two HTTP round-trips,
+needed the file's `sha` for an optimistic lock, subject to GitHub API rate limits) while local dev
+used a plain `fs` read/write of the same file. Both paths are gone. `lib/tracked-topics.js` now
+queries a `tracked_topics` table in Neon Postgres directly (`@neondatabase/serverless`, `DATABASE_URL`)
+— one code path for local dev and Vercel, no GitHub API calls, no `isVercel()` branch.
+
+This Neon project (`neon-coffee-nest`) is dedicated to trending-content-os — deliberately not the
+same Neon project research-digest-dashboard uses for its own status tracking. They're unrelated
+apps; nothing about one should be able to affect the other.
+
+**The Python side needed the same migration, not just JS.** `run_tracked_topics.py` (scheduled daily
+by `.github/workflows/run-tracked-topics.yml`, and dispatched on-demand with `--topic-id` from the
+dashboard's "Scan now" button) read the tracked-topics list from the same `data/tracked_topics.json`
+and was the only thing that ever wrote `last_scanned_at` — the JS side always left it `null`. Moving
+the JS side to Neon without also moving this script would have quietly starved it: nothing would
+commit to the JSON file anymore, so the daily scan would loop over a permanently stale/empty list.
+`run_tracked_topics.py` now reads and writes the same `tracked_topics` table directly via `psycopg`
+(`psycopg[binary]` added to `requirements.txt`), using a `DATABASE_URL` GitHub Actions secret set to
+the same Neon connection string the Vercel app uses. The workflow's final step no longer force-adds
+or commits `data/tracked_topics.json` — Neon is updated directly during the run, so there's nothing
+left for that step to commit for tracked topics (it still commits `outputs/google_trend_radar`,
+unrelated to this).
+
+`data/tracked_topics.json` itself was deleted — nothing reads or writes it anymore, on either side.
+
 ---
 
 ## Success Criteria

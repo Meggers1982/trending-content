@@ -11,3 +11,6 @@ outputs/daily_newsroom_dashboard/*.blank.*
 outputs/google_trend_radar/
 .vercel
 .env*
+.agents
+.claude/skills
+skills-lock.json

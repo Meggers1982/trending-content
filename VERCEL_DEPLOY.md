@@ -66,6 +66,8 @@ Add these in Vercel project settings:
 - `GITHUB_REPOSITORY=Meggers1982/trending-content`
 - `GITHUB_PIPELINE_WORKFLOW=run-pipeline.yml`
 - `GITHUB_PIPELINE_REF=main`
+- `DATABASE_URL` — auto-provisioned by the Neon Marketplace integration (project `neon-coffee-nest`,
+  dedicated to this app). Backs `lib/tracked-topics.js`; no manual setup needed unless reconnecting.
 - `RUN_CONTROL_TOKEN` (optional, but recommended) — a shared secret you choose. When set, `POST /api/run`
   requires a matching `x-run-token` header, so only someone who knows the token can trigger a run.
   Without it, the run-trigger endpoint is publicly triggerable by anyone who has the deployed URL,
@@ -76,6 +78,8 @@ Add these as GitHub Actions repository secrets:
 
 - `ANTHROPIC_API_KEY`
 - `SERPAPI_API_KEY`
+- `DATABASE_URL` — same Neon connection string as the Vercel env var above. `run_tracked_topics.py`
+  (`.github/workflows/run-tracked-topics.yml`) reads/writes the `tracked_topics` table directly.
 - `EMAIL_SENDER` only if email delivery is needed
 - `EMAIL_PASSWORD` only if email delivery is needed
 - `EMAIL_RECIPIENT` only if email delivery is needed
@@ -97,5 +101,6 @@ Add these as GitHub Actions repository variables:
 Move generated artifacts into durable storage:
 
 - Vercel Blob, Supabase, or S3 for generated dashboards
-- database table for run metadata and job status
+- ~~database table for run metadata and job status~~ — done for tracked topics (Neon, 2026-09-02);
+  run metadata/job status still lives in `outputs/daily_newsroom_dashboard/*.json` + git
 - Vercel Cron for automatic scheduled runs

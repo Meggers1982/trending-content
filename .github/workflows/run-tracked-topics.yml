@@ -23,6 +23,7 @@ jobs:
       SERPAPI_TRENDING_NOW_ENABLED: ${{ vars.SERPAPI_TRENDING_NOW_ENABLED || 'true' }}
       SERPAPI_TRENDING_NOW_HOURS: ${{ vars.SERPAPI_TRENDING_NOW_HOURS || '24' }}
       SERPAPI_TRENDING_NOW_CATEGORY_ID: ${{ vars.SERPAPI_TRENDING_NOW_CATEGORY_ID || '7' }}
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
     steps:
       - name: Check out repository
@@ -61,7 +62,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f outputs/google_trend_radar data/tracked_topics.json
+          git add -f outputs/google_trend_radar
           if git diff --cached --quiet; then
             echo "No generated artifacts changed."
           else

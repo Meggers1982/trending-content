@@ -3,3 +3,4 @@ python-dotenv
 resend
 schedule
 pyyaml
+psycopg[binary]
