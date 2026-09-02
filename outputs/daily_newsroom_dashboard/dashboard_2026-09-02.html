@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trending Content OS — Daily Dashboard</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  :root {
+    --ink: #171717;
+    --text: #262626;
+    --muted: #686868;
+    --faint: #8a8a8a;
+    --paper: #fbfaf8;
+    --surface: #ffffff;
+    --soft: #f2f1ee;
+    --line: #dfddd8;
+    --red: #cf2f32;
+    --green: #1f9d55;
+    --amber: #d97706;
+    --blue: #2563eb;
+    --violet: #7c3aed;
+  }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--paper);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+  .topbar {
+    height: 48px;
+    background: #070707;
+    color: #f7f7f7;
+    display: flex;
+    align-items: center;
+    padding: 0 18px;
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+  .mark {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3px;
+  }
+  .mark span { background: #f7f7f7; border-radius: 999px; }
+  .wrap { max-width: 1232px; margin: 0 auto; padding: 32px 28px 56px; }
+  .masthead {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 8px 0 28px;
+  }
+  h1 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    line-height: 1.1;
+    color: var(--ink);
+    letter-spacing: 0;
+  }
+  h1 span { color: var(--red); }
+  .dek {
+    margin-top: 10px;
+    color: #555;
+    font-size: 14px;
+  }
+  .run-chip {
+    margin-top: 2px;
+    border: 1px solid var(--line);
+    background: var(--soft);
+    border-radius: 4px;
+    padding: 7px 10px;
+    color: #555;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin: 0 0 28px;
+  }
+  .stat {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--red);
+    border-radius: 6px;
+    padding: 18px 20px;
+    min-height: 100px;
+  }
+  .stat.green { border-top-color: var(--green); }
+  .stat.amber { border-top-color: var(--amber); }
+  .stat.violet { border-top-color: var(--violet); }
+  .stat .value {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 36px;
+    line-height: 1;
+    color: var(--red);
+    font-weight: 700;
+  }
+  .stat.green .value { color: var(--green); }
+  .stat.amber .value { color: var(--amber); }
+  .stat.violet .value { color: var(--violet); }
+  .stat .label {
+    margin-top: 8px;
+    color: #666;
+    font-weight: 700;
+    font-size: 13px;
+  }
+  .insight {
+    background: #eff6ff;
+    border: 1px solid #b7d4ff;
+    border-left: 4px solid var(--blue);
+    border-radius: 6px;
+    padding: 18px 20px 17px;
+    margin: 0 0 28px;
+    color: #183052;
+  }
+  .insight-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    color: #1457d9;
+    font-weight: 800;
+  }
+  .status-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: #fff8e6;
+    border: 1px solid #f4be4a;
+    border-left: 4px solid var(--amber);
+    border-radius: 6px;
+    padding: 12px 14px;
+    margin: -12px 0 28px;
+    color: #5f3900;
+    font-size: 13px;
+  }
+  .status-note strong {
+    color: #9a5700;
+  }
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    min-height: 20px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    border: 1px solid #9fc2ff;
+    background: #dbeafe;
+    color: #1457d9;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  .toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 0 0 12px;
+  }
+  .section-title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: flex-end;
+  }
+  .filter-btn {
+    appearance: none;
+    border: 1px solid var(--line);
+    background: #fff;
+    color: #555;
+    border-radius: 4px;
+    padding: 5px 9px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .filter-btn.active, .filter-btn:hover {
+    border-color: #9fc2ff;
+    background: #eff6ff;
+    color: #1457d9;
+  }
+  .table-shell {
+    overflow-x: auto;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1040px;
+  }
+  th {
+    background: var(--soft);
+    border-bottom: 1px solid var(--line);
+    color: #6a6a6a;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 11px 12px;
+  }
+  td {
+    border-bottom: 1px solid #e7e5e0;
+    padding: 12px;
+    vertical-align: top;
+    font-size: 13px;
+  }
+  tr.topic-row { cursor: pointer; }
+  tr.topic-row:hover td { background: #fcfcfb; }
+  tr.hidden { display: none; }
+  tr.detail-row td {
+    background: #fbfbf9;
+    padding: 0;
+  }
+  .detail-row[hidden] { display: none; }
+  .rank {
+    color: #777;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-weight: 700;
+    width: 44px;
+  }
+  .topic-title { font-weight: 800; color: #202020; }
+  .topic-sub { color: #606060; font-size: 12px; margin-top: 4px; }
+  .num {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-weight: 800;
+    color: #2b2b2b;
+    display: inline-block;
+    min-width: 28px;
+  }
+  .mini-bar {
+    display: inline-block;
+    width: 58px;
+    height: 5px;
+    background: #e4e1dc;
+    border-radius: 10px;
+    margin-left: 8px;
+    vertical-align: middle;
+    overflow: hidden;
+  }
+  .mini-bar span { display: block; height: 100%; border-radius: 10px; }
+  .trend span { background: var(--red); }
+  .opp span { background: var(--blue); }
+  .velocity.high { color: var(--green); }
+  .velocity.mid { color: var(--amber); }
+  .velocity.low { color: #777; }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    min-height: 22px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .badge.now, .badge.p1 { color: #dc2626; background: #fff1f1; border: 1px solid #ffa6a6; }
+  .badge.today, .badge.p2 { color: #c26a00; background: #fff8e6; border: 1px solid #f4be4a; }
+  .badge.week, .badge.p3 { color: #1457d9; background: #eff6ff; border: 1px solid #9fc2ff; }
+  .badge.evergreen, .badge.p4 { color: #16874a; background: #effaf2; border: 1px solid #75d99b; }
+  .badge.monitor, .badge.p5 { color: #6b7280; background: #f4f4f5; border: 1px solid #d4d4d8; }
+  .serp.easy { color: #16874a; background: #effaf2; border: 1px solid #75d99b; }
+  .serp.med { color: #c26a00; background: #fff8e6; border: 1px solid #f4be4a; }
+  .serp.hard { color: #dc2626; background: #fff1f1; border: 1px solid #ffa6a6; }
+  .source-chip {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 4px 4px 0;
+    padding: 2px 7px;
+    min-height: 22px;
+    border-radius: 4px;
+    border: 1px solid #b7d4ff;
+    background: #eff6ff;
+    color: #1457d9;
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    padding: 16px 20px 18px 56px;
+    border-top: 1px solid #eeeae4;
+  }
+  .detail h4 {
+    margin: 0 0 6px;
+    color: #606060;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+  }
+  .detail p {
+    margin: 0;
+    font-size: 13px;
+    color: #2c2c2c;
+  }
+  .rejected { margin-top: 28px; }
+  .empty {
+    padding: 28px;
+    text-align: center;
+    color: var(--muted);
+  }
+  @media (max-width: 820px) {
+    .wrap { padding: 24px 16px 44px; }
+    .masthead { display: block; }
+    .run-chip { display: inline-block; margin-top: 18px; white-space: normal; }
+    .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .toolbar { align-items: flex-start; flex-direction: column; }
+    .filters { justify-content: flex-start; }
+    .detail { grid-template-columns: 1fr; padding-left: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="topbar"><span class="mark"><span></span><span></span><span></span><span></span></span>Trending Content OS</div>
+<main class="wrap">
+  <header class="masthead">
+    <div>
+      <h1>Trending <span>Content OS</span></h1>
+      <div class="dek" id="dek"></div>
+    </div>
+    <div class="run-chip" id="run-meta"></div>
+  </header>
+
+  <section class="stats" id="stats"></section>
+
+  <section class="insight" id="insight" hidden>
+    <div class="insight-head"><span class="pill">Google Trends</span><span id="insight-title">Run Insight</span></div>
+    <div id="insight-copy"></div>
+  </section>
+
+  <section class="status-note" id="site-fallback-note" hidden>
+    <strong>Duplicate check:</strong>
+    <span>site_url not configured — competitor fallback used (Healthline, WebMD, STAT News).</span>
+  </section>
+
+  <section>
+    <div class="toolbar">
+      <div class="section-title" id="priority-title">Priority Topics</div>
+      <div class="filters" id="filters"></div>
+    </div>
+    <div class="table-shell">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Topic</th>
+            <th>Trend</th>
+            <th>Opp</th>
+            <th>Velocity</th>
+            <th>Urgency</th>
+            <th>SERP</th>
+            <th>Src</th>
+            <th>Key Sources</th>
+          </tr>
+        </thead>
+        <tbody id="topic-rows"></tbody>
+      </table>
+      <div class="empty" id="empty" hidden>No candidates to show. Check the raw report or extraction JSON.</div>
+    </div>
+  </section>
+
+  <section class="rejected" id="rejected-section" hidden>
+    <div class="toolbar">
+      <div class="section-title">Rejected Topics</div>
+    </div>
+    <div class="table-shell">
+      <table>
+        <thead><tr><th>Topic</th><th>Reason</th></tr></thead>
+        <tbody id="rejected-rows"></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<script type="application/json" id="pipeline-json">{
+  "run_date": "2026-09-02",
+  "niche": "Health & Wellness",
+  "signal_summary": {
+    "total_reviewed": 144,
+    "total_retained": 9,
+    "total_rejected": 24,
+    "tools_active": [
+      "web_search",
+      "google_news",
+      "google_trends",
+      "serpapi"
+    ],
+    "tools_unavailable": [],
+    "notes": "Food safety search velocity (+20 7d-delta) and heavy recall news volume converge strongly. Mental-health-month and GLP-1/recall single-item stories are recurring 3+ runs — staleness risk; suppressed today absent new development. site_url not configured — self-check skipped, competitor-list fallback used for SERP-gap context."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "FDA food recall surge continues: tofu, olive oil, and rice join record 2026 recall total",
+      "primary_entity": "FDA",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 82,
+      "opportunity_score": 78,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "update",
+      "source_count": 6,
+      "source_urls": [
+        "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-shiga-toxin-producing-e-coli-salmonella-sprouts-august-2026",
+        "https://www.health.com/tofu-recall-august-2026-12073618",
+        "https://www.thehealthy.com/news/olive-oil-recall-august-2026/"
+      ],
+      "recommended_angle": "Data-driven explainer connecting today's specific new recalls (tofu/ink, olive oil/unapproved ingredient, white rice/foreign material, sprouts E. coli-Salmonella) to the broader 2026 recall-volume trend — practical home food-safety guidance layered on top.",
+      "why_now": "New development since 08-28 aggregate coverage: four distinct new recalls/outbreak investigations in the last 5 days, each with an active FDA notice.",
+      "primary_headline": "FDA Recalls Are Piling Up Again This Week — Here's What's Actually Contaminated and What to Do",
+      "next_steps": "Assign to food-safety writer; pull FDA.gov recall/outbreak pages directly for each item; distinguish confirmed recalls from ongoing outbreak investigation (sprouts).",
+      "integrity_flags": [
+        "Don't imply a single systemic cause across unrelated recalls (different manufacturers/contaminants) without data support."
+      ],
+      "trend_score_reason": "Heavy convergence across 6+ outlets (FDA.gov, Healthline, health.com, People.com, The Healthy); food safety search velocity +20 7d-delta.",
+      "opportunity_score_reason": "Practical consumer relevance (what's recalled right now) and SERP gap — audience actively searching for recall guidance.",
+      "discover_score_reason": "Four distinct new recalls in 5 days; clear news momentum without prior site coverage this week.",
+      "notes": "",
+      "fact_check": {
+        "verdict": "minor_issues",
+        "issues": [
+          "Evidence supports a rising trend in recalls (CT Mirror, New Republic) but does not explicitly confirm a 'record' 2026 total — that framing is an inference beyond what the sources state."
+        ],
+        "checked_against": "FDA sprouts outbreak notice, health.com tofu recall, thehealthy.com olive oil recall, CT Mirror and New Republic recall-trend pieces"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Why most cancer patients still can't access clinical trials",
+      "primary_entity": "clinical trial access",
+      "signal_type": "audience_pain_point",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 65,
+      "opportunity_score": 72,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 4,
+      "source_urls": [
+        "https://www.the-scientist.com/cancer-clinical-trials-are-excluding-the-patients-they-are-meant-to-help-74951",
+        "https://www.cancerhealth.com/article/costs-geographic-barriers-impact-cancer-clinical-trial-participation",
+        "https://www.inquirer.com/health/clinical-trial-how-to-join-what-to-know-20260826.html"
+      ],
+      "recommended_angle": "Explainer: cost + geography as the real barrier to trial enrollment, using named researcher commentary from the-scientist.com and CancerHealth; give readers a practical 'how to find a trial near you' framework.",
+      "why_now": "Four independent outlets converged on this story in the same week with no prior site coverage — clear SERP gap between trade-press depth and consumer-facing explainers.",
+      "primary_headline": "The Hidden Reason Most Cancer Patients Never Make It Into a Clinical Trial",
+      "next_steps": "Assign to health-policy writer; pull direct quotes from The Scientist and CancerHealth sources; cross-check ClinicalTrials.gov enrollment data if available.",
+      "integrity_flags": [],
+      "trend_score_reason": "Four independent outlets in one week, no prior site coverage — classic news-led SERP gap signal.",
+      "opportunity_score_reason": "High audience relevance for cancer patients and caregivers seeking trial access information.",
+      "discover_score_reason": "Systemic healthcare access story, not a single study — strong explainer-format potential.",
+      "notes": "",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "the-scientist.com, cancerhealth.com, and inquirer.com articles on clinical trial access barriers, plus additional convergent coverage (cancernetwork.com, postbulletin.com, clinicalleader.com) in the radar"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "FDA approves daraxonrasib for pancreatic cancer",
+      "primary_entity": "daraxonrasib",
+      "signal_type": "drug_or_treatment_claim",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 70,
+      "opportunity_score": 68,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "source_urls": [
+        "https://news.med.miami.edu/fda-approves-daraxonrasib-pancreatic-cancer-treatment/"
+      ],
+      "recommended_angle": "What this approval actually means for patients — trial population, survival data, and realistic expectations, not a 'breakthrough cure' framing.",
+      "why_now": "Fresh FDA approval, first coverage of this specific drug on our site.",
+      "primary_headline": "FDA Approves New Pancreatic Cancer Drug — Here's What the Data Actually Shows",
+      "next_steps": "Confirm FDA approval record directly via FDA.gov before publishing; source oncologist commentary per Skill 08 sourcing rules.",
+      "integrity_flags": [
+        "Approval ≠ cure — cite trial phase/population and magnitude of survival benefit; avoid overpromising language."
+      ],
+      "trend_score_reason": "Fresh FDA approval from institutional source; moderate news coverage.",
+      "opportunity_score_reason": "Direct patient relevance for pancreatic cancer audience; approval news format supports explainer depth.",
+      "discover_score_reason": "First-time drug coverage for site; audience actively researching new cancer treatments.",
+      "notes": "",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "University of Miami article 'FDA Approval Opens New Chapter in Pancreatic Cancer Treatment'"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Calcium testing for heart health may have limited value for many, study finds",
+      "primary_entity": "coronary calcium scan",
+      "signal_type": "study_or_research",
+      "allowed_category": "chronic disease management",
+      "trend_strength_score": 68,
+      "opportunity_score": 70,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.washingtonpost.com/wellness/2026/08/28/calcium-testing-heart-health-may-have-limited-value-many-new-study-suggests/"
+      ],
+      "recommended_angle": "Practical 'should I get this test' explainer answering who actually benefits from coronary calcium scoring vs. who it may not help — direct answer to a common patient question.",
+      "why_now": "New WaPo-reported study directly relevant to a widely-marketed preventive screening test; audience decision-relevant.",
+      "primary_headline": "Should You Get a Heart Calcium Scan? A New Study Says It Depends",
+      "next_steps": "Verify underlying journal/DOI via WaPo article before drafting; note study population and design (observational vs. RCT).",
+      "integrity_flags": [
+        "Single study — avoid blanket 'skip this test' framing; note who the finding does/doesn't apply to."
+      ],
+      "trend_score_reason": "Tier-1 outlet (WaPo) reporting directly relevant to common screening decision.",
+      "opportunity_score_reason": "High audience relevance: directly answers 'should I get screened' question for preventive health segment.",
+      "discover_score_reason": "Patient-decision-relevant single study; practical explainer format matches audience needs.",
+      "notes": "",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Washington Post article on calcium testing for heart health"
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Moderna Starts Phase 1 Trial for an Ebola Vaccine Aimed at the DRC Outbreak Strain",
+      "primary_entity": "Moderna",
+      "signal_type": "clinical_trial",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 60,
+      "opportunity_score": 62,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://abcnews.com/Health/moderna-begins-phase-1-clinical-trial-ebola-vaccine/story?id=135365177"
+      ],
+      "recommended_angle": "Explain what Phase 1 actually tests (safety/dosing, not efficacy) and why a strain-specific vaccine matters for the current DRC outbreak.",
+      "why_now": "New trial announcement; outbreak-relevant.",
+      "primary_headline": "Moderna Starts Phase 1 Trial for an Ebola Vaccine Aimed at the DRC Outbreak Strain",
+      "next_steps": "Source infectious disease epidemiologist for plain-language context on Phase 1 scope and outbreak relevance.",
+      "integrity_flags": [
+        "Phase 1 = safety/dosing only, not proof of efficacy — do not imply the vaccine works yet."
+      ],
+      "trend_score_reason": "Moderate institutional news coverage; outbreak-timely but early-stage trial.",
+      "opportunity_score_reason": "Outbreak relevance and vaccine development interest among health-conscious audience.",
+      "discover_score_reason": "Early-stage trial announcement; explainer-format suitable for audience education on trial phases.",
+      "notes": "",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "ABC News article on Moderna Phase 1 Ebola vaccine trial"
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Inside the First US Clinical Trial of Ibogaine",
+      "primary_entity": "ibogaine",
+      "signal_type": "clinical_trial",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 58,
+      "opportunity_score": 64,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://news.asu.edu/20260831-health-and-medicine-barrow-asu-embark-one-first-clinical-trials-ibogaine-us"
+      ],
+      "recommended_angle": "Novel-treatment explainer covering ibogaine's addiction/PTSD research promise alongside its known cardiac risk profile and unapproved status.",
+      "why_now": "First US clinical trial launch; novel and audience-relevant.",
+      "primary_headline": "Inside the First US Clinical Trial of Ibogaine",
+      "next_steps": "Source psychiatrist or addiction medicine specialist; prominently flag cardiac risk and non-approved status.",
+      "integrity_flags": [
+        "Ibogaine carries known cardiac risk and is not FDA-approved outside this trial — flag safety context prominently."
+      ],
+      "trend_score_reason": "First-in-nation trial announcement; moderate institutional coverage.",
+      "opportunity_score_reason": "High interest in novel addiction/PTSD treatments; audience relevance for alternative therapy seekers.",
+      "discover_score_reason": "Novel trial announcement; explainer format supports safety education and research context.",
+      "notes": "",
+      "fact_check": {
+        "verdict": "minor_issues",
+        "issues": [
+          "Source describes this as 'one of first clinical trials of ibogaine in the US,' not definitively 'the first' as the headline states."
+        ],
+        "checked_against": "ASU News article 'Barrow, ASU embark on one of first clinical trials of ibogaine in the US'"
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Scientists Find Hidden Immune Cells in the Lungs That Could Lead to Better Flu Vaccines",
+      "primary_entity": "flu vaccine",
+      "signal_type": "study_or_research",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 55,
+      "opportunity_score": 60,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.urmc.rochester.edu/news/story/hidden-immune-cells-in-the-lung-could-lead-to-better-flu-vaccines"
+      ],
+      "recommended_angle": "Explain the basic-science finding in plain language and what 'could lead to better vaccines' realistically means on a research timeline.",
+      "why_now": "Institutional research release; timely for respiratory-illness season planning.",
+      "primary_headline": "Scientists Find Hidden Immune Cells in the Lungs That Could Lead to Better Flu Vaccines",
+      "next_steps": "Source immunologist or infectious disease researcher for plain-language interpretation and realistic timeline context.",
+      "integrity_flags": [],
+      "trend_score_reason": "Institutional basic-science research; moderate news coverage.",
+      "opportunity_score_reason": "Vaccine interest and seasonal flu relevance; audience education on vaccine research.",
+      "discover_score_reason": "Basic-science breakthrough; explainer-format suitable for audience understanding of vaccine development.",
+      "notes": "",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "University of Rochester article 'Hidden Immune Cells in the Lung Could Lead to Better Flu Vaccines'"
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Food Insecurity Later in Life Linked to Higher Dementia Risk, Study Finds",
+      "primary_entity": "food insecurity",
+      "signal_type": "study_or_research",
+      "allowed_category": "chronic disease management",
+      "trend_strength_score": 56,
+      "opportunity_score": 61,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.news-medical.net/news/20260827/Study-links-later-life-food-insecurity-to-elevated-dementia-risk.aspx"
+      ],
+      "recommended_angle": "Evaluative piece distinguishing correlation from causation, with context on confounding factors (income, healthcare access) and practical takeaways.",
+      "why_now": "New study release; relevant to aging and nutrition audience segments.",
+      "primary_headline": "Food Insecurity Later in Life Linked to Higher Dementia Risk, Study Finds",
+      "next_steps": "Verify underlying journal/DOI before publishing; source geriatrician or epidemiologist to contextualize confounding factors.",
+      "integrity_flags": [
+        "Association, not causation — food insecurity likely correlates with other dementia risk factors (income, healthcare access)."
+      ],
+      "trend_score_reason": "Secondary-source coverage of peer research; moderate signal.",
+      "opportunity_score_reason": "Aging audience relevance and public health policy angle; nutrition-dementia connection.",
+      "discover_score_reason": "Audience-relevant epidemiological research; explainer format for correlation-vs-causation education.",
+      "notes": "News-Medical sourcing is secondary — writer must confirm underlying journal/DOI before publishing per Skill 02b.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "News-Medical article 'Study links later-life food insecurity to elevated dementia risk'"
+      }
+    },
+    {
+      "priority_level": "P5",
+      "publish_timing": "monitor",
+      "topic": "Medical marijuana and workplace absence: study finds link",
+      "primary_entity": "medical marijuana",
+      "signal_type": "study_or_research",
+      "allowed_category": "chronic disease management",
+      "trend_strength_score": 48,
+      "opportunity_score": 52,
+      "discover_score": 2,
+      "urgency": "evergreen",
+      "confidence": "low",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://gpb.org/news/2026/08/26/can-medical-marijuana-help-chronic-pain-workplace-absence"
+      ],
+      "recommended_angle": "Policy-adjacent explainer on workplace implications of medical cannabis use and chronic pain management.",
+      "why_now": "Borderline category fit; below opportunity threshold; monitor for stronger institutional source.",
+      "primary_headline": "Study Links Medical Marijuana Use to Lower Workplace Absence",
+      "next_steps": "Hold for now; revisit only if stronger primary institutional source or policy development emerges.",
+      "integrity_flags": [],
+      "trend_score_reason": "Single institutional study via secondary reporting; weak signal momentum.",
+      "opportunity_score_reason": "Below threshold (52); borderline category fit for health & wellness niche.",
+      "discover_score_reason": "Niche workplace-health angle; limited general audience relevance.",
+      "notes": "Routed to Monitor — below both scoring thresholds. Revisit only if stronger primary source emerges.",
+      "fact_check": {
+        "verdict": "significant_issues",
+        "issues": [
+          "Claimed source URL (gpb.org/news/2026/08/26/can-medical-marijuana-help-chronic-pain-workplace-absence) does not match the evidence, which shows a different GPB article at a different date and URL (gpb.org/news/2026/08/31/states-legal-medical-marijuana-saw-fewer-people-missing-work-according-uga-study), making the cited source unverifiable as presented."
+        ],
+        "checked_against": "Georgia Public Broadcasting article in Google News Radar on medical marijuana and workplace absence"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "OpenAI–EHR integration, employer health cost spike, Corewell $1.7B investment, Sanford/North Memorial merger, UVA Lynchburg expansion, $50B rural health transparency",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Sword Health–Headspace acquisition",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Kroger wellness tours, CVS/LOVB partnership, BCG activewear-wellness report, campus/senior wellness events",
+      "reason": "brand_safety"
+    },
+    {
+      "topic": "Vanderbilt tribute to Dolly Parton",
+      "reason": "off_category"
+    },
+    {
+      "topic": "UW research funding cuts (Trump admin)",
+      "reason": "off_category"
+    },
+    {
+      "topic": "WHO World Mental Health Day webinar (Oct 9)",
+      "reason": "other"
+    },
+    {
+      "topic": "Florida DOH Miami-Dade water quality advisory",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Fresenius hemodiafiltration real-world evidence study",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Penn proton therapy clinical trial launch",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Data4Life/Monash Dubai rWGS partnership",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Clinical Leader pharmacy benefit industry commentary",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Low-carb/liver benefits study (WashU)",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "GLP-1 psychiatric safety study",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Mental health awareness/suicide prevention month",
+      "reason": "duplicate"
+    }
+  ],
+  "fact_check_summary": {
+    "minor_issues": 2,
+    "accurate": 6,
+    "significant_issues": 1
+  },
+  "run_cost": {
+    "total_usd": 0.577,
+    "calls": [
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11508,
+        "output_tokens": 18268,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 41746,
+        "estimated_cost_usd": 0.4651
+      },
+      {
+        "model": "claude-haiku-4-5",
+        "input_tokens": 8991,
+        "output_tokens": 3947,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0287
+      },
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 12861,
+        "output_tokens": 2974,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0832
+      }
+    ]
+  }
+}</script>
+<script>
+function readPipelineData() {
+  const raw = document.getElementById('pipeline-json').textContent.trim();
+  if (!raw || raw === '__PIPELINE_' + 'DATA__') {
+    return {
+      run_date: '',
+      niche: 'Health & Wellness',
+      signal_summary: {
+        total_reviewed: 0,
+        total_retained: 0,
+        total_rejected: 0,
+        notes: 'This is the dashboard template. Run python run_pipeline.py --no-email to generate a filled dashboard, or open outputs/daily_newsroom_dashboard/dashboard_preview.html to view the design preview.'
+      },
+      candidates: [],
+      rejected: []
+    };
+  }
+  try {
+    return JSON.parse(raw);
+  } catch (error) {
+    return {
+      run_date: '',
+      niche: 'Health & Wellness',
+      signal_summary: {
+        total_reviewed: 0,
+        total_retained: 0,
+        total_rejected: 0,
+        notes: `Dashboard data could not be parsed: ${error.message}`
+      },
+      candidates: [],
+      rejected: []
+    };
+  }
+}
+const D = readPipelineData();
+const candidates = Array.isArray(D.candidates) ? D.candidates : [];
+const rejected = Array.isArray(D.rejected) ? D.rejected : [];
+const summary = D.signal_summary || {};
+
+const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({
+  '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+}[ch]));
+const clamp = n => Math.max(0, Math.min(100, Number(n) || 0));
+const fmtDate = value => value || new Date().toISOString().slice(0, 10);
+const urgencyClass = value => {
+  if (value === 'now') return 'now';
+  if (value === 'today') return 'today';
+  if (value === 'this_week') return 'week';
+  if (value === 'evergreen') return 'evergreen';
+  return 'monitor';
+};
+const serpClass = c => {
+  const avg = ((Number(c.trend_strength_score) || 0) + (Number(c.opportunity_score) || 0)) / 2;
+  if (avg >= 82) return 'easy';
+  if (avg >= 65) return 'med';
+  return 'hard';
+};
+const serpLabel = cls => ({ easy: 'Easy', med: 'Med', hard: 'Hard' }[cls] || 'Med');
+const velocity = c => clamp(Math.round(((Number(c.discover_score) || 0) / 5) * 100));
+const sourceLabels = c => {
+  const labels = [];
+  if (c.signal_type) labels.push(String(c.signal_type).replace(/_/g, ' '));
+  if (c.confidence) labels.push(`${c.confidence} conf`);
+  if (c.content_status) labels.push(c.content_status);
+  return labels.slice(0, 3);
+};
+
+document.getElementById('dek').textContent =
+  `${esc(D.niche || 'Health & Wellness')} · US · ${fmtDate(D.run_date)} · with Google Trends data`;
+document.getElementById('run-meta').textContent =
+  `Generated: ${fmtDate(D.run_date)} | retained ${candidates.length} | pipeline v2`;
+
+const p1 = candidates.filter(c => c.priority_level === 'P1').length;
+const flags = candidates.filter(c => String(c.notes || '').trim() || c.confidence === 'low').length;
+const statData = [
+  { label: 'Signals Processed', value: summary.total_reviewed ?? 0, cls: '' },
+  { label: 'Retained Topics', value: candidates.length, cls: 'green' },
+  { label: 'Publish NOW', value: p1, cls: 'amber' },
+  { label: 'Integrity Flags', value: flags, cls: 'violet' },
+];
+document.getElementById('stats').innerHTML = statData.map(s => `
+  <div class="stat ${s.cls}">
+    <div class="value">${esc(s.value)}</div>
+    <div class="label">${esc(s.label)}</div>
+  </div>
+`).join('');
+
+const notes = String(summary.notes || '').trim();
+if (notes) {
+  document.getElementById('insight').hidden = false;
+  document.getElementById('insight-title').textContent = 'Search Demand vs. Editorial Urgency — Key Insight';
+  document.getElementById('insight-copy').textContent = notes;
+}
+const fallbackMentioned = /site_url not configured|self-check skipped|competitor fallback/i.test(notes)
+  || candidates.some(c => /site_url not configured|self-check skipped|competitor fallback/i.test(String(c.notes || '')));
+document.getElementById('site-fallback-note').hidden = !fallbackMentioned;
+
+document.getElementById('priority-title').textContent =
+  `Priority Topics — All ${candidates.length} Retained`;
+
+const filters = ['All', 'P1', 'P2', 'P3', 'P4', 'P5'];
+document.getElementById('filters').innerHTML = filters.map((f, i) =>
+  `<button class="filter-btn ${i === 0 ? 'active' : ''}" data-filter="${f}">${f}</button>`
+).join('');
+
+function rowHtml(c, i) {
+  const trend = clamp(c.trend_strength_score);
+  const opp = clamp(c.opportunity_score);
+  const vel = velocity(c);
+  const velClass = vel >= 70 ? 'high' : vel >= 40 ? 'mid' : 'low';
+  const sc = serpClass(c);
+  const urgency = c.urgency || c.publish_timing || 'monitor';
+  const labels = sourceLabels(c).map(label => `<span class="source-chip">${esc(label)}</span>`).join('');
+  return `
+    <tr class="topic-row" data-priority="${esc(c.priority_level)}" data-detail="${i}">
+      <td class="rank">${String(i + 1).padStart(2, '0')}</td>
+      <td>
+        <div class="topic-title">${esc(c.topic)}</div>
+        <div class="topic-sub">${esc(c.primary_headline || c.primary_entity || c.recommended_angle || '')}</div>
+      </td>
+      <td><span class="num">${trend}</span><span class="mini-bar trend"><span style="width:${trend}%"></span></span></td>
+      <td><span class="num">${opp}</span><span class="mini-bar opp"><span style="width:${opp}%"></span></span></td>
+      <td><span class="num velocity ${velClass}">${vel}</span></td>
+      <td><span class="badge ${urgencyClass(urgency)}">${esc(urgency === 'this_week' ? 'today' : urgency)}</span></td>
+      <td><span class="badge serp ${sc}">${serpLabel(sc)}</span></td>
+      <td><span class="num">${esc(c.source_count ?? 0)}</span></td>
+      <td>${labels}</td>
+    </tr>
+    <tr class="detail-row" data-parent="${i}" hidden>
+      <td colspan="9">
+        <div class="detail">
+          <div><h4>Recommended Angle</h4><p>${esc(c.recommended_angle || 'No angle provided.')}</p></div>
+          <div><h4>Why Now</h4><p>${esc(c.why_now || 'No timing rationale provided.')}</p></div>
+          <div><h4>Next Steps</h4><p>${esc(c.next_steps || c.notes || 'No next steps provided.')}</p></div>
+        </div>
+      </td>
+    </tr>
+  `;
+}
+
+const tbody = document.getElementById('topic-rows');
+tbody.innerHTML = candidates.map(rowHtml).join('');
+document.getElementById('empty').hidden = candidates.length > 0;
+
+tbody.addEventListener('click', event => {
+  const row = event.target.closest('.topic-row');
+  if (!row) return;
+  const detail = tbody.querySelector(`.detail-row[data-parent="${row.dataset.detail}"]`);
+  if (detail) detail.hidden = !detail.hidden;
+});
+
+document.getElementById('filters').addEventListener('click', event => {
+  const btn = event.target.closest('.filter-btn');
+  if (!btn) return;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const filter = btn.dataset.filter;
+  document.querySelectorAll('.topic-row').forEach(row => {
+    const show = filter === 'All' || row.dataset.priority === filter;
+    row.hidden = !show;
+    const detail = tbody.querySelector(`.detail-row[data-parent="${row.dataset.detail}"]`);
+    if (detail) {
+      detail.hidden = true;
+      detail.classList.toggle('hidden', !show);
+    }
+  });
+});
+
+if (rejected.length) {
+  document.getElementById('rejected-section').hidden = false;
+  document.getElementById('rejected-rows').innerHTML = rejected.map(r => `
+    <tr><td>${esc(r.topic)}</td><td>${esc(r.reason)}</td></tr>
+  `).join('');
+}
+</script>
+</body>
+</html>
