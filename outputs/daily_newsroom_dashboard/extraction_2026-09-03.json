@@ -1,0 +1,214 @@
+{
+  "run_date": "2026-09-03",
+  "niche": "health and wellness",
+  "signal_summary": {
+    "total_reviewed": 84,
+    "total_retained": 3,
+    "total_rejected": 76,
+    "tools_active": [
+      "serpapi_news",
+      "serpapi_trends",
+      "google_news_radar"
+    ],
+    "tools_unavailable": [
+      "reddit_api",
+      "social_search",
+      "content_database"
+    ],
+    "notes": "Google News Radar dominated by off-category business/PR/local-institutional noise (58/84 items). Genuine new signal narrow: one seasonal-guidance convergence (vaccines), one new data angle inside recurring recall story, one new care-policy angle inside ongoing trial story. FLASH proton therapy trial and gut-health interest held at Monitor pending stronger sourcing."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Fall 2026 COVID/flu/RSV vaccine guidance",
+      "primary_entity": "CDC seasonal vaccine recommendations",
+      "signal_type": "breaking_news",
+      "allowed_category": "clinical guidance",
+      "trend_strength_score": 81,
+      "opportunity_score": 83,
+      "discover_score": 5,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 2,
+      "source_urls": [
+        "https://www.cdc.gov/flu/hcp/vax-summary/seasonal-influenza-vaccines.html",
+        "https://www.nytimes.com/2026/09/02/business/health-insurance-increases.html"
+      ],
+      "recommended_angle": "Translate CDC interim clinical considerations into clear, actionable explainer — who needs which shot, timing to maximize protection, and what changed from last year",
+      "why_now": "Real-time Google Trends breakout term tied to live NYT story; CDC published interim clinical considerations Sept 1; fall vaccination season is starting now",
+      "primary_headline": "What to Know About This Fall's COVID, Flu, and RSV Vaccines",
+      "next_steps": "Publish today; confirm exact NYT vaccine guide URL before publishing",
+      "integrity_flags": [],
+      "trend_score_reason": "Real-time Google Trends breakout term (covid flu rsv vaccine recommendations) + CDC notice + NYT convergence on Sept 1-2",
+      "opportunity_score_reason": "High seasonal utility, strong search intent (informational + practical), strong primary source density",
+      "discover_score_reason": "Specific named entities (CDC, ACIP), natural query format, primary source directly linkable, durable seasonal utility",
+      "notes": "Moderate evidence bar — cite CDC directly, avoid overstating novelty. Verify exact NYT article URL before publishing.",
+      "fact_check": {
+        "verdict": "minor_issues",
+        "issues": [
+          "The claimed NYT source URL (nytimes.com/2026/09/02/business/health-insurance-increases.html) is the 'Employer Health Costs Are Expected to Spike in 2027' article, not the 'Guide to Covid, Flu and R.S.V. Vaccines' piece referenced in the Why Now section — the actual vaccine guide article is not linked in evidence.",
+          "The cited CDC document is titled 'Interim Clinical Considerations for the Use of Seasonal Influenza Vaccines' and covers flu specifically; the evidence does not show it addressing COVID or RSV vaccine guidance as the topic/headline imply."
+        ],
+        "checked_against": "Google Trends breakout term with NYT 'Why' line + CDC News Radar entry + NYT News Radar entry (different article)"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Lindsay Clancy trial — postpartum mental health care rethink",
+      "primary_entity": "Postpartum psychosis / perinatal mental health screening",
+      "signal_type": "news_hook",
+      "allowed_category": "clinical care systems",
+      "trend_strength_score": 73,
+      "opportunity_score": 80,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "source_urls": [
+        "https://www.nytimes.com/2026/09/02/well/doctors-patients-postpartum-mental-health-clancy-trial.html",
+        "https://www.npr.org/2026/08/31/nx-s1-5950315/what-does-the-lindsay-clancy-trial-tell-us-about-treating-maternal-mental-health"
+      ],
+      "recommended_angle": "Use trial as news hook to explain postpartum psychosis vs. PPD, current screening protocols, and what clinicians say needs to change — framed around clinical/systemic failure points, not case details",
+      "why_now": "NYT and NPR both published new coverage (9/1-9/2) framing as catalyst for care-system change; distinct new angle from Suicide Prevention Awareness Month coverage already run 9/1",
+      "primary_headline": "What the Lindsay Clancy Trial Reveals About Gaps in Postpartum Mental Health Care",
+      "next_steps": "Queue for this week; add ACOG/APA primary statement if available before publishing; ensure clinical framing, not case sensationalism",
+      "integrity_flags": [
+        "Frame around clinical/systemic failure points and evidence-based screening — avoid case sensationalism or re-litigating trial details; do not include graphic case specifics.",
+        "Distinguish postpartum psychosis (rare, severe) from postpartum depression (common) — do not conflate."
+      ],
+      "trend_score_reason": "NYT + NPR tier-1 coverage on 9/1-9/2 with new care-rethink angle; rising query volume on case",
+      "opportunity_score_reason": "Strong audience interest in maternal mental health; clear systemic/clinical angle differentiates from prior case coverage",
+      "discover_score_reason": "Moderate citation potential — specific entity plus clear screening/systems question; strengthen with ACOG/APA primary source",
+      "notes": "Confidence capped at medium — only 2 named tier-1 outlets, no primary/institutional statement yet. Add before publishing if available.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "NYT and NPR News Radar entries on the Lindsay Clancy trial and postpartum mental health care"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "FDA recall surge — consumer trust/behavior angle (update)",
+      "primary_entity": "FDA food recall consumer behavior",
+      "signal_type": "data_analysis",
+      "allowed_category": "food safety",
+      "trend_strength_score": 61,
+      "opportunity_score": 86,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "update",
+      "source_count": 3,
+      "source_urls": [
+        "https://fortune.com/2026/09/02/food-recalls-fda-americans-avoid-food-categories/",
+        "https://stateline.org/2026/08/31/a-summer-of-recalls-exposes-holes-in-the-nations-food-safety-net/",
+        "https://www.powderbulksolids.com/product-recalls/fda-recall-update-august"
+      ],
+      "recommended_angle": "Go behavioral/psychological: why one recall triggers category-wide avoidance, whether that reaction is proportionate, what food-safety experts say shoppers should actually do — not a recount of recalls",
+      "why_now": "New data point not previously covered: Fortune-reported survey shows 67% of shoppers avoid whole food category after single recall — consumer-psychology angle distinct from recall-count stories already run 8/28 and 9/2",
+      "primary_headline": "67% of Americans Now Avoid Entire Food Categories After a Recall — Here's What That Means",
+      "next_steps": "Queue for this week; verify original survey source, sample size, methodology before publishing; differentiate hard on behavioral angle",
+      "integrity_flags": [
+        "Verify the original survey source, sample size, and methodology behind the 67% figure before publishing — Fortune's citation of the underlying poll was not independently confirmed this run.",
+        "This topic has now appeared in 3 consecutive daily runs (8/28, 9/2, today) — differentiate clearly via the behavioral angle rather than repeating recall totals, to avoid reader fatigue."
+      ],
+      "trend_score_reason": "Recurring topic appearing 3 consecutive runs; new behavioral angle differentiates but signal strength moderate (61)",
+      "opportunity_score_reason": "High value if behavioral/psychology frame executed well; strong audience interest in food safety decisions; requires expert sourcing to avoid pure aggregation",
+      "discover_score_reason": "Moderate citation potential — entity (FDA recalls) is broad/generic; strengthen with specific named survey source before publish",
+      "notes": "Recurring topic — differentiate hard on behavioral angle. Verify survey sourcing before publish.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Fortune, Stateline, and Powder & Bulk Solids News Radar entries on FDA recall surge and consumer avoidance behavior"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "Employer health insurance cost spike 2027",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Arizona physicians unionize at Banner Health",
+      "reason": "off_category"
+    },
+    {
+      "topic": "VA records / Oracle Ellison subpoena",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Campus/corporate wellness center openings & partnerships",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Clinical trial industry market reports / CRO market sizing / Data4Life partnership / ChatGPT-EHR integration",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Mosque shooter's parents sue mental health organization",
+      "reason": "brand_safety"
+    },
+    {
+      "topic": "Times Square stabbing suspect mental health history",
+      "reason": "brand_safety"
+    },
+    {
+      "topic": "BBC: Children as young as six in mental health crisis",
+      "reason": "off_category"
+    },
+    {
+      "topic": "HHS $77M substance use/mental health grant",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "CIDRAP Michigan cyclosporiasis interim report",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Individual recall notices (tofu, Medtronic, fiberglass drugs, lettuce, IV saline)",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Kelly Ripa health confession",
+      "reason": "off_category"
+    }
+  ],
+  "fact_check_summary": {
+    "minor_issues": 1,
+    "accurate": 2
+  },
+  "run_cost": {
+    "total_usd": 0.5392,
+    "calls": [
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11857,
+        "output_tokens": 17986,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 41746,
+        "estimated_cost_usd": 0.4619
+      },
+      {
+        "model": "claude-haiku-4-5",
+        "input_tokens": 9208,
+        "output_tokens": 1956,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.019
+      },
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11456,
+        "output_tokens": 1596,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0583
+      }
+    ]
+  }
+}

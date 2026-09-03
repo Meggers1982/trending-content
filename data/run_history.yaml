@@ -3,6 +3,36 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-09-03'
+  niche: health and wellness
+  signals_reviewed: 84
+  topics_retained: 3
+  topics_rejected: 12
+  p1_count: 1
+  p2_count: 2
+  p3_count: 0
+  p4_count: 0
+  p5_count: 0
+  integrity_flags: 2
+  top_topic: Fall 2026 COVID/flu/RSV vaccine guidance
+  key_themes:
+  - Fall 2026 COVID/flu/RSV vaccine guidance
+  - Lindsay Clancy trial — postpartum mental health care rethink
+  - FDA recall surge — consumer trust/behavior angle (update)
+  tools_used:
+  - serpapi_news
+  - serpapi_trends
+  - google_news_radar
+  tools_unavailable:
+  - reddit_api
+  - social_search
+  - content_database
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-09-03.html
+  estimated_cost_usd: 0.5392
+  notes: 'Google News Radar dominated by off-category business/PR/local-institutional noise (58/84 items).
+    Genuine new signal narrow: one seasonal-guidance convergence (vaccines), one new data angle inside
+    recurring recall story, one new care-policy angle inside ongoing trial story. FLASH proton therapy
+    trial and gut-health interest held at Monitor pending stronger sourcing.'
 - run_date: '2026-09-02'
   niche: Health & Wellness
   signals_reviewed: 144
