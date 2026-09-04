@@ -1,0 +1,295 @@
+{
+  "run_date": "2026-09-04",
+  "niche": "health and wellness",
+  "signal_summary": {
+    "total_reviewed": 158,
+    "total_retained": 3,
+    "total_rejected": 155,
+    "tools_active": [
+      "serpapi_news",
+      "serpapi_trends",
+      "google_news_radar"
+    ],
+    "tools_unavailable": [
+      "reddit_live",
+      "social_search",
+      "content_database"
+    ],
+    "notes": "Google Trends and Google News Radar both available and used as primary signal inputs. FDA recall surge is now a 6-day recurring theme (08-28 → 09-04) — today's run deliberately limited new recall coverage to genuinely distinct products/pathogens (epinephrine, sprouts) to avoid stale repetition. Site URL not configured; competitor-list fallback used for SERP-gap context."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "FDA recalls epinephrine injections over contamination/health risk",
+      "primary_entity": "FDA epinephrine injection recall",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 62,
+      "opportunity_score": 78,
+      "discover_score": 4,
+      "urgency": "now",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.newsnationnow.com/us-news/recalls/epinephrine-injection-recalled-health-risks-fda/"
+      ],
+      "recommended_angle": "Practical safety explainer: what's recalled, why epinephrine recalls carry outsized risk (anaphylaxis is time-critical), and how this fits 2026's historic recall wave.",
+      "why_now": "Breaking 09/04; epinephrine is the frontline treatment for anaphylaxis — a contamination recall directly affects patient safety and adds to consumer recall fatigue already documented (67% avoidance stat, Fortune).",
+      "primary_headline": "FDA Recalls Epinephrine Injections Over 'Potentially Fatal' Contamination Risk — What Patients Need to Know",
+      "next_steps": "Confirm FDA.gov MedWatch/enforcement notice and specific lots before publishing; seek AP/Reuters corroboration.",
+      "integrity_flags": [
+        "Single-outlet sourcing (NewsNation) at time of writing — confirm against FDA.gov MedWatch/enforcement notice before publishing.",
+        "Do not name specific manufacturers/lot numbers until FDA notice is directly confirmed."
+      ],
+      "trend_score_reason": "Breaking recall on time-critical emergency drug; 1 tier-2 outlet with health-safety stakes.",
+      "opportunity_score_reason": "High consumer urgency (anaphylaxis access directly affected); fits documented recall-fatigue trend (67% stat).",
+      "discover_score_reason": "Named drug recall + specific consumer question; fits strong query intent.",
+      "notes": "Single-source at time of writing — confidence capped Medium per 02b. High-priority once corroborated.",
+      "fact_check": {
+        "verdict": "minor_issues",
+        "issues": [
+          "The 67% avoidance statistic (Fortune) refers specifically to food-category recalls, not drug/epinephrine recalls; using it to frame general 'recall fatigue' slightly conflates food and pharmaceutical recall contexts."
+        ],
+        "checked_against": "NewsNation headline (09/04/2026) + Fortune food-recall avoidance stat in Google News Radar"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "FDA outbreak investigation: sprouts linked to E. coli and Salmonella",
+      "primary_entity": "Sprouts foodborne illness outbreak",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 55,
+      "opportunity_score": 68,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-shiga-toxin-producing-e-coli-salmonella-sprouts-august-2026"
+      ],
+      "recommended_angle": "Explain the dual-pathogen mechanism (why sprouts are a recurring outbreak vehicle), current case status, and practical consumer guidance — distinct from prior 2026 recalls (tofu/rice/guacamole).",
+      "why_now": "Active FDA investigation opened 08/31; distinct product and pathogen combination not previously covered in the ongoing 2026 recall cycle.",
+      "primary_headline": "FDA Investigates Sprouts Linked to Dual E. coli and Salmonella Outbreak",
+      "next_steps": "Monitor FDA page for case-count updates before finalizing; add CDC epidemiologist quote if available.",
+      "integrity_flags": [
+        "Case counts and full product distribution list are preliminary — avoid stating a final total.",
+        "Don't conflate E. coli (Shiga toxin) and Salmonella symptom severity — note both distinctly."
+      ],
+      "trend_score_reason": "Direct FDA primary source; dual-pathogen outbreak distinct from prior coverage; investigation active as of 08/31.",
+      "opportunity_score_reason": "Clear consumer safety angle; direct FDA data available; medium differentiation from existing recall coverage.",
+      "discover_score_reason": "Specific outbreak entity + direct primary source + food-safety mechanism explanation.",
+      "notes": "Direct FDA primary source — strongest sourcing of today's candidates.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "FDA.gov outbreak investigation notice (08/31/2026) in Google News Radar"
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Does magnesium actually improve gut health?",
+      "primary_entity": "Magnesium (gut health claims)",
+      "signal_type": "supplement_claim",
+      "allowed_category": "gut health and microbiome",
+      "trend_strength_score": 50,
+      "opportunity_score": 72,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "source_urls": [
+        "https://ods.od.nih.gov/factsheets/Magnesium-HealthProfessional/"
+      ],
+      "recommended_angle": "Skeptical, evidence-based explainer separating magnesium citrate's documented osmotic-laxative effect from inflated 'gut health'/microbiome marketing claims — rides current rising search interest.",
+      "why_now": "Google Trends shows 'magnesium citrate' and 'how to improve gut health' as top rising queries this week; SERP is saturated with unsubstantiated supplement content — clear differentiation gap.",
+      "primary_headline": "Does Magnesium Really Improve Gut Health? Here's What the Science Actually Shows",
+      "next_steps": "Source RDN or GI specialist quote; cite NIH ODS fact sheet directly.",
+      "integrity_flags": [
+        "Circulating claims overstate magnesium's role in gut health broadly — lead with the specific, evidence-backed laxative/motility mechanism, not general microbiome claims."
+      ],
+      "trend_score_reason": "Google Trends rising queries on 'magnesium citrate' and 'gut health' this week; sits at minimum threshold.",
+      "opportunity_score_reason": "SERP dominated by unsubstantiated supplement claims; clear evidence-based differentiation opportunity.",
+      "discover_score_reason": "Trending search queries + RDN-sourced evergreen angle; no breaking-news hook limits discovery velocity.",
+      "notes": "Trend score sits right at minimum threshold — evergreen value justifies inclusion despite no breaking-news hook.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Google Trends 'gut health' rising queries (magnesium citrate, magnesium for gut health, how to improve gut health)"
+      }
+    },
+    {
+      "priority_level": "P5",
+      "publish_timing": "monitor",
+      "topic": "Penn launches first advanced proton therapy clinical trial",
+      "primary_entity": "Penn Medicine proton therapy trial",
+      "signal_type": "clinical_trial",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 43,
+      "opportunity_score": 58,
+      "discover_score": 2,
+      "urgency": "evergreen",
+      "confidence": "low",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.pennmedicine.org"
+      ],
+      "recommended_angle": "N/A — hold pending broader pickup.",
+      "why_now": "Single-institution announcement; no independent corroboration or patient-outcome data yet.",
+      "primary_headline": "N/A",
+      "next_steps": "Re-check in 3–5 days for wire pickup (AP/Reuters/STAT) or patient-enrollment news; passed 02b (institutional source, no overstated claims) but failed trend-strength threshold.",
+      "integrity_flags": [],
+      "trend_score_reason": "Single institutional announcement; below trend threshold pending broader media pickup or enrollment milestones.",
+      "opportunity_score_reason": "Tier-1 institution (Penn Medicine) but no independent corroboration limits audience reach.",
+      "discover_score_reason": "Institutional-only sourcing; no consumer/research news hook or viral potential.",
+      "notes": "Deferred, not rejected — recheck_on: 2026-09-08. Passed 02b cleanly but lacks independent corroboration.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Penn Medicine news item (09/01/2026) in Google News Radar, single-source with no corroboration as stated"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "Medtronic Bravo CF recall",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Tofu recall",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Rice recall",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Guacamole recall",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Baxter IV fluid recall",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "GLP-1 psychiatric-harm study",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "LGBTQ healthcare access study",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Ibogaine clinical trial (ASU/Barrow)",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Wellness stacking trend",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "September suicide prevention month",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Cancer clinical trial access (US News opinion)",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Employer health costs spike 2027 (Mercer/NYT)",
+      "reason": "off_category"
+    },
+    {
+      "topic": "OpenAI ChatGPT EHR integration; Axios AI giants lean into health care",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Screwworm/USDA livestock disease",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Sanford/North Memorial merger",
+      "reason": "off_category"
+    },
+    {
+      "topic": "ECU nurse awards",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Luminis cyberattack",
+      "reason": "off_category"
+    },
+    {
+      "topic": "CVS/LOVB partnership",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Wellness-incentive law changes",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Penn LDI $25 incentive study",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "NIH/Penn State rural grant",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "WHO Singapore centre announcement",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "UAMS spinal-cord trial",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Drexel study",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Brown aging alliance",
+      "reason": "weak_signal"
+    }
+  ],
+  "fact_check_summary": {
+    "minor_issues": 1,
+    "accurate": 3
+  },
+  "run_cost": {
+    "total_usd": 0.5837,
+    "calls": [
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11792,
+        "output_tokens": 21357,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 41746,
+        "estimated_cost_usd": 0.5123
+      },
+      {
+        "model": "claude-haiku-4-5",
+        "input_tokens": 8254,
+        "output_tokens": 2305,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0198
+      },
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11550,
+        "output_tokens": 1128,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0516
+      }
+    ]
+  }
+}

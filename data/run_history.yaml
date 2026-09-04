@@ -3,6 +3,37 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-09-04'
+  niche: health and wellness
+  signals_reviewed: 158
+  topics_retained: 4
+  topics_rejected: 25
+  p1_count: 1
+  p2_count: 1
+  p3_count: 1
+  p4_count: 0
+  p5_count: 1
+  integrity_flags: 3
+  top_topic: FDA recalls epinephrine injections over contamination/health risk
+  key_themes:
+  - FDA recalls epinephrine injections over contamination/health risk
+  - 'FDA outbreak investigation: sprouts linked to E. coli and Salmonella'
+  - Does magnesium actually improve gut health?
+  - Penn launches first advanced proton therapy clinical trial
+  tools_used:
+  - serpapi_news
+  - serpapi_trends
+  - google_news_radar
+  tools_unavailable:
+  - reddit_live
+  - social_search
+  - content_database
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-09-04.html
+  estimated_cost_usd: 0.5837
+  notes: Google Trends and Google News Radar both available and used as primary signal inputs. FDA recall
+    surge is now a 6-day recurring theme (08-28 → 09-04) — today's run deliberately limited new recall
+    coverage to genuinely distinct products/pathogens (epinephrine, sprouts) to avoid stale repetition.
+    Site URL not configured; competitor-list fallback used for SERP-gap context.
 - run_date: '2026-09-03'
   niche: health and wellness
   signals_reviewed: 84
