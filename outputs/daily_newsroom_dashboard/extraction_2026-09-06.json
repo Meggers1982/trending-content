@@ -1,0 +1,213 @@
+{
+  "run_date": "2026-09-06",
+  "niche": "Health & Wellness",
+  "signal_summary": {
+    "total_reviewed": 92,
+    "total_retained": 2,
+    "total_rejected": 87,
+    "tools_active": [
+      "web_search",
+      "google_news",
+      "google_trends",
+      "serpapi"
+    ],
+    "tools_unavailable": [
+      "serpapi_news_search"
+    ],
+    "notes": "Google News collection interrupted mid-run by SerpAPI outage; treated as unknown signal, not absence of activity. FDA recall-surge theme appeared 3 consecutive prior runs (09-02, 09-03, 09-04) — only bundled new specific outbreaks retained as update. Two study-based candidates (Mount Sinai pediatric brain tumor, social-media warning-label study) cleared opportunity thresholds but failed trend_strength due to single-source sourcing, moved to Monitor. Cell Metabolism keto diet study held pending News corroboration."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "US cancer deaths linked to alcohol have doubled since 1990",
+      "primary_entity": "alcohol-attributable cancer mortality",
+      "signal_type": "study_or_research",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 72,
+      "opportunity_score": 79,
+      "discover_score": 5,
+      "urgency": "now",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 3,
+      "source_urls": [
+        "https://news.med.miami.edu/alcohol-related-cancer-deaths-double-us-study/"
+      ],
+      "recommended_angle": "Skeptical/clarifying explainer: what the study actually measured (absolute deaths vs. relative risk), why 'doubled' doesn't mean 'twice as likely,' and what one-drink-a-day framing gets wrong.",
+      "why_now": "Real-time Google Trends breakout ('alcohol cancer deaths') directly confirmed by CNN coverage of a new University of Miami study; convergence across search, news, and institutional channels.",
+      "primary_headline": "Alcohol-Linked Cancer Deaths Have Doubled Since 1990 — Here's What the Data Actually Shows",
+      "next_steps": "Assign to health science writer today; verify exact journal/DOI behind Univ. of Miami release before publishing; lead with absolute risk context, not CNN's dose framing.",
+      "integrity_flags": [
+        "Do not present rising alcohol-attributable cancer deaths as proof that 'one drink a day' causes cancer death — distinguish absolute vs. relative risk; contextualize against population growth and screening changes since 1990."
+      ],
+      "trend_score_reason": "Real-time Google Trends breakout confirmed by CNN coverage across institutional and news channels.",
+      "opportunity_score_reason": "High consumer relevance, actionable health guidance, strong public search interest with credible institutional backing.",
+      "discover_score_reason": "Maximum urgency: real-time Trends signal plus mainstream news corroboration on novel study with direct health implications.",
+      "notes": "",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "University of Miami study link + CNN-driven Google Trends breakout 'alcohol cancer deaths'"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "FDA/CDC open three new outbreak investigations: cyclospora in iceberg lettuce, Salmonella in eggs, E. coli in frozen blueberries",
+      "primary_entity": "2026 foodborne outbreak investigations",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 62,
+      "opportunity_score": 76,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "update",
+      "source_count": 3,
+      "source_urls": [
+        "https://www.cdc.gov/cyclosporiasis/outbreaks/07-26/index.html",
+        "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-salmonella-eggs-july-2026",
+        "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-e-coli-o145h28-frozen-blueberries-july-2026"
+      ],
+      "recommended_angle": "Consumer-facing roundup of the three newest, distinct outbreak investigations layered onto the ongoing 2026 recall surge — what's actually recalled, what to check in your fridge, and how this differs from the tofu/olive oil/sprout recalls already covered.",
+      "why_now": "Three separate CDC/FDA primary notices published within the last 72 hours name new pathogens and products not previously covered (cyclospora/lettuce, Salmonella/eggs, E. coli/blueberries); Google Trends shows rising query for 'cyclosporiasis outbreak iceberg lettuce safety.'",
+      "primary_headline": "3 New Foodborne Outbreaks Just Hit the FDA/CDC List — Here's What's Actually Recalled",
+      "next_steps": "Confirm this reads as genuinely new information, not recall-fatigue repetition — recall-surge theme has run 3 consecutive prior days (09-02–09-04); differentiate clearly by naming specific new pathogens/products.",
+      "integrity_flags": [
+        "Broader 'recall surge' narrative is showing staleness risk after 3+ consecutive days of coverage — this piece must lead with the 3 specific new investigations, not repeat prior systemic framing."
+      ],
+      "trend_score_reason": "Three separate CDC/FDA tier-1 primary notices within 72h for distinct new pathogens/products not previously named.",
+      "opportunity_score_reason": "Direct consumer guidance angle, credible primary sources, clear actionable takeaways on food safety.",
+      "discover_score_reason": "Moderate urgency: three distinct new outbreaks with immediate consumer relevance, though recall-fatigue context requires differentiation.",
+      "notes": "",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "CDC cyclosporiasis outbreak page, FDA Salmonella eggs outbreak page, FDA E. coli frozen blueberries outbreak page, and Google Trends rising query 'cyclosporiasis outbreak iceberg lettuce safety'"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "CDC data strategy, OpenAI-EHR, Pentagon guidance, NASA moon-base RFI, insurance premiums, hospital cyberattack, no-confidence votes, funding cuts",
+      "reason": "off_category"
+    },
+    {
+      "topic": "University wellness centers, employee wellness back-pay rules, EAP suicide-prevention resources, activewear spending",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Mount Sinai pediatric brain tumor radiation study",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Social media warning labels reduce teen use (study)",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Brown $37M aging research alliance",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Dental floss vaccine delivery research",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Biogen Leqembi subcutaneous approval (China)",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Epinephrine recall",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Tofu recall",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Medtronic recall",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Consumer-avoidance Fortune piece on recalls",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "IV fluid fiberglass recall",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "US News opinion on clinical trial access",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "WHO Singapore center",
+      "reason": "off_category"
+    },
+    {
+      "topic": "UCI Health pancreatic laser trial",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Data4Life/Evinova partnerships",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Morgan Lewis clinical trial legal analysis",
+      "reason": "off_category"
+    },
+    {
+      "topic": "JD Vance diet/weight loss",
+      "reason": "brand_safety"
+    },
+    {
+      "topic": "Lionel Richie health",
+      "reason": "brand_safety"
+    },
+    {
+      "topic": "Jim Curtis health",
+      "reason": "brand_safety"
+    },
+    {
+      "topic": "igho ubiribo influencer cosmetic injection death",
+      "reason": "brand_safety"
+    },
+    {
+      "topic": "Cell Metabolism keto diet study",
+      "reason": "unverifiable_claim"
+    }
+  ],
+  "fact_check_summary": {
+    "accurate": 2
+  },
+  "run_cost": {
+    "total_usd": 0.5934,
+    "calls": [
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11692,
+        "output_tokens": 22662,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 42559,
+        "estimated_cost_usd": 0.5346
+      },
+      {
+        "model": "claude-haiku-4-5",
+        "input_tokens": 6935,
+        "output_tokens": 1685,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0154
+      },
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11440,
+        "output_tokens": 605,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0434
+      }
+    ]
+  }
+}

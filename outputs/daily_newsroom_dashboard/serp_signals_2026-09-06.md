@@ -56,7 +56,7 @@ Top rising related queries from Google Trends:
   - how to read nutrition labels
   - crumbl nutrition facts
 
-## Google News Radar — Recent Health Topics (60 unique across 12 queries; showing 60)
+## Google News Radar — Recent Health Topics (72 unique across 12 queries; showing 60)
 Treat these headlines as the broad radar of news-led health topics. The Signal Listener must consider this radar before narrowing to retained candidates.
   - (health) [Centers for Disease Control and Prevention | CDC (.gov)] 08/31/2026, 07:00 AM, +0000 UTC — Public Health Data Strategy Milestones for 2026 | The PHDS
     
