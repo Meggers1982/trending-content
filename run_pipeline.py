@@ -284,12 +284,16 @@ def _serp_get(params: dict) -> dict | None:
 def _serp_get_attempts(request_params: dict, engine: str, query: str) -> dict | None:
     """The retry loop itself. Records success/failure against the breaker.
 
-    Failures are counted per *attempt*, not per query: three consecutive
-    timeouts already prove the upstream is not answering, and waiting to prove
-    it three more times costs another two full timeouts for no new information.
+    Failures are counted per *query*, not per attempt. Counting attempts looks
+    faster on paper and was wrong in production: on the 2026-09-06 prefetch run
+    a single slow query ("medical study when:7d") burned its three attempts
+    while every other query was succeeding, tripped the breaker, and starved
+    Google Trends of its entire budget — 0 seed keywords, and Trends is 30% of
+    trend_strength_score. One bad query is not an outage. Three consecutive
+    *queries* failing is.
     """
     for attempt in range(1, SERPAPI_MAX_RETRIES + 1):
-        # An outage detected mid-query stops the remaining retries too.
+        # An outage confirmed by earlier queries stops this one's retries too.
         if attempt > 1 and _serp_circuit_open():
             return None
         try:
@@ -313,7 +317,6 @@ def _serp_get_attempts(request_params: dict, engine: str, query: str) -> dict | 
                     f"HTTP Error {e.code}: {body}; retrying "
                     f"{attempt + 1}/{SERPAPI_MAX_RETRIES}..."
                 )
-                _serp_state["consecutive_failures"] += 1
                 time.sleep(min(2 ** attempt, 8))
                 continue
             # A non-retryable 4xx is our request being wrong, not the upstream
@@ -336,8 +339,9 @@ def _serp_get_attempts(request_params: dict, engine: str, query: str) -> dict | 
                 f"SerpAPI request timed out/failed ({engine}, {query}); "
                 f"retrying {attempt + 1}/{SERPAPI_MAX_RETRIES}..."
             )
-            _serp_state["consecutive_failures"] += 1
             time.sleep(min(2 ** attempt, 8))
+    # Fell out of the loop with every attempt exhausted: one failed query.
+    _serp_state["consecutive_failures"] += 1
     return None
 
 
