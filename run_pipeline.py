@@ -148,12 +148,23 @@ SERPAPI_ENGINE_TIME_BUDGET_SECONDS = float(
     os.getenv("SERPAPI_ENGINE_TIME_BUDGET_SECONDS", "240")
 )
 
+# 2026-09-05 outage fallback: once the google_news breaker opens, retry the
+# remaining GOOGLE_NEWS_QUERIES against google_news_light instead of just
+# skipping them. It is a separate engine with its own breaker tally, so it is
+# unaffected by whatever is wrong with google_news, and returns fewer fields
+# per article in exchange for that independence. Default on; set to false to
+# go back to skipping once the incident is over and this is no longer needed.
+SERPAPI_NEWS_FALLBACK_ENABLED = os.getenv(
+    "SERPAPI_NEWS_FALLBACK_ENABLED", "true"
+).strip().lower() in {"1", "true", "yes"}
+
 _serp_state = {
     "failures": {},       # engine group -> consecutive failed queries
     "elapsed": 0.0,       # whole process
     "engine_elapsed": {}, # engine group -> seconds
     "tripped": set(),     # engine groups already logged as open
     "all_tripped": False, # global budget blown: nothing else runs
+    "news_fallback_queries": 0,  # queries answered via google_news_light instead
 }
 
 
@@ -237,14 +248,24 @@ def serp_breaker_status() -> str:
             "gathering stopped early for every engine and the candidate set "
             "below is built on partial data."
         )
-    if not _serp_state["tripped"]:
-        return ""
-    degraded = ", ".join(sorted(_serp_state["tripped"]))
-    return (
-        f"SerpAPI stopped answering for {degraded} partway through this run, so "
-        f"that signal is incomplete below. Other sources ran normally — do not "
-        f"read the gap as an absence of activity."
-    )
+    parts = []
+    if _serp_state["tripped"]:
+        degraded = ", ".join(sorted(_serp_state["tripped"]))
+        parts.append(
+            f"SerpAPI stopped answering for {degraded} partway through this run, so "
+            f"that signal is incomplete below. Other sources ran normally — do not "
+            f"read the gap as an absence of activity."
+        )
+    fallback_queries = _serp_state["news_fallback_queries"]
+    if fallback_queries:
+        plural = "y" if fallback_queries == 1 else "ies"
+        parts.append(
+            f"{fallback_queries} Google News quer{plural} were answered via the "
+            f"lighter google_news_light engine instead (labeled [light] below); those "
+            f"articles carry fewer fields than a normal google_news result and should "
+            f"not be treated as full-fidelity."
+        )
+    return " ".join(parts)
 
 # Google News queries to run each day for health & wellness signal gathering.
 # Google News supports `when:` inside q. SerpAPI docs note `q` can use
@@ -420,26 +441,56 @@ def _serp_get_attempts(request_params: dict, engine: str, query: str) -> dict | 
     return None
 
 
+def _extract_news_source_name(article: dict) -> str:
+    """google_news returns source as {"name": ...}; google_news_light returns
+    it as a bare string ("NPR", "CBS News") — confirmed 2026-09-06 against the
+    live engine, whose news_results carry exactly
+    date/link/position/snippet/source/thumbnail/title. Absent is tolerated too
+    rather than crashing on a shape change."""
+    source = article.get("source", "")
+    if isinstance(source, dict):
+        return source.get("name", "")
+    return source or ""
+
+
 def fetch_google_news() -> list[dict]:
     """
     Run GOOGLE_NEWS_QUERIES through SerpAPI Google News.
     Returns a deduplicated list of article dicts with keys:
-      title, source, date, snippet, link
+      title, source, date, snippet, link, via_fallback
+
+    Once the google_news breaker opens (2026-09-05 outage), remaining queries
+    retry against google_news_light instead of being skipped outright — see
+    SERPAPI_NEWS_FALLBACK_ENABLED. That engine keeps its own breaker tally, so
+    it runs unaffected by whatever tripped google_news itself.
     """
     seen   = set()
     result = []
     per_query_counts = {}
+    fallback_queries = 0
     for q in GOOGLE_NEWS_QUERIES:
-        data = _serp_get({
-            "engine": "google_news",
-            "q": q,
-            "gl": "us",
-            "hl": "en",
-            "num": MAX_NEWS_RESULTS_PER_QUERY,
-        })
+        use_fallback = SERPAPI_NEWS_FALLBACK_ENABLED and _serp_circuit_open("google_news")
+        engine = "google_news_light" if use_fallback else "google_news"
+        params = {"engine": engine, "q": q, "gl": "us", "hl": "en"}
+        if use_fallback:
+            # google_news_light runs a tbm=nws Google search, not Google News
+            # proper, and `when:7d` returns "Fully empty" there — verified
+            # 2026-09-06 against the live engine: "health when:7d" gave 0
+            # results, plain "health" gave 10, dated 24 minutes to 1 day old.
+            # It also does not accept `num`. So the fallback drops both and
+            # relies on tbm=nws being recency-weighted by default, plus the
+            # per-article `date` the caller already keeps.
+            params["q"] = q.replace(" when:7d", "").strip()
+        else:
+            params["num"] = MAX_NEWS_RESULTS_PER_QUERY
+        data = _serp_get(params)
         if not data:
             continue
+        if use_fallback:
+            fallback_queries += 1
         kept_for_query = 0
+        # Both engines return news_results with title/date/snippet/link;
+        # missing fields fall back to "" here rather than being invented.
         for article in data.get("news_results", []):
             if kept_for_query >= MAX_NEWS_RESULTS_PER_QUERY:
                 break
@@ -449,14 +500,22 @@ def fetch_google_news() -> list[dict]:
             seen.add(title)
             kept_for_query += 1
             result.append({
-                "query":   q,
-                "title":   title,
-                "source":  article.get("source", {}).get("name", ""),
-                "date":    article.get("date", ""),
-                "snippet": article.get("snippet", ""),
-                "link":    article.get("link", ""),
+                "query":        q,
+                "title":        title,
+                "source":       _extract_news_source_name(article),
+                "date":         article.get("date", ""),
+                "snippet":      article.get("snippet", ""),
+                "link":         article.get("link", ""),
+                "via_fallback": use_fallback,
             })
         per_query_counts[q] = kept_for_query
+    if fallback_queries:
+        _serp_state["news_fallback_queries"] = fallback_queries
+        plural = "y" if fallback_queries == 1 else "ies"
+        log.warning(
+            f"Google News: {fallback_queries} quer{plural} answered via the "
+            f"google_news_light fallback (google_news breaker open)"
+        )
     log.info(
         f"Google News: fetched {len(result)} unique articles across "
         f"{len(GOOGLE_NEWS_QUERIES)} radar queries"
@@ -672,18 +731,28 @@ def build_serp_context() -> str:
         article_lines = []
         for a in news_articles[:MAX_NEWS_CONTEXT_ITEMS]:   # cap to control context size
             query_label = a.get("query", "").replace(" when:7d", "")
+            # Fallback articles came from google_news_light, not the (degraded)
+            # google_news engine — flagged here rather than presented as
+            # full-fidelity results. See SERPAPI_NEWS_FALLBACK_ENABLED.
+            fallback_tag = " [light]" if a.get("via_fallback") else ""
             # The Link: line feeds two things: the markdown source links Claude
             # writes into the report, and the clickable headlines in the
             # dashboard's Google News Radar panel (parseSignalRadar in page.jsx).
             article_lines.append(
-                f"  - ({query_label}) [{a['source']}] {a['date']} — {a['title']}\n"
+                f"  - ({query_label}){fallback_tag} [{a['source']}] {a['date']} — {a['title']}\n"
                 f"    {a['snippet']}\n"
                 f"    Link: {a.get('link') or 'not available'}"
             )
+        fallback_count = sum(1 for a in news_articles if a.get("via_fallback"))
+        fallback_note = (
+            f"; {fallback_count} tagged [light] came from the google_news_light "
+            f"fallback and carry fewer fields"
+            if fallback_count else ""
+        )
         sections.append(
             f"## Google News Radar — Recent Health Topics "
             f"({len(news_articles)} unique across {len(GOOGLE_NEWS_QUERIES)} queries; "
-            f"showing {min(len(news_articles), MAX_NEWS_CONTEXT_ITEMS)})\n"
+            f"showing {min(len(news_articles), MAX_NEWS_CONTEXT_ITEMS)}{fallback_note})\n"
             "Treat these headlines as the broad radar of news-led health topics. "
             "The Signal Listener must consider this radar before narrowing to retained candidates.\n"
             + "\n".join(article_lines)
