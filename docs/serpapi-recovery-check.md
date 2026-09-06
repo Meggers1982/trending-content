@@ -32,9 +32,25 @@ and commits its own evidence to this repo. `git pull` first, then:
 - `daily_report_<today>.md` — compare the Google News article count against the
   previous few days via `git log`. A healthy run answers all 12 radar queries.
 
+You may start in a detached HEAD. Run `git checkout main && git pull origin main`
+before anything else.
+
 Check the two most recent days, not just today, so one anomalous run doesn't
-decide it. If today's artifacts are missing, the 12:00 UTC run hasn't happened
-yet — report that and stop.
+decide it.
+
+**What counts as usable evidence.** Judge the artifacts by age, not by which run
+produced them. A manual `workflow_dispatch` run is exactly as good a witness to
+the engine's state as the 12:00 UTC cron — do not discount artifacts for having
+been committed at an unexpected hour. Proceed whenever the newest
+`serp_signals_*.md` is **less than 24 hours old** (check the commit time with
+`git log -1 --format=%ad --date=iso -- <file>`, not the filename date).
+
+Stop and report only if the newest artifacts are older than that, which means no
+run has completed recently and you have nothing current to judge from.
+
+If a run *did* fire and produced no artifacts at all for a given date, that
+absence is itself evidence — the outage killed it before it could commit. That is
+what happened on 2026-09-05.
 
 ## Step 2 — If recovered
 
