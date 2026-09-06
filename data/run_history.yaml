@@ -5,35 +5,35 @@
 runs:
 - run_date: '2026-09-06'
   niche: Health & Wellness
-  signals_reviewed: 92
-  topics_retained: 2
+  signals_reviewed: 114
+  topics_retained: 6
   topics_rejected: 22
-  p1_count: 1
-  p2_count: 1
-  p3_count: 0
+  p1_count: 2
+  p2_count: 3
+  p3_count: 1
   p4_count: 0
   p5_count: 0
-  integrity_flags: 2
-  top_topic: US cancer deaths linked to alcohol have doubled since 1990
+  integrity_flags: 4
+  top_topic: Frozen blueberry E. coli outbreak grows to 17 illnesses across 19 states
   key_themes:
-  - US cancer deaths linked to alcohol have doubled since 1990
-  - 'FDA/CDC open three new outbreak investigations: cyclospora in iceberg lettuce, Salmonella in eggs,
-    E. coli in frozen blueberries'
+  - Frozen blueberry E. coli outbreak grows to 17 illnesses across 19 states
+  - Novartis and Bristol Myers halt autoimmune drug trials after patient deaths
+  - Cyclospora outbreak linked to iceberg lettuce
+  - U.S. alcohol-related cancer deaths have doubled since 1990
+  - Health warnings could reduce young people's social media use, Stanford study finds
+  - Stem cell trial aims to free organ transplant patients from lifelong immune-suppressing drugs
   tools_used:
-  - web_search
   - google_news
   - google_trends
   - serpapi
   tools_unavailable:
-  - serpapi_news_search
+  - serpapi_google_news (partial mid-run failure)
   dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-09-06.html
-  estimated_cost_usd: 0.5934
-  notes: Google News collection interrupted mid-run by SerpAPI outage; treated as unknown signal, not
-    absence of activity. FDA recall-surge theme appeared 3 consecutive prior runs (09-02, 09-03, 09-04)
-    — only bundled new specific outbreaks retained as update. Two study-based candidates (Mount Sinai
-    pediatric brain tumor, social-media warning-label study) cleared opportunity thresholds but failed
-    trend_strength due to single-source sourcing, moved to Monitor. Cell Metabolism keto diet study held
-    pending News corroboration.
+  estimated_cost_usd: 0.6248
+  notes: SerpAPI google_news engine degraded partway through collection; 9 queries served via google_news_light
+    fallback with reduced field fidelity. Two recurring themes from run history (recall-fatigue narrative,
+    clinical-trial-access narrative) deliberately not re-covered generically — only stories with genuinely
+    new developments retained. Google Trends fully available and used as primary search velocity input.
 - run_date: '2026-09-04'
   niche: health and wellness
   signals_reviewed: 158
