@@ -7,7 +7,7 @@ SerpAPI became unavailable partway through this run; signal gathering stopped ea
 
 Treat absence of signal as unknown, not as absence of activity. Say so in signal_summary.notes and lower confidence accordingly.
 
-## Google News Radar — Recent Health Topics (24 unique across 12 queries; showing 24)
+## Google News Radar — Recent Health Topics (36 unique across 12 queries; showing 36)
 Treat these headlines as the broad radar of news-led health topics. The Signal Listener must consider this radar before narrowing to retained candidates.
   - (health) [Centers for Disease Control and Prevention | CDC (.gov)] 08/31/2026, 07:00 AM, +0000 UTC — Public Health Data Strategy Milestones for 2026 | The PHDS
     
@@ -81,3 +81,39 @@ Treat these headlines as the broad radar of news-led health topics. The Signal L
   - (wellness) [Geauga County Maple Leaf] 09/02/2026, 06:43 PM, +0000 UTC — Inaugural Conference Puts First Responder Wellness in Focus
     
     Link: https://www.geaugamapleleaf.com/news/inaugural-conference-puts-first-responder-wellness-in-focus/
+  - (medical study) [UAMS News] 09/04/2026, 02:26 PM, +0000 UTC — UAMS Part of Clinical Study Exploring Blood Pressure Instability Treatment for People With Spinal Cord Injury
+    
+    Link: https://news.uams.edu/2026/09/04/uams-part-of-clinical-study-exploring-blood-pressure-instability-treatment-for-people-with-spinal-cord-injury/
+  - (medical study) [Penn Medicine] 09/01/2026, 12:49 PM, +0000 UTC — Penn launches first advanced proton therapy clinical trial
+    
+    Link: https://www.pennmedicine.org/news/penn-launches-first-advanced-proton-therapy-clinical-trial
+  - (medical study) [American Medical Association | AMA] 09/04/2026, 12:06 PM, +0000 UTC — Using AI to study: Medical students should know the do’s and don’ts
+    
+    Link: https://www.ama-assn.org/medical-students/succeed-medical-school/using-ai-study-medical-students-should-know-do-s-and-don-ts
+  - (medical study) [Mount Sinai] 09/05/2026, 12:10 PM, +0000 UTC — Mount Sinai Researchers Report Largest Study Supporting Three Courses of Radiation for Children With Deadly Brain Tumor
+    
+    Link: https://www.mountsinai.org/about/newsroom/2026/mount-sinai-researchers-report-largest-study-supporting-three-courses-of-radiation-for-children-with-deadly-brain-tumor
+  - (medical study) [Brown University] 09/03/2026, 03:08 PM, +0000 UTC — Transformative $37 million investment will create alliance to advance breakthroughs in aging research, clinical care
+    
+    Link: https://www.brown.edu/news/2026-09-03/starr-healthspan-innovation-alliance
+  - (medical study) [fda.gov] 09/02/2026, 12:00 AM, +0000 UTC — Good Clinical Practices Are Not Optional
+    
+    Link: https://www.fda.gov/news-events/fda-voices/good-clinical-practices-are-not-optional-fdas-commitment-human-subject-protections-and-gold-standard
+  - (medical study) [Marquette Today] 09/01/2026, 02:07 PM, +0000 UTC — Marquette biomedical engineering professor receives NIH grant to study acute respiratory distress syndrome
+    
+    Link: https://today.marquette.edu/2026/09/marquette-biomedical-engineering-professor-receives-nih-grant-to-study-acute-respiratory-distress-syndrome/
+  - (medical study) [University of Miami] 09/02/2026, 11:31 PM, +0000 UTC — U.S. Cancer Deaths Linked to Alcohol Have Doubled Since 1990, Study Finds
+    
+    Link: https://news.med.miami.edu/alcohol-related-cancer-deaths-double-us-study/
+  - (medical study) [Nature] 09/02/2026, 03:18 PM, +0000 UTC — Robust inference and correlates from genetic associations with personality
+    
+    Link: https://www.nature.com/articles/s41586-026-10992-9
+  - (medical study) [Medical Xpress] 09/04/2026, 03:00 PM, +0000 UTC — Health warnings could reduce young people's social media use, study finds
+    
+    Link: https://medicalxpress.com/news/2026-09-health-young-people-social-media.html
+  - (medical study) [Biogen] 09/03/2026, 04:00 AM, +0000 UTC — LEQEMBI® (lecanemab) Subcutaneous Formulation as an Initiation Treatment for Early Alzheimer’s Disease Approved in China
+    
+    Link: https://investors.biogen.com/news-releases/news-release-details/leqembir-lecanemab-subcutaneous-formulation-initiation-treatment
+  - (medical study) [ABC7 Los Angeles] 09/04/2026, 09:16 PM, +0000 UTC — Could dental floss replace shots? Researchers explore new vaccine delivery method
+    
+    Link: https://abc7.com/story/could-dental-floss-replace-shots-researchers-explore-new-vaccine-delivery-method/19791257/
