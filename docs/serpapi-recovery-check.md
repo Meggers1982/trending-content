@@ -55,17 +55,31 @@ what happened on 2026-09-05.
 ## Step 2 — If recovered
 
 Change no code. Report that it recovered, citing the article count and the
-absent integrity warning. Note that `docs/serpapi-recovery-check.md` and this
-routine can now be retired.
+absent integrity warning.
+
+Then say plainly that this routine has done its job and should be retired, and
+that the merged fallback can be switched off with
+`SERPAPI_NEWS_FALLBACK_ENABLED=false` — or left on, since it only ever engages
+when the `google_news` breaker opens, which a healthy engine never does.
 
 ## Step 3 — If still degraded
 
-**First, check whether you already did this on a previous run.** The branch is
-always `fix/serpapi-google-news-light-fallback`. If it exists on the remote, or
-an open PR from it exists, do **not** build the change again and do **not** open
-a second PR — report that the fix is already waiting for review, say the engine
-is still degraded, and stop. This routine fires daily and the incident may last
-days; exactly one PR should ever be open for it.
+**The `google_news_light` fallback is already merged** (PR #1, `4b3f268`,
+2026-09-06). There is nothing left to build. Check first and confirm:
+
+```
+grep -q google_news_light run_pipeline.py && echo "fallback already present"
+```
+
+If it is present — which it should be — then **write no code and open no PR**.
+Report that the engine is still degraded, that the fallback is carrying the
+load, and how well it is doing: the latest `run_history.yaml` entry and the
+Google News article count tell you whether the pipeline is getting usable signal
+through the fallback. That report is the whole job on a still-degraded day.
+
+Only if the fallback has somehow been reverted out of `main` should you rebuild
+it, on branch `fix/serpapi-google-news-light-fallback`, and never open a second
+PR if that branch or an open PR already exists.
 
 Otherwise, implement the `google_news_light` fallback **on a branch** and open a
 PR. Never push to `main` — the daily pipeline costs real money per run and this
@@ -85,10 +99,20 @@ The shape of the fix, in `run_pipeline.py`:
   retry the *remaining* queries against `engine: "google_news_light"` instead.
   It is a separate engine with its own breaker tally, unaffected by this
   incident, returning fewer fields per article.
-- Verify the response shape first — `google_news_light` may not return the same
-  `news_results` keys (`title`, `source.name`, `date`, `snippet`, `link`). Map
-  whatever it does return onto the dict `fetch_google_news()` already builds, and
-  leave missing fields as empty strings rather than inventing them.
+- The engine's contract is already known, verified live on 2026-09-06:
+  `news_results` items carry `date`, `link`, `position`, `snippet`, `source`,
+  `thumbnail`, `title`. `source` is a **bare string** ("NPR"), not
+  `{"name": ...}` as on `google_news`.
+- It does **not** accept `num`, and it does **not** accept `when:7d` — that
+  operator returns "Fully empty", because this engine is a `tbm=nws` Google
+  search rather than Google News proper. Strip both from fallback queries.
+
+**You cannot call SerpAPI from this sandbox** — egress to `serpapi.com` is
+blocked. Do not spend turns trying; the contract above is what you need. If you
+ever need something about the engine that is not written here, say so in your
+report and ask for it to be checked by hand rather than guessing and shipping.
+That exact guess is what nearly shipped a fallback that returned zero articles
+on every query while logging that it worked.
 - Label the fallback articles so the report can tell them apart, and mention the
   fallback in the `SIGNAL INTEGRITY WARNING` text rather than presenting light
   results as full ones.
