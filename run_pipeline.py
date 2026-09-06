@@ -138,49 +138,112 @@ SERPAPI_FAILURE_THRESHOLD = int(os.getenv("SERPAPI_FAILURE_THRESHOLD", "3"))
 
 # Wall-clock ceiling across all SerpAPI calls in one process. Backstop for the
 # slow-but-succeeding case, which the consecutive-failure count never catches.
-SERPAPI_TIME_BUDGET_SECONDS = float(os.getenv("SERPAPI_TIME_BUDGET_SECONDS", "420"))
+SERPAPI_TIME_BUDGET_SECONDS = float(os.getenv("SERPAPI_TIME_BUDGET_SECONDS", "600"))
+
+# ...and a smaller ceiling per engine, so the engine that happens to run first
+# cannot spend the whole run's budget. Google News runs before Google Trends and
+# issues 12 queries to Trends' 9; with a single shared pool, a News outage left
+# Trends with nothing every time — see the note on _serp_engine_group().
+SERPAPI_ENGINE_TIME_BUDGET_SECONDS = float(
+    os.getenv("SERPAPI_ENGINE_TIME_BUDGET_SECONDS", "240")
+)
 
 _serp_state = {
-    "consecutive_failures": 0,
-    "elapsed": 0.0,
-    "tripped": False,   # log the trip once, not per call
+    "failures": {},       # engine group -> consecutive failed queries
+    "elapsed": 0.0,       # whole process
+    "engine_elapsed": {}, # engine group -> seconds
+    "tripped": set(),     # engine groups already logged as open
+    "all_tripped": False, # global budget blown: nothing else runs
 }
 
 
-def _serp_circuit_open() -> bool:
-    """True once SerpAPI has earned a rest for the remainder of this process."""
-    if _serp_state["tripped"]:
+def _serp_engine_group(engine: str) -> str:
+    """Which breaker an engine answers to.
+
+    The three Trends engines share one group because they share an upstream, but
+    News and Trends are kept apart on purpose. They fail independently: on the
+    2026-09-06 verification run three consecutive Google News queries timed out
+    while Trends was never tried at all, because a single shared breaker had
+    already opened. Trends is 30% of trend_strength_score, so letting News decide
+    whether Trends gets to run threw away nearly a third of the signal to an
+    outage that may not have applied to it.
+    """
+    if engine.startswith("google_trends"):
+        return "google_trends"
+    return engine
+
+
+def _serp_circuit_open(engine: str) -> bool:
+    """True once this engine has earned a rest for the remainder of the process."""
+    group = _serp_engine_group(engine)
+
+    if _serp_state["all_tripped"]:
+        return True
+    if group in _serp_state["tripped"]:
+        return True
+
+    failures = _serp_state["failures"].get(group, 0)
+    engine_elapsed = _serp_state["engine_elapsed"].get(group, 0.0)
+
+    # The global budget outranks the per-engine one: once it is gone, it is gone
+    # for every engine, whatever their individual tallies say.
+    if _serp_state["elapsed"] >= SERPAPI_TIME_BUDGET_SECONDS:
+        _serp_state["all_tripped"] = True
+        log.warning(
+            f"SerpAPI circuit breaker OPEN for all engines — "
+            f"{_serp_state['elapsed']:.0f}s spent, over the "
+            f"{SERPAPI_TIME_BUDGET_SECONDS:.0f}s run budget. Skipping all "
+            f"further SerpAPI calls; the pipeline continues on partial signal."
+        )
         return True
 
     reason = None
-    if _serp_state["consecutive_failures"] >= SERPAPI_FAILURE_THRESHOLD:
+    if failures >= SERPAPI_FAILURE_THRESHOLD:
         reason = (
-            f"{_serp_state['consecutive_failures']} consecutive failures "
+            f"{failures} consecutive failed queries "
             f"(threshold {SERPAPI_FAILURE_THRESHOLD})"
         )
-    elif _serp_state["elapsed"] >= SERPAPI_TIME_BUDGET_SECONDS:
+    elif engine_elapsed >= SERPAPI_ENGINE_TIME_BUDGET_SECONDS:
         reason = (
-            f"{_serp_state['elapsed']:.0f}s spent, over the "
-            f"{SERPAPI_TIME_BUDGET_SECONDS:.0f}s budget"
+            f"{engine_elapsed:.0f}s spent, over this engine's "
+            f"{SERPAPI_ENGINE_TIME_BUDGET_SECONDS:.0f}s budget"
         )
 
     if reason:
-        _serp_state["tripped"] = True
+        _serp_state["tripped"].add(group)
         log.warning(
-            f"SerpAPI circuit breaker OPEN — {reason}. Skipping all further "
-            f"SerpAPI calls this run; the pipeline continues on partial signal."
+            f"SerpAPI circuit breaker OPEN for {group} — {reason}. Skipping "
+            f"further {group} calls this run; other engines are unaffected and "
+            f"the pipeline continues on partial signal."
         )
         return True
     return False
 
 
+def _serp_record_failure(engine: str) -> None:
+    group = _serp_engine_group(engine)
+    _serp_state["failures"][group] = _serp_state["failures"].get(group, 0) + 1
+
+
+def _serp_record_success(engine: str) -> None:
+    _serp_state["failures"][_serp_engine_group(engine)] = 0
+
+
 def serp_breaker_status() -> str:
     """One-line summary for the run notes, or '' if SerpAPI behaved."""
+    if _serp_state["all_tripped"]:
+        return (
+            "SerpAPI became unavailable partway through this run; signal "
+            "gathering stopped early for every engine and the candidate set "
+            "below is built on partial data."
+        )
     if not _serp_state["tripped"]:
         return ""
+    degraded = ", ".join(sorted(_serp_state["tripped"]))
     return (
-        "SerpAPI became unavailable partway through this run; signal gathering "
-        "stopped early and the candidate set below is built on partial data."
+        f"SerpAPI stopped answering for {degraded} partway through this run, so "
+        f"that signal is incomplete below. Other sources ran normally — do not "
+        f"read the gap as an absence of activity."
     )
 
 # Google News queries to run each day for health & wellness signal gathering.
@@ -268,39 +331,51 @@ def _serp_get(params: dict) -> dict | None:
     api_key = os.getenv("SERPAPI_API_KEY", "").strip()
     if not api_key:
         return None
-    if _serp_circuit_open():
-        return None
     request_params = dict(params)
     request_params["api_key"] = api_key
     engine = request_params.get("engine", "?")
     query = request_params.get("q") or request_params.get("engine", "?")
+    if _serp_circuit_open(engine):
+        return None
     started = time.monotonic()
     try:
         return _serp_get_attempts(request_params, engine, query)
     finally:
-        _serp_state["elapsed"] += time.monotonic() - started
+        spent = time.monotonic() - started
+        _serp_state["elapsed"] += spent
+        group = _serp_engine_group(engine)
+        _serp_state["engine_elapsed"][group] = (
+            _serp_state["engine_elapsed"].get(group, 0.0) + spent
+        )
 
 
 def _serp_get_attempts(request_params: dict, engine: str, query: str) -> dict | None:
     """The retry loop itself. Records success/failure against the breaker.
 
-    Failures are counted per *query*, not per attempt. Counting attempts looks
-    faster on paper and was wrong in production: on the 2026-09-06 prefetch run
-    a single slow query ("medical study when:7d") burned its three attempts
-    while every other query was succeeding, tripped the breaker, and starved
-    Google Trends of its entire budget — 0 seed keywords, and Trends is 30% of
-    trend_strength_score. One bad query is not an outage. Three consecutive
-    *queries* failing is.
+    Failures are counted per *query*, not per attempt, and tallied per engine
+    group rather than globally. Both distinctions were paid for in production on
+    2026-09-06, in two rounds:
+
+      - Counting attempts: one slow query ("medical study when:7d") burned its
+        three attempts while every other query succeeded, and tripped the
+        breaker on its own. One bad query is not an outage; three consecutive
+        failed *queries* is.
+      - Counting globally: with that fixed, three genuinely dead Google News
+        queries (run 34001126950) opened the one shared breaker before Google
+        Trends had made a single call — 0 seed keywords again, from an outage
+        that was never shown to apply to Trends at all. Trends is 30% of
+        trend_strength_score, so each engine now gets its own tally and its own
+        time budget, under one global ceiling.
     """
     for attempt in range(1, SERPAPI_MAX_RETRIES + 1):
         # An outage confirmed by earlier queries stops this one's retries too.
-        if attempt > 1 and _serp_circuit_open():
+        if attempt > 1 and _serp_circuit_open(engine):
             return None
         try:
             url = SERPAPI_BASE + "?" + urllib.parse.urlencode(request_params)
             with urllib.request.urlopen(url, timeout=SERPAPI_TIMEOUT_SECONDS) as resp:
                 payload = json.loads(resp.read().decode("utf-8"))
-                _serp_state["consecutive_failures"] = 0
+                _serp_record_success(engine)
                 return payload
         except urllib.error.HTTPError as e:
             body = e.read().decode("utf-8", errors="replace")[:300]
@@ -310,7 +385,7 @@ def _serp_get_attempts(request_params: dict, engine: str, query: str) -> dict | 
                         f"SerpAPI request failed ({engine}, {query}) after "
                         f"{SERPAPI_MAX_RETRIES} attempts: HTTP Error {e.code}: {body}"
                     )
-                    _serp_state["consecutive_failures"] += 1
+                    _serp_record_failure(engine)
                     return None
                 log.warning(
                     f"SerpAPI request failed ({engine}, {query}): "
@@ -333,7 +408,7 @@ def _serp_get_attempts(request_params: dict, engine: str, query: str) -> dict | 
                     f"SerpAPI request failed ({engine}, {query}) after "
                     f"{SERPAPI_MAX_RETRIES} attempts: {e}"
                 )
-                _serp_state["consecutive_failures"] += 1
+                _serp_record_failure(engine)
                 return None
             log.warning(
                 f"SerpAPI request timed out/failed ({engine}, {query}); "
@@ -341,7 +416,7 @@ def _serp_get_attempts(request_params: dict, engine: str, query: str) -> dict | 
             )
             time.sleep(min(2 ** attempt, 8))
     # Fell out of the loop with every attempt exhausted: one failed query.
-    _serp_state["consecutive_failures"] += 1
+    _serp_record_failure(engine)
     return None
 
 
