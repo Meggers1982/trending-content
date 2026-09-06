@@ -44,9 +44,22 @@ routine can now be retired.
 
 ## Step 3 — If still degraded
 
-Implement the `google_news_light` fallback **on a branch** and open a PR. Never
-push to `main` — the daily pipeline costs real money per run and this must be
-reviewed first.
+**First, check whether you already did this on a previous run.** The branch is
+always `fix/serpapi-google-news-light-fallback`. If it exists on the remote, or
+an open PR from it exists, do **not** build the change again and do **not** open
+a second PR — report that the fix is already waiting for review, say the engine
+is still degraded, and stop. This routine fires daily and the incident may last
+days; exactly one PR should ever be open for it.
+
+Otherwise, implement the `google_news_light` fallback **on a branch** and open a
+PR. Never push to `main` — the daily pipeline costs real money per run and this
+must be reviewed first.
+
+If the push or PR creation is rejected with a 403 (`Resource not accessible by
+integration`), the Claude GitHub App lacks write access to this repo. Do not
+retry it repeatedly or look for a way around it: report the diagnosis, say the
+push was blocked, and stop. Only the repo owner can grant that, at
+`https://github.com/apps/claude/installations/select_target`.
 
 The shape of the fix, in `run_pipeline.py`:
 
