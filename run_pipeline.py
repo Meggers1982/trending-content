@@ -442,10 +442,11 @@ def _serp_get_attempts(request_params: dict, engine: str, query: str) -> dict | 
 
 
 def _extract_news_source_name(article: dict) -> str:
-    """source is normally {"name": ...} on google_news; google_news_light's
-    exact shape is unverified (SerpAPI docs were unreachable while building
-    this), so tolerate it being a bare string or absent too rather than
-    assuming a dict and crashing on it."""
+    """google_news returns source as {"name": ...}; google_news_light returns
+    it as a bare string ("NPR", "CBS News") — confirmed 2026-09-06 against the
+    live engine, whose news_results carry exactly
+    date/link/position/snippet/source/thumbnail/title. Absent is tolerated too
+    rather than crashing on a shape change."""
     source = article.get("source", "")
     if isinstance(source, dict):
         return source.get("name", "")
@@ -470,20 +471,25 @@ def fetch_google_news() -> list[dict]:
     for q in GOOGLE_NEWS_QUERIES:
         use_fallback = SERPAPI_NEWS_FALLBACK_ENABLED and _serp_circuit_open("google_news")
         engine = "google_news_light" if use_fallback else "google_news"
-        data = _serp_get({
-            "engine": engine,
-            "q": q,
-            "gl": "us",
-            "hl": "en",
-            "num": MAX_NEWS_RESULTS_PER_QUERY,
-        })
+        params = {"engine": engine, "q": q, "gl": "us", "hl": "en"}
+        if use_fallback:
+            # google_news_light runs a tbm=nws Google search, not Google News
+            # proper, and `when:7d` returns "Fully empty" there — verified
+            # 2026-09-06 against the live engine: "health when:7d" gave 0
+            # results, plain "health" gave 10, dated 24 minutes to 1 day old.
+            # It also does not accept `num`. So the fallback drops both and
+            # relies on tbm=nws being recency-weighted by default, plus the
+            # per-article `date` the caller already keeps.
+            params["q"] = q.replace(" when:7d", "").strip()
+        else:
+            params["num"] = MAX_NEWS_RESULTS_PER_QUERY
+        data = _serp_get(params)
         if not data:
             continue
         if use_fallback:
             fallback_queries += 1
         kept_for_query = 0
-        # google_news_light's response shape isn't confirmed to match
-        # google_news's news_results/title/date/snippet/link keys exactly;
+        # Both engines return news_results with title/date/snippet/link;
         # missing fields fall back to "" here rather than being invented.
         for article in data.get("news_results", []):
             if kept_for_query >= MAX_NEWS_RESULTS_PER_QUERY:
