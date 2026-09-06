@@ -90,6 +90,32 @@ TRENDING_NEWS_REQUEST_DELAY_SECONDS = 1.0
 BEAUTY_TRENDING_NOW_CATEGORY_ID = "2"
 REQUEST_FAILURES: Counter[str] = Counter()
 
+# SerpAPI circuit breaker. A radar run can issue 40+ Trends calls; when the
+# upstream stops answering, paying the timeout on every one of them turns a
+# short run into a killed job. After a run of consecutive failures, stop calling
+# and let the radar report on whatever it already has. See the same guard in
+# run_pipeline.py, which is what took the daily pipeline down on 2026-09-05.
+SERPAPI_FAILURE_THRESHOLD = int(os.getenv("SERPAPI_FAILURE_THRESHOLD", "5"))
+_serp_consecutive_failures = 0
+_serp_circuit_tripped = False
+
+
+def serp_circuit_open() -> bool:
+    """True once SerpAPI has failed enough times to stop asking this run."""
+    global _serp_circuit_tripped
+    if _serp_circuit_tripped:
+        return True
+    if _serp_consecutive_failures >= SERPAPI_FAILURE_THRESHOLD:
+        _serp_circuit_tripped = True
+        print(
+            f"SerpAPI circuit breaker OPEN after {_serp_consecutive_failures} "
+            f"consecutive failures — skipping remaining SerpAPI calls; the radar "
+            f"will report on partial data.",
+            file=sys.stderr,
+        )
+        return True
+    return False
+
 SEED_PROFILES = {
     "wellness": [
         "wellness",
@@ -358,8 +384,11 @@ def load_env(path: Path = ENV_PATH) -> None:
 
 
 def serp_get(params: dict, timeout: int = DEFAULT_REQUEST_TIMEOUT, retries: int = DEFAULT_REQUEST_RETRIES) -> dict | None:
+    global _serp_consecutive_failures
     api_key = os.getenv("SERPAPI_API_KEY", "").strip()
     if not api_key:
+        return None
+    if serp_circuit_open():
         return None
     payload = dict(params)
     payload["api_key"] = api_key
@@ -368,13 +397,21 @@ def serp_get(params: dict, timeout: int = DEFAULT_REQUEST_TIMEOUT, retries: int 
     for attempt in range(retries + 1):
         try:
             with urllib.request.urlopen(url, timeout=timeout) as response:
-                return json.loads(response.read().decode("utf-8"))
+                data = json.loads(response.read().decode("utf-8"))
+                _serp_consecutive_failures = 0
+                return data
         except urllib.error.HTTPError as exc:
             body = exc.read().decode("utf-8", errors="replace")[:400]
             print(f"SerpAPI error ({label}): HTTP {exc.code}: {body}", file=sys.stderr)
             REQUEST_FAILURES[f"{label} HTTP {exc.code}"] += 1
+            # 429 and 5xx mean the upstream is struggling; a plain 4xx means this
+            # request was malformed and returns instantly, so it costs no time
+            # and must not push the breaker toward opening.
+            if exc.code == 429 or exc.code >= 500:
+                _serp_consecutive_failures += 1
             return None
         except TimeoutError:
+            _serp_consecutive_failures += 1
             if attempt < retries:
                 if VERBOSE_ERRORS:
                     print(f"SerpAPI timeout ({label}); retrying...", file=sys.stderr)
@@ -384,11 +421,12 @@ def serp_get(params: dict, timeout: int = DEFAULT_REQUEST_TIMEOUT, retries: int 
                 print(f"SerpAPI timeout ({label}); skipped after {timeout}s.", file=sys.stderr)
         except Exception as exc:
             message = str(exc)
-            if "timed out" in message.lower() and attempt < retries:
-                if VERBOSE_ERRORS:
-                    print(f"SerpAPI timeout ({label}); retrying...", file=sys.stderr)
-                continue
             if "timed out" in message.lower():
+                _serp_consecutive_failures += 1
+                if attempt < retries:
+                    if VERBOSE_ERRORS:
+                        print(f"SerpAPI timeout ({label}); retrying...", file=sys.stderr)
+                    continue
                 REQUEST_FAILURES[f"{label} timeout"] += 1
                 if VERBOSE_ERRORS:
                     print(f"SerpAPI timeout ({label}); skipped after {timeout}s.", file=sys.stderr)

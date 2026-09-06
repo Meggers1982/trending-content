@@ -124,6 +124,65 @@ SERPAPI_BASE = "https://serpapi.com/search"
 SERPAPI_TIMEOUT_SECONDS = int(os.getenv("SERPAPI_TIMEOUT_SECONDS", "45"))
 SERPAPI_MAX_RETRIES = int(os.getenv("SERPAPI_MAX_RETRIES", "3"))
 
+# ── SerpAPI circuit breaker ───────────────────────────────────────────────────
+# Each dead query costs the full timeout on every retry, plus backoff: at the
+# defaults that is ~141s. With a dozen queries queued, one unresponsive upstream
+# spends more than the whole GitHub Actions budget discovering the same outage
+# over and over. On 2026-09-05 that is exactly what happened — every Google News
+# query timed out and the job was killed at 20 minutes having produced nothing.
+#
+# So: after a run of consecutive failures, stop calling SerpAPI for the rest of
+# the process and let the pipeline continue on whatever it already gathered.
+# A partial run beats a killed one.
+SERPAPI_FAILURE_THRESHOLD = int(os.getenv("SERPAPI_FAILURE_THRESHOLD", "3"))
+
+# Wall-clock ceiling across all SerpAPI calls in one process. Backstop for the
+# slow-but-succeeding case, which the consecutive-failure count never catches.
+SERPAPI_TIME_BUDGET_SECONDS = float(os.getenv("SERPAPI_TIME_BUDGET_SECONDS", "420"))
+
+_serp_state = {
+    "consecutive_failures": 0,
+    "elapsed": 0.0,
+    "tripped": False,   # log the trip once, not per call
+}
+
+
+def _serp_circuit_open() -> bool:
+    """True once SerpAPI has earned a rest for the remainder of this process."""
+    if _serp_state["tripped"]:
+        return True
+
+    reason = None
+    if _serp_state["consecutive_failures"] >= SERPAPI_FAILURE_THRESHOLD:
+        reason = (
+            f"{_serp_state['consecutive_failures']} consecutive failures "
+            f"(threshold {SERPAPI_FAILURE_THRESHOLD})"
+        )
+    elif _serp_state["elapsed"] >= SERPAPI_TIME_BUDGET_SECONDS:
+        reason = (
+            f"{_serp_state['elapsed']:.0f}s spent, over the "
+            f"{SERPAPI_TIME_BUDGET_SECONDS:.0f}s budget"
+        )
+
+    if reason:
+        _serp_state["tripped"] = True
+        log.warning(
+            f"SerpAPI circuit breaker OPEN — {reason}. Skipping all further "
+            f"SerpAPI calls this run; the pipeline continues on partial signal."
+        )
+        return True
+    return False
+
+
+def serp_breaker_status() -> str:
+    """One-line summary for the run notes, or '' if SerpAPI behaved."""
+    if not _serp_state["tripped"]:
+        return ""
+    return (
+        "SerpAPI became unavailable partway through this run; signal gathering "
+        "stopped early and the candidate set below is built on partial data."
+    )
+
 # Google News queries to run each day for health & wellness signal gathering.
 # Google News supports `when:` inside q. SerpAPI docs note `q` can use
 # anything valid in Google News search, including `site:` and `when:`.
@@ -209,15 +268,36 @@ def _serp_get(params: dict) -> dict | None:
     api_key = os.getenv("SERPAPI_API_KEY", "").strip()
     if not api_key:
         return None
+    if _serp_circuit_open():
+        return None
     request_params = dict(params)
     request_params["api_key"] = api_key
     engine = request_params.get("engine", "?")
     query = request_params.get("q") or request_params.get("engine", "?")
+    started = time.monotonic()
+    try:
+        return _serp_get_attempts(request_params, engine, query)
+    finally:
+        _serp_state["elapsed"] += time.monotonic() - started
+
+
+def _serp_get_attempts(request_params: dict, engine: str, query: str) -> dict | None:
+    """The retry loop itself. Records success/failure against the breaker.
+
+    Failures are counted per *attempt*, not per query: three consecutive
+    timeouts already prove the upstream is not answering, and waiting to prove
+    it three more times costs another two full timeouts for no new information.
+    """
     for attempt in range(1, SERPAPI_MAX_RETRIES + 1):
+        # An outage detected mid-query stops the remaining retries too.
+        if attempt > 1 and _serp_circuit_open():
+            return None
         try:
             url = SERPAPI_BASE + "?" + urllib.parse.urlencode(request_params)
             with urllib.request.urlopen(url, timeout=SERPAPI_TIMEOUT_SECONDS) as resp:
-                return json.loads(resp.read().decode("utf-8"))
+                payload = json.loads(resp.read().decode("utf-8"))
+                _serp_state["consecutive_failures"] = 0
+                return payload
         except urllib.error.HTTPError as e:
             body = e.read().decode("utf-8", errors="replace")[:300]
             if e.code == 429 or e.code >= 500:
@@ -226,14 +306,19 @@ def _serp_get(params: dict) -> dict | None:
                         f"SerpAPI request failed ({engine}, {query}) after "
                         f"{SERPAPI_MAX_RETRIES} attempts: HTTP Error {e.code}: {body}"
                     )
+                    _serp_state["consecutive_failures"] += 1
                     return None
                 log.warning(
                     f"SerpAPI request failed ({engine}, {query}): "
                     f"HTTP Error {e.code}: {body}; retrying "
                     f"{attempt + 1}/{SERPAPI_MAX_RETRIES}..."
                 )
+                _serp_state["consecutive_failures"] += 1
                 time.sleep(min(2 ** attempt, 8))
                 continue
+            # A non-retryable 4xx is our request being wrong, not the upstream
+            # being down, and it returns immediately — so it costs no time budget
+            # and must not count toward the breaker.
             log.warning(
                 f"SerpAPI request failed ({engine}, {query}): "
                 f"HTTP Error {e.code}: {body}"
@@ -245,11 +330,13 @@ def _serp_get(params: dict) -> dict | None:
                     f"SerpAPI request failed ({engine}, {query}) after "
                     f"{SERPAPI_MAX_RETRIES} attempts: {e}"
                 )
+                _serp_state["consecutive_failures"] += 1
                 return None
             log.warning(
                 f"SerpAPI request timed out/failed ({engine}, {query}); "
                 f"retrying {attempt + 1}/{SERPAPI_MAX_RETRIES}..."
             )
+            _serp_state["consecutive_failures"] += 1
             time.sleep(min(2 ** attempt, 8))
     return None
 
@@ -445,6 +532,17 @@ def build_serp_context() -> str:
         enrich_trending_now_news(trending_terms)
 
     sections = []
+
+    # If SerpAPI gave out partway, say so at the top of the context. The model
+    # must not read a thin signal set as "a quiet week" and score accordingly.
+    degraded = serp_breaker_status()
+    if degraded:
+        sections.append(
+            "# SIGNAL INTEGRITY WARNING\n\n"
+            f"{degraded}\n\n"
+            "Treat absence of signal as unknown, not as absence of activity. "
+            "Say so in signal_summary.notes and lower confidence accordingly."
+        )
 
     # ── Google Trending Now ───────────────────────────────────────────────────
     if trending_terms:
