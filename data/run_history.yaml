@@ -3,6 +3,37 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-09-07'
+  niche: Health & Wellness
+  signals_reviewed: 144
+  topics_retained: 1
+  topics_rejected: 31
+  p1_count: 0
+  p2_count: 0
+  p3_count: 1
+  p4_count: 0
+  p5_count: 0
+  integrity_flags: 1
+  top_topic: 67% of shoppers now avoid a food category after a single FDA recall notice
+  key_themes:
+  - 67% of shoppers now avoid a food category after a single FDA recall notice
+  tools_used:
+  - serpapi_news
+  - serpapi_trends
+  - google_news
+  - google_trends
+  tools_unavailable:
+  - content_database
+  - live_reddit_pull
+  - exa_search
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-09-07.html
+  estimated_cost_usd: 0.6154
+  notes: Health-news volume dominated by ongoing 2026 recall cycle, now recurring 5 of last 6 days — most
+    individual recall items are duplicates of already-covered stories. Google Trends shows rising query
+    ('cell metabolism keto diet study') with no corresponding article in News Radar pre-fetch; flagged
+    for targeted search next run. Several single-source institutional research announcements (Mount Sinai,
+    Brown University, UCI Health) are legitimate but lack corroborating pickup; routed to Monitor. site_url
+    not configured — using competitor-list fallback. Data archival deferred to pipeline harness.
 - run_date: '2026-09-06'
   niche: Health & Wellness
   signals_reviewed: 114
