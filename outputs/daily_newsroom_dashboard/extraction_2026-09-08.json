@@ -1,0 +1,244 @@
+{
+  "run_date": "2026-09-08",
+  "niche": "health and wellness",
+  "signal_summary": {
+    "total_reviewed": 144,
+    "total_retained": 4,
+    "total_rejected": 135,
+    "tools_active": [
+      "web_search",
+      "google_news",
+      "google_trends",
+      "serpapi"
+    ],
+    "tools_unavailable": [],
+    "notes": "Recall/outbreak umbrella has recurred for 8 consecutive days (09-01–09-07); today's Salmonella/eggs case is genuinely new pathogen/product but reader fatigue risk should be monitored. Mental health + digital media narrative is compounding (Stanford 09-06 → Rochester 09-08) — treat as active running story. site_url not configured; competitor-list fallback used for duplicate/SERP-gap context."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "FDA Salmonella outbreak investigation — eggs",
+      "primary_entity": "Salmonella (eggs outbreak, July 2026)",
+      "signal_type": "breaking_news",
+      "allowed_category": "food safety",
+      "trend_strength_score": 66,
+      "opportunity_score": 81,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "source_urls": [
+        "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-salmonella-eggs-july-2026",
+        "https://www.cdc.gov/cyclosporiasis/outbreaks/07-26/index.html"
+      ],
+      "recommended_angle": "Situate as third distinct 2026 foodborne pathogen outbreak (after blueberries, lettuce) — pattern piece disguised as news update with action checklist.",
+      "why_now": "FDA opened new outbreak investigation into Salmonella-contaminated eggs, third distinct pathogen/product combination in ~30 days, signaling accelerating recall cycle.",
+      "primary_headline": "FDA Investigates Salmonella Outbreak Linked to Eggs — What to Know",
+      "next_steps": "Confirm case counts and implicated brands as FDA publishes; build pattern-piece framing with prior outbreak coverage.",
+      "integrity_flags": [
+        "Case counts and implicated brands not yet specified in FDA notice — do not speculate on scope; update as FDA publishes details."
+      ],
+      "trend_score_reason": "Third distinct pathogen outbreak in ~30 days; direct FDA notice; high public health search velocity.",
+      "opportunity_score_reason": "Practical informational intent (symptoms, affected products, actions) + pattern-story differentiation; underserved angle vs. basic recall coverage.",
+      "discover_score_reason": "Breaking news from authoritative primary source with immediate consumer relevance and actionable guidance.",
+      "notes": "",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "FDA Salmonella eggs outbreak notice, CDC Cyclospora lettuce outbreak notice, and FDA E. coli frozen blueberries outbreak notice in Google News Radar (FDA recall health category)"
+      }
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Digital media involvement in pediatric psychiatric crises",
+      "primary_entity": "University of Rochester Medical Center study on pediatric psychiatric crises",
+      "signal_type": "study_or_research",
+      "allowed_category": "mental health",
+      "trend_strength_score": 74,
+      "opportunity_score": 83,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "update",
+      "source_count": 2,
+      "source_urls": [
+        "https://www.urmc.rochester.edu/news/story/nearly-one-in-five-pediatric-psychiatric-crises-involve-digital-media-new-study-finds",
+        "https://med.stanford.edu/news/all-news/2026/09/social-media-warnings.html"
+      ],
+      "recommended_angle": "Pair URMC hard statistic with Sept 6 Stanford warning-label study to build compounding-evidence narrative on kids/social media rather than standalone piece.",
+      "why_now": "URMC published new findings (Sept 8) showing digital media involvement in ~1 in 5 pediatric psychiatric ER crises, landing two days after Stanford social-media-warnings study, reinforcing active research trend.",
+      "primary_headline": "1 in 5 Pediatric Psychiatric Crises Now Involve Digital Media, Study Finds",
+      "next_steps": "Confirm sample size and study setting (single ER system vs. national); frame association carefully; plan internal linking with Stanford piece.",
+      "integrity_flags": [
+        "Association, not proven causation — digital media 'involvement' in crisis presentation is not the same as digital media causing it. Frame carefully.",
+        "Confirm sample size/setting (single ER system vs. national) before generalizing."
+      ],
+      "trend_score_reason": "New institutional findings landing on heels of Stanford study; high parent-search intent; compounding narrative strength.",
+      "opportunity_score_reason": "Pairs with recent Stanford coverage for deeper story arc; strong evaluative angle for parent audience; underserved vs. generic social-media-risk coverage.",
+      "discover_score_reason": "Breaking primary research from tier-1 medical institution with hard clinical statistic and immediate parental relevance.",
+      "notes": "Treat as developing storyline for internal linking going forward.",
+      "fact_check": {
+        "verdict": "minor_issues",
+        "issues": [
+          "WHY NOW and ANGLE state the Stanford study came out Sept 6/'two days' before the URMC study, but the Stanford Medicine study in the evidence is dated Sept 4, a 4-day gap from the URMC Sept 8 study, not 2 days."
+        ],
+        "checked_against": "University of Rochester Medical Center study (09/08/2026) and Stanford Medicine social-media-warnings study (09/04/2026) in Google News Radar"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "GLP-1 weight-loss drug use linked to hair loss in men",
+      "primary_entity": "GLP-1 receptor agonist weight-loss drugs (Ozempic/Wegovy class)",
+      "signal_type": "study_or_research",
+      "allowed_category": "drug safety",
+      "trend_strength_score": 64,
+      "opportunity_score": 87,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "low",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://nyulangone.org/news/some-hair-loss-men-linked-use-weight-loss-drugs"
+      ],
+      "recommended_angle": "Fresh, under-discussed side-effect angle amid heavy 2026 GLP-1 usage — differentiate from generic 'Ozempic side effects' roundups by leading with new NYU Langone data.",
+      "why_now": "NYU Langone published new findings this week identifying hair-loss association in men using GLP-1 weight-loss drugs — a side effect getting little coverage despite massive GLP-1 usage growth.",
+      "primary_headline": "New Research Links Popular Weight Loss Drugs to Hair Loss in Men",
+      "next_steps": "Confirm underlying journal/DOI before publishing; interview dermatologist or endocrinologist on mechanism plausibility and comparison to other known GLP-1 side effects.",
+      "integrity_flags": [
+        "Single-institution source — confirm underlying journal/DOI before publishing; likely observational, not causal.",
+        "Do not generalize beyond studied population (men) without qualification."
+      ],
+      "trend_score_reason": "Single-institution institutional research on underreported side effect of heavily-used drug class; moderate news velocity.",
+      "opportunity_score_reason": "Fills a real SERP gap vs. generic GLP-1 side-effects coverage; high consumer intent; single-population specificity is differentiation.",
+      "discover_score_reason": "Novel findings from tier-1 medical institution on actively-used medication class with direct consumer relevance.",
+      "notes": "",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "NYU Langone Health article on hair loss linked to weight loss drug use in men, dated 09/03/2026, in Google News Radar"
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "IV wellness drip trend — evidence-based skepticism angle",
+      "primary_entity": "IV vitamin therapy wellness industry",
+      "signal_type": "trend",
+      "allowed_category": "wellness",
+      "trend_strength_score": 57,
+      "opportunity_score": 61,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "low",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.nytimes.com/2026/09/02/magazine/iv-drip-vitamin-wellness.html"
+      ],
+      "recommended_angle": "NYT's viral 'I Need an IV Drip to Recover From My IV Drip' piece reignited wellness-drip conversation; evidence-first breakdown of what IV vitamin therapy can and can't do fills real SERP gap vs. promotional coverage.",
+      "why_now": "NYT trend piece (Sept 2) covering booming consumer IV-drip wellness industry; competitors mostly cover promotionally; evidence-based skepticism angle underserved.",
+      "primary_headline": "Does IV Vitamin Therapy Actually Work? What the Evidence Says",
+      "next_steps": "Interview internist or ER physician on IV therapy risk/benefit and appropriate medical use vs. wellness marketing; avoid promotional framing.",
+      "integrity_flags": [
+        "Avoid promotional framing; most marketed benefits (energy, immunity, hangover cures) lack strong RCT evidence — say so plainly."
+      ],
+      "trend_score_reason": "Trend piece from tier-1 outlet with moderate search volume; medium SERP difficulty; evidence-based angle is differentiator.",
+      "opportunity_score_reason": "Fills evidence-first gap vs. promotional coverage; growing search intent around IV therapy efficacy; expert-sourced skepticism is differentiation.",
+      "discover_score_reason": "Timely trend piece hook with evergreen evidence-based value; moderate consumer search intent; lower discover score due to narrower audience vs. urgent health news.",
+      "notes": "",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "New York Times 'I Need an IV Drip to Recover From My IV Drip' article dated 09/02/2026 in Google News Radar (wellness category)"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "Institutional/local wellness PR (VA veterans wellness, university wellness institutes, skate park wellness, 49ers educator wellness, first responder wellness conference, cruise spa launch, National Wellness Week)",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Health system business/ops (OpenAI-EHR integration, NASA moon base health RFI, insurance premium hikes, VA EHR modernization, Luminis cyberattack, Logan Health leadership vote, Axios/Mercer employer benefit-cost stories)",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Clinical trial access opinion pieces (US News, NYT Opinion, the-scientist)",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Pancreatic cancer trial coverage (UCI Health laser-light trial, Brown $37M aging alliance)",
+      "reason": "cluster_saturation"
+    },
+    {
+      "topic": "B2B/trade coverage (Clinical Leader, Evinova/Lothar partnership, WHO Singapore trial capacity, Penn State NIH grant, Dermatology Advisor trial history)",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Recall/outbreak duplicates (blueberries update, epinephrine, IV fluids, cyclospora/lettuce, tofu, 67% avoid category, fruit at Walmart/CVS)",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Pet food recall",
+      "reason": "excluded_category"
+    },
+    {
+      "topic": "AI-designed drug reverses biological age",
+      "reason": "unverified_claim"
+    },
+    {
+      "topic": "Bladder cancer urine test diagnostic",
+      "reason": "unverified_claim"
+    },
+    {
+      "topic": "Measles global tracker",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "ABC30 influencer health-info study",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "NIH funds redirected to Pentagon (MedPage)",
+      "reason": "off_category"
+    }
+  ],
+  "fact_check_summary": {
+    "accurate": 3,
+    "minor_issues": 1
+  },
+  "run_cost": {
+    "total_usd": 0.6405,
+    "calls": [
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11633,
+        "output_tokens": 24434,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 42559,
+        "estimated_cost_usd": 0.561
+      },
+      {
+        "model": "claude-haiku-4-5",
+        "input_tokens": 8044,
+        "output_tokens": 2413,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0201
+      },
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11740,
+        "output_tokens": 1614,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0594
+      }
+    ]
+  }
+}
