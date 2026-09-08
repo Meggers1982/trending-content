@@ -1,0 +1,1243 @@
+{
+  "run_date": "2026-09-08",
+  "generated_at": "2026-09-08T17:24:36",
+  "topic": "weight-loss",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "weight-loss",
+    "weight loss",
+    "weight loss journey",
+    "fat loss",
+    "sustainable weight loss",
+    "weight loss surgery",
+    "GLP-1",
+    "semaglutide",
+    "weight loss plateau",
+    "weight loss medication",
+    "weight-loss trends",
+    "weight-loss products",
+    "weight-loss news",
+    "weight-loss for beginners",
+    "weight-loss routine",
+    "weight-loss benefits",
+    "weight-loss ideas",
+    "weight-loss reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 18,
+    "total_reviewed": 80,
+    "total_retained": 4,
+    "total_rejected": 75,
+    "breakouts": 2,
+    "emerging": 0,
+    "rising": 1,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "topic": "jd vance weight loss white house",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 66,
+      "emergence_score": 82,
+      "velocity_score": 39,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 100,
+      "slope": 0,
+      "acceleration": -3,
+      "seed_terms": [
+        "weight loss"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        100,
+        61,
+        31,
+        14,
+        10,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 2,
+      "topic": "lynn petukhova glp-1 study hair",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 66,
+      "emergence_score": 82,
+      "velocity_score": 39,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 30,
+      "slope": 0,
+      "acceleration": -3,
+      "seed_terms": [
+        "GLP-1"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        22,
+        23,
+        22,
+        25,
+        30,
+        26,
+        23,
+        23,
+        12,
+        6,
+        7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing.",
+      "similar": [
+        {
+          "topic": "glp-1 ras inflammatory markers study",
+          "trend_stage": "breakout",
+          "radar_score": 66,
+          "why_now": "Google Trends labels it Breakout; interest moved from 0 to 0; found through rising query"
+        },
+        {
+          "topic": "semaglutide longevity study mice",
+          "trend_stage": "breakout",
+          "radar_score": 66,
+          "why_now": "Google Trends labels it Breakout; interest moved from 0 to 0; found through rising query"
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "topic": "bronson reed weight loss",
+      "trend_stage": "rising",
+      "urgency": "monitor",
+      "radar_score": 55,
+      "emergence_score": 57,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 74,
+      "confidence": "high",
+      "rising_label": "+450%",
+      "latest_interest": 0,
+      "peak_interest": 20,
+      "slope": 0,
+      "acceleration": 1,
+      "seed_terms": [
+        "weight loss"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        8,
+        20,
+        7,
+        5,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        20,
+        9,
+        0,
+        9,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +450%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Track as a developing query and compare against existing coverage."
+    },
+    {
+      "rank": 4,
+      "topic": "best smoothie recipes for weight loss",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 51,
+      "emergence_score": 46,
+      "velocity_score": 43,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 68,
+      "confidence": "high",
+      "rising_label": "+300%",
+      "latest_interest": 7,
+      "peak_interest": 100,
+      "slope": 1,
+      "acceleration": 3,
+      "seed_terms": [
+        "weight loss"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        6,
+        6,
+        7,
+        4,
+        3,
+        6,
+        7,
+        12,
+        12,
+        13,
+        16,
+        22,
+        16,
+        37,
+        47,
+        100,
+        71,
+        49,
+        22,
+        17,
+        8,
+        9,
+        5,
+        7,
+        4,
+        3,
+        0,
+        4,
+        4,
+        4,
+        8,
+        7,
+        8,
+        11,
+        18,
+        29,
+        37,
+        61,
+        72,
+        70,
+        46,
+        31,
+        24,
+        15,
+        16,
+        22,
+        19,
+        22,
+        20,
+        9,
+        5,
+        5,
+        7,
+        7,
+        6,
+        8,
+        11,
+        10,
+        16,
+        16,
+        25,
+        53,
+        41,
+        44,
+        51,
+        14,
+        16,
+        10,
+        9,
+        7,
+        5,
+        6,
+        3,
+        7,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        38,
+        33,
+        58,
+        49,
+        44,
+        38,
+        22,
+        12,
+        7,
+        9,
+        6,
+        0,
+        5,
+        0,
+        5,
+        5,
+        5,
+        8,
+        10,
+        8,
+        11,
+        8,
+        10,
+        16,
+        22,
+        26,
+        41,
+        31,
+        45,
+        43,
+        28,
+        17,
+        14,
+        6,
+        5,
+        6,
+        7,
+        4,
+        6,
+        5,
+        9,
+        11,
+        8,
+        9,
+        13,
+        11,
+        12,
+        20,
+        28,
+        26,
+        82,
+        40,
+        69,
+        54,
+        30,
+        18,
+        15,
+        8,
+        10,
+        9,
+        6,
+        10,
+        8,
+        16,
+        12,
+        12,
+        14,
+        22,
+        20,
+        27,
+        28,
+        34,
+        38,
+        46,
+        66,
+        33,
+        49,
+        30,
+        30,
+        16,
+        9,
+        7,
+        8,
+        7
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +300%; interest moved from 6 to 7; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "weight loss surgery",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "doubleverify",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss medication"
+      ]
+    },
+    {
+      "topic": "skirts",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss medication"
+      ]
+    },
+    {
+      "topic": "emergent.sh",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss medication"
+      ]
+    },
+    {
+      "topic": "swagbucks online survey jobs",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss medication"
+      ]
+    },
+    {
+      "topic": "elrado",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss medication"
+      ]
+    },
+    {
+      "topic": "chewy dog food",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss medication"
+      ]
+    },
+    {
+      "topic": "bitget.com",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss medication"
+      ]
+    },
+    {
+      "topic": "bioma probiotics",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss medication"
+      ]
+    },
+    {
+      "topic": "shein app",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss medication"
+      ]
+    },
+    {
+      "topic": "draftkings casino",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss medication"
+      ]
+    },
+    {
+      "topic": "quince review",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss medication"
+      ]
+    },
+    {
+      "topic": "off white discount",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss medication"
+      ]
+    },
+    {
+      "topic": "medvi health",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "cider coupon",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "what to drink to lose belly fat in 1 week",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fat loss"
+      ]
+    },
+    {
+      "topic": "surfshark descargar",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "GLP-1"
+      ]
+    },
+    {
+      "topic": "bioma health",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "GLP-1"
+      ]
+    },
+    {
+      "topic": "avatrade mt4",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "GLP-1"
+      ]
+    },
+    {
+      "topic": "glp 1",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "embody",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "medvi",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "elixamd",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "embody reviews",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "tirzepatide",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "shop lc",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "quad ed",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "medvi reviews",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "peptides",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "shoplc",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "visceral fat",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fat loss"
+      ]
+    },
+    {
+      "topic": "peptides for muscle growth",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fat loss"
+      ]
+    },
+    {
+      "topic": "how to lose belly fat",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fat loss"
+      ]
+    },
+    {
+      "topic": "weight loss journey quotes",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "jd vance weight loss",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "erin burnett weight loss",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "weight loss plateau causes",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "does metformin help with weight loss",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "faster way to fat loss login",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "best fat loss supplement for men",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "what is orbital fat loss",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "macros for fat loss and muscle gain",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "semaglutide near me",
+      "reason": "Weak radar score (46)"
+    },
+    {
+      "topic": "weight-loss surgery",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "medvi weight loss",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "em weight loss",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "colon broom weight loss",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "weight loss pills",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "weight loss medication",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "glp-1",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "medical weight loss",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "best glp 1 supplement for weight loss",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "weight loss surgery",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "weight loss injections",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "peptides for weight loss",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "ro weight loss",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "weight loss calculator",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "how to start a weight loss journey",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "weight loss",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "belly fat loss",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "fat loss diet",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "fat loss peptides",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "peptide for fat loss",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "peptides for fat loss",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "face fat loss",
+      "reason": "Weak radar score (45)"
+    },
+    {
+      "topic": "fat loss supplements",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "visceral fat loss",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "fat loss calculator",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "best peptide for fat loss",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "fat loss vs weight loss",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "peptide for muscle growth and fat loss",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "fat loss pills",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "what to eat for fat loss",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "best peptides for fat loss",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "peptides for muscle growth and fat loss",
+      "reason": "Weak radar score (37)"
+    }
+  ]
+}
