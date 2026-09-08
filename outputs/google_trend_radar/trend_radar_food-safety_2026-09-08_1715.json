@@ -1,0 +1,988 @@
+{
+  "run_date": "2026-09-08",
+  "generated_at": "2026-09-08T17:15:31",
+  "topic": "food-safety",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "food-safety",
+    "food safety",
+    "food recall",
+    "foodborne illness",
+    "food contamination",
+    "listeria outbreak",
+    "salmonella outbreak",
+    "restaurant inspection",
+    "USDA recall",
+    "cross contamination",
+    "food-safety trends",
+    "food-safety products",
+    "food-safety news",
+    "food-safety for beginners",
+    "food-safety routine",
+    "food-safety benefits",
+    "food-safety ideas",
+    "food-safety reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 18,
+    "total_reviewed": 80,
+    "total_retained": 10,
+    "total_rejected": 68,
+    "breakouts": 7,
+    "emerging": 3,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "topic": "ford sudden power loss recall",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 66,
+      "emergence_score": 82,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 15,
+      "slope": 0,
+      "acceleration": -2,
+      "seed_terms": [
+        "food recall"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        4,
+        14,
+        15,
+        11,
+        9,
+        8,
+        10,
+        10,
+        10,
+        8,
+        6,
+        5,
+        4,
+        3,
+        3,
+        5,
+        4,
+        7,
+        6,
+        4,
+        2,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 2,
+      "topic": "fda salmonella pet food recall",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 65,
+      "emergence_score": 81,
+      "velocity_score": 38,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 100,
+      "slope": 0,
+      "acceleration": -10,
+      "seed_terms": [
+        "food recall"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        9,
+        20,
+        41,
+        55,
+        91,
+        100,
+        92,
+        84,
+        81,
+        61,
+        52,
+        49,
+        37,
+        16,
+        11,
+        8,
+        6,
+        5,
+        4,
+        3,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing.",
+      "similar": [
+        {
+          "topic": "fda food recall",
+          "trend_stage": "emerging",
+          "radar_score": 61,
+          "why_now": "Google Trends labels it +800%; interest moved from 1 to 0; found through rising query"
+        },
+        {
+          "topic": "pet food recall",
+          "trend_stage": "emerging",
+          "radar_score": 57,
+          "why_now": "Google Trends labels it +600%; interest moved from 1 to 1; found through rising query"
+        },
+        {
+          "topic": "pet food",
+          "trend_stage": "emerging",
+          "radar_score": 50,
+          "why_now": "Google Trends labels it +550%; interest moved from 30 to 14; found through rising query"
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "topic": "what is the latest news on the salmonella outbreak linked to evergreen fresh sprouts broccoli sprouts",
+      "trend_stage": "emerging",
+      "urgency": "this_week",
+      "radar_score": 63,
+      "emergence_score": 80,
+      "velocity_score": 40,
+      "confidence_score": 65,
+      "saturation_score": 0,
+      "opportunity_score": 88,
+      "confidence": "medium",
+      "rising_label": "+1500%",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "salmonella outbreak"
+      ],
+      "discovery_sources": [
+        "rising query",
+        "too long for timeseries"
+      ],
+      "interest_scores": [],
+      "tags": {},
+      "why_now": "Google Trends labels it +1500%; time-series validation was skipped or unavailable; found through rising query, too long for timeseries",
+      "recommended_action": "Build an angle this week and monitor the next 24-48 hours."
+    },
+    {
+      "rank": 4,
+      "topic": "chocolatey eyeballs product recall 13 states",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 54,
+      "emergence_score": 71,
+      "velocity_score": 40,
+      "confidence_score": 40,
+      "saturation_score": 0,
+      "opportunity_score": 83,
+      "confidence": "low",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "food recall"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; time-series validation was skipped or unavailable; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing.",
+      "similar": [
+        {
+          "topic": "amazon walmart target product recalls",
+          "trend_stage": "breakout",
+          "radar_score": 54,
+          "why_now": "Google Trends labels it Breakout; time-series validation was skipped or unavailable; found through rising query"
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "topic": "up&up baby wipes safety recall",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 54,
+      "emergence_score": 71,
+      "velocity_score": 40,
+      "confidence_score": 40,
+      "saturation_score": 0,
+      "opportunity_score": 83,
+      "confidence": "low",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "food recall"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; time-series validation was skipped or unavailable; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 6,
+      "topic": "michelina's frozen meals recall",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 54,
+      "emergence_score": 71,
+      "velocity_score": 40,
+      "confidence_score": 40,
+      "saturation_score": 0,
+      "opportunity_score": 83,
+      "confidence": "low",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "food recall"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; time-series validation was skipped or unavailable; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 7,
+      "topic": "onondaga county restaurant inspection violations",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 54,
+      "emergence_score": 71,
+      "velocity_score": 40,
+      "confidence_score": 40,
+      "saturation_score": 0,
+      "opportunity_score": 83,
+      "confidence": "low",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "restaurant inspection"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; time-series validation was skipped or unavailable; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 8,
+      "topic": "restaurant depot",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 54,
+      "emergence_score": 71,
+      "velocity_score": 40,
+      "confidence_score": 40,
+      "saturation_score": 0,
+      "opportunity_score": 83,
+      "confidence": "low",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "restaurant inspection"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; time-series validation was skipped or unavailable; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 9,
+      "topic": "salmonella",
+      "trend_stage": "emerging",
+      "urgency": "this_week",
+      "radar_score": 54,
+      "emergence_score": 71,
+      "velocity_score": 40,
+      "confidence_score": 40,
+      "saturation_score": 0,
+      "opportunity_score": 83,
+      "confidence": "low",
+      "rising_label": "+3100%",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "food recall"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [],
+      "tags": {},
+      "why_now": "Google Trends labels it +3100%; time-series validation was skipped or unavailable; found through rising query",
+      "recommended_action": "Build an angle this week and monitor the next 24-48 hours."
+    },
+    {
+      "rank": 10,
+      "topic": "clorox recall",
+      "trend_stage": "emerging",
+      "urgency": "this_week",
+      "radar_score": 54,
+      "emergence_score": 71,
+      "velocity_score": 40,
+      "confidence_score": 40,
+      "saturation_score": 0,
+      "opportunity_score": 83,
+      "confidence": "low",
+      "rising_label": "+1800%",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "food recall"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [],
+      "tags": {},
+      "why_now": "Google Trends labels it +1800%; time-series validation was skipped or unavailable; found through rising query",
+      "recommended_action": "Build an angle this week and monitor the next 24-48 hours."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "foodborne illness",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "USDA recall",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "2,4-dinitrophenol",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "food recall"
+      ]
+    },
+    {
+      "topic": "yellowstone",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "food recall"
+      ]
+    },
+    {
+      "topic": "how frequently should a thermometer be calibrated for accuracy",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "food contamination"
+      ]
+    },
+    {
+      "topic": "jad fair",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "food recall"
+      ]
+    },
+    {
+      "topic": "apple iphone 17 news",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "food recall"
+      ]
+    },
+    {
+      "topic": "which activity is an example of poor personal hygiene",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "food contamination"
+      ]
+    },
+    {
+      "topic": "at minimum how often must a meat slicer be cleaned and sanitized when in constant use",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "food contamination"
+      ]
+    },
+    {
+      "topic": "haccp",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "food safety"
+      ]
+    },
+    {
+      "topic": "washing cabbage food safety tips",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "wilkerson dining facility food safety",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "cracked eggs food safety risks",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "american shoppers food safety concerns",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "clorox recall 2026",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "salmonella outbreak utah",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "nontyphoidal salmonella",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "serving utensils are used when serving food in order to",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "where can a food worker wash her hands",
+      "reason": "Weak radar score (49)"
+    },
+    {
+      "topic": "what should food handlers do to prevent food allergens from being transferred to food",
+      "reason": "Weak radar score (49)"
+    },
+    {
+      "topic": "what causes listeria",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "123 premier food safety",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "product recall",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "salmonella prevention",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "food safety after power outage",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "what is salmonella",
+      "reason": "Weak radar score (45)"
+    },
+    {
+      "topic": "listeria outbreak 2026",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "salmonella outbreak 2026",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "fda listeria outbreak",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "what is food safety",
+      "reason": "Weak radar score (45)"
+    },
+    {
+      "topic": "walmart food safety recall mangoes",
+      "reason": "Weak radar score (36)"
+    },
+    {
+      "topic": "food safety certification",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "state food safety",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "food safety training",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "food safety plan",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "food safety jobs",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "why is food safety important",
+      "reason": "Weak radar score (39)"
+    },
+    {
+      "topic": "food safety certificate",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "haccp food safety",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "food safety gloves",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "premier food safety",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "food safety news",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "dog food",
+      "reason": "Weak radar score (39)"
+    },
+    {
+      "topic": "food safety temperatures",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "food safety manager certification",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "food safety month",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "food safety and inspection service",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "recall on food",
+      "reason": "Weak radar score (34)"
+    },
+    {
+      "topic": "recall dog food",
+      "reason": "Weak radar score (32)"
+    },
+    {
+      "topic": "walmart food recall",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "recalls",
+      "reason": "Weak radar score (38)"
+    },
+    {
+      "topic": "recalls food",
+      "reason": "Weak radar score (40)"
+    },
+    {
+      "topic": "recall list",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "recall list food",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "recall cat food",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "food recalls 2026",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "recalled food",
+      "reason": "Weak radar score (39)"
+    },
+    {
+      "topic": "frozen food recall",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "beef recall",
+      "reason": "Weak radar score (33)"
+    },
+    {
+      "topic": "rice recall",
+      "reason": "Weak radar score (29)"
+    },
+    {
+      "topic": "baby food recall",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "chicken recall",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "recalls on food",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "recall list 2026",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "food cross contamination",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "cross contamination",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "food safety",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "what is cross contamination",
+      "reason": "Weak radar score (37)"
+    }
+  ]
+}
