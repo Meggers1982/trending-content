@@ -3,6 +3,33 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-09-09'
+  niche: Health & Wellness
+  signals_reviewed: 150
+  topics_retained: 3
+  topics_rejected: 25
+  p1_count: 0
+  p2_count: 2
+  p3_count: 1
+  p4_count: 0
+  p5_count: 0
+  integrity_flags: 3
+  top_topic: AI-designed drug candidate and phase 2a trial data on biological aging
+  key_themes:
+  - AI-designed drug candidate and phase 2a trial data on biological aging
+  - Presurgical mental health care improves recovery outcomes in older adults
+  - Culinary medicine intervention for diabetes management
+  tools_used:
+  - google_news
+  - google_trends
+  - web_search
+  tools_unavailable: []
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-09-09.html
+  estimated_cost_usd: 0.6215
+  notes: Heavy duplication with prior 7 days' coverage concentrated in FDA recall cluster — now recurring
+    across 6+ consecutive runs and should be deprioritized. Two Google Trends rising queries signal demand
+    for unverifiable keto/metabolism study. site_url not configured; competitor-list fallback used. Recommend
+    suppressing FDA recall cluster tomorrow unless genuinely new outbreak emerges.
 - run_date: '2026-09-08'
   niche: health and wellness
   signals_reviewed: 144
