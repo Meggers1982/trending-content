@@ -1,0 +1,807 @@
+{
+  "run_date": "2026-09-09",
+  "generated_at": "2026-09-09T17:11:04",
+  "topic": "gut-health",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "gut-health",
+    "gut health",
+    "microbiome",
+    "probiotics",
+    "prebiotics",
+    "gut bacteria",
+    "digestive health",
+    "IBS",
+    "bloating",
+    "gut brain axis",
+    "leaky gut",
+    "gut-health trends",
+    "gut-health products",
+    "gut-health news",
+    "gut-health for beginners",
+    "gut-health routine",
+    "gut-health benefits",
+    "gut-health ideas",
+    "gut-health reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 19,
+    "total_reviewed": 80,
+    "total_retained": 2,
+    "total_rejected": 79,
+    "breakouts": 1,
+    "emerging": 0,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "topic": "sucralose and stevia gut microbiome study",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 66,
+      "emergence_score": 82,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 53,
+      "slope": 0,
+      "acceleration": 2,
+      "seed_terms": [
+        "microbiome"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        10,
+        9,
+        12,
+        10,
+        6,
+        0,
+        6,
+        13,
+        13,
+        14,
+        0,
+        0,
+        0,
+        43,
+        53,
+        22,
+        22,
+        11,
+        8,
+        8,
+        7,
+        6,
+        6,
+        6,
+        5,
+        4,
+        0,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        14,
+        12,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 2,
+      "topic": "bioma health",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 50,
+      "emergence_score": 38,
+      "velocity_score": 50,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 63,
+      "confidence": "high",
+      "rising_label": "+170%",
+      "latest_interest": 14,
+      "peak_interest": 100,
+      "slope": 9,
+      "acceleration": 9,
+      "seed_terms": [
+        "probiotics"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        5,
+        9,
+        0,
+        4,
+        6,
+        8,
+        8,
+        11,
+        9,
+        11,
+        17,
+        19,
+        25,
+        35,
+        46,
+        44,
+        60,
+        44,
+        24,
+        16,
+        15,
+        10,
+        10,
+        11,
+        8,
+        8,
+        7,
+        6,
+        7,
+        7,
+        11,
+        12,
+        10,
+        12,
+        12,
+        18,
+        26,
+        36,
+        47,
+        57,
+        68,
+        38,
+        27,
+        20,
+        17,
+        17,
+        13,
+        7,
+        12,
+        12,
+        8,
+        8,
+        0,
+        6,
+        15,
+        12,
+        17,
+        12,
+        24,
+        19,
+        30,
+        26,
+        47,
+        75,
+        87,
+        68,
+        31,
+        20,
+        23,
+        22,
+        21,
+        18,
+        11,
+        14,
+        11,
+        10,
+        11,
+        11,
+        17,
+        15,
+        18,
+        12,
+        19,
+        24,
+        37,
+        40,
+        51,
+        66,
+        93,
+        46,
+        40,
+        35,
+        32,
+        21,
+        18,
+        20,
+        19,
+        8,
+        16,
+        14,
+        12,
+        13,
+        11,
+        18,
+        12,
+        12,
+        19,
+        28,
+        42,
+        43,
+        59,
+        67,
+        64,
+        100,
+        46,
+        31,
+        22,
+        19,
+        17,
+        16,
+        12,
+        13,
+        14,
+        14,
+        11,
+        11,
+        10,
+        17,
+        19,
+        19,
+        24,
+        26,
+        37,
+        48,
+        67,
+        66,
+        68,
+        53,
+        39,
+        29,
+        19,
+        21,
+        11,
+        12,
+        9,
+        7,
+        18,
+        9,
+        14,
+        17,
+        18,
+        16,
+        16,
+        12,
+        21,
+        32,
+        28,
+        41,
+        49,
+        92,
+        93,
+        49,
+        21,
+        16,
+        18,
+        17,
+        10,
+        14
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +170%; interest moved from 5 to 14; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "prebiotics",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "sucralose",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "microbiome"
+      ]
+    },
+    {
+      "topic": "bodysuit",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "probiotics"
+      ]
+    },
+    {
+      "topic": "graduation dress",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "probiotics"
+      ]
+    },
+    {
+      "topic": "low fodmap diet",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "leaky gut"
+      ]
+    },
+    {
+      "topic": "saily esim usa",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "probiotics"
+      ]
+    },
+    {
+      "topic": "bitget exchange",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "probiotics"
+      ]
+    },
+    {
+      "topic": "draftkings odds boost",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "probiotics"
+      ]
+    },
+    {
+      "topic": "glutathione",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "leaky gut"
+      ]
+    },
+    {
+      "topic": "l-glutamine",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "leaky gut"
+      ]
+    },
+    {
+      "topic": "etoro bonus",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "probiotics"
+      ]
+    },
+    {
+      "topic": "hugo boss official",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "probiotics"
+      ]
+    },
+    {
+      "topic": "caesars bonus code",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "probiotics"
+      ]
+    },
+    {
+      "topic": "vid iq",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "probiotics"
+      ]
+    },
+    {
+      "topic": "celiac disease symptoms",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "bloating"
+      ]
+    },
+    {
+      "topic": "probiotic",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "gut health"
+      ]
+    },
+    {
+      "topic": "best probiotic",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "gut health"
+      ]
+    },
+    {
+      "topic": "gut",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "microbiome"
+      ]
+    },
+    {
+      "topic": "earth microbiome project",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "can leaky gut be cured",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "foods to avoid with leaky gut",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "how to nourish mouth microbiome",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "how to get rid of bad bacteria in the gut",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "herbs for leaky gut",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "how do you know if you have a leaky gut",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "how to improve gut health",
+      "reason": "Weak radar score (45)"
+    },
+    {
+      "topic": "improve gut health",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "whats a leaky gut",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "medvi health",
+      "reason": "Weak radar score (49)"
+    },
+    {
+      "topic": "best probiotic for leaky gut",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "arizona digestive health patient portal",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "tri cities digestive health",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "signs of a leaky gut",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "what is one type of bacteria found in a healthy gut microbiome?",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "does putting your legs up on a wall help with bloating",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "cedar valley digestive health",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "heal leaky gut in 2 weeks",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "lovebug probiotics",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "what do harmful bacteria do in the gut microbiome?",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "digestive health specialists scottsdale",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "how to relieve stomach pain and bloating",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "do laxatives help with bloating",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "can miralax cause bloating",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "how to treat leaky gut syndrome",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "leaky gut cure",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "how to fix leaky gut naturally",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "what do bacteria do in a healthy gut microbiome",
+      "reason": "Weak radar score (46)"
+    },
+    {
+      "topic": "does miralax cause bloating",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "hack your health the secrets of your gut",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "us digestive health lancaster",
+      "reason": "Weak radar score (46)"
+    },
+    {
+      "topic": "period bloating relief",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "what is gut health",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "gut health foods",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "gut health probiotics",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "probiotics",
+      "reason": "Weak radar score (38)"
+    },
+    {
+      "topic": "foods for gut health",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "probiotics for gut health",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "gut health supplements",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "probiotic for gut health",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "gut health supplement",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "gut health test",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "dog gut health",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "food for gut health",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "what is good for gut health",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "supplement for gut health",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "supplements for gut health",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "gut health drink",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "best probiotic for gut health",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "gut health diet",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "best probiotics for gut health",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "gut health for dogs",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "best gut health supplement",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "gut microbiome",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "what is microbiome",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "human microbiome",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "what is the microbiome",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "what is a microbiome",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "bacteria",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "microbiome test",
+      "reason": "Weak radar score (37)"
+    }
+  ]
+}
