@@ -1,0 +1,1025 @@
+{
+  "run_date": "2026-09-09",
+  "generated_at": "2026-09-09T16:59:46",
+  "topic": "mental-health",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "mental-health",
+    "mental health",
+    "anxiety",
+    "depression",
+    "therapy",
+    "burnout",
+    "stress management",
+    "mindfulness",
+    "cognitive behavioral therapy",
+    "mental health awareness",
+    "trauma recovery",
+    "mental-health trends",
+    "mental-health products",
+    "mental-health news",
+    "mental-health for beginners",
+    "mental-health routine",
+    "mental-health benefits",
+    "mental-health ideas",
+    "mental-health reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 19,
+    "total_reviewed": 80,
+    "total_retained": 3,
+    "total_rejected": 77,
+    "breakouts": 2,
+    "emerging": 1,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "topic": "therapy adela",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 66,
+      "emergence_score": 82,
+      "velocity_score": 39,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 55,
+      "slope": 0,
+      "acceleration": -3,
+      "seed_terms": [
+        "therapy"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        55,
+        32,
+        20,
+        0,
+        0,
+        0,
+        0,
+        9,
+        6,
+        9,
+        7,
+        6,
+        5,
+        5,
+        7,
+        6,
+        8,
+        8,
+        8,
+        4,
+        6,
+        7,
+        6,
+        9,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        0,
+        0,
+        6,
+        0,
+        4,
+        0,
+        0,
+        5,
+        7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        17,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 2,
+      "topic": "nad therapy near me",
+      "trend_stage": "emerging",
+      "urgency": "this_week",
+      "radar_score": 66,
+      "emergence_score": 82,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "+2200%",
+      "latest_interest": 0,
+      "peak_interest": 100,
+      "slope": 0,
+      "acceleration": 2,
+      "seed_terms": [
+        "therapy"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        100,
+        63,
+        0,
+        8,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +2200%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Build an angle this week and monitor the next 24-48 hours.",
+      "similar": [
+        {
+          "topic": "vitamin iv therapy near me",
+          "trend_stage": "emerging",
+          "radar_score": 66,
+          "why_now": "Google Trends labels it +1700%; interest moved from 0 to 0; found through rising query"
+        },
+        {
+          "topic": "iv therapy near me",
+          "trend_stage": "watch",
+          "radar_score": 51,
+          "why_now": "Google Trends labels it +250%; interest moved from 0 to 0; found through rising query"
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "topic": "the dark side of mindfulness",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 65,
+      "emergence_score": 81,
+      "velocity_score": 38,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 52,
+      "slope": 0,
+      "acceleration": -7,
+      "seed_terms": [
+        "mindfulness"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        7,
+        6,
+        7,
+        25,
+        42,
+        48,
+        45,
+        52,
+        41,
+        33,
+        31,
+        25,
+        20,
+        17,
+        19,
+        20,
+        0,
+        21,
+        34,
+        32,
+        26,
+        28,
+        25,
+        17,
+        15,
+        13,
+        10,
+        11,
+        12,
+        10,
+        10,
+        10,
+        9,
+        6,
+        6,
+        6,
+        6,
+        9,
+        9,
+        0,
+        0,
+        0,
+        0,
+        25,
+        15,
+        0,
+        11,
+        7,
+        0,
+        4,
+        6,
+        0,
+        7,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        16,
+        9,
+        7,
+        0,
+        5,
+        6,
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "anxiety",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "mental-health trends",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "inventory management systems",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "stress management"
+      ]
+    },
+    {
+      "topic": "product lifecycle management",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "stress management"
+      ]
+    },
+    {
+      "topic": "how ai is changing our lives",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "mental health"
+      ]
+    },
+    {
+      "topic": "the importance of learning languages",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "mental health"
+      ]
+    },
+    {
+      "topic": "customer relationship management",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "stress management"
+      ]
+    },
+    {
+      "topic": "did lindsay clancy admit she did it",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "depression"
+      ]
+    },
+    {
+      "topic": "project management tools",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "stress management"
+      ]
+    },
+    {
+      "topic": "sports scores today",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "mental health"
+      ]
+    },
+    {
+      "topic": "how to cook pasta",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "mental health"
+      ]
+    },
+    {
+      "topic": "learn programming",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "mental health"
+      ]
+    },
+    {
+      "topic": "how old were lindsay clancy kids",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "depression"
+      ]
+    },
+    {
+      "topic": "post partum psychosis",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "depression"
+      ]
+    },
+    {
+      "topic": "travel destinations",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "mental health"
+      ]
+    },
+    {
+      "topic": "gardening ideas",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "mental health"
+      ]
+    },
+    {
+      "topic": "pmdd",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "mental health"
+      ]
+    },
+    {
+      "topic": "what is postpartum psychosis",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "depression"
+      ]
+    },
+    {
+      "topic": "what month is september",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "mental health"
+      ]
+    },
+    {
+      "topic": "postpartum psychosis",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "depression"
+      ]
+    },
+    {
+      "topic": "diy projects",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "mental health"
+      ]
+    },
+    {
+      "topic": "how long does postpartum psychosis last",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "depression"
+      ]
+    },
+    {
+      "topic": "what causes postpartum psychosis",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "depression"
+      ]
+    },
+    {
+      "topic": "how long can postpartum psychosis last",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "depression"
+      ]
+    },
+    {
+      "topic": "stress management techniques for teens",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "colors for mental health awareness",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "maternal mental health awareness week 2026",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "therapy adela lyrics",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "synthwave burnout",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "mental health awareness ribbons",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "how social media affects our mental health",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "world physical therapy day",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "september is mental health awareness month",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "september mental health awareness",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "september mental health awareness month",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "how to overcome burnout at work",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "what is postpartum depression and why does it happen",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "water pie great depression",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "green day burnout lyrics",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "what is the difference between postpartum depression and postpartum psychosis",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "lumebox red light therapy",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "mental health of jesus",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "september mental health month",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "signs of burnout",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "define cognitive behavioral therapy",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "difference between postpartum depression and postpartum psychosis",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "burnout nationals",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "burnout cycles",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "tropical depression edouard",
+      "reason": "Weak radar score (39)"
+    },
+    {
+      "topic": "burnout signs",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "mental health awareness september",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "mental health awareness month september",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "mental health clinic near me",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "how many women experience postpartum depression",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "post pardom depression",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "postpartum depression vs postpartum psychosis",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "postpartum psychosis vs depression",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "what is dbt in mental health",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "mental health awareness month",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "mental health treatment near me",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "how many women suffer from postpartum depression",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "post partum depression meaning",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "moccasin bend mental health institute",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "mental health service near me",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "postpartum depression case",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "how many women get postpartum depression",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "depression treatment near me",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "marriage and family therapy graduate programs",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "iv therapy",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "burnout grill",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "cognitive behavioral therapy worksheets",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "mental health awareness ribbon",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "what month is mental health awareness month",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "what causes postpartum depression",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "what is post partum depression",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "what causes post partum depression",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "outpatient therapy near me",
+      "reason": "Weak radar score (47)"
+    }
+  ]
+}
