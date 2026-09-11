@@ -1,0 +1,249 @@
+{
+  "run_date": "2026-09-11",
+  "niche": "Health & Wellness (US)",
+  "signal_summary": {
+    "total_reviewed": 144,
+    "total_retained": 4,
+    "total_rejected": 140,
+    "tools_active": [
+      "web_search",
+      "google_news",
+      "google_trends",
+      "serpapi"
+    ],
+    "tools_unavailable": [
+      "reddit",
+      "x_twitter",
+      "site_url_self_check"
+    ],
+    "notes": "Aging/longevity cluster and FDA recall cluster are recurring themes for a 2nd consecutive coverage window — content on these should emphasize NEW developments only, not restate prior coverage. Multiple recalls could not be routed past Skill 02b to full scoring because this run's evidence held only single secondary sources with no directly retrieved FDA.gov notice — recommend a direct FDA recall-database check before any of these run as full briefs."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Nationwide increase in reported human rabies exposures — CDC PEP administration advisory",
+      "primary_entity": "CDC (Centers for Disease Control and Prevention)",
+      "signal_type": "breaking_news",
+      "allowed_category": "infectious disease / public health and epidemiology",
+      "trend_strength_score": 74,
+      "opportunity_score": 83,
+      "discover_score": 5,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 2,
+      "source_urls": [
+        "https://www.cdc.gov/han/php/notices/han00533.html"
+      ],
+      "recommended_angle": "Explain what triggered the spike in reported rabies exposures and what post-exposure prophylaxis (PEP) actually involves — practical, non-alarmist guidance",
+      "why_now": "CDC issued a Health Alert Network notice; 'rabies exposure' is a confirmed real-time Google Trends breakout term tied directly to this notice.",
+      "primary_headline": "CDC Reports a Nationwide Rise in Rabies Exposures — Here's What to Know About Post-Exposure Treatment",
+      "next_steps": "Fast-track to writer; pair with expert quote from CDC or a public-health veterinarian; publish within 24h.",
+      "integrity_flags": [
+        "Do not conflate 'reported exposures/PEP administrations' with confirmed rabies infections — the advisory is about prophylaxis uptake, not a rabies outbreak."
+      ],
+      "trend_score_reason": "CDC HAN notice + confirmed Google Trends breakout term for 'rabies exposure'",
+      "opportunity_score_reason": "Tier-1 primary source with urgent public-health guidance; high audience need for non-alarmist clarity",
+      "discover_score_reason": "Real-time convergence of CDC HAN + Google Trends spike + news coverage; maximally discoverable",
+      "notes": "High confidence via CDC primary source + Google Trends convergence.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "CDC HAN00533 notice + Google Trends 'rabies exposure' breakout term with matching Why line"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Wellness darties — Gen Z trades keggers for alcohol-free wellness gatherings",
+      "primary_entity": "Gen Z / college wellness culture",
+      "signal_type": "cultural_moment",
+      "allowed_category": "public health and epidemiology (alcohol-reduction/harm-reduction angle, adjacent)",
+      "trend_strength_score": 70,
+      "opportunity_score": 69,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "source_urls": [
+        "https://www.nytimes.com/2026/09/11/style/wellness-darties-college-gen-z-tiktok.html"
+      ],
+      "recommended_angle": "Take the trend seriously as a public-health signal — is 'wellness darty' culture actually reducing alcohol harm among young adults, or just relabeling the same behaviors?",
+      "why_now": "NYT Styles piece published today; 'wellness darties' and 'what is a wellness darty' are actively rising in Google Trends — real cross-channel convergence, not yet defined for a health-literate audience.",
+      "primary_headline": "What Is a 'Wellness Darty'? Inside Gen Z's Alcohol-Free Party Trend",
+      "next_steps": "Draft this week; use as a skepticism-angle piece — assess actual health benefit vs. TikTok aesthetic.",
+      "integrity_flags": [
+        "No peer-reviewed data yet ties this specific trend to measurable alcohol-consumption declines — frame as an emerging cultural pattern, not a proven public-health outcome."
+      ],
+      "trend_score_reason": "NYT + Google Trends rising queries for 'wellness darties' and related terms; strong cross-channel signal",
+      "opportunity_score_reason": "Emerging cultural trend with audience relevance ≥70; undercover angle on actual health impact vs. aesthetic",
+      "discover_score_reason": "NYT publication + Google Trends activity + trending on TikTok; high discoverability",
+      "notes": "Confirms fit with allowed_category via borderline criteria (clear health/wellness angle, audience_relevance ≥70, not excluded).",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "NYT Styles article on wellness darties + Google Trends rising queries 'wellness darties' and 'what is a wellness darty'"
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Former EPA officials warn AI data-center pollution poses a health threat",
+      "primary_entity": "AI data centers / EPA",
+      "signal_type": "expert_conversation",
+      "allowed_category": "environmental health",
+      "trend_strength_score": 52,
+      "opportunity_score": 77,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "low",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.nytimes.com/2026/09/10/climate/ai-data-centers-air-pollution-health.html"
+      ],
+      "recommended_angle": "Explain the specific pollutants and health risks named, and what's unproven vs. established",
+      "why_now": "NYT (9/10) is the first major outlet to connect AI data-center buildout directly to air-quality health risk; category is under-covered.",
+      "primary_headline": "Do AI Data Centers Pose a Health Risk? Former EPA Officials Are Raising Concerns",
+      "next_steps": "Hold for a second corroborating source (EPA data, air-quality study) before publishing; single-sourced currently.",
+      "integrity_flags": [
+        "Claims originate from named former officials' opinions in one article, not a peer-reviewed exposure study — present as an emerging concern, not established risk."
+      ],
+      "trend_score_reason": "Single tier-1 source with emerging environmental-health angle; limited search volume indicates niche but growing awareness",
+      "opportunity_score_reason": "Category is under-covered and high editorial potential; strong SERP gap and audience need for environmental health explainer",
+      "discover_score_reason": "NYT tier-1 source + emerging category angle; moderate discoverability due to single-source constraint",
+      "notes": "Confidence capped Low — only one tier-1 source, no institutional data cited yet. Hold for corroborating source before publishing.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "NYT 09/10/2026 article on AI data centers and air pollution health threat"
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "HHS awards $380M to strengthen behavioral health system on 988 Day",
+      "primary_entity": "HHS / SAMHSA / 988 Suicide & Crisis Lifeline",
+      "signal_type": "data_release",
+      "allowed_category": "mental health and psychology",
+      "trend_strength_score": 57,
+      "opportunity_score": 71,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "low",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.samhsa.gov/newsroom/press-announcements/20260908/hhs-awards-380-million-988-suicide-prevention-behavioral-health"
+      ],
+      "recommended_angle": "What this funding actually pays for and how it could change access to crisis care",
+      "why_now": "Announced 9/8 on 988 Day; mental-health search interest is elevated (Trends score 83, +2) alongside 'mental health awareness month' rising queries.",
+      "primary_headline": "HHS Puts $380 Million Toward the 988 Crisis Line — Here's What Changes",
+      "next_steps": "Pair with local/state crisis-line access data if available; verify allocation breakdown from SAMHSA.",
+      "integrity_flags": [
+        "Funding announcement ≠ immediate service improvement — avoid implying instant impact on crisis-line wait times or outcomes."
+      ],
+      "trend_score_reason": "Institutional funding announcement on 988 Day with elevated mental-health search interest; moderate trend strength for policy-driven topic",
+      "opportunity_score_reason": "Core mental-health category with clear reader need; policy explainer has strong editorial value and clarifying potential",
+      "discover_score_reason": "Tier-1 SAMHSA source on awareness day; moderate-to-low discoverability due to institutional/policy nature and single source",
+      "notes": "Single institutional source; confidence Low despite tier-1 credibility due to source_count=1.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "SAMHSA press release dated 09/08/2026 on $380M award tied to 988 Day + Google Trends mental health score 83 with rising 'mental health awareness month' queries"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "Logan Health no-confidence vote / Luminis cybersecurity / Atrium Health exec comp / Allina Health strike",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Apple Health/Fitness AI features",
+      "reason": "off_category"
+    },
+    {
+      "topic": "University wellness-program PR (CSUF, CSUSM, UNCG, Blue Shield, AHCA/NCAL, VA expo); Seattle PD wellness scandal",
+      "reason": "off_category"
+    },
+    {
+      "topic": "KFF Medicaid/CHIP tracker; HHS FDA leadership selections",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Nepal flood health-system strain",
+      "reason": "off_category"
+    },
+    {
+      "topic": "AI-designed aging drug (Nature phase 2a); culinary medicine diabetes; pediatric psychiatric crises/digital media; presurgical mental health recovery",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Dog-supplement salmonella recall",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Insilico GENESIS-IPF-3 Phase III",
+      "reason": "other"
+    },
+    {
+      "topic": "Moderna Ebola vaccine Phase 1 (DRC strain)",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Augusta Univ. atherosclerosis/autoimmune reclassification",
+      "reason": "unverified_claim"
+    },
+    {
+      "topic": "Ramipril blood-pressure recall",
+      "reason": "unverified_claim"
+    },
+    {
+      "topic": "Cream cheese/deli-salad Listeria recall",
+      "reason": "unverified_claim"
+    },
+    {
+      "topic": "Seasoning recall (TX, highest FDA risk level)",
+      "reason": "unverified_claim"
+    },
+    {
+      "topic": "White rice recall; ED-drug ingredient recall; device recall (breathing circuits/catheters)",
+      "reason": "unverified_claim"
+    }
+  ],
+  "fact_check_summary": {
+    "accurate": 4
+  },
+  "run_cost": {
+    "total_usd": 0.6421,
+    "calls": [
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11354,
+        "output_tokens": 25422,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 42559,
+        "estimated_cost_usd": 0.575
+      },
+      {
+        "model": "claude-haiku-4-5",
+        "input_tokens": 7825,
+        "output_tokens": 2328,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0195
+      },
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11688,
+        "output_tokens": 837,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0476
+      }
+    ]
+  }
+}

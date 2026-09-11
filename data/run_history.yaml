@@ -3,6 +3,39 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-09-11'
+  niche: Health & Wellness (US)
+  signals_reviewed: 144
+  topics_retained: 4
+  topics_rejected: 14
+  p1_count: 1
+  p2_count: 1
+  p3_count: 2
+  p4_count: 0
+  p5_count: 0
+  integrity_flags: 4
+  top_topic: Nationwide increase in reported human rabies exposures — CDC PEP administration advisory
+  key_themes:
+  - Nationwide increase in reported human rabies exposures — CDC PEP administration advisory
+  - Wellness darties — Gen Z trades keggers for alcohol-free wellness gatherings
+  - Former EPA officials warn AI data-center pollution poses a health threat
+  - HHS awards $380M to strengthen behavioral health system on 988 Day
+  tools_used:
+  - web_search
+  - google_news
+  - google_trends
+  - serpapi
+  tools_unavailable:
+  - reddit
+  - x_twitter
+  - site_url_self_check
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-09-11.html
+  estimated_cost_usd: 0.6421
+  notes: Aging/longevity cluster and FDA recall cluster are recurring themes for a 2nd consecutive coverage
+    window — content on these should emphasize NEW developments only, not restate prior coverage. Multiple
+    recalls could not be routed past Skill 02b to full scoring because this run's evidence held only single
+    secondary sources with no directly retrieved FDA.gov notice — recommend a direct FDA recall-database
+    check before any of these run as full briefs.
 - run_date: '2026-09-09'
   niche: Health & Wellness
   signals_reviewed: 150
