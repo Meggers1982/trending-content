@@ -1,0 +1,457 @@
+{
+  "run_date": "2026-09-12",
+  "niche": "health and wellness",
+  "signal_summary": {
+    "total_reviewed": 153,
+    "total_retained": 10,
+    "total_rejected": 143,
+    "tools_active": [
+      "google_news",
+      "google_trends",
+      "serpapi"
+    ],
+    "tools_unavailable": [
+      "reddit_live",
+      "twitter_live",
+      "content_database"
+    ],
+    "notes": "Recurring-theme flag: FDA recall cluster has appeared in 3+ consecutive runs (9/6, 9/7, 9/8, 9/12) — recommend an evergreen FDA Recall Tracker format rather than one-off stories per incident. site_url not configured; duplicate/SERP-gap checks relied on competitor-list fallback. All required configs loaded successfully."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "FDA egg recall upgraded to Class I (highest risk)",
+      "primary_entity": "FDA Salmonella egg recall",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 78,
+      "opportunity_score": 68,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "update",
+      "source_count": 3,
+      "source_urls": [
+        "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-salmonella-sprouts-september-2026",
+        "https://abcnews.com/GMA/Food/19-million-eggs-voluntarily-recalled-potential-salmonella-contamination/story?id=135028861"
+      ],
+      "recommended_angle": "What today's Class I upgrade means for the eggs already recalled — actionable steps for shoppers, tied to the '67% of shoppers avoid a food category' pattern already documented this week.",
+      "why_now": "FDA upgraded the ongoing Salmonella egg recall to Class I (highest risk classification) as of 9/11 — a materially new development since initial 9/8 coverage of the outbreak investigation.",
+      "primary_headline": "FDA Upgrades Egg Recall to Highest Risk Level as Salmonella Cases Grow",
+      "next_steps": "Full deep-dive brief; verify current lot codes/brand list against FDA notice before publishing; link to prior shopper-avoidance coverage for context.",
+      "integrity_flags": [
+        "Case counts and lot scope may still be evolving — attribute figures directly to FDA, avoid restating estimates as final."
+      ],
+      "trend_score_reason": "Class I upgrade on 9/11 is a new development with high search velocity across tier-1 outlets.",
+      "opportunity_score_reason": "Actionable consumer guidance tied to documented shopper-avoidance behavior pattern.",
+      "discover_score_reason": "High relevance to health and wellness audience; food safety remains top-performing Discover category.",
+      "notes": "Integrity note: case counts and lot scope may still be evolving — attribute figures directly to FDA, avoid restating estimates as final.",
+      "fact_check": {
+        "verdict": "significant_issues",
+        "issues": [
+          "One of the claimed sources (fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-salmonella-sprouts-september-2026) is the sprouts investigation, not the egg recall — source mismatch",
+          "The angle references a '67% of shoppers avoid a food category' statistic that does not appear anywhere in the evidence provided"
+        ],
+        "checked_against": "ABC News egg recall headline (9/11) vs. mismatched FDA sprouts link; no evidence for the 67% shopper stat"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "FDA Class I recall: breathing circuits, catheters, spinal cord stimulators",
+      "primary_entity": "FDA medical device recall",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 58,
+      "opportunity_score": 65,
+      "discover_score": 3,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.aha.org/news/headline/2026-09-08-fda-issues-highest-recall-certain-breathing-circuits-catheters-spinal-cord-stimulators"
+      ],
+      "recommended_angle": "Class I medical device recalls hit breathing circuits, catheters, and spinal cord stimulators — what patients and caregivers need to know.",
+      "why_now": "FDA issued its highest-severity recall classification across several distinct device categories this week.",
+      "primary_headline": "FDA Issues Highest-Level Recall for Breathing Circuits, Catheters, and Spinal Cord Stimulators",
+      "next_steps": "Full brief; break out per-device specifics (separate risk profiles) rather than treating as one uniform recall.",
+      "integrity_flags": [
+        "Multiple distinct device categories are bundled under one recall action — clarify per-device details before publishing."
+      ],
+      "trend_score_reason": "Class I severity rating across multiple device types; moderate coverage breadth.",
+      "opportunity_score_reason": "Broad patient-impact angle across respiratory, surgical, and neurological communities.",
+      "discover_score_reason": "Medical device safety ranks lower than food recalls but still resonates with health-conscious audience.",
+      "notes": "Integrity note: multiple distinct device categories are bundled under one recall action — clarify per-device details before publishing.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "American Hospital Association headline, 09/08/2026"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "CPAP sleep apnea device recall — Class I, firmware defect",
+      "primary_entity": "FDA CPAP device recall",
+      "signal_type": "recall",
+      "allowed_category": "sleep science",
+      "trend_strength_score": 60,
+      "opportunity_score": 72,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://sleepreviewmag.com/sleep-treatments/therapy-devices/cpap-pap-devices/fda-classifies-sleep-apnea-device-recall-as-class-i-due-to-firmware-defect/"
+      ],
+      "recommended_angle": "A firmware defect just triggered a Class I recall for CPAP machines — what sleep apnea patients should do now.",
+      "why_now": "FDA classified this CPAP firmware defect recall as Class I (highest risk) this week.",
+      "primary_headline": "FDA Issues Class I Recall for CPAP Devices Over Firmware Defect",
+      "next_steps": "Full brief; confirm affected model/serial ranges from FDA database before publishing.",
+      "integrity_flags": [
+        "Only firmware-affected units are implicated — avoid implying all CPAP devices are recalled."
+      ],
+      "trend_score_reason": "Class I severity with firmware defect angle; sleep apnea is high-prevalence condition.",
+      "opportunity_score_reason": "Direct consumer actionability; large CPAP-user population; strong Discover fit.",
+      "discover_score_reason": "Sleep science and device safety are top-performing subcategories in health wellness.",
+      "notes": "Integrity note: only firmware-affected units are implicated — avoid implying all CPAP devices are recalled.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Sleep Review article on FDA Class I CPAP recall, 09/10/2026"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Cream cheese and deli salad Listeria recall",
+      "primary_entity": "FDA Listeria recall",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 60,
+      "opportunity_score": 66,
+      "discover_score": 3,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.newsweek.com/cream-cheese-recall-fda-listeria-concerns-12419494"
+      ],
+      "recommended_angle": "Listeria in cream cheese and deli salads: who's most at risk and what to check in your fridge.",
+      "why_now": "FDA detected Listeria contamination this week, prompting recall of cream cheese and deli salad products.",
+      "primary_headline": "Cream Cheese, Deli Salads Recalled After FDA Detects Listeria",
+      "next_steps": "Full brief; lead with pregnant/immunocompromised risk guidance per CDC Listeria protocols.",
+      "integrity_flags": [
+        "Listeria carries elevated risk for pregnant people, older adults, and immunocompromised individuals — must be framed specifically, not generalized."
+      ],
+      "trend_score_reason": "Listeria carries high-risk profile; tied into broader weekly recall cluster.",
+      "opportunity_score_reason": "Vulnerable-population angle with clear public-health messaging opportunity.",
+      "discover_score_reason": "Food safety ranks in top Discover categories; Listeria risk framing resonates with audience.",
+      "notes": "Integrity note: Listeria carries elevated risk for pregnant people, older adults, and immunocompromised individuals — must be framed specifically, not generalized.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Newsweek article on cream cheese/deli salad Listeria recall, 09/09/2026"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "New study classifies atherosclerosis as an autoimmune disease",
+      "primary_entity": "Atherosclerosis autoimmune reclassification study",
+      "signal_type": "study_or_research",
+      "allowed_category": "chronic disease management",
+      "trend_strength_score": 55,
+      "opportunity_score": 74,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://jagwire.augusta.edu/new-study-classifies-atherosclerosis-as-an-autoimmune-disease/"
+      ],
+      "recommended_angle": "If heart disease is autoimmune, prevention and treatment approaches could shift — what the new atherosclerosis research means for patients today.",
+      "why_now": "A new study reclassifying atherosclerosis as an autoimmune condition could reshape prevention and treatment framing for the leading cause of death in the U.S.",
+      "primary_headline": "Study Suggests Atherosclerosis Should Be Classified as an Autoimmune Disease",
+      "next_steps": "Full brief; seek independent cardiologist/immunologist comment before publishing to corroborate single-institution claim.",
+      "integrity_flags": [
+        "Single-institution press release, not yet independently corroborated by other outlets — present as an emerging hypothesis, not settled consensus; clarify mechanistic vs. causal claims."
+      ],
+      "trend_score_reason": "Novel reframing of top chronic disease; moderate search velocity tied to institutional announcement.",
+      "opportunity_score_reason": "High opportunity for patient education and prevention-behavior shift angle; heart disease remains top Discover performer.",
+      "discover_score_reason": "Chronic disease management and cardiovascular topics rank in top-3 Discover categories.",
+      "notes": "Integrity note: single-institution press release, not yet independently corroborated by other outlets — present as an emerging hypothesis, not settled consensus; clarify mechanistic vs. causal claims.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Augusta University Jagwire article, 09/10/2026; existing flags already note single-institution/emerging-hypothesis caveat"
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Analysis: too few clinical trials test suicide-prevention interventions",
+      "primary_entity": "CU Anschutz suicide-prevention trial-gap analysis",
+      "signal_type": "study_or_research",
+      "allowed_category": "mental health and psychology",
+      "trend_strength_score": 48,
+      "opportunity_score": 70,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://news.cuanschutz.edu/emergency-medicine/stanley-suicide-prevention-study"
+      ],
+      "recommended_angle": "Why suicide-prevention research remains dangerously understudied — landing days after HHS's $380M behavioral health investment.",
+      "why_now": "New CU Anschutz analysis quantifies the shortage of suicide-prevention clinical trials, adding context to this week's HHS 988 funding news.",
+      "primary_headline": "There Aren't Enough Clinical Trials on Suicide Prevention — Here's Why",
+      "next_steps": "Concise brief; must follow safe-messaging guidance (no methods detail, include 988 hotline).",
+      "integrity_flags": [
+        "Follow safe-messaging guidelines (no methods, include 988 hotline)."
+      ],
+      "trend_score_reason": "Meta-analysis of research gaps with policy tie-in; moderate search velocity.",
+      "opportunity_score_reason": "Timely hook to HHS behavioral health funding; underreported public-health gap.",
+      "discover_score_reason": "Mental health and psychology topics consistently rank in top-5 Discover categories.",
+      "notes": "Must follow safe-messaging guidance (no methods detail, include 988 hotline).",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "University of Colorado Anschutz news article, 09/11/2026, alongside HHS 988 funding item dated 09/08/2026"
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Psilocybin-assisted therapy enters Phase 2 trial for MDD",
+      "primary_entity": "Optimi Health psilocybin Phase 2 trial",
+      "signal_type": "clinical_trial",
+      "allowed_category": "mental health and psychology",
+      "trend_strength_score": 52,
+      "opportunity_score": 68,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://finance.yahoo.com/healthcare/articles/optimi-health-initiate-phase-2-124500744.html"
+      ],
+      "recommended_angle": "Psilocybin therapy for depression just entered Phase 2 trials — what we actually know (and don't) so far.",
+      "why_now": "Optimi Health began dosing patients this week in a Phase 2 trial testing psilocybin-assisted therapy for major depressive disorder.",
+      "primary_headline": "Psilocybin-Assisted Therapy Enters Phase 2 Trial for Major Depressive Disorder",
+      "next_steps": "Concise brief; verify ClinicalTrials.gov registration before publishing; no efficacy claims — trial just began dosing.",
+      "integrity_flags": [
+        "Dosing just began — no efficacy data exists yet; verify ClinicalTrials.gov registration before publishing. Avoid efficacy claims at Phase 2 entry point."
+      ],
+      "trend_score_reason": "Phase 2 trial initiation is newsworthy but early-stage; moderate emerging-therapy interest.",
+      "opportunity_score_reason": "Psychedelic-assisted therapy remains high-interest Discover topic; mental health tie-in.",
+      "discover_score_reason": "Psychedelic-assisted therapy and mental health innovation rank in top Discover subcategories.",
+      "notes": "Verify ClinicalTrials.gov registration before publishing; no efficacy claims — trial just began dosing.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Yahoo Finance article on Optimi Health Phase 2 psilocybin trial, 09/10/2026"
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Emmanuel Mignot wins Lasker Award for discovering cause of narcolepsy",
+      "primary_entity": "Emmanuel Mignot",
+      "signal_type": "expert_conversation",
+      "allowed_category": "sleep science",
+      "trend_strength_score": 50,
+      "opportunity_score": 62,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://med.stanford.edu/news/all-news/2026/09/mignot-lasker.html"
+      ],
+      "recommended_angle": "How one scientist's orexin discovery still shapes narcolepsy treatment today.",
+      "why_now": "Emmanuel Mignot was just awarded the 2026 Lasker Award for discovering the cause of narcolepsy.",
+      "primary_headline": "Narcolepsy Researcher Emmanuel Mignot Wins Prestigious Lasker Award",
+      "next_steps": "Concise brief; strong evergreen/Discover candidate — durable Q&A framing.",
+      "integrity_flags": [],
+      "trend_score_reason": "Tier-1 institutional award recognition; durable sleep-science authority piece.",
+      "opportunity_score_reason": "Established expert and research institution; evergreen Q&A angle.",
+      "discover_score_reason": "Sleep science and neuroscience consistently rank in top-5 Discover categories; award angle adds prestige.",
+      "notes": "Strong evergreen/Discover candidate — durable Q&A framing.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Stanford Medicine news article, 09/09/2026"
+      }
+    },
+    {
+      "priority_level": "P4",
+      "publish_timing": "evergreen",
+      "topic": "Stem cell therapy for aging frailty advances to XPRIZE Healthspan final",
+      "primary_entity": "University of Miami stem cell/XPRIZE Healthspan",
+      "signal_type": "data_release",
+      "allowed_category": "aging and longevity",
+      "trend_strength_score": 45,
+      "opportunity_score": 60,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://news.med.miami.edu/stem-cell-therapy-aging-frailty-xprize-finalist/"
+      ],
+      "recommended_angle": "A stem cell therapy for aging frailty just became an XPRIZE Healthspan finalist — how close is it to patients?",
+      "why_now": "University of Miami's stem cell therapy advanced to the XPRIZE Healthspan competition final round.",
+      "primary_headline": "Stem Cell Therapy for Aging Frailty Advances to XPRIZE Healthspan Final",
+      "next_steps": "Concise brief; clarify this is a competition milestone, not an approved or near-term therapy.",
+      "integrity_flags": [
+        "Competition milestone only — not an approved or near-term-available therapy."
+      ],
+      "trend_score_reason": "Competition milestone with emerging-technology interest; early-stage signal.",
+      "opportunity_score_reason": "Longevity and aging-science topic with institutional credibility.",
+      "discover_score_reason": "Aging and longevity rank in emerging-interest Discover categories; moderate audience readiness.",
+      "notes": "Clarify this is a competition milestone, not an approved or near-term therapy.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "University of Miami Miller School of Medicine news article, 09/10/2026"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "HHS $380M behavioral health (988 Day)",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "CDC rabies exposure advisory",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "AI data-center pollution health threat",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Wellness darties (Gen Z sober parties)",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "AI drug candidate reverses biological age (Nature phase 2a)",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Presurgical mental-health recovery study (WashU)",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Health-system business/labor cluster (Allina strike, Luminis cybersecurity, Atrium exec pay, SSM nurses, Trinity layoffs, Arkansas DOH layoffs)",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Health insurance coverage-loss (Time)",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Apple Health/fitness AI features",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Local wellness fairs/expos (Montgomery County, VA Trinka Davis, CSUSM, CSUF)",
+      "reason": "not_actionable"
+    },
+    {
+      "topic": "Corporate wellness program regulatory pieces (Ogletree, Holland & Knight)",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Seattle 'wellness' supervisor scandal",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Dior 'Haute Wellness' beauty strategy",
+      "reason": "brand_safety"
+    },
+    {
+      "topic": "Santa Barbara Behavioral Wellness Recovery Month PR",
+      "reason": "not_actionable"
+    },
+    {
+      "topic": "Clinical-trial trade press cluster (Rethinking CT, Signant Health, Applied CT Q&A, Atlantic/Lilly sponsored, Penn State NIH grant, ALA awareness, Precedence market report, DVIDS, EU newsletter, KevinMD opinion)",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Dog supplement Salmonella recall",
+      "reason": "brand_safety"
+    },
+    {
+      "topic": "White rice recall (foreign material)",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "ED drug ingredient recall (sildenafil/tadalafil)",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Seasoning recall (highest FDA risk)",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Cyclospora outbreak / declining FDA inspections (PBS)",
+      "reason": "monitor"
+    },
+    {
+      "topic": "UVA 'out-of-body experience' trial",
+      "reason": "unverified_claim"
+    },
+    {
+      "topic": "Hofstra, Weill Cornell (spinal stenosis), USC (lung injury), MIT/Protolabs academic PR",
+      "reason": "not_actionable"
+    },
+    {
+      "topic": "Salmonella outbreak investigation: sprouts",
+      "reason": "Auto-filtered: 73% match to 'FDA Salmonella outbreak investigation — eggs' already covered 2026-09-08."
+    }
+  ],
+  "fact_check_summary": {
+    "significant_issues": 1,
+    "accurate": 9
+  },
+  "run_cost": {
+    "total_usd": 0.6681,
+    "calls": [
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11257,
+        "output_tokens": 24772,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 42559,
+        "estimated_cost_usd": 0.5649
+      },
+      {
+        "model": "claude-haiku-4-5",
+        "input_tokens": 9925,
+        "output_tokens": 4757,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0337
+      },
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 13419,
+        "output_tokens": 1947,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0695
+      }
+    ]
+  }
+}
