@@ -1,0 +1,1359 @@
+{
+  "run_date": "2026-09-14",
+  "generated_at": "2026-09-14T18:30:40",
+  "topic": "beauty",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "beauty",
+    "skincare",
+    "makeup",
+    "haircare",
+    "fragrance",
+    "clean beauty",
+    "retinol",
+    "niacinamide",
+    "peptides",
+    "hyaluronic acid",
+    "skin barrier",
+    "skin cycling",
+    "glass skin",
+    "slugging",
+    "scalp care",
+    "SPF",
+    "sunscreen",
+    "K-beauty",
+    "hair loss",
+    "acne treatment",
+    "nail care",
+    "beauty trends",
+    "beauty products",
+    "beauty news",
+    "measles outbreak pennsylvania",
+    "shannon sharpe",
+    "current events",
+    "jessica chastain"
+  ],
+  "trending_now_terms_used": [
+    "measles outbreak pennsylvania",
+    "shannon sharpe",
+    "current events",
+    "jessica chastain"
+  ],
+  "trending_now_context": [
+    {
+      "query": "measles outbreak pennsylvania",
+      "headline": "Unvaccinated Woman Likely Died of Measles Complications, Pa. County Coroner Says",
+      "source": "The New York Times",
+      "link": "https://www.nytimes.com/2026/09/13/well/unvaccinated-woman-measles-complications-death.html"
+    },
+    {
+      "query": "shannon sharpe",
+      "headline": "Samson Dauda Wins 2026 Europa Pro Two Weeks Out From Mr. Olympia",
+      "source": "Generation Iron",
+      "link": "https://generationiron.com/2026-europa-pro-results/"
+    },
+    {
+      "query": "current events",
+      "headline": "The new Miss America said her dad sent her daily questions about current events to prepare for the pageant",
+      "source": "Business Insider",
+      "link": "https://www.businessinsider.com/miss-america-winner-regan-hutsell-pageant-prep-interview-round-2026-9"
+    },
+    {
+      "query": "jessica chastain",
+      "headline": "Jessica Chastain's New Warm Honey Bronde Bob Is Autumn's Most Wearable Short Hairstyle",
+      "source": "ELLE",
+      "link": "https://www.elle.com/uk/beauty/hair/a73717707/jessica-chastain-warm-honey-bronde-bob/"
+    }
+  ],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 28,
+    "total_reviewed": 80,
+    "total_retained": 4,
+    "total_rejected": 78,
+    "breakouts": 2,
+    "emerging": 1,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "topic": "jennifer lopez makeup artist foundation tips",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 66,
+      "emergence_score": 82,
+      "velocity_score": 41,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 27,
+      "slope": 0,
+      "acceleration": 3,
+      "seed_terms": [
+        "makeup"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        14,
+        27,
+        24,
+        26,
+        17,
+        15,
+        12,
+        11,
+        11,
+        8,
+        14,
+        7,
+        9,
+        18,
+        17,
+        17,
+        13,
+        5,
+        4,
+        2,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 2,
+      "topic": "scalp care routine",
+      "trend_stage": "emerging",
+      "urgency": "this_week",
+      "radar_score": 66,
+      "emergence_score": 82,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "+2050%",
+      "latest_interest": 0,
+      "peak_interest": 16,
+      "slope": 0,
+      "acceleration": -2,
+      "seed_terms": [
+        "scalp care"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        3,
+        4,
+        4,
+        6,
+        5,
+        10,
+        14,
+        16,
+        12,
+        10,
+        7,
+        6,
+        6,
+        6,
+        5,
+        4,
+        5,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +2050%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Build an angle this week and monitor the next 24-48 hours."
+    },
+    {
+      "rank": 3,
+      "topic": "beauty in black renewed season 4",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 65,
+      "emergence_score": 80,
+      "velocity_score": 41,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 88,
+      "confidence": "high",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 100,
+      "slope": 0,
+      "acceleration": 3,
+      "seed_terms": [
+        "beauty"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        12,
+        76,
+        90,
+        94,
+        97,
+        68,
+        53,
+        41,
+        47,
+        47,
+        48,
+        70,
+        97,
+        100,
+        80,
+        52,
+        32,
+        28,
+        22,
+        23,
+        22,
+        18,
+        18,
+        17,
+        15,
+        11,
+        8,
+        6,
+        5,
+        6,
+        3,
+        5,
+        3,
+        0,
+        0,
+        0,
+        0,
+        12,
+        9,
+        10,
+        5,
+        6,
+        5,
+        6,
+        4,
+        6,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 4,
+      "topic": "fall nail colors",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 52,
+      "emergence_score": 52,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 71,
+      "confidence": "high",
+      "rising_label": "+350%",
+      "latest_interest": 1,
+      "peak_interest": 2,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "nail care"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +350%; interest moved from 1 to 1; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "glass skin",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "jessica chastain",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "camping",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skin cycling"
+      ]
+    },
+    {
+      "topic": "maps",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skin cycling"
+      ]
+    },
+    {
+      "topic": "pasta",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skin cycling"
+      ]
+    },
+    {
+      "topic": "museums",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skin cycling"
+      ]
+    },
+    {
+      "topic": "yoga",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skin cycling"
+      ]
+    },
+    {
+      "topic": "movies",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skin cycling"
+      ]
+    },
+    {
+      "topic": "lawn care near me",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "scalp care"
+      ]
+    },
+    {
+      "topic": "afc urgent care",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nail care"
+      ]
+    },
+    {
+      "topic": "celebrity news",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "beauty news"
+      ]
+    },
+    {
+      "topic": "flash flood warning",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "measles outbreak pennsylvania"
+      ]
+    },
+    {
+      "topic": "chariklo",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "measles outbreak pennsylvania"
+      ]
+    },
+    {
+      "topic": "lanterns episode 5",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "measles outbreak pennsylvania"
+      ]
+    },
+    {
+      "topic": "spacex stock",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "measles outbreak pennsylvania"
+      ]
+    },
+    {
+      "topic": "apple iphone 18 pro",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "measles outbreak pennsylvania"
+      ]
+    },
+    {
+      "topic": "apple ios 27",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "measles outbreak pennsylvania"
+      ]
+    },
+    {
+      "topic": "james webb space telescope",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "measles outbreak pennsylvania"
+      ]
+    },
+    {
+      "topic": "college football rankings",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "measles outbreak pennsylvania"
+      ]
+    },
+    {
+      "topic": "storm norbert",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "measles outbreak pennsylvania"
+      ]
+    },
+    {
+      "topic": "jefferson county pennsylvania",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "measles outbreak pennsylvania"
+      ]
+    },
+    {
+      "topic": "lanterns episode 5 recap",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "measles outbreak pennsylvania"
+      ]
+    },
+    {
+      "topic": "sony playstation",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "measles outbreak pennsylvania"
+      ]
+    },
+    {
+      "topic": "skip bayless shannon sharpe reunion",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "shannon sharpe"
+      ]
+    },
+    {
+      "topic": "did shannon sharpe date joy taylor",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "shannon sharpe"
+      ]
+    },
+    {
+      "topic": "stephen a smith twitter",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "shannon sharpe"
+      ]
+    },
+    {
+      "topic": "jason mcintyre twitter",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "shannon sharpe"
+      ]
+    },
+    {
+      "topic": "ryan clark twitter",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "shannon sharpe"
+      ]
+    },
+    {
+      "topic": "chris broussard twitter",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "shannon sharpe"
+      ]
+    },
+    {
+      "topic": "terence crawford",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "shannon sharpe"
+      ]
+    },
+    {
+      "topic": "lamar jackson",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "shannon sharpe"
+      ]
+    },
+    {
+      "topic": "nick bosa",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "shannon sharpe"
+      ]
+    },
+    {
+      "topic": "skip bayless net worth",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "shannon sharpe"
+      ]
+    },
+    {
+      "topic": "ja'marr chase",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "shannon sharpe"
+      ]
+    },
+    {
+      "topic": "drake maye",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "shannon sharpe"
+      ]
+    },
+    {
+      "topic": "jaguars",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "shannon sharpe"
+      ]
+    },
+    {
+      "topic": "atlanta falcons",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "shannon sharpe"
+      ]
+    },
+    {
+      "topic": "25th anniversary of 9/11",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "current events"
+      ]
+    },
+    {
+      "topic": "emmanuel acho twitter",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "shannon sharpe"
+      ]
+    },
+    {
+      "topic": "dan orlovsky twitter",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "shannon sharpe"
+      ]
+    },
+    {
+      "topic": "joy taylor",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "shannon sharpe"
+      ]
+    },
+    {
+      "topic": "sydney winbush",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "beauty"
+      ]
+    },
+    {
+      "topic": "miami plane crash",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "current events"
+      ]
+    },
+    {
+      "topic": "shannon sharpe joy taylor",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "shannon sharpe"
+      ]
+    },
+    {
+      "topic": "miami cargo plane crash",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "current events"
+      ]
+    },
+    {
+      "topic": "9/11 current events",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "current events"
+      ]
+    },
+    {
+      "topic": "9/11 25th anniversary",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "current events"
+      ]
+    },
+    {
+      "topic": "keith urban songs",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "acne treatment"
+      ]
+    },
+    {
+      "topic": "hurricane lowell",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "current events"
+      ]
+    },
+    {
+      "topic": "stock market crash",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "measles outbreak pennsylvania"
+      ]
+    },
+    {
+      "topic": "care credit login",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nail care"
+      ]
+    },
+    {
+      "topic": "skip bayless shannon sharpe",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "shannon sharpe"
+      ]
+    },
+    {
+      "topic": "skip bayless",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "shannon sharpe"
+      ]
+    },
+    {
+      "topic": "revive rx",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skin barrier"
+      ]
+    },
+    {
+      "topic": "salad",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "beauty products"
+      ]
+    },
+    {
+      "topic": "books",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skin cycling"
+      ]
+    },
+    {
+      "topic": "skip bayless twitter",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "shannon sharpe"
+      ]
+    },
+    {
+      "topic": "shannon sharpe twitter",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "shannon sharpe"
+      ]
+    },
+    {
+      "topic": "cerave healing ointment",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skin barrier"
+      ]
+    },
+    {
+      "topic": "bread",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skin cycling"
+      ]
+    },
+    {
+      "topic": "red lipstick makeup tutorial",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "wen haircare products",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "julia berolzheimer peptides",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "does the skin provide a diffusion barrier to all gases?",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "nail shop near me",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "dnd nail polish",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "provence beauty retinol serum",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "acne treatment brand crossword",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "cvs beauty day giveaway",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "yuri skincare",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "park-explore.com your ultimate guide to experiencing the beauty and excitement",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "signs of a damaged skin barrier",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "acne treatment brand crossword clue",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "best firming skincare products",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "palladio makeup",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "hairline acne treatment",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "beauty and the beast san jose",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "sephora 2026 makeup advent calendar",
+      "reason": "Weak radar score (44)"
+    }
+  ]
+}
