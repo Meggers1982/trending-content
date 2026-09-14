@@ -1,0 +1,303 @@
+{
+  "run_date": "2026-09-14",
+  "niche": "Health & Wellness",
+  "signal_summary": {
+    "total_reviewed": 144,
+    "total_retained": 5,
+    "total_rejected": 34,
+    "tools_active": [
+      "serpapi_google_trends",
+      "serpapi_google_news",
+      "serpapi_google_search",
+      "competitor_list_fallback"
+    ],
+    "tools_unavailable": [
+      "reddit_api",
+      "social_search",
+      "content_database"
+    ],
+    "notes": "Mental health (Trends delta +45) and food safety (+29) are the two categories driving today's slate — both align with retained candidates. Six borderline-but-unverifiable recall/study leads were routed to Monitor via Skill 02b rather than force-scored. site_url absent — competitor-list fallback used for all duplicate/SERP-gap checks."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Measles outbreak in Pennsylvania — unvaccinated woman's death linked to complications",
+      "primary_entity": "Pennsylvania measles outbreak",
+      "signal_type": "breaking_news",
+      "allowed_category": "infectious disease",
+      "trend_strength_score": 78,
+      "opportunity_score": 82,
+      "discover_score": 5,
+      "urgency": "now",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "source_urls": [
+        "https://www.nytimes.com"
+      ],
+      "recommended_angle": "What measles complications actually look like — and why this death is a warning sign, not an outlier",
+      "why_now": "Real-time Google Trends breakout term tied to a confirmed county coroner finding; measles resurgence intersects directly with vaccine-hesitancy trends the audience already searches.",
+      "primary_headline": "A Pennsylvania Woman Died of Measles Complications — Here's What That Means for the Current Outbreak",
+      "next_steps": "Assign to health/infectious-disease writer today; confirm current case count via CDC measles dashboard before publishing; pull direct coroner quote if available.",
+      "integrity_flags": [
+        "Confirm current national case count directly from CDC before publishing — do not rely on secondhand aggregation.",
+        "Frame vaccination-status context factually; do not imply blame toward the individual."
+      ],
+      "trend_score_reason": "Real-time Google Trends breakout tied to confirmed coroner finding; measles resurgence theme.",
+      "opportunity_score_reason": "High audience search intent on vaccine-hesitancy + outbreak risk; durable explainer angle.",
+      "discover_score_reason": "Named entity + primary institutional source + public-health urgency = high AI-citation likelihood.",
+      "notes": "Standard source validation applied (not a 02b trigger — cause-of-death finding, not a drug/dosage/supplement claim).",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Google Trends 'measles outbreak pennsylvania' entry with NYT 'Unvaccinated Woman Likely Died of Measles Complications, Pa. County Coroner Says'"
+      }
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "E. coli outbreak linked to Walmart Great Value frozen blueberries",
+      "primary_entity": "Great Value frozen blueberries recall",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 75,
+      "opportunity_score": 68,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 2,
+      "source_urls": [
+        "https://www.cdc.gov/ecoli/outbreaks/blueberries-07-26/index.html",
+        "https://www.today.com/health/recall/walmart-berry-recall-great-value-e-coli-rcna597212"
+      ],
+      "recommended_angle": "The specific lot codes, symptoms, and states affected — a practical action guide, not just a recall alert",
+      "why_now": "CDC outbreak notice and retailer recall broke within the last 72 hours; food-safety search interest is up 29% this week.",
+      "primary_headline": "Great Value Frozen Blueberries Recalled After E. Coli Outbreak — What to Check in Your Freezer",
+      "next_steps": "Confirm affected lot codes/states directly from CDC page; verify recall is still active before publish.",
+      "integrity_flags": [
+        "Confirm recall is still open/active at time of publish — recall status changes quickly."
+      ],
+      "trend_score_reason": "CDC outbreak + retailer recall within 72h; food-safety Trends +29% this week.",
+      "opportunity_score_reason": "High practical consumer action value; direct institutional sourcing (CDC + retailer confirmation).",
+      "discover_score_reason": "Actionable recall alert with specific lot codes and state targeting.",
+      "notes": "02b passed — primary CDC notice retrieved.",
+      "fact_check": {
+        "verdict": "significant_issues",
+        "issues": [
+          "The CDC entry describes an E. coli outbreak linked to frozen blueberries generically, with no brand named, while the Today.com entry describes a Walmart Great Value 'berries' recall without specifying blueberries; the evidence does not confirm these are the same product or the same outbreak, so presenting them as one linked event overstates what's verified."
+        ],
+        "checked_against": "CDC 'E. coli Outbreak Linked to Frozen Blueberries' notice and TODAY.com 'Walmart Great Value Berries Recalled for Possible E. Coli Contamination' headline"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Cyclospora outbreak highlights years of declining FDA foreign food inspections",
+      "primary_entity": "FDA foreign inspection decline",
+      "signal_type": "policy_or_regulatory_change",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 65,
+      "opportunity_score": 78,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.pbs.org/newshour/health/cyclospora-outbreak-followed-years-of-declining-fda-foreign-inspections"
+      ],
+      "recommended_angle": "The systemic story competitors are missing: recalls are individual events, but declining inspections are the trend behind them",
+      "why_now": "PBS Newshour connects a live Cyclospora outbreak to a multi-year decline in FDA foreign inspections — directly extends the food-safety fatigue theme already covered this week.",
+      "primary_headline": "Why Food Recalls Keep Happening: Inside the Decline in FDA Foreign Inspections",
+      "next_steps": "Pull FDA/GAO inspection-rate data cited by PBS directly; consider pairing with last week's recall-fatigue piece as a follow-up/linked cluster.",
+      "integrity_flags": [
+        "Attribute inspection-decline statistics to their original FDA/GAO source, not PBS's framing — verify before publishing."
+      ],
+      "trend_score_reason": "Multi-year FDA inspection decline trend connected to live outbreak; strongest systemic angle today.",
+      "opportunity_score_reason": "Highest differentiation — no competitor covering systemic inspection-decline angle, only individual recalls.",
+      "discover_score_reason": "Investigative food-safety infrastructure angle with public policy data tie.",
+      "notes": "Strongest differentiation opportunity of the day — no competitor is covering the systemic angle, only individual recalls.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "PBS NewsHour 'Cyclospora outbreak followed years of declining FDA foreign inspections' article"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Nature review: global rise in youth mental health diagnoses",
+      "primary_entity": "Youth mental health diagnosis rates",
+      "signal_type": "study_or_research",
+      "allowed_category": "mental health and psychology",
+      "trend_strength_score": 68,
+      "opportunity_score": 80,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "update",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.nature.com/articles/s41380-026-03884-x"
+      ],
+      "recommended_angle": "What's actually driving the rise — better detection, more distress, or both? A grounded explainer, distinct from the digital-media-specific angle already covered this week",
+      "why_now": "Published in Nature this week; mental health search interest is up 45% in the last 7 days, the largest delta of any tracked category.",
+      "primary_headline": "Youth Mental Health Diagnoses Are Rising Worldwide — Here's What the Research Actually Shows",
+      "next_steps": "Pull specific diagnosis-rate figures and study methodology from the Nature article; distinguish from 9/8's digital-media-driver piece by focusing on diagnostic/detection trends broadly.",
+      "integrity_flags": [
+        "Association between rising diagnoses and rising actual distress is not fully established — avoid presenting increased diagnosis rates as automatically equal to worsening mental health (could reflect better detection/reduced stigma)."
+      ],
+      "trend_score_reason": "Nature publication + mental health Trends +45% this week; peer-reviewed global data.",
+      "opportunity_score_reason": "High audience search intent on youth mental health; builds on existing coverage with new peer-reviewed angle.",
+      "discover_score_reason": "Peer-reviewed research gate + diagnosis-rate methodology angle.",
+      "notes": "content_status = update: builds on 9/8 digital-media pediatric psychiatric crisis coverage with new peer-reviewed global diagnosis-rate data — a distinct driver-agnostic angle.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Nature 'Young minds in distress: Exploring the global rise in youth mental health diagnoses' article and Google Trends 'mental health' 7-day interest (+45 delta)"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "Wellness darties (NYT/NBC)",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "HHS $380M behavioral health award",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "CDC rabies exposure advisory",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Dog supplement Salmonella recall",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Seattle PD wellness-supervisor scandal",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Dior haute wellness strategy",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Americans losing health insurance (Time)",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Mitral regurgitation treatment study",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "UVA out-of-body experience trial",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "White rice recall (foreign material)",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Apple health/fitness features (Apple Intelligence)",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Trinity Health layoffs",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Allina Health strike",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Luminis cybersecurity incident",
+      "reason": "off_category"
+    },
+    {
+      "topic": "WHO special envoy appointment",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Local wellness fairs and school/workforce recognitions",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Clinical trials market reports and trade-press pieces",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Federal wellness program reward-rule clarification",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Amazon layoff wellness side hustle story",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Epinephrine injection recall",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Seasoning recall (Texas, Class I)",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "ED drug ingredient recall (sildenafil/tadalafil)",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Insilico Medicine AI-drug Phase III trial",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Harvard/Yale autism-origin grant",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Black/Indigenous maternal health advocacy piece",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "FDA investigates Salmonella outbreak linked to sprouts",
+      "reason": "Auto-filtered: 67% match to 'FDA Salmonella outbreak investigation — eggs' already covered 2026-09-08."
+    }
+  ],
+  "fact_check_summary": {
+    "accurate": 3,
+    "significant_issues": 1,
+    "minor_issues": 1
+  },
+  "run_cost": {
+    "total_usd": 0.6445,
+    "calls": [
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11515,
+        "output_tokens": 23607,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 42559,
+        "estimated_cost_usd": 0.5482
+      },
+      {
+        "model": "claude-haiku-4-5",
+        "input_tokens": 9135,
+        "output_tokens": 2666,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0225
+      },
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11983,
+        "output_tokens": 2525,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0738
+      }
+    ]
+  }
+}

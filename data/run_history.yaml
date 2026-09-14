@@ -3,6 +3,38 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-09-14'
+  niche: Health & Wellness
+  signals_reviewed: 144
+  topics_retained: 4
+  topics_rejected: 26
+  p1_count: 2
+  p2_count: 2
+  p3_count: 0
+  p4_count: 0
+  p5_count: 0
+  integrity_flags: 4
+  top_topic: Measles outbreak in Pennsylvania — unvaccinated woman's death linked to complications
+  key_themes:
+  - Measles outbreak in Pennsylvania — unvaccinated woman's death linked to complications
+  - E. coli outbreak linked to Walmart Great Value frozen blueberries
+  - Cyclospora outbreak highlights years of declining FDA foreign food inspections
+  - 'Nature review: global rise in youth mental health diagnoses'
+  tools_used:
+  - serpapi_google_trends
+  - serpapi_google_news
+  - serpapi_google_search
+  - competitor_list_fallback
+  tools_unavailable:
+  - reddit_api
+  - social_search
+  - content_database
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-09-14.html
+  estimated_cost_usd: 0.6445
+  notes: Mental health (Trends delta +45) and food safety (+29) are the two categories driving today's
+    slate — both align with retained candidates. Six borderline-but-unverifiable recall/study leads were
+    routed to Monitor via Skill 02b rather than force-scored. site_url absent — competitor-list fallback
+    used for all duplicate/SERP-gap checks.
 - run_date: '2026-09-12'
   niche: health and wellness
   signals_reviewed: 153
