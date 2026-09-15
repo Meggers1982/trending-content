@@ -1,0 +1,846 @@
+{
+  "run_date": "2026-09-15",
+  "generated_at": "2026-09-15T17:46:40",
+  "topic": "weight-loss",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "weight-loss",
+    "weight loss",
+    "weight loss journey",
+    "fat loss",
+    "sustainable weight loss",
+    "weight loss surgery",
+    "GLP-1",
+    "semaglutide",
+    "weight loss plateau",
+    "weight loss medication",
+    "weight-loss trends",
+    "weight-loss products",
+    "weight-loss news",
+    "weight-loss for beginners",
+    "weight-loss routine",
+    "weight-loss benefits",
+    "weight-loss ideas",
+    "weight-loss reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 18,
+    "total_reviewed": 80,
+    "total_retained": 2,
+    "total_rejected": 80,
+    "breakouts": 0,
+    "emerging": 1,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "topic": "amy slaton weight loss update",
+      "trend_stage": "emerging",
+      "urgency": "this_week",
+      "radar_score": 65,
+      "emergence_score": 81,
+      "velocity_score": 38,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "+2700%",
+      "latest_interest": 0,
+      "peak_interest": 72,
+      "slope": 0,
+      "acceleration": -6,
+      "seed_terms": [
+        "weight loss"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        7,
+        0,
+        15,
+        44,
+        31,
+        21,
+        16,
+        0,
+        0,
+        0,
+        0,
+        0,
+        42,
+        46,
+        60,
+        47,
+        38,
+        32,
+        27,
+        22,
+        22,
+        12,
+        8,
+        8,
+        11,
+        7,
+        7,
+        9,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        9,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        11,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        72,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +2700%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Build an angle this week and monitor the next 24-48 hours."
+    },
+    {
+      "rank": 2,
+      "topic": "how to break a weight loss plateau",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 50,
+      "emergence_score": 46,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 68,
+      "confidence": "high",
+      "rising_label": "+200%",
+      "latest_interest": 0,
+      "peak_interest": 19,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "weight loss plateau"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        19,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +200%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "GLP-1",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "weight-loss routine",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "calorie deficit calculator",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss plateau"
+      ]
+    },
+    {
+      "topic": "hers",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss surgery"
+      ]
+    },
+    {
+      "topic": "bmi calculator women",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss medication"
+      ]
+    },
+    {
+      "topic": "breast reduction surgery",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss surgery"
+      ]
+    },
+    {
+      "topic": "nord vpn free",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "semaglutide"
+      ]
+    },
+    {
+      "topic": "what to drink to lose belly fat in 1 week",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fat loss"
+      ]
+    },
+    {
+      "topic": "discount experts review",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss medication"
+      ]
+    },
+    {
+      "topic": "nord password generator",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss medication"
+      ]
+    },
+    {
+      "topic": "glp1 pill",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss medication"
+      ]
+    },
+    {
+      "topic": "qsymia",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss medication"
+      ]
+    },
+    {
+      "topic": "coquette dress",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss medication"
+      ]
+    },
+    {
+      "topic": "bmr calculator",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fat loss"
+      ]
+    },
+    {
+      "topic": "parisian fashion",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss medication"
+      ]
+    },
+    {
+      "topic": "reta",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss medication"
+      ]
+    },
+    {
+      "topic": "naltrexone",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss medication"
+      ]
+    },
+    {
+      "topic": "glp 1",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "embody",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "medvi",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "tirzepatide",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "embody reviews",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "elixamd",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "wegovy",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "peptides",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "ozempic",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "zepbound",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "quad ed",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "medvi quad",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "how to lose fat",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fat loss"
+      ]
+    },
+    {
+      "topic": "visceral fat",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fat loss"
+      ]
+    },
+    {
+      "topic": "weight loss procedures without surgery",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "how to get over weight loss plateau",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "tirzepatide and semaglutide meta analysis",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "how to break a plateau in weight loss",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "los angeles weight loss surgery",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "weight loss surgery in new mexico",
+      "reason": "Weak radar score (49)"
+    },
+    {
+      "topic": "how many weeks is considered a weight loss plateau",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "hitting a plateau in weight loss",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "does blue cross blue shield cover weight loss surgery",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "kelly osbourne weight loss",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "how to break weight loss plateau",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "chrissy metz weight loss",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "oregon weight loss surgery",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "does metformin help with weight loss",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "faster way to fat loss reviews",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "how to break through a weight loss plateau",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "does adhd medication cause weight loss",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "what is orbital fat loss",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "best workout split for muscle gain and fat loss",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "weight loss journey quotes",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "best supplements for muscle growth and fat loss",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "semaglutide dosing chart",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "semaglutide side effects",
+      "reason": "Weak radar score (36)"
+    },
+    {
+      "topic": "contrave for weight loss",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "weight-loss surgery",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "medvi weight loss",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "weight loss pills",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "weight loss medication",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "em weight loss",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "weight loss clinic",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "glp-1",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "glp-1 weight loss",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "weight loss peptides",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "colon broom weight loss",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "weight loss surgery",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "medical weight loss",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "peptides for weight loss",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "weight loss injections",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "weight loss",
+      "reason": "Weak radar score (40)"
+    },
+    {
+      "topic": "belly fat loss",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "fat loss diet",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "fat loss peptides",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "peptides for fat loss",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "peptide for fat loss",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "foods for fat loss",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "fat loss supplements",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "face fat loss",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "visceral fat loss",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "fat loss calculator",
+      "reason": "Weak radar score (31)"
+    }
+  ]
+}
