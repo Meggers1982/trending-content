@@ -1,0 +1,861 @@
+{
+  "run_date": "2026-09-15",
+  "generated_at": "2026-09-15T17:42:21",
+  "topic": "diet",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "diet",
+    "keto diet",
+    "intermittent fasting",
+    "low carb diet",
+    "Mediterranean diet",
+    "weight management",
+    "calorie deficit",
+    "macro tracking",
+    "elimination diet",
+    "anti-inflammatory diet",
+    "diet trends",
+    "diet products",
+    "diet news",
+    "diet for beginners",
+    "diet routine",
+    "diet benefits",
+    "diet ideas",
+    "diet reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 18,
+    "total_reviewed": 80,
+    "total_retained": 2,
+    "total_rejected": 80,
+    "breakouts": 0,
+    "emerging": 1,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "topic": "keto friendly snacks",
+      "trend_stage": "emerging",
+      "urgency": "this_week",
+      "radar_score": 57,
+      "emergence_score": 62,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 77,
+      "confidence": "high",
+      "rising_label": "+550%",
+      "latest_interest": 0,
+      "peak_interest": 16,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "keto diet"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        16,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +550%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Build an angle this week and monitor the next 24-48 hours."
+    },
+    {
+      "rank": 2,
+      "topic": "is the mediterranean diet good for diabetics",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 50,
+      "emergence_score": 46,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 68,
+      "confidence": "high",
+      "rising_label": "+190%",
+      "latest_interest": 0,
+      "peak_interest": 20,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "Mediterranean diet"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        20,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +190%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "calorie deficit",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "diet trends",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "bmi calculator women",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight management"
+      ]
+    },
+    {
+      "topic": "intuitive eating",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "elimination diet"
+      ]
+    },
+    {
+      "topic": "overnight oats recipe",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "Mediterranean diet"
+      ]
+    },
+    {
+      "topic": "wes anderson",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet"
+      ]
+    },
+    {
+      "topic": "small business ideas",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet news"
+      ]
+    },
+    {
+      "topic": "best smartphones 2026",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet news"
+      ]
+    },
+    {
+      "topic": "best places to visit in casablanca",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet news"
+      ]
+    },
+    {
+      "topic": "how to save money fast",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet news"
+      ]
+    },
+    {
+      "topic": "pet supplies plus",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight management"
+      ]
+    },
+    {
+      "topic": "autophagy",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "keto diet"
+      ]
+    },
+    {
+      "topic": "uefa champions league news",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet news"
+      ]
+    },
+    {
+      "topic": "how to start a youtube channel",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet for beginners"
+      ]
+    },
+    {
+      "topic": "top netflix series right now on netflix",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet for beginners"
+      ]
+    },
+    {
+      "topic": "morning routine for success",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet for beginners"
+      ]
+    },
+    {
+      "topic": "how to make money online",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet for beginners"
+      ]
+    },
+    {
+      "topic": "best aquarium fish for beginners",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet for beginners"
+      ]
+    },
+    {
+      "topic": "purina om",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight management"
+      ]
+    },
+    {
+      "topic": "how to start freelancing online",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet for beginners"
+      ]
+    },
+    {
+      "topic": "best free apps for productivity",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet for beginners"
+      ]
+    },
+    {
+      "topic": "medicaid",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "Mediterranean diet"
+      ]
+    },
+    {
+      "topic": "hepatic steatosis",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "Mediterranean diet"
+      ]
+    },
+    {
+      "topic": "how to learn english fast",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet for beginners"
+      ]
+    },
+    {
+      "topic": "easy and quick recipes",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet for beginners"
+      ]
+    },
+    {
+      "topic": "how to study effectively",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet for beginners"
+      ]
+    },
+    {
+      "topic": "low fodmap lunch ideas",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet ideas"
+      ]
+    },
+    {
+      "topic": "factor meals",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "keto diet"
+      ]
+    },
+    {
+      "topic": "new movies 2026",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet for beginners"
+      ]
+    },
+    {
+      "topic": "best small business ideas",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet ideas"
+      ]
+    },
+    {
+      "topic": "maps",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet for beginners"
+      ]
+    },
+    {
+      "topic": "how to build muscle at home",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet for beginners"
+      ]
+    },
+    {
+      "topic": "ai tools you should know in 2026",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet for beginners"
+      ]
+    },
+    {
+      "topic": "best side hustles for students",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet for beginners"
+      ]
+    },
+    {
+      "topic": "chewy",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet reviews"
+      ]
+    },
+    {
+      "topic": "farro",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "Mediterranean diet"
+      ]
+    },
+    {
+      "topic": "dr. james stone egg diet",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "what is dash diet",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "paleo vs mediterranean diet",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "how many carbs are allowed on a low carb diet",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "can intermittent fasting cause diarrhea",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "keto diet for vegetarians",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "how to start a keto diet at home for free",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "history of soybeans in us diet",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "dr susan wolver daily diet",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "can i drink diet coke on keto",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "intermittently",
+      "reason": "Weak radar score (49)"
+    },
+    {
+      "topic": "keto diet menu plan",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "keto diet carb limit",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "parkview weight management",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "how long does it take to get into ketosis on the keto diet",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "how long should intermittent fasting last",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "healthy diet plan for beginners",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "intermittent fasting and working out in the morning",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "va move weight management program",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "in which of the following does a decision maker give unbalanced weight to the first information they have received?",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "summa weight management",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "pros and cons of keto diet",
+      "reason": "Weak radar score (49)"
+    },
+    {
+      "topic": "gerd diet",
+      "reason": "Weak radar score (40)"
+    },
+    {
+      "topic": "pros and cons of the keto diet",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "can i drink coffee during intermittent fasting",
+      "reason": "Weak radar score (49)"
+    },
+    {
+      "topic": "estroven weight management reviews",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "keto diet for seizures",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "what can i eat during intermittent fasting",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "intermittent fasting guide for beginners",
+      "reason": "Weak radar score (49)"
+    },
+    {
+      "topic": "21 day anti-inflammatory diet pdf",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "keto friendly vegetables",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "weight loss pills",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "keto diet before and after",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "mediterranean diet for fertility",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "is mediterranean diet good for diabetics",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "no sugar diet benefits",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "dk metcalf diet",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "home bodyweight exercises workout",
+      "reason": "Weak radar score (46)"
+    },
+    {
+      "topic": "mediterranean spices",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "mediterranean diet grocery list",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "mediterranean diet meal plan for beginners",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "low inflammation diet",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "why is the mediterranean diet so healthy",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "alli weight loss reviews",
+      "reason": "Weak radar score (42)"
+    }
+  ]
+}
