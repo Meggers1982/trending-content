@@ -3,6 +3,40 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-09-16'
+  niche: Health & Wellness
+  signals_reviewed: 153
+  topics_retained: 6
+  topics_rejected: 12
+  p1_count: 2
+  p2_count: 1
+  p3_count: 2
+  p4_count: 0
+  p5_count: 1
+  integrity_flags: 6
+  top_topic: FDA hand soap recall — 6 brands pulled in 15 states over bacterial contamination
+  key_themes:
+  - FDA hand soap recall — 6 brands pulled in 15 states over bacterial contamination
+  - Fiji declares HIV emergency as infection rate hits 1 in 60
+  - AI entering clinical medicine — Trump administration Medicare AI, WHO AI meeting, Nature evidentiary
+    critique, FDA phase-1 pilot
+  - FDA investigates Salmonella outbreak linked to sprouts
+  - WHO mental health at work guidance — search surge in 'mental health at work' queries
+  - UVA out-of-body-experience clinical trial yields unexpected twist
+  tools_used:
+  - google_news
+  - google_trends
+  - serpapi
+  tools_unavailable:
+  - reddit
+  - exa
+  - twitter
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-09-16.html
+  estimated_cost_usd: 0.7027
+  notes: 'Recurring-theme flags: mental health appeared 5 consecutive days (retained only for distinct
+    WHO workplace fact sheet); FDA recalls at high cadence (5+ in 5 days) — flagged for editorial recall-fatigue
+    risk. Social/Reddit collectors unavailable; social_spread estimated. One candidate (UVA trial) passed
+    verification but scored below trend threshold (35<50), routed to P5/Monitor.'
 - run_date: '2026-09-14'
   niche: Health & Wellness
   signals_reviewed: 144
