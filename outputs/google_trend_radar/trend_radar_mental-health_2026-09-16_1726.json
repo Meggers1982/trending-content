@@ -1,0 +1,1215 @@
+{
+  "run_date": "2026-09-16",
+  "generated_at": "2026-09-16T17:26:49",
+  "topic": "mental-health",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "mental-health",
+    "mental health",
+    "anxiety",
+    "depression",
+    "therapy",
+    "burnout",
+    "stress management",
+    "mindfulness",
+    "cognitive behavioral therapy",
+    "mental health awareness",
+    "trauma recovery",
+    "mental-health trends",
+    "mental-health products",
+    "mental-health news",
+    "mental-health for beginners",
+    "mental-health routine",
+    "mental-health benefits",
+    "mental-health ideas",
+    "mental-health reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 19,
+    "total_reviewed": 80,
+    "total_retained": 4,
+    "total_rejected": 76,
+    "breakouts": 0,
+    "emerging": 3,
+    "rising": 1,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "topic": "mental health women villakalima",
+      "trend_stage": "emerging",
+      "urgency": "this_week",
+      "radar_score": 66,
+      "emergence_score": 82,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "+2900%",
+      "latest_interest": 0,
+      "peak_interest": 92,
+      "slope": 0,
+      "acceleration": -2,
+      "seed_terms": [
+        "mental health"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        92,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        46,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +2900%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Build an angle this week and monitor the next 24-48 hours.",
+      "similar": [
+        {
+          "topic": "mental health women villakalima.com",
+          "trend_stage": "emerging",
+          "radar_score": 66,
+          "why_now": "Google Trends labels it +2550%; interest moved from 0 to 0; found through rising query"
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "topic": "burnout revenge soundtrack",
+      "trend_stage": "emerging",
+      "urgency": "this_week",
+      "radar_score": 66,
+      "emergence_score": 82,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "+1400%",
+      "latest_interest": 0,
+      "peak_interest": 79,
+      "slope": 0,
+      "acceleration": 1,
+      "seed_terms": [
+        "burnout"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        79,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +1400%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Build an angle this week and monitor the next 24-48 hours."
+    },
+    {
+      "rank": 3,
+      "topic": "burnout nationals aviation mall",
+      "trend_stage": "emerging",
+      "urgency": "this_week",
+      "radar_score": 57,
+      "emergence_score": 62,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 77,
+      "confidence": "high",
+      "rising_label": "+550%",
+      "latest_interest": 0,
+      "peak_interest": 26,
+      "slope": 0,
+      "acceleration": -1,
+      "seed_terms": [
+        "burnout"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        26,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        24,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +550%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Build an angle this week and monitor the next 24-48 hours."
+    },
+    {
+      "rank": 4,
+      "topic": "stressor",
+      "trend_stage": "rising",
+      "urgency": "monitor",
+      "radar_score": 56,
+      "emergence_score": 36,
+      "velocity_score": 70,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 62,
+      "confidence": "high",
+      "rising_label": "+90%",
+      "latest_interest": 56,
+      "peak_interest": 66,
+      "slope": 31,
+      "acceleration": 6,
+      "seed_terms": [
+        "stress management"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        25,
+        35,
+        38,
+        38,
+        30,
+        15,
+        20,
+        14,
+        27,
+        19,
+        28,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        36,
+        40,
+        47,
+        53,
+        61,
+        40,
+        45,
+        49,
+        46,
+        35,
+        23,
+        28,
+        21,
+        26,
+        22,
+        24,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        23,
+        23,
+        29,
+        38,
+        23,
+        46,
+        26,
+        36,
+        38,
+        27,
+        19,
+        0,
+        18,
+        18,
+        22,
+        0,
+        26,
+        47,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        17,
+        0,
+        0,
+        0,
+        25,
+        16,
+        0,
+        20,
+        16,
+        19,
+        0,
+        0,
+        20,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        16,
+        14,
+        30,
+        17,
+        24,
+        25,
+        0,
+        23,
+        32,
+        41,
+        28,
+        36,
+        35,
+        39,
+        47,
+        0,
+        0,
+        0,
+        0,
+        0,
+        61,
+        60,
+        58,
+        50,
+        54,
+        52,
+        49,
+        39,
+        35,
+        27,
+        29,
+        21,
+        28,
+        32,
+        22,
+        25,
+        31,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        33,
+        37,
+        66,
+        51,
+        44,
+        53,
+        60,
+        64,
+        50,
+        34,
+        31,
+        27,
+        29,
+        50,
+        0,
+        34,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        63,
+        47,
+        40,
+        53,
+        56
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +90%; interest moved from 25 to 56; found through rising query",
+      "recommended_action": "Track as a developing query and compare against existing coverage."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "anxiety",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "the new face of america documentary",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "depression"
+      ]
+    },
+    {
+      "topic": "richat structure",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "depression"
+      ]
+    },
+    {
+      "topic": "best laptops 2025",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "burnout"
+      ]
+    },
+    {
+      "topic": "book recommendations",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "burnout"
+      ]
+    },
+    {
+      "topic": "online reputation management",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "stress management"
+      ]
+    },
+    {
+      "topic": "resilient definition",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "stress management"
+      ]
+    },
+    {
+      "topic": "technology news",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "stress management"
+      ]
+    },
+    {
+      "topic": "home workout routines",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "burnout"
+      ]
+    },
+    {
+      "topic": "top songs this week",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "burnout"
+      ]
+    },
+    {
+      "topic": "apathy",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "mindfulness"
+      ]
+    },
+    {
+      "topic": "the new face of america",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "depression"
+      ]
+    },
+    {
+      "topic": "gardening ideas",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "burnout"
+      ]
+    },
+    {
+      "topic": "pet care tips",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "burnout"
+      ]
+    },
+    {
+      "topic": "coffee shops nearby",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "burnout"
+      ]
+    },
+    {
+      "topic": "best restaurants near me",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "burnout"
+      ]
+    },
+    {
+      "topic": "cbt-i",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "cognitive behavioral therapy"
+      ]
+    },
+    {
+      "topic": "yellow ribbon meaning",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "mental health awareness"
+      ]
+    },
+    {
+      "topic": "travel destinations",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "burnout"
+      ]
+    },
+    {
+      "topic": "revelry",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "burnout"
+      ]
+    },
+    {
+      "topic": "the body keeps the score",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "trauma recovery"
+      ]
+    },
+    {
+      "topic": "agoraphobia",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "cognitive behavioral therapy"
+      ]
+    },
+    {
+      "topic": "suicide hotline",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "mental health awareness"
+      ]
+    },
+    {
+      "topic": "dbt",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "mindfulness"
+      ]
+    },
+    {
+      "topic": "the new face of america inside the second great depression documentary",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "yourtango workplace burnout signs",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "semi truck burnout",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "definition of eustress",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "healthavera.com stress relief",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "stress management skills work best when they’re used",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "ucla mindfulness app",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "national minority mental health awareness month",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "short mindfulness practices research",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "mindfulness para asesinos",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "burnout paradise soundtrack",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "burnout nationals",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "gender reveal burnout tires",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "is today mental health awareness day",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "what color represents mental health awareness",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "what does autistic burnout feel like",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "mental health awareness poster ideas",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "stem cell therapy for autistic child",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "miracle of mindfulness",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "mental health awareness posters",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "facts about mental health awareness",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "geological depression",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "truck burnout",
+      "reason": "Weak radar score (49)"
+    },
+    {
+      "topic": "minority mental health awareness month",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "importance of mental health awareness",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "mental health matters",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "mental health awareness topics",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "mental health awareness pictures",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "mindfulness practices",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "womens mental health awareness month",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "mindfulness activities",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "world mental health day 2026",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "teen mental health treatment",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "distress",
+      "reason": "Weak radar score (46)"
+    },
+    {
+      "topic": "practicing mindfulness",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "mental illness awareness month",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "is october mental health awareness month",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "danakil depression",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "can depression be genetic",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "speech therapy for kids",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "mindfulness for kids",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "what is mindfulness meditation",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "cognitive restructuring",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "what is acceptance and commitment therapy",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "october mental health awareness",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "causes of the great depression",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "mindfulness dbt",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "mindfulness activity",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "mindfulness kids",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "mindfulness breathing",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "mindfulness techniques",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "acceptance and commitment therapy",
+      "reason": "Weak radar score (49)"
+    }
+  ]
+}
