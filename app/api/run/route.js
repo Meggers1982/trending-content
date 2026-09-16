@@ -55,7 +55,7 @@ export async function POST(request) {
   const args = commandForMode(mode);
   appendLog(`Starting ${mode === "prefetch" ? "radar refresh" : "full report"}...`);
 
-  const child = spawn(PYTHON_BIN, args, {
+  const child = spawn(/* turbopackIgnore: true */ PYTHON_BIN, args, {
     cwd: ROOT,
     env: process.env,
     stdio: ["ignore", "pipe", "pipe"]

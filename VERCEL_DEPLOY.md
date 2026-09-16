@@ -68,11 +68,12 @@ Add these in Vercel project settings:
 - `GITHUB_PIPELINE_REF=main`
 - `DATABASE_URL` — auto-provisioned by the Neon Marketplace integration (project `neon-coffee-nest`,
   dedicated to this app). Backs `lib/tracked-topics.js`; no manual setup needed unless reconnecting.
-- `RUN_CONTROL_TOKEN` (optional, but recommended) — a shared secret you choose. When set, `POST /api/run`
-  requires a matching `x-run-token` header, so only someone who knows the token can trigger a run.
-  Without it, the run-trigger endpoint is publicly triggerable by anyone who has the deployed URL,
-  which can rack up Anthropic API, SerpAPI, and GitHub Actions costs. Enter the same value in the
-  dashboard's "Run token" field to use it from the browser.
+- `RUN_CONTROL_TOKEN` — required in production. Choose a shared secret and enter the same value in
+  the dashboard's "Run token" field before starting a run or scan. Without this value, mutating
+  run-control endpoints return a setup error instead of allowing publicly triggerable Anthropic API,
+  SerpAPI, or GitHub Actions usage.
+- `RUN_CONTROL_AUTH_OPTIONAL=false` — keep unset or false in public deployments. Set to `true` only
+  for deliberate local/private production testing where run-control endpoints may be open.
 
 Add these as GitHub Actions repository secrets:
 

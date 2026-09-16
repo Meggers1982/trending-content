@@ -15,8 +15,8 @@ export function readRunToken() {
  * runs, ad-hoc scans, tracked topics). Each panel used to render its own input
  * against the same storage key, so editing one left the others showing stale
  * text until a reload. This keeps every instance in sync, and hides the field
- * behind a disclosure because it is only relevant when the app is deployed with
- * RUN_CONTROL_TOKEN set.
+ * behind a disclosure because local development can run without it, while
+ * production deployments require RUN_CONTROL_TOKEN.
  */
 export default function RunTokenField() {
   const [runToken, setRunToken] = useState("");
@@ -47,8 +47,8 @@ export default function RunTokenField() {
         <span className={`badge ${runToken ? "good" : ""}`}>{runToken ? "saved" : "not set"}</span>
       </summary>
       <label>
-        Only needed when this app is deployed with <code>RUN_CONTROL_TOKEN</code> set. Stored in
-        this browser and shared across all three panels.
+        Required for production run/scan controls. Stored in this browser and shared across all
+        three panels.
         <input
           type="password"
           value={runToken}

@@ -15,9 +15,18 @@ function authHeaders() {
   };
 }
 
+async function readJson(response, fallbackMessage) {
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok) {
+    throw new Error(data.message || fallbackMessage);
+  }
+  return data;
+}
+
 export default function TrackedTopics() {
   const [tracked, setTracked] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [trackedError, setTrackedError] = useState("");
   const [message, setMessage] = useState("");
   const [newTopic, setNewTopic] = useState("");
   const [newProfile, setNewProfile] = useState("auto");
@@ -29,10 +38,17 @@ export default function TrackedTopics() {
   const [activeScanId, setActiveScanId] = useState(null);
 
   async function loadTracked() {
-    const response = await fetch("/api/tracked-topics", { cache: "no-store" });
-    const data = await response.json();
-    setTracked(data.tracked || []);
-    setLoading(false);
+    try {
+      const response = await fetch("/api/tracked-topics", { cache: "no-store" });
+      const data = await readJson(response, "Could not load tracked topics.");
+      setTracked(data.tracked || []);
+      setTrackedError(data.unavailable ? data.message || "Tracked topics are unavailable." : "");
+    } catch (error) {
+      setTracked([]);
+      setTrackedError(error.message || "Could not load tracked topics.");
+    } finally {
+      setLoading(false);
+    }
   }
 
   useEffect(() => {
@@ -45,20 +61,25 @@ export default function TrackedTopics() {
   useEffect(() => {
     if (!activeScanId) return undefined;
     const timer = setInterval(async () => {
-      const response = await fetch("/api/radar", { cache: "no-store" });
-      const data = await response.json();
-      const job = data.job;
-      if (job?.running) {
-        setStatusById((prev) => ({ ...prev, [activeScanId]: `Scanning… (${(job.logs || []).length} log lines)` }));
-        return;
+      try {
+        const response = await fetch("/api/radar", { cache: "no-store" });
+        const data = await readJson(response, "Could not read scan progress.");
+        const job = data.job;
+        if (job?.running) {
+          setStatusById((prev) => ({ ...prev, [activeScanId]: `Scanning… (${(job.logs || []).length} log lines)` }));
+          return;
+        }
+        setStatusById((prev) => ({
+          ...prev,
+          [activeScanId]: job?.exitCode === 0 ? "Scan complete." : (job?.friendlyError || "Scan finished with an error.")
+        }));
+        await loadHistory(activeScanId);
+        await loadTracked();
+      } catch (error) {
+        setStatusById((prev) => ({ ...prev, [activeScanId]: error.message || "Could not read scan progress." }));
+      } finally {
+        setActiveScanId(null);
       }
-      setStatusById((prev) => ({
-        ...prev,
-        [activeScanId]: job?.exitCode === 0 ? "Scan complete." : (job?.friendlyError || "Scan finished with an error.")
-      }));
-      await loadHistory(activeScanId);
-      await loadTracked();
-      setActiveScanId(null);
     }, 2000);
     return () => clearInterval(timer);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -67,38 +88,43 @@ export default function TrackedTopics() {
   async function addTracked(event) {
     event.preventDefault();
     setMessage("");
-    const response = await fetch("/api/tracked-topics", {
-      method: "POST",
-      headers: authHeaders(),
-      body: JSON.stringify({ topic: newTopic, profile: newProfile, geo: newGeo })
-    });
-    const data = await response.json();
-    if (!response.ok) {
-      setMessage(data.message || "Could not track this topic.");
-      return;
+    try {
+      const response = await fetch("/api/tracked-topics", {
+        method: "POST",
+        headers: authHeaders(),
+        body: JSON.stringify({ topic: newTopic, profile: newProfile, geo: newGeo })
+      });
+      await readJson(response, "Could not track this topic.");
+      setNewTopic("");
+      await loadTracked();
+    } catch (error) {
+      setMessage(error.message || "Could not track this topic.");
     }
-    setNewTopic("");
-    await loadTracked();
   }
 
   async function untrack(id) {
     setMessage("");
-    const response = await fetch(`/api/tracked-topics/${id}`, {
-      method: "DELETE",
-      headers: authHeaders()
-    });
-    const data = await response.json();
-    if (!response.ok) {
-      setMessage(data.message || "Could not untrack this topic.");
-      return;
+    try {
+      const response = await fetch(`/api/tracked-topics/${id}`, {
+        method: "DELETE",
+        headers: authHeaders()
+      });
+      await readJson(response, "Could not untrack this topic.");
+      await loadTracked();
+    } catch (error) {
+      setMessage(error.message || "Could not untrack this topic.");
     }
-    await loadTracked();
   }
 
   async function loadHistory(id) {
-    const response = await fetch(`/api/tracked-topics/${id}/history`, { cache: "no-store" });
-    const data = await response.json();
-    setHistoryById((prev) => ({ ...prev, [id]: data.scans || [] }));
+    try {
+      const response = await fetch(`/api/tracked-topics/${id}/history`, { cache: "no-store" });
+      const data = await readJson(response, "Could not load scan history.");
+      setHistoryById((prev) => ({ ...prev, [id]: data.scans || [] }));
+    } catch (error) {
+      setStatusById((prev) => ({ ...prev, [id]: error.message || "Could not load scan history." }));
+      setHistoryById((prev) => ({ ...prev, [id]: [] }));
+    }
   }
 
   async function toggleExpand(id) {
@@ -111,32 +137,32 @@ export default function TrackedTopics() {
   }
 
   async function viewResult(id, jsonPath, label) {
-    const response = await fetch(`/api/radar-artifact/${jsonPath}`, { cache: "no-store" });
-    if (!response.ok) {
-      setStatusById((prev) => ({ ...prev, [id]: "Result file not found." }));
-      return;
+    try {
+      const response = await fetch(`/api/radar-artifact/${jsonPath}`, { cache: "no-store" });
+      const data = await readJson(response, "Result file not found.");
+      setViewedById((prev) => ({ ...prev, [id]: { data, label } }));
+    } catch (error) {
+      setStatusById((prev) => ({ ...prev, [id]: error.message || "Result file not found." }));
     }
-    const data = await response.json();
-    setViewedById((prev) => ({ ...prev, [id]: { data, label } }));
   }
 
   async function scanNow(id) {
     setMessage("");
     setStatusById((prev) => ({ ...prev, [id]: "Starting scan…" }));
-    const response = await fetch(`/api/tracked-topics/${id}/scan`, {
-      method: "POST",
-      headers: authHeaders()
-    });
-    const data = await response.json();
-    if (!response.ok) {
-      setStatusById((prev) => ({ ...prev, [id]: data.message || "Could not start scan." }));
-      return;
+    try {
+      const response = await fetch(`/api/tracked-topics/${id}/scan`, {
+        method: "POST",
+        headers: authHeaders()
+      });
+      const data = await readJson(response, "Could not start scan.");
+      if (data.dispatched) {
+        setStatusById((prev) => ({ ...prev, [id]: data.message || "Scan triggered — check back shortly." }));
+        return;
+      }
+      setActiveScanId(id);
+    } catch (error) {
+      setStatusById((prev) => ({ ...prev, [id]: error.message || "Could not start scan." }));
     }
-    if (data.dispatched) {
-      setStatusById((prev) => ({ ...prev, [id]: data.message || "Scan triggered — check back shortly." }));
-      return;
-    }
-    setActiveScanId(id);
   }
 
   return (
@@ -165,9 +191,12 @@ export default function TrackedTopics() {
       />
 
       {message ? <p className="runMessage">{message}</p> : null}
+      {trackedError ? <p className="runMessage">{trackedError}</p> : null}
 
       {loading ? (
         <p>Loading tracked topics…</p>
+      ) : trackedError ? (
+        <p>Tracked topics will appear here after the database is configured.</p>
       ) : tracked.length ? (
         <div className="trackedTopicsList">
           {tracked.map((item) => (

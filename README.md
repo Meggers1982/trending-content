@@ -27,8 +27,22 @@ npm run pipeline
 The web app includes controls for starting a new report and refreshing the radar.
 Locally, those controls run Python directly. In Vercel, they trigger the GitHub Actions workflow in `.github/workflows/run-pipeline.yml`.
 
-If `RUN_CONTROL_TOKEN` is set in the environment, the run-trigger endpoint (`POST /api/run`) requires that
-token in the dashboard's "Run token" field. See `VERCEL_DEPLOY.md` for why this matters once deployed.
+In production, mutating run/scan endpoints require `RUN_CONTROL_TOKEN`. Enter that same value in
+the dashboard's "Run token" field before starting a run. See `VERCEL_DEPLOY.md` for deployment
+notes.
+
+## Quality Checks
+
+Before pushing application changes, run:
+
+```bash
+npm ci
+npm audit --audit-level=high
+npm run build
+python -m py_compile run_pipeline.py google_trend_radar.py run_tracked_topics.py
+```
+
+The same checks run in GitHub Actions via `.github/workflows/quality-gate.yml`.
 
 ## Reading a run
 

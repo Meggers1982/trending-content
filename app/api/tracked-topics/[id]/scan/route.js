@@ -3,7 +3,11 @@ import { checkRunToken } from "@/lib/auth";
 import { shouldUseGithubActions, triggerGithubWorkflow } from "@/lib/github-dispatch";
 import { radarJob } from "@/lib/job-state";
 import { spawnRadarScan } from "@/lib/spawn-radar-scan";
-import { getTrackedTopic } from "@/lib/tracked-topics";
+import {
+  TRACKED_TOPICS_UNAVAILABLE_MESSAGE,
+  getTrackedTopic,
+  isTrackedTopicsConfigured
+} from "@/lib/tracked-topics";
 
 export const dynamic = "force-dynamic";
 
@@ -12,6 +16,13 @@ const WORKFLOW_ID = "run-tracked-topics.yml";
 export async function POST(request, { params }) {
   const tokenError = checkRunToken(request);
   if (tokenError) return tokenError;
+
+  if (!isTrackedTopicsConfigured()) {
+    return NextResponse.json(
+      { ok: false, unavailable: true, message: TRACKED_TOPICS_UNAVAILABLE_MESSAGE },
+      { status: 503 }
+    );
+  }
 
   const { id } = await params;
   const topic = await getTrackedTopic(id);
