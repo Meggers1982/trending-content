@@ -3,6 +3,38 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-09-17'
+  niche: Health & Wellness
+  signals_reviewed: 153
+  topics_retained: 4
+  topics_rejected: 20
+  p1_count: 1
+  p2_count: 1
+  p3_count: 0
+  p4_count: 0
+  p5_count: 2
+  integrity_flags: 4
+  top_topic: Ebola outbreak spreading across DRC and Uganda
+  key_themes:
+  - Ebola outbreak spreading across DRC and Uganda
+  - New liquid biopsy method for early pancreatic cancer detection
+  - Intermittent fasting shows promise in slowing Huntington's disease progression
+  - Mayo Clinic pilots minibeam radiotherapy for difficult-to-treat cancers
+  tools_used:
+  - serpapi_news_search
+  - google_news
+  - google_trends
+  - serpapi_prefetch
+  tools_unavailable:
+  - reddit_api
+  - social_search
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-09-17.html
+  estimated_cost_usd: 0.6431
+  notes: High proportion of today's radar overlaps with last 3 days of coverage (recalls, AI-in-medicine,
+    mental health). Two candidates retained for editorial board (P1 Ebola, P2 liquid biopsy); two routed
+    to Monitor (P5 Huntington's/fasting, P5 Mayo minibeam) due to trend-strength floor (30-49 band) despite
+    strong opportunity scores. Site URL not configured — competitor-list fallback used for SERP-gap/duplicate
+    context.
 - run_date: '2026-09-16'
   niche: Health & Wellness
   signals_reviewed: 153

@@ -1,0 +1,270 @@
+{
+  "run_date": "2026-09-17",
+  "niche": "Health & Wellness",
+  "signal_summary": {
+    "total_reviewed": 153,
+    "total_retained": 4,
+    "total_rejected": 149,
+    "tools_active": [
+      "serpapi_news_search",
+      "google_news",
+      "google_trends",
+      "serpapi_prefetch"
+    ],
+    "tools_unavailable": [
+      "reddit_api",
+      "social_search"
+    ],
+    "notes": "High proportion of today's radar overlaps with last 3 days of coverage (recalls, AI-in-medicine, mental health). Two candidates retained for editorial board (P1 Ebola, P2 liquid biopsy); two routed to Monitor (P5 Huntington's/fasting, P5 Mayo minibeam) due to trend-strength floor (30-49 band) despite strong opportunity scores. Site URL not configured — competitor-list fallback used for SERP-gap/duplicate context."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Ebola outbreak spreading across DRC and Uganda",
+      "primary_entity": "Ebola virus disease outbreak (DRC/Uganda)",
+      "signal_type": "breaking_news",
+      "allowed_category": "infectious disease",
+      "trend_strength_score": 59,
+      "opportunity_score": 75,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda"
+      ],
+      "recommended_angle": "Explainer: what's actually happening in the DRC/Uganda Ebola outbreak, how it compares to past flare-ups, and what US travelers/public health readers should know",
+      "why_now": "ECDC issued an active outbreak communication 09/15; not previously covered, and outbreak status is evolving daily.",
+      "primary_headline": "Ebola Outbreak Spreads in DRC and Uganda: What to Know Right Now",
+      "next_steps": "Assign immediately; corroborate case counts against WHO Disease Outbreak News feed before publishing (single-source in this pull).",
+      "integrity_flags": [
+        "Single-source verification in this pull (ECDC only) — cross-check case/death counts against WHO Disease Outbreak News and CDC travel notices before publishing.",
+        "Avoid alarmist framing on US risk — historically, DRC/Uganda outbreaks have not resulted in significant spread outside the region; state containment measures accurately."
+      ],
+      "trend_score_reason": "ECDC outbreak notice issued 09-15; institutional primary source but limited news volume in 24h window",
+      "opportunity_score_reason": "Outbreak status actively evolving, strong consumer search intent (risk evaluation), no existing site coverage",
+      "discover_score_reason": "Timely news explainer filling gap between wire briefs and comprehensive coverage; high public interest expected",
+      "notes": "Confidence capped at Medium — only one institutional source (ECDC) captured in this run; verify against WHO/CDC before publishing.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "ECDC Ebola outbreak notice (DRC/Uganda), 09/15/2026, in Google News Radar"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "New liquid biopsy method for early pancreatic cancer detection",
+      "primary_entity": "Liquid biopsy — pancreatic ductal adenocarcinoma (PDAC)",
+      "signal_type": "study_or_research",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 50,
+      "opportunity_score": 75,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.nature.com/articles/s41591-026-04625-x"
+      ],
+      "recommended_angle": "What this new blood test could mean for catching one of the deadliest, hardest-to-detect cancers earlier",
+      "why_now": "Published in Nature Medicine 09/16 — one of the few concrete diagnostic advances on one of the lowest-survival cancers; no existing coverage found.",
+      "primary_headline": "A New Blood Test May Catch Pancreatic Cancer Earlier — Here's What the Science Actually Shows",
+      "next_steps": "Pull full study for cohort size/validation stage; pair with a gastroenterologist or oncologist quote per Skill 08 sourcing rules.",
+      "integrity_flags": [
+        "Single-study finding — needs replication caveat; avoid implying diagnostic-ready/FDA-cleared."
+      ],
+      "trend_score_reason": "Nature Medicine publication 09-16, moderate news pickup expected; single primary source limits trend visibility today",
+      "opportunity_score_reason": "High-stakes cancer topic with clear consumer SERP gap; durable research explainer with expert-quote potential",
+      "discover_score_reason": "DOI-backed peer-reviewed study on underserved cancer detection topic; strong AI-citation candidate",
+      "notes": "",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Nature article 'Liquid biopsy for early detection of pancreatic ductal adenocarcinoma', 09/16/2026, in Google News Radar"
+      }
+    },
+    {
+      "priority_level": "P5",
+      "publish_timing": "monitor",
+      "topic": "Intermittent fasting shows promise in slowing Huntington's disease progression",
+      "primary_entity": "Huntington's disease / intermittent fasting (OHSU)",
+      "signal_type": "study_or_research",
+      "allowed_category": "chronic disease management",
+      "trend_strength_score": 43,
+      "opportunity_score": 72,
+      "discover_score": 1,
+      "urgency": "this_week",
+      "confidence": "low",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [],
+      "recommended_angle": "n/a — monitor only",
+      "why_now": "Fresh (09/17) but single-source institutional coverage, narrow search demand; likely preclinical/animal-model finding.",
+      "primary_headline": "n/a",
+      "next_steps": "Recheck in 3 days for wider pickup/human-relevance clarification before scoring a full brief.",
+      "integrity_flags": [
+        "Passed 02b gate but failed trend-strength floor (30-49 band) — routed to Monitor per Skill 04 rule, not rejected outright.",
+        "Likely preclinical/animal-model finding — any future brief must explicitly qualify human relevance."
+      ],
+      "trend_score_reason": "Single institutional source, thin search/news volume; below floor threshold (30-49 band)",
+      "opportunity_score_reason": "Orphan disease with engaged audience; rare positive findings generate high reader interest",
+      "discover_score_reason": "Routed to Monitor — placeholder discover score pending wider corroboration",
+      "notes": "Tier-1 institutional source (OHSU) but constrained by limited news velocity. Recheck before advancing to editorial board.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "OHSU News article 'Intermittent fasting shows promise in slowing Huntington's disease progression', 09/17/2026, in Google News Radar"
+      }
+    },
+    {
+      "priority_level": "P5",
+      "publish_timing": "monitor",
+      "topic": "Mayo Clinic pilots minibeam radiotherapy for difficult-to-treat cancers",
+      "primary_entity": "Minibeam radiotherapy (Mayo Clinic)",
+      "signal_type": "clinical_trial",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 44,
+      "opportunity_score": 70,
+      "discover_score": 1,
+      "urgency": "this_week",
+      "confidence": "low",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [],
+      "recommended_angle": "n/a — monitor only",
+      "why_now": "Tier-1 institutional source, appropriately early-stage framing, but thin search/news volume today.",
+      "primary_headline": "n/a",
+      "next_steps": "Recheck for oncology trade-press pickup or patient-facing coverage before advancing.",
+      "integrity_flags": [
+        "Early-stage/first-in-patients study — avoid framing as an established treatment option."
+      ],
+      "trend_score_reason": "Single Mayo Clinic source, appropriately hedged ('first to study'); limited news volume, below trend floor (30-49 band)",
+      "opportunity_score_reason": "Cancer treatment innovation with Mayo credibility; strong potential if trade-press pickup amplifies signal",
+      "discover_score_reason": "Routed to Monitor — placeholder discover score pending wider corroboration",
+      "notes": "",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Mayo Clinic News Network article 'Mayo Clinic first to study minibeam radiotherapy in patients with difficult-to-treat cancers', 09/16/2026, in Google News Radar"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "FDA hand soap recall (Class II upgrade)",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Walmart Great Value blueberries E. coli",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Epinephrine injection recall",
+      "reason": "stale"
+    },
+    {
+      "topic": "AI-in-clinical-medicine cluster (WHO AI meeting, NYT Medicare AI, FDA phase-1 pilot)",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "CDC rabies exposure notice",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "WHO Mental health at work fact sheet",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Nature youth mental health diagnoses review",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Wellness darties",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Time — health benefits of reading a book",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Anti-seizure drug vs. childhood brain tumors",
+      "reason": "unverified_claim"
+    },
+    {
+      "topic": "FDA lead-leaching cookware warning",
+      "reason": "unverified_claim"
+    },
+    {
+      "topic": "Bausch + Lomb FDA warning (potential recall)",
+      "reason": "unverified_claim"
+    },
+    {
+      "topic": "Gender differences in active medical treatment study",
+      "reason": "unverified_claim"
+    },
+    {
+      "topic": "Multi4 Medical landmark clinical study",
+      "reason": "brand_safety"
+    },
+    {
+      "topic": "Clinical trial ops/diversity cluster",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Rural Health Transformation Program funding (Mississippi)",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Vermont hospital layoffs",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Congressional Medicare payment hearing",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Senate hearing on Trump health nominees",
+      "reason": "off_category"
+    },
+    {
+      "topic": "CB1 blockers weight loss study",
+      "reason": "weak_signal"
+    }
+  ],
+  "fact_check_summary": {
+    "accurate": 4
+  },
+  "run_cost": {
+    "total_usd": 0.6431,
+    "calls": [
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11207,
+        "output_tokens": 25438,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 42559,
+        "estimated_cost_usd": 0.5748
+      },
+      {
+        "model": "claude-haiku-4-5",
+        "input_tokens": 8645,
+        "output_tokens": 2095,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0191
+      },
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11097,
+        "output_tokens": 1058,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0492
+      }
+    ]
+  }
+}
