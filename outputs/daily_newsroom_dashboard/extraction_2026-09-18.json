@@ -1,0 +1,233 @@
+{
+  "run_date": "2026-09-18",
+  "niche": "health and wellness",
+  "signal_summary": {
+    "total_reviewed": 153,
+    "total_retained": 3,
+    "total_rejected": 148,
+    "tools_active": [
+      "serpapi_google_trends",
+      "serpapi_google_news",
+      "rss_config",
+      "trusted_sources",
+      "competitor_list"
+    ],
+    "tools_unavailable": [
+      "content_database",
+      "arxiv_search",
+      "youtube_api",
+      "google_sheets"
+    ],
+    "notes": "Google Trends 'Trending Now' surfaced one breakout (Porsha Williams) — rejected as celebrity/off-category. No trend candidate cleared thresholds purely on search_velocity this run; the 3 retained candidates clear on source_credibility + opportunity_score (thin SERP coverage), consistent with a slower health news cycle. Recurring themes flagged per run-history check: FDA/consumer recalls (4th consecutive appearance), mental-health-at-work signals, 'AI in clinical medicine' — all judged stale for new briefs today absent a materially new development."
+  },
+  "candidates": [
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Washington Post investigation: many FDA-ordered post-market drug and device studies never completed",
+      "primary_entity": "FDA post-market study requirements",
+      "signal_type": "policy_or_regulatory_change",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 54,
+      "opportunity_score": 78,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "low",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.washingtonpost.com/health/2026/09/17/fda-ordered-studies-many-drugs-devices-market-are-not-done/"
+      ],
+      "recommended_angle": "Explainer: 'Why does the FDA let some drugs and devices stay on the market without finishing the safety studies it required?' — translate the WaPo investigation into a consumer-facing accountability piece with a checklist of how to look up a drug's post-market study status.",
+      "why_now": "WaPo's 9/17 investigation surfaces a structural FDA oversight gap with direct patient-safety relevance; no competitor has run a consumer-facing explainer version yet — clear SERP gap.",
+      "primary_headline": "The FDA Required These Safety Studies. Years Later, Many Still Aren't Done.",
+      "next_steps": "Corroborate via a second outlet or FDA's own openFDA post-market requirement database before publishing; identify 1–2 named drugs/devices from the WaPo piece to anchor the explainer.",
+      "integrity_flags": [
+        "Single-source (WaPo) story — confidence capped low until corroborated."
+      ],
+      "trend_score_reason": "Single tier-1 source (WaPo); moderate search velocity; structural policy finding with narrow prior coverage.",
+      "opportunity_score_reason": "Thin consumer-facing SERP coverage of post-market study accountability angle; high editorial gap vs. existing pieces.",
+      "discover_score_reason": "Tier-1 source, policy relevance, patient-safety angle; moderate trend velocity does not justify higher discover.",
+      "notes": "High opportunity given thin consumer-facing SERP coverage of this specific angle.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Washington Post headline 'FDA-ordered studies of many drugs, devices on the market are not done' (09/17/2026) in Google News Radar"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Federal research funding cuts leave aging Alzheimer's study participants without results",
+      "primary_entity": "Alzheimer's disease research funding",
+      "signal_type": "policy_or_regulatory_change",
+      "allowed_category": "aging and longevity",
+      "trend_strength_score": 52,
+      "opportunity_score": 68,
+      "discover_score": 3,
+      "urgency": "today",
+      "confidence": "low",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.theguardian.com/us-news/2026/sep/17/trump-cuts-alzheimers-disease-study"
+      ],
+      "recommended_angle": "Patient-impact framing (not partisan): what happens to a long-running Alzheimer's study — and its aging participants — when the funding that analyzes results disappears mid-study. Ground in research-continuity/patient-access terms, not political critique.",
+      "why_now": "Guardian's 9/17 report ties an active funding disruption to real patients awaiting individual study results — a concrete, ongoing harm distinct from generic policy debate.",
+      "primary_headline": "These Seniors Volunteered for an Alzheimer's Study. They May Never Learn the Results.",
+      "next_steps": "Seek a second, non-Guardian source or the study's own institutional statement to raise confidence before publishing; confirm study name/sponsor.",
+      "integrity_flags": [
+        "Single tier-2 source (Guardian); frame carefully to stay inside allowed categories (aging/longevity + patient access) and out of excluded 'pure political healthcare opinion.'"
+      ],
+      "trend_score_reason": "Tier-2 source (Guardian), policy/funding disruption angle; moderate search velocity; aging/longevity topical fit.",
+      "opportunity_score_reason": "Patient-impact framing offers clear SERP gap vs. generic policy coverage; human-interest angle under-served in health news.",
+      "discover_score_reason": "Guardian tier-2 source, aging audience relevance, patient-access angle; lower than P2/WaPo due to source tier.",
+      "notes": "Single source confidence rating; verify study details before publishing.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Guardian headline 'Hundreds of ageing Americans may not get results of Alzheimer's study due to Trump cuts' (09/17/2026) in Google News Radar"
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "UT Southwestern identifies metabolite that fuels aggressive brain tumor growth",
+      "primary_entity": "UT Southwestern brain tumor metabolite discovery",
+      "signal_type": "medical_study",
+      "allowed_category": "medical research and breakthroughs",
+      "trend_strength_score": 50,
+      "opportunity_score": 62,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "low",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.utsouthwestern.edu/newsroom/articles/year-2026/sept-aggressive-brain-tumor-growth.html"
+      ],
+      "recommended_angle": "Explain what the metabolite does in plain-language terms and what it could mean for future glioblastoma treatment — clearly framed as early-stage discovery science, not a near-term treatment.",
+      "why_now": "UT Southwestern's 9/16 press release on preclinical metabolite discovery offers SEO opportunity for 'brain tumor metabolite' queries with minimal competitor coverage.",
+      "primary_headline": "Scientists Discover a Key Metabolite Fueling Aggressive Brain Tumor Growth",
+      "next_steps": "Confirm named journal/DOI before publishing; contact institutional press office or study lead; clarify this is preclinical/discovery-stage, not a treatment breakthrough; seek neuro-oncologist or cancer metabolism researcher for expert framing.",
+      "integrity_flags": [
+        "Single-institution press release; confirm named journal/DOI before publishing and clarify this is preclinical/discovery-stage, not a treatment breakthrough."
+      ],
+      "trend_score_reason": "Single institutional press release; discovery-stage science with limited search velocity; solid long-tail SEO opportunity.",
+      "opportunity_score_reason": "Explainer format fills SERP gap for 'brain tumor metabolite' queries; institutional credibility supports scheduled placement.",
+      "discover_score_reason": "Institutional press release, neuro-oncology audience fit, discovery-stage framing; moderate discover due to single source and preclinical stage.",
+      "notes": "Estimated 600-800 words; neuro-oncologist or cancer metabolism researcher expert recommended; discovery-stage finding, not a treatment — do not overstate clinical relevance.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "UT Southwestern newsroom headline 'Scientists discover metabolite fueling aggressive brain tumor growth' (09/16/2026) in Google News Radar"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "Porsha Williams emergency hysterectomy",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Bakari the gorilla's wellness checkup",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Wellness Darties (Gen Z alcohol-free gatherings)",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "WHO Mental health at work",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Nature youth mental health diagnoses review",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Mayo Clinic minibeam radiotherapy",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Intermittent fasting and Huntington's disease",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "FDA hand soap recall Class II escalation",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Walmart Great Value blueberries expanded states",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "So Delicious ice cream recall foreign material",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "FDA lead-leaching cookware warning",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Medicare provider payment and cybersecurity hearing",
+      "reason": "off_category"
+    },
+    {
+      "topic": "NYC Health+Hospitals and Maimonides merger",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Allina doctors strike over AI diagnoses",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Local and university wellness program PR items",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Clinical trial operations trade press (Kaiser, Advocate, FIU)",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "HIV injections outperform tablets for young people",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Anti-seizure drug fights childhood brain tumors",
+      "reason": "weak_signal"
+    }
+  ],
+  "fact_check_summary": {
+    "accurate": 3
+  },
+  "run_cost": {
+    "total_usd": 0.6123,
+    "calls": [
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11693,
+        "output_tokens": 23379,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 42559,
+        "estimated_cost_usd": 0.5454
+      },
+      {
+        "model": "claude-haiku-4-5",
+        "input_tokens": 7476,
+        "output_tokens": 2033,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0176
+      },
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11400,
+        "output_tokens": 1009,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0493
+      }
+    ]
+  }
+}
