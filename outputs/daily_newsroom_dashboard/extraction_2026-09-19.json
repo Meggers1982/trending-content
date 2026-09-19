@@ -1,0 +1,154 @@
+{
+  "run_date": "2026-09-19",
+  "niche": "Health & Wellness",
+  "signal_summary": {
+    "total_reviewed": 144,
+    "total_retained": 1,
+    "total_rejected": 143,
+    "tools_active": [
+      "serpapi",
+      "google_trends",
+      "google_news"
+    ],
+    "tools_unavailable": [
+      "reddit",
+      "x_twitter_social_search",
+      "rss_direct_fetch"
+    ],
+    "notes": "Thin day for genuinely new, well-corroborated, non-duplicate health news. Most of the 144-headline radar was either policy/business news (excluded), lifestyle wellness fluff (excluded), or duplicates of stories already covered in the last 5 days (recalls, outbreaks, AI-in-medicine cluster, Alzheimer's funding cuts). Two notable single-source stories (Stanford 'two brains' study, New Scientist wellness-skepticism piece) failed the trend_strength threshold purely on corroboration — both flagged to Monitor and deferred for recheck tomorrow rather than padding the board."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "FDA hand soap recall reclassified as Class II, scope confirmed at 16 states",
+      "primary_entity": "Intercon Chemical Co. hand soap recall (Ingles/Laura Lynn brands)",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 74,
+      "opportunity_score": 77,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "update",
+      "source_count": 9,
+      "source_urls": [
+        "https://www.fda.gov",
+        "https://www.dallasnews.com/news/public-health/article/hand-soap-recall-texas-designated-class-ii-fda-22436809.php",
+        "https://www.nbcnews.com/select/shopping/intercon-hand-soap-recall-2026-rcna598380"
+      ],
+      "recommended_angle": "Most coverage repeats 'recalled in 15 states' without explaining FDA risk classifications — lead with what Class II actually signals (vs. Class I) so readers can calibrate real risk, not just panic.",
+      "why_now": "FDA formally classified the recall as Class II (Dallas News, 9/18) and state count was corrected upward to 16 (NBC Chicago) — both are new developments since this recall was first reported 9/16 as an unclassified action.",
+      "primary_headline": "FDA Downgrades Hand Soap Recall to Class II — Here's What That Actually Means",
+      "next_steps": "Confirm exact state count via FDA.gov before publish; assign writer today given 'immediate' timing.",
+      "integrity_flags": [
+        "⚠️ Integrity note: State count varies by outlet (15 vs. 16) — confirm against FDA.gov enforcement report before publishing final figure."
+      ],
+      "trend_score_reason": "8+ independent outlets + FDA.gov confirmation; tier-1 source credibility drives the score despite moderate raw search velocity",
+      "opportunity_score_reason": "High audience relevance (actionable safety info), thin explainer coverage of what 'Class II' actually means for consumers",
+      "discover_score_reason": "Named brands + specific FDA risk classification map cleanly to 'is my soap recalled' / 'what does Class II mean' queries",
+      "notes": "Verify exact state count and classification date directly against FDA.gov before publishing",
+      "fact_check": {
+        "verdict": "significant_issues",
+        "issues": [
+          "The topic claims the state count was 'confirmed at 16 states,' but the Dallas News article (9/18) cited as the source for the Class II designation itself states 15 states (Texas + 14 others), not 16 — the two claimed sources contradict each other, so 'confirmed' overstates resolution of the discrepancy rather than resolving it."
+        ],
+        "checked_against": "Dallas News (9/18, 'Texas, 14 other states') vs NBC Chicago (9/16, '16 states, including Illinois') in Google News Radar"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "Egg recall '19 million eggs' Class I",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Sprouts E. coli/Salmonella outbreak",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "WHO 'mental health at work' fact sheet",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Ebola DRC/Uganda, Measles PA, Fiji HIV, Cyclospora",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Mayo minibeam radiotherapy, UT Southwestern metabolite, OHSU fasting/Huntington's, Alzheimer's funding cuts",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Kim Kardashian esophagitis diagnosis",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Mitch McConnell health",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Medicare payment/cybersecurity hearing, rural health grants, hospital M&A, cyberattack lawsuit",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Yale insurance premiums study, KFF affordability snapshot",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Gen Z 'wellness darties,' wellness fairs/clubs, beauty-wellness spending",
+      "reason": "off_category"
+    },
+    {
+      "topic": "UCI 'clinical trial cures hypertension'",
+      "reason": "unverified_claim"
+    },
+    {
+      "topic": "FDA phase-1 trial pilot (Fierce Biotech)",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "So Delicious ice cream recall",
+      "reason": "unverified_claim"
+    },
+    {
+      "topic": "EatingWell cookware lead warning",
+      "reason": "unverified_claim"
+    },
+    {
+      "topic": "HIV injectable PrEP trial",
+      "reason": "unverified_claim"
+    }
+  ],
+  "fact_check_summary": {
+    "significant_issues": 1
+  },
+  "run_cost": {
+    "total_usd": 0.6715,
+    "calls": [
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11471,
+        "output_tokens": 27692,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 42559,
+        "estimated_cost_usd": 0.6094
+      },
+      {
+        "model": "claude-haiku-4-5",
+        "input_tokens": 7438,
+        "output_tokens": 1112,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.013
+      },
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 10512,
+        "output_tokens": 1173,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0491
+      }
+    ]
+  }
+}

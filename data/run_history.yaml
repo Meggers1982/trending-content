@@ -3,6 +3,36 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-09-19'
+  niche: Health & Wellness
+  signals_reviewed: 144
+  topics_retained: 1
+  topics_rejected: 15
+  p1_count: 1
+  p2_count: 0
+  p3_count: 0
+  p4_count: 0
+  p5_count: 0
+  integrity_flags: 1
+  top_topic: FDA hand soap recall reclassified as Class II, scope confirmed at 16 states
+  key_themes:
+  - FDA hand soap recall reclassified as Class II, scope confirmed at 16 states
+  tools_used:
+  - serpapi
+  - google_trends
+  - google_news
+  tools_unavailable:
+  - reddit
+  - x_twitter_social_search
+  - rss_direct_fetch
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-09-19.html
+  estimated_cost_usd: 0.6715
+  notes: Thin day for genuinely new, well-corroborated, non-duplicate health news. Most of the 144-headline
+    radar was either policy/business news (excluded), lifestyle wellness fluff (excluded), or duplicates
+    of stories already covered in the last 5 days (recalls, outbreaks, AI-in-medicine cluster, Alzheimer's
+    funding cuts). Two notable single-source stories (Stanford 'two brains' study, New Scientist wellness-skepticism
+    piece) failed the trend_strength threshold purely on corroboration — both flagged to Monitor and deferred
+    for recheck tomorrow rather than padding the board.
 - run_date: '2026-09-18'
   niche: health and wellness
   signals_reviewed: 153
