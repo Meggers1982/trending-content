@@ -3,6 +3,34 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-09-20'
+  niche: Health & Wellness
+  signals_reviewed: 153
+  topics_retained: 3
+  topics_rejected: 25
+  p1_count: 1
+  p2_count: 1
+  p3_count: 1
+  p4_count: 0
+  p5_count: 0
+  integrity_flags: 2
+  top_topic: FDA upgrades 19-million-egg Salmonella recall to Class I (highest risk)
+  key_themes:
+  - FDA upgrades 19-million-egg Salmonella recall to Class I (highest risk)
+  - Stanford Medicine study finds the human brain functions as two separate organs
+  - FDA holds public meeting on testosterone use in menopausal women
+  tools_used:
+  - google_news
+  - google_trends
+  - serpapi
+  tools_unavailable: []
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-09-20.html
+  estimated_cost_usd: 0.6148
+  notes: 'Google News Radar dominated by three low-value clusters today (health policy hearings, hospital
+    business news, wellness lifestyle/real-estate) accounting for the bulk of off-category rejections.
+    Genuine new signal was thin: only 3 candidates cleared both thresholds. Recall/food-safety stories
+    have now appeared in every run for 7 consecutive days — recommend evaluating a weekly recall-roundup
+    format vs. daily one-off coverage.'
 - run_date: '2026-09-19'
   niche: Health & Wellness
   signals_reviewed: 144
