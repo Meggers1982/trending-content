@@ -1,0 +1,1167 @@
+{
+  "run_date": "2026-09-21",
+  "generated_at": "2026-09-21T18:54:54",
+  "topic": "fitness",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "fitness",
+    "strength training",
+    "cardio",
+    "HIIT workout",
+    "resistance training",
+    "mobility training",
+    "workout recovery",
+    "home workout",
+    "running",
+    "weightlifting",
+    "VO2 max",
+    "fitness trends",
+    "fitness products",
+    "fitness news",
+    "fitness for beginners",
+    "fitness routine",
+    "fitness benefits",
+    "fitness ideas",
+    "fitness reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 19,
+    "total_reviewed": 80,
+    "total_retained": 3,
+    "total_rejected": 77,
+    "breakouts": 3,
+    "emerging": 0,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "topic": "dallas cowboys roster moves running back",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 66,
+      "emergence_score": 82,
+      "velocity_score": 39,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 26,
+      "slope": 0,
+      "acceleration": -5,
+      "seed_terms": [
+        "running"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        10,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        24,
+        26,
+        23,
+        15,
+        22,
+        16,
+        18,
+        18,
+        18,
+        17,
+        15,
+        16,
+        11,
+        9,
+        10,
+        7,
+        7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        26,
+        18,
+        24,
+        10,
+        12,
+        0,
+        7,
+        0,
+        6,
+        7,
+        4,
+        5,
+        0,
+        9,
+        0,
+        0,
+        0,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 2,
+      "topic": "best running shoes 2025",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 65,
+      "emergence_score": 79,
+      "velocity_score": 42,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 87,
+      "confidence": "high",
+      "rising_label": "Breakout",
+      "latest_interest": 3,
+      "peak_interest": 93,
+      "slope": 1,
+      "acceleration": 3,
+      "seed_terms": [
+        "resistance training"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        2,
+        2,
+        2,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        9,
+        22,
+        47,
+        49,
+        13,
+        8,
+        0,
+        4,
+        3,
+        3,
+        1,
+        0,
+        0,
+        1,
+        2,
+        3,
+        5,
+        5,
+        5,
+        6,
+        7,
+        9,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        7,
+        5,
+        5,
+        3,
+        3,
+        1,
+        1,
+        2,
+        2,
+        1,
+        3,
+        4,
+        5,
+        6,
+        4,
+        4,
+        5,
+        15,
+        24,
+        46,
+        71,
+        72,
+        80,
+        69,
+        43,
+        20,
+        9,
+        9,
+        11,
+        9,
+        10,
+        7,
+        7,
+        8,
+        11,
+        13,
+        8,
+        3,
+        3,
+        2,
+        3,
+        4,
+        8,
+        16,
+        35,
+        81,
+        87,
+        93,
+        40,
+        8,
+        3,
+        12,
+        4,
+        1,
+        1,
+        0,
+        0,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        6,
+        10,
+        0,
+        0,
+        18,
+        29,
+        35,
+        38,
+        22,
+        15,
+        18,
+        24,
+        10,
+        10,
+        15,
+        0,
+        6,
+        8,
+        5,
+        11,
+        10,
+        11,
+        11,
+        16,
+        30,
+        46,
+        12,
+        14,
+        22,
+        0,
+        0,
+        19,
+        19,
+        0,
+        0,
+        7,
+        18,
+        7,
+        7,
+        6,
+        16,
+        5,
+        0,
+        4,
+        8,
+        9,
+        5,
+        11,
+        23,
+        13,
+        18,
+        29,
+        46,
+        31,
+        0,
+        0,
+        0,
+        12,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; interest moved from 2 to 3; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 3,
+      "topic": "bruno mars longest running number one",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 65,
+      "emergence_score": 81,
+      "velocity_score": 38,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 47,
+      "slope": 0,
+      "acceleration": -6,
+      "seed_terms": [
+        "running"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        7,
+        0,
+        20,
+        28,
+        36,
+        40,
+        41,
+        32,
+        25,
+        22,
+        30,
+        26,
+        29,
+        0,
+        0,
+        40,
+        44,
+        42,
+        30,
+        25,
+        17,
+        11,
+        8,
+        13,
+        7,
+        0,
+        0,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        47,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "digital marketing course",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness"
+      ]
+    },
+    {
+      "topic": "travel insurance comparison",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness"
+      ]
+    },
+    {
+      "topic": "cloud storage pricing",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness"
+      ]
+    },
+    {
+      "topic": "python tutorial",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness"
+      ]
+    },
+    {
+      "topic": "web hosting comparison",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness"
+      ]
+    },
+    {
+      "topic": "learn golang",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness"
+      ]
+    },
+    {
+      "topic": "top tourist attractions in paris",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "strength training"
+      ]
+    },
+    {
+      "topic": "best laptop for work",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "strength training"
+      ]
+    },
+    {
+      "topic": "project management tools",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "strength training"
+      ]
+    },
+    {
+      "topic": "how to reduce ping",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "strength training"
+      ]
+    },
+    {
+      "topic": "how to use google wallet",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "strength training"
+      ]
+    },
+    {
+      "topic": "how to bake a cake",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "resistance training"
+      ]
+    },
+    {
+      "topic": "customer acquisition",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "resistance training"
+      ]
+    },
+    {
+      "topic": "iphone 12 pro to buy",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "resistance training"
+      ]
+    },
+    {
+      "topic": "best portable monitors",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "resistance training"
+      ]
+    },
+    {
+      "topic": "cheapest flights to tokyo",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "resistance training"
+      ]
+    },
+    {
+      "topic": "data science projects",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "resistance training"
+      ]
+    },
+    {
+      "topic": "best cities to live in usa",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "resistance training"
+      ]
+    },
+    {
+      "topic": "how to take care of orchids",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "resistance training"
+      ]
+    },
+    {
+      "topic": "disaster recovery planning",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "resistance training"
+      ]
+    },
+    {
+      "topic": "how to organize kitchen pantry",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "resistance training"
+      ]
+    },
+    {
+      "topic": "best dog parks near me",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "resistance training"
+      ]
+    },
+    {
+      "topic": "what is a soft fork",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "resistance training"
+      ]
+    },
+    {
+      "topic": "best places to see cherry blossoms",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "resistance training"
+      ]
+    },
+    {
+      "topic": "best photo collage apps",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "resistance training"
+      ]
+    },
+    {
+      "topic": "best places to study near me",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "resistance training"
+      ]
+    },
+    {
+      "topic": "how to set up google voice",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "resistance training"
+      ]
+    },
+    {
+      "topic": "best guitar tuners",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "resistance training"
+      ]
+    },
+    {
+      "topic": "how to start a podcast on spotify",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "resistance training"
+      ]
+    },
+    {
+      "topic": "general tso chicken near me",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "resistance training"
+      ]
+    },
+    {
+      "topic": "how to check bandwidth usage",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "resistance training"
+      ]
+    },
+    {
+      "topic": "motivation calendar",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "home workout"
+      ]
+    },
+    {
+      "topic": "sustainability education",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "home workout"
+      ]
+    },
+    {
+      "topic": "fashion shopping",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "home workout"
+      ]
+    },
+    {
+      "topic": "holiday motivation",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "home workout"
+      ]
+    },
+    {
+      "topic": "art tea",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "home workout"
+      ]
+    },
+    {
+      "topic": "money gift",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "home workout"
+      ]
+    },
+    {
+      "topic": "reese's pieces commercial",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "home workout"
+      ]
+    },
+    {
+      "topic": "social commerce",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness trends"
+      ]
+    },
+    {
+      "topic": "k-pop trending",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness trends"
+      ]
+    },
+    {
+      "topic": "ai agents",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness trends"
+      ]
+    },
+    {
+      "topic": "ai image enhancer",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness trends"
+      ]
+    },
+    {
+      "topic": "minimalist lifestyle trend",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness trends"
+      ]
+    },
+    {
+      "topic": "best productivity apps 2025",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness trends"
+      ]
+    },
+    {
+      "topic": "healthy cooking tools",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness trends"
+      ]
+    },
+    {
+      "topic": "streaming shows trending",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness trends"
+      ]
+    },
+    {
+      "topic": "chocolate",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness products"
+      ]
+    },
+    {
+      "topic": "eco friendly cleaning products",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness products"
+      ]
+    },
+    {
+      "topic": "travel destinations",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness products"
+      ]
+    },
+    {
+      "topic": "salad",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness products"
+      ]
+    },
+    {
+      "topic": "garden meditation",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness news"
+      ]
+    },
+    {
+      "topic": "education apple",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness news"
+      ]
+    },
+    {
+      "topic": "sketch tea",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness news"
+      ]
+    },
+    {
+      "topic": "music hobby",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness news"
+      ]
+    },
+    {
+      "topic": "mountain game",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness news"
+      ]
+    },
+    {
+      "topic": "art interview",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness news"
+      ]
+    },
+    {
+      "topic": "car banana",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness news"
+      ]
+    },
+    {
+      "topic": "study finance",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness news"
+      ]
+    },
+    {
+      "topic": "wifi map",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness news"
+      ]
+    },
+    {
+      "topic": "banana sketch",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness news"
+      ]
+    },
+    {
+      "topic": "style market",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness news"
+      ]
+    },
+    {
+      "topic": "photo focus",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness news"
+      ]
+    },
+    {
+      "topic": "movie focus",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness news"
+      ]
+    },
+    {
+      "topic": "python code",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness news"
+      ]
+    },
+    {
+      "topic": "code banana",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness news"
+      ]
+    },
+    {
+      "topic": "holiday breakfast",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness news"
+      ]
+    },
+    {
+      "topic": "sports project",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness news"
+      ]
+    },
+    {
+      "topic": "math quiz",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness news"
+      ]
+    },
+    {
+      "topic": "camping craft",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness news"
+      ]
+    },
+    {
+      "topic": "family peace",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness news"
+      ]
+    },
+    {
+      "topic": "fashion design",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness news"
+      ]
+    },
+    {
+      "topic": "best ukulele for beginners",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness for beginners"
+      ]
+    },
+    {
+      "topic": "learn python for beginners",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness for beginners"
+      ]
+    },
+    {
+      "topic": "crochet patterns for beginners",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitness for beginners"
+      ]
+    },
+    {
+      "topic": "female marines combat fitness test",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "vo2 max percentiles by age",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "michael phelps vo2 max",
+      "reason": "Weak radar score (44)"
+    }
+  ]
+}
