@@ -1,0 +1,986 @@
+{
+  "run_date": "2026-09-21",
+  "generated_at": "2026-09-21T18:36:12",
+  "topic": "beauty",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "beauty",
+    "skincare",
+    "makeup",
+    "haircare",
+    "fragrance",
+    "clean beauty",
+    "retinol",
+    "niacinamide",
+    "peptides",
+    "hyaluronic acid",
+    "skin barrier",
+    "skin cycling",
+    "glass skin",
+    "slugging",
+    "scalp care",
+    "SPF",
+    "sunscreen",
+    "K-beauty",
+    "hair loss",
+    "acne treatment",
+    "nail care",
+    "beauty trends",
+    "beauty products",
+    "beauty news",
+    "ladera ranch cancer",
+    "amanda bynes"
+  ],
+  "trending_now_terms_used": [
+    "ladera ranch cancer",
+    "amanda bynes"
+  ],
+  "trending_now_context": [
+    {
+      "query": "ladera ranch cancer",
+      "headline": "A string of rare childhood cancer cases in this California suburb has the community on edge",
+      "source": "CNN",
+      "link": "https://www.cnn.com/2026/09/20/us/california-ladera-ranch-childhood-cancer"
+    },
+    {
+      "query": "amanda bynes",
+      "headline": "Amanda Bynes Shows Off Leg Tattoos in Tiny Leather Shorts Amid Ozempic Weight-Loss Journey",
+      "source": "Yahoo Lifestyle Canada",
+      "link": "https://ca.style.yahoo.com/amanda-bynes-shows-off-leg-165707467.html"
+    }
+  ],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 26,
+    "total_reviewed": 80,
+    "total_retained": 2,
+    "total_rejected": 80,
+    "breakouts": 2,
+    "emerging": 0,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "topic": "le labo holiday fragrance drop",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 66,
+      "emergence_score": 82,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 18,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "fragrance"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        3,
+        4,
+        5,
+        3,
+        3,
+        2,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        8,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        18,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 2,
+      "topic": "how to clean a hairbrush",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 65,
+      "emergence_score": 79,
+      "velocity_score": 42,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 87,
+      "confidence": "high",
+      "rising_label": "Breakout",
+      "latest_interest": 2,
+      "peak_interest": 100,
+      "slope": 0,
+      "acceleration": 5,
+      "seed_terms": [
+        "clean beauty"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        2,
+        3,
+        2,
+        2,
+        3,
+        4,
+        6,
+        9,
+        10,
+        9,
+        28,
+        51,
+        45,
+        14,
+        6,
+        5,
+        3,
+        4,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        3,
+        4,
+        4,
+        4,
+        5,
+        6,
+        9,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        5,
+        7,
+        3,
+        3,
+        1,
+        2,
+        1,
+        2,
+        2,
+        2,
+        4,
+        5,
+        6,
+        5,
+        5,
+        6,
+        11,
+        21,
+        46,
+        69,
+        72,
+        75,
+        62,
+        37,
+        19,
+        10,
+        10,
+        10,
+        9,
+        8,
+        7,
+        6,
+        9,
+        10,
+        12,
+        8,
+        4,
+        3,
+        2,
+        3,
+        4,
+        6,
+        14,
+        35,
+        76,
+        100,
+        97,
+        36,
+        11,
+        5,
+        10,
+        2,
+        2,
+        2,
+        0,
+        0,
+        2,
+        2,
+        2,
+        1,
+        3,
+        2,
+        3,
+        4,
+        10,
+        0,
+        4,
+        24,
+        40,
+        31,
+        30,
+        22,
+        18,
+        14,
+        20,
+        13,
+        8,
+        18,
+        3,
+        5,
+        6,
+        12,
+        10,
+        10,
+        11,
+        12,
+        15,
+        23,
+        47,
+        14,
+        12,
+        14,
+        23,
+        14,
+        24,
+        14,
+        11,
+        12,
+        11,
+        16,
+        10,
+        7,
+        7,
+        17,
+        6,
+        5,
+        6,
+        9,
+        11,
+        9,
+        15,
+        20,
+        15,
+        14,
+        16,
+        40,
+        34,
+        0,
+        0,
+        10,
+        18,
+        7,
+        0,
+        2,
+        0,
+        0,
+        2
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; interest moved from 2 to 2; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing.",
+      "similar": [
+        {
+          "topic": "how to remove gum from hair",
+          "trend_stage": "emerging",
+          "radar_score": 65,
+          "why_now": "Google Trends labels it +3150%; interest moved from 1 to 0; found through rising query"
+        }
+      ]
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "glass skin",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "scalp care",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "SPF",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "how to clean keyboard keys",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "clean beauty"
+      ]
+    },
+    {
+      "topic": "how to clean a yoga mat",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "clean beauty"
+      ]
+    },
+    {
+      "topic": "how to clean a keyboard",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "clean beauty"
+      ]
+    },
+    {
+      "topic": "how to clean a dishwasher",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "clean beauty"
+      ]
+    },
+    {
+      "topic": "how to clean oven naturally",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "clean beauty"
+      ]
+    },
+    {
+      "topic": "how to clean a cast iron skillet",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "clean beauty"
+      ]
+    },
+    {
+      "topic": "how to clean cast iron with salt",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "clean beauty"
+      ]
+    },
+    {
+      "topic": "how to clean a cutting board",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "clean beauty"
+      ]
+    },
+    {
+      "topic": "how to clean dishwasher filter",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "clean beauty"
+      ]
+    },
+    {
+      "topic": "how to clean a shower curtain",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "clean beauty"
+      ]
+    },
+    {
+      "topic": "how to clean stainless steel appliances",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "clean beauty"
+      ]
+    },
+    {
+      "topic": "how to clean laptop fan",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "clean beauty"
+      ]
+    },
+    {
+      "topic": "how to clean a sink drain",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "clean beauty"
+      ]
+    },
+    {
+      "topic": "how to clean baseboard heaters",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "clean beauty"
+      ]
+    },
+    {
+      "topic": "best way to clean windows",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "clean beauty"
+      ]
+    },
+    {
+      "topic": "how to clean grout lines",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "clean beauty"
+      ]
+    },
+    {
+      "topic": "how to clean silver jewelry",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "clean beauty"
+      ]
+    },
+    {
+      "topic": "how to clean a microwave",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "clean beauty"
+      ]
+    },
+    {
+      "topic": "how to clean shower mold",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "clean beauty"
+      ]
+    },
+    {
+      "topic": "how to clean tea kettle",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "clean beauty"
+      ]
+    },
+    {
+      "topic": "how to clean burnt pan",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "clean beauty"
+      ]
+    },
+    {
+      "topic": "best indoor cycling apps",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skin cycling"
+      ]
+    },
+    {
+      "topic": "restaurants",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skin cycling"
+      ]
+    },
+    {
+      "topic": "jobs",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skin cycling"
+      ]
+    },
+    {
+      "topic": "concerts",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skin cycling"
+      ]
+    },
+    {
+      "topic": "non-toxic air fryer",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "beauty trends"
+      ]
+    },
+    {
+      "topic": "tech gadgets 2025",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "beauty trends"
+      ]
+    },
+    {
+      "topic": "wide awake",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "beauty products"
+      ]
+    },
+    {
+      "topic": "eco friendly cleaning products",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "beauty products"
+      ]
+    },
+    {
+      "topic": "evolve uk",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "beauty products"
+      ]
+    },
+    {
+      "topic": "projectors",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "beauty products"
+      ]
+    },
+    {
+      "topic": "vitamins",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "beauty news"
+      ]
+    },
+    {
+      "topic": "top songs this week",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "beauty news"
+      ]
+    },
+    {
+      "topic": "upcoming events",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "beauty news"
+      ]
+    },
+    {
+      "topic": "qvc",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "beauty news"
+      ]
+    },
+    {
+      "topic": "permanent daylight savings time",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "ladera ranch cancer"
+      ]
+    },
+    {
+      "topic": "carnival cruise line",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "ladera ranch cancer"
+      ]
+    },
+    {
+      "topic": "nor easter",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "ladera ranch cancer"
+      ]
+    },
+    {
+      "topic": "verizon",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "ladera ranch cancer"
+      ]
+    },
+    {
+      "topic": "kfc",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "ladera ranch cancer"
+      ]
+    },
+    {
+      "topic": "chicago cubs baseball",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "ladera ranch cancer"
+      ]
+    },
+    {
+      "topic": "lanterns episode 6",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "ladera ranch cancer"
+      ]
+    },
+    {
+      "topic": "asteroid",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "ladera ranch cancer"
+      ]
+    },
+    {
+      "topic": "lioness season 3",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "ladera ranch cancer"
+      ]
+    },
+    {
+      "topic": "weather tornado warning",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "ladera ranch cancer"
+      ]
+    },
+    {
+      "topic": "alex bregman",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "ladera ranch cancer"
+      ]
+    },
+    {
+      "topic": "final fantasy",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "ladera ranch cancer"
+      ]
+    },
+    {
+      "topic": "ff7 revelation",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "ladera ranch cancer"
+      ]
+    },
+    {
+      "topic": "presley gerber",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "ladera ranch cancer"
+      ]
+    },
+    {
+      "topic": "asteroid impact",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "ladera ranch cancer"
+      ]
+    },
+    {
+      "topic": "lanterns recap",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "ladera ranch cancer"
+      ]
+    },
+    {
+      "topic": "jonathan roumie",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "ladera ranch cancer"
+      ]
+    },
+    {
+      "topic": "trump",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "ladera ranch cancer"
+      ]
+    },
+    {
+      "topic": "asian hornet",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "ladera ranch cancer"
+      ]
+    },
+    {
+      "topic": "caleb williams",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "ladera ranch cancer"
+      ]
+    },
+    {
+      "topic": "gala montes",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "amanda bynes"
+      ]
+    },
+    {
+      "topic": "kaley cuoco",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "amanda bynes"
+      ]
+    },
+    {
+      "topic": "shia labeouf",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "amanda bynes"
+      ]
+    },
+    {
+      "topic": "amanda bynrs",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "amanda bynes"
+      ]
+    },
+    {
+      "topic": "amanda bynes birth chart",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "amanda bynes"
+      ]
+    },
+    {
+      "topic": "ai app generator",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "beauty"
+      ]
+    },
+    {
+      "topic": "how to bake a cake",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fragrance"
+      ]
+    },
+    {
+      "topic": "top tourist attractions in paris",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fragrance"
+      ]
+    },
+    {
+      "topic": "how to make sushi",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fragrance"
+      ]
+    },
+    {
+      "topic": "lidl near me",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "hair loss"
+      ]
+    },
+    {
+      "topic": "emmie kay gaines makeup skills",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "bobbi brown new under eye makeup",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "ateeq nusuk fragrance review",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "purina pro plan sensitive skin and stomach",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "palmetto nail and foot care",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "nikol beauty products",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "selena gomez red carpet spf sunscreen",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "nordstrom beauty box",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "evolve organic beauty",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "you can buy all the makeup that mac can make",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "effy stonem makeup tutorial",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "taron egerton hair loss",
+      "reason": "Weak radar score (44)"
+    }
+  ]
+}
