@@ -1,0 +1,2 @@
+rank,topic,trend_stage,urgency,radar_score,emergence_score,velocity_score,confidence_score,saturation_score,opportunity_score,confidence,rising_label,latest_interest,peak_interest,slope,seed_terms,discovery_sources,tags,why_now,recommended_action
+1,cheap meal ideas,watch,monitor,50,45,41,75,0,67,high,'+250%,3,100,0,nutrition ideas,rising query,,Google Trends labels it +250%; interest moved from 3 to 3; found through rising query,Keep on watchlist unless another signal channel confirms it.
