@@ -1,0 +1,1234 @@
+{
+  "run_date": "2026-09-22",
+  "generated_at": "2026-09-22T17:38:03",
+  "topic": "food-safety",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "food-safety",
+    "food safety",
+    "food recall",
+    "foodborne illness",
+    "food contamination",
+    "listeria outbreak",
+    "salmonella outbreak",
+    "restaurant inspection",
+    "USDA recall",
+    "cross contamination",
+    "food-safety trends",
+    "food-safety products",
+    "food-safety news",
+    "food-safety for beginners",
+    "food-safety routine",
+    "food-safety benefits",
+    "food-safety ideas",
+    "food-safety reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 18,
+    "total_reviewed": 80,
+    "total_retained": 4,
+    "total_rejected": 73,
+    "breakouts": 4,
+    "emerging": 0,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "topic": "danone so delicious ice cream recall",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 65,
+      "emergence_score": 81,
+      "velocity_score": 38,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 45,
+      "slope": 0,
+      "acceleration": -9,
+      "seed_terms": [
+        "food recall"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        18,
+        45,
+        40,
+        23,
+        28,
+        35,
+        34,
+        24,
+        25,
+        27,
+        29,
+        38,
+        44,
+        31,
+        20,
+        22,
+        16,
+        12,
+        10,
+        16,
+        24,
+        27,
+        24,
+        25,
+        27,
+        20,
+        16,
+        9,
+        6,
+        5,
+        4,
+        4,
+        5,
+        4,
+        5,
+        5,
+        8,
+        8,
+        6,
+        3,
+        4,
+        3,
+        3,
+        3,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing.",
+      "similar": [
+        {
+          "topic": "so delicious dessert recall",
+          "trend_stage": "watch",
+          "radar_score": 53,
+          "why_now": "Google Trends labels it +450%; interest moved from 0 to 0; found through rising query"
+        },
+        {
+          "topic": "it is important to cook food to high enough temperatures so that",
+          "trend_stage": "watch",
+          "radar_score": 52,
+          "why_now": "Google Trends labels it +300%; interest moved from 0 to 0; found through rising query"
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "topic": "food festivals near me",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 64,
+      "emergence_score": 80,
+      "velocity_score": 38,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 88,
+      "confidence": "high",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 83,
+      "slope": -2,
+      "acceleration": -3,
+      "seed_terms": [
+        "food safety"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        2,
+        2,
+        3,
+        5,
+        4,
+        5,
+        5,
+        8,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        7,
+        3,
+        5,
+        2,
+        3,
+        1,
+        0,
+        2,
+        2,
+        1,
+        2,
+        3,
+        5,
+        5,
+        5,
+        4,
+        5,
+        10,
+        21,
+        35,
+        58,
+        57,
+        66,
+        43,
+        36,
+        17,
+        5,
+        8,
+        8,
+        8,
+        7,
+        6,
+        4,
+        5,
+        7,
+        10,
+        7,
+        3,
+        3,
+        2,
+        3,
+        4,
+        7,
+        14,
+        27,
+        56,
+        76,
+        83,
+        32,
+        13,
+        4,
+        9,
+        3,
+        1,
+        2,
+        0,
+        0,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        4,
+        7,
+        4,
+        0,
+        25,
+        30,
+        26,
+        34,
+        19,
+        14,
+        12,
+        15,
+        9,
+        9,
+        12,
+        4,
+        4,
+        5,
+        8,
+        6,
+        0,
+        11,
+        8,
+        8,
+        20,
+        35,
+        7,
+        8,
+        16,
+        18,
+        0,
+        0,
+        15,
+        14,
+        0,
+        0,
+        11,
+        9,
+        6,
+        6,
+        14,
+        4,
+        4,
+        6,
+        6,
+        8,
+        8,
+        10,
+        16,
+        9,
+        12,
+        15,
+        41,
+        27,
+        0,
+        0,
+        13,
+        17,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; interest moved from 2 to 0; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 3,
+      "topic": "costco food court",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 64,
+      "emergence_score": 80,
+      "velocity_score": 37,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 88,
+      "confidence": "high",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 28,
+      "slope": -4,
+      "acceleration": -4,
+      "seed_terms": [
+        "food recall"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        4,
+        4,
+        5,
+        5,
+        6,
+        8,
+        8,
+        6,
+        7,
+        7,
+        4,
+        4,
+        3,
+        3,
+        3,
+        0,
+        0,
+        0,
+        0,
+        2,
+        3,
+        3,
+        4,
+        6,
+        8,
+        8,
+        9,
+        10,
+        12,
+        13,
+        16,
+        12,
+        12,
+        14,
+        15,
+        12,
+        13,
+        9,
+        10,
+        5,
+        7,
+        5,
+        5,
+        4,
+        5,
+        5,
+        7,
+        8,
+        9,
+        8,
+        8,
+        9,
+        10,
+        11,
+        12,
+        12,
+        11,
+        11,
+        9,
+        10,
+        8,
+        7,
+        6,
+        4,
+        3,
+        11,
+        28,
+        14,
+        12,
+        7,
+        9,
+        9,
+        10,
+        10,
+        12,
+        12,
+        14,
+        17,
+        19,
+        15,
+        15,
+        14,
+        9,
+        8,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        6,
+        6,
+        8,
+        10,
+        10,
+        12,
+        8,
+        9,
+        13,
+        9,
+        12,
+        10,
+        10,
+        5,
+        6,
+        7,
+        0,
+        7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6,
+        10,
+        8,
+        6,
+        9,
+        10,
+        9,
+        12,
+        9,
+        9,
+        8,
+        8,
+        3,
+        4,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        3,
+        3,
+        3,
+        5,
+        4,
+        3,
+        7,
+        5,
+        7,
+        9,
+        9,
+        10,
+        9,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        4,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; interest moved from 4 to 0; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 4,
+      "topic": "intercon chemical co hand soap recall",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 64,
+      "emergence_score": 80,
+      "velocity_score": 37,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 88,
+      "confidence": "high",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 87,
+      "slope": 0,
+      "acceleration": -13,
+      "seed_terms": [
+        "food recall"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        8,
+        31,
+        38,
+        32,
+        34,
+        34,
+        33,
+        38,
+        31,
+        43,
+        81,
+        87,
+        57,
+        27,
+        15,
+        17,
+        30,
+        36,
+        25,
+        17,
+        9,
+        7,
+        8,
+        8,
+        4,
+        3,
+        2,
+        2,
+        1,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        2,
+        4,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        21,
+        22,
+        19,
+        8,
+        5,
+        4,
+        3,
+        3,
+        5,
+        10,
+        16,
+        22,
+        25,
+        23,
+        19,
+        17,
+        12,
+        9,
+        8,
+        7,
+        5,
+        4,
+        5,
+        4,
+        5,
+        5,
+        4,
+        4,
+        3,
+        3,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing.",
+      "similar": [
+        {
+          "topic": "soap recall",
+          "trend_stage": "emerging",
+          "radar_score": 64,
+          "why_now": "Google Trends labels it +1150%; interest moved from 1 to 0; found through rising query"
+        },
+        {
+          "topic": "intercon chemical hand soap recall",
+          "trend_stage": "emerging",
+          "radar_score": 63,
+          "why_now": "Google Trends labels it +1200%; interest moved from 0 to 0; found through rising query"
+        },
+        {
+          "topic": "hand soap recall",
+          "trend_stage": "emerging",
+          "radar_score": 62,
+          "why_now": "Google Trends labels it +2050%; interest moved from 1 to 0; found through rising query"
+        }
+      ]
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "food contamination",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "food-safety products",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "best pizza near me",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "food safety"
+      ]
+    },
+    {
+      "topic": "best time to visit maldives",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "food safety"
+      ]
+    },
+    {
+      "topic": "top tourist attractions in paris",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "food safety"
+      ]
+    },
+    {
+      "topic": "how to bake a cake",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "food safety"
+      ]
+    },
+    {
+      "topic": "how to make sushi",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "food safety"
+      ]
+    },
+    {
+      "topic": "cheapest flights to tokyo",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "food safety"
+      ]
+    },
+    {
+      "topic": "how to fix dripping faucet",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "food safety"
+      ]
+    },
+    {
+      "topic": "edamame near me",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "food safety"
+      ]
+    },
+    {
+      "topic": "best places to snorkel",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "food safety"
+      ]
+    },
+    {
+      "topic": "google scholar",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "food recall"
+      ]
+    },
+    {
+      "topic": "icev",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "foodborne illness"
+      ]
+    },
+    {
+      "topic": "loss of refrigeration is considered an",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "foodborne illness"
+      ]
+    },
+    {
+      "topic": "drunken noodles near me",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "food safety"
+      ]
+    },
+    {
+      "topic": "iphone 6s plus to buy",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "food safety"
+      ]
+    },
+    {
+      "topic": "human resources software",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "food safety"
+      ]
+    },
+    {
+      "topic": "lidl near me",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "food safety"
+      ]
+    },
+    {
+      "topic": "how to remove background in canva",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "food safety"
+      ]
+    },
+    {
+      "topic": "how to build credit from scratch",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "food safety"
+      ]
+    },
+    {
+      "topic": "best laptop for work",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "food safety"
+      ]
+    },
+    {
+      "topic": "yoga for beginners",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "food safety"
+      ]
+    },
+    {
+      "topic": "what is a detox diet",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "food safety"
+      ]
+    },
+    {
+      "topic": "at a buffet how much in use utensils be stored",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "cross contamination"
+      ]
+    },
+    {
+      "topic": "fda",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "food safety"
+      ]
+    },
+    {
+      "topic": "haccp",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "food safety"
+      ]
+    },
+    {
+      "topic": "fruit",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "food safety"
+      ]
+    },
+    {
+      "topic": "chipotle palantir food safety partnership",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "fda food recall kroger desserts",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "canadian food recall heinz mayonnaise",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "soap recall 2026",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "costco chicken recall",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "how does most contamination of food happen",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "colorado springs restaurant inspection reports",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "usda ground beef recall",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "usda beef recall",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "meat inspection act definition",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "pasta listeria outbreak",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "foodborne illness outbreak articles",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "surfaces that touch food are called",
+      "reason": "Weak radar score (49)"
+    },
+    {
+      "topic": "cyclospora outbreak",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "salmonella outbreak eggs",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "fda food recall",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "recall check",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "listeria monocytogenes",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "how does cross contamination occur",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "product recall",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "salmonella outbreak 2026",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "how does cross contact differ from cross contamination",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "what should food workers use to prevent cross contamination with ready to eat foods",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "salmonella symptoms",
+      "reason": "Weak radar score (34)"
+    },
+    {
+      "topic": "what is food safety",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "state food safety",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "usda",
+      "reason": "Weak radar score (34)"
+    },
+    {
+      "topic": "food safety manager",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "food safety certification",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "food safety standards",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "food safety jobs",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "food safety definition",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "foodborne illness",
+      "reason": "Weak radar score (33)"
+    },
+    {
+      "topic": "why is food safety important",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "food safety rules",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "dog food",
+      "reason": "Weak radar score (40)"
+    },
+    {
+      "topic": "food safety certificate",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "food safety course",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "food safety card",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "haccp food safety",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "food safety danger zone",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "food safety news",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "what is foodborne illness",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "tcs food",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "food safety gloves",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "what is a foodborne illness",
+      "reason": "Weak radar score (37)"
+    }
+  ]
+}
