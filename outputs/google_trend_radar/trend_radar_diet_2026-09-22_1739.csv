@@ -1,0 +1,2 @@
+rank,topic,trend_stage,urgency,radar_score,emergence_score,velocity_score,confidence_score,saturation_score,opportunity_score,confidence,rising_label,latest_interest,peak_interest,slope,seed_terms,discovery_sources,tags,why_now,recommended_action
+1,what is a macro in excel,breakout,today,64,80,38,75,0,88,high,Breakout,0,91,-2,macro tracking,rising query,,Google Trends labels it Breakout; interest moved from 2 to 0; found through rising query,"Prioritize a same-day brief, then validate sources before publishing."
