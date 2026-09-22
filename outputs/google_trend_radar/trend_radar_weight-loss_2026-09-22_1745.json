@@ -1,0 +1,1439 @@
+{
+  "run_date": "2026-09-22",
+  "generated_at": "2026-09-22T17:45:28",
+  "topic": "weight-loss",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "weight-loss",
+    "weight loss",
+    "weight loss journey",
+    "fat loss",
+    "sustainable weight loss",
+    "weight loss surgery",
+    "GLP-1",
+    "semaglutide",
+    "weight loss plateau",
+    "weight loss medication",
+    "weight-loss trends",
+    "weight-loss products",
+    "weight-loss news",
+    "weight-loss for beginners",
+    "weight-loss routine",
+    "weight-loss benefits",
+    "weight-loss ideas",
+    "weight-loss reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 18,
+    "total_reviewed": 80,
+    "total_retained": 8,
+    "total_rejected": 75,
+    "breakouts": 4,
+    "emerging": 0,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "topic": "which weight loss surgery is best for me",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 54,
+      "emergence_score": 71,
+      "velocity_score": 40,
+      "confidence_score": 40,
+      "saturation_score": 0,
+      "opportunity_score": 83,
+      "confidence": "low",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "weight loss surgery"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; time-series validation was skipped or unavailable; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 2,
+      "topic": "riley burruss weight loss surgery",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 54,
+      "emergence_score": 71,
+      "velocity_score": 40,
+      "confidence_score": 40,
+      "saturation_score": 0,
+      "opportunity_score": 83,
+      "confidence": "low",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "weight loss surgery"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; time-series validation was skipped or unavailable; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 3,
+      "topic": "do i qualify for weight loss surgery quiz",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 54,
+      "emergence_score": 71,
+      "velocity_score": 40,
+      "confidence_score": 40,
+      "saturation_score": 0,
+      "opportunity_score": 83,
+      "confidence": "low",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "weight loss surgery"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; time-series validation was skipped or unavailable; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 4,
+      "topic": "doctors paid to promote glp-1",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 54,
+      "emergence_score": 71,
+      "velocity_score": 40,
+      "confidence_score": 40,
+      "saturation_score": 0,
+      "opportunity_score": 83,
+      "confidence": "low",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "GLP-1"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; time-series validation was skipped or unavailable; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 5,
+      "topic": "weight loss surgery prices",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 53,
+      "emergence_score": 53,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 72,
+      "confidence": "high",
+      "rising_label": "+350%",
+      "latest_interest": 0,
+      "peak_interest": 27,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "weight loss surgery"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        27,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +350%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it."
+    },
+    {
+      "rank": 6,
+      "topic": "glp-1 blindness",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 53,
+      "emergence_score": 53,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 72,
+      "confidence": "high",
+      "rising_label": "+350%",
+      "latest_interest": 0,
+      "peak_interest": 33,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "GLP-1"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        33,
+        0,
+        0,
+        11,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +350%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it."
+    },
+    {
+      "rank": 7,
+      "topic": "pritzker weight loss",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 52,
+      "emergence_score": 50,
+      "velocity_score": 41,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 70,
+      "confidence": "high",
+      "rising_label": "+300%",
+      "latest_interest": 0,
+      "peak_interest": 33,
+      "slope": 0,
+      "acceleration": 3,
+      "seed_terms": [
+        "weight loss"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        10,
+        15,
+        14,
+        12,
+        15,
+        0,
+        18,
+        26,
+        0,
+        0,
+        0,
+        26,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        33,
+        22,
+        17,
+        10,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +300%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it.",
+      "similar": [
+        {
+          "topic": "jb pritzker weight loss",
+          "trend_stage": "watch",
+          "radar_score": 52,
+          "why_now": "Google Trends labels it +300%; interest moved from 0 to 0; found through rising query"
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "topic": "weight loss surgery new mexico",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 50,
+      "emergence_score": 46,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 68,
+      "confidence": "high",
+      "rising_label": "+200%",
+      "latest_interest": 0,
+      "peak_interest": 100,
+      "slope": 0,
+      "acceleration": 1,
+      "seed_terms": [
+        "weight loss surgery"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        100,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +200%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "weight loss journey",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "weight loss medication",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "weight-loss routine",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "weight-loss reviews",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "museums",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight-loss"
+      ]
+    },
+    {
+      "topic": "iphone 11 to buy",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fat loss"
+      ]
+    },
+    {
+      "topic": "iphone 13 pro to buy",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fat loss"
+      ]
+    },
+    {
+      "topic": "how to clean grout",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fat loss"
+      ]
+    },
+    {
+      "topic": "what is a monorepo",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fat loss"
+      ]
+    },
+    {
+      "topic": "how to make sushi",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fat loss"
+      ]
+    },
+    {
+      "topic": "best time to visit maldives",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fat loss"
+      ]
+    },
+    {
+      "topic": "how to bake a cake",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fat loss"
+      ]
+    },
+    {
+      "topic": "symptoms of the flu",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fat loss"
+      ]
+    },
+    {
+      "topic": "cheapest flights to tokyo",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fat loss"
+      ]
+    },
+    {
+      "topic": "greek salad near me",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fat loss"
+      ]
+    },
+    {
+      "topic": "how to freeze soup",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fat loss"
+      ]
+    },
+    {
+      "topic": "incident response plans",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fat loss"
+      ]
+    },
+    {
+      "topic": "what is a prebiotic",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fat loss"
+      ]
+    },
+    {
+      "topic": "what is a web browser",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fat loss"
+      ]
+    },
+    {
+      "topic": "what is a notarized letter",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fat loss"
+      ]
+    },
+    {
+      "topic": "loop earplugs coupon",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "GLP-1"
+      ]
+    },
+    {
+      "topic": "best laptop for work",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fat loss"
+      ]
+    },
+    {
+      "topic": "how to stop motion sickness",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fat loss"
+      ]
+    },
+    {
+      "topic": "loop earplugs promo code",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "GLP-1"
+      ]
+    },
+    {
+      "topic": "how to connect bluetooth headphones",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fat loss"
+      ]
+    },
+    {
+      "topic": "bubble io",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "GLP-1"
+      ]
+    },
+    {
+      "topic": "webflow ai",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "GLP-1"
+      ]
+    },
+    {
+      "topic": "v0 dev",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "GLP-1"
+      ]
+    },
+    {
+      "topic": "emergent.sh pricing",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "taima.com",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "parisian fashion",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "hostinger ai builder",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "taima titanium",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "norvpn",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "asos app",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "nord vnp",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "emergentsh",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "GLP-1"
+      ]
+    },
+    {
+      "topic": "emergent pricing",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "emergent",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "GLP-1"
+      ]
+    },
+    {
+      "topic": "heygen",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "GLP-1"
+      ]
+    },
+    {
+      "topic": "nordvpn app",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "GLP-1"
+      ]
+    },
+    {
+      "topic": "asos sale",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "GLP-1"
+      ]
+    },
+    {
+      "topic": "cropped sweater",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "medvi quad reviews",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "eldorado gg",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "bitget",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "betmgm app",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "bitget wallet",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "off white outlet",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "GLP-1"
+      ]
+    },
+    {
+      "topic": "nordpass app",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "semaglutide"
+      ]
+    },
+    {
+      "topic": "eddie bauer website",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "bitget app",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "GLP-1"
+      ]
+    },
+    {
+      "topic": "bet365 app download",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "GLP-1"
+      ]
+    },
+    {
+      "topic": "lem list",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "GLP-1"
+      ]
+    },
+    {
+      "topic": "shein promo",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "GLP-1"
+      ]
+    },
+    {
+      "topic": "betmgm",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "shoplc",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "embody reviews",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "medvi reviews",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "lc jewelry",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "semaglutide"
+      ]
+    },
+    {
+      "topic": "medvi quad",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "shop lc jewelry",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "semaglutide"
+      ]
+    },
+    {
+      "topic": "quad medvi",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "GLP-1"
+      ]
+    },
+    {
+      "topic": "medvi glp1",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "semaglutide"
+      ]
+    },
+    {
+      "topic": "shop lc live",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "semaglutide"
+      ]
+    },
+    {
+      "topic": "quad for ed",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "semaglutide"
+      ]
+    },
+    {
+      "topic": "what is sustainable fashion",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "best smoothie recipes for weight loss",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "pros and cons of weight loss surgery",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "weight loss surgery in new mexico",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "weight-loss surgery",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "do i qualify for weight loss surgery",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "semaglutide near me",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "best glp 1 supplement for weight loss",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "embody glp-1",
+      "reason": "Weak radar score (46)"
+    }
+  ]
+}
