@@ -1,0 +1,828 @@
+{
+  "run_date": "2026-09-23",
+  "generated_at": "2026-09-23T17:53:49",
+  "topic": "gut-health",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "gut-health",
+    "gut health",
+    "microbiome",
+    "probiotics",
+    "prebiotics",
+    "gut bacteria",
+    "digestive health",
+    "IBS",
+    "bloating",
+    "gut brain axis",
+    "leaky gut",
+    "gut-health trends",
+    "gut-health products",
+    "gut-health news",
+    "gut-health for beginners",
+    "gut-health routine",
+    "gut-health benefits",
+    "gut-health ideas",
+    "gut-health reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 19,
+    "total_reviewed": 80,
+    "total_retained": 2,
+    "total_rejected": 82,
+    "breakouts": 0,
+    "emerging": 0,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "topic": "us digestive health langhorne pa",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 52,
+      "emergence_score": 50,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 70,
+      "confidence": "high",
+      "rising_label": "+300%",
+      "latest_interest": 0,
+      "peak_interest": 54,
+      "slope": 0,
+      "acceleration": 1,
+      "seed_terms": [
+        "digestive health"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        54,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +300%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it."
+    },
+    {
+      "rank": 2,
+      "topic": "holistic gut health doctor near me",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 50,
+      "emergence_score": 46,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 68,
+      "confidence": "high",
+      "rising_label": "+190%",
+      "latest_interest": 0,
+      "peak_interest": 48,
+      "slope": 0,
+      "acceleration": 1,
+      "seed_terms": [
+        "gut health"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        48,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +190%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "gut-health",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "probiotics",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "gut-health products",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "gut-health news",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "prebiotic meaning",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "prebiotics"
+      ]
+    },
+    {
+      "topic": "best laptop for work",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "bloating"
+      ]
+    },
+    {
+      "topic": "how to make sushi",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "bloating"
+      ]
+    },
+    {
+      "topic": "cheapest flights to tokyo",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "gut health"
+      ]
+    },
+    {
+      "topic": "doctordle",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "bloating"
+      ]
+    },
+    {
+      "topic": "what do antibiotics do",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "prebiotics"
+      ]
+    },
+    {
+      "topic": "inulin",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "prebiotics"
+      ]
+    },
+    {
+      "topic": "constipation symptoms",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "bloating"
+      ]
+    },
+    {
+      "topic": "dyspepsia",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "bloating"
+      ]
+    },
+    {
+      "topic": "kimchi recipe",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "gut health"
+      ]
+    },
+    {
+      "topic": "kefir",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "gut bacteria"
+      ]
+    },
+    {
+      "topic": "sibo treatment",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "bloating"
+      ]
+    },
+    {
+      "topic": "dysbiosis",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "leaky gut"
+      ]
+    },
+    {
+      "topic": "low fodmap diet",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "bloating"
+      ]
+    },
+    {
+      "topic": "peppermint oil capsules",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "IBS"
+      ]
+    },
+    {
+      "topic": "fodmap diet",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "bloating"
+      ]
+    },
+    {
+      "topic": "early pregnancy symptoms",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "bloating"
+      ]
+    },
+    {
+      "topic": "ovarian cancer symptoms",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "bloating"
+      ]
+    },
+    {
+      "topic": "probiotic",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "gut health"
+      ]
+    },
+    {
+      "topic": "best probiotic",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "gut health"
+      ]
+    },
+    {
+      "topic": "how do salmonella bacteria in the gut microbiome affect the body?",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "do prebiotics help you lose weight",
+      "reason": "Weak radar score (49)"
+    },
+    {
+      "topic": "digestive health specialists dothan al",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "hot girls have ibs",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "craft microbiome",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "texas digestive disease consultants",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "ibs libri",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "improve gut health",
+      "reason": "Weak radar score (46)"
+    },
+    {
+      "topic": "when does bloating start before period",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "how to improve gut health",
+      "reason": "Weak radar score (45)"
+    },
+    {
+      "topic": "how to check gut health",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "best time to eat sauerkraut for gut health",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "what do scientists who study the human microbiome hope to achieve",
+      "reason": "Weak radar score (36)"
+    },
+    {
+      "topic": "list of fermented foods for gut health",
+      "reason": "Weak radar score (36)"
+    },
+    {
+      "topic": "gut health dietitian",
+      "reason": "Weak radar score (36)"
+    },
+    {
+      "topic": "microbiome 中文",
+      "reason": "Weak radar score (36)"
+    },
+    {
+      "topic": "growing up prebiotics",
+      "reason": "Weak radar score (36)"
+    },
+    {
+      "topic": "icd 10 code for bloating",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "hack your health the secrets of your gut",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "microbiome skincare",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "microbiome testing",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "prebiotics definition",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "does oatmeal cause bloating",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "how to get rid of bloating after eating",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "leaky gut doctor",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "leaky gut syndrome symptoms",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "is ibs hereditary",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "what foods to avoid with ibs",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "sibo vs ibs",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "ibs specialist",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "does stevia cause bloating",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "how to fix bloating",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "how is leaky gut diagnosed",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "what do harmful bacteria do in the gut microbiome?",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "ibs 2026",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "abdominal bloating",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "good gut health",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "what is gut health",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "gut health foods",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "probiotics",
+      "reason": "Weak radar score (40)"
+    },
+    {
+      "topic": "gut health probiotics",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "probiotic gut health",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "gut health food",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "foods for gut health",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "probiotics for gut health",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "gut health supplements",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "probiotic for gut health",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "bad gut health",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "gut health supplement",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "gut health test",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "gut health benefits",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "food for gut health",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "yogurt for gut health",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "dog gut health",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "what is good for gut health",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "supplements for gut health",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "best probiotic for gut health",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "gut microbiome",
+      "reason": "Weak radar score (41)"
+    }
+  ]
+}
