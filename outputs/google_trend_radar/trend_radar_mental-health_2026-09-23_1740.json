@@ -1,0 +1,716 @@
+{
+  "run_date": "2026-09-23",
+  "generated_at": "2026-09-23T17:40:34",
+  "topic": "mental-health",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "mental-health",
+    "mental health",
+    "anxiety",
+    "depression",
+    "therapy",
+    "burnout",
+    "stress management",
+    "mindfulness",
+    "cognitive behavioral therapy",
+    "mental health awareness",
+    "trauma recovery",
+    "mental-health trends",
+    "mental-health products",
+    "mental-health news",
+    "mental-health for beginners",
+    "mental-health routine",
+    "mental-health benefits",
+    "mental-health ideas",
+    "mental-health reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 19,
+    "total_reviewed": 80,
+    "total_retained": 2,
+    "total_rejected": 79,
+    "breakouts": 0,
+    "emerging": 1,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "topic": "lizzie borden mental health",
+      "trend_stage": "emerging",
+      "urgency": "this_week",
+      "radar_score": 54,
+      "emergence_score": 71,
+      "velocity_score": 40,
+      "confidence_score": 40,
+      "saturation_score": 0,
+      "opportunity_score": 83,
+      "confidence": "low",
+      "rising_label": "+2850%",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "mental health"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [],
+      "tags": {},
+      "why_now": "Google Trends labels it +2850%; time-series validation was skipped or unavailable; found through rising query",
+      "recommended_action": "Build an angle this week and monitor the next 24-48 hours."
+    },
+    {
+      "rank": 2,
+      "topic": "best mindfulness apps",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 54,
+      "emergence_score": 55,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 73,
+      "confidence": "high",
+      "rising_label": "+400%",
+      "latest_interest": 0,
+      "peak_interest": 15,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "mindfulness"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        7,
+        15,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        10,
+        0,
+        7,
+        0,
+        0,
+        0,
+        7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +400%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "mental-health trends",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "top tourist attractions in paris",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "burnout"
+      ]
+    },
+    {
+      "topic": "new york times",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "stress management"
+      ]
+    },
+    {
+      "topic": "master data management",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "stress management"
+      ]
+    },
+    {
+      "topic": "museums",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "stress management"
+      ]
+    },
+    {
+      "topic": "lidl near me",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "mindfulness"
+      ]
+    },
+    {
+      "topic": "iphone 14 pro to buy",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "mindfulness"
+      ]
+    },
+    {
+      "topic": "how to start a podcast on spotify",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "mindfulness"
+      ]
+    },
+    {
+      "topic": "best pizza near me",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "cognitive behavioral therapy"
+      ]
+    },
+    {
+      "topic": "how to format a usb drive",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "mindfulness"
+      ]
+    },
+    {
+      "topic": "hotels with free breakfast",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "mindfulness"
+      ]
+    },
+    {
+      "topic": "pisang goreng near me",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "mindfulness"
+      ]
+    },
+    {
+      "topic": "natural language processing",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "mindfulness"
+      ]
+    },
+    {
+      "topic": "best time to visit maldives",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "mental health"
+      ]
+    },
+    {
+      "topic": "software testing strategies",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "mindfulness"
+      ]
+    },
+    {
+      "topic": "frontend frameworks",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "mindfulness"
+      ]
+    },
+    {
+      "topic": "chow mein near me",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "mindfulness"
+      ]
+    },
+    {
+      "topic": "best laptop for work",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "mental health"
+      ]
+    },
+    {
+      "topic": "budget travel tips",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "mindfulness"
+      ]
+    },
+    {
+      "topic": "how to organize kitchen pantry",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "mindfulness"
+      ]
+    },
+    {
+      "topic": "fintech innovation",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "mindfulness"
+      ]
+    },
+    {
+      "topic": "cheapest flights to tokyo",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "mental health"
+      ]
+    },
+    {
+      "topic": "serverless computing",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "mindfulness"
+      ]
+    },
+    {
+      "topic": "what is a sim card",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "mindfulness"
+      ]
+    },
+    {
+      "topic": "how to restore iphone from backup",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "mindfulness"
+      ]
+    },
+    {
+      "topic": "viral marketing strategies",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "mindfulness"
+      ]
+    },
+    {
+      "topic": "how to paint a room",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "mindfulness"
+      ]
+    },
+    {
+      "topic": "famous art museums",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "mindfulness"
+      ]
+    },
+    {
+      "topic": "how to bake a cake",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "mental health"
+      ]
+    },
+    {
+      "topic": "how to make sushi",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "depression"
+      ]
+    },
+    {
+      "topic": "fidelity wealth management",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "depression"
+      ]
+    },
+    {
+      "topic": "fidelity 529",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "depression"
+      ]
+    },
+    {
+      "topic": "fidelity account",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "depression"
+      ]
+    },
+    {
+      "topic": "t rowe price",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "depression"
+      ]
+    },
+    {
+      "topic": "toyota tundra",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "depression"
+      ]
+    },
+    {
+      "topic": "deloitte",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "depression"
+      ]
+    },
+    {
+      "topic": "fidelity advisor",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "depression"
+      ]
+    },
+    {
+      "topic": "fidelity bitcoin",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "depression"
+      ]
+    },
+    {
+      "topic": "project management tools",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "stress management"
+      ]
+    },
+    {
+      "topic": "fidelity crypto",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "depression"
+      ]
+    },
+    {
+      "topic": "what is a content management system",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "stress management"
+      ]
+    },
+    {
+      "topic": "tips for time management",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "stress management"
+      ]
+    },
+    {
+      "topic": "online presence management",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "stress management"
+      ]
+    },
+    {
+      "topic": "what trends have been observed in adolescent suicide rates?",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "mental health"
+      ]
+    },
+    {
+      "topic": "presley gerber mental health",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "how to recover from burnout while still working",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "did lizzie borden have mental health issues",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "tropical depression fay",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "cognitive behavioral therapists near me",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "ibogaine therapy",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "how to reduce stress naturally",
+      "reason": "Weak radar score (49)"
+    },
+    {
+      "topic": "meditation techniques for anxiety",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "anxiety coping strategies",
+      "reason": "Weak radar score (46)"
+    },
+    {
+      "topic": "tropical depression 15e",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "signs of burnout",
+      "reason": "Weak radar score (46)"
+    },
+    {
+      "topic": "meditation for anxiety",
+      "reason": "Weak radar score (45)"
+    },
+    {
+      "topic": "burnout signs",
+      "reason": "Weak radar score (45)"
+    },
+    {
+      "topic": "trd depression",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "depression treatment near me",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "mental health awareness symbol",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "occupational burnout",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "cognitive behavioral therapy nj",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "mental health awareness week 2026",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "mental health awareness october",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "mental health is a state of well-being that...",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "anxiety treatment near me",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "cognitive behavioral therapy near me",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "october mental health awareness month",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "mental health awareness months",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "what color represents mental health awareness",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "black mental health therapist near me",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "anxiety therapy near me",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "depression therapy near me",
+      "reason": "Weak radar score (46)"
+    },
+    {
+      "topic": "rtms therapy",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "stress management tips",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "cognitive behavioral therapy online",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "world mental health day 2026",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "the harris center for mental health and idd",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "dealing with stress and depression",
+      "reason": "Weak radar score (41)"
+    }
+  ]
+}
