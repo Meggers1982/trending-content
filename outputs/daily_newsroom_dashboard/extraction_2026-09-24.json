@@ -1,0 +1,294 @@
+{
+  "run_date": "2026-09-24",
+  "niche": "health and wellness",
+  "signal_summary": {
+    "total_reviewed": 144,
+    "total_retained": 3,
+    "total_rejected": 30,
+    "tools_active": [
+      "web_search",
+      "google_news",
+      "google_trends",
+      "serpapi"
+    ],
+    "tools_unavailable": [],
+    "notes": "Google News Radar clusters accounted for: FDA thyroid recall (retained), mental-health gender-gap study (retained), clinical trial equity (retained), secondary recalls + HIV trial + Stanford glioma study (monitored, thin sourcing), insurance/policy/local/PR clusters (rejected off-category), and 9 stories duplicating last-7-days coverage (rejected existing). site_url not configured — self-check skipped; competitor list used for SERP-gap context only."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "FDA upgrades Vitruvias Therapeutics thyroid tablet recall to Class I (highest risk)",
+      "primary_entity": "Vitruvias Therapeutics",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 73,
+      "opportunity_score": 76,
+      "discover_score": 4,
+      "urgency": "now",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "source_urls": [
+        "https://www.usatoday.com/story/money/consumer-protection/recalls-alerts/2026/09/24/thyroid-tablet-medicine-recall-fda/91916444007/",
+        "https://www.newsnationnow.com/health/fda-thyroid-tablet-recall-class-i/",
+        "https://www.wgrz.com/article/news/nation-world/thyroid-medication-recall-upgraded-fda-vitruvias-therapeutics/507-7b634b7f-7828-4a8b-bd64-475ad06d2717"
+      ],
+      "recommended_angle": "What the Class I thyroid recall means for patients — symptoms of dosing errors and what to do if you take this medication",
+      "why_now": "FDA upgraded this recall to Class I today; confirmed by Google Trends real-time breakout plus USA Today, NewsNation, and WGRZ convergence — first day of peak search interest",
+      "primary_headline": "FDA Upgrades Vitruvias Thyroid Tablet Recall to Highest Risk Level — What Patients Need to Know",
+      "next_steps": "Verify official FDA recall number/NDC/lot codes via FDA.gov before publish; add patient guidance on over/under-dosing thyroid hormone symptoms",
+      "integrity_flags": [
+        "Primary FDA enforcement report not directly retrieved this run — verify via FDA.gov before publishing"
+      ],
+      "trend_score_reason": "Google Trends real-time breakout + 3 tier-2 outlets converged same day (USA Today, NewsNation, WGRZ)",
+      "opportunity_score_reason": "High patient relevance: active medication safety concern with immediate actionable guidance for consumers",
+      "discover_score_reason": "Breaking Class I recall with trending search velocity and multi-outlet confirmation signals high audience interest",
+      "notes": "Breaking-recall exception applied; confidence capped at Medium pending direct FDA.gov notice verification.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "USA Today, NewsNation, WGRZ articles + Google Trends breakout term 'vitruvias therapeutics thyroid tablet recall' with confirmed Why line"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "New Nature study explains why teen girls face worse mental health outcomes than boys",
+      "primary_entity": "Nature (journal) — adolescent mental health gender-gap study",
+      "signal_type": "study_or_research",
+      "allowed_category": "mental health and psychology",
+      "trend_strength_score": 62,
+      "opportunity_score": 83,
+      "discover_score": 5,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.nature.com/articles/s41562-026-02577-3"
+      ],
+      "recommended_angle": "Translate the Nature findings into practical guidance for parents/educators on the biological and social mechanisms behind the gap",
+      "why_now": "Peer-reviewed study published this week; converges with rising Google Trends mental-health search interest (+5 this week)",
+      "primary_headline": "New Study Reveals Why Teen Girls Face Higher Mental Health Risks Than Boys",
+      "next_steps": "Pull named researchers/institution from full Nature article; secure secondary expert (clinical psychologist) commentary; confirm correlational vs. causal framing",
+      "integrity_flags": [
+        "Confirm study design (observational vs. causal) before publishing; avoid deterministic framing beyond what data supports"
+      ],
+      "trend_score_reason": "Peer-reviewed Nature publication this week with correlated rising Trends interest in adolescent mental health",
+      "opportunity_score_reason": "High reader relevance: parenting, education, and mental-health audiences will engage with explainer-style translation of mechanism",
+      "discover_score_reason": "Top-tier journal (Nature) with novelty and high discoverability — maximum score for legitimate peer-reviewed research",
+      "notes": "Study design must be confirmed before finalizing headline; emphasis on practical parent/educator guidance.",
+      "fact_check": {
+        "verdict": "minor_issues",
+        "issues": [
+          "The angle promises translation of 'biological and social mechanisms' behind the gap, but the evidence only shows the study's title/headline, not its methodology or specific mechanisms discussed, so this framing goes beyond what is confirmed."
+        ],
+        "checked_against": "Nature article headline 'Why girls have worse mental health than boys' + Google Trends mental_health +5 delta"
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Clinical trials still exclude Black patients and pregnant/lactating people — a structural explainer",
+      "primary_entity": "ClinicalTrials.gov / trial recruitment equity",
+      "signal_type": "audience_pain_point",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 54,
+      "opportunity_score": 70,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "source_urls": [
+        "https://www.statnews.com/2026/09/21/clinical-trials-website-pregnant-lactating-patients-checkbox/",
+        "https://wordinblack.com/2026/09/black-patients-arent-avoiding-clinical-trials-they-often-arent-asked/",
+        "https://www.newswise.com/articles/expert-available-how-health-systems-can-help-address-america-s-clinical-trial-bottleneck"
+      ],
+      "recommended_angle": "Structural explainer: Black patients and pregnant/lactating people aren't refusing trials — they're often not being asked",
+      "why_now": "Three independent reports (STAT, Word In Black, Newswise) converged this week on trial-recruitment exclusion",
+      "primary_headline": "Clinical Trials Still Leave Out the Patients Who Need Them Most — Here's Why",
+      "next_steps": "Cite STAT/Word In Black reporting as anchor sources; add FDA/NIH diversity action plan guidance",
+      "integrity_flags": [],
+      "trend_score_reason": "Three independent outlets converged on structural access barrier narrative; moderate trend velocity suggests sustained audience interest in health equity",
+      "opportunity_score_reason": "High relevance for health-equity and patient-advocacy audiences; actionable structural insight beyond single anecdote",
+      "discover_score_reason": "Multi-outlet convergence on underreported systemic issue signals strong but not breaking-news level discoverability",
+      "notes": "No major integrity flags; frame as structural/access barrier, not patient reluctance.",
+      "fact_check": {
+        "verdict": "minor_issues",
+        "issues": [
+          "The Newswise piece is a general 'clinical trial bottleneck' expert-availability post, not specifically about exclusion of Black or pregnant/lactating patients, so citing it as one of 'three independent reports' converging on this exact exclusion narrative overstates the alignment."
+        ],
+        "checked_against": "STAT article on pregnancy/lactation checkbox + Word In Black article on Black patient recruitment + Newswise general clinical trial bottleneck piece"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "CDC PA measles death exclusion",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "GLP-1 misuse",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "PATHFINDER 2",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Congo Ebola vaccination",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Pro-nicotine wellness",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Egg recall",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Stanford two-organ brain study",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "FDA testosterone meeting",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Hand soap recall",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "FDA post-market study gaps",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Alzheimer's funding cuts",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Brain tumor metabolite",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "DRC/Uganda Ebola spread",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Pancreatic liquid biopsy",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Intermittent fasting/Huntington's",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Minibeam radiotherapy",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Insurance premiums (WaPo, Yale, Montana)",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Mental health parity rule",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Medicaid fraud case",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Rural health funding",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Local wellness events (Black Men's Wellness Day, Haines, Marquette, UWM, UC Davis, USCG EAP)",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Gorilla wellness checkup",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Alice Walton hospital campus",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Dr. Anthony Robbins obituary",
+      "reason": "off_category"
+    },
+    {
+      "topic": "UNC Ireland trip",
+      "reason": "off_category"
+    },
+    {
+      "topic": "UWL Ecuador program",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Utah faculty research",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Padres doctor honor",
+      "reason": "off_category"
+    },
+    {
+      "topic": "WELL Health platform launch",
+      "reason": "off_category"
+    },
+    {
+      "topic": "CNBC consumer spending",
+      "reason": "off_category"
+    },
+    {
+      "topic": "OpenAI breach",
+      "reason": "off_category"
+    },
+    {
+      "topic": "MentalHealthBench",
+      "reason": "off_category"
+    },
+    {
+      "topic": "WHO AI-ethics report",
+      "reason": "off_category"
+    }
+  ],
+  "fact_check_summary": {
+    "accurate": 1,
+    "minor_issues": 2
+  },
+  "run_cost": {
+    "total_usd": 0.5803,
+    "calls": [
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 10850,
+        "output_tokens": 21257,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 42559,
+        "estimated_cost_usd": 0.511
+      },
+      {
+        "model": "claude-haiku-4-5",
+        "input_tokens": 6861,
+        "output_tokens": 2085,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0173
+      },
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 10949,
+        "output_tokens": 1278,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.052
+      }
+    ]
+  }
+}
