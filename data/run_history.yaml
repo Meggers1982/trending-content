@@ -3,6 +3,37 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-09-25'
+  niche: Health & Wellness
+  signals_reviewed: 144
+  topics_retained: 7
+  topics_rejected: 22
+  p1_count: 1
+  p2_count: 2
+  p3_count: 2
+  p4_count: 1
+  p5_count: 1
+  integrity_flags: 6
+  top_topic: USDA recalls 160,000+ lbs of meat over lack of federal inspection — highest risk classification
+  key_themes:
+  - USDA recalls 160,000+ lbs of meat over lack of federal inspection — highest risk classification
+  - H-E-B jalapeño products recalled — Class I Salmonella risk
+  - Moderna begins Phase 1 trial of Ebola vaccine matched to DRC outbreak strain
+  - REM sleep linked to lower risk of 83 diseases — large cohort study
+  - U.S. alcohol use falls for first time since pandemic — but remains above pre-2020 levels
+  - 'Stanford study: bone marrow transplant as treatment approach for mitochondrial disease'
+  - Third glutathione injection recall — endotoxin contamination
+  tools_used:
+  - google_news
+  - google_trends
+  - serpapi
+  tools_unavailable: []
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-09-25.html
+  estimated_cost_usd: 0.5787
+  notes: Recall stories (thyroid, egg, hand soap) correctly suppressed as existing after 2+ consecutive
+    run appearances. Two NEW recalls (meat, jalapeño) retained today. Google Trends signal weak this cycle
+    — News Radar carried actionable load. Site URL not configured; competitor-list fallback used for SERP-gap
+    analysis. Glutathione recall routed to Monitor (P5) due to insufficient sourcing.
 - run_date: '2026-09-24'
   niche: health and wellness
   signals_reviewed: 144

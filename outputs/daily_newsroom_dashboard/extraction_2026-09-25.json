@@ -1,0 +1,377 @@
+{
+  "run_date": "2026-09-25",
+  "niche": "Health & Wellness",
+  "signal_summary": {
+    "total_reviewed": 144,
+    "total_retained": 7,
+    "total_rejected": 137,
+    "tools_active": [
+      "google_news",
+      "google_trends",
+      "serpapi"
+    ],
+    "tools_unavailable": [],
+    "notes": "Recall stories (thyroid, egg, hand soap) correctly suppressed as existing after 2+ consecutive run appearances. Two NEW recalls (meat, jalapeño) retained today. Google Trends signal weak this cycle — News Radar carried actionable load. Site URL not configured; competitor-list fallback used for SERP-gap analysis. Glutathione recall routed to Monitor (P5) due to insufficient sourcing."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "USDA recalls 160,000+ lbs of meat over lack of federal inspection — highest risk classification",
+      "primary_entity": "USDA/FSIS meat recall",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 68,
+      "opportunity_score": 81,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.today.com/health/recall/massive-meat-recall-usda-inspection-false-label-rcna599435"
+      ],
+      "recommended_angle": "What 'lack of inspection' actually means and what shoppers need to check right now — practical, urgent explainer, not a food-safety scare piece.",
+      "why_now": "Breaking today; USDA classified it highest risk. No competitor explainer content exists yet.",
+      "primary_headline": "USDA Recalls 160,000+ Pounds of Meat Over Missing Inspection — Here's What to Check",
+      "next_steps": "Verify FSIS recall notice directly (lot codes, distribution states) before publishing; confirm classification language matches USDA, not just aggregator framing.",
+      "integrity_flags": [
+        "Primary FSIS notice not directly retrieved — confirmed via TODAY.com only. Verify before publishing per breaking-recall exception."
+      ],
+      "trend_score_reason": "Breaking recall with highest-risk USDA classification; TODAY.com tier-2 source confirms within 24h.",
+      "opportunity_score_reason": "High reader urgency (actionable product recall, no existing competitor explainer), strong engagement potential on practical explainer angle.",
+      "discover_score_reason": "Breaking news with immediate consumer relevance; high discovery potential via food/health social shares.",
+      "notes": "⚠️ Medium confidence cap applied per breaking-recall exception; recommend direct FSIS verification before publishing.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "TODAY.com headline in Google News Radar confirms 160,000+ lbs, lack of inspection, USDA highest risk classification"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "immediate",
+      "topic": "H-E-B jalapeño products recalled — Class I Salmonella risk",
+      "primary_entity": "H-E-B jalapeño recall",
+      "signal_type": "recall",
+      "allowed_category": "nutrition and diet science",
+      "trend_strength_score": 64,
+      "opportunity_score": 78,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.dallasnews.com/news/public-health/article/h-e-b-jalape-o-recall-receives-fda-s-highest-22447175.php"
+      ],
+      "recommended_angle": "Direct, actionable: which products, what stores, what to do if you bought them — paired with a broader note on this week's cluster of food-safety Class I recalls.",
+      "why_now": "Escalated to Class I today; regional retailer with wide distribution; complements P1 meat recall cluster.",
+      "primary_headline": "H-E-B Jalapeño Recall Escalates to FDA's Highest Risk Level — What to Know",
+      "next_steps": "Confirm FDA recall notice directly; verify product SKUs/lot numbers before publishing.",
+      "integrity_flags": [
+        "Single secondary source (Dallas News); confirm FDA.gov notice directly before publishing."
+      ],
+      "trend_score_reason": "Class I Salmonella escalation today; part of broader multi-recall cluster this week.",
+      "opportunity_score_reason": "Regional retailer with national distribution; actionable consumer guidance, strong engagement on fast-follow piece.",
+      "discover_score_reason": "Breaking recall with regional + national relevance; strong social share potential for actionable product guidance.",
+      "notes": "⚠️ Single secondary source — recommend direct FDA.gov verification. Part of larger recall cluster narrative.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Dallas News headline in Google News Radar confirms H-E-B jalapeño recall escalated to FDA's highest risk classification over salmonella"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Moderna begins Phase 1 trial of Ebola vaccine matched to DRC outbreak strain",
+      "primary_entity": "Moderna Ebola vaccine",
+      "signal_type": "clinical_trial",
+      "allowed_category": "infectious disease",
+      "trend_strength_score": 50,
+      "opportunity_score": 73,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "update",
+      "source_count": 2,
+      "source_urls": [
+        "https://abcnews.com/Health/moderna-begins-phase-1-clinical-trial-ebola-vaccine/story?id=135365177",
+        "https://www.pbs.org/newshour/world/congo-begins-ebola-vaccinations-for-health-workers-in-the-epicenter-of-the-outbreak"
+      ],
+      "recommended_angle": "Update piece: connect to the ongoing Congo Ebola outbreak/vaccination effort (covered 09/23) — explain what Phase 1 means for timeline and who's protected now vs. later.",
+      "why_now": "New development on active outbreak story — Moderna's first human trial specifically targeting the current epicenter strain; direct newsworthiness tied to ongoing public health crisis.",
+      "primary_headline": "Moderna Starts Human Trial of Ebola Vaccine Targeting Current Outbreak Strain",
+      "next_steps": "Cross-reference ClinicalTrials.gov for trial registration; link to WHO/PBS coverage of the vaccination campaign for continuity.",
+      "integrity_flags": [
+        "Frame trial phase clearly — Phase 1 is safety/dosing, not efficacy confirmation. Avoid implying near-term protection."
+      ],
+      "trend_score_reason": "New clinical trial development on active outbreak story covered 09/23; Phase 1 announcement from tier-2 source.",
+      "opportunity_score_reason": "Natural continuation of high-interest outbreak narrative; explains vaccine trial progress without overstating timeline.",
+      "discover_score_reason": "Tied to ongoing crisis coverage; appeals to readers tracking Ebola developments and vaccine science.",
+      "notes": "No additional integrity flags. Corroborated by ongoing WHO/Congo outbreak context from prior coverage.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "ABC News headline confirms Moderna Phase 1 trial targeting DRC outbreak strain; PBS 09/19 item confirms ongoing Congo Ebola vaccination effort for context"
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "REM sleep linked to lower risk of 83 diseases — large cohort study",
+      "primary_entity": "REM sleep study",
+      "signal_type": "study_or_research",
+      "allowed_category": "sleep science",
+      "trend_strength_score": 50,
+      "opportunity_score": 76,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "low",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.sciencedaily.com/releases/2026/09/260923035930.htm"
+      ],
+      "recommended_angle": "Explain the actual study design and caveat the headline number — lead with cohort design before '83 diseases' claim; flag association not causation.",
+      "why_now": "Fresh study coverage, thin competing explainer content, evergreen sleep-science value.",
+      "primary_headline": "More REM Sleep Linked to Lower Risk of 83 Diseases — What the Study Actually Found",
+      "next_steps": "Identify underlying journal/institution before drafting; single-source confidence is low — recommend same-day secondary-source check.",
+      "integrity_flags": [
+        "Association only — study cannot show causation. Single study, '83 diseases' framing invites scale distortion; requires discipline in lead and expert context."
+      ],
+      "trend_score_reason": "Fresh study release via ScienceDaily; topic has moderate interest but single-source signal.",
+      "opportunity_score_reason": "High reader engagement potential on sleep health; strong SEO opportunity for broad disease-risk queries.",
+      "discover_score_reason": "Moderate discovery potential; appeals to sleep-optimization and disease-prevention audiences.",
+      "notes": "Low confidence due to single ScienceDaily source. Recommend confirming underlying journal/institution and securing expert review before drafting to avoid causation overstatement.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "ScienceDaily headline matches '83 diseases' claim; candidate correctly frames it as association not causation"
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "U.S. alcohol use falls for first time since pandemic — but remains above pre-2020 levels",
+      "primary_entity": "U.S. alcohol consumption trend",
+      "signal_type": "study_or_research",
+      "allowed_category": "public health and epidemiology",
+      "trend_strength_score": 50,
+      "opportunity_score": 68,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://news.keckmedicine.org/us-alcohol-use-falls-for-first-time-since-the-covid-19-pandemic-but-remains-above-pre-pandemic-levels/"
+      ],
+      "recommended_angle": "Trend-reversal data story: what's driving the decline (GLP-1s? sober-curious movement? economics?) with appropriate caveats on self-reported survey data.",
+      "why_now": "New institutional data release from Keck Medicine/USC; no competing coverage yet; strong trend-story angle.",
+      "primary_headline": "U.S. Alcohol Use Falls for First Time Since the Pandemic — But Still Above Pre-2020 Levels",
+      "next_steps": "Identify underlying survey source (NSDUH or equivalent) for direct citation; secure epidemiologist expert for causal-factor context.",
+      "integrity_flags": [],
+      "trend_score_reason": "First-time reversal of multi-year trend since COVID; institutional data release from credible public health source.",
+      "opportunity_score_reason": "Strong trend-narrative angle with broad reader appeal; timely tie-in to public health and behavioral economics.",
+      "discover_score_reason": "Moderate discovery; appeals to public health, substance-use, and wellness audiences.",
+      "notes": "No integrity flags. Single institutional source sufficient for trend-data story; recommend identifying underlying survey for direct citation.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Keck Medicine of USC headline matches claim exactly, including 'still above pre-pandemic levels'"
+      }
+    },
+    {
+      "priority_level": "P4",
+      "publish_timing": "evergreen",
+      "topic": "Stanford study: bone marrow transplant as treatment approach for mitochondrial disease",
+      "primary_entity": "Stanford mitochondrial disease study",
+      "signal_type": "study_or_research",
+      "allowed_category": "chronic disease management",
+      "trend_strength_score": 52,
+      "opportunity_score": 68,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "low",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://med.stanford.edu/news/all-news/2026/09/stem-cell-mitochondrial-disease.html"
+      ],
+      "recommended_angle": "Narrow but durable explainer — what mitochondrial disease is, why this approach is unexpected, and how early-stage this finding is.",
+      "why_now": "Novel institutional finding, thin coverage elsewhere, evergreen value as rare-disease resource.",
+      "primary_headline": "Stanford Study: Bone Marrow Transplants Show Surprising Promise for Mitochondrial Disease",
+      "next_steps": "Confirm study publication (journal/DOI) before drafting; single-source confidence is low — same-day secondary-source check recommended.",
+      "integrity_flags": [
+        "Single institutional source — confirm peer-reviewed publication status and trial stage before framing as established treatment. Do not imply near-term clinical availability."
+      ],
+      "trend_score_reason": "Institutional research announcement from tier-1 academic source; novel treatment approach adds discovery value.",
+      "opportunity_score_reason": "Rare-disease explainer with strong evergreen SEO potential; unlikely to have competing coverage.",
+      "discover_score_reason": "High discover potential for rare-disease and mitochondrial-health audiences; strong educational value.",
+      "notes": "Low confidence due to single Stanford Medicine source. Recommend confirming peer-reviewed publication and trial stage (preclinical vs. clinical) before drafting. Do not frame as breakthrough treatment.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Stanford Medicine headline confirms bone marrow transplants as 'surprising way to treat mitochondrial disease'"
+      }
+    },
+    {
+      "priority_level": "P5",
+      "publish_timing": "monitor",
+      "topic": "Third glutathione injection recall — endotoxin contamination",
+      "primary_entity": "glutathione injection recall",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 0,
+      "opportunity_score": 0,
+      "discover_score": 0,
+      "urgency": "evergreen",
+      "confidence": "low",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://medshadow.org/drug-updates-recalls/fda-recalls-and-warnings/third-glutathione-injection-recall-endotoxin-contamination/"
+      ],
+      "recommended_angle": "Hold for stronger sourcing — single secondary source insufficient for breaking recall.",
+      "why_now": "Potential recall announcement, but insufficient primary-source corroboration to publish.",
+      "primary_headline": "[HELD] Third Glutathione Injection Recall — Endotoxin Contamination",
+      "next_steps": "Route to Monitor tier. Await FDA.gov direct confirmation or second tier-1 source before escalating to P4 or higher.",
+      "integrity_flags": [
+        "Insufficient primary-source corroboration — only one weak secondary source (MedShadow). Breaking-recall exception requires 3+ credible sources including FDA/USDA/AP/Reuters-tier outlet."
+      ],
+      "trend_score_reason": "Held pending verification — no score assigned at Monitor tier.",
+      "opportunity_score_reason": "Held pending verification — no score assigned at Monitor tier.",
+      "discover_score_reason": "Held pending verification — no score assigned at Monitor tier.",
+      "notes": "Routed to Skill 02b Monitor queue per insufficient sourcing. Do not publish until primary FDA notice or 2+ additional tier-1 sources confirm recall classification and scope.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "MedShadow Foundation is the only source in the radar for this recall, matching the candidate's own assessment that sourcing is insufficient to publish"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "FDA thyroid recall Class I upgrade",
+      "reason": "existing"
+    },
+    {
+      "topic": "19M-egg Salmonella recall Class I",
+      "reason": "existing"
+    },
+    {
+      "topic": "Hand soap recall Class II",
+      "reason": "existing"
+    },
+    {
+      "topic": "Nature: girls' mental health outcomes",
+      "reason": "existing"
+    },
+    {
+      "topic": "Clinical trial exclusion of Black/pregnant patients",
+      "reason": "existing"
+    },
+    {
+      "topic": "PATHFINDER 2 multi-cancer blood test",
+      "reason": "existing"
+    },
+    {
+      "topic": "GLP-1 use without medical need",
+      "reason": "existing"
+    },
+    {
+      "topic": "Pro-nicotine wellness rebrand (The Conversation piece)",
+      "reason": "existing"
+    },
+    {
+      "topic": "CDC Youth Health in Focus (YRBS data)",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Stroke promotes glioma growth study",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Screwworm (USDA livestock biosecurity)",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Healthcare insurance premium/affordability stories",
+      "reason": "off_category"
+    },
+    {
+      "topic": "WHO AI ethics oversight in health research",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Google Health app safety tools",
+      "reason": "off_category"
+    },
+    {
+      "topic": "OpenAI breach of Australian health department",
+      "reason": "off_category"
+    },
+    {
+      "topic": "FDA nominee Senate hearing",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Baltimore men's health event",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Haines AK healthcare funding",
+      "reason": "off_category"
+    },
+    {
+      "topic": "UC Davis institutional health news",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Coast Guard EAP program",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Dartmouth health initiative",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Marquette wellness program",
+      "reason": "off_category"
+    }
+  ],
+  "fact_check_summary": {
+    "accurate": 7
+  },
+  "run_cost": {
+    "total_usd": 0.5787,
+    "calls": [
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 10903,
+        "output_tokens": 20140,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 42559,
+        "estimated_cost_usd": 0.4944
+      },
+      {
+        "model": "claude-haiku-4-5",
+        "input_tokens": 8767,
+        "output_tokens": 3507,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0263
+      },
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 12222,
+        "output_tokens": 1424,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.058
+      }
+    ]
+  }
+}
