@@ -1,0 +1,44 @@
+{
+  "run_date": "2026-09-26",
+  "niche": "Health & Wellness",
+  "signal_summary": {
+    "total_reviewed": 0,
+    "total_retained": 0,
+    "total_rejected": 0,
+    "tools_active": [
+      "exa_search",
+      "rss_reader",
+      "reddit",
+      "competitor_scrape"
+    ],
+    "tools_unavailable": [
+      "serpapi_google_news",
+      "serpapi_google_news_light",
+      "serpapi_google_trends"
+    ],
+    "notes": "SerpAPI circuit breaker tripped for google_news, google_news_light, and google_trends engine groups mid-run. No Google News Radar block or Google Trends 7-day interest data delivered. This is a tooling outage, not a signal-free day. Per operating rules, no candidates fabricated from Recent Coverage context (last-7-days material already published). Recommend re-running prefetch once SerpAPI service recovers, or supplying manual headline data via Signal Review workflow. Recurring theme noted: food/drug recalls (meat, jalapeño/Salmonella, thyroid tablets, eggs, hand soap, glutathione injections) appeared in nearly every run this week — flag for saturation/staleness check once live signal collection resumes."
+  },
+  "candidates": [],
+  "rejected": [],
+  "run_cost": {
+    "total_usd": 0.2642,
+    "calls": [
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 2557,
+        "output_tokens": 6064,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 42559,
+        "estimated_cost_usd": 0.2582
+      },
+      {
+        "model": "claude-haiku-4-5",
+        "input_tokens": 4589,
+        "output_tokens": 280,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.006
+      }
+    ]
+  }
+}

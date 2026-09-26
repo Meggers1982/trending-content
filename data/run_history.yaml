@@ -3,6 +3,38 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-09-26'
+  niche: Health & Wellness
+  signals_reviewed: 0
+  topics_retained: 0
+  topics_rejected: 0
+  p1_count: 0
+  p2_count: 0
+  p3_count: 0
+  p4_count: 0
+  p5_count: 0
+  integrity_flags: 0
+  top_topic: ''
+  key_themes: []
+  tools_used:
+  - exa_search
+  - rss_reader
+  - reddit
+  - competitor_scrape
+  tools_unavailable:
+  - serpapi_google_news
+  - serpapi_google_news_light
+  - serpapi_google_trends
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-09-26.html
+  estimated_cost_usd: 0.2642
+  notes: 'SerpAPI circuit breaker tripped for google_news, google_news_light, and google_trends engine
+    groups mid-run. No Google News Radar block or Google Trends 7-day interest data delivered. This is
+    a tooling outage, not a signal-free day. Per operating rules, no candidates fabricated from Recent
+    Coverage context (last-7-days material already published). Recommend re-running prefetch once SerpAPI
+    service recovers, or supplying manual headline data via Signal Review workflow. Recurring theme noted:
+    food/drug recalls (meat, jalapeño/Salmonella, thyroid tablets, eggs, hand soap, glutathione injections)
+    appeared in nearly every run this week — flag for saturation/staleness check once live signal collection
+    resumes.'
 - run_date: '2026-09-25'
   niche: Health & Wellness
   signals_reviewed: 144
