@@ -3,6 +3,37 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-09-27'
+  niche: Health & Wellness
+  signals_reviewed: 144
+  topics_retained: 2
+  topics_rejected: 19
+  p1_count: 0
+  p2_count: 2
+  p3_count: 0
+  p4_count: 0
+  p5_count: 0
+  integrity_flags: 2
+  top_topic: Mayo Clinic PATHFINDER2 multi-cancer early detection blood test detects 17 cancer types
+  key_themes:
+  - Mayo Clinic PATHFINDER2 multi-cancer early detection blood test detects 17 cancer types
+  - Pro-nicotine 'wellness' movement rebrand — pulmonologist clinical pushback
+  tools_used:
+  - serpapi_google_trends
+  - serpapi_google_news
+  - competitor_list_fallback
+  tools_unavailable:
+  - content_database
+  - live_reddit_pull
+  - live_social_pull
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-09-27.html
+  estimated_cost_usd: 0.6147
+  notes: Unusually thin retained list driven by strict Skill 02b gating (3 new recall claims all failed
+    verification for lack of corroboration/primary-source traceability) and heavy duplicate rate from
+    active recall/clinical-trial-equity cycle already covered in last 7 days. Gut-health rising search
+    interest and AI-journal-integrity story are real but did not clear scoring thresholds — routed to
+    Monitor per operating philosophy. Site URL not configured; duplicate detection relied on Recent Coverage
+    list and competitor-list fallback.
 - run_date: '2026-09-26'
   niche: Health & Wellness
   signals_reviewed: 0
