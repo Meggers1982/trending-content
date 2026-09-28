@@ -1,0 +1,242 @@
+{
+  "run_date": "2026-09-28",
+  "niche": "Health & Wellness",
+  "signal_summary": {
+    "total_reviewed": 144,
+    "total_retained": 2,
+    "total_rejected": 33,
+    "tools_active": [
+      "serpapi_news",
+      "google_news",
+      "google_trends",
+      "competitor_list_fallback"
+    ],
+    "tools_unavailable": [
+      "reddit_live",
+      "social_search_live",
+      "rss_direct"
+    ],
+    "notes": "5 topics triggered Skill 02b gating (3 recalls, 1 study, 1 clinical trial); 4 routed to Monitor for thin sourcing (single-outlet, no primary notice/DOI retrievable), 1 passed with Medium confidence cap under breaking-recall exception. Neko Health full-body-scan signal dropped to Monitor — Trends-only, no corroborating news, trend_strength 48 below 50 minimum. Recurring FDA-recall category flagged for editorial awareness (3rd+ consecutive day) — each instance distinct product/hazard, not duplicate story. Reddit/social/RSS collectors not independently queried this run — relied on injected SerpAPI News Radar + Trends prefetch as primary sources."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "FDA nationwide recall of blood pressure medication (chlorthalidone) after failed dissolution testing",
+      "primary_entity": "Chlorthalidone (blood pressure medication)",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 82,
+      "opportunity_score": 78,
+      "discover_score": 5,
+      "urgency": "now",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "source_urls": [
+        "https://www.wusa9.com/article/news/nation-world/blood-pressure-medication-recall/507-756358e0-3933-4870-a1f6-5f25d9512046",
+        "https://www.goodhousekeeping.com/health/a73839435/fda-new-blood-pressure-medicine-recall/"
+      ],
+      "recommended_angle": "What the failed dissolution test actually means for patients currently taking this medication — practical next-steps framing, not just recall-notice repetition.",
+      "why_now": "Breaking today (WUSA9, 9/28); Google Trends 'Trending Now' confirms real-time breakout search interest tied to this exact story.",
+      "primary_headline": "Blood Pressure Medication Recalled Nationwide — What 'Failed Dissolution Testing' Means for Patients",
+      "next_steps": "Confirm FDA.gov enforcement notice directly (lot numbers, manufacturer, distribution scope) before publishing; do not rely solely on secondary coverage. Pull board-certified cardiologist or clinical pharmacist expert to explain dissolution-testing failure vs. contamination-based recalls.",
+      "integrity_flags": [
+        "Confidence capped at Medium — primary FDA.gov notice not yet directly retrieved, verification via named outlets only. Confirm before copy locks."
+      ],
+      "trend_score_reason": "Google Trends Trending Now breakout + 2 named tier-2 outlets (WUSA9, Good Housekeeping) same-day corroboration on failed dissolution testing.",
+      "opportunity_score_reason": "Clear patient-safety angle with actionable guidance; high audience relevance to medication safety and health decision-making.",
+      "discover_score_reason": "Breaking recall news with real-time search interest spike and actionable patient guidance makes this highly discoverable content.",
+      "notes": "Breaking-recall exception applied. Primary FDA.gov notice unverified — must confirm before final publish. Do not stop taking medication abruptly messaging essential.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "WUSA9 and Good Housekeeping headlines in Google News Radar; Google Trends 'Trending Now' entry for 'fda chlorthalidone dissolution testing recall' with Good Housekeeping sourcing"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Senate passes mental health reform bill for pilots and air traffic controllers",
+      "primary_entity": "Mental Health in Aviation Act",
+      "signal_type": "policy_or_regulatory_change",
+      "allowed_category": "mental health and psychology",
+      "trend_strength_score": 68,
+      "opportunity_score": 66,
+      "discover_score": 3,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "source_urls": [
+        "https://www.reuters.com/business/healthcare-pharmaceuticals/us-senate-approves-legislation-address-pilot-air-traffic-control-mental-health-2026-09-25/",
+        "https://www.alpa.org/press-room/2026/09/pilot-backed-mental-health-reforms-clear-senate"
+      ],
+      "recommended_angle": "Why pilots have historically hidden mental health struggles for fear of losing their license — and what this bill actually changes about disclosure and treatment access.",
+      "why_now": "Senate passage 9/25 (Reuters, ALPA); Google Trends shows the bill name itself as a rising related query under 'mental health,' confirming real audience search interest beyond wire coverage.",
+      "primary_headline": "Pilots Have Hidden Mental Health Struggles for Decades. A New Law Could Change That.",
+      "next_steps": "Pull direct bill text/summary from congress.gov to confirm specific provisions (e.g., certification protections) rather than relying only on press coverage. Secure aviation medical examiner or occupational health psychologist expert.",
+      "integrity_flags": [
+        "Borderline category pass — confirm bill provisions directly from congress.gov before final copy to avoid overstating scope."
+      ],
+      "trend_score_reason": "Senate passage with dual-source corroboration (Reuters tier 1, ALPA tier 2) plus rising mental-health-related search queries confirm audience interest.",
+      "opportunity_score_reason": "Clear health-equity angle addressing occupational mental-health stigma; broadly relevant to workplace wellness and healthcare access conversations.",
+      "discover_score_reason": "Policy explainer with human-interest angle on hidden stigma; moderate discoverability as secondary health trend compared to breaking news.",
+      "notes": "Borderline category call — passed audience-relevance and clear-health-angle criteria. Monitor for any partisan-opinion drift in framing. Bill provisions must be verified from congress.gov before publication.",
+      "fact_check": {
+        "verdict": "minor_issues",
+        "issues": [
+          "Headline's claim that pilots have 'hidden mental health struggles for decades' is a historical/causal framing not directly documented in the Reuters or ALPA coverage, which only confirm bill passage."
+        ],
+        "checked_against": "Reuters and ALPA headlines on Senate passage of pilot/ATC mental health legislation; Google Trends rising related queries 'pilot mental health bill' and 'john a. hauser mental health in aviation act' under mental health"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "Thyroid tablet Class I recall upgrade",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "H-E-B jalapeño Salmonella recall",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "PATHFINDER2 multi-cancer blood test",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Pro-nicotine wellness rebrand",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "GLP-1 use without medical need",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "REM sleep / 83 diseases study",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Alcohol use decline post-pandemic",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Bone marrow transplant / mitochondrial disease",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Clinical trials exclude Black patients",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "OpenAI/Australia health dept. breach",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Global clinical trials market report",
+      "reason": "off_category"
+    },
+    {
+      "topic": "DOJ mental health clinic fraud conviction",
+      "reason": "off_category"
+    },
+    {
+      "topic": "PBS healthcare costs & midterms",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Pfizer/Oracle Health/Well Health AI platforms",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Campus wellness fair (UAMS)",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Campus wellness fair (Carthage)",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Campus wellness fair (CWRU)",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Campus wellness fair (UNCW)",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Community wellness fair (additional)",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Community wellness fair (additional)",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Google Health app safety tools",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "HHS tribal nutrition grant",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Neko Health full-body-scan rising search interest",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Baystate brain aneurysm trial PR",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "FDA cinnamon recall — elevated lead levels",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "FDA sugar recall — 1.7M lbs, wheat allergen, Class II",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Insomnia linked to stroke/hospitalization risk study",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Radiotherapy reduces atypical meningioma recurrence — clinical trial",
+      "reason": "weak_signal"
+    }
+  ],
+  "fact_check_summary": {
+    "accurate": 1,
+    "minor_issues": 1
+  },
+  "run_cost": {
+    "total_usd": 0.5424,
+    "calls": [
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11060,
+        "output_tokens": 18301,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 42559,
+        "estimated_cost_usd": 0.4673
+      },
+      {
+        "model": "claude-haiku-4-5",
+        "input_tokens": 7515,
+        "output_tokens": 1850,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0168
+      },
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 10737,
+        "output_tokens": 1737,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0583
+      }
+    ]
+  }
+}

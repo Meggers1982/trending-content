@@ -3,6 +3,40 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-09-28'
+  niche: Health & Wellness
+  signals_reviewed: 144
+  topics_retained: 2
+  topics_rejected: 28
+  p1_count: 1
+  p2_count: 1
+  p3_count: 0
+  p4_count: 0
+  p5_count: 0
+  integrity_flags: 2
+  top_topic: FDA nationwide recall of blood pressure medication (chlorthalidone) after failed dissolution
+    testing
+  key_themes:
+  - FDA nationwide recall of blood pressure medication (chlorthalidone) after failed dissolution testing
+  - Senate passes mental health reform bill for pilots and air traffic controllers
+  tools_used:
+  - serpapi_news
+  - google_news
+  - google_trends
+  - competitor_list_fallback
+  tools_unavailable:
+  - reddit_live
+  - social_search_live
+  - rss_direct
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-09-28.html
+  estimated_cost_usd: 0.5424
+  notes: 5 topics triggered Skill 02b gating (3 recalls, 1 study, 1 clinical trial); 4 routed to Monitor
+    for thin sourcing (single-outlet, no primary notice/DOI retrievable), 1 passed with Medium confidence
+    cap under breaking-recall exception. Neko Health full-body-scan signal dropped to Monitor — Trends-only,
+    no corroborating news, trend_strength 48 below 50 minimum. Recurring FDA-recall category flagged for
+    editorial awareness (3rd+ consecutive day) — each instance distinct product/hazard, not duplicate
+    story. Reddit/social/RSS collectors not independently queried this run — relied on injected SerpAPI
+    News Radar + Trends prefetch as primary sources.
 - run_date: '2026-09-27'
   niche: Health & Wellness
   signals_reviewed: 144
