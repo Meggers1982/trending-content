@@ -3,6 +3,39 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-09-29'
+  niche: health and wellness
+  signals_reviewed: 144
+  topics_retained: 3
+  topics_rejected: 21
+  p1_count: 1
+  p2_count: 2
+  p3_count: 0
+  p4_count: 0
+  p5_count: 0
+  integrity_flags: 3
+  top_topic: FDA classifies nationwide chlorthalidone blood pressure medication recall as Class II risk
+  key_themes:
+  - FDA classifies nationwide chlorthalidone blood pressure medication recall as Class II risk
+  - California's new non-UPF food label collides with Stanford Medicine findings that cutting ultra-processed
+    food from school menus is harder than expected
+  - Will Reeve reveals testicular cancer diagnosis — reframed around symptoms, screening, and survival
+    rates
+  tools_used:
+  - serpapi_news
+  - serpapi_trends
+  - google_news_radar
+  tools_unavailable:
+  - reddit_live
+  - twitter_live
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-09-29.html
+  estimated_cost_usd: 0.6843
+  notes: 'Recurring themes flagged: PATHFINDER2 multi-cancer test (3rd consecutive appearance) and pro-nicotine
+    wellness rebrand (2nd appearance) show editorial fatigue with no new development — recommend suppressing
+    further coverage unless materially new data emerges. Three topics moved to Monitor (E. coli outbreak,
+    sugar recall, Medicaid meal-delivery) due to single-source/freshness gaps rather than lack of merit;
+    added to deferred_topics.yaml with 3-day recheck. Google Trends and Google News Radar both available
+    via SerpAPI pre-fetch; site_url not configured, competitor-list fallback used.'
 - run_date: '2026-09-28'
   niche: Health & Wellness
   signals_reviewed: 144
