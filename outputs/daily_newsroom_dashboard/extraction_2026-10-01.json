@@ -1,0 +1,227 @@
+{
+  "run_date": "2026-10-01",
+  "niche": "Health & Wellness",
+  "signal_summary": {
+    "total_reviewed": 150,
+    "total_retained": 3,
+    "total_rejected": 147,
+    "tools_active": [
+      "web_search",
+      "google_news",
+      "google_trends",
+      "serpapi"
+    ],
+    "tools_unavailable": [
+      "reddit_api",
+      "social_search"
+    ],
+    "notes": "Google News Radar's FDA-recall cluster (chlorthalidone, thyroid, sugar) is high-volume but fully duplicative of the last 7 days' coverage — judgment call to suppress rather than re-surface, since no new casualty/class/dosage development was found. Wellness-fair/celebrity cluster (11 items) rejected as a block per category_rules. Trends-only candidates without news corroboration (sean o'mara diet, neko health, purple yam) held to weak-signal standard. FDA recall volume remains elevated for a 5th consecutive day — consider standing evergreen explainer as P4 candidate in future run."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "HHS and ARPA-H launch SURPASS program to accelerate clinical trials with AI",
+      "primary_entity": "HHS / ARPA-H SURPASS Program",
+      "signal_type": "policy_or_regulatory_change",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 82,
+      "opportunity_score": 82,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 8,
+      "source_urls": [
+        "https://www.hhs.gov/press-room/hhs-arpa-h-launch-surpass-modernize-clinical-trials.html",
+        "https://www.statnews.com/2026/09/30/hhs-arpa-h-clinical-trials-artificial-intelligence-surpass-program/",
+        "https://www.axios.com/2026/09/30/hhs-clinical-trials-redesign"
+      ],
+      "recommended_angle": "What SURPASS actually changes for patients trying to access a clinical trial — not the policy press release, the practical access story",
+      "why_now": "HHS/ARPA-H announced 9/30; STAT, Axios, BioPharma Dive, and KUT all filed same-day/next-day coverage — a live, converging national story with no consumer-facing explainer yet",
+      "primary_headline": "HHS Just Launched a Program to Speed Up Clinical Trials — Here's What That Means If You're Trying to Get Into One",
+      "next_steps": "Assign P1 writer today; full brief above; verify SURPASS program scope against HHS.gov primary notice before publishing",
+      "integrity_flags": [
+        "Frame as a program launch, not a completed outcome — avoid implying trials will immediately speed up; frame as an initiative with a stated goal.",
+        "Note political context (RFK Jr./HHS framing vs. Chinese biotech competition per BioPharma Dive) without editorializing — stick to patient-access facts."
+      ],
+      "trend_score_reason": "Tier-1 primary source (HHS.gov) plus 7 corroborating outlets across news/trade/local in 24h convergence",
+      "opportunity_score_reason": "Clear SERP gap on consumer-facing 'what this means for patients' explainer; high entity clarity and natural AI query fit",
+      "discover_score_reason": "High entity density (SURPASS/HHS/ARPA-H) with clear informational search demand and primary source authority",
+      "notes": "Strongest story of the run — also ties into previously-covered thread (clinical trial access for Black and pregnant patients, 9/24) — consider internal link.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "HHS.gov press release (9/30), STAT (9/30), Axios (9/30), BioPharma Dive (10/1), KUT (10/1) in Google News Radar"
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Stanford Medicine study shows promise for a new lymphedema drug",
+      "primary_entity": "Stanford Medicine lymphedema drug trial",
+      "signal_type": "study_or_research",
+      "allowed_category": "chronic disease management",
+      "trend_strength_score": 58,
+      "opportunity_score": 79,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "low",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://med.stanford.edu/news/all-news/2026/09/lymphedema-drug.html"
+      ],
+      "recommended_angle": "What this drug does differently than existing lymphedema management options — and how far it is from patient availability",
+      "why_now": "Stanford Medicine published 9/30; no other outlet has picked it up yet — early-mover opportunity on a thin SERP, but single-source risk",
+      "primary_headline": "A New Drug Is Showing Promise for Lymphedema — Here's What the Research Actually Shows",
+      "next_steps": "Confirm DOI/journal citation from Stanford release before assigning; hold for 48h to see if wire pickup corroborates",
+      "integrity_flags": [
+        "Single institutional source — verify trial phase and DOI before publishing. Do not imply near-term patient availability."
+      ],
+      "trend_score_reason": "Single institutional source (Stanford) with no secondary news corroboration yet; early-mover opportunity but below 60-point corroboration threshold",
+      "opportunity_score_reason": "Thin SERP for 'new lymphedema drug' with clear patient demand; institutional credibility (Stanford Medicine) supports strong opportunity despite low trend signals",
+      "discover_score_reason": "Single high-authority source with specialist audience fit; 'new lymphedema drug' is specific entity with direct search demand",
+      "notes": "Passed Skill 02b with medium-confidence cap on primary sourcing. Hold for 48h for wire corroboration before full assignment.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Stanford Medicine article (9/30) in Google News Radar, confirmed as single source with no other outlet pickup"
+      }
+    },
+    {
+      "priority_level": "P5",
+      "publish_timing": "monitor",
+      "topic": "NIH-funded trial: antiviral drug did not improve Long COVID symptoms",
+      "primary_entity": "NIH Long COVID antiviral trial",
+      "signal_type": "clinical_trial",
+      "allowed_category": "infectious disease",
+      "trend_strength_score": 45,
+      "opportunity_score": 74,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "low",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.nih.gov/news-events/nih-research-matters/antiviral-drug-did-not-improve-long-covid-symptoms"
+      ],
+      "recommended_angle": "N/A — monitor only",
+      "why_now": "NIH.gov posted 9/29; no other outlet has corroborated. Trend strength below the 50-point pass threshold on single-source basis.",
+      "primary_headline": "N/A — monitor only",
+      "next_steps": "Recheck in 3 days for wire pickup; promote to full brief only if a second outlet corroborates or framing crystallizes around 'what Long COVID patients should try instead'",
+      "integrity_flags": [],
+      "trend_score_reason": "Single-source institutional announcement (NIH.gov) with no news-cycle convergence or secondary outlet corroboration; negative trial result lacks narrative framing yet",
+      "opportunity_score_reason": "High audience demand for Long COVID solutions; negative trial result is newsworthy but needs secondary sourcing to move past monitor status",
+      "discover_score_reason": "Single institutional source with specialist health audience; lacks the broader search signal convergence needed for higher discovery scoring",
+      "notes": "Passed 02b (primary source is NIH.gov itself) but held at Trend Scorer stage — single-source, no news-cycle convergence yet. Recheck in 3 days for wire pickup.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "NIH.gov article (9/29) in Google News Radar, confirmed as single source with no corroborating coverage"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "FDA chlorthalidone blood pressure medication recall",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "FDA thyroid tablet (Vitruvias) Class I recall",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "FDA sugar contamination recall",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Clinical trials exclude Black patients (St. Louis American)",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Stanford UPF school menu follow-up",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "HealthPartners/Essentia Health merger",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Texas mental health clinic fraud conviction (DOJ)",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Healthcare costs & midterm voters (PBS)",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Community wellness fairs (CDCR, Marquette, UAMS, Fredonia, Champaign, Inter Miami, Santa Barbara, KCRA, Buffalo Bills, American Legion, Lutheran Church)",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Julianne Hough beauty & wellness interview",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Apyx Medical clinical study (Renuvion)",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Nature Reproducibility in biomedical research",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Insomnia linked to stroke/hospitalization risk",
+      "reason": "unverified_claim"
+    },
+    {
+      "topic": "Sean O'Mara diet trending query",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Neko health trending query",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Purple yam trending query",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Health insurance giant trending query",
+      "reason": "weak_signal"
+    }
+  ],
+  "fact_check_summary": {
+    "accurate": 3
+  },
+  "run_cost": {
+    "total_usd": 0.572,
+    "calls": [
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11145,
+        "output_tokens": 20854,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 42559,
+        "estimated_cost_usd": 0.5058
+      },
+      {
+        "model": "claude-haiku-4-5",
+        "input_tokens": 9001,
+        "output_tokens": 2040,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0192
+      },
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 10967,
+        "output_tokens": 943,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.047
+      }
+    ]
+  }
+}
