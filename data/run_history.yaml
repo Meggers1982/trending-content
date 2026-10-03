@@ -3,6 +3,35 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-10-03'
+  niche: Health & Wellness
+  signals_reviewed: 144
+  topics_retained: 1
+  topics_rejected: 13
+  p1_count: 0
+  p2_count: 0
+  p3_count: 1
+  p4_count: 0
+  p5_count: 0
+  integrity_flags: 1
+  top_topic: 'Prebiotics vs. Probiotics: What Your Gut Actually Needs, According to Microbiome Research'
+  key_themes:
+  - 'Prebiotics vs. Probiotics: What Your Gut Actually Needs, According to Microbiome Research'
+  tools_used:
+  - serpapi_news
+  - serpapi_trends
+  - google_news_radar
+  tools_unavailable:
+  - reddit_api
+  - social_search
+  - content_database
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-10-03.html
+  estimated_cost_usd: 0.5048
+  notes: 'Thin actionable day. Google Trends diet/fitness categories contaminated with NYT Connections
+    puzzle answers and unrelated shopping queries treated as noise. Three recurring themes flagged: Long
+    COVID coverage (3rd consecutive day), HHS/ARPA-H clinical trial initiative (3rd consecutive day),
+    chlorthalidone recall (5th day of coverage) — all checked for staleness. Self-check skipped due to
+    missing site_url; competitor-list fallback used for SERP gap analysis.'
 - run_date: '2026-10-02'
   niche: Health & Wellness
   signals_reviewed: 144

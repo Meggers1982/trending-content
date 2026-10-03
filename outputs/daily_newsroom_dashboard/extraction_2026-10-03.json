@@ -1,0 +1,146 @@
+{
+  "run_date": "2026-10-03",
+  "niche": "Health & Wellness",
+  "signal_summary": {
+    "total_reviewed": 144,
+    "total_retained": 1,
+    "total_rejected": 143,
+    "tools_active": [
+      "serpapi_news",
+      "serpapi_trends",
+      "google_news_radar"
+    ],
+    "tools_unavailable": [
+      "reddit_api",
+      "social_search",
+      "content_database"
+    ],
+    "notes": "Thin actionable day. Google Trends diet/fitness categories contaminated with NYT Connections puzzle answers and unrelated shopping queries treated as noise. Three recurring themes flagged: Long COVID coverage (3rd consecutive day), HHS/ARPA-H clinical trial initiative (3rd consecutive day), chlorthalidone recall (5th day of coverage) — all checked for staleness. Self-check skipped due to missing site_url; competitor-list fallback used for SERP gap analysis."
+  },
+  "candidates": [
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Prebiotics vs. Probiotics: What Your Gut Actually Needs, According to Microbiome Research",
+      "primary_entity": "Gut microbiome",
+      "signal_type": "rising_search_interest",
+      "allowed_category": "gut health and microbiome",
+      "trend_strength_score": 53,
+      "opportunity_score": 68,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "low",
+      "content_status": "new",
+      "source_count": 2,
+      "source_urls": [
+        "https://www.nih.gov/news-events/nih-research-matters",
+        "https://www.health.harvard.edu/topics/gut-health"
+      ],
+      "recommended_angle": "Most coverage conflates prebiotics and probiotics; differentiate functionally and tie to gut-brain axis mental-health angle competitors skip",
+      "why_now": "Rising Google Trends cluster signals renewed search demand; no major outlet currently connects the mental-health angle in the same piece",
+      "primary_headline": "Prebiotics vs. Probiotics: What Your Gut Actually Needs, According to Microbiome Research",
+      "next_steps": "Draft this week; verify NIH/Harvard Health source URLs before publish; work with RDN for existing published quotes per Skill 08 sourcing rules",
+      "integrity_flags": [
+        "⚠️ Gut-brain axis research is largely observational/early-stage — avoid implying probiotic supplementation treats anxiety or depression; note association, not causation"
+      ],
+      "trend_score_reason": "Gut health Google Trends latest=61 steady with rising related queries (prebiotic vs probiotic, kombucha benefits, gut-brain axis); no news corroboration but tier-1 sourcing available",
+      "opportunity_score_reason": "High category fit (core) and audience relevance; SERP under-coverage moderate — topic common but existing coverage rarely connects to gut-brain/mental-health angle",
+      "discover_score_reason": "Specific, evergreen, natural AI-query format (what's the difference between prebiotics and probiotics); primary sourcing available via NIH/Harvard",
+      "notes": "Single-channel signal (Google Trends search only) with no corroborating news coverage — acceptable for low-risk evergreen lifestyle topic. Estimated 1,000–1,200 words. SEO difficulty: Medium. Primary keyword: prebiotics vs probiotics.",
+      "fact_check": {
+        "verdict": "minor_issues",
+        "issues": [
+          "The 'why now' claim that competitors haven't connected the gut-brain/mental-health angle is not verifiable from the evidence; it's an assumption, not a confirmed gap",
+          "Claimed sources (NIH research-matters, Harvard health topics) are generic topic pages rather than specific studies backing the gut-brain mental-health claim"
+        ],
+        "checked_against": "Google Trends 'gut health' interest block showing 'prebiotic vs probiotic' and 'gut microbiome and mental health' as rising related queries; no corresponding item in Google News Radar"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "Chlorthalidone blood pressure recall (continued coverage)",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "HHS/ARPA-H SURPASS + UT Dell Medical partnership",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Long COVID / healthcare workers study",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Nicotine wellness rebrand (WIRED)",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Mayo Clinic PATHFINDER2 multi-cancer test",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "WHO global health landscape estimates",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Werner helicase inhibitor Phase 1 trial",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Energy saver mode preclinical longevity study",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "TMEM63B protein / cell membrane study",
+      "reason": "off_category"
+    },
+    {
+      "topic": "DOJ mental health clinic fraud case",
+      "reason": "off_category"
+    },
+    {
+      "topic": "CBPP health coverage tracker and health insurance policy items",
+      "reason": "brand_safety"
+    },
+    {
+      "topic": "Diet/fitness Google Trends contaminated queries",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Local wellness-fair and campus-event announcements",
+      "reason": "off_category"
+    }
+  ],
+  "fact_check_summary": {
+    "minor_issues": 1
+  },
+  "run_cost": {
+    "total_usd": 0.5048,
+    "calls": [
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11021,
+        "output_tokens": 17215,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 42559,
+        "estimated_cost_usd": 0.4509
+      },
+      {
+        "model": "claude-haiku-4-5",
+        "input_tokens": 6610,
+        "output_tokens": 990,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0116
+      },
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 10299,
+        "output_tokens": 757,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0423
+      }
+    ]
+  }
+}
