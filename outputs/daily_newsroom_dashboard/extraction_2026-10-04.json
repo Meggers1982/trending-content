@@ -1,0 +1,243 @@
+{
+  "run_date": "2026-10-04",
+  "niche": "Health & Wellness",
+  "signal_summary": {
+    "total_reviewed": 144,
+    "total_retained": 3,
+    "total_rejected": 141,
+    "tools_active": [
+      "web_search",
+      "google_news",
+      "google_trends",
+      "serpapi"
+    ],
+    "tools_unavailable": [],
+    "notes": "Google News Radar dominated by policy/insurance/local-event/duplicate coverage of already-reported stories (HHS SURPASS, chlorthalidone recall, CA non-UPF label, NIH Long COVID). Only one genuinely new breaking story (salad dressing recall) and one new evergreen study angle (walking speed/longevity) cleared both thresholds. GLP-1 weight-loss drug cluster retained on Trends strength alone, confidence capped Low pending direct news sourcing. site_url not configured — self-check skipped; competitor list used for SERP gap context instead."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "FDA Class I recall — Salata salad dressing (Salmonella)",
+      "primary_entity": "Salata / FDA",
+      "signal_type": "recall",
+      "allowed_category": "food safety",
+      "trend_strength_score": 65,
+      "opportunity_score": 82,
+      "discover_score": 4,
+      "urgency": "now",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "source_urls": [
+        "https://www.nytimes.com/2026/10/03/health/fda-recall-salata-salad-dressing-salmonella.html",
+        "https://www.nbcnews.com/video/shorts/fda-issues-highest-level-recall-of-salad-dressing-270903877823"
+      ],
+      "recommended_angle": "Explain what Class I actually means (vs. the just-covered Class II chlorthalidone recall), symptoms to watch for, and how to check/return the product — comparison framing differentiates from pure news recap.",
+      "why_now": "FDA escalated this recall to its highest health-risk classification 10/03; NYT and NBC both confirmed within 24–48 hours. Distinct new story, not a continuation of the Sept. 28 blood-pressure medication recall.",
+      "primary_headline": "FDA Issues Highest-Risk Recall for Salata Salad Dressing Over Salmonella Contamination",
+      "next_steps": "Confirm direct FDA.gov enforcement link before publish; do not run on secondary sourcing alone.",
+      "integrity_flags": [
+        "Only 2 corroborating outlets (NYT, NBC) identified in current evidence — confirm direct FDA.gov enforcement report before publishing; breaking-recall exception applied with confidence capped Medium."
+      ],
+      "trend_score_reason": "New FDA Class I designation confirmed by 2 tier-1 outlets (NYT, NBC) within 24–48 hours of escalation.",
+      "opportunity_score_reason": "Specific named product + FDA classification + clear AI-query fit ('is Salata salad dressing recalled') — strong citation potential once primary FDA link is confirmed.",
+      "discover_score_reason": "Practical high-intent search topic (product recall + what to do) with immediate reader action value.",
+      "notes": "Breaking-recall exception applied loosely (2 of 3 required sources); verify FDA.gov enforcement report link before publish.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Google News Radar entries from NYT (10/03) and NBC News (10/02) confirming FDA Class I/highest-risk classification for Salata salad dressing recall, distinct from Sept. 28 chlorthalidone Class II recall"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Walking speed/volume linked to longevity",
+      "primary_entity": "Walking pace / longevity research",
+      "signal_type": "study_or_research",
+      "allowed_category": "fitness science",
+      "trend_strength_score": 60,
+      "opportunity_score": 76,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.health.harvard.edu/heart-health/people-who-walk-more-or-walk-faster-live-longer-study-finds"
+      ],
+      "recommended_angle": "Most existing coverage treats '10,000 steps' as gospel — differentiate by unpacking pace vs. volume, and what the underlying study actually measured vs. what headlines imply.",
+      "why_now": "Harvard Health Publishing (tier-1) covered this study 10/02/2026; evergreen topic with a fresh, specific research hook.",
+      "primary_headline": "People Who Walk More — or Faster — Live Longer, New Research Finds",
+      "next_steps": "Research task: locate and cite the original study before writing — do not publish from Harvard Health summary alone.",
+      "integrity_flags": [
+        "Single source in hand (Harvard Health). Confirm original journal/DOI and observational-vs-interventional study design before asserting causation."
+      ],
+      "trend_score_reason": "Tier-1 institutional source (Harvard Health) with fresh, specific research hook published 10/02/2026.",
+      "opportunity_score_reason": "Strong AI-query fit ('does walking faster help you live longer'), differentiation potential via pace-vs-volume framing.",
+      "discover_score_reason": "Commonly covered topic but angle differentiation (pace vs. volume) and practical applicability drive strong reader engagement potential.",
+      "notes": "Original peer-reviewed study/DOI must be located and cited — do not assert causation from an observational design.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Google News Radar entry from Harvard Health (10/02/2026) with matching headline on walking pace/volume and longevity"
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "What's next after Zepbound/Ozempic: new weight-loss drugs in the pipeline",
+      "primary_entity": "GLP-1 weight-loss drug landscape",
+      "signal_type": "trend_analysis",
+      "allowed_category": "pharmaceutical trends",
+      "trend_strength_score": 55,
+      "opportunity_score": 88,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "low",
+      "content_status": "new",
+      "source_count": 0,
+      "source_urls": [],
+      "recommended_angle": "Rising search interest shows readers are already comparing named drugs head-to-head — build a sourced landscape explainer rather than a hype roundup, anchored to actual trial-registry status for each compound.",
+      "why_now": "Rising Google Trends queries for tirzepatide, retatrutide, CBL-514, CagriSema show sustained reader demand for comparison/next-generation drug information.",
+      "primary_headline": "What's Next After Zepbound and Ozempic: The New Weight-Loss Drugs in the Pipeline",
+      "next_steps": "Every drug/efficacy claim must be sourced directly from ClinicalTrials.gov, company trial disclosures, or peer-reviewed data before publishing — do not write from search-term phrasing.",
+      "integrity_flags": [
+        "No news source in hand. Every drug/efficacy claim must be sourced directly from ClinicalTrials.gov, company trial disclosures, or peer-reviewed data before publishing — do not write from search-term phrasing."
+      ],
+      "trend_score_reason": "Rising Google Trends queries (tirzepatide, retatrutide, CBL-514, CagriSema weight loss) indicate sustained search velocity; no single news article backing signal.",
+      "opportunity_score_reason": "High reader demand signal (rising Trends) + comparison/evaluation intent; substantial audience for landscape explainer.",
+      "discover_score_reason": "Named drugs + reader evaluation/comparison intent + search-based discovery opportunity.",
+      "notes": "Zero news corroboration — search-interest signal only. Confidence capped Low pending direct news sourcing and clinical trial registry verification.",
+      "fact_check": {
+        "verdict": "unverifiable",
+        "issues": [],
+        "checked_against": "Google Trends 'weight loss' rising-related-queries list showing tirzepatide, CBL-514, CagriSema/Zepbound, retatrutide terms — no news source or trial data present in evidence to confirm pipeline status or efficacy claims"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "HHS SURPASS clinical trials program (+7 outlets)",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "NIH Long COVID antiviral trial",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Chlorthalidone BP medication recall (continuing coverage)",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "California non-UPF food label",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Stanford lymphedema drug study",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Johns Hopkins smoking/sickle cell retinopathy",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Apyx Medical Renuvion skin-quality study",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Wellness stacking habit trend (Yahoo Creators)",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "WSJ menopause wellness essay",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Black patients face clinical trial barriers (St. Louis American)",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Nature exposomics / personalized medicine",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "GammaTile Phase 3 brain metastases",
+      "reason": "unverified_claim"
+    },
+    {
+      "topic": "TikTok wellness trend → botulism warning",
+      "reason": "unverified_claim"
+    },
+    {
+      "topic": "New World Screwworm status",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Health insurance policy/fraud/business cluster",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Local/campus wellness events",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Julianne Hough wellness interview",
+      "reason": "brand_safety"
+    },
+    {
+      "topic": "Medical Xpress mouse placenta study",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "News-Medical TMEM63B protein study",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Daily Bruin Neural Consult AI app",
+      "reason": "off_category"
+    },
+    {
+      "topic": "fedweek medical costs study",
+      "reason": "off_category"
+    },
+    {
+      "topic": "University of Miami blood cancer research award",
+      "reason": "weak_signal"
+    }
+  ],
+  "fact_check_summary": {
+    "accurate": 2,
+    "unverifiable": 1
+  },
+  "run_cost": {
+    "total_usd": 0.6445,
+    "calls": [
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11095,
+        "output_tokens": 25366,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 42559,
+        "estimated_cost_usd": 0.5734
+      },
+      {
+        "model": "claude-haiku-4-5",
+        "input_tokens": 8772,
+        "output_tokens": 2080,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0192
+      },
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11123,
+        "output_tokens": 1233,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0519
+      }
+    ]
+  }
+}
