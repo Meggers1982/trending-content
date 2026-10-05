@@ -1,0 +1,967 @@
+{
+  "run_date": "2026-10-05",
+  "generated_at": "2026-10-05T21:13:45",
+  "topic": "nutrition",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "nutrition",
+    "macronutrients",
+    "meal prep",
+    "whole foods",
+    "fiber intake",
+    "added sugar",
+    "ultra-processed foods",
+    "nutrient deficiency",
+    "mindful eating",
+    "portion control",
+    "plant-based diet",
+    "nutrition trends",
+    "nutrition products",
+    "nutrition news",
+    "nutrition for beginners",
+    "nutrition routine",
+    "nutrition benefits",
+    "nutrition ideas",
+    "nutrition reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 19,
+    "total_reviewed": 80,
+    "total_retained": 7,
+    "total_rejected": 70,
+    "breakouts": 3,
+    "emerging": 3,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "topic": "what is the general recommended dietary fiber intake for women, as discussed in the text and lecture?",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 63,
+      "emergence_score": 80,
+      "velocity_score": 40,
+      "confidence_score": 65,
+      "saturation_score": 0,
+      "opportunity_score": 88,
+      "confidence": "medium",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "fiber intake"
+      ],
+      "discovery_sources": [
+        "rising query",
+        "too long for timeseries"
+      ],
+      "interest_scores": [],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; time-series validation was skipped or unavailable; found through rising query, too long for timeseries",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing.",
+      "similar": [
+        {
+          "topic": "what is the general recommended dietary fiber intake for men, as discussed in the text and lecture?",
+          "trend_stage": "breakout",
+          "radar_score": 54,
+          "why_now": "Google Trends labels it Breakout; time-series validation was skipped or unavailable; found through rising query"
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "topic": "supplemental nutrition assistance program",
+      "trend_stage": "emerging",
+      "urgency": "this_week",
+      "radar_score": 59,
+      "emergence_score": 69,
+      "velocity_score": 38,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 81,
+      "confidence": "high",
+      "rising_label": "+750%",
+      "latest_interest": 0,
+      "peak_interest": 100,
+      "slope": 0,
+      "acceleration": -9,
+      "seed_terms": [
+        "nutrition"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        8,
+        8,
+        6,
+        4,
+        4,
+        4,
+        5,
+        4,
+        8,
+        5,
+        5,
+        7,
+        5,
+        6,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        12,
+        8,
+        7,
+        10,
+        11,
+        9,
+        8,
+        4,
+        4,
+        4,
+        5,
+        5,
+        4,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        3,
+        0,
+        34,
+        76,
+        88,
+        100,
+        90,
+        83,
+        67,
+        52,
+        43,
+        29,
+        23,
+        45,
+        56,
+        33,
+        43,
+        40,
+        29,
+        18,
+        11,
+        6,
+        6,
+        6,
+        3,
+        4,
+        4,
+        3,
+        5,
+        5,
+        4,
+        3,
+        3,
+        3,
+        0,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        9,
+        8,
+        8,
+        8,
+        9,
+        10,
+        8,
+        11,
+        9,
+        6,
+        4,
+        4,
+        0,
+        3,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +750%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Build an angle this week and monitor the next 24-48 hours.",
+      "similar": [
+        {
+          "topic": "supplemental nutrition assistance program changes",
+          "trend_stage": "breakout",
+          "radar_score": 54,
+          "why_now": "Google Trends labels it Breakout; time-series validation was skipped or unavailable; found through rising query"
+        },
+        {
+          "topic": "supplemental nutrition assistance program payment changes",
+          "trend_stage": "breakout",
+          "radar_score": 54,
+          "why_now": "Google Trends labels it Breakout; time-series validation was skipped or unavailable; found through rising query"
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "topic": "guava nutrition facts",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 54,
+      "emergence_score": 71,
+      "velocity_score": 40,
+      "confidence_score": 40,
+      "saturation_score": 0,
+      "opportunity_score": 83,
+      "confidence": "low",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "nutrition benefits"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; time-series validation was skipped or unavailable; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 4,
+      "topic": "fairlife nutrition plan",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 54,
+      "emergence_score": 71,
+      "velocity_score": 40,
+      "confidence_score": 40,
+      "saturation_score": 0,
+      "opportunity_score": 83,
+      "confidence": "low",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "nutrition reviews"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; time-series validation was skipped or unavailable; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 5,
+      "topic": "whole foods missoula",
+      "trend_stage": "emerging",
+      "urgency": "this_week",
+      "radar_score": 54,
+      "emergence_score": 71,
+      "velocity_score": 40,
+      "confidence_score": 40,
+      "saturation_score": 0,
+      "opportunity_score": 83,
+      "confidence": "low",
+      "rising_label": "+1250%",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "whole foods"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [],
+      "tags": {},
+      "why_now": "Google Trends labels it +1250%; time-series validation was skipped or unavailable; found through rising query",
+      "recommended_action": "Build an angle this week and monitor the next 24-48 hours."
+    },
+    {
+      "rank": 6,
+      "topic": "kona ice nutrition",
+      "trend_stage": "emerging",
+      "urgency": "this_week",
+      "radar_score": 54,
+      "emergence_score": 71,
+      "velocity_score": 40,
+      "confidence_score": 40,
+      "saturation_score": 0,
+      "opportunity_score": 83,
+      "confidence": "low",
+      "rising_label": "+1000%",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "nutrition"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [],
+      "tags": {},
+      "why_now": "Google Trends labels it +1000%; time-series validation was skipped or unavailable; found through rising query",
+      "recommended_action": "Build an angle this week and monitor the next 24-48 hours."
+    },
+    {
+      "rank": 7,
+      "topic": "metamucil fiber gummies",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 50,
+      "emergence_score": 46,
+      "velocity_score": 42,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 68,
+      "confidence": "high",
+      "rising_label": "+190%",
+      "latest_interest": 3,
+      "peak_interest": 5,
+      "slope": 3,
+      "acceleration": 0,
+      "seed_terms": [
+        "fiber intake"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        3
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +190%; interest moved from 0 to 3; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "protein meaning",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "macronutrients"
+      ]
+    },
+    {
+      "topic": "google scholar",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition products"
+      ]
+    },
+    {
+      "topic": "cornell news",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition news"
+      ]
+    },
+    {
+      "topic": "astaxanthin benefits",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition benefits"
+      ]
+    },
+    {
+      "topic": "if a substance is ionic, then it likely will",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "added sugar"
+      ]
+    },
+    {
+      "topic": "best budget smartphones",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "meal prep"
+      ]
+    },
+    {
+      "topic": "full body workout at home",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "meal prep"
+      ]
+    },
+    {
+      "topic": "e-commerce business ideas",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "meal prep"
+      ]
+    },
+    {
+      "topic": "how to make moroccan mint tea",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "meal prep"
+      ]
+    },
+    {
+      "topic": "steelers news",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition news"
+      ]
+    },
+    {
+      "topic": "python programming for beginners",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "meal prep"
+      ]
+    },
+    {
+      "topic": "digital marketing roadmap",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "meal prep"
+      ]
+    },
+    {
+      "topic": "spaghetti squash",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition benefits"
+      ]
+    },
+    {
+      "topic": "verity reviews",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition reviews"
+      ]
+    },
+    {
+      "topic": "chia seed benefits",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition benefits"
+      ]
+    },
+    {
+      "topic": "vitamin shoppe",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition reviews"
+      ]
+    },
+    {
+      "topic": "amaretto syrup",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "added sugar"
+      ]
+    },
+    {
+      "topic": "digger reviews",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition reviews"
+      ]
+    },
+    {
+      "topic": "manganese benefits",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition benefits"
+      ]
+    },
+    {
+      "topic": "chickpeas benefits",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition benefits"
+      ]
+    },
+    {
+      "topic": "magnesium bisglycinate benefits",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition benefits"
+      ]
+    },
+    {
+      "topic": "quinoa health benefits",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition benefits"
+      ]
+    },
+    {
+      "topic": "breakfast burrito recipe",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "meal prep"
+      ]
+    },
+    {
+      "topic": "calorie calculator",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fiber intake"
+      ]
+    },
+    {
+      "topic": "iran war news",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition news"
+      ]
+    },
+    {
+      "topic": "cooking for gains",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "meal prep"
+      ]
+    },
+    {
+      "topic": "how to bake a cake",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fiber intake"
+      ]
+    },
+    {
+      "topic": "overnight oats recipe",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "meal prep"
+      ]
+    },
+    {
+      "topic": "pineapple nutrition facts",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "beets nutrition facts",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "chia seed nutrition facts",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "how many grams of sugar in a teaspoon",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "how much fiber per day to lose weight",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "amazon employee whole foods discount",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "how much fiber in a banana",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "where are the macronutrients located on a nutritional label",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "do bananas have fiber",
+      "reason": "Weak radar score (49)"
+    },
+    {
+      "topic": "shred tradesman nutrition",
+      "reason": "Weak radar score (49)"
+    },
+    {
+      "topic": "healthy breakfast burrito meal prep",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "spaghetti squash nutrition",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "tradesman nutrition reviews",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "macronutrient calculator",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "high protein breakfast burrito meal prep",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "stainless steel meal prep containers",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "red bell pepper nutrition",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "optimum nutrition creatine",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "tradesman nutrition shred reviews",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "top meal prep services",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "meal prep companies near me",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "we heart nutrition prenatal",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "meal prep backpack",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "halal meal prep",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "whole foods thanksgiving catering",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "amazon whole foods discount",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "tradesman nutrition shred",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "plant based diet",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "cauliflower nutrition",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "whole foods meal prep tray",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "postpartum meal prep ideas",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "cooking for gains meal prep containers",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "whole foods frisco",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "how much fiber is in an apple",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "mindful eating script",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "chia seeds nutrition facts",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "tradesman nutrition",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "meal prep lunch ideas for work",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "crock pot meals",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "hello fresh meals",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "redefine meal prep",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "organised nutrition",
+      "reason": "Weak radar score (42)"
+    }
+  ]
+}
