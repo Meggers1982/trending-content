@@ -3,6 +3,40 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-10-06'
+  niche: Health & Wellness
+  signals_reviewed: 150
+  topics_retained: 5
+  topics_rejected: 9
+  p1_count: 1
+  p2_count: 2
+  p3_count: 2
+  p4_count: 0
+  p5_count: 0
+  integrity_flags: 5
+  top_topic: Pittsburgh measles outbreak
+  key_themes:
+  - Pittsburgh measles outbreak
+  - Gatorade recall — undeclared food dyes, 122,000 cases across 37 states
+  - Nobel Prize in Medicine 2026 — optogenetics (Karl Deisseroth)
+  - Heat/sauna therapy for depression and mental health
+  - Urine cell-free RNA test for bladder cancer detection and treatment response
+  tools_used:
+  - serpapi_google_trends
+  - serpapi_google_news
+  - google_trends
+  - web_search
+  tools_unavailable:
+  - reddit_direct
+  - social_search
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-10-06.html
+  estimated_cost_usd: 0.6297
+  notes: Google News engine degraded mid-run; 2 queries served via google_news_light fallback (lower fidelity).
+    Treated as unknown signal, not absence of activity. Recall signal_type recurring 3+ days this week
+    (sugar 9/30, chlorthalidone 9/29, salad dressing 10/04, Gatorade 10/06) — each distinct product retained
+    as new, but watch for diminishing differentiation. No site_url configured; competitor-list fallback
+    used for duplicate/SERP-gap context. Four candidates routed to Monitor (P5) for insufficient primary-source
+    evidence or Skill 02b gate hold.
 - run_date: '2026-10-04'
   niche: Health & Wellness
   signals_reviewed: 144

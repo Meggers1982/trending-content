@@ -1,0 +1,268 @@
+{
+  "run_date": "2026-10-06",
+  "niche": "Health & Wellness",
+  "signal_summary": {
+    "total_reviewed": 150,
+    "total_retained": 5,
+    "total_rejected": 9,
+    "tools_active": [
+      "serpapi_google_trends",
+      "serpapi_google_news",
+      "google_trends",
+      "web_search"
+    ],
+    "tools_unavailable": [
+      "reddit_direct",
+      "social_search"
+    ],
+    "notes": "Google News engine degraded mid-run; 2 queries served via google_news_light fallback (lower fidelity). Treated as unknown signal, not absence of activity. Recall signal_type recurring 3+ days this week (sugar 9/30, chlorthalidone 9/29, salad dressing 10/04, Gatorade 10/06) — each distinct product retained as new, but watch for diminishing differentiation. No site_url configured; competitor-list fallback used for duplicate/SERP-gap context. Four candidates routed to Monitor (P5) for insufficient primary-source evidence or Skill 02b gate hold."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Pittsburgh measles outbreak",
+      "primary_entity": "Allegheny County / Pittsburgh measles outbreak",
+      "signal_type": "breaking_news",
+      "allowed_category": "infectious disease",
+      "trend_strength_score": 61,
+      "opportunity_score": 78,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "source_urls": [
+        "https://www.cdc.gov/measles/"
+      ],
+      "recommended_angle": "Explain what's driving the outbreak, who's at risk, and what vaccination status actually protects you — grounded in the PA physician's on-the-ground account.",
+      "why_now": "Breakout real-time search term on Google Trends ('pittsburgh measles outbreak'), confirmed by a CNN report quoting a PA doctor describing daily patient suffering — an active, spreading outbreak story, not a recap.",
+      "primary_headline": "Pittsburgh's Measles Outbreak Is Growing — Here's What Doctors Want Parents to Know",
+      "next_steps": "Confirm current case count via PA Dept. of Health/CDC before publishing; source a pediatrician or infectious disease expert quote; add vaccination-rate context for the region.",
+      "integrity_flags": [
+        "Only one named news source (CNN) in radar — corroborate case numbers and vaccination data against CDC/PA DOH before publishing."
+      ],
+      "trend_score_reason": "Google Trends breakout term + CNN confirmation of active outbreak; moderate search velocity reflects developing story.",
+      "opportunity_score_reason": "High audience urgency around vaccine effectiveness and outbreak dynamics; strong educational content opportunity.",
+      "discover_score_reason": "Novel outbreak angle with immediate health relevance; clear parent/caregiver audience.",
+      "notes": "Confidence capped Medium pending additional source convergence beyond CNN.",
+      "fact_check": {
+        "verdict": "minor_issues",
+        "issues": [
+          "Evidence only shows a single CNN-sourced trending term about a PA doctor describing suffering; it doesn't independently confirm the outbreak is 'growing' or provide case/vaccination data beyond that one headline."
+        ],
+        "checked_against": "Google Trends real-time term 'pittsburgh measles outbreak' with CNN 'Why' line; no CDC/PA DOH data present in evidence"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Gatorade recall — undeclared food dyes, 122,000 cases across 37 states",
+      "primary_entity": "Gatorade / PepsiCo",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 67,
+      "opportunity_score": 75,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 5,
+      "source_urls": [
+        "https://www.health.com/gatorade-recall-october-2026-12159566",
+        "https://abc7ny.com/story/fda-recalls-122000-cases-gatorade-undeclared-dyes/19910004/"
+      ],
+      "recommended_angle": "Practical, lot-number-driven explainer: which Gatorade bottles are affected, why undeclared dyes matter for allergy/sensitivity, and what to do with product you already bought.",
+      "why_now": "Active, expanding recall — 122,000 cases, now reaching Alabama and Texas as of 10/5-10/6, with 5+ convergent outlets reporting the same lot details.",
+      "primary_headline": "Gatorade Recall: 122,000 Cases Pulled Over Undeclared Food Dyes — Is Your Bottle Affected?",
+      "next_steps": "Pull the official FDA.gov enforcement report and exact lot/UPC codes before publishing (breaking-recall exception used — primary notice not yet directly retrieved).",
+      "integrity_flags": [
+        "Breaking-recall exception applied — confirmed via 5 convergent outlets (ABC7NY, ABC News, El Paso Times, Montgomery Advertiser, Health.com). Verify FDA.gov notice and exact lot numbers before publishing."
+      ],
+      "trend_score_reason": "5+ convergent outlets reporting expanding state list (now 37 states); active product-safety coverage.",
+      "opportunity_score_reason": "High immediate utility for consumers; practical lookup/checklist content appeals to health-conscious audience.",
+      "discover_score_reason": "Breaking recall with clear product/lot identifiers; high search intent from affected consumers.",
+      "notes": "Gatorade is distinct product/cause from prior week's salad dressing and chlorthalidone recalls. Verify FDA.gov notice before publishing.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Google News Radar FDA recall health cluster — ABC7NY, ABC News, El Paso Times, Montgomery Advertiser, Health.com all report 122,000 cases, 37 states, undeclared food dyes"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Nobel Prize in Medicine 2026 — optogenetics (Karl Deisseroth)",
+      "primary_entity": "Karl Deisseroth / Nobel Prize in Medicine 2026",
+      "signal_type": "study_or_research",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 66,
+      "opportunity_score": 71,
+      "discover_score": 5,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "source_urls": [
+        "https://www.pbs.org/newshour/health/watch-live-winner-of-the-2026-nobel-prize-in-medicine-is"
+      ],
+      "recommended_angle": "Consumer-friendly explainer: what optogenetics is, why controlling neurons with light matters for brain research, and what it could eventually mean for treating neurological/psychiatric disease.",
+      "why_now": "Nobel Assembly announcement is a durable, highly citable science milestone with strong primary-institutional backing; little consumer-facing explanation exists yet.",
+      "primary_headline": "What Is Optogenetics? The Nobel-Winning Discovery That's Changing Brain Science",
+      "next_steps": "Pull direct quotes from the Nobel Assembly citation; clarify this is a research tool, not yet a patient treatment; draft within 48 hours.",
+      "integrity_flags": [
+        "Avoid overstating clinical translation — optogenetics is a foundational research technique, not an approved therapy. Frame research-stage findings accordingly."
+      ],
+      "trend_score_reason": "Nobel Prize announcement is a durable, high-authority milestone; strong institutional backing and citable primary source.",
+      "opportunity_score_reason": "Strong consumer interest in Nobel Prize winners; novel explainer opportunity with no competing detailed primers yet.",
+      "discover_score_reason": "Highest Discover score; Nobel Prize is inherently discoverable; optogenetics is novel/unfamiliar to most readers.",
+      "notes": "Don't overstate clinical translation pathway. Research tool, not treatment.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Google News Radar medical study cluster — ABC7 San Francisco and PBS confirm Karl Deisseroth's Nobel Prize in Medicine for optogenetics"
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Heat/sauna therapy for depression and mental health",
+      "primary_entity": "Heat therapy / whole-body hyperthermia for depression",
+      "signal_type": "clinical_trial",
+      "allowed_category": "mental health and psychology",
+      "trend_strength_score": 56,
+      "opportunity_score": 79,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "low",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.npr.org/2026/10/05/nx-s1-5979044/sauna-heat-therapy-mental-health-depression"
+      ],
+      "recommended_angle": "Does heat therapy actually help depression? Separate the emerging clinical trial evidence from sauna-culture hype.",
+      "why_now": "NPR reports ongoing clinical trials on heat/sauna-based treatment for depression — novel, under-covered angle with Mental Health Awareness Month (October) tie-in.",
+      "primary_headline": "Can Heat Therapy Treat Depression? What the Clinical Trials Actually Show",
+      "next_steps": "Verify the specific trial details (name, PI, institution), sample size, and RCT vs. observational design before publishing; contact lead researcher for comment.",
+      "integrity_flags": [
+        "Single source (NPR) — verify the specific trial, sample size, and RCT vs. observational status before publishing; avoid framing as an established treatment."
+      ],
+      "trend_score_reason": "Novel clinical angle with emerging evidence; moderate search interest but niche audience.",
+      "opportunity_score_reason": "High audience opportunity around mental health treatments; strong evergreen/educational value.",
+      "discover_score_reason": "Emerging clinical evidence with unusual treatment modality; reader discovery potential moderate.",
+      "notes": "Confidence Low due to single-source trail. Must verify trial design, institution, and sample size before publishing. Frame as emerging evidence, not established treatment.",
+      "fact_check": {
+        "verdict": "minor_issues",
+        "issues": [
+          "The NPR headline references clinical trials generally but the evidence does not include specific trial design, sample size, or results, so the headline's promise to show 'what the clinical trials actually show' outruns what's confirmed in the available source."
+        ],
+        "checked_against": "NPR article 'From floating saunas to clinical trials: How heat might help mental health' in Google News Radar"
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Urine cell-free RNA test for bladder cancer detection and treatment response",
+      "primary_entity": "Urine cfRNA bladder cancer test (Nature Medicine study)",
+      "signal_type": "study_or_research",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 53,
+      "opportunity_score": 78,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "low",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.nature.com/articles/s41591-026-04673-3"
+      ],
+      "recommended_angle": "What this non-invasive urine test could mean for earlier, less-invasive bladder cancer detection and monitoring — and how far it is from clinical use.",
+      "why_now": "Freshly published peer-reviewed study (Nature Medicine) with no consumer-facing coverage yet — a clear SERP gap.",
+      "primary_headline": "A New Urine Test Could Detect Bladder Cancer Earlier — Here's How It Works",
+      "next_steps": "Contact corresponding author for technical details and clinical trial timeline; clarify developmental vs. clinical-ready status.",
+      "integrity_flags": [
+        "Research-stage finding — clarify this is a detection/monitoring study, not yet an approved clinical test. Avoid implying immediate patient availability."
+      ],
+      "trend_score_reason": "Peer-reviewed primary source (Nature Medicine); moderate search volume but SERP gap signals low consumer coverage.",
+      "opportunity_score_reason": "High clinical impact potential; strong audience interest in non-invasive cancer screening.",
+      "discover_score_reason": "Research milestone with consumer health angle; moderate reader discovery value.",
+      "notes": "Confidence Low due to single peer-reviewed source and developmental stage. Clarify research vs. clinical-ready status throughout.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Nature Medicine article 'Urine cell-free RNA for bladder cancer detection and treatment response prediction' in Google News Radar"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "Health insurance/price transparency & policy cluster",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Wellness lifestyle/local/celebrity cluster (campus wellness weeks, Julianne Hough)",
+      "reason": "off_category"
+    },
+    {
+      "topic": "ER visits fell during ICE raids (LA Times study)",
+      "reason": "brand_safety"
+    },
+    {
+      "topic": "Salata salad dressing recall",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Chlorthalidone blood pressure recall",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "HHS SURPASS clinical trials core launch story",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Mind diet brain aging study",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "National Coaches Day (MADD substance-abuse guide)",
+      "reason": "off_category"
+    },
+    {
+      "topic": "NJ mosquito-borne illness advisory",
+      "reason": "other"
+    }
+  ],
+  "fact_check_summary": {
+    "minor_issues": 2,
+    "accurate": 3
+  },
+  "run_cost": {
+    "total_usd": 0.6297,
+    "calls": [
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11359,
+        "output_tokens": 22331,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 42559,
+        "estimated_cost_usd": 0.5286
+      },
+      {
+        "model": "claude-haiku-4-5",
+        "input_tokens": 9615,
+        "output_tokens": 2600,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0226
+      },
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 12157,
+        "output_tokens": 2799,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0785
+      }
+    ]
+  }
+}
