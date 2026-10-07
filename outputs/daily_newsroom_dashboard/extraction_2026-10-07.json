@@ -1,0 +1,262 @@
+{
+  "run_date": "2026-10-07",
+  "niche": "Health & Wellness",
+  "signal_summary": {
+    "total_reviewed": 153,
+    "total_retained": 6,
+    "total_rejected": 147,
+    "tools_active": [
+      "web_search",
+      "google_news",
+      "google_trends",
+      "serpapi"
+    ],
+    "tools_unavailable": [],
+    "notes": "Recall fatigue risk: this is the 3rd FDA recall story surfaced in 8 days (sugar → Salata → Gatorade → now blood pressure medication). Differentiation required — lead with chronic-disease patient-safety angle, not another \"what to check in your pantry\" format. SURPASS story has run 7 consecutive days in the news cycle; treated as an update, not a new topic, per recurring-theme flag. site_url not configured — self-check skipped; competitor coverage checked instead."
+  },
+  "candidates": [
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "FDA Class II recall of blood pressure medication, 13,000+ bottles affected",
+      "primary_entity": "FDA blood pressure medication recall",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates / chronic disease management",
+      "trend_strength_score": 62,
+      "opportunity_score": 72,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "source_urls": [
+        "https://www.fda.gov",
+        "https://www.healthline.com/health-news/blood-pressure-medication-nationwide-recall-fda"
+      ],
+      "recommended_angle": "Patient-safety explainer: what this means if you take this medication, how to check your lot number, and why hypertension drug recalls carry outsized risk for chronic-condition patients",
+      "why_now": "FDA-confirmed Class II recall reported 10/02/2026; coverage still thin (Healthline only) — opportunity to own the patient-action angle before broader outlets catch up",
+      "primary_headline": "FDA Recalls Blood Pressure Medication: What 13,000+ Affected Bottles Mean for Patients",
+      "next_steps": "Confirm exact drug name/lot numbers from FDA.gov notice before publishing; pair with RDN or cardiologist comment on never-stop-without-consulting-doctor guidance",
+      "integrity_flags": [
+        "Confirm exact drug name and lot numbers directly from FDA.gov before publishing — do not rely solely on secondary reporting"
+      ],
+      "trend_score_reason": "62/100: FDA Class II recall confirmation + limited secondary coverage (Healthline only); growing patient-awareness trend in health-safety searches",
+      "opportunity_score_reason": "72/100: thin coverage window creates differentiation opportunity; chronic-disease safety angle underserved in existing recall roundups",
+      "discover_score_reason": "4/5: high patient-search intent + emerging story stage + actionable (lot number verification); medium confidence due to incomplete sourcing",
+      "notes": "3rd recall story in 8 days — differentiate from Gatorade/Salata coverage via chronic-disease safety framing, not generic recall-roundup format",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Healthline 10/02/2026 Class II blood pressure medication recall headline + FDA.gov generic recall reference"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "World Mental Health Day 2026 (Oct 10)",
+      "primary_entity": "World Mental Health Day",
+      "signal_type": "seasonal_trend",
+      "allowed_category": "mental health and psychology",
+      "trend_strength_score": 72,
+      "opportunity_score": 65,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "source_urls": [
+        "https://trends.google.com",
+        "https://www.vaticannews.va/en/pope/news/2026-10/pope-leo-prayer-intention-october-for-mental-health-ministry.html"
+      ],
+      "recommended_angle": "Skip the generic awareness-day listicle — anchor on one data point (e.g., Google Trends shows searches for 'mental health awareness week' and 'world mental health day 2026' already spiking) and pair with a concrete, evidence-based access angle (teletherapy coverage, insurance parity, or the heat/sauna-therapy research already in the news cycle)",
+      "why_now": "Google Trends shows mental health search interest at 95/100 with explicit rising queries for 'world mental health day 2026' three days ahead of the Oct 10 date — publish window is now to catch pre-event search demand",
+      "primary_headline": "World Mental Health Day 2026: What's Actually New in Mental Health Care This Year",
+      "next_steps": "Avoid overlap with the already-covered sauna/heat-therapy story (10/06) — pick a distinct data hook; verify WHO/APA Oct 10 campaign theme before finalizing",
+      "integrity_flags": [],
+      "trend_score_reason": "72/100: Google Trends at 95/100 with explicit rising queries for 'world mental health day 2026' three days pre-event; strong seasonal demand signal",
+      "opportunity_score_reason": "65/100: highly competitive SERP every October — differentiation required to avoid low-opportunity rehash; data-anchor approach captures pre-event search window",
+      "discover_score_reason": "3/5: seasonal/predictable topic with moderate audience discovery potential; must differentiate to stand out in competitive awareness-day coverage",
+      "notes": "Highly competitive SERP every October — must differentiate or skip to avoid low-opportunity rehash",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Google Trends 7-day interest for 'mental health' (95/100, rising query 'world mental health day 2026') + Vatican News Oct 1 mental health prayer intention + NPR sauna/heat therapy mental health article"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "What health and wellness influencers actually post about — and whether you should trust them",
+      "primary_entity": "Health/wellness social media influencers",
+      "signal_type": "study_or_research",
+      "allowed_category": "public health and epidemiology (health literacy/misinformation angle)",
+      "trend_strength_score": 55,
+      "opportunity_score": 64,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "source_urls": [
+        "https://news.vcu.edu/article/popular-tiktok-docs-have-big-influence-on-gen-z-followers-new-vcu-research-finds",
+        "https://www.pewresearch.org/data-labs/2026/10/07/what-do-health-and-wellness-influencers-post-about/"
+      ],
+      "recommended_angle": "Combine VCU's finding that 'TikTok docs' strongly influence Gen Z health decisions with Pew's same-week content analysis of what influencers actually post, to give readers a framework for vetting health advice online — a credibility checklist, not just a trend writeup",
+      "why_now": "Two independent, same-week primary-source releases (VCU research, 10/06; Pew Research data-labs report, 10/07) converge on the same theme — a differentiated angle no single outlet has combined yet",
+      "primary_headline": "TikTok Doctors Are Shaping Gen Z's Health Decisions — Here's What New Research Says You Should Know",
+      "next_steps": "Pull direct quotes/methodology from both VCU and Pew releases; consider adding a clinician's perspective on how to evaluate influencer health claims",
+      "integrity_flags": [
+        "Avoid presenting influencer exposure as a causal driver of health behavior — both VCU and Pew findings are observational/content-analysis, not causal studies"
+      ],
+      "trend_score_reason": "55/100: two independent same-week releases provide corroboration; moderate trend velocity in health-literacy discussions but not yet major-outlet pickup",
+      "opportunity_score_reason": "64/100: cross-source convergence creates differentiated angle; no single outlet has combined both studies yet; Gen Z audience discovery potential is high",
+      "discover_score_reason": "4/5: timely dual primary sources + audience relevance (Gen Z health behavior) + actionable framework angle; observational methodology limits causal claims",
+      "notes": "No additional flags — both sources are primary/institutional; avoid overstating causation between influencer exposure and health behavior change",
+      "fact_check": {
+        "verdict": "minor_issues",
+        "issues": [
+          "Headline phrase 'Are Shaping Gen Z's Health Decisions' uses causal language, which is in tension with the existing flag noting both VCU and Pew findings are observational/content-analysis, not causal."
+        ],
+        "checked_against": "VCU News 10/06 TikTok docs influence article + Pew Research Data Labs 10/07 influencer content analysis"
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "HHS/ARPA-H SURPASS AI clinical trial program — budget and privacy questions surface",
+      "primary_entity": "HHS SURPASS program",
+      "signal_type": "policy_or_regulatory_change",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 58,
+      "opportunity_score": 58,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "update",
+      "source_count": 5,
+      "source_urls": [
+        "https://www.hhs.gov/press-room/hhs-arpa-h-launch-surpass-modernize-clinical-trials.html",
+        "https://www.medicaldaily.com/hhs-arpa-h-surpass-ai-clinical-trials-budget-privacy-479420",
+        "https://www.statnews.com/2026/09/30/hhs-arpa-h-clinical-trials-artificial-intelligence-surpass-program/"
+      ],
+      "recommended_angle": "Move past the 'HHS launches AI clinical trial program' announcement (already covered 10/01) to the emerging accountability angle: no disclosed budget, open patient-data-privacy questions, and real institutional rollouts (Ochsner, Dell Medical School) — what it means for patients considering trial enrollment",
+      "why_now": "New development since initial 10/01 coverage: Medical Daily (10/02) raised budget/privacy transparency concerns, and two institutions (Ochsner 10/06, Dell Medical/RFK Jr. 10/01) have since announced concrete implementation — the accountability story is now reportable where it wasn't a week ago",
+      "primary_headline": "HHS's AI Clinical Trial Overhaul Is Moving Fast — But Key Questions About Patient Data Remain Unanswered",
+      "next_steps": "Confirm with HHS.gov whether budget/privacy framework has been published since Medical Daily's 10/02 report; seek comment from a bioethicist or clinical-trial researcher",
+      "integrity_flags": [
+        "Program currently has no disclosed budget per Medical Daily reporting — flag this explicitly rather than implying full transparency"
+      ],
+      "trend_score_reason": "58/100: 7-day recurring news cycle with now-emerging accountability angle (budget/privacy); high confidence in underlying program but coverage trajectory changing",
+      "opportunity_score_reason": "58/100: accountability angle differentiates from initial announcement coverage; institutional rollouts (Ochsner, Dell) provide concrete news pegs; modest opportunity vs. market saturation from 7-day repeat coverage",
+      "discover_score_reason": "3/5: policy/process story with moderate audience discovery (clinical-trial researchers, patient advocates); recurring coverage reduces discover novelty but accountability angle is emerging",
+      "notes": "7th consecutive day of coverage in this news cycle — confirm no site coverage already exists before publishing; frame explicitly as an update, not breaking news; Medical Daily raised budget/privacy transparency concerns on 10/02",
+      "fact_check": {
+        "verdict": "minor_issues",
+        "issues": [
+          "WHY NOW refers to 'initial 10/01 coverage' but the evidence shows the program launch and first coverage (HHS.gov, Axios, UT News, STAT) occurred on 09/30/2026, not 10/01.",
+          "The claim that Ochsner's 10/06 AI clinical-trial-screening story represents 'concrete implementation' of the SURPASS program is not explicitly established by the evidence; the Healthcare IT News item does not confirm a direct link to SURPASS."
+        ],
+        "checked_against": "HHS.gov 09/30 press release, Axios 09/30, STAT 09/30, BioSpace 10/01, Medical Daily 10/02 budget/privacy concerns, KUT 10/01 RFK Jr./Dell Medical School, Healthcare IT News 10/06 Ochsner AI trial screening"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "Gatorade recall (continued coverage)",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Salata salad dressing recall",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Nobel Prize optogenetics",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Urine cell-free RNA bladder cancer test",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Walking speed/longevity study",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Heat/sauna therapy for depression",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "HHS price transparency rule",
+      "reason": "off_category"
+    },
+    {
+      "topic": "KFF midterm healthcare-cost poll",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Kettering Health–Anthem Medicare dispute",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Wisconsin governor healthcare debate",
+      "reason": "off_category"
+    },
+    {
+      "topic": "University/campus Wellness Weeks (Purdue, IU, CU Denver, Michigan Tech)",
+      "reason": "off_category"
+    },
+    {
+      "topic": "WSJ menopause wellness essay",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Financial wellness piece",
+      "reason": "off_category"
+    },
+    {
+      "topic": "NeuWire Medical FDA IDE stroke device approval",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Lockton clinical trial insurance management",
+      "reason": "off_category"
+    },
+    {
+      "topic": "health insurance giant nyt (Trends rising query)",
+      "reason": "weak_signal"
+    }
+  ],
+  "fact_check_summary": {
+    "accurate": 2,
+    "minor_issues": 2
+  },
+  "run_cost": {
+    "total_usd": 0.5639,
+    "calls": [
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11173,
+        "output_tokens": 18512,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 42559,
+        "estimated_cost_usd": 0.4708
+      },
+      {
+        "model": "claude-haiku-4-5",
+        "input_tokens": 8487,
+        "output_tokens": 2719,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0221
+      },
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11885,
+        "output_tokens": 2355,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.071
+      }
+    ]
+  }
+}

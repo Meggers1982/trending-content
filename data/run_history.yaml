@@ -3,6 +3,36 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-10-07'
+  niche: Health & Wellness
+  signals_reviewed: 153
+  topics_retained: 4
+  topics_rejected: 16
+  p1_count: 0
+  p2_count: 3
+  p3_count: 1
+  p4_count: 0
+  p5_count: 0
+  integrity_flags: 3
+  top_topic: FDA Class II recall of blood pressure medication, 13,000+ bottles affected
+  key_themes:
+  - FDA Class II recall of blood pressure medication, 13,000+ bottles affected
+  - World Mental Health Day 2026 (Oct 10)
+  - What health and wellness influencers actually post about — and whether you should trust them
+  - HHS/ARPA-H SURPASS AI clinical trial program — budget and privacy questions surface
+  tools_used:
+  - web_search
+  - google_news
+  - google_trends
+  - serpapi
+  tools_unavailable: []
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-10-07.html
+  estimated_cost_usd: 0.5639
+  notes: 'Recall fatigue risk: this is the 3rd FDA recall story surfaced in 8 days (sugar → Salata → Gatorade
+    → now blood pressure medication). Differentiation required — lead with chronic-disease patient-safety
+    angle, not another "what to check in your pantry" format. SURPASS story has run 7 consecutive days
+    in the news cycle; treated as an update, not a new topic, per recurring-theme flag. site_url not configured
+    — self-check skipped; competitor coverage checked instead.'
 - run_date: '2026-10-06'
   niche: Health & Wellness
   signals_reviewed: 150
