@@ -1,0 +1,298 @@
+{
+  "run_date": "2026-10-08",
+  "niche": "health and wellness",
+  "signal_summary": {
+    "total_reviewed": 153,
+    "total_retained": 5,
+    "total_rejected": 148,
+    "tools_active": [
+      "serpapi_news",
+      "serpapi_trends_prefetch",
+      "google_news_radar"
+    ],
+    "tools_unavailable": [
+      "reddit_direct",
+      "exa_search",
+      "rss_direct_fetch"
+    ],
+    "notes": "Google News Radar + Trends pre-fetch used as primary input. ARPA-H SURPASS program recurring across 3 consecutive runs — flagged stale, suppressed again. Recent Coverage list (last 7 days) used as primary dedup source. Gatorade/Salata/blood-pressure recalls, Nobel/optogenetics, sauna-depression trial, World Mental Health Day, and Pew influencer piece all confirmed as existing coverage — no material new development found to justify updates."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "FDA recalls millions of bottles of eye drops nationwide",
+      "primary_entity": "FDA eye drop recall",
+      "signal_type": "recall",
+      "allowed_category": "health and safety",
+      "trend_strength_score": 72,
+      "opportunity_score": 78,
+      "discover_score": 4,
+      "urgency": "now",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.prevention.com/health/a74079654/fda-updates-eye-drop-recall/"
+      ],
+      "recommended_angle": "Service-journalism safety explainer: what's affected, why, and what consumers should do with bottles they already own — framed against the pattern of a very active 2026 recall year.",
+      "why_now": "Breaking same-day FDA notice covering millions of units — not previously covered; distinct from this week's Gatorade/Salata/BP-medication recalls.",
+      "primary_headline": "FDA Recalls Millions of Eye Drop Bottles Nationwide — What to Check Before You Use Yours",
+      "next_steps": "Confirm FDA.gov primary enforcement notice and lot codes before publish; publish today.",
+      "integrity_flags": [
+        "Confirm exact FDA enforcement report number and lot codes directly via FDA.gov before publishing — only one secondary outlet captured in today's signal set."
+      ],
+      "trend_score_reason": "Single-day breaking news with millions of units affected; distinct from prior week's recall cluster",
+      "opportunity_score_reason": "High consumer search intent for 'is my product recalled' + natural service-journalism angle; strong AI-citation candidate once FDA notice confirmed",
+      "discover_score_reason": "Specific entity, product-focused recall with practical consumer action items (check lot number, stop use)",
+      "notes": "Evidence requirement: moderate — recall details, lot numbers, FDA contamination findings. Estimated word count 600–800.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Prevention article in Google News Radar (FDA recall health) dated 10/08/2026 matching headline and claim of millions of units; confirmed distinct from Gatorade/Salata/BP recall items also in radar"
+      }
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Early clinical trial: Type 1 diabetes patients able to go off insulin",
+      "primary_entity": "Type 1 diabetes insulin-independence trial",
+      "signal_type": "clinical trial",
+      "allowed_category": "chronic disease management",
+      "trend_strength_score": 75,
+      "opportunity_score": 80,
+      "discover_score": 5,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.nbcnews.com/health/health-news/early-clinical-trial-people-type-1-diabetes-are-able-go-insulin-rcna601171"
+      ],
+      "recommended_angle": "Measured explainer that separates the real finding (early-phase, small cohort) from the headline implication of a cure — what's proven, what's not, and who it could eventually help.",
+      "why_now": "New NBC News report on early clinical trial result, not previously covered; T1D audience has high evidence-seeking interest.",
+      "primary_headline": "In Early Trial, People With Type 1 Diabetes Went Off Insulin — Here's What That Actually Means",
+      "next_steps": "Confirm trial name, phase, institution, and sample size directly before publish; do not rely on headline framing alone.",
+      "integrity_flags": [
+        "Early-phase and small-cohort result — do not frame as a cure. Clarify study phase, sample size, and follow-up duration once primary source is confirmed."
+      ],
+      "trend_score_reason": "Early-phase clinical trial result with high patient-audience interest; breaking news angle via NBC",
+      "opportunity_score_reason": "High AI-citation potential — specific named trial, natural question format ('can type 1 diabetes be cured'), durable topic",
+      "discover_score_reason": "Highest discovery potential among candidates — chronic disease, natural curiosity format, seeks nuance on early-phase vs. approved treatment",
+      "notes": "Evidence requirement: heavy — chronic disease treatment claim requires peer-reviewed or named-trial sourcing. Estimated word count 700–900.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "NBC News headline in Google News Radar (clinical trial health) dated 10/04/2026 matching topic and headline framing"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Study finds microglia play protective role in Parkinson's disease",
+      "primary_entity": "Microglia / Parkinson's disease research",
+      "signal_type": "study_or_research",
+      "allowed_category": "chronic disease management",
+      "trend_strength_score": 58,
+      "opportunity_score": 68,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.news-medical.net/news/20261007/Study-uncovers-a-protective-role-for-microglia-in-Parkinsons-disease.aspx"
+      ],
+      "recommended_angle": "Explain what the finding actually shows (likely preclinical), why it complicates the standard 'inflammation is bad' Parkinson's narrative, and what it means for future treatment research.",
+      "why_now": "New study coverage (10/07), no prior coverage of this specific finding; complements existing Parkinson's research discussions.",
+      "primary_headline": "Scientists Find a Surprising Protective Role for Brain Cells in Parkinson's Disease",
+      "next_steps": "Verify journal, DOI, and model type (animal vs. human) before publishing; contact neurologist for independent context.",
+      "integrity_flags": [
+        "Confirm whether finding is from an animal/preclinical model or human tissue/data — do not generalize to patient treatment implications without qualification."
+      ],
+      "trend_score_reason": "Niche but legitimate neuroscience research; limited search velocity but qualified academic audience",
+      "opportunity_score_reason": "Moderate AI-citation potential — specific finding, but likely preclinical, which caps durability of practical takeaway",
+      "discover_score_reason": "Preclinical research finding; lower general-audience discovery intent; specialized Parkinson's audience",
+      "notes": "Evidence requirement: heavy — neuroscience/disease mechanism claim must name journal and clarify model type. Estimated word count 600–750.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "News-Medical article in Google News Radar (medical study) dated 10/07/2026 matching topic and headline"
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "VCU: TikTok doctors' outsized influence on Gen Z health views",
+      "primary_entity": "VCU research on TikTok doctor influence",
+      "signal_type": "study_or_research",
+      "allowed_category": "health media and behavior",
+      "trend_strength_score": 60,
+      "opportunity_score": 58,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "update",
+      "source_count": 2,
+      "source_urls": [
+        "https://news.vcu.edu/article/popular-tiktok-docs-have-big-influence-on-gen-z-followers-new-vcu-research-finds",
+        "https://www.pewresearch.org/data-labs/2026/10/07/what-do-health-and-wellness-influencers-post-about/"
+      ],
+      "recommended_angle": "Pairs new VCU academic findings with the Pew influencer-content study from this week to assess whether young audiences can tell credible medical creators from unqualified ones.",
+      "why_now": "VCU study provides new angle on existing Pew influencer-content coverage from this week; relevant to ongoing Gen Z health-media literacy discussion.",
+      "primary_headline": "TikTok Doctors Are Shaping How Gen Z Thinks About Health — New Research Shows How Much",
+      "next_steps": "Confirm VCU research parameters and pair with Pew data; contact health communication researcher for context.",
+      "integrity_flags": [
+        "Distinguish correlation (watching → trusting) from causation (watching → behavior change) in VCU findings; keep framing descriptive, not causal."
+      ],
+      "trend_score_reason": "Moderate search interest in Gen Z health media behavior; pairs academic research with existing Pew data for updated angle",
+      "opportunity_score_reason": "Moderate AI-citation potential — social science research with accessible Gen Z audience angle; but secondary to primary news drivers",
+      "discover_score_reason": "Moderate discovery potential — Gen Z health behavior topic with natural 'are TikTok doctors trustworthy' query format",
+      "notes": "Update to Pew influencer study from 10/07. Estimated word count 500–650.",
+      "fact_check": {
+        "verdict": "minor_issues",
+        "issues": [
+          "The cited Pew article 'What Do Health and Wellness Influencers Post About?' describes content categories, not audience ability to discern credible vs unqualified creators; the more directly relevant Pew piece in the radar is 'Which Health and Wellness Influencers Talk About Medical Topics? Mostly Healthcare Professionals,' which isn't listed as a claimed source."
+        ],
+        "checked_against": "VCU News article and two Pew Research Center articles in Google News Radar (medical study), both dated 10/06-10/07/2026"
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "AI-assisted medication device trial for older adults with memory loss",
+      "primary_entity": "UC Davis clinical trial on AI medication device",
+      "signal_type": "clinical trial",
+      "allowed_category": "aging and caregiving",
+      "trend_strength_score": 55,
+      "opportunity_score": 65,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://health.ucdavis.edu/news/headlines/clinical-trial-tests-ai-assisted-medication-device-for-older-adults-with-memory-loss/2026/09"
+      ],
+      "recommended_angle": "Practical look at a tech-forward solution to medication non-adherence in dementia/memory-loss caregiving — what the device does and what the trial will measure.",
+      "why_now": "New UC Davis clinical trial announcement; addresses practical caregiving pain point of medication adherence in older adults.",
+      "primary_headline": "New Clinical Trial Tests an AI Device to Help Older Adults Remember Their Medications",
+      "next_steps": "Confirm trial parameters and phase; contact geriatrician for caregiving context; avoid implying commercial availability.",
+      "integrity_flags": [
+        "Trial-stage device — not yet FDA-cleared or commercially available; avoid implying it is ready for home use."
+      ],
+      "trend_score_reason": "Niche but relevant aging/caregiving trial; moderate search interest in tech-forward dementia solutions",
+      "opportunity_score_reason": "Practical caregiving angle with emerging-tech framing; appeals to both caregivers and health-tech audiences",
+      "discover_score_reason": "Moderate discovery potential — aging/caregiving topic with specific device trial; lower general search volume than disease-diagnosis queries",
+      "notes": "Evidence requirement: moderate — trial stage only. Estimated word count 450–600.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "UC Davis Health article in Google News Radar (clinical trial health) dated 10/07/2026 matching topic and headline"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "Gatorade recall (122K cases, 37 states)",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Salata salad dressing recall",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Blood pressure medication recall",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "ARPA-H SURPASS program",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "World Mental Health Day 2026",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Pew health/wellness influencer study",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Nobel Prize / optogenetics",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "NPR sauna/heat therapy for depression",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Medicare-for-all polling, HHS price-transparency rule, ACA $500 stunt, federal premium hikes, Vance insurer fraud crackdown, Wisconsin governor race",
+      "reason": "off_category"
+    },
+    {
+      "topic": "SNAP benefit rule/payment changes",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Health insurance shopping terms (Costco, Meritain, Devoted, UHC portal, open enrollment 2027)",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Menopause wellness binge, DC wellness resort, Rochester wellness dog, Shrewsbury/Purdue/CU Denver events, Army coaching, Amazon Prime Day wellness deals, Forbes wellness boom, Gilead×Calm",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Stephen A. Smith / Lane Johnson mental health comments",
+      "reason": "brand_safety"
+    },
+    {
+      "topic": "WHO global health landscape estimates",
+      "reason": "other"
+    },
+    {
+      "topic": "Medscape FDA recall problems raise liability questions",
+      "reason": "other"
+    },
+    {
+      "topic": "Ochsner AI trial screening, Pfizer AI patient matching, Mount Sinai EHR-to-EDC, Verana/Bitfount, Rovia infrastructure, IceCure expansion, UNC Rett gene therapy, UNLV women's health trials, NeuWire stroke device, Nature ALS Finland study, UCLA Neural Consult app, UNMC/Susquehanna research digests, Harvard cell-infection study",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "GLP-1 pipeline (six-month tirzepatide data, CBL-514 injection)",
+      "reason": "other"
+    }
+  ],
+  "fact_check_summary": {
+    "accurate": 4,
+    "minor_issues": 1
+  },
+  "run_cost": {
+    "total_usd": 0.6327,
+    "calls": [
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11165,
+        "output_tokens": 23657,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 42559,
+        "estimated_cost_usd": 0.5479
+      },
+      {
+        "model": "claude-haiku-4-5",
+        "input_tokens": 9740,
+        "output_tokens": 2921,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0243
+      },
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11803,
+        "output_tokens": 1675,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0605
+      }
+    ]
+  }
+}

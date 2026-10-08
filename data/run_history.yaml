@@ -3,6 +3,39 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-10-08'
+  niche: health and wellness
+  signals_reviewed: 153
+  topics_retained: 5
+  topics_rejected: 17
+  p1_count: 2
+  p2_count: 1
+  p3_count: 2
+  p4_count: 0
+  p5_count: 0
+  integrity_flags: 5
+  top_topic: FDA recalls millions of bottles of eye drops nationwide
+  key_themes:
+  - FDA recalls millions of bottles of eye drops nationwide
+  - 'Early clinical trial: Type 1 diabetes patients able to go off insulin'
+  - Study finds microglia play protective role in Parkinson's disease
+  - 'VCU: TikTok doctors'' outsized influence on Gen Z health views'
+  - AI-assisted medication device trial for older adults with memory loss
+  tools_used:
+  - serpapi_news
+  - serpapi_trends_prefetch
+  - google_news_radar
+  tools_unavailable:
+  - reddit_direct
+  - exa_search
+  - rss_direct_fetch
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-10-08.html
+  estimated_cost_usd: 0.6327
+  notes: Google News Radar + Trends pre-fetch used as primary input. ARPA-H SURPASS program recurring
+    across 3 consecutive runs — flagged stale, suppressed again. Recent Coverage list (last 7 days) used
+    as primary dedup source. Gatorade/Salata/blood-pressure recalls, Nobel/optogenetics, sauna-depression
+    trial, World Mental Health Day, and Pew influencer piece all confirmed as existing coverage — no material
+    new development found to justify updates.
 - run_date: '2026-10-07'
   niche: Health & Wellness
   signals_reviewed: 153
