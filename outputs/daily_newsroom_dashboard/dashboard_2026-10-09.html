@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trending Content OS — Daily Dashboard</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  :root {
+    --ink: #171717;
+    --text: #262626;
+    --muted: #686868;
+    --faint: #8a8a8a;
+    --paper: #fbfaf8;
+    --surface: #ffffff;
+    --soft: #f2f1ee;
+    --line: #dfddd8;
+    --red: #cf2f32;
+    --green: #1f9d55;
+    --amber: #d97706;
+    --blue: #2563eb;
+    --violet: #7c3aed;
+  }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--paper);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+  .topbar {
+    height: 48px;
+    background: #070707;
+    color: #f7f7f7;
+    display: flex;
+    align-items: center;
+    padding: 0 18px;
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+  .mark {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3px;
+  }
+  .mark span { background: #f7f7f7; border-radius: 999px; }
+  .wrap { max-width: 1232px; margin: 0 auto; padding: 32px 28px 56px; }
+  .masthead {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 8px 0 28px;
+  }
+  h1 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    line-height: 1.1;
+    color: var(--ink);
+    letter-spacing: 0;
+  }
+  h1 span { color: var(--red); }
+  .dek {
+    margin-top: 10px;
+    color: #555;
+    font-size: 14px;
+  }
+  .run-chip {
+    margin-top: 2px;
+    border: 1px solid var(--line);
+    background: var(--soft);
+    border-radius: 4px;
+    padding: 7px 10px;
+    color: #555;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin: 0 0 28px;
+  }
+  .stat {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--red);
+    border-radius: 6px;
+    padding: 18px 20px;
+    min-height: 100px;
+  }
+  .stat.green { border-top-color: var(--green); }
+  .stat.amber { border-top-color: var(--amber); }
+  .stat.violet { border-top-color: var(--violet); }
+  .stat .value {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 36px;
+    line-height: 1;
+    color: var(--red);
+    font-weight: 700;
+  }
+  .stat.green .value { color: var(--green); }
+  .stat.amber .value { color: var(--amber); }
+  .stat.violet .value { color: var(--violet); }
+  .stat .label {
+    margin-top: 8px;
+    color: #666;
+    font-weight: 700;
+    font-size: 13px;
+  }
+  .insight {
+    background: #eff6ff;
+    border: 1px solid #b7d4ff;
+    border-left: 4px solid var(--blue);
+    border-radius: 6px;
+    padding: 18px 20px 17px;
+    margin: 0 0 28px;
+    color: #183052;
+  }
+  .insight-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    color: #1457d9;
+    font-weight: 800;
+  }
+  .status-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: #fff8e6;
+    border: 1px solid #f4be4a;
+    border-left: 4px solid var(--amber);
+    border-radius: 6px;
+    padding: 12px 14px;
+    margin: -12px 0 28px;
+    color: #5f3900;
+    font-size: 13px;
+  }
+  .status-note strong {
+    color: #9a5700;
+  }
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    min-height: 20px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    border: 1px solid #9fc2ff;
+    background: #dbeafe;
+    color: #1457d9;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  .toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 0 0 12px;
+  }
+  .section-title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: flex-end;
+  }
+  .filter-btn {
+    appearance: none;
+    border: 1px solid var(--line);
+    background: #fff;
+    color: #555;
+    border-radius: 4px;
+    padding: 5px 9px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .filter-btn.active, .filter-btn:hover {
+    border-color: #9fc2ff;
+    background: #eff6ff;
+    color: #1457d9;
+  }
+  .table-shell {
+    overflow-x: auto;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1040px;
+  }
+  th {
+    background: var(--soft);
+    border-bottom: 1px solid var(--line);
+    color: #6a6a6a;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 11px 12px;
+  }
+  td {
+    border-bottom: 1px solid #e7e5e0;
+    padding: 12px;
+    vertical-align: top;
+    font-size: 13px;
+  }
+  tr.topic-row { cursor: pointer; }
+  tr.topic-row:hover td { background: #fcfcfb; }
+  tr.hidden { display: none; }
+  tr.detail-row td {
+    background: #fbfbf9;
+    padding: 0;
+  }
+  .detail-row[hidden] { display: none; }
+  .rank {
+    color: #777;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-weight: 700;
+    width: 44px;
+  }
+  .topic-title { font-weight: 800; color: #202020; }
+  .topic-sub { color: #606060; font-size: 12px; margin-top: 4px; }
+  .num {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-weight: 800;
+    color: #2b2b2b;
+    display: inline-block;
+    min-width: 28px;
+  }
+  .mini-bar {
+    display: inline-block;
+    width: 58px;
+    height: 5px;
+    background: #e4e1dc;
+    border-radius: 10px;
+    margin-left: 8px;
+    vertical-align: middle;
+    overflow: hidden;
+  }
+  .mini-bar span { display: block; height: 100%; border-radius: 10px; }
+  .trend span { background: var(--red); }
+  .opp span { background: var(--blue); }
+  .velocity.high { color: var(--green); }
+  .velocity.mid { color: var(--amber); }
+  .velocity.low { color: #777; }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    min-height: 22px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .badge.now, .badge.p1 { color: #dc2626; background: #fff1f1; border: 1px solid #ffa6a6; }
+  .badge.today, .badge.p2 { color: #c26a00; background: #fff8e6; border: 1px solid #f4be4a; }
+  .badge.week, .badge.p3 { color: #1457d9; background: #eff6ff; border: 1px solid #9fc2ff; }
+  .badge.evergreen, .badge.p4 { color: #16874a; background: #effaf2; border: 1px solid #75d99b; }
+  .badge.monitor, .badge.p5 { color: #6b7280; background: #f4f4f5; border: 1px solid #d4d4d8; }
+  .serp.easy { color: #16874a; background: #effaf2; border: 1px solid #75d99b; }
+  .serp.med { color: #c26a00; background: #fff8e6; border: 1px solid #f4be4a; }
+  .serp.hard { color: #dc2626; background: #fff1f1; border: 1px solid #ffa6a6; }
+  .source-chip {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 4px 4px 0;
+    padding: 2px 7px;
+    min-height: 22px;
+    border-radius: 4px;
+    border: 1px solid #b7d4ff;
+    background: #eff6ff;
+    color: #1457d9;
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    padding: 16px 20px 18px 56px;
+    border-top: 1px solid #eeeae4;
+  }
+  .detail h4 {
+    margin: 0 0 6px;
+    color: #606060;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+  }
+  .detail p {
+    margin: 0;
+    font-size: 13px;
+    color: #2c2c2c;
+  }
+  .rejected { margin-top: 28px; }
+  .empty {
+    padding: 28px;
+    text-align: center;
+    color: var(--muted);
+  }
+  @media (max-width: 820px) {
+    .wrap { padding: 24px 16px 44px; }
+    .masthead { display: block; }
+    .run-chip { display: inline-block; margin-top: 18px; white-space: normal; }
+    .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .toolbar { align-items: flex-start; flex-direction: column; }
+    .filters { justify-content: flex-start; }
+    .detail { grid-template-columns: 1fr; padding-left: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="topbar"><span class="mark"><span></span><span></span><span></span><span></span></span>Trending Content OS</div>
+<main class="wrap">
+  <header class="masthead">
+    <div>
+      <h1>Trending <span>Content OS</span></h1>
+      <div class="dek" id="dek"></div>
+    </div>
+    <div class="run-chip" id="run-meta"></div>
+  </header>
+
+  <section class="stats" id="stats"></section>
+
+  <section class="insight" id="insight" hidden>
+    <div class="insight-head"><span class="pill">Google Trends</span><span id="insight-title">Run Insight</span></div>
+    <div id="insight-copy"></div>
+  </section>
+
+  <section class="status-note" id="site-fallback-note" hidden>
+    <strong>Duplicate check:</strong>
+    <span>site_url not configured — competitor fallback used (Healthline, WebMD, STAT News).</span>
+  </section>
+
+  <section>
+    <div class="toolbar">
+      <div class="section-title" id="priority-title">Priority Topics</div>
+      <div class="filters" id="filters"></div>
+    </div>
+    <div class="table-shell">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Topic</th>
+            <th>Trend</th>
+            <th>Opp</th>
+            <th>Velocity</th>
+            <th>Urgency</th>
+            <th>SERP</th>
+            <th>Src</th>
+            <th>Key Sources</th>
+          </tr>
+        </thead>
+        <tbody id="topic-rows"></tbody>
+      </table>
+      <div class="empty" id="empty" hidden>No candidates to show. Check the raw report or extraction JSON.</div>
+    </div>
+  </section>
+
+  <section class="rejected" id="rejected-section" hidden>
+    <div class="toolbar">
+      <div class="section-title">Rejected Topics</div>
+    </div>
+    <div class="table-shell">
+      <table>
+        <thead><tr><th>Topic</th><th>Reason</th></tr></thead>
+        <tbody id="rejected-rows"></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<script type="application/json" id="pipeline-json">{
+  "run_date": "2026-10-09",
+  "niche": "Health & Wellness",
+  "signal_summary": {
+    "total_reviewed": 144,
+    "total_retained": 4,
+    "total_rejected": 135,
+    "tools_active": [
+      "google_news",
+      "google_trends",
+      "serpapi"
+    ],
+    "tools_unavailable": [
+      "reddit_api",
+      "social_search",
+      "content_database"
+    ],
+    "notes": "Site URL not configured — self-check skipped, competitor-list fallback used. Recurring FDA recall pattern (5 distinct recalls in 2 weeks) converted into a differentiated trend-synthesis piece rather than treated as repetitive coverage. Two candidates routed to Monitor: Hawaiian Bread recall (single-source, needs FDA.gov corroboration) and UT Health San Antonio autism-toxicant study (sensitive claim, trend_strength 39 below 50 threshold)."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Drug-resistant 'sexually transmitted diarrhea' (Shigella) breakout",
+      "primary_entity": "Shigella (XDR)",
+      "signal_type": "rising_search_interest",
+      "allowed_category": "infectious disease",
+      "trend_strength_score": 78,
+      "opportunity_score": 82,
+      "discover_score": 4,
+      "urgency": "now",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "source_urls": [
+        "https://www.sciencealert.com/"
+      ],
+      "recommended_angle": "Explain what's actually spreading (XDR Shigella), why headlines call it 'sexually transmitted diarrhea,' and what drug resistance means for treatment.",
+      "why_now": "Confirmed real-time Google Trends breakout term with a driving news story; no prior coverage on this exact angle.",
+      "primary_headline": "What's Behind the 'Sexually Transmitted Diarrhea' Headlines? Inside the Drug-Resistant Shigella Surge",
+      "next_steps": "Confirm CDC/MMWR source before publishing; assign to infectious-disease writer today.",
+      "integrity_flags": [
+        "Verify CDC/primary surveillance data directly before publishing — current sourcing is a single science-media outlet (ScienceAlert); do not rely on secondary paraphrase alone.",
+        "Avoid overstating transmission routes — clarify fecal-oral vs. sexual transmission nuance precisely."
+      ],
+      "trend_score_reason": "Google Trends confirmed real-time breakout status; no prior SERP coverage on this angle.",
+      "opportunity_score_reason": "Thin, sensationalized SERP coverage creates credibility gap with strong audience demand for clarification.",
+      "discover_score_reason": "High AI-citation potential — maps directly to 'is this real / what does this mean' query pattern.",
+      "notes": "Verify primary CDC sourcing — ScienceAlert is tier-2; confidence capped Medium until institutional source confirmed.",
+      "fact_check": {
+        "verdict": "minor_issues",
+        "issues": [
+          "The evidence only shows the ScienceAlert headline text, not article content confirming the pathogen is Shigella or that it is specifically the XDR (extensively drug-resistant) strain; this specificity is asserted but not verifiable from the provided signal."
+        ],
+        "checked_against": "Google Trends breakout term 'sexually transmitted diarrhea disease' with ScienceAlert headline as driving story"
+      }
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "short_term",
+      "topic": "Why food and drug recalls keep piling up — pattern across 5 recent FDA actions",
+      "primary_entity": "FDA recall system",
+      "signal_type": "audience_pain_point",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 72,
+      "opportunity_score": 83,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 5,
+      "source_urls": [
+        "https://www.nytimes.com/2026/10/03/health/fda-recall-salata-salad-dressing-salmonella.html",
+        "https://www.cbsnews.com/news/gatorade-recall-undeclared-dyes-pepsico/",
+        "https://www.healthline.com/health-news/blood-pressure-medication-nationwide-recall-fda"
+      ],
+      "recommended_angle": "Synthesize eye-drops, BP meds, Gatorade, salad dressing, and bread recalls into one explainer on why recalls cluster and what consumers should actually do.",
+      "why_now": "Five FDA recalls in two weeks is a pattern no competitor has framed as a single story; Medscape's systemic-risk piece is the hook.",
+      "primary_headline": "Five FDA Recalls in Two Weeks: Is Something Actually Wrong, or Is the System Working?",
+      "next_steps": "Fast-track — differentiated angle, no direct competitor coverage found. Pull FDA.gov notices for each underlying recall as sources.",
+      "integrity_flags": [
+        "Distinguish recall frequency (detection improving) from product-safety decline (not established) — avoid implying food supply is getting less safe without data."
+      ],
+      "trend_score_reason": "5 distinct recalls in ~2 weeks (10/04–10/08) is unusually dense cluster; no competitor coverage frames this as single trend.",
+      "opportunity_score_reason": "Genuine SERP gap — existing recall coverage is piecemeal; pattern-synthesis angle differentiates and addresses audience anxiety.",
+      "discover_score_reason": "Strong durable Q&A fit ('why do recalls happen so often') with thin existing competitor coverage of the pattern itself.",
+      "notes": "Built from already-verified prior recalls, not a new unverified claim — does not require 02b gate.",
+      "fact_check": {
+        "verdict": "significant_issues",
+        "issues": [
+          "The angle references an 'eye-drops' recall that does not appear anywhere in the evidence radar.",
+          "The 'five recalls in two weeks' framing is not clearly supported — evidence shows four distinct recalls (Gatorade, salad dressing, BP medication, bread) plus a Medscape piece discussing recall problems generally, not a fifth discrete recall."
+        ],
+        "checked_against": "Google News Radar FDA recall health cluster (Gatorade, salad dressing, blood pressure medication, bread recalls, Medscape recall-problems piece)"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Lancet study: Google's AMIE AI model and patient-physician relationships",
+      "primary_entity": "AMIE (Google AI model)",
+      "signal_type": "study_or_research",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 56,
+      "opportunity_score": 69,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "source_urls": [
+        "https://blog.google/innovation-and-ai/technology/health/amie-clinical-study-lancet/"
+      ],
+      "recommended_angle": "What the Lancet study actually found about AI-assisted conversations — and where it stops short of replacing physician judgment.",
+      "why_now": "New Lancet-published clinical study announced 10/8; distinct from prior AI-clinical-trial coverage (UC Davis device trial, ARPA-H).",
+      "primary_headline": "Can AI Improve Your Relationship With Your Doctor? Inside the New Lancet Study",
+      "next_steps": "Pull Lancet DOI directly; note observational/study-design caveats before publishing.",
+      "integrity_flags": [
+        "Clarify study design (RCT vs. observational) before stating effect size; avoid implying AI replaces physician judgment."
+      ],
+      "trend_score_reason": "New Lancet-published study with institutional credibility, but topic overlap with earlier AI-trial coverage limits velocity.",
+      "opportunity_score_reason": "Peer-reviewed source + named model + patient-relationship angle create strong citation potential.",
+      "discover_score_reason": "Good citation potential — specific named model plus peer-reviewed source.",
+      "notes": "Passed 02b — journal named directly, framing not overstated.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "blog.google Lancet AMIE clinical study article dated 10/08/2026"
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "NYT: AI chatbot clinical trial for urgent care triage",
+      "primary_entity": "AI chatbot urgent-care trial",
+      "signal_type": "clinical_trial",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 56,
+      "opportunity_score": 67,
+      "discover_score": 3,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "source_urls": [
+        "https://www.nytimes.com/2026/10/08/technology/ai-chatbots-urgent-care.html"
+      ],
+      "recommended_angle": "What the trial measured, and whether AI triage chatbots are close to real urgent-care use.",
+      "why_now": "New NYT-reported clinical trial result, distinct from AMIE and from prior AI-device coverage.",
+      "primary_headline": "A New Clinical Trial Tests Whether AI Chatbots Can Handle Urgent Care Triage",
+      "next_steps": "Schedule for later this week; concise brief sufficient given moderate scores.",
+      "integrity_flags": [
+        "Confirm trial phase and sample size before efficacy claims."
+      ],
+      "trend_score_reason": "New clinical trial from tier-1 news outlet, but topic overlap and moderate velocity limit score.",
+      "opportunity_score_reason": "Moderate audience interest in AI-urgent-care angle; NYT trusted-secondary sourcing supports credibility.",
+      "discover_score_reason": "Moderate citation potential — specific trial but lower search volume than Shigella or recall-pattern pieces.",
+      "notes": "Passed 02b via NYT trusted-secondary sourcing.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "NYT article 'Clinical Trial Indicates A.I. Chatbots Could Aid Urgent Care' dated 10/08/2026"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "Gatorade recall (state expansions)",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Blood pressure medication nationwide recall",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Salata salad dressing recall",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Eye drops recall",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Heat/sauna therapy for depression",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "World Mental Health Day 2026",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Pew: health/wellness influencer study",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Nobel Prize (optogenetics)",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Measles/vaccine tracker",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "HHS price transparency rule",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Federal premium hikes for federal employees health insurance",
+      "reason": "off_category"
+    },
+    {
+      "topic": "KFF Medicare-for-All polling",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Patty Murray public health op-ed",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Forbes: $6.8T Wellness Boom",
+      "reason": "off_category"
+    },
+    {
+      "topic": "D.C. wellness resort (Therme)",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Prime Day wellness deals",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Gilead/Calm partnership for disease-specific emotional wellness",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Mount Sinai EHR-to-EDC clinical trial data entry",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Ochsner AI clinical trial screening",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Verana Health and Bitfount ophthalmic trial prescreening",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Pfizer AI matching patients to clinical trials",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Stanford gut-microbiome migration study",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Harvard cell viral response study",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Nature ALS genetics study (Finland)",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "NeuWire STROKE-REWIRE FDA IDE approval",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Health.com best time to eat dinner",
+      "reason": "weak_signal"
+    }
+  ],
+  "fact_check_summary": {
+    "minor_issues": 1,
+    "significant_issues": 1,
+    "accurate": 2
+  },
+  "run_cost": {
+    "total_usd": 0.6413,
+    "calls": [
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11280,
+        "output_tokens": 24218,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 42559,
+        "estimated_cost_usd": 0.5567
+      },
+      {
+        "model": "claude-haiku-4-5",
+        "input_tokens": 10601,
+        "output_tokens": 2371,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0225
+      },
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11468,
+        "output_tokens": 1848,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0621
+      }
+    ]
+  }
+}</script>
+<script>
+function readPipelineData() {
+  const raw = document.getElementById('pipeline-json').textContent.trim();
+  if (!raw || raw === '__PIPELINE_' + 'DATA__') {
+    return {
+      run_date: '',
+      niche: 'Health & Wellness',
+      signal_summary: {
+        total_reviewed: 0,
+        total_retained: 0,
+        total_rejected: 0,
+        notes: 'This is the dashboard template. Run python run_pipeline.py --no-email to generate a filled dashboard, or open outputs/daily_newsroom_dashboard/dashboard_preview.html to view the design preview.'
+      },
+      candidates: [],
+      rejected: []
+    };
+  }
+  try {
+    return JSON.parse(raw);
+  } catch (error) {
+    return {
+      run_date: '',
+      niche: 'Health & Wellness',
+      signal_summary: {
+        total_reviewed: 0,
+        total_retained: 0,
+        total_rejected: 0,
+        notes: `Dashboard data could not be parsed: ${error.message}`
+      },
+      candidates: [],
+      rejected: []
+    };
+  }
+}
+const D = readPipelineData();
+const candidates = Array.isArray(D.candidates) ? D.candidates : [];
+const rejected = Array.isArray(D.rejected) ? D.rejected : [];
+const summary = D.signal_summary || {};
+
+const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({
+  '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+}[ch]));
+const clamp = n => Math.max(0, Math.min(100, Number(n) || 0));
+const fmtDate = value => value || new Date().toISOString().slice(0, 10);
+const urgencyClass = value => {
+  if (value === 'now') return 'now';
+  if (value === 'today') return 'today';
+  if (value === 'this_week') return 'week';
+  if (value === 'evergreen') return 'evergreen';
+  return 'monitor';
+};
+const serpClass = c => {
+  const avg = ((Number(c.trend_strength_score) || 0) + (Number(c.opportunity_score) || 0)) / 2;
+  if (avg >= 82) return 'easy';
+  if (avg >= 65) return 'med';
+  return 'hard';
+};
+const serpLabel = cls => ({ easy: 'Easy', med: 'Med', hard: 'Hard' }[cls] || 'Med');
+const velocity = c => clamp(Math.round(((Number(c.discover_score) || 0) / 5) * 100));
+const sourceLabels = c => {
+  const labels = [];
+  if (c.signal_type) labels.push(String(c.signal_type).replace(/_/g, ' '));
+  if (c.confidence) labels.push(`${c.confidence} conf`);
+  if (c.content_status) labels.push(c.content_status);
+  return labels.slice(0, 3);
+};
+
+document.getElementById('dek').textContent =
+  `${esc(D.niche || 'Health & Wellness')} · US · ${fmtDate(D.run_date)} · with Google Trends data`;
+document.getElementById('run-meta').textContent =
+  `Generated: ${fmtDate(D.run_date)} | retained ${candidates.length} | pipeline v2`;
+
+const p1 = candidates.filter(c => c.priority_level === 'P1').length;
+const flags = candidates.filter(c => String(c.notes || '').trim() || c.confidence === 'low').length;
+const statData = [
+  { label: 'Signals Processed', value: summary.total_reviewed ?? 0, cls: '' },
+  { label: 'Retained Topics', value: candidates.length, cls: 'green' },
+  { label: 'Publish NOW', value: p1, cls: 'amber' },
+  { label: 'Integrity Flags', value: flags, cls: 'violet' },
+];
+document.getElementById('stats').innerHTML = statData.map(s => `
+  <div class="stat ${s.cls}">
+    <div class="value">${esc(s.value)}</div>
+    <div class="label">${esc(s.label)}</div>
+  </div>
+`).join('');
+
+const notes = String(summary.notes || '').trim();
+if (notes) {
+  document.getElementById('insight').hidden = false;
+  document.getElementById('insight-title').textContent = 'Search Demand vs. Editorial Urgency — Key Insight';
+  document.getElementById('insight-copy').textContent = notes;
+}
+const fallbackMentioned = /site_url not configured|self-check skipped|competitor fallback/i.test(notes)
+  || candidates.some(c => /site_url not configured|self-check skipped|competitor fallback/i.test(String(c.notes || '')));
+document.getElementById('site-fallback-note').hidden = !fallbackMentioned;
+
+document.getElementById('priority-title').textContent =
+  `Priority Topics — All ${candidates.length} Retained`;
+
+const filters = ['All', 'P1', 'P2', 'P3', 'P4', 'P5'];
+document.getElementById('filters').innerHTML = filters.map((f, i) =>
+  `<button class="filter-btn ${i === 0 ? 'active' : ''}" data-filter="${f}">${f}</button>`
+).join('');
+
+function rowHtml(c, i) {
+  const trend = clamp(c.trend_strength_score);
+  const opp = clamp(c.opportunity_score);
+  const vel = velocity(c);
+  const velClass = vel >= 70 ? 'high' : vel >= 40 ? 'mid' : 'low';
+  const sc = serpClass(c);
+  const urgency = c.urgency || c.publish_timing || 'monitor';
+  const labels = sourceLabels(c).map(label => `<span class="source-chip">${esc(label)}</span>`).join('');
+  return `
+    <tr class="topic-row" data-priority="${esc(c.priority_level)}" data-detail="${i}">
+      <td class="rank">${String(i + 1).padStart(2, '0')}</td>
+      <td>
+        <div class="topic-title">${esc(c.topic)}</div>
+        <div class="topic-sub">${esc(c.primary_headline || c.primary_entity || c.recommended_angle || '')}</div>
+      </td>
+      <td><span class="num">${trend}</span><span class="mini-bar trend"><span style="width:${trend}%"></span></span></td>
+      <td><span class="num">${opp}</span><span class="mini-bar opp"><span style="width:${opp}%"></span></span></td>
+      <td><span class="num velocity ${velClass}">${vel}</span></td>
+      <td><span class="badge ${urgencyClass(urgency)}">${esc(urgency === 'this_week' ? 'today' : urgency)}</span></td>
+      <td><span class="badge serp ${sc}">${serpLabel(sc)}</span></td>
+      <td><span class="num">${esc(c.source_count ?? 0)}</span></td>
+      <td>${labels}</td>
+    </tr>
+    <tr class="detail-row" data-parent="${i}" hidden>
+      <td colspan="9">
+        <div class="detail">
+          <div><h4>Recommended Angle</h4><p>${esc(c.recommended_angle || 'No angle provided.')}</p></div>
+          <div><h4>Why Now</h4><p>${esc(c.why_now || 'No timing rationale provided.')}</p></div>
+          <div><h4>Next Steps</h4><p>${esc(c.next_steps || c.notes || 'No next steps provided.')}</p></div>
+        </div>
+      </td>
+    </tr>
+  `;
+}
+
+const tbody = document.getElementById('topic-rows');
+tbody.innerHTML = candidates.map(rowHtml).join('');
+document.getElementById('empty').hidden = candidates.length > 0;
+
+tbody.addEventListener('click', event => {
+  const row = event.target.closest('.topic-row');
+  if (!row) return;
+  const detail = tbody.querySelector(`.detail-row[data-parent="${row.dataset.detail}"]`);
+  if (detail) detail.hidden = !detail.hidden;
+});
+
+document.getElementById('filters').addEventListener('click', event => {
+  const btn = event.target.closest('.filter-btn');
+  if (!btn) return;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const filter = btn.dataset.filter;
+  document.querySelectorAll('.topic-row').forEach(row => {
+    const show = filter === 'All' || row.dataset.priority === filter;
+    row.hidden = !show;
+    const detail = tbody.querySelector(`.detail-row[data-parent="${row.dataset.detail}"]`);
+    if (detail) {
+      detail.hidden = true;
+      detail.classList.toggle('hidden', !show);
+    }
+  });
+});
+
+if (rejected.length) {
+  document.getElementById('rejected-section').hidden = false;
+  document.getElementById('rejected-rows').innerHTML = rejected.map(r => `
+    <tr><td>${esc(r.topic)}</td><td>${esc(r.reason)}</td></tr>
+  `).join('');
+}
+</script>
+</body>
+</html>
