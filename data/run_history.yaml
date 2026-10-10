@@ -3,6 +3,40 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-10-10'
+  niche: Health & Wellness
+  signals_reviewed: 153
+  topics_retained: 5
+  topics_rejected: 13
+  p1_count: 1
+  p2_count: 1
+  p3_count: 0
+  p4_count: 0
+  p5_count: 3
+  integrity_flags: 4
+  top_topic: WHO urges shift from institutional to community-based mental health care, timed to World
+    Mental Health Day 2026
+  key_themes:
+  - WHO urges shift from institutional to community-based mental health care, timed to World Mental Health
+    Day 2026
+  - First 2026 measles case confirmed in San Luis Obispo County, extending the national outbreak pattern
+  - 'Stanford: One Year After Ibogaine, Veterans Report Continued PTSD Relief'
+  - Clinical Trial Tests Remedy for Congo's Ebola Outbreak
+  - New World Screwworm — USDA Response
+  tools_used:
+  - serpapi_news
+  - serpapi_trends
+  - google_news_radar
+  tools_unavailable:
+  - reddit_direct_api
+  - exa_search
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-10-10.html
+  estimated_cost_usd: 0.6123
+  notes: Self-check skipped (no site_url configured) — competitor-list fallback used per configs/competitor_list.yaml.
+    AI-in-healthcare cluster saturated across 3 consecutive days; recommend cooling-off period before
+    adding more individual AI-health items. FDA recall cadence remains recurring theme — treat new recall
+    signals with higher sourcing bar. Two single-source recall candidates failed Skill 02b verification
+    gate today.
 - run_date: '2026-10-09'
   niche: Health & Wellness
   signals_reviewed: 144
