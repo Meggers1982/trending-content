@@ -3,6 +3,39 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-10-11'
+  niche: Health & Wellness
+  signals_reviewed: 153
+  topics_retained: 4
+  topics_rejected: 20
+  p1_count: 0
+  p2_count: 1
+  p3_count: 1
+  p4_count: 0
+  p5_count: 2
+  integrity_flags: 3
+  top_topic: New study links late-night eating to liver strain and metabolic disruption
+  key_themes:
+  - New study links late-night eating to liver strain and metabolic disruption
+  - How Wegovy and Zepbound actually work — mechanism and side effects explained
+  - USC launches psilocybin + mindfulness meditation trial for depression
+  - 'Stanford study: gut microbiome signatures trace ancient human migration'
+  tools_used:
+  - serpapi_news
+  - serpapi_trends
+  - google_news_radar
+  - google_trends
+  tools_unavailable:
+  - reddit_api
+  - social_search
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-10-11.html
+  estimated_cost_usd: 0.6331
+  notes: Recall and mental-health themes have appeared in 5+ consecutive runs (10/06–10/10) with today's
+    radar reconfirming the same stories — flagged as 'recurring, check for staleness' rather than re-scored
+    as new. Two otherwise-interesting science stories (USC psilocybin trial, Stanford microbiome study)
+    held to Monitor status purely on single-source sourcing — both candidates to re-check in 48–72h if
+    wire/major-outlet pickup occurs. Site URL not configured; competitor-list fallback used for SERP-gap/duplicate
+    context. Reddit and X/Twitter social search were not queried this run.
 - run_date: '2026-10-10'
   niche: Health & Wellness
   signals_reviewed: 153
