@@ -268,6 +268,15 @@ SEED_PROFILES = {
         "mental health awareness",
         "trauma recovery",
     ],
+    "womens-health": [
+        "perimenopause",
+        "menopause symptoms",
+        "hormone therapy",
+        "PCOS",
+        "endometriosis",
+        "period health",
+        "fertility",
+    ],
     "gut-health": [
         "gut health",
         "microbiome",
@@ -335,6 +344,12 @@ GENERIC_ANCHOR_WORDS = {
     "surgery",
     "medication",
     "control",
+    # womens-health profile: generic halves of "period health",
+    # "menopause symptoms" and "hormone therapy" ("grace period", "cold
+    # symptoms", "physical therapy" would otherwise match as anchors).
+    "period",
+    "symptoms",
+    "therapy",
 }
 
 
@@ -1417,7 +1432,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--geo", default="US", help="Google Trends geography code. Default: US.")
     parser.add_argument("--date", default="now 7-d", help='Google Trends date window. Default: "now 7-d".')
     parser.add_argument("--seeds", default="", help="Optional comma-separated seed terms to scan in addition to the selected profile.")
-    parser.add_argument("--profile", "--seed-profile", dest="seed_profile", default=DEFAULT_SEED_PROFILE, choices=["auto", "wellness", "health", "ai", "beauty", "nutrition", "fitness", "food-safety", "diet", "weight-loss", "mental-health", "gut-health", "none"], help="Seed profile to scan: wellness, health, ai, beauty, nutrition, fitness, food-safety, diet, weight-loss, mental-health, gut-health, none, or auto. Default: auto.")
+    parser.add_argument("--profile", "--seed-profile", dest="seed_profile", default=DEFAULT_SEED_PROFILE, choices=["auto", "wellness", "health", "ai", "beauty", "nutrition", "fitness", "food-safety", "diet", "weight-loss", "mental-health", "gut-health", "womens-health", "none"], help="Seed profile to scan: wellness, health, ai, beauty, nutrition, fitness, food-safety, diet, weight-loss, mental-health, gut-health, womens-health, none, or auto. Default: auto.")
     parser.add_argument("--max-seeds", type=int, default=DEFAULT_MAX_SEEDS, help="Maximum seed terms to scan. Default: 24.")
     parser.add_argument("--limit", type=int, default=80, help="Maximum discovered candidates to validate. Default: 80.")
     parser.add_argument("--timeout", type=int, default=DEFAULT_REQUEST_TIMEOUT, help="Seconds to wait for each SerpAPI request. Default: 12.")
@@ -1449,7 +1464,7 @@ def main() -> None:
         if args.seed_profile in SEED_PROFILES:
             args.topic = args.seed_profile
         else:
-            sys.exit("Choose a --profile (wellness, health, ai, beauty, nutrition, fitness, food-safety, diet, weight-loss, mental-health, gut-health), or provide --topic.")
+            sys.exit("Choose a --profile (wellness, health, ai, beauty, nutrition, fitness, food-safety, diet, weight-loss, mental-health, gut-health, womens-health), or provide --topic.")
 
     seeds = build_seed_terms(args.topic, args.seeds, args.seed_profile, args.max_seeds)
     # Snapshot before Trending Now / autocomplete get merged into `seeds`
