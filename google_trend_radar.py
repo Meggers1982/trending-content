@@ -368,6 +368,15 @@ PROFILE_EXTRA_ANCHORS = {
         "birth control", "contracepti", "postpartum", "pregnan", "ivf",
         "planned parenthood", "in women", "for women",
     ],
+    # First adhd-focus scan (2026-10-12) rejected adderall, vyvanse, audhd,
+    # rejection sensitive dysphoria and the brand-name drugs as off-topic:
+    # the seeds only carry "adhd", "adult" (blocklisted) and "focus".
+    "adhd-focus": [
+        "adderall", "vyvanse", "ritalin", "concerta", "focalin", "strattera",
+        "stratera", "desoxyn", "mydayis", "xelstrym", "evekeo", "qelbree",
+        "stimulant", "audhd", "rejection sensitiv", "executive function",
+        "asrs", "inattentive", "hyperactiv", "neurodiver",
+    ],
 }
 
 INTENT_MODIFIERS = [

@@ -107,7 +107,7 @@ Second batch of health profiles, each with its own weekly `run-<profile>-radar.y
 | `sleep` | sleep apnea, insomnia, sleep tracking |
 | `heart-metabolic` | blood pressure, cholesterol, blood sugar, prediabetes, longevity |
 | `brain-aging` | brain fog, cognitive decline, dementia, healthy aging, bone density, sarcopenia |
-| `adhd-focus` | adult ADHD, ADHD medication, focus |
+| `adhd-focus` | adult ADHD, ADHD medication, focus (extra anchors for drug names like Adderall/Vyvanse, AuDHD, executive function) |
 | `supplements` | creatine, collagen, electrolytes, vitamin D, iron deficiency, omega-3 |
 | `chronic-conditions` | long COVID, autoimmune, thyroid, migraine, chronic fatigue, inflammation |
 | `public-health` | measles, flu season, RSV, bird flu, FDA approval, drug recall, vaccine schedule |
