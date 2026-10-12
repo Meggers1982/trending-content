@@ -351,6 +351,25 @@ SEED_PROFILES = {
     ],
 }
 
+# Full-phrase substring anchors added on top of the seed-derived ones, for
+# profiles whose seeds are too narrow to recognize their own neighborhood.
+# First womens-health scan (2026-10-12) rejected pmdd, dysmenorrhea,
+# premenstrual syndrome, ovarian cyst symptoms and myomectomy as off-topic
+# because none contains a seed token. Substring matching, so "menstrua"
+# covers menstrual/menstruation; avoid short stems that sit inside other
+# words (e.g. "iud" in "fluid") and bare "women" (matches women's sports).
+PROFILE_EXTRA_ANCHORS = {
+    "womens-health": [
+        "pmdd", "pms", "premenstrual", "menstrua", "period pain", "period cramps",
+        "dysmenorrhea", "ovarian", "ovulation", "uterine", "uterus", "endometri",
+        "adenomyosis", "fibroids", "myomectomy", "hysterectomy", "pelvic",
+        "hormone replacement", "estrogen", "progesterone", "testosterone in women",
+        "hot flash", "hrt", "vaginal", "gynecolog", "obgyn", "ob-gyn", "cervical",
+        "birth control", "contracepti", "postpartum", "pregnan", "ivf",
+        "planned parenthood", "in women", "for women",
+    ],
+}
+
 INTENT_MODIFIERS = [
     "trends",
     "products",
@@ -894,7 +913,10 @@ def attach_timeseries(
             candidate.discovery_sources.add("too long for timeseries")
 
     for group in batches(valid_candidates, 5):
-        query = ",".join(c.query for c in group)
+        # SerpAPI splits q on commas and rejects more than 5 terms, so a
+        # candidate like "explain pcos symptoms, causes, ..." turned one batch
+        # into a 400 and that batch lost all its interest data.
+        query = ",".join(c.query.replace(",", " ") for c in group)
         data = serp_get({
             "engine": "google_trends",
             "q": query,
@@ -1654,6 +1676,8 @@ def main() -> None:
             continue
 
     extra_anchor_terms = sorted({term for terms in taxonomy.values() for term in terms}) if args.seed_profile == "beauty" else None
+    if args.seed_profile in PROFILE_EXTRA_ANCHORS:
+        extra_anchor_terms = PROFILE_EXTRA_ANCHORS[args.seed_profile]
     exclusion_terms = load_exclusion_terms() if args.seed_profile == "beauty" else None
     data = build_data(
         args.topic, args.geo, args.date, seeds, candidates, rejected,
