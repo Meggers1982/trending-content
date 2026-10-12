@@ -1,0 +1,791 @@
+{
+  "run_date": "2026-10-12",
+  "generated_at": "2026-10-12T20:18:07",
+  "topic": "womens-health",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "womens-health",
+    "perimenopause",
+    "menopause symptoms",
+    "hormone therapy",
+    "PCOS",
+    "endometriosis",
+    "period health",
+    "fertility",
+    "womens-health trends",
+    "womens-health products",
+    "womens-health news",
+    "womens-health for beginners",
+    "womens-health routine",
+    "womens-health benefits",
+    "womens-health ideas",
+    "womens-health reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 16,
+    "total_reviewed": 80,
+    "total_retained": 2,
+    "total_rejected": 78,
+    "breakouts": 0,
+    "emerging": 1,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "topic": "explain the primary symptoms of pcos and how it is diagnosed",
+      "trend_stage": "emerging",
+      "urgency": "this_week",
+      "radar_score": 57,
+      "emergence_score": 62,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 77,
+      "confidence": "high",
+      "rising_label": "+550%",
+      "latest_interest": 0,
+      "peak_interest": 21,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "PCOS"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        21,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +550%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Build an angle this week and monitor the next 24-48 hours."
+    },
+    {
+      "rank": 2,
+      "topic": "behind the smile movie endometriosis",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 54,
+      "emergence_score": 55,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 73,
+      "confidence": "high",
+      "rising_label": "+400%",
+      "latest_interest": 0,
+      "peak_interest": 21,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "endometriosis"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        21,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +400%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "poi symptoms",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "menopause symptoms"
+      ]
+    },
+    {
+      "topic": "chocolate",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "hormone therapy"
+      ]
+    },
+    {
+      "topic": "period panties",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "period health"
+      ]
+    },
+    {
+      "topic": "behind the smile movie",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "endometriosis"
+      ]
+    },
+    {
+      "topic": "best pizza near me",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "menopause symptoms"
+      ]
+    },
+    {
+      "topic": "top tourist attractions in paris",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "menopause symptoms"
+      ]
+    },
+    {
+      "topic": "best laptop for work",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "menopause symptoms"
+      ]
+    },
+    {
+      "topic": "congenital adrenal hyperplasia",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "PCOS"
+      ]
+    },
+    {
+      "topic": "cheapest flights to tokyo",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fertility"
+      ]
+    },
+    {
+      "topic": "colon cancer symptoms",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "menopause symptoms"
+      ]
+    },
+    {
+      "topic": "cushing syndrome",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "PCOS"
+      ]
+    },
+    {
+      "topic": "best time to visit maldives",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fertility"
+      ]
+    },
+    {
+      "topic": "pecos",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "PCOS"
+      ]
+    },
+    {
+      "topic": "pid symptoms",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "endometriosis"
+      ]
+    },
+    {
+      "topic": "hormone therapy is prescribed in combination with which procedure?",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "explain the early symptoms of perimenopause and how long they typically last",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "explain endometriosis causes, common symptoms, and available management options",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "low testosterone in women",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "bioidentical hormone replacement therapy doctors near me",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "explain pcos symptoms, causes, and common management strategies for beginners",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "explain what adenomyosis is and how it impacts fertility",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "symptoms of fibroids after menopause",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "pmdd symptoms",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "how to get pregnant with pcos quickly",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "do menopause symptoms ever go away",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "symptoms of cervical cancer after menopause",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "pcos flare up symptoms",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "can you develop endometriosis later in life",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "myomectomy",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "pmdd",
+      "reason": "Weak radar score (46)"
+    },
+    {
+      "topic": "premenstrual symptoms",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "menopause symptoms nausea",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "early onset menopause symptoms",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "stage 4 endometriosis life expectancy",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "endometriosis treatment options",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "obgyn near me",
+      "reason": "Weak radar score (46)"
+    },
+    {
+      "topic": "planned parenthood",
+      "reason": "Weak radar score (45)"
+    },
+    {
+      "topic": "when is open enrollment for health insurance 2026",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "costco fertility program",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "how is perimenopause diagnosed",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "early signs of perimenopause",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "premenstrual syndrome",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "is nausea a symptom of perimenopause",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "endometrial hyperplasia",
+      "reason": "Weak radar score (45)"
+    },
+    {
+      "topic": "can men get endometriosis",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "stage 4 endometriosis symptoms",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "kentucky fertility institute",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "pcos cookbook",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "how is pcos diagnosed",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "dysmenorrhea",
+      "reason": "Weak radar score (46)"
+    },
+    {
+      "topic": "pcos breakfast ideas",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "how to diagnose pcos",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "ovarian cyst symptoms",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "can men have endometriosis",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "how does endometriosis happen",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "endometrial ablation",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "can you die from endometriosis",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "stage 4 endometriosis",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "advent health",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "early perimenopause symptoms",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "what causes pcos in women",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "icd 10 code for pcos",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "how to tell if you have endometriosis",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "endometrioma vs endometriosis",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "at home fertility test for women",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "pinnacle fertility chicago",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "perimenopause symptoms",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "what is perimenopause",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "menopause",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "perimenopause age",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "symptoms of perimenopause",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "hrt",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "hrt perimenopause",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "estrogen",
+      "reason": "Weak radar score (38)"
+    },
+    {
+      "topic": "perimenopause periods",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "perimenopause signs",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "progesterone",
+      "reason": "Weak radar score (39)"
+    },
+    {
+      "topic": "perimenopause reddit",
+      "reason": "Weak radar score (43)"
+    }
+  ]
+}
