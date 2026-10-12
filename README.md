@@ -107,10 +107,10 @@ automatically once a week (Monday mornings) and commits the results, so "Trendin
 stays current without anyone clicking "Scan" — edit the cron line in that file to change how
 often it runs.
 
-Each of the other 7 profiles has its own weekly scheduled workflow too
+Each of the other 8 profiles has its own weekly scheduled workflow too
 (`run-nutrition-radar.yml`, `run-fitness-radar.yml`, `run-food-safety-radar.yml`,
 `run-diet-radar.yml`, `run-weight-loss-radar.yml`, `run-mental-health-radar.yml`,
-`run-gut-health-radar.yml`), staggered across Monday-Wednesday mornings so they don't all run
+`run-gut-health-radar.yml`, `run-womens-health-radar.yml`), staggered across Monday-Wednesday mornings so they don't all run
 (and push) at the same time. All of them show up individually in the GitHub Actions tab and
 can be triggered manually from there ("Run workflow") in addition to their schedule.
 
