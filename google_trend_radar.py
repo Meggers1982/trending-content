@@ -277,6 +277,66 @@ SEED_PROFILES = {
         "period health",
         "fertility",
     ],
+    "sleep": [
+        "sleep apnea",
+        "insomnia",
+        "sleep tracking",
+    ],
+    "heart-metabolic": [
+        "blood pressure",
+        "cholesterol",
+        "blood sugar",
+        "prediabetes",
+        "longevity",
+    ],
+    "brain-aging": [
+        "brain fog",
+        "cognitive decline",
+        "dementia",
+        "healthy aging",
+        "bone density",
+        "sarcopenia",
+    ],
+    "adhd-focus": [
+        "adult ADHD",
+        "ADHD medication",
+        "focus",
+    ],
+    "supplements": [
+        "creatine",
+        "collagen",
+        "electrolytes",
+        "vitamin D",
+        "iron deficiency",
+        "omega-3",
+    ],
+    "chronic-conditions": [
+        "long COVID",
+        "autoimmune",
+        "thyroid",
+        "migraine",
+        "chronic fatigue",
+        "inflammation",
+    ],
+    "public-health": [
+        "measles",
+        "flu season",
+        "RSV",
+        "bird flu",
+        "FDA approval",
+        "drug recall",
+        "vaccine schedule",
+    ],
+    "habits-body": [
+        "cold plunge",
+        "red light therapy",
+        "step count",
+    ],
+    "screening-prevention": [
+        "colonoscopy",
+        "mammogram",
+        "skin cancer screening",
+    ],
     "gut-health": [
         "gut health",
         "microbiome",
@@ -350,6 +410,34 @@ GENERIC_ANCHOR_WORDS = {
     "period",
     "symptoms",
     "therapy",
+    # Second batch of health profiles: generic halves of compound seeds
+    # ("sleep tracking", "blood pressure", "brain fog", "cognitive decline",
+    # "bone density", "adult ADHD", "long COVID", "flu season", "bird flu",
+    # "FDA approval", "drug recall", "vaccine schedule", "cold plunge",
+    # "red light therapy", "step count", "skin cancer screening", "iron
+    # deficiency") that would otherwise anchor on "package tracking", "peer
+    # pressure", "fog lights", "stock decline", "population density", "adult
+    # swim", "Long Island", "season 2", "bird feeder", "job approval", "drug
+    # store", "bus schedule", "cold weather", "light bulb", "step by step",
+    # "word count", "screening room", "Iron Man".
+    "tracking",
+    "pressure",
+    "fog",
+    "decline",
+    "density",
+    "adult",
+    "long",
+    "season",
+    "bird",
+    "approval",
+    "drug",
+    "schedule",
+    "cold",
+    "light",
+    "step",
+    "count",
+    "screening",
+    "iron",
 }
 
 
@@ -1432,7 +1520,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--geo", default="US", help="Google Trends geography code. Default: US.")
     parser.add_argument("--date", default="now 7-d", help='Google Trends date window. Default: "now 7-d".')
     parser.add_argument("--seeds", default="", help="Optional comma-separated seed terms to scan in addition to the selected profile.")
-    parser.add_argument("--profile", "--seed-profile", dest="seed_profile", default=DEFAULT_SEED_PROFILE, choices=["auto", "wellness", "health", "ai", "beauty", "nutrition", "fitness", "food-safety", "diet", "weight-loss", "mental-health", "gut-health", "womens-health", "none"], help="Seed profile to scan: wellness, health, ai, beauty, nutrition, fitness, food-safety, diet, weight-loss, mental-health, gut-health, womens-health, none, or auto. Default: auto.")
+    parser.add_argument("--profile", "--seed-profile", dest="seed_profile", default=DEFAULT_SEED_PROFILE, choices=["auto", "wellness", "health", "ai", "beauty", "nutrition", "fitness", "food-safety", "diet", "weight-loss", "mental-health", "gut-health", "womens-health", "sleep", "heart-metabolic", "brain-aging", "adhd-focus", "supplements", "chronic-conditions", "public-health", "habits-body", "screening-prevention", "none"], help="Seed profile to scan: wellness, health, ai, beauty, nutrition, fitness, food-safety, diet, weight-loss, mental-health, gut-health, womens-health, sleep, heart-metabolic, brain-aging, adhd-focus, supplements, chronic-conditions, public-health, habits-body, screening-prevention, none, or auto. Default: auto.")
     parser.add_argument("--max-seeds", type=int, default=DEFAULT_MAX_SEEDS, help="Maximum seed terms to scan. Default: 24.")
     parser.add_argument("--limit", type=int, default=80, help="Maximum discovered candidates to validate. Default: 80.")
     parser.add_argument("--timeout", type=int, default=DEFAULT_REQUEST_TIMEOUT, help="Seconds to wait for each SerpAPI request. Default: 12.")
@@ -1464,7 +1552,7 @@ def main() -> None:
         if args.seed_profile in SEED_PROFILES:
             args.topic = args.seed_profile
         else:
-            sys.exit("Choose a --profile (wellness, health, ai, beauty, nutrition, fitness, food-safety, diet, weight-loss, mental-health, gut-health, womens-health), or provide --topic.")
+            sys.exit("Choose a --profile (wellness, health, ai, beauty, nutrition, fitness, food-safety, diet, weight-loss, mental-health, gut-health, womens-health, sleep, heart-metabolic, brain-aging, adhd-focus, supplements, chronic-conditions, public-health, habits-body, screening-prevention), or provide --topic.")
 
     seeds = build_seed_terms(args.topic, args.seeds, args.seed_profile, args.max_seeds)
     # Snapshot before Trending Now / autocomplete get merged into `seeds`

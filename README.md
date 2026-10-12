@@ -98,6 +98,21 @@ therapy, PCOS, endometriosis, period health, fertility; for women-focused public
 from the Trend Scanner's profile dropdown, or `--profile nutrition` on the CLI, to scan just
 that category instead of the broad `wellness`/`health` blend.
 
+Second batch of health profiles, each with its own weekly `run-<profile>-radar.yml` (Thursday-Saturday,
+13:00-13:30 UTC):
+
+| Profile | Seeds |
+|---|---|
+| `sleep` | sleep apnea, insomnia, sleep tracking |
+| `heart-metabolic` | blood pressure, cholesterol, blood sugar, prediabetes, longevity |
+| `brain-aging` | brain fog, cognitive decline, dementia, healthy aging, bone density, sarcopenia |
+| `adhd-focus` | adult ADHD, ADHD medication, focus |
+| `supplements` | creatine, collagen, electrolytes, vitamin D, iron deficiency, omega-3 |
+| `chronic-conditions` | long COVID, autoimmune, thyroid, migraine, chronic fatigue, inflammation |
+| `public-health` | measles, flu season, RSV, bird flu, FDA approval, drug recall, vaccine schedule |
+| `habits-body` | cold plunge, red light therapy, step count |
+| `screening-prevention` | colonoscopy, mammogram, skin cancer screening |
+
 The most recent scan's plain keyword list (topic, stage, radar/opportunity scores, tags) also
 shows up inline on the main dashboard under "Trending keywords" (`#keywords`), so you don't have
 to open a separate HTML file to see what's trending.
@@ -107,10 +122,10 @@ automatically once a week (Monday mornings) and commits the results, so "Trendin
 stays current without anyone clicking "Scan" — edit the cron line in that file to change how
 often it runs.
 
-Each of the other 8 profiles has its own weekly scheduled workflow too
+Each of the other 17 profiles has its own weekly scheduled workflow too
 (`run-nutrition-radar.yml`, `run-fitness-radar.yml`, `run-food-safety-radar.yml`,
 `run-diet-radar.yml`, `run-weight-loss-radar.yml`, `run-mental-health-radar.yml`,
-`run-gut-health-radar.yml`, `run-womens-health-radar.yml`), staggered across Monday-Wednesday mornings so they don't all run
+`run-gut-health-radar.yml`, `run-womens-health-radar.yml`, plus one per profile below), staggered across Monday-Saturday mornings so they don't all run
 (and push) at the same time. All of them show up individually in the GitHub Actions tab and
 can be triggered manually from there ("Run workflow") in addition to their schedule.
 

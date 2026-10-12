@@ -29,6 +29,15 @@ on:
           - mental-health
           - gut-health
           - womens-health
+          - sleep
+          - heart-metabolic
+          - brain-aging
+          - adhd-focus
+          - supplements
+          - chronic-conditions
+          - public-health
+          - habits-body
+          - screening-prevention
           - none
       geo:
         description: Two-letter geo code
