@@ -1,0 +1,689 @@
+{
+  "run_date": "2026-10-12",
+  "generated_at": "2026-10-12T20:15:22",
+  "topic": "supplements",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "supplements",
+    "supplements trends",
+    "supplements products",
+    "supplements news",
+    "supplements for beginners",
+    "supplements routine",
+    "supplements benefits",
+    "supplements ideas",
+    "supplements reviews",
+    "shigellosis"
+  ],
+  "trending_now_terms_used": [
+    "shigellosis"
+  ],
+  "trending_now_context": [
+    {
+      "query": "shigellosis",
+      "headline": "Sexually Transmitted Diarrhea Is Spreading in the U.S.",
+      "source": "People.com",
+      "link": "https://people.com/sexually-transmitted-diarrhea-is-spreading-in-the-us-12164889"
+    }
+  ],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 10,
+    "total_reviewed": 80,
+    "total_retained": 1,
+    "total_rejected": 80,
+    "breakouts": 1,
+    "emerging": 0,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "topic": "vitamin & supplements store near me",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 66,
+      "emergence_score": 82,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 61,
+      "slope": 0,
+      "acceleration": -1,
+      "seed_terms": [
+        "supplements"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        11,
+        61,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "supplements benefits",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "spoiled child reviews",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements reviews"
+      ]
+    },
+    {
+      "topic": "sexually transmitted diarrhea",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "shigellosis"
+      ]
+    },
+    {
+      "topic": "shigella infection",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "shigellosis"
+      ]
+    },
+    {
+      "topic": "shigellosis pronunciation",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "shigellosis"
+      ]
+    },
+    {
+      "topic": "diarrhea outbreak",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "shigellosis"
+      ]
+    },
+    {
+      "topic": "define shigellosis",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "shigellosis"
+      ]
+    },
+    {
+      "topic": "rho nutrition reviews",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements reviews"
+      ]
+    },
+    {
+      "topic": "happy mammoth reviews",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements reviews"
+      ]
+    },
+    {
+      "topic": "best time to visit maldives",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements products"
+      ]
+    },
+    {
+      "topic": "rho",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements reviews"
+      ]
+    },
+    {
+      "topic": "gnc",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements products"
+      ]
+    },
+    {
+      "topic": "how to make sushi",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements products"
+      ]
+    },
+    {
+      "topic": "cnn",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements news"
+      ]
+    },
+    {
+      "topic": "diarrhea",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "shigellosis"
+      ]
+    },
+    {
+      "topic": "how to bake a cake",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements news"
+      ]
+    },
+    {
+      "topic": "supplement",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements"
+      ]
+    },
+    {
+      "topic": "magnesium",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements"
+      ]
+    },
+    {
+      "topic": "collagen",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements"
+      ]
+    },
+    {
+      "topic": "creatine",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements"
+      ]
+    },
+    {
+      "topic": "vitamin d",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements"
+      ]
+    },
+    {
+      "topic": "thorne",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements"
+      ]
+    },
+    {
+      "topic": "fish oil",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements"
+      ]
+    },
+    {
+      "topic": "google trends",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements trends"
+      ]
+    },
+    {
+      "topic": "hair growth products",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements products"
+      ]
+    },
+    {
+      "topic": "best hair growth products",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements products"
+      ]
+    },
+    {
+      "topic": "best hair growth products for women",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements products"
+      ]
+    },
+    {
+      "topic": "best laptop for work",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements products"
+      ]
+    },
+    {
+      "topic": "best pizza near me",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements products"
+      ]
+    },
+    {
+      "topic": "cheapest flights to tokyo",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements products"
+      ]
+    },
+    {
+      "topic": "latest news",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements news"
+      ]
+    },
+    {
+      "topic": "news today",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements news"
+      ]
+    },
+    {
+      "topic": "fox news",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements news"
+      ]
+    },
+    {
+      "topic": "world news",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements news"
+      ]
+    },
+    {
+      "topic": "google news",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements news"
+      ]
+    },
+    {
+      "topic": "trump news",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements news"
+      ]
+    },
+    {
+      "topic": "technology news",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements news"
+      ]
+    },
+    {
+      "topic": "cnn news",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements news"
+      ]
+    },
+    {
+      "topic": "iran news",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements news"
+      ]
+    },
+    {
+      "topic": "yahoo news",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements news"
+      ]
+    },
+    {
+      "topic": "museums",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements news"
+      ]
+    },
+    {
+      "topic": "product",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements reviews"
+      ]
+    },
+    {
+      "topic": "primal queen reviews",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements reviews"
+      ]
+    },
+    {
+      "topic": "explain the primary health benefits and uses of coq10 supplements",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "best hair growth supplements for women",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "viviscal hair growth supplements",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "snap supplements reviews",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "chosen supplements",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "uvola supplements",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "best liver supplements",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "bulk supplements",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "explain how uqora supplements work to support urinary tract health",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "black label supplements",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "gentle iron supplements",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "best supplements",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "iron supplements",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "vitamin supplements",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "magnesium supplements",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "hair supplements",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "collagen supplements",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "calcium supplements",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "liver supplements",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "protein supplements",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "creatine supplements",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "weight loss supplements",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "vitamin d supplements",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "joint supplements",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "dog supplements",
+      "reason": "Weak radar score (45)"
+    },
+    {
+      "topic": "vitamin a supplements",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "sleep supplements",
+      "reason": "Weak radar score (40)"
+    },
+    {
+      "topic": "omega 3 supplements",
+      "reason": "Weak radar score (40)"
+    },
+    {
+      "topic": "thorne supplements",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "hair growth supplements",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "best hair growth supplements",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "best supplements for men",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "best collagen supplements",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "best weight loss supplements",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "testosterone supplements",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "glp 1 supplements",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "berberine supplements",
+      "reason": "Weak radar score (37)"
+    }
+  ]
+}
