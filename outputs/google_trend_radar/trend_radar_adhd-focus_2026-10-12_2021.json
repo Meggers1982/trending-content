@@ -1,0 +1,418 @@
+{
+  "run_date": "2026-10-12",
+  "generated_at": "2026-10-12T20:21:13",
+  "topic": "adhd-focus",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "adhd-focus",
+    "adult ADHD",
+    "ADHD medication",
+    "focus",
+    "adhd-focus trends",
+    "adhd-focus products",
+    "adhd-focus news",
+    "adhd-focus for beginners",
+    "adhd-focus routine",
+    "adhd-focus benefits",
+    "adhd-focus ideas",
+    "adhd-focus reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 12,
+    "total_reviewed": 80,
+    "total_retained": 0,
+    "total_rejected": 80,
+    "breakouts": 0,
+    "emerging": 0,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [],
+  "rejected": [
+    {
+      "topic": "headway",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "adult ADHD"
+      ]
+    },
+    {
+      "topic": "asrs assessment",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "adult ADHD"
+      ]
+    },
+    {
+      "topic": "borderline personality disorder",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "adult ADHD"
+      ]
+    },
+    {
+      "topic": "desoxyn",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "ADHD medication"
+      ]
+    },
+    {
+      "topic": "rejection sensitive dysphoria",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "adult ADHD"
+      ]
+    },
+    {
+      "topic": "zocdoc",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "adult ADHD"
+      ]
+    },
+    {
+      "topic": "stratera",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "ADHD medication"
+      ]
+    },
+    {
+      "topic": "xelstrym",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "ADHD medication"
+      ]
+    },
+    {
+      "topic": "norepinephrine",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "ADHD medication"
+      ]
+    },
+    {
+      "topic": "mydayis",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "ADHD medication"
+      ]
+    },
+    {
+      "topic": "good rx",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "ADHD medication"
+      ]
+    },
+    {
+      "topic": "is adderall addictive",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "ADHD medication"
+      ]
+    },
+    {
+      "topic": "audhd",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "ADHD medication"
+      ]
+    },
+    {
+      "topic": "zoloft side effects",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "ADHD medication"
+      ]
+    },
+    {
+      "topic": "autism",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "adult ADHD"
+      ]
+    },
+    {
+      "topic": "adderall",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "ADHD medication"
+      ]
+    },
+    {
+      "topic": "adderall medication",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "ADHD medication"
+      ]
+    },
+    {
+      "topic": "anxiety medication",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "ADHD medication"
+      ]
+    },
+    {
+      "topic": "vyvanse",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "ADHD medication"
+      ]
+    },
+    {
+      "topic": "vyvanse medication",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "ADHD medication"
+      ]
+    },
+    {
+      "topic": "curtis martin focus",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "can you be diagnosed with adhd as an adult",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "adhd symptoms in kids",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "recommend instrumental focus music playlists for deep work and concentration",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "best adhd medication for adults with anxiety",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "sdoc focus",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "adhd in adult",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "adhd adult women",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "adhd as an adult",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "adhd symptoms",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "adhd symptoms adult",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "adhd in women",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "adhd in adult women",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "what is adult adhd",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "what is adhd",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "adhd adult test",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "adhd test",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "signs of adult adhd",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "signs of adhd",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "adult adhd diagnosis",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "symptoms of adhd",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "adhd diagnosis",
+      "reason": "Weak radar score (39)"
+    },
+    {
+      "topic": "symptoms of adult adhd",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "adhd symptoms adult women",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "adhd adult medication",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "adhd medication",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "adult adhd assessment",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "adhd assessment",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "adhd in adult women symptoms",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "adhd signs in adult women",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "medication for adhd",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "what is adhd medication",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "best adhd medication",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "adhd stimulant medication",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "kids adhd medication",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "best medication for adhd",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "adhd without medication",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "adhd meds",
+      "reason": "Weak radar score (40)"
+    },
+    {
+      "topic": "adhd medication side effects",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "adhd medication for kids",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "new adhd medication",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "adhd medication vyvanse",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "adhd medication for adults",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "non stimulant adhd medication",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "adhd and anxiety",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "adhd and anxiety medication",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "adhd medications",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "how to get adhd medication",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "ford focus",
+      "reason": "Weak radar score (39)"
+    },
+    {
+      "topic": "how to focus",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "focus group",
+      "reason": "Weak radar score (40)"
+    },
+    {
+      "topic": "portal focus",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "focus st",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "focus login",
+      "reason": "Weak radar score (39)"
+    },
+    {
+      "topic": "ford focus se",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "focus on the family",
+      "reason": "Weak radar score (40)"
+    },
+    {
+      "topic": "ford focus 2014",
+      "reason": "Weak radar score (46)"
+    },
+    {
+      "topic": "focus energy",
+      "reason": "Weak radar score (38)"
+    },
+    {
+      "topic": "focus camera",
+      "reason": "Weak radar score (38)"
+    },
+    {
+      "topic": "focus meaning",
+      "reason": "Weak radar score (42)"
+    }
+  ]
+}
