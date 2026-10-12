@@ -1,0 +1,1185 @@
+{
+  "run_date": "2026-10-12",
+  "generated_at": "2026-10-12T21:41:37",
+  "topic": "beauty",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "beauty",
+    "skincare",
+    "makeup",
+    "haircare",
+    "fragrance",
+    "clean beauty",
+    "retinol",
+    "niacinamide",
+    "peptides",
+    "hyaluronic acid",
+    "skin barrier",
+    "skin cycling",
+    "glass skin",
+    "slugging",
+    "scalp care",
+    "SPF",
+    "sunscreen",
+    "K-beauty",
+    "hair loss",
+    "acne treatment",
+    "nail care",
+    "beauty trends",
+    "beauty products",
+    "beauty news",
+    "essie fall nail polish trends 2026",
+    "bodybuilding",
+    "fitbit edge"
+  ],
+  "trending_now_terms_used": [
+    "essie fall nail polish trends 2026",
+    "bodybuilding",
+    "fitbit edge"
+  ],
+  "trending_now_context": [
+    {
+      "query": "essie fall nail polish trends 2026",
+      "headline": "Soak up All the Fall Energy With These 19 Autumn Aura Nail Ideas",
+      "source": "Byrdie",
+      "link": "https://www.byrdie.com/fall-aura-nail-ideas-12154627"
+    },
+    {
+      "query": "bodybuilding",
+      "headline": "Mum turned bodybuilder at 40 and is now winning big",
+      "source": "BBC",
+      "link": "https://www.bbc.com/news/articles/cqkglr3y3j8eo"
+    },
+    {
+      "query": "fitbit edge",
+      "headline": "Google Fitbit Edge: Our all-new smartest fitness tracker ever",
+      "source": "blog.google",
+      "link": "https://blog.google/products-and-platforms/devices/fitbit/google-fitbit-edge/"
+    }
+  ],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 27,
+    "total_reviewed": 80,
+    "total_retained": 3,
+    "total_rejected": 76,
+    "breakouts": 2,
+    "emerging": 1,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "topic": "beis rare beauty",
+      "trend_stage": "emerging",
+      "urgency": "this_week",
+      "radar_score": 67,
+      "emergence_score": 82,
+      "velocity_score": 42,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "+4600%",
+      "latest_interest": 2,
+      "peak_interest": 6,
+      "slope": 2,
+      "acceleration": 0,
+      "seed_terms": [
+        "beauty"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        2,
+        6,
+        2,
+        2,
+        2,
+        2
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +4600%; interest moved from 0 to 2; found through rising query",
+      "recommended_action": "Build an angle this week and monitor the next 24-48 hours."
+    },
+    {
+      "rank": 2,
+      "topic": "too ugly to marry hidden beauty",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 66,
+      "emergence_score": 82,
+      "velocity_score": 41,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "Breakout",
+      "latest_interest": 2,
+      "peak_interest": 21,
+      "slope": 2,
+      "acceleration": -1,
+      "seed_terms": [
+        "beauty"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        2,
+        3,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        8,
+        8,
+        11,
+        18,
+        21,
+        12,
+        0,
+        19,
+        0,
+        8,
+        10,
+        9,
+        10,
+        6,
+        3,
+        4,
+        6,
+        4,
+        5,
+        4,
+        3,
+        6,
+        3,
+        5,
+        5,
+        6,
+        7,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        8,
+        0,
+        0,
+        0,
+        0,
+        2,
+        3,
+        0,
+        3,
+        4,
+        0,
+        3,
+        4,
+        3,
+        5,
+        5,
+        5,
+        10,
+        7,
+        9,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        4,
+        0,
+        5,
+        4,
+        4,
+        4,
+        4,
+        4,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        3,
+        2,
+        4,
+        4,
+        3,
+        3,
+        2
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; interest moved from 0 to 2; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing.",
+      "similar": [
+        {
+          "topic": "too ugly to marry she's a hidden beauty",
+          "trend_stage": "breakout",
+          "radar_score": 66,
+          "why_now": "Google Trends labels it Breakout; interest moved from 0 to 0; found through rising query"
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "topic": "glass skin trend",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 65,
+      "emergence_score": 81,
+      "velocity_score": 38,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 100,
+      "slope": 0,
+      "acceleration": -7,
+      "seed_terms": [
+        "glass skin"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        29,
+        34,
+        38,
+        41,
+        43,
+        37,
+        33,
+        75,
+        100,
+        83,
+        29,
+        15,
+        15,
+        13,
+        8,
+        8,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {
+        "benefits": [
+          "glass skin"
+        ]
+      },
+      "why_now": "Google Trends labels it Breakout; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "amber reign doing life",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "beauty"
+      ]
+    },
+    {
+      "topic": "tamberla perry",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "beauty"
+      ]
+    },
+    {
+      "topic": "doing life cast",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "beauty"
+      ]
+    },
+    {
+      "topic": "amber reign smith doing life",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "beauty"
+      ]
+    },
+    {
+      "topic": "language learning app",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "home security camera",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "web hosting comparison",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "meal delivery service",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "tax software comparison",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "solar panel cost",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "smart home devices",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "air purifier review",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "cheap flights new york",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "python tutorial",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "iphone 16 review",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "best headphones wireless",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "electric bike review",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "cloud storage pricing",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "digital marketing course",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "pet insurance cost",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "travel insurance comparison",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "dog training tips",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "diy home renovation",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "electric cars comparison",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "fitness tracker review",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "remote jobs hiring",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "learn golang",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "protein powder review",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "coworking space near me",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "rhode blush",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "clean beauty"
+      ]
+    },
+    {
+      "topic": "clean your dirty face",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "clean beauty"
+      ]
+    },
+    {
+      "topic": "lions tigers and bears",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skin barrier"
+      ]
+    },
+    {
+      "topic": "kevin hart heist movie",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skin barrier"
+      ]
+    },
+    {
+      "topic": "businesses crossword clue",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skin barrier"
+      ]
+    },
+    {
+      "topic": "exemplary crossword clue",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skin barrier"
+      ]
+    },
+    {
+      "topic": "lions tigers and bears crossword clue",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skin barrier"
+      ]
+    },
+    {
+      "topic": "flights",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skin cycling"
+      ]
+    },
+    {
+      "topic": "hurricane isaias tropical storm",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "glass skin"
+      ]
+    },
+    {
+      "topic": "university of surrey vitamin d study",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "glass skin"
+      ]
+    },
+    {
+      "topic": "mms marvel candy collection",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "glass skin"
+      ]
+    },
+    {
+      "topic": "h 1b visas",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "glass skin"
+      ]
+    },
+    {
+      "topic": "aurora borealis",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "glass skin"
+      ]
+    },
+    {
+      "topic": "pepsi new drips drink flavors",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "glass skin"
+      ]
+    },
+    {
+      "topic": "other mommy movie",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "glass skin"
+      ]
+    },
+    {
+      "topic": "mtg warhammer 40k reprint",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "glass skin"
+      ]
+    },
+    {
+      "topic": "nyt crossword answers",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "glass skin"
+      ]
+    },
+    {
+      "topic": "cash app settlement payments",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "glass skin"
+      ]
+    },
+    {
+      "topic": "cardiff bed bug infestation gareth davies",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "glass skin"
+      ]
+    },
+    {
+      "topic": "gardening ideas",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "beauty news"
+      ]
+    },
+    {
+      "topic": "lucy craig cornell",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "bodybuilding"
+      ]
+    },
+    {
+      "topic": "elena moore",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "bodybuilding"
+      ]
+    },
+    {
+      "topic": "apitegromab",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "bodybuilding"
+      ]
+    },
+    {
+      "topic": "peptide calculator",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "bodybuilding"
+      ]
+    },
+    {
+      "topic": "fitbit edge fitness band leak",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitbit edge"
+      ]
+    },
+    {
+      "topic": "google store",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitbit edge"
+      ]
+    },
+    {
+      "topic": "google health",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitbit edge"
+      ]
+    },
+    {
+      "topic": "google fitbit edge review",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitbit edge"
+      ]
+    },
+    {
+      "topic": "fitbit edge hardware preview google",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitbit edge"
+      ]
+    },
+    {
+      "topic": "fitbit edge nfc",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitbit edge"
+      ]
+    },
+    {
+      "topic": "fit bit",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitbit edge"
+      ]
+    },
+    {
+      "topic": "google fitbit edge release and price",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitbit edge"
+      ]
+    },
+    {
+      "topic": "fotbit edge",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitbit edge"
+      ]
+    },
+    {
+      "topic": "google for health",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fitbit edge"
+      ]
+    },
+    {
+      "topic": "meditation",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "haircare"
+      ]
+    },
+    {
+      "topic": "tyler perry doing life cast",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "beauty"
+      ]
+    },
+    {
+      "topic": "cast of doing life",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "beauty"
+      ]
+    },
+    {
+      "topic": "doing life",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "beauty"
+      ]
+    },
+    {
+      "topic": "hopkins haircare",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "mens fougere fragrance guide",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "how do you clean beauty blenders",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "medix 5.5 retinol cream reviews",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "what is korean glass skin treatment",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "glass skin korean beauty",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "hazelnut nail care polish",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "research on gray-market peptides",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "pamela anderson wearing makeup again",
+      "reason": "Weak radar score (44)"
+    }
+  ]
+}
