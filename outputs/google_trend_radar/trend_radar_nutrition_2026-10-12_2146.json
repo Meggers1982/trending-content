@@ -1,0 +1,691 @@
+{
+  "run_date": "2026-10-12",
+  "generated_at": "2026-10-12T21:46:21",
+  "topic": "nutrition",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "nutrition",
+    "macronutrients",
+    "meal prep",
+    "whole foods",
+    "fiber intake",
+    "added sugar",
+    "ultra-processed foods",
+    "nutrient deficiency",
+    "mindful eating",
+    "portion control",
+    "plant-based diet",
+    "nutrition trends",
+    "nutrition products",
+    "nutrition news",
+    "nutrition for beginners",
+    "nutrition routine",
+    "nutrition benefits",
+    "nutrition ideas",
+    "nutrition reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 19,
+    "total_reviewed": 80,
+    "total_retained": 1,
+    "total_rejected": 77,
+    "breakouts": 1,
+    "emerging": 0,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "topic": "pomegranate nutrition facts and benefits",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 66,
+      "emergence_score": 82,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 32,
+      "slope": 0,
+      "acceleration": 1,
+      "seed_terms": [
+        "nutrition benefits"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        16,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        32,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing.",
+      "similar": [
+        {
+          "topic": "bone broth nutrition facts",
+          "trend_stage": "breakout",
+          "radar_score": 66,
+          "why_now": "Google Trends labels it Breakout; interest moved from 0 to 0; found through rising query"
+        },
+        {
+          "topic": "spinach nutrition facts and benefits",
+          "trend_stage": "watch",
+          "radar_score": 53,
+          "why_now": "Google Trends labels it +350%; interest moved from 0 to 1; found through rising query"
+        }
+      ]
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "cloud storage pricing",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "meal prep"
+      ]
+    },
+    {
+      "topic": "solar panel cost",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "meal prep"
+      ]
+    },
+    {
+      "topic": "online banking review",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "meal prep"
+      ]
+    },
+    {
+      "topic": "fitness tracker review",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "meal prep"
+      ]
+    },
+    {
+      "topic": "diy home renovation",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "meal prep"
+      ]
+    },
+    {
+      "topic": "home insurance quotes",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "meal prep"
+      ]
+    },
+    {
+      "topic": "stock market today",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "meal prep"
+      ]
+    },
+    {
+      "topic": "remote jobs hiring",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "meal prep"
+      ]
+    },
+    {
+      "topic": "pet insurance cost",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "meal prep"
+      ]
+    },
+    {
+      "topic": "learn golang",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "meal prep"
+      ]
+    },
+    {
+      "topic": "electric bike review",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "meal prep"
+      ]
+    },
+    {
+      "topic": "air purifier review",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "meal prep"
+      ]
+    },
+    {
+      "topic": "standing desk review",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "meal prep"
+      ]
+    },
+    {
+      "topic": "cheap flights new york",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "meal prep"
+      ]
+    },
+    {
+      "topic": "python tutorial",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "meal prep"
+      ]
+    },
+    {
+      "topic": "used cars for sale",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "meal prep"
+      ]
+    },
+    {
+      "topic": "best headphones wireless",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "meal prep"
+      ]
+    },
+    {
+      "topic": "camping gear essentials",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "meal prep"
+      ]
+    },
+    {
+      "topic": "water filter system",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "meal prep"
+      ]
+    },
+    {
+      "topic": "electric cars comparison",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "meal prep"
+      ]
+    },
+    {
+      "topic": "iphone 16 review",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "meal prep"
+      ]
+    },
+    {
+      "topic": "travel insurance comparison",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "meal prep"
+      ]
+    },
+    {
+      "topic": "digital marketing course",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "meal prep"
+      ]
+    },
+    {
+      "topic": "credit card rewards",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "meal prep"
+      ]
+    },
+    {
+      "topic": "dog training tips",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "meal prep"
+      ]
+    },
+    {
+      "topic": "pinterest",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition news"
+      ]
+    },
+    {
+      "topic": "black sesame seeds benefits",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition benefits"
+      ]
+    },
+    {
+      "topic": "nmn supplement benefits",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition benefits"
+      ]
+    },
+    {
+      "topic": "nbc news",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition news"
+      ]
+    },
+    {
+      "topic": "coq10 benefits",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition benefits"
+      ]
+    },
+    {
+      "topic": "new york times",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition news"
+      ]
+    },
+    {
+      "topic": "psyllium husk",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fiber intake"
+      ]
+    },
+    {
+      "topic": "list four symptoms of food borne illness that should cause you to consult a doctor.",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition products"
+      ]
+    },
+    {
+      "topic": "beef liver benefits",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition benefits"
+      ]
+    },
+    {
+      "topic": "top tourist attractions in paris",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition products"
+      ]
+    },
+    {
+      "topic": "im8 reviews",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition reviews"
+      ]
+    },
+    {
+      "topic": "new york times the",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition news"
+      ]
+    },
+    {
+      "topic": "benefits of chia seeds",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition benefits"
+      ]
+    },
+    {
+      "topic": "glucose",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "macronutrients"
+      ]
+    },
+    {
+      "topic": "abc news",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition news"
+      ]
+    },
+    {
+      "topic": "vitamin d benefits",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition benefits"
+      ]
+    },
+    {
+      "topic": "costco",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "nutrition reviews"
+      ]
+    },
+    {
+      "topic": "pumpkin seed nutrition facts",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "banana nutrition facts and health benefits",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "almond nutrition facts and benefits",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "bok choy nutrition",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "red beets nutrition",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "supplemental nutrition assistance program new rules",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "black sesame seeds nutrition",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "kale nutrition facts",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "thrive nutrition reviews",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "what is the difference between macronutrients and micronutrients?",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "which macronutrient is vital for every function of the body? a. water b. fats c. proteins d. carbohydrates",
+      "reason": "Weak radar score (45)"
+    },
+    {
+      "topic": "total sugars vs added sugars",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "nobi nutrition reviews",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "mindful eating exercise",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "high protein foods",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "spnutrition magnesium bisglycinate gummies reviews",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "goli nutrition ashwagandha gummies reviews",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "sava nutrition",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "whole foods thanksgiving dinner",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "whole foods thanksgiving",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "daily protein intake for women",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "ways to increase fiber intake",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "mindful eating book",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "kale nutrition benefits",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "micronutrients definition",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "whole foods thanksgiving catering",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "organised nutrition",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "no sugar added pie filling",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "portion control tips",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "sp nutrition magnesium bisglycinate gummies",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "primary macronutrients",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "whole foods fort myers",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "whole foods tustin",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "nutrition facts",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "what is nutrition",
+      "reason": "Weak radar score (43)"
+    }
+  ]
+}
