@@ -94,7 +94,8 @@ coverage) alongside the base `radar_score` — see `CLAUDE.md`'s Engineering Not
 There are also focused, single-topic profiles for each of the categories the daily pipeline
 tracks depth for: `nutrition`, `fitness`, `food-safety`, `diet`, `weight-loss`,
 `mental-health`, `gut-health`, `womens-health` (perimenopause, menopause symptoms, hormone
-therapy, PCOS, endometriosis, period health, fertility; for women-focused publications) (plus the existing `wellness`/`health`/`ai`/`beauty`) — pick one
+therapy, PCOS, endometriosis, period health, fertility; for women-focused publications; uses extra relevance anchors like PMDD, endometrial, estrogen
+so adjacent conditions aren't dropped as off-topic) (plus the existing `wellness`/`health`/`ai`/`beauty`) — pick one
 from the Trend Scanner's profile dropdown, or `--profile nutrition` on the CLI, to scan just
 that category instead of the broad `wellness`/`health` blend.
 
