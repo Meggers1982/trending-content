@@ -5,31 +5,36 @@
 runs:
 - run_date: '2026-10-13'
   niche: Health & Wellness
-  signals_reviewed: 160
-  topics_retained: 3
+  signals_reviewed: 173
+  topics_retained: 4
   topics_rejected: 26
-  p1_count: 1
+  p1_count: 2
   p2_count: 1
   p3_count: 1
   p4_count: 0
   p5_count: 0
-  integrity_flags: 3
-  top_topic: Two North Carolina deaths confirmed from West Nile Virus
+  integrity_flags: 4
+  top_topic: Amazon acetaminophen recall (Aurobindo Pharma) — part of expanding FDA recall pattern
   key_themes:
-  - Two North Carolina deaths confirmed from West Nile Virus
-  - 'UTSW study: a specific protein suppresses intestinal inflammation'
-  - Are dented canned foods actually dangerous? (rising search interest)
+  - Amazon acetaminophen recall (Aurobindo Pharma) — part of expanding FDA recall pattern
+  - West Nile virus — North Carolina deaths
+  - Retatrutide clinical trial results
+  - Clinical trial diversity & the women's health data gap
   tools_used:
-  - web_search
-  - google_news
-  - google_trends
-  - serpapi
-  tools_unavailable: []
+  - serpapi_news
+  - serpapi_trends
+  - google_news_radar
+  tools_unavailable:
+  - reddit_api
+  - social_search
+  - content_database
   dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-10-13.html
-  estimated_cost_usd: 0.6289
-  notes: Self-check skipped (site_url unset); competitor-list fallback applied. AI-in-medicine and FDA-recall
-    clusters flagged as recurring 4-5 consecutive days — staleness concern. Smoked fish recall, supplement
-    powder recall, and SNAP rule changes deferred to 2026-10-14/16 for primary-source re-check.
+  estimated_cost_usd: 0.5997
+  notes: 'site_url not configured — self-check skipped; competitor-list fallback used for duplicate/SERP-gap
+    context. Recurring-theme discipline applied: recall, WHO/mental-health, and AI-in-clinical-care coverage
+    withheld unless new development justified update. Two study-based candidates (Notre Dame, UTSW) held
+    at Skill 04 — single-source signals without cross-channel corroboration below minimum trend-strength
+    bar.'
 - run_date: '2026-10-11'
   niche: Health & Wellness
   signals_reviewed: 153
