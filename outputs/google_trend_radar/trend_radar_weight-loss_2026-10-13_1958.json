@@ -1,0 +1,1037 @@
+{
+  "run_date": "2026-10-13",
+  "generated_at": "2026-10-13T19:58:05",
+  "topic": "weight-loss",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "weight-loss",
+    "weight loss",
+    "weight loss journey",
+    "fat loss",
+    "sustainable weight loss",
+    "weight loss surgery",
+    "GLP-1",
+    "semaglutide",
+    "weight loss plateau",
+    "weight loss medication",
+    "weight-loss trends",
+    "weight-loss products",
+    "weight-loss news",
+    "weight-loss for beginners",
+    "weight-loss routine",
+    "weight-loss benefits",
+    "weight-loss ideas",
+    "weight-loss reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 18,
+    "total_reviewed": 80,
+    "total_retained": 4,
+    "total_rejected": 76,
+    "breakouts": 0,
+    "emerging": 1,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "topic": "non invasive weight loss surgery",
+      "trend_stage": "emerging",
+      "urgency": "this_week",
+      "radar_score": 51,
+      "emergence_score": 64,
+      "velocity_score": 40,
+      "confidence_score": 40,
+      "saturation_score": 0,
+      "opportunity_score": 78,
+      "confidence": "low",
+      "rising_label": "+850%",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "weight loss surgery"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [],
+      "tags": {},
+      "why_now": "Google Trends labels it +850%; time-series validation was skipped or unavailable; found through rising query",
+      "recommended_action": "Build an angle this week and monitor the next 24-48 hours."
+    },
+    {
+      "rank": 2,
+      "topic": "tory johnson weight loss",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 51,
+      "emergence_score": 48,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 69,
+      "confidence": "high",
+      "rising_label": "+250%",
+      "latest_interest": 0,
+      "peak_interest": 72,
+      "slope": 0,
+      "acceleration": -1,
+      "seed_terms": [
+        "weight loss"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        30,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        72,
+        27,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        21,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        21,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +250%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it."
+    },
+    {
+      "rank": 3,
+      "topic": "explain how zepbound works for weight loss and its primary side effects",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 51,
+      "emergence_score": 48,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 69,
+      "confidence": "high",
+      "rising_label": "+250%",
+      "latest_interest": 0,
+      "peak_interest": 19,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "weight loss"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        19,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +250%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it."
+    },
+    {
+      "rank": 4,
+      "topic": "balloon weight loss surgery cost",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 51,
+      "emergence_score": 48,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 69,
+      "confidence": "high",
+      "rising_label": "+250%",
+      "latest_interest": 0,
+      "peak_interest": 100,
+      "slope": 0,
+      "acceleration": 1,
+      "seed_terms": [
+        "weight loss surgery"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        100,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +250%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "what is the best intermittent fasting window to lose belly fat",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fat loss"
+      ]
+    },
+    {
+      "topic": "how to make sushi",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss surgery"
+      ]
+    },
+    {
+      "topic": "sweed lash serum",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fat loss"
+      ]
+    },
+    {
+      "topic": "gyms near me",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fat loss"
+      ]
+    },
+    {
+      "topic": "mct oil",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fat loss"
+      ]
+    },
+    {
+      "topic": "katy mixon",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "american housewife",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "new york times",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss surgery"
+      ]
+    },
+    {
+      "topic": "remedy meds",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss medication"
+      ]
+    },
+    {
+      "topic": "bmi calculator women",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss surgery"
+      ]
+    },
+    {
+      "topic": "top tourist attractions in paris",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fat loss"
+      ]
+    },
+    {
+      "topic": "ozempic face",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fat loss"
+      ]
+    },
+    {
+      "topic": "yohimbine",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fat loss"
+      ]
+    },
+    {
+      "topic": "metformin side effects",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss medication"
+      ]
+    },
+    {
+      "topic": "strattera",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss medication"
+      ]
+    },
+    {
+      "topic": "reta peptide",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss medication"
+      ]
+    },
+    {
+      "topic": "zepbound side effects",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "trinity meds",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "semaglutide"
+      ]
+    },
+    {
+      "topic": "mondae reviews",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "semaglutide"
+      ]
+    },
+    {
+      "topic": "jelly roll",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "pomegranate health",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "semaglutide"
+      ]
+    },
+    {
+      "topic": "peptides",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "wegovy",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight loss"
+      ]
+    },
+    {
+      "topic": "newest weight loss surgery",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "glp-1 medications fingernail problems study",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "does adhd medication cause weight gain",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "qualifications for weight loss surgery",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "susan dell weight loss",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "best macro split for fat loss",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "eric stonestreet weight loss",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "katy mixon weight loss",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "shane gillis weight loss",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "is ro weight loss legit",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "explain how semaglutide works for weight loss and its primary mechanism",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "explain how wegovy works for weight loss and its common side effects",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "explain how ozempic works for weight loss and its common side effects",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "explain how mounjaro works for weight loss and its primary side effects",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "weight loss clinics near me",
+      "reason": "Weak radar score (49)"
+    },
+    {
+      "topic": "explain how retatrutide works for weight loss compared to ozempic",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "bronson reed weight loss",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "fat joe weight loss",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "best form of cardio for fat loss",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "weight loss doctors near me",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "did john goodman have weight loss surgery",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "minimally invasive weight loss surgery",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "where to buy retatrutide for weight loss",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "weight loss journey quotes",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "glp-1 receptor agonist",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "what does semaglutide do to your body",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "kelly osbourne weight loss",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "ella langley weight loss",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "semaglutide other name",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "weight loss service near me",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "what is a glp-1 medication",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "glp-1 face",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "jelly roll weight loss",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "weight loss clinic near me",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "where to get glp-1",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "what does a glp-1 do",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "semaglutide moa",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "semaglutide pronunciation",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "semaglutide near me",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "how fast does semaglutide work",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "semaglutide side effects women",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "how long does it take for semaglutide to work",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "how to get past a weight loss plateau",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "billie eilish weight loss",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "can semaglutide cause cancer",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "does semaglutide need to be refrigerated",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "how to break weight loss plateau",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "weight-loss surgery",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "weight loss medication",
+      "reason": "Weak radar score (39)"
+    },
+    {
+      "topic": "weight loss pills",
+      "reason": "Weak radar score (38)"
+    },
+    {
+      "topic": "weight loss near me",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "weight loss peptides",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "weight loss clinic",
+      "reason": "Weak radar score (43)"
+    }
+  ]
+}
