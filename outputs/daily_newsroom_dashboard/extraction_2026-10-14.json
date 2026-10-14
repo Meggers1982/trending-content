@@ -1,0 +1,287 @@
+{
+  "run_date": "2026-10-14",
+  "niche": "Health & Wellness",
+  "signal_summary": {
+    "total_reviewed": 158,
+    "total_retained": 5,
+    "total_rejected": 147,
+    "tools_active": [
+      "web_search",
+      "google_news",
+      "google_trends",
+      "serpapi"
+    ],
+    "tools_unavailable": [
+      "reddit",
+      "twitter",
+      "exa"
+    ],
+    "notes": "FDA recalls remain the dominant recurring theme (4th consecutive run with new recalls); this run intentionally did NOT repeat the generic 'recalls keep piling up' meta-story and instead isolated two materially distinct, well-corroborated new recalls. PTSD-treatment-modality stories and AI-healthcare-interaction stories are both now recurring 3+ times in under a week — flagged for editorial variety going forward. Walter Willett/Liverpool diet soda study added to deferred_topics.yaml, recheck_on: 2026-10-17."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Common infections linked to cancer risk",
+      "primary_entity": "HPV / H. pylori / Hepatitis",
+      "signal_type": "evergreen_with_fresh_angle",
+      "allowed_category": "public health and epidemiology",
+      "trend_strength_score": 82,
+      "opportunity_score": 75,
+      "discover_score": 5,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "source_urls": [
+        "https://www.washingtonpost.com/"
+      ],
+      "recommended_angle": "What actually raises cancer risk from common infections — and the vaccines/screenings that cut it",
+      "why_now": "Real-time Google Trends breakout on 'infection,' driven by a new WaPo piece connecting everyday infections to cancer risk.",
+      "primary_headline": "The Common Infections Linked to Cancer — And How to Lower Your Risk",
+      "next_steps": "Build full brief; pull CDC/WHO infection-cancer stats; source ID or oncology expert quote.",
+      "integrity_flags": [],
+      "trend_score_reason": "Real-time Google Trends breakout on 'infection' + tier-1 WaPo source same-day",
+      "opportunity_score_reason": "High search intent (informational + evaluative); established evergreen topic with fresh news hook",
+      "discover_score_reason": "Trending now signal + consumer health action-oriented angle = high discovery potential",
+      "notes": "Established medical consensus — 02b not triggered.",
+      "fact_check": {
+        "verdict": "minor_issues",
+        "issues": [
+          "Evidence confirms the WaPo-driven Trends spike on 'infection' and the general topic, but does not specify which infections (HPV, H. pylori, Hepatitis) are discussed in the article—those entities are inferred, not confirmed by the evidence."
+        ],
+        "checked_against": "Google Trends breakout term 'infection' with WaPo 'Why' line"
+      }
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "FDA recalls baby sleep aid over undisclosed toxic alcohols",
+      "primary_entity": "Pacific Health 'Baby Magic Tea'",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 85,
+      "opportunity_score": 70,
+      "discover_score": 4,
+      "urgency": "now",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 6,
+      "source_urls": [
+        "https://nypost.com/2026/10/12/lifestyle/popular-baby-gripe-water-recalled-over-toxic-unlisted-alcohols-fda/",
+        "https://abcnews.com/GMA/Family/1-lot-baby-product-voluntarily-recalled-alcohol-content/story?id=137123138",
+        "https://fox59.com/news/national-world/baby-product-recalled-over-alcohol-content-fda/"
+      ],
+      "recommended_angle": "What parents need to know — symptoms to watch, what to do if you have this product",
+      "why_now": "Breaking recall of an infant product over 3 undisclosed toxic alcohols, confirmed across 6+ outlets same day.",
+      "primary_headline": "FDA Recalls Baby Sleep Aid Over Undisclosed Toxic Alcohols — What Parents Should Do",
+      "next_steps": "Verify FDA.gov notice directly (lot codes); add pediatrician quote.",
+      "integrity_flags": [
+        "Breaking-recall exception applied — confirm FDA.gov notice before publishing."
+      ],
+      "trend_score_reason": "6+ corroborating outlets in single day covering breaking consumer-safety recall",
+      "opportunity_score_reason": "High parental concern + actionable safety guidance = strong audience engagement",
+      "discover_score_reason": "Breaking news alert + parent audience high search velocity",
+      "notes": "Confidence capped Medium until FDA.gov notice directly retrieved.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "NY Post, ABC News, Fox59, Dallas News, WVTM13, NEWStalk 870 radar items on Pacific Health 'Baby Magic Tea' recall"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Gatorade recalls 122,000 cases over undeclared food dyes",
+      "primary_entity": "Gatorade / PepsiCo",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 78,
+      "opportunity_score": 68,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "source_urls": [
+        "https://www.local10.com/food/2026/10/09/fda-gatorade-recalls-122000-cases-over-food-dyes/",
+        "https://www.tennessean.com/story/news/health/2026/10/07/gatorade-recall-tennessee-undeclared-food-coloring/92137069007/"
+      ],
+      "recommended_angle": "Why Gatorade recalled 122,000 cases — and what it signals about the food-dye regulation push",
+      "why_now": "Major mainstream brand recall amid broader FDA synthetic-dye scrutiny; 'food safety' Trends interest rising (+4).",
+      "primary_headline": "Gatorade Recalls 122,000 Cases Over Undeclared Food Dyes — What to Know",
+      "next_steps": "Confirm FDA.gov notice; tie to synthetic dye phase-out trend for differentiation.",
+      "integrity_flags": [
+        "Breaking-recall exception applied — confirm FDA.gov notice before publishing."
+      ],
+      "trend_score_reason": "Large-scale mainstream-brand recall corroborated across 3+ outlets; food-safety Trends interest rising",
+      "opportunity_score_reason": "Ties to broader synthetic-dye regulation trend; mainstream consumer brand relevance",
+      "discover_score_reason": "High consumer interest in mainstream brand recall + food safety context",
+      "notes": "Confidence capped Medium.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "WPLG Local10 and Tennessean radar items confirming 122,000 case Gatorade recall over food dyes; food safety Trends +4 delta"
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "New clinical trial tests injectable treatment for knee osteoarthritis",
+      "primary_entity": "Keck Medicine of USC",
+      "signal_type": "clinical_trial",
+      "allowed_category": "chronic disease management",
+      "trend_strength_score": 58,
+      "opportunity_score": 68,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://news.keckmedicine.org/clinical-trial-evaluates-investigational-injection-for-knee-osteoarthritis/"
+      ],
+      "recommended_angle": "A new injectable approach to knee OA is in trials — what it could mean for non-surgical pain management",
+      "why_now": "Keck Medicine launched this trial today (10/14) for a condition affecting ~32M Americans with limited non-surgical options.",
+      "primary_headline": "New Clinical Trial Tests Injectable Treatment for Knee Osteoarthritis",
+      "next_steps": "Pull ClinicalTrials.gov registry details; source rheumatology/orthopedic quote.",
+      "integrity_flags": [],
+      "trend_score_reason": "Institutional press release + large addressable patient population (32M with OA) + fresh launch date",
+      "opportunity_score_reason": "Strong audience segment (OA sufferers seeking non-surgical options); credible sponsor source",
+      "discover_score_reason": "Clinical trial explainer for specific patient population; moderate discovery interest",
+      "notes": "Institutional press release serves as primary source.",
+      "fact_check": {
+        "verdict": "minor_issues",
+        "issues": [
+          "The '~32M Americans' prevalence figure in the WHY NOW is not supported by the Keck Medicine source in the evidence."
+        ],
+        "checked_against": "Keck Medicine of USC news release on knee osteoarthritis injection trial"
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Protein may calm gut inflammation, new study finds",
+      "primary_entity": "UT Southwestern Medical Center",
+      "signal_type": "study_or_research",
+      "allowed_category": "gut health and microbiome",
+      "trend_strength_score": 60,
+      "opportunity_score": 65,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.utsouthwestern.edu/newsroom/articles/year-2026/oct-protein-intestinal-inflammation.html"
+      ],
+      "recommended_angle": "What a newly identified gut-inflammation protein means for IBD and the gut-health trend",
+      "why_now": "New UTSW research lands amid rising consumer search interest in gut health and fermented foods (+4 Trends delta).",
+      "primary_headline": "This Protein May Be the Key to Calming Gut Inflammation, New Study Finds",
+      "next_steps": "Locate published journal/DOI; confirm animal vs. human study scope before drafting.",
+      "integrity_flags": [
+        "Verify animal vs. human study model before publishing."
+      ],
+      "trend_score_reason": "New institutional research + rising consumer search interest in gut health (+4 Trends delta)",
+      "opportunity_score_reason": "Aligns with high consumer interest in gut health/microbiome; explainer potential",
+      "discover_score_reason": "Emerging research angle; moderate discovery interest in gut health category",
+      "notes": "Institutional press release serves as primary source. Verify study model before publishing.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "UT Southwestern newsroom article on protein and intestinal inflammation; gut health Trends +4 delta"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "Supplement powder recall (cardiovascular)",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Pre-workout recall (illegal ingredient)",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Smoked fish recall",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Ketamine pain-consciousness study",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "PTSD magnetic stimulation study",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Harvard AI primary-care study",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "OBGYN resident depression study",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Clinical trial diversity and recruitment cluster",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Walter Willett / Liverpool diet soda study",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Galderma / ZO Skin Health acquisition",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Rush / Endeavor Health merger",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Patty Murray health-policy op-ed",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Talarico / Ditka / Love celebrity health queries",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Wellness lifestyle cluster (darties, fairs, coaching)",
+      "reason": "weak_signal"
+    }
+  ],
+  "fact_check_summary": {
+    "minor_issues": 2,
+    "accurate": 3
+  },
+  "run_cost": {
+    "total_usd": 0.6561,
+    "calls": [
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11468,
+        "output_tokens": 25517,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 42559,
+        "estimated_cost_usd": 0.5768
+      },
+      {
+        "model": "claude-haiku-4-5",
+        "input_tokens": 9135,
+        "output_tokens": 2307,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0207
+      },
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11641,
+        "output_tokens": 1581,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0586
+      }
+    ]
+  }
+}
