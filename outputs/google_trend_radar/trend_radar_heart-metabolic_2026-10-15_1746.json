@@ -1,0 +1,96 @@
+{
+  "run_date": "2026-10-15",
+  "generated_at": "2026-10-15T17:46:52",
+  "topic": "heart-metabolic",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "heart-metabolic",
+    "blood pressure",
+    "cholesterol",
+    "blood sugar",
+    "prediabetes",
+    "longevity",
+    "heart-metabolic trends",
+    "heart-metabolic products",
+    "heart-metabolic news",
+    "heart-metabolic for beginners",
+    "heart-metabolic routine",
+    "heart-metabolic benefits",
+    "heart-metabolic ideas",
+    "heart-metabolic reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 14,
+    "total_reviewed": 0,
+    "total_retained": 0,
+    "total_rejected": 14,
+    "breakouts": 0,
+    "emerging": 0,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [],
+  "rejected": [
+    {
+      "topic": "heart-metabolic",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "blood pressure",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "cholesterol",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "blood sugar",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "prediabetes",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "longevity",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "heart-metabolic trends",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "heart-metabolic products",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "heart-metabolic news",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "heart-metabolic for beginners",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "heart-metabolic routine",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "heart-metabolic benefits",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "heart-metabolic ideas",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "heart-metabolic reviews",
+      "reason": "No related_queries data returned"
+    }
+  ]
+}
