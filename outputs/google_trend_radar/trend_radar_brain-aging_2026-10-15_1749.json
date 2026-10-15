@@ -1,0 +1,101 @@
+{
+  "run_date": "2026-10-15",
+  "generated_at": "2026-10-15T17:49:49",
+  "topic": "brain-aging",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "brain-aging",
+    "brain fog",
+    "cognitive decline",
+    "dementia",
+    "healthy aging",
+    "bone density",
+    "sarcopenia",
+    "brain-aging trends",
+    "brain-aging products",
+    "brain-aging news",
+    "brain-aging for beginners",
+    "brain-aging routine",
+    "brain-aging benefits",
+    "brain-aging ideas",
+    "brain-aging reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 15,
+    "total_reviewed": 0,
+    "total_retained": 0,
+    "total_rejected": 15,
+    "breakouts": 0,
+    "emerging": 0,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [],
+  "rejected": [
+    {
+      "topic": "brain-aging",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "brain fog",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "cognitive decline",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "dementia",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "healthy aging",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "bone density",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "sarcopenia",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "brain-aging trends",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "brain-aging products",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "brain-aging news",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "brain-aging for beginners",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "brain-aging routine",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "brain-aging benefits",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "brain-aging ideas",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "brain-aging reviews",
+      "reason": "No related_queries data returned"
+    }
+  ]
+}
