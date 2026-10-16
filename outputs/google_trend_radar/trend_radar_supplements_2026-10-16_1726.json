@@ -1,0 +1,101 @@
+{
+  "run_date": "2026-10-16",
+  "generated_at": "2026-10-16T17:26:03",
+  "topic": "supplements",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "supplements",
+    "creatine",
+    "collagen",
+    "electrolytes",
+    "vitamin D",
+    "iron deficiency",
+    "omega-3",
+    "supplements trends",
+    "supplements products",
+    "supplements news",
+    "supplements for beginners",
+    "supplements routine",
+    "supplements benefits",
+    "supplements ideas",
+    "supplements reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 15,
+    "total_reviewed": 0,
+    "total_retained": 0,
+    "total_rejected": 15,
+    "breakouts": 0,
+    "emerging": 0,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [],
+  "rejected": [
+    {
+      "topic": "supplements",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "creatine",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "collagen",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "electrolytes",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "vitamin D",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "iron deficiency",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "omega-3",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "supplements trends",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "supplements products",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "supplements news",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "supplements for beginners",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "supplements routine",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "supplements benefits",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "supplements ideas",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "supplements reviews",
+      "reason": "No related_queries data returned"
+    }
+  ]
+}
