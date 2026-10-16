@@ -1,0 +1,101 @@
+{
+  "run_date": "2026-10-16",
+  "generated_at": "2026-10-16T17:35:05",
+  "topic": "chronic-conditions",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "chronic-conditions",
+    "long COVID",
+    "autoimmune",
+    "thyroid",
+    "migraine",
+    "chronic fatigue",
+    "inflammation",
+    "chronic-conditions trends",
+    "chronic-conditions products",
+    "chronic-conditions news",
+    "chronic-conditions for beginners",
+    "chronic-conditions routine",
+    "chronic-conditions benefits",
+    "chronic-conditions ideas",
+    "chronic-conditions reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 15,
+    "total_reviewed": 0,
+    "total_retained": 0,
+    "total_rejected": 15,
+    "breakouts": 0,
+    "emerging": 0,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [],
+  "rejected": [
+    {
+      "topic": "chronic-conditions",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "long COVID",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "autoimmune",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "thyroid",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "migraine",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "chronic fatigue",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "inflammation",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "chronic-conditions trends",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "chronic-conditions products",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "chronic-conditions news",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "chronic-conditions for beginners",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "chronic-conditions routine",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "chronic-conditions benefits",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "chronic-conditions ideas",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "chronic-conditions reviews",
+      "reason": "No related_queries data returned"
+    }
+  ]
+}
