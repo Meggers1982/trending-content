@@ -1,0 +1,106 @@
+{
+  "run_date": "2026-10-17",
+  "generated_at": "2026-10-17T16:12:54",
+  "topic": "public-health",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "public-health",
+    "measles",
+    "flu season",
+    "RSV",
+    "bird flu",
+    "FDA approval",
+    "drug recall",
+    "vaccine schedule",
+    "public-health trends",
+    "public-health products",
+    "public-health news",
+    "public-health for beginners",
+    "public-health routine",
+    "public-health benefits",
+    "public-health ideas",
+    "public-health reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 16,
+    "total_reviewed": 0,
+    "total_retained": 0,
+    "total_rejected": 16,
+    "breakouts": 0,
+    "emerging": 0,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [],
+  "rejected": [
+    {
+      "topic": "public-health",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "measles",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "flu season",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "RSV",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "bird flu",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "FDA approval",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "drug recall",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "vaccine schedule",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "public-health trends",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "public-health products",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "public-health news",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "public-health for beginners",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "public-health routine",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "public-health benefits",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "public-health ideas",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "public-health reviews",
+      "reason": "No related_queries data returned"
+    }
+  ]
+}
