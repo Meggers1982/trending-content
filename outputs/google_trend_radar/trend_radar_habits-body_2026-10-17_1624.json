@@ -1,0 +1,86 @@
+{
+  "run_date": "2026-10-17",
+  "generated_at": "2026-10-17T16:24:19",
+  "topic": "habits-body",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "habits-body",
+    "cold plunge",
+    "red light therapy",
+    "step count",
+    "habits-body trends",
+    "habits-body products",
+    "habits-body news",
+    "habits-body for beginners",
+    "habits-body routine",
+    "habits-body benefits",
+    "habits-body ideas",
+    "habits-body reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 12,
+    "total_reviewed": 0,
+    "total_retained": 0,
+    "total_rejected": 12,
+    "breakouts": 0,
+    "emerging": 0,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [],
+  "rejected": [
+    {
+      "topic": "habits-body",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "cold plunge",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "red light therapy",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "step count",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "habits-body trends",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "habits-body products",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "habits-body news",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "habits-body for beginners",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "habits-body routine",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "habits-body benefits",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "habits-body ideas",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "habits-body reviews",
+      "reason": "No related_queries data returned"
+    }
+  ]
+}
