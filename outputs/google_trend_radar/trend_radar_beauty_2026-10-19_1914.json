@@ -1,0 +1,1016 @@
+{
+  "run_date": "2026-10-19",
+  "generated_at": "2026-10-19T19:14:05",
+  "topic": "beauty",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "beauty",
+    "skincare",
+    "makeup",
+    "haircare",
+    "fragrance",
+    "clean beauty",
+    "retinol",
+    "niacinamide",
+    "peptides",
+    "hyaluronic acid",
+    "skin barrier",
+    "skin cycling",
+    "glass skin",
+    "slugging",
+    "scalp care",
+    "SPF",
+    "sunscreen",
+    "K-beauty",
+    "hair loss",
+    "acne treatment",
+    "nail care",
+    "beauty trends",
+    "beauty products",
+    "beauty news",
+    "measles",
+    "selena gomez",
+    "kylie jenner",
+    "candice swanepoel",
+    "sahara ray",
+    "alex consani",
+    "tate mcrae",
+    "natalia bryant",
+    "rosie huntington-whiteley",
+    "nicole kidman",
+    "gisele bündchen",
+    "elsa hosk",
+    "ming xi",
+    "romee strijd",
+    "doutzen kroes",
+    "vs fashion show 2026 where to watch",
+    "jamie lee curtis",
+    "behati prinsloo",
+    "who won angels among us",
+    "britney spears",
+    "amy adams",
+    "liu wen"
+  ],
+  "trending_now_terms_used": [
+    "measles",
+    "selena gomez",
+    "kylie jenner",
+    "candice swanepoel",
+    "sahara ray",
+    "alex consani",
+    "tate mcrae",
+    "natalia bryant",
+    "rosie huntington-whiteley",
+    "nicole kidman",
+    "gisele bündchen",
+    "elsa hosk",
+    "ming xi",
+    "romee strijd",
+    "doutzen kroes",
+    "vs fashion show 2026 where to watch",
+    "jamie lee curtis",
+    "behati prinsloo",
+    "who won angels among us",
+    "britney spears",
+    "amy adams",
+    "liu wen"
+  ],
+  "trending_now_context": [
+    {
+      "query": "measles",
+      "headline": "Person infected with measles visits Perry restaurant, causing exposure: DPH",
+      "source": "13WMAZ",
+      "link": "https://www.13wmaz.com/article/news/local/perry/potential-measles-exposure-perry-restaurant-dph/93-dda932d3-69b3-470e-a0f6-bff11784a4bb"
+    },
+    {
+      "query": "selena gomez",
+      "headline": "Selena Gomez shares warning on vaping: 'It's changed my voice'",
+      "source": "ABC News - Breaking News, Latest News and Videos",
+      "link": "https://abcnews.com/GMA/Culture/selena-gomez-shares-warning-vaping-changed-voice/story?id=137373235"
+    },
+    {
+      "query": "kylie jenner",
+      "headline": "Victoria’s Secret reboots its fantasy with Kylie Jenner’s $50M diamond bra",
+      "source": "CNN",
+      "link": "https://www.cnn.com/2026/10/19/style/kylie-jenner-50m-fantasy-bra-victorias-secret-runway-2026"
+    },
+    {
+      "query": "candice swanepoel",
+      "headline": "The Best, Worst and Oops Moments from the 2026 Victoria’s Secret Fashion Show",
+      "source": "People.com",
+      "link": "https://people.com/best-worst-oops-moments-2026-victorias-secret-fashion-show-12179143"
+    },
+    {
+      "query": "sahara ray",
+      "headline": "Model Sahara Ray Dead at 34",
+      "source": "TMZ",
+      "link": "https://www.tmz.com/2026/10/19/sahara-ray-dead/"
+    },
+    {
+      "query": "alex consani",
+      "headline": "Alex Consani Returns to the Victoria’s Secret Fashion Show—This Time in a Puffy Pink Cape",
+      "source": "Harper's BAZAAR",
+      "link": "https://www.harpersbazaar.com/celebrity/latest/a74162843/alex-consani-victorias-secret-fashion-show-2026-runway-photos/"
+    },
+    {
+      "query": "tate mcrae",
+      "headline": "Tate McRae Wore Head-to-Toe Red Lingerie to Perform at the 2026 Victoria’s Secret Fashion Show",
+      "source": "Yahoo News Singapore",
+      "link": "https://sg.news.yahoo.com/tate-mcrae-wore-head-toe-235533189.html"
+    }
+  ],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 46,
+    "total_reviewed": 80,
+    "total_retained": 2,
+    "total_rejected": 78,
+    "breakouts": 2,
+    "emerging": 0,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "topic": "jax skincare",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 67,
+      "emergence_score": 82,
+      "velocity_score": 43,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "Breakout",
+      "latest_interest": 3,
+      "peak_interest": 14,
+      "slope": 3,
+      "acceleration": 1,
+      "seed_terms": [
+        "skincare"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        3,
+        3,
+        6,
+        8,
+        9,
+        13,
+        8,
+        7,
+        6,
+        9,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        2,
+        3,
+        0,
+        4,
+        5,
+        9,
+        8,
+        8,
+        7,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6,
+        4,
+        7,
+        8,
+        9,
+        6,
+        9,
+        0,
+        9,
+        0,
+        0,
+        0,
+        13,
+        14,
+        0,
+        0,
+        5,
+        0,
+        3,
+        3,
+        0,
+        0,
+        3,
+        0,
+        4,
+        3,
+        7,
+        6,
+        7,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        4,
+        0,
+        3,
+        4,
+        7,
+        4,
+        7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6,
+        0,
+        0,
+        3,
+        2,
+        3
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; interest moved from 0 to 3; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 2,
+      "topic": "cerel skincare",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 66,
+      "emergence_score": 82,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 16,
+      "slope": 0,
+      "acceleration": 2,
+      "seed_terms": [
+        "skincare"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        7,
+        0,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        16,
+        10,
+        13,
+        7,
+        9,
+        6,
+        6,
+        3,
+        4,
+        3,
+        5,
+        3,
+        4,
+        4,
+        5,
+        4,
+        6,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "cerel",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "jax love is blind",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "duck variations",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "the duck variations",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "the little disturbances of man",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "oslo accords",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "fissile",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "cotes",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "fissile rock",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "ellis island",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "stew love is blind",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "hc andersen født",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "poison classification nyt",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "british dessert mess",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "grace paley",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "oslo accords group",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skincare"
+      ]
+    },
+    {
+      "topic": "jennifer lawrence",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "haircare"
+      ]
+    },
+    {
+      "topic": "what is a roth ira",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "haircare"
+      ]
+    },
+    {
+      "topic": "what is a 401k",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "haircare"
+      ]
+    },
+    {
+      "topic": "høretelefoner løb",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "haircare"
+      ]
+    },
+    {
+      "topic": "vaporetto",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fragrance"
+      ]
+    },
+    {
+      "topic": "fogerty",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fragrance"
+      ]
+    },
+    {
+      "topic": "dynamite perfume",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fragrance"
+      ]
+    },
+    {
+      "topic": "fogerty meaning",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fragrance"
+      ]
+    },
+    {
+      "topic": "dynamite",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fragrance"
+      ]
+    },
+    {
+      "topic": "vaporetto meaning",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fragrance"
+      ]
+    },
+    {
+      "topic": "email marketing for restaurants",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "clean beauty"
+      ]
+    },
+    {
+      "topic": "air angel moisturizer",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "retinol"
+      ]
+    },
+    {
+      "topic": "prequel gleanser",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skin barrier"
+      ]
+    },
+    {
+      "topic": "best budget smartphone",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "skin cycling"
+      ]
+    },
+    {
+      "topic": "shohei ohtani",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "slugging"
+      ]
+    },
+    {
+      "topic": "mazal group",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "beauty products"
+      ]
+    },
+    {
+      "topic": "katie zacharia",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "beauty news"
+      ]
+    },
+    {
+      "topic": "book recommendations",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "beauty news"
+      ]
+    },
+    {
+      "topic": "healthy recipes",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "beauty news"
+      ]
+    },
+    {
+      "topic": "walmart near me",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "beauty news"
+      ]
+    },
+    {
+      "topic": "is there a global measles outbreak",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "measles"
+      ]
+    },
+    {
+      "topic": "benny blanco selena gomez auction",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "selena gomez"
+      ]
+    },
+    {
+      "topic": "martin short selena gomez event",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "selena gomez"
+      ]
+    },
+    {
+      "topic": "barbara thornhill",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "selena gomez"
+      ]
+    },
+    {
+      "topic": "barbera thornhill",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "selena gomez"
+      ]
+    },
+    {
+      "topic": "selena gomez academy museum gala",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "selena gomez"
+      ]
+    },
+    {
+      "topic": "does selena gomez vape",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "selena gomez"
+      ]
+    },
+    {
+      "topic": "selena gomez vaping",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "selena gomez"
+      ]
+    },
+    {
+      "topic": "which jonas brother did selena gomez date",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "selena gomez"
+      ]
+    },
+    {
+      "topic": "kelly loeffler",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "selena gomez"
+      ]
+    },
+    {
+      "topic": "did selena gomez remove her veneers",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "selena gomez"
+      ]
+    },
+    {
+      "topic": "selena gomez vape",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "selena gomez"
+      ]
+    },
+    {
+      "topic": "selena gomez voice before and after",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "selena gomez"
+      ]
+    },
+    {
+      "topic": "selena gomez new teeth",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "selena gomez"
+      ]
+    },
+    {
+      "topic": "fantasy bra",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "kylie jenner"
+      ]
+    },
+    {
+      "topic": "kylie jenner fantasy bra",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "kylie jenner"
+      ]
+    },
+    {
+      "topic": "kylie jenner victoria secret show",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "kylie jenner"
+      ]
+    },
+    {
+      "topic": "vs fashion show",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "kylie jenner"
+      ]
+    },
+    {
+      "topic": "kylie jenner victoria's secret",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "kylie jenner"
+      ]
+    },
+    {
+      "topic": "kylie jenner victoria secret 2026",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "kylie jenner"
+      ]
+    },
+    {
+      "topic": "kylie jenner victoria secret bra",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "kylie jenner"
+      ]
+    },
+    {
+      "topic": "revolve huda beauty",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "skincare brand from japan",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "jax love is blind skincare brand",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "skincare brand from japan nyt",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "jax love is blind skincare",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "champo haircare",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "neuroscience of fragrance and mood",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "is dynamite a fragrance",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "dynamite fragrance",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "good clean goop beauty",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "hhs interim access policy peptides",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "cosrx snail mucin",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "sweed glass skin foundation",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "revolution glass skin primer",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "slugging percentage vs batting average",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "mizani scalp care calming scalp lotion",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "new sunscreen ingredient fda bemotrizinol",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "bemt sunscreen brands",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "k-beauty outlet",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "ayer nail care",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "selena gomez burgundy nail art",
+      "reason": "Weak radar score (49)"
+    }
+  ]
+}
