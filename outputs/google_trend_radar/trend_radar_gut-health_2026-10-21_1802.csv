@@ -1,0 +1,2 @@
+rank,topic,trend_stage,urgency,radar_score,emergence_score,velocity_score,confidence_score,saturation_score,opportunity_score,confidence,rising_label,latest_interest,peak_interest,slope,seed_terms,discovery_sources,tags,why_now,recommended_action
+1,align probiotics,rising,monitor,59,37,79,75,0,62,high,'+50%,61,100,61,prebiotics,rising query,,Google Trends labels it +50%; interest moved from 0 to 61; found through rising query,Track as a developing query and compare against existing coverage.
