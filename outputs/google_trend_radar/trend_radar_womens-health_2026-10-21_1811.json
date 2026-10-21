@@ -1,0 +1,888 @@
+{
+  "run_date": "2026-10-21",
+  "generated_at": "2026-10-21T18:11:50",
+  "topic": "womens-health",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "womens-health",
+    "perimenopause",
+    "menopause symptoms",
+    "hormone therapy",
+    "PCOS",
+    "endometriosis",
+    "period health",
+    "fertility",
+    "womens-health trends",
+    "womens-health products",
+    "womens-health news",
+    "womens-health for beginners",
+    "womens-health routine",
+    "womens-health benefits",
+    "womens-health ideas",
+    "womens-health reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 16,
+    "total_reviewed": 80,
+    "total_retained": 6,
+    "total_rejected": 73,
+    "breakouts": 3,
+    "emerging": 1,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "topic": "identify early perimenopause symptoms and outline medical treatments to relieve them",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 54,
+      "emergence_score": 71,
+      "velocity_score": 40,
+      "confidence_score": 40,
+      "saturation_score": 0,
+      "opportunity_score": 83,
+      "confidence": "low",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "perimenopause"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; time-series validation was skipped or unavailable; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 2,
+      "topic": "gynecologist near me",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 54,
+      "emergence_score": 71,
+      "velocity_score": 40,
+      "confidence_score": 40,
+      "saturation_score": 0,
+      "opportunity_score": 83,
+      "confidence": "low",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "hormone therapy"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; time-series validation was skipped or unavailable; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 3,
+      "topic": "how long does menopause last",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 54,
+      "emergence_score": 71,
+      "velocity_score": 40,
+      "confidence_score": 40,
+      "saturation_score": 0,
+      "opportunity_score": 83,
+      "confidence": "low",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "hormone therapy"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; time-series validation was skipped or unavailable; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 4,
+      "topic": "barbara palvin endometriosis",
+      "trend_stage": "emerging",
+      "urgency": "this_week",
+      "radar_score": 54,
+      "emergence_score": 71,
+      "velocity_score": 40,
+      "confidence_score": 40,
+      "saturation_score": 0,
+      "opportunity_score": 83,
+      "confidence": "low",
+      "rising_label": "+1300%",
+      "latest_interest": 0,
+      "peak_interest": 0,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "endometriosis"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [],
+      "tags": {},
+      "why_now": "Google Trends labels it +1300%; time-series validation was skipped or unavailable; found through rising query",
+      "recommended_action": "Build an angle this week and monitor the next 24-48 hours."
+    },
+    {
+      "rank": 5,
+      "topic": "everleap fertility rma",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 51,
+      "emergence_score": 48,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 69,
+      "confidence": "high",
+      "rising_label": "+250%",
+      "latest_interest": 0,
+      "peak_interest": 15,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "fertility"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +250%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it.",
+      "similar": [
+        {
+          "topic": "everleap fertility",
+          "trend_stage": "watch",
+          "radar_score": 50,
+          "why_now": "Google Trends labels it +70%; interest moved from 0 to 10; found through rising query"
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "topic": "us fertility rate",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 51,
+      "emergence_score": 43,
+      "velocity_score": 48,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 66,
+      "confidence": "high",
+      "rising_label": "+140%",
+      "latest_interest": 10,
+      "peak_interest": 41,
+      "slope": 10,
+      "acceleration": 2,
+      "seed_terms": [
+        "fertility"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        14,
+        0,
+        16,
+        22,
+        31,
+        41,
+        21,
+        16,
+        13,
+        14,
+        10,
+        10
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +140%; interest moved from 0 to 10; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "top tourist attractions in paris",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "menopause symptoms"
+      ]
+    },
+    {
+      "topic": "barbara palvin",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "endometriosis"
+      ]
+    },
+    {
+      "topic": "remission",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "endometriosis"
+      ]
+    },
+    {
+      "topic": "dental insurance with no waiting period",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "period health"
+      ]
+    },
+    {
+      "topic": "cheapest flights to tokyo",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "menopause symptoms"
+      ]
+    },
+    {
+      "topic": "what important information is available on a pay stub?",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "period health"
+      ]
+    },
+    {
+      "topic": "uti symptoms",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "period health"
+      ]
+    },
+    {
+      "topic": "how to bake a cake",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "menopause symptoms"
+      ]
+    },
+    {
+      "topic": "how to make sushi",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "menopause symptoms"
+      ]
+    },
+    {
+      "topic": "best time to visit maldives",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "period health"
+      ]
+    },
+    {
+      "topic": "everleap",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "fertility"
+      ]
+    },
+    {
+      "topic": "best pizza near me",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "period health"
+      ]
+    },
+    {
+      "topic": "aetna",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "period health"
+      ]
+    },
+    {
+      "topic": "veritas fertility",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "can endometriosis be seen on ultrasound",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "pcos in spanish meaning",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "women's health ct",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "symptoms of perimenopause at 44",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "can people with endometriosis have kids",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "can endometriosis go away on its own",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "cigna health insurance",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "pmdd symptoms",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "how do you get tested for endometriosis",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "carbon health",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "fpa women's health",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "fertility center of las vegas",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "what does total fertility rate mean",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "how to diagnose perimenopause",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "que es pcos",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "can pcos go away",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "can you have pcos with regular periods",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "shady grove fertility tampa",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "clearblue fertility monitor test sticks",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "peri menopause symptoms",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "frozen shoulder menopause",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "womens health clinic near me",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "fertility specialist near me",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "us fertility",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "island fertility commack",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "fsh levels perimenopause",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "average age of menopause",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "how do they test for pcos",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "is endometriosis curable",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "planned parenthood",
+      "reason": "Weak radar score (46)"
+    },
+    {
+      "topic": "what is replacement level fertility",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "symptoms perimenopause",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "what is perimenopause",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "menopause",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "perimenopause help",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "perimenopause age",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "symptoms of perimenopause",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "estrogen",
+      "reason": "Weak radar score (39)"
+    },
+    {
+      "topic": "perimenopause hrt",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "hrt",
+      "reason": "Weak radar score (40)"
+    },
+    {
+      "topic": "perimenopause periods",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "perimenopause signs",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "progesterone",
+      "reason": "Weak radar score (39)"
+    },
+    {
+      "topic": "signs of perimenopause",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "when is perimenopause",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "perimenopause test",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "early perimenopause",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "perimenopause supplements",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "perimenopause bleeding",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "perimenopause anxiety",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "perimenopause sleep",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "perimenopause treatment",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "when does perimenopause start",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "hrt for perimenopause",
+      "reason": "Weak radar score (40)"
+    },
+    {
+      "topic": "perimenopause spotting",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "menopause symptoms",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "symptoms of menopause",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "perimenopause",
+      "reason": "Weak radar score (31)"
+    },
+    {
+      "topic": "perimenopause symptoms",
+      "reason": "Weak radar score (31)"
+    }
+  ]
+}
