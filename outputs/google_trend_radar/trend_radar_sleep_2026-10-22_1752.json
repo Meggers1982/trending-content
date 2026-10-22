@@ -1,0 +1,1100 @@
+{
+  "run_date": "2026-10-22",
+  "generated_at": "2026-10-22T17:52:13",
+  "topic": "sleep",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "sleep",
+    "sleep apnea",
+    "insomnia",
+    "sleep tracking",
+    "sleep trends",
+    "sleep products",
+    "sleep news",
+    "sleep for beginners",
+    "sleep routine",
+    "sleep benefits",
+    "sleep ideas",
+    "sleep reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 12,
+    "total_reviewed": 80,
+    "total_retained": 3,
+    "total_rejected": 77,
+    "breakouts": 2,
+    "emerging": 0,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "topic": "jalen hurts sleep",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 66,
+      "emergence_score": 82,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 18,
+      "slope": -1,
+      "acceleration": 4,
+      "seed_terms": [
+        "sleep"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        7,
+        16,
+        17,
+        15,
+        12,
+        12,
+        9,
+        12,
+        13,
+        14,
+        15,
+        16,
+        18,
+        15,
+        12,
+        11,
+        6,
+        4,
+        8,
+        8,
+        9,
+        8,
+        6,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        2,
+        4,
+        3,
+        4,
+        4,
+        4,
+        4,
+        3,
+        3,
+        2,
+        0,
+        4,
+        0,
+        0,
+        0,
+        3,
+        2,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; interest moved from 1 to 0; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 2,
+      "topic": "monster mash brookie insomnia cookies",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 65,
+      "emergence_score": 81,
+      "velocity_score": 38,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 47,
+      "slope": 0,
+      "acceleration": -6,
+      "seed_terms": [
+        "insomnia"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        33,
+        47,
+        26,
+        42,
+        36,
+        27,
+        36,
+        32,
+        29,
+        26,
+        20,
+        16,
+        12,
+        10,
+        7,
+        7,
+        6,
+        6,
+        8,
+        5,
+        8,
+        8,
+        9,
+        7,
+        6,
+        6,
+        4,
+        4,
+        4,
+        3,
+        3,
+        3,
+        2,
+        2,
+        2,
+        3,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 3,
+      "topic": "eight sleep",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 54,
+      "emergence_score": 53,
+      "velocity_score": 44,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 72,
+      "confidence": "high",
+      "rising_label": "+400%",
+      "latest_interest": 2,
+      "peak_interest": 100,
+      "slope": 1,
+      "acceleration": 13,
+      "seed_terms": [
+        "sleep"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        3,
+        0,
+        2,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        3,
+        0,
+        0,
+        0,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        0,
+        0,
+        2,
+        0,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2,
+        0,
+        2,
+        0,
+        3,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        4,
+        4,
+        6,
+        18,
+        32,
+        59,
+        65,
+        37,
+        23,
+        26,
+        25,
+        24,
+        21,
+        21,
+        21,
+        21,
+        20,
+        21,
+        20,
+        18,
+        17,
+        21,
+        20,
+        26,
+        36,
+        44,
+        62,
+        85,
+        100,
+        77,
+        53,
+        35,
+        24,
+        17,
+        9,
+        5,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        3,
+        2,
+        2,
+        0,
+        3,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +400%; interest moved from 1 to 2; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "new oreo christmas seasonal products",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "insomnia"
+      ]
+    },
+    {
+      "topic": "royal caribbean cruise overboard",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "insomnia"
+      ]
+    },
+    {
+      "topic": "detective vincent riley",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "insomnia"
+      ]
+    },
+    {
+      "topic": "aldi stand mixer",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "insomnia"
+      ]
+    },
+    {
+      "topic": "homelander recast",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "insomnia"
+      ]
+    },
+    {
+      "topic": "aldi affordable kitchen mixer colors",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "insomnia"
+      ]
+    },
+    {
+      "topic": "what are the new disney mcdonald's boo buckets for halloween",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "insomnia"
+      ]
+    },
+    {
+      "topic": "apple iphone duo",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "insomnia"
+      ]
+    },
+    {
+      "topic": "liquid iv electrolyte hot chocolate",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "insomnia"
+      ]
+    },
+    {
+      "topic": "wise 0855 brown dwarf exoplanet",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "insomnia"
+      ]
+    },
+    {
+      "topic": "coastal storm",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "insomnia"
+      ]
+    },
+    {
+      "topic": "what is a roth ira",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "sleep tracking"
+      ]
+    },
+    {
+      "topic": "email marketing for restaurants",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "sleep tracking"
+      ]
+    },
+    {
+      "topic": "what is a 401k",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "sleep tracking"
+      ]
+    },
+    {
+      "topic": "bevel app",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "sleep tracking"
+      ]
+    },
+    {
+      "topic": "how to make sushi",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "sleep products"
+      ]
+    },
+    {
+      "topic": "jalen hurts news",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "sleep news"
+      ]
+    },
+    {
+      "topic": "walmart near me",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "sleep news"
+      ]
+    },
+    {
+      "topic": "strait of hormuz news",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "sleep news"
+      ]
+    },
+    {
+      "topic": "what are the features of general adaptation syndrome?",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "sleep routine"
+      ]
+    },
+    {
+      "topic": "pinealon peptide benefits",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "sleep benefits"
+      ]
+    },
+    {
+      "topic": "brazil nuts benefits",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "sleep benefits"
+      ]
+    },
+    {
+      "topic": "pumpkin painting ideas",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "sleep ideas"
+      ]
+    },
+    {
+      "topic": "clayface reviews",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "sleep reviews"
+      ]
+    },
+    {
+      "topic": "the boys homelander recast",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "insomnia"
+      ]
+    },
+    {
+      "topic": "doritos new lemon pepper flavor",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "insomnia"
+      ]
+    },
+    {
+      "topic": "gen x casual dining preferences",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "insomnia"
+      ]
+    },
+    {
+      "topic": "kfc moving to coca cola",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "insomnia"
+      ]
+    },
+    {
+      "topic": "heavenly hunks dupe loops mini donuts",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "insomnia"
+      ]
+    },
+    {
+      "topic": "andrea de armas lump biopsy",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "insomnia"
+      ]
+    },
+    {
+      "topic": "simulating colliding wormholes gravitational waves",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "insomnia"
+      ]
+    },
+    {
+      "topic": "best budget smartphone",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "sleep tracking"
+      ]
+    },
+    {
+      "topic": "oura ring benefits",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "sleep benefits"
+      ]
+    },
+    {
+      "topic": "cheapest flights to tokyo",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "sleep tracking"
+      ]
+    },
+    {
+      "topic": "christmas gift ideas",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "sleep ideas"
+      ]
+    },
+    {
+      "topic": "tetanus",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "insomnia"
+      ]
+    },
+    {
+      "topic": "france news",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "sleep news"
+      ]
+    },
+    {
+      "topic": "top tourist attractions in paris",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "sleep products"
+      ]
+    },
+    {
+      "topic": "høretelefoner løb",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "sleep tracking"
+      ]
+    },
+    {
+      "topic": "ukraine war news",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "sleep news"
+      ]
+    },
+    {
+      "topic": "pumpkin carving ideas",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "sleep ideas"
+      ]
+    },
+    {
+      "topic": "tmz news",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "sleep news"
+      ]
+    },
+    {
+      "topic": "best laptop for work",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "sleep apnea"
+      ]
+    },
+    {
+      "topic": "best time to visit maldives",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "sleep apnea"
+      ]
+    },
+    {
+      "topic": "best pizza near me",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "sleep apnea"
+      ]
+    },
+    {
+      "topic": "ups tracking number",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "sleep tracking"
+      ]
+    },
+    {
+      "topic": "how to bake a cake",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "sleep apnea"
+      ]
+    },
+    {
+      "topic": "tmz",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "sleep news"
+      ]
+    },
+    {
+      "topic": "ukraine news",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "sleep news"
+      ]
+    },
+    {
+      "topic": "iran war news",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "sleep news"
+      ]
+    },
+    {
+      "topic": "inositol benefits",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "sleep benefits"
+      ]
+    },
+    {
+      "topic": "tiff's treats",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "insomnia"
+      ]
+    },
+    {
+      "topic": "google trends",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "sleep trends"
+      ]
+    },
+    {
+      "topic": "pet care tips",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "sleep ideas"
+      ]
+    },
+    {
+      "topic": "identify the main symptoms of sleep apnea and outline medical treatment options",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "sleep crown pillow",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "sleep like the dead mattress reviews",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "pokemon sleep maintenance",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "oura lawsuit sleep tracking",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "do we lose an hour of sleep in november",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "oura ring sleep tracking lawsuit",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "pokemon sleep news",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "white noise for sleep",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "sweet sleep magnesium butter reviews",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "nature made back to sleep reviews",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "sleep token news",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "sleep token tour 2027",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "insomnia cookies okc",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "international sleep products association",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "sleep routine for 3 month old",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "can babies have sleep apnea",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "central sleep apnea vs obstructive sleep apnea",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "sleep token tattoo ideas",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "symptoms of sleep apnea in men",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "hollander sleep products",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "what is fatal familial insomnia",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "doctor sleep",
+      "reason": "Weak radar score (48)"
+    }
+  ]
+}
