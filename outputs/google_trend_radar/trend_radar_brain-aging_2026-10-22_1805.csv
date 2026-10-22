@@ -1,0 +1,2 @@
+rank,topic,trend_stage,urgency,radar_score,emergence_score,velocity_score,confidence_score,saturation_score,opportunity_score,confidence,rising_label,latest_interest,peak_interest,slope,seed_terms,discovery_sources,tags,why_now,recommended_action
+1,napping and dementia,emerging,this_week,66,82,40,75,0,89,high,'+1500%,0,22,0,dementia,rising query,,Google Trends labels it +1500%; interest moved from 0 to 0; found through rising query,Build an angle this week and monitor the next 24-48 hours.

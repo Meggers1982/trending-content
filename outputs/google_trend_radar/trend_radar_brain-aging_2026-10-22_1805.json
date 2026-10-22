@@ -1,0 +1,600 @@
+{
+  "run_date": "2026-10-22",
+  "generated_at": "2026-10-22T18:05:46",
+  "topic": "brain-aging",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "brain-aging",
+    "brain fog",
+    "cognitive decline",
+    "dementia",
+    "healthy aging",
+    "bone density",
+    "sarcopenia",
+    "brain-aging trends",
+    "brain-aging products",
+    "brain-aging news",
+    "brain-aging for beginners",
+    "brain-aging routine",
+    "brain-aging benefits",
+    "brain-aging ideas",
+    "brain-aging reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 15,
+    "total_reviewed": 80,
+    "total_retained": 1,
+    "total_rejected": 79,
+    "breakouts": 0,
+    "emerging": 1,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "topic": "napping and dementia",
+      "trend_stage": "emerging",
+      "urgency": "this_week",
+      "radar_score": 66,
+      "emergence_score": 82,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "+1500%",
+      "latest_interest": 0,
+      "peak_interest": 22,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "dementia"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        22,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +1500%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Build an angle this week and monitor the next 24-48 hours."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "best laptop for work",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "healthy aging"
+      ]
+    },
+    {
+      "topic": "how to bake a cake",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "healthy aging"
+      ]
+    },
+    {
+      "topic": "top tourist attractions in paris",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "healthy aging"
+      ]
+    },
+    {
+      "topic": "fibromyalgia",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "sarcopenia"
+      ]
+    },
+    {
+      "topic": "atelectasis",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "sarcopenia"
+      ]
+    },
+    {
+      "topic": "best pizza near me",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "healthy aging"
+      ]
+    },
+    {
+      "topic": "dysautonomia",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "brain fog"
+      ]
+    },
+    {
+      "topic": "hypotonia",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "sarcopenia"
+      ]
+    },
+    {
+      "topic": "myasthenia gravis",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "sarcopenia"
+      ]
+    },
+    {
+      "topic": "how to make sushi",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "healthy aging"
+      ]
+    },
+    {
+      "topic": "megestrol",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "sarcopenia"
+      ]
+    },
+    {
+      "topic": "guanfacine",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "brain fog"
+      ]
+    },
+    {
+      "topic": "osteopenia",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "sarcopenia"
+      ]
+    },
+    {
+      "topic": "sleep apnea symptoms",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "brain fog"
+      ]
+    },
+    {
+      "topic": "perimenopause",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "brain fog"
+      ]
+    },
+    {
+      "topic": "bob huggins cognitive decline news",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "optimal dietary patterns for healthy aging",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "does napping cause dementia",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "naps and dementia",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "gay dementia",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "at what age should a woman get a bone density test",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "what exercises increase bone density in the spine",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "what does a bone density test consist of",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "sarcopenia medical definition",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "how to check bone density at home",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "bone density test cost",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "sarcopenia icd 10",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "dementia 中文",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "pseudo dementia",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "brain fog in spanish",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "sarcopenia pronunciation",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "medical term for brain fog",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "supplements for memory and brain fog",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "artificial sweetener cognitive decline research",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "when does cognitive decline start",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "center for healthy aging",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "what is brain fog and what causes it",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "icd 10 code for brain fog",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "chemo brain fog",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "how long can you live with dementia",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "digital dementia",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "what is brain fog",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "brain fog symptoms",
+      "reason": "Weak radar score (45)"
+    },
+    {
+      "topic": "brain fog causes",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "brain fog and fatigue",
+      "reason": "Weak radar score (38)"
+    },
+    {
+      "topic": "brain fog feeling",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "get rid of brain fog",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "what causes brain fog",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "symptoms of brain fog",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "brain fog covid",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "what can cause brain fog",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "brain fog supplements",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "brain fog perimenopause",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "menopause brain fog",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "how to get rid of brain fog",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "adhd brain fog",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "brain fog meaning",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "brain fog treatment",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "how to help brain fog",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "period brain fog",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "why do i have brain fog",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "causes of brain fog",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "what does brain fog feel like",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "creatine brain fog",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "severe brain fog",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "what is cognitive decline",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "cognitive decline symptoms",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "mild cognitive decline",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "cognitive decline test",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "signs of cognitive decline",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "ai cognitive decline",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "cognitive decline meaning",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "icd 10 cognitive decline",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "cognitive decline in elderly",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "age related cognitive decline",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "icd 10 code for cognitive decline",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "what is dementia",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "dementia care",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "alzheimer's dementia",
+      "reason": "Weak radar score (40)"
+    }
+  ]
+}
