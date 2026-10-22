@@ -1,0 +1,778 @@
+{
+  "run_date": "2026-10-22",
+  "generated_at": "2026-10-22T18:00:14",
+  "topic": "heart-metabolic",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "heart-metabolic",
+    "blood pressure",
+    "cholesterol",
+    "blood sugar",
+    "prediabetes",
+    "longevity",
+    "heart-metabolic trends",
+    "heart-metabolic products",
+    "heart-metabolic news",
+    "heart-metabolic for beginners",
+    "heart-metabolic routine",
+    "heart-metabolic benefits",
+    "heart-metabolic ideas",
+    "heart-metabolic reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 14,
+    "total_reviewed": 80,
+    "total_retained": 2,
+    "total_rejected": 77,
+    "breakouts": 1,
+    "emerging": 1,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "topic": "skin longevity dermatologist tips",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 66,
+      "emergence_score": 81,
+      "velocity_score": 41,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 80,
+      "slope": 0,
+      "acceleration": 5,
+      "seed_terms": [
+        "longevity"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        47,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        42,
+        0,
+        40,
+        60,
+        0,
+        58,
+        59,
+        80,
+        49,
+        61,
+        0,
+        49,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing.",
+      "similar": [
+        {
+          "topic": "ellen jones centenarian longevity tips",
+          "trend_stage": "breakout",
+          "radar_score": 66,
+          "why_now": "Google Trends labels it Breakout; interest moved from 0 to 0; found through rising query"
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "topic": "ikarian longevity stew",
+      "trend_stage": "emerging",
+      "urgency": "this_week",
+      "radar_score": 66,
+      "emergence_score": 82,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "+2050%",
+      "latest_interest": 0,
+      "peak_interest": 54,
+      "slope": 0,
+      "acceleration": 1,
+      "seed_terms": [
+        "longevity"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        54,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +2050%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Build an angle this week and monitor the next 24-48 hours."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "cheapest flights to tokyo",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "prediabetes"
+      ]
+    },
+    {
+      "topic": "top tourist attractions in paris",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "prediabetes"
+      ]
+    },
+    {
+      "topic": "diabetes mellitus",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "prediabetes"
+      ]
+    },
+    {
+      "topic": "type 1 diabetes symptoms",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "prediabetes"
+      ]
+    },
+    {
+      "topic": "hypertension",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "blood pressure"
+      ]
+    },
+    {
+      "topic": "ldl",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "cholesterol"
+      ]
+    },
+    {
+      "topic": "hdl",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "cholesterol"
+      ]
+    },
+    {
+      "topic": "triglycerides",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "cholesterol"
+      ]
+    },
+    {
+      "topic": "diabetes",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "blood sugar"
+      ]
+    },
+    {
+      "topic": "my longevity simulation",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "longevity by picking up attributes in the battlefield",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "best age to retire for longevity",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "stanford center on longevity",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "alt blood test",
+      "reason": "Weak radar score (49)"
+    },
+    {
+      "topic": "how to reverse prediabetes naturally in 30 days",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "whats considered low blood sugar",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "how to lower blood pressure fast",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "is oatmeal good for prediabetes",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "how much cholesterol should you have in a day",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "what happens when your blood sugar is too high",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "does caffeine raise your blood pressure",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "true nutra blood sugar complex reviews",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "does allulose raise blood sugar",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "what foods lower blood sugar immediately",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "high blood pressure",
+      "reason": "Weak radar score (39)"
+    },
+    {
+      "topic": "what is blood pressure",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "blood pressure low",
+      "reason": "Weak radar score (40)"
+    },
+    {
+      "topic": "lower blood pressure",
+      "reason": "Weak radar score (38)"
+    },
+    {
+      "topic": "good blood pressure",
+      "reason": "Weak radar score (40)"
+    },
+    {
+      "topic": "normal blood pressure",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "blood pressure monitor",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "blood pressure medication",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "what is high blood pressure",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "blood pressure medicine",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "what is normal blood pressure",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "how to lower blood pressure",
+      "reason": "Weak radar score (39)"
+    },
+    {
+      "topic": "blood pressure cuff",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "blood pressure chart",
+      "reason": "Weak radar score (40)"
+    },
+    {
+      "topic": "what is low blood pressure",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "blood pressure reading",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "blood pressure meds",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "what is a high blood pressure",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "diastolic blood pressure",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "what is good blood pressure",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "how to take blood pressure",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "high blood pressure symptoms",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "systolic blood pressure",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "what is a normal blood pressure",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "high cholesterol",
+      "reason": "Weak radar score (40)"
+    },
+    {
+      "topic": "lower cholesterol",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "what is cholesterol",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "ldl cholesterol",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "good cholesterol",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "hdl cholesterol",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "low cholesterol",
+      "reason": "Weak radar score (40)"
+    },
+    {
+      "topic": "bad cholesterol",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "cholesterol levels",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "how to lower cholesterol",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "what is high cholesterol",
+      "reason": "Weak radar score (40)"
+    },
+    {
+      "topic": "high ldl cholesterol",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "total cholesterol",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "cholesterol medication",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "what is ldl cholesterol",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "what is good cholesterol",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "lowering cholesterol",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "high cholesterol foods",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "hdl cholesterol high",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "what is hdl cholesterol",
+      "reason": "Weak radar score (40)"
+    },
+    {
+      "topic": "cholesterol medicine",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "hdl cholesterol low",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "blood sugar low",
+      "reason": "Weak radar score (39)"
+    },
+    {
+      "topic": "high blood sugar",
+      "reason": "Weak radar score (40)"
+    },
+    {
+      "topic": "what is blood sugar",
+      "reason": "Weak radar score (40)"
+    },
+    {
+      "topic": "normal blood sugar",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "blood sugar levels",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "lower blood sugar",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "blood pressure",
+      "reason": "Weak radar score (41)"
+    }
+  ]
+}
