@@ -1,0 +1,430 @@
+{
+  "run_date": "2026-10-23",
+  "generated_at": "2026-10-23T17:56:44",
+  "topic": "chronic-conditions",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "chronic-conditions",
+    "long COVID",
+    "autoimmune",
+    "thyroid",
+    "migraine",
+    "chronic fatigue",
+    "inflammation",
+    "chronic-conditions trends",
+    "chronic-conditions products",
+    "chronic-conditions news",
+    "chronic-conditions for beginners",
+    "chronic-conditions routine",
+    "chronic-conditions benefits",
+    "chronic-conditions ideas",
+    "chronic-conditions reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 15,
+    "total_reviewed": 80,
+    "total_retained": 0,
+    "total_rejected": 80,
+    "breakouts": 0,
+    "emerging": 0,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [],
+  "rejected": [
+    {
+      "topic": "autistic burnout",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "chronic fatigue"
+      ]
+    },
+    {
+      "topic": "kristaps porzingis",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "autoimmune"
+      ]
+    },
+    {
+      "topic": "top tourist attractions in paris",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "migraine"
+      ]
+    },
+    {
+      "topic": "best time to visit maldives",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "migraine"
+      ]
+    },
+    {
+      "topic": "best laptop for work",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "migraine"
+      ]
+    },
+    {
+      "topic": "cheapest flights to tokyo",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "migraine"
+      ]
+    },
+    {
+      "topic": "idiopathic hypersomnia",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "chronic fatigue"
+      ]
+    },
+    {
+      "topic": "how to bake a cake",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "migraine"
+      ]
+    },
+    {
+      "topic": "best pizza near me",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "migraine"
+      ]
+    },
+    {
+      "topic": "low dose naltrexone",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "chronic fatigue"
+      ]
+    },
+    {
+      "topic": "graves disease",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "chronic fatigue"
+      ]
+    },
+    {
+      "topic": "how to make sushi",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "migraine"
+      ]
+    },
+    {
+      "topic": "hypersomnia",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "chronic fatigue"
+      ]
+    },
+    {
+      "topic": "cgrp",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "migraine"
+      ]
+    },
+    {
+      "topic": "psoriatic arthritis symptoms",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "autoimmune"
+      ]
+    },
+    {
+      "topic": "pots",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "autoimmune"
+      ]
+    },
+    {
+      "topic": "pots disease",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "autoimmune"
+      ]
+    },
+    {
+      "topic": "guillain-barré syndrome",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "autoimmune"
+      ]
+    },
+    {
+      "topic": "epstein barr virus",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "autoimmune"
+      ]
+    },
+    {
+      "topic": "what is ms",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "autoimmune"
+      ]
+    },
+    {
+      "topic": "anti inflammatory diet",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "autoimmune"
+      ]
+    },
+    {
+      "topic": "dysautonomia",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "long COVID"
+      ]
+    },
+    {
+      "topic": "lupus",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "autoimmune"
+      ]
+    },
+    {
+      "topic": "inflammation of the tissues surrounding the elbow",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "thyroid drug recall 2026",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "thyroid drug recalled",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "thyroid drug recall",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "explain the key symptoms of gastritis and how to relieve stomach inflammation",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "recommend effective home remedies to relieve acute sciatica pain and inflammation",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "thyroid medicine recall",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "thyroid recall",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "how to treat chronic fatigue syndrome",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "thyroid medication recall",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "cgrp migraine",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "is rosacea an autoimmune disease",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "pots autoimmune",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "migraine attack",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "autoimmune disease pots",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "pelvic organ inflammation",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "what does inflammation in the body feel like",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "does castor oil help with inflammation",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "is ms an autoimmune disease",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "is ms autoimmune",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "ms autoimmune disease",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "signs of thyroid issues in women",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "episodic migraine",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "ophthalmic migraine",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "is psoriatic arthritis an autoimmune disease",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "cidp autoimmune disease",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "migraine support",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "does aleve reduce inflammation",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "covid symptoms",
+      "reason": "Weak radar score (39)"
+    },
+    {
+      "topic": "long covid symptoms",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "covid vaccine",
+      "reason": "Weak radar score (38)"
+    },
+    {
+      "topic": "how long does long covid last",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "how long contagious with covid",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "is long covid contagious",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "how long is covid contagious",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "symptoms of long covid",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "covid vaccine side effects",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "how long are you contagious with covid",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "covid 19",
+      "reason": "Weak radar score (39)"
+    },
+    {
+      "topic": "long covid symptoms 2026",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "long covid treatment",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "autoimmune disease",
+      "reason": "Weak radar score (39)"
+    },
+    {
+      "topic": "what is autoimmune",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "what autoimmune disease",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "autoimmune diseases",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "what is autoimmune disease",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "autoimmune symptoms",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "autoimmune disorder",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "autoimmune disorders",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "autoimmune hepatitis",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "what is an autoimmune disease",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "autoimmune disease symptoms",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "what is a autoimmune disease",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "autoimmune arthritis",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "autoimmune diabetes",
+      "reason": "Weak radar score (40)"
+    },
+    {
+      "topic": "autoimmune condition",
+      "reason": "Weak radar score (45)"
+    },
+    {
+      "topic": "autoimmune conditions",
+      "reason": "Weak radar score (42)"
+    }
+  ]
+}
