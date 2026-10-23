@@ -1,0 +1,1039 @@
+{
+  "run_date": "2026-10-23",
+  "generated_at": "2026-10-23T17:54:57",
+  "topic": "supplements",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "supplements",
+    "creatine",
+    "collagen",
+    "electrolytes",
+    "vitamin D",
+    "iron deficiency",
+    "omega-3",
+    "supplements trends",
+    "supplements products",
+    "supplements news",
+    "supplements for beginners",
+    "supplements routine",
+    "supplements benefits",
+    "supplements ideas",
+    "supplements reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 15,
+    "total_reviewed": 80,
+    "total_retained": 3,
+    "total_rejected": 77,
+    "breakouts": 0,
+    "emerging": 1,
+    "rising": 2,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "topic": "collagen tripeptides",
+      "trend_stage": "emerging",
+      "urgency": "this_week",
+      "radar_score": 59,
+      "emergence_score": 66,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 80,
+      "confidence": "high",
+      "rising_label": "+650%",
+      "latest_interest": 0,
+      "peak_interest": 18,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "collagen"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        18,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {
+        "ingredients": [
+          "peptides",
+          "collagen"
+        ]
+      },
+      "why_now": "Google Trends labels it +650%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Build an angle this week and monitor the next 24-48 hours."
+    },
+    {
+      "rank": 2,
+      "topic": "dr berg creatine",
+      "trend_stage": "rising",
+      "urgency": "monitor",
+      "radar_score": 55,
+      "emergence_score": 57,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 74,
+      "confidence": "high",
+      "rising_label": "+450%",
+      "latest_interest": 0,
+      "peak_interest": 26,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "creatine"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        18,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        26,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +450%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Track as a developing query and compare against existing coverage."
+    },
+    {
+      "rank": 3,
+      "topic": "best lymphatic drainage supplements",
+      "trend_stage": "rising",
+      "urgency": "monitor",
+      "radar_score": 55,
+      "emergence_score": 57,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 74,
+      "confidence": "high",
+      "rising_label": "+450%",
+      "latest_interest": 0,
+      "peak_interest": 18,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "supplements reviews"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        18,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        18,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +450%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Track as a developing query and compare against existing coverage."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "email marketing for restaurants",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements products"
+      ]
+    },
+    {
+      "topic": "what is a roth ira",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements products"
+      ]
+    },
+    {
+      "topic": "what is a 401k",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements news"
+      ]
+    },
+    {
+      "topic": "protaflo reviews",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements reviews"
+      ]
+    },
+    {
+      "topic": "hc andersen født",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "omega-3"
+      ]
+    },
+    {
+      "topic": "how much iron per day for a woman",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "iron deficiency"
+      ]
+    },
+    {
+      "topic": "happy liver reviews",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements reviews"
+      ]
+    },
+    {
+      "topic": "purelia reviews",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements reviews"
+      ]
+    },
+    {
+      "topic": "bbc news",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements news"
+      ]
+    },
+    {
+      "topic": "omega xl reviews",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements reviews"
+      ]
+    },
+    {
+      "topic": "ryze mushroom coffee reviews",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements reviews"
+      ]
+    },
+    {
+      "topic": "best budget smartphone",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements products"
+      ]
+    },
+    {
+      "topic": "nad supplement benefits",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements benefits"
+      ]
+    },
+    {
+      "topic": "best pizza near me",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements"
+      ]
+    },
+    {
+      "topic": "top tourist attractions in paris",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements"
+      ]
+    },
+    {
+      "topic": "best laptop for work",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements"
+      ]
+    },
+    {
+      "topic": "best time to visit maldives",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements"
+      ]
+    },
+    {
+      "topic": "ryze coffee reviews",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements reviews"
+      ]
+    },
+    {
+      "topic": "how to bake a cake",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements"
+      ]
+    },
+    {
+      "topic": "how to make sushi",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements"
+      ]
+    },
+    {
+      "topic": "cheapest flights to tokyo",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements"
+      ]
+    },
+    {
+      "topic": "osteoporosis",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "iron deficiency"
+      ]
+    },
+    {
+      "topic": "low iron symptoms female",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "iron deficiency"
+      ]
+    },
+    {
+      "topic": "liquid iron",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "iron deficiency"
+      ]
+    },
+    {
+      "topic": "iron transfusions",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "iron deficiency"
+      ]
+    },
+    {
+      "topic": "celiac disease symptoms",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "iron deficiency"
+      ]
+    },
+    {
+      "topic": "yahoo news",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements news"
+      ]
+    },
+    {
+      "topic": "rdw blood test",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "iron deficiency"
+      ]
+    },
+    {
+      "topic": "crohn's disease",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "iron deficiency"
+      ]
+    },
+    {
+      "topic": "mchc blood test low",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "iron deficiency"
+      ]
+    },
+    {
+      "topic": "magnesium glycinate",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements reviews"
+      ]
+    },
+    {
+      "topic": "viva naturals triple strength omega-3 fish oil",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "omega-3 fish oil benefits for male",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "how to make collagen chicken broth?",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "bk nutrition supplements",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "how to know if you have an iron deficiency",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "iron deficiency anemia is usually due to",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "best hair growth supplements for women",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "does iron deficiency make you cold",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "kaizen electrolytes",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "signs of iron deficiency in kids",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "omega-3 dosage for adults",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "standard process supplements",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "clean nutra creatine for women reviews",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "quia collagen mask",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "5 weird signs of iron deficiency",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "does iron deficiency cause bruising",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "heart and soil supplements",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "navaro deep collagen reviews",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "elemis pro collagen marine cream",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "omega-3 fish oil capsules benefits",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "liver support supplements",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "does creatine make you pee a lot",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "signs of iron deficiency in pregnancy",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "black forest supplements",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "sunna supplements reviews",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "healthy petz liquid collagen",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "healthy pets liquid collagen",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "k20 electrolytes",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "signs and symptoms of iron deficiency anemia",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "vitamin & supplements store near me",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "healthy petz collagen",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "navaro deep collagen",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "electrolytes drinks for adults",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "is gatorade a good source of electrolytes",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "what does electrolytes do for your body",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "now foods ultra omega-3",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "iron supplements that don't cause constipation",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "areds2 supplements",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "navarro collagen reviews",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "healthy petz premium liquid collagen reviews",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "healthy petz premium liquid collagen",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "navarro collagen",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "salt of the earth electrolytes",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "do creatine gummies work as well as powder",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "does creatine make you constipated",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "metaglow collagen",
+      "reason": "Weak radar score (41)"
+    }
+  ]
+}
