@@ -1,0 +1,952 @@
+{
+  "run_date": "2026-10-24",
+  "generated_at": "2026-10-24T16:36:16",
+  "topic": "habits-body",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "habits-body",
+    "cold plunge",
+    "red light therapy",
+    "step count",
+    "habits-body trends",
+    "habits-body products",
+    "habits-body news",
+    "habits-body for beginners",
+    "habits-body routine",
+    "habits-body benefits",
+    "habits-body ideas",
+    "habits-body reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 12,
+    "total_reviewed": 73,
+    "total_retained": 3,
+    "total_rejected": 70,
+    "breakouts": 1,
+    "emerging": 0,
+    "rising": 1,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "topic": "infini red light therapy",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 66,
+      "emergence_score": 82,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 100,
+      "slope": 0,
+      "acceleration": 2,
+      "seed_terms": [
+        "red light therapy"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        100,
+        71,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 2,
+      "topic": "cold plunge near me",
+      "trend_stage": "rising",
+      "urgency": "monitor",
+      "radar_score": 54,
+      "emergence_score": 36,
+      "velocity_score": 74,
+      "confidence_score": 60,
+      "saturation_score": 100,
+      "opportunity_score": 22,
+      "confidence": "medium",
+      "rising_label": "",
+      "latest_interest": 45,
+      "peak_interest": 64,
+      "slope": 45,
+      "acceleration": 1,
+      "seed_terms": [
+        "cold plunge"
+      ],
+      "discovery_sources": [
+        "top query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        64,
+        0,
+        0,
+        0,
+        0,
+        0,
+        42,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        38,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        63,
+        0,
+        0,
+        0,
+        54,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        54,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        45
+      ],
+      "tags": {},
+      "why_now": "interest moved from 0 to 45; found through top query",
+      "recommended_action": "Track as a developing query and compare against existing coverage."
+    },
+    {
+      "rank": 3,
+      "topic": "explain benefits, optimal wavelengths, and protocols for home red light therapy",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 52,
+      "emergence_score": 50,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 70,
+      "confidence": "high",
+      "rising_label": "+300%",
+      "latest_interest": 0,
+      "peak_interest": 71,
+      "slope": 0,
+      "acceleration": 1,
+      "seed_terms": [
+        "red light therapy"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        71,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +300%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "hyperbaric chamber",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "cold plunge"
+      ]
+    },
+    {
+      "topic": "fsa store",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "red light therapy"
+      ]
+    },
+    {
+      "topic": "sauna",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "cold plunge"
+      ]
+    },
+    {
+      "topic": "hot tub",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "cold plunge"
+      ]
+    },
+    {
+      "topic": "sauna near me",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "cold plunge"
+      ]
+    },
+    {
+      "topic": "sauna benefits",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "cold plunge"
+      ]
+    },
+    {
+      "topic": "ice bath",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "cold plunge"
+      ]
+    },
+    {
+      "topic": "red light mask",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "red light therapy"
+      ]
+    },
+    {
+      "topic": "red light face mask",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "red light therapy"
+      ]
+    },
+    {
+      "topic": "blue light therapy",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "red light therapy"
+      ]
+    },
+    {
+      "topic": "apple watch",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "step count"
+      ]
+    },
+    {
+      "topic": "word count",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "step count"
+      ]
+    },
+    {
+      "topic": "oura ring",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "step count"
+      ]
+    },
+    {
+      "topic": "pedometer",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "step count"
+      ]
+    },
+    {
+      "topic": "how many calories does a cold plunge burn",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "cold plunge guys",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "how to get step count on apple watch face",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "best cold plunge tubs",
+      "reason": "Weak radar score (49)"
+    },
+    {
+      "topic": "cold plunge vs ice bath",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "solawave 4-in-1 red light therapy wand & activating serum kit",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "red light therapy shower head",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "top rated red light therapy mask",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "how to see step count on apple watch",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "is red light therapy a hoax",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "sauna cold plunge",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "plunge cold tub",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "cold plunge and sauna",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "cold plunge benefits",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "how to cold plunge",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "best cold plunge",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "what is cold plunge",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "cold water plunge",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "benefits of cold plunge",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "cold plunge therapy",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "cold plunge chiller",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "what is a cold plunge",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "cold plunge spa",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "home cold plunge",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "hot and cold plunge",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "cold plunge temperature",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "how cold is a cold plunge",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "sauna cold plunge near me",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "how long to cold plunge",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "red light therapy mask",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "best red light therapy",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "red light therapy benefits",
+      "reason": "Weak radar score (39)"
+    },
+    {
+      "topic": "face red light therapy",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "what is red light therapy",
+      "reason": "Weak radar score (40)"
+    },
+    {
+      "topic": "does red light therapy work",
+      "reason": "Weak radar score (39)"
+    },
+    {
+      "topic": "hair red light therapy",
+      "reason": "Weak radar score (40)"
+    },
+    {
+      "topic": "what does red light therapy do",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "home red light therapy",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "red light therapy body",
+      "reason": "Weak radar score (38)"
+    },
+    {
+      "topic": "led red light therapy",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "red light therapy reviews",
+      "reason": "Weak radar score (38)"
+    },
+    {
+      "topic": "red light therapy for face",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "best red light therapy mask",
+      "reason": "Weak radar score (45)"
+    },
+    {
+      "topic": "red light therapy sauna",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "red light therapy for hair",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "infrared red light therapy",
+      "reason": "Weak radar score (45)"
+    },
+    {
+      "topic": "benefits of red light therapy",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "red light therapy face mask",
+      "reason": "Weak radar score (46)"
+    },
+    {
+      "topic": "red light therapy near me",
+      "reason": "Weak radar score (39)"
+    },
+    {
+      "topic": "red light therapy at home",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "red light therapy device",
+      "reason": "Weak radar score (45)"
+    },
+    {
+      "topic": "step count watch",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "step count on apple watch",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "step count on iphone",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "step counter",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "average step count per day",
+      "reason": "Weak radar score (37)"
+    }
+  ]
+}
