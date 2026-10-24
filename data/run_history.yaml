@@ -3,6 +3,37 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-10-24'
+  niche: health and wellness
+  signals_reviewed: 151
+  topics_retained: 3
+  topics_rejected: 17
+  p1_count: 1
+  p2_count: 1
+  p3_count: 1
+  p4_count: 0
+  p5_count: 0
+  integrity_flags: 3
+  top_topic: NIH precision T-cell therapy stalls treatment-resistant cancers in clinical trial
+  key_themes:
+  - NIH precision T-cell therapy stalls treatment-resistant cancers in clinical trial
+  - HHS executive order creates new NIH Division for Women's Health Research
+  - Mayo Clinic investigational vaccine generates immune response to KRAS mutations in pancreatic cancer
+  tools_used:
+  - web_search
+  - google_news
+  - google_trends
+  - serpapi
+  tools_unavailable: []
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-10-24.html
+  estimated_cost_usd: 0.7359
+  notes: Google News Radar accounted for in full. Several editorially attractive stories (PTSD remission
+    trial, ADHD/self-harm study, Mayo pancreatic vaccine just under threshold at 51, WHO Ebola trial at
+    49) failed the trend_strength ≥50 floor due to single-source evidence and flat/absent Google Trends
+    corroboration — routed to Monitor rather than forced through. The NBC lung-cancer immunotherapy story
+    is driving the live 'cancer' Trending Now spike but could not be scored without a traceable primary
+    source (journal/trial ID). Recommend manual follow-up to locate the underlying study before next run.
+    site_url not configured — competitor-list used for SERP-gap context only.
 - run_date: '2026-10-23'
   niche: Health & Wellness
   signals_reviewed: 144
