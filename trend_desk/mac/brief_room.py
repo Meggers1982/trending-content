@@ -282,8 +282,10 @@ def build(idea: dict) -> dict:
     run_termscope(keyword, work, use_ahrefs)
     kw_text = (json.dumps(pick, indent=1) if pick else
                f"\"{keyword}\" (the trend's seed phrase). Ahrefs is off, so search volume is unknown. "
-               "Choose the final focus keyword from the TermScope report's keyword universe and People Also Ask, "
-               "say why, and mark volume as unknown.")
+               "Choose the final focus keyword from the evidence: TermScope's Google Trends related queries, "
+               "People Also Ask, forums and the live SERP, plus the site's audience (a local site can take a "
+               "place modifier the evidence supports). TermScope's keyword universe is often template filler, "
+               "so it is a source, not a rule. Say why, and mark volume as unknown.")
     view = {k: idea.get(k) for k in ("title", "angle", "why_now", "is_it_real", "evidence", "speed")}
     ctx = {"site": json.dumps(profile, indent=1), "idea": json.dumps(view, indent=1, ensure_ascii=False),
            "keyword": kw_text, "rules": (c.DESK / "rules.md").read_text(), "copy_rules": COPY_RULES,
