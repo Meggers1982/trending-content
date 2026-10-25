@@ -61,7 +61,9 @@ def effective_route(idea: dict) -> tuple[str, str, str]:
 def safe_name(title: str, n: int = 90) -> str:
     s = re.sub(r'[\\/:*?"<>|]+', " ", title)
     s = re.sub(r"\s+", " ", s).strip()
-    return s[:n].rstrip(" .")
+    if len(s) > n:  # cut at a word boundary, never mid-word
+        s = s[:n].rsplit(" ", 1)[0]
+    return s.rstrip(" .?!,")
 
 
 # ---------- pitch ----------
