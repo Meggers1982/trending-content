@@ -85,6 +85,35 @@ def feedback_summary() -> dict:
         return {}
 
 
+def apply_decisions(data: dict) -> int:
+    """Her texted decisions (feedback/decisions.json, written by the Mac bot) update idea status in
+    the ledger, so the Judge's recent-ideas list and feedback reflect them."""
+    path = DESK / "feedback" / "decisions.json"
+    try:
+        decisions = json.loads(path.read_text()) if path.exists() else []
+    except json.JSONDecodeError:
+        return 0
+    seen = set(data.setdefault("applied_decisions", []))
+    n = 0
+    for d in decisions:
+        sig = f"{d.get('date')}|{d.get('idea_id')}|{d.get('action')}|{d.get('to_route', '')}"
+        idea = data["ideas"].get(d.get("idea_id", ""))
+        if sig in seen or not idea:
+            continue
+        action = d.get("action")
+        if action == "skip":
+            idea["status"] = "skipped"
+        elif action == "reroute" and d.get("to_route") in judge.ROUTES:
+            idea["route"], idea["status"] = d["to_route"], "routed"
+            if d.get("to_site"):
+                idea["site"] = d["to_site"]
+        ledger.log_event(idea, d.get("date", ""), f"meagan:{action}", d.get("reason", ""))
+        data["applied_decisions"].append(sig)
+        n += 1
+    data["applied_decisions"] = data["applied_decisions"][-1000:]
+    return n
+
+
 def apply_verdicts(data: dict, result: dict, due: dict, today: date) -> list[dict]:
     t = today.isoformat()
     paused = judge.holds()
@@ -168,18 +197,25 @@ def main() -> int:
         return 0
 
     data = ledger.load()
+    applied = apply_decisions(data)
+    if applied:
+        print(f"Trend Desk: applied {applied} of Meagan's decisions.")
     got = collect.collect_all(data, today, backfill=args.backfill)
     due = pick_due(data, today)
     print(f"Trend Desk: collected {got['counts']} since {got['since']}; {len(due)} terms due for judging.")
 
     run = {"date": today.isoformat(), "collected": got["counts"], "due": len(due), "model": judge.MODEL}
+    if not due and args.dry_run:
+        print("Dry run: nothing due, nothing written.")
+        return 0
     if not due:
         run.update(ideas=0, dropped=0, cost_usd=0)
         data["runs"].append(run)
         ledger.save(data)
         write_roundup_feed(data, today)
-        HANDOFF_DIR.mkdir(parents=True, exist_ok=True)
-        handoff.write_text(json.dumps({"date": today.isoformat(), "ideas": [], "notes": "No new terms."}, indent=1) + "\n")
+        if not handoff.exists():
+            HANDOFF_DIR.mkdir(parents=True, exist_ok=True)
+            handoff.write_text(json.dumps({"date": today.isoformat(), "ideas": [], "notes": "No new terms."}, indent=1) + "\n")
         return 0
 
     system = judge.system_prompt()
@@ -216,6 +252,9 @@ def main() -> int:
     ledger.save(data)
     write_roundup_feed(data, today)
     HANDOFF_DIR.mkdir(parents=True, exist_ok=True)
+    if handoff.exists():  # a forced rerun adds to the day's ideas; it never drops earlier ones
+        earlier = json.loads(handoff.read_text()).get("ideas", [])
+        created = [i for i in earlier if i["id"] not in {c["id"] for c in created}] + created
     handoff.write_text(json.dumps({"date": today.isoformat(), "ideas": created, "dropped": dropped,
                                    "watching": run["watching"], "notes": result.get("notes", ""),
                                    "cost_usd": usd}, indent=1, ensure_ascii=False) + "\n")
