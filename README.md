@@ -146,3 +146,10 @@ outputs/daily_newsroom_dashboard/
 The production button triggers GitHub Actions, which runs the Python pipeline and commits generated artifacts back to the repository.
 
 See `VERCEL_DEPLOY.md` for deployment notes.
+
+## Trend Desk
+
+The radars and the daily pipeline feed **Trend Desk** (`trend_desk/`), which decides what is worth
+work and builds it: freelance pitch handoffs, Female Model outlines, Friday roundup items and SEO
+briefs, approved by Meagan over Telegram. See `trend_desk/README.md`.
+

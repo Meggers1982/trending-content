@@ -1427,6 +1427,19 @@ unrelated to this).
 
 `data/tracked_topics.json` itself was deleted — nothing reads or writes it anymore, on either side.
 
+### Trend Desk: the agent loop on top of all of this (added 2026-10-25)
+
+Meagan never read the dashboard, so its decisions never got made. `trend_desk/` makes them: a daily
+GitHub Action (`run-trend-desk.yml`, triggered when the pipeline completes) folds every radar scan,
+the pipeline's retained candidates, the rising queries and a new all-category Trending Now scan into
+`data/trend_ledger.json`, computes each term's speed in code (exploding / emerging / new / steady),
+and makes one `claude-opus-5-5` call that clusters terms into ideas and routes each to one home:
+freelance pitch, Female Model "is it real?" post, Friday roundup, or an SEO brief for one of her
+sites. A Mac job (`trend_desk/mac/`, launchd `com.meagan.trend-desk`) builds the work and talks to her
+through its own Telegram bot. The dashboard stays up as the evidence log. Full detail:
+`trend_desk/README.md`. **The repo is public:** her texts, edits and pitch outcomes stay on the Mac;
+only settings, short decision records and aggregate counts are committed.
+
 ---
 
 ## Success Criteria
