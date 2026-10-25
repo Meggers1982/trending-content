@@ -68,7 +68,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/trend_ledger.json trend_desk/handoff trend_desk/feeds trend_desk/outbox outputs/trend_desk
+          for p in data/trend_ledger.json trend_desk/handoff trend_desk/feeds trend_desk/outbox outputs/trend_desk; do
+            [ -e "$p" ] && git add "$p"
+          done
           if git diff --cached --quiet; then
             echo "Nothing changed."
             exit 0
