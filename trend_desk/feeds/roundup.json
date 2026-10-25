@@ -1,0 +1,74 @@
+{
+ "updated": "2026-10-25",
+ "items": [
+  {
+   "id": "2026-10-25-4-3-million-tubes-of-toothpaste-recalled-including",
+   "title": "4.3 million tubes of toothpaste recalled, including kids' Brush Buddies: check your bathroom",
+   "created": "2026-10-25",
+   "angle": "Quick useful item: which products are affected, what to do if you have one, and a one-line take on the defect once FDA confirms it.",
+   "why_now": "Recall broke across 7+ outlets Oct 21-23, and 'toothpaste recall' is breaking out in search.",
+   "is_it_real": "Widely reported recall. The defect or contamination reason is not fully specified in secondary sources, so pull the FDA.gov notice before writing.",
+   "evidence": [],
+   "terms": [
+    "Brush Buddies EVO toothpaste recall (4.3M+ tubes)",
+    "toothpaste recall"
+   ],
+   "status": "routed"
+  },
+  {
+   "id": "2026-10-25-food-recall-week-ready-to-eat-meat-and-hot-dogs-pl",
+   "title": "Food recall week: ready-to-eat meat and hot dogs, plus Family Farmstead cheese",
+   "created": "2026-10-25",
+   "angle": "A short 'check your fridge' item rounding up the week's USDA meat and hot dog recall and the cheese recall, with the reason and what to do.",
+   "why_now": "All three broke out on the food-safety radar Oct 20.",
+   "is_it_real": "Search signals only, with no notice links in the input. Brands, lots and recall reasons must be confirmed on FSIS and FDA before inclusion. The meat and hot dog terms may be the same recall.",
+   "evidence": [],
+   "terms": [
+    "usda ready to eat meat recall",
+    "hot dog recall",
+    "family farmstead dairy cheese recall"
+   ],
+   "status": "routed"
+  },
+  {
+   "id": "2026-10-25-clocks-fall-back-nov-1-what-the-extra-hour-actuall",
+   "title": "Clocks fall back Nov 1: what the extra hour actually does to your sleep",
+   "created": "2026-10-25",
+   "angle": "Sharp, useful item on the fall-back shift: why the 'extra hour' still knocks people off for days, plus a quick take on the perennial fight over ending clock changes.",
+   "why_now": "DST ends Sunday Nov 1, and searches are exploding a week ahead.",
+   "is_it_real": "The date is a calendar fact. Any health claims should cite sleep research, and the current status of federal permanent-DST legislation must be checked, not assumed.",
+   "evidence": [],
+   "terms": [
+    "daylight saving time"
+   ],
+   "status": "routed"
+  },
+  {
+   "id": "2026-10-25-marshall-faulk-s-parkinson-s-disclosure-and-what-p",
+   "title": "Marshall Faulk's Parkinson's disclosure, and what Parkinson's before 60 looks like",
+   "created": "2026-10-25",
+   "angle": "Short item using Faulk's disclosure to flag early-onset Parkinson's signs people miss, with a pointer to evidence on risk factors.",
+   "why_now": "Real-time Google Trends breakout tied to an ESPN disclosure on Oct 23.",
+   "is_it_real": "The disclosure is reported by ESPN per the newsroom, which flags minor fact-check issues. Confirm his age and the exact wording of the diagnosis before calling it early-onset.",
+   "evidence": [],
+   "terms": [
+    "Marshall Faulk reveals Parkinson's diagnosis"
+   ],
+   "status": "routed"
+  },
+  {
+   "id": "2026-10-25-new-study-says-daily-tea-is-good-for-your-heart-wh",
+   "title": "New study says daily tea is good for your heart: what it actually found",
+   "created": "2026-10-25",
+   "angle": "Quick 'weird stat' item: what the tea study measured, how big the effect is, and whether it is association or causation.",
+   "why_now": "Both terms have risen three days running (Oct 23-25), so people are searching for the study itself.",
+   "is_it_real": "The study is not identified in the input. Find the paper before writing; if it is a press-release-driven observational study, the take is the caveat.",
+   "evidence": [],
+   "terms": [
+    "what did the new study find about daily tea drinking and heart health",
+    "tea heart health"
+   ],
+   "status": "routed"
+  }
+ ]
+}

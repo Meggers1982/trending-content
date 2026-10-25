@@ -1,0 +1,634 @@
+{
+ "run_date": "2026-10-25",
+ "geo": "US",
+ "items": [
+  {
+   "query": "49ers vs falcons",
+   "search_volume": 1000000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Kendal Daniels seals Falcons' win with INT one week after trip to hospital",
+     "link": "https://www.espn.com/nfl/story/_/id/50280836/kendal-daniels-seals-falcons-win-fourth-quarter-int",
+     "source": "ESPN"
+    },
+    {
+     "title": "NFL roundup: Falcons spoil Niners’ undefeated start; Steelers win in Paris",
+     "link": "https://www.theguardian.com/sport/2026/oct/25/nfl-roundup-sunday-football-scores",
+     "source": "The Guardian"
+    }
+   ]
+  },
+  {
+   "query": "barcelona - real madrid",
+   "search_volume": 500000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Barcelona - Real Madrid hoy en directo | ¡Gol de Raphinha! | El Clásico de LaLiga EA Sports en vivo",
+     "link": "https://www.marca.com/futbol/laliga-ea-sports/barcelona-r-madrid/2026/10/25/01_0101_20261025_178_186-directo.html",
+     "source": "MARCA"
+    },
+    {
+     "title": "VIDEO: resumen de Barcelona vs. Real Madrid por LaLiga",
+     "link": "https://espndeportes.espn.com/futbol/espana/nota/_/id/17430743/video-resumen-barcelona-vs-real-madrid-clasico-laliga",
+     "source": "ESPN Deportes"
+    }
+   ]
+  },
+  {
+   "query": "packers vs lions",
+   "search_volume": 500000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Packers vs. Lions | How to watch, stream & listen | Week 7",
+     "link": "https://www.packers.com/news/packers-vs-lions-how-to-watch-stream-listen-week-7-2026",
+     "source": "Green Bay Packers – packers.com"
+    },
+    {
+     "title": "Lions vs. Packers: How to watch, listen and follow",
+     "link": "https://www.detroitlions.com/news/lions-vs-packers-how-to-watch-listen-and-follow",
+     "source": "Detroit Lions"
+    }
+   ]
+  },
+  {
+   "query": "colts vs vikings",
+   "search_volume": 500000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Indianapolis Colts vs. Minnesota Vikings Live Score and Stats - October 25, 2026 Gametracker",
+     "link": "https://www.cbssports.com/nfl/gametracker/recap/NFL_20261025_IND@MIN/",
+     "source": "CBS Sports"
+    },
+    {
+     "title": "Insiders: Colts drop third game in a row, Shrader misses 2 field goals",
+     "link": "https://www.indystar.com/videos/sports/nfl/colts/2026/10/25/insiders-colts-drop-third-game-in-a-row-shrader-misses-2-field-goals/92435276007/",
+     "source": "IndyStar"
+    }
+   ]
+  },
+  {
+   "query": "saints vs steelers",
+   "search_volume": 500000,
+   "increase_percentage": 900,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Pittsburgh Steelers vs. New Orleans Saints Live Score and Stats - October 25, 2026 Gametracker",
+     "link": "https://www.cbssports.com/nfl/gametracker/recap/NFL_20261025_PIT@NO/",
+     "source": "CBS Sports"
+    },
+    {
+     "title": "Where Steelers Stand in AFC North After Saints Win",
+     "link": "https://www.si.com/nfl/steelers/onsi/where-pittsburgh-steelers-stand-afc-north-saints-game",
+     "source": "Sports Illustrated"
+    }
+   ]
+  },
+  {
+   "query": "rams vs raiders",
+   "search_volume": 200000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "How to watch, listen to and livestream Raiders vs. Rams",
+     "link": "https://www.raiders.com/news/how-to-watch-listen-to-livestream-las-vegas-raiders-vs-los-angeles-rams-102526",
+     "source": "Raiders.com"
+    },
+    {
+     "title": "Rams-Raiders: Game chat for Week 7",
+     "link": "https://www.turfshowtimes.com/los-angeles-rams-discussion/153039/rams-raiders-game-thread-for-week-7",
+     "source": "Turf Show Times"
+    }
+   ]
+  },
+  {
+   "query": "broncos vs cardinals",
+   "search_volume": 200000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Denver Broncos at Arizona Cardinals: How to watch, listen and live stream the Broncos' Week 7 game",
+     "link": "https://www.denverbroncos.com/news/denver-broncos-at-arizona-cardinals-how-to-watch-listen-and-live-stream-the-broncos-week-7-game",
+     "source": "Denver Broncos"
+    },
+    {
+     "title": "Cardinals vs. Broncos: Week 7 keys to victory",
+     "link": "https://sports.yahoo.com/articles/cardinals-vs-broncos-week-7-193837141.html",
+     "source": "Yahoo Sports"
+    }
+   ]
+  },
+  {
+   "query": "giants vs texans",
+   "search_volume": 200000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "NFL Week 7 bold predictions: Giants' J.J. McCarthy shreds Texans; Kenneth Walker III revenge game?",
+     "link": "https://www.nfl.com/news/nfl-week-7-bold-predictions-giants-j-j-mccarthy-shreds-texans-kenneth-walker-iii-revenge-game",
+     "source": "NFL.com"
+    },
+    {
+     "title": "Jameis Winston up the middle for one-yard TD, extending Giants' lead over Texans | NFL Highlights",
+     "link": "https://www.foxsports.com/watch-vertical/fmc-l87xy0b2zy2soeks",
+     "source": "FOX Sports"
+    }
+   ]
+  },
+  {
+   "query": "bengals vs ravens",
+   "search_volume": 200000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Bengals Defeat Ravens 35-13 | POSTGAME RECAP, NOTES & QUOTES",
+     "link": "https://www.bengals.com/news/bengals-ravens-recap-postgame-notes-quotes-stats-week-7-2026",
+     "source": "Cincinnati Bengals"
+    },
+    {
+     "title": "Joe Burrow throws 4 TDs as Bengals storm back to rout Ravens",
+     "link": "https://www.cbssports.com/nfl/news/joe-burrow-throws-4-tds-as-bengals-storm-back-to-rout-ravens/",
+     "source": "CBS Sports"
+    }
+   ]
+  },
+  {
+   "query": "browns vs titans",
+   "search_volume": 200000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Browns 27-24 Titans (Oct 25, 2026) Game Recap",
+     "link": "https://www.espn.com/nfl/recap/_/gameId/401873013",
+     "source": "ESPN"
+    },
+    {
+     "title": "Cleveland’s long late gain by Harold Fannin Jr. should have been nullified by a false start",
+     "link": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/clevelands-long-late-gain-by-harold-fannin-jr-should-have-been-nullified-by-a-false-start",
+     "source": "NBC Sports"
+    }
+   ]
+  },
+  {
+   "query": "lakers vs jazz",
+   "search_volume": 200000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Los Angeles Lakers vs Utah Jazz Oct 25, 2026 Box Scores",
+     "link": "https://www.nba.com/game/lal-vs-uta-0022600112/box-score",
+     "source": "NBA.com"
+    },
+    {
+     "title": "Houston Rockets vs San Antonio Spurs Oct 23, 2026 Game Summary",
+     "link": "https://www.nba.com/game/0022600009?watchFullGame",
+     "source": "NBA.com"
+    }
+   ]
+  },
+  {
+   "query": "buccaneers vs panthers",
+   "search_volume": 200000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Buccaneers collect two freakish first-half scores to dominate Panthers – and, oh, Baker Mayfield is back",
+     "link": "https://www.foxnews.com/outkick-sports/buccaneers-collect-two-freakish-first-half-scores-dominate-panthers-baker-mayfield-back",
+     "source": "Fox News"
+    },
+    {
+     "title": "\"We got to stop the bleeding\": Panthers defense wants to quickly evaluate run defense breakdowns",
+     "link": "https://www.panthers.com/news/we-got-to-stop-the-bleeding-panthers-defense-wants-to-quickly-evaluate-run-defense-breakdowns",
+     "source": "Carolina Panthers"
+    }
+   ]
+  },
+  {
+   "query": "dolphins vs jets",
+   "search_volume": 200000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "la liga",
+   "search_volume": 200000,
+   "increase_percentage": 700,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "daylight saving time",
+   "search_volume": 200000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Other"
+   ]
+  },
+  {
+   "query": "jj mccarthy",
+   "search_volume": 200000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "liverpool vs brighton",
+   "search_volume": 200000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "world series game 3",
+   "search_volume": 200000,
+   "increase_percentage": 100,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "lula",
+   "search_volume": 100000,
+   "increase_percentage": 800,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "mcrib",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Food and Drink"
+   ]
+  },
+  {
+   "query": "candice swanepoel",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "f1",
+   "search_volume": 100000,
+   "increase_percentage": 400,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "powerball ohio winners october 24 2026",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Games"
+   ]
+  },
+  {
+   "query": "cfb coaches poll after week 8",
+   "search_volume": 100000,
+   "increase_percentage": 400,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "dabo swinney",
+   "search_volume": 100000,
+   "increase_percentage": 100,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "derek hough pet passes away",
+   "search_volume": 50000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "emily osment",
+   "search_volume": 50000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "florida a&m university",
+   "search_volume": 50000,
+   "increase_percentage": 500,
+   "categories": [
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "fc barcelona vs real madrid lineups",
+   "search_volume": 20000,
+   "increase_percentage": 900,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "supplemental security income november payout",
+   "search_volume": 20000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Business and Finance",
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "winter storm",
+   "search_volume": 20000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Climate"
+   ]
+  },
+  {
+   "query": "panthers vs blackhawks",
+   "search_volume": 20000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "lawrence mccutcheon",
+   "search_volume": 20000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "chiefs vs seahawks",
+   "search_volume": 20000,
+   "increase_percentage": 300,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "eleicoes brasil",
+   "search_volume": 20000,
+   "increase_percentage": 200,
+   "categories": [
+    "Politics",
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "early november mountain snow risk",
+   "search_volume": 20000,
+   "increase_percentage": 700,
+   "categories": [
+    "Climate"
+   ]
+  },
+  {
+   "query": "talladega race today",
+   "search_volume": 20000,
+   "increase_percentage": 100,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "andy reid patrick mahomes josh simmons",
+   "search_volume": 20000,
+   "increase_percentage": 700,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "tank dell",
+   "search_volume": 20000,
+   "increase_percentage": 800,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "deion sanders colorado football loss",
+   "search_volume": 20000,
+   "increase_percentage": 400,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "dave aranda",
+   "search_volume": 20000,
+   "increase_percentage": 600,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "duke vs kansas",
+   "search_volume": 20000,
+   "increase_percentage": 300,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "amon ra st brown",
+   "search_volume": 20000,
+   "increase_percentage": 300,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "national tight end day",
+   "search_volume": 20000,
+   "increase_percentage": 200,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "mosquito bowl",
+   "search_volume": 20000,
+   "increase_percentage": 300,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "josh jacobs suspension",
+   "search_volume": 20000,
+   "increase_percentage": 300,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "davis allen",
+   "search_volume": 10000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "hope florida",
+   "search_volume": 10000,
+   "increase_percentage": 700,
+   "categories": [
+    "Law and Government",
+    "Politics"
+   ]
+  },
+  {
+   "query": "pacers vs nets",
+   "search_volume": 10000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "udinese vs milan",
+   "search_volume": 10000,
+   "increase_percentage": 800,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "deportation",
+   "search_volume": 10000,
+   "increase_percentage": 600,
+   "categories": [
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "nicki minaj",
+   "search_volume": 10000,
+   "increase_percentage": 600,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "talladega race",
+   "search_volume": 10000,
+   "increase_percentage": 100,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "lamine yamal",
+   "search_volume": 10000,
+   "increase_percentage": 600,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "apuração eleições 2026",
+   "search_volume": 10000,
+   "increase_percentage": 300,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "world series game 2 check swing",
+   "search_volume": 10000,
+   "increase_percentage": 400,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "heidi klum",
+   "search_volume": 10000,
+   "increase_percentage": 100,
+   "categories": [
+    "Entertainment",
+    "Hobbies and Leisure"
+   ]
+  },
+  {
+   "query": "kate middleton three peaks challenge picture",
+   "search_volume": 10000,
+   "increase_percentage": 200,
+   "categories": [
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "jojo siwa",
+   "search_volume": 10000,
+   "increase_percentage": 200,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "astrology full moon",
+   "search_volume": 10000,
+   "increase_percentage": 100,
+   "categories": [
+    "Other"
+   ]
+  }
+ ]
+}

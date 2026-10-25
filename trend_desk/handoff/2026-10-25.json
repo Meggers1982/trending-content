@@ -1,0 +1,1038 @@
+{
+ "date": "2026-10-25",
+ "ideas": [
+  {
+   "id": "2026-10-25-compounded-tirzepatide-recalled-over-sterility-con",
+   "title": "Compounded tirzepatide recalled over sterility concerns: what the compounded GLP-1 market still isn't telling patients",
+   "created": "2026-10-25",
+   "route": "pitch",
+   "speed": "exploding",
+   "beat": "aging, body and metabolism (GLP-1s, FDA)",
+   "angle": "Use the nationwide sterility recall as the peg for a reported piece on who still makes and buys compounded GLP-1s, how patients would even know their vial is affected, and what oversight gaps the recall exposes.",
+   "why_now": "Recall broke Oct 20-21 and is exploding across food-safety and weight-loss radars; GLP-1s are among the highest-interest drug categories.",
+   "is_it_real": "Recall reported by multiple outlets, but the input only gives outlet homepages, not the notice itself. The newsroom flags that it is unconfirmed whether this is one manufacturer or class-wide. Verify the FDA notice, the compounder's name and the lot scope before pitching.",
+   "confidence": "medium",
+   "evidence": [],
+   "terms": [
+    "compounded glp 1 nationwide recall",
+    "glp 1 tirzepatide injection recall sterility concerns"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-10-25",
+     "event": "routed",
+     "detail": "pitch"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "compounded glp-1 nationwide recall",
+     "speed": "exploding",
+     "first_seen": "2026-10-20",
+     "weeks_seen": 1,
+     "sources": [
+      "radar"
+     ],
+     "profiles": [
+      "food-safety",
+      "weight-loss"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-20",
+       "source": "radar",
+       "profile": "food-safety",
+       "stage": "breakout",
+       "score": 67,
+       "opportunity": 89
+      },
+      {
+       "date": "2026-10-20",
+       "source": "radar",
+       "profile": "weight-loss",
+       "stage": "breakout",
+       "score": 67,
+       "opportunity": 89
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    },
+    {
+     "term": "GLP-1 (tirzepatide) injection recall — sterility concerns",
+     "speed": "new",
+     "first_seen": "2026-10-23",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-23",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 69,
+       "opportunity": 80
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-10-25-the-new-nih-women-s-health-research-division-what",
+   "title": "The new NIH women's health research division: what it actually funds, and what changes for menopause and reproductive research",
+   "created": "2026-10-25",
+   "route": "pitch",
+   "speed": "new",
+   "beat": "women's health / public health policy",
+   "angle": "Strip out the politics and follow the money: what the division is mandated to do, whether it comes with new funding or reshuffles existing offices, and whether it touches long-neglected areas like menopause and endometriosis. Get researchers on the record.",
+   "why_now": "Executive order signed about five days ago; five separate search variants are rising at once, and there is clear demand for a plain explanation.",
+   "is_it_real": "Solid peg, backed by an HHS press release. The open question is substance versus announcement: budget, staffing and timeline are not in the input and must be reported, not assumed. Keep the framing nonpartisan.",
+   "confidence": "high",
+   "evidence": [
+    "https://www.hhs.gov/press-room/trump-flotus-womens-health-executive-order-new-nih-division.html"
+   ],
+   "terms": [
+    "hhs executive order creates new nih division for women s health research",
+    "womens health task force",
+    "women s health executive order",
+    "trump women s health executive order",
+    "womens health executive order"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-10-25",
+     "event": "routed",
+     "detail": "pitch"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "HHS executive order creates new NIH Division for Women's Health Research",
+     "speed": "new",
+     "first_seen": "2026-10-24",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-24",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 77,
+       "opportunity": 76
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    },
+    {
+     "term": "womens health task force",
+     "speed": "new",
+     "first_seen": "2026-10-23",
+     "weeks_seen": 1,
+     "sources": [
+      "rising"
+     ],
+     "profiles": [
+      "daily-signals"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-23",
+       "source": "rising",
+       "profile": "daily-signals",
+       "stage": "rising"
+      },
+      {
+       "date": "2026-10-24",
+       "source": "rising",
+       "profile": "daily-signals",
+       "stage": "rising"
+      },
+      {
+       "date": "2026-10-25",
+       "source": "rising",
+       "profile": "daily-signals",
+       "stage": "rising"
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    },
+    {
+     "term": "women's health executive order",
+     "speed": "new",
+     "first_seen": "2026-10-24",
+     "weeks_seen": 1,
+     "sources": [
+      "rising"
+     ],
+     "profiles": [
+      "daily-signals"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-24",
+       "source": "rising",
+       "profile": "daily-signals",
+       "stage": "rising"
+      },
+      {
+       "date": "2026-10-25",
+       "source": "rising",
+       "profile": "daily-signals",
+       "stage": "rising"
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    },
+    {
+     "term": "trump women's health executive order",
+     "speed": "new",
+     "first_seen": "2026-10-24",
+     "weeks_seen": 1,
+     "sources": [
+      "rising"
+     ],
+     "profiles": [
+      "daily-signals"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-24",
+       "source": "rising",
+       "profile": "daily-signals",
+       "stage": "rising"
+      },
+      {
+       "date": "2026-10-25",
+       "source": "rising",
+       "profile": "daily-signals",
+       "stage": "rising"
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    },
+    {
+     "term": "womens health executive order",
+     "speed": "new",
+     "first_seen": "2026-10-24",
+     "weeks_seen": 1,
+     "sources": [
+      "rising"
+     ],
+     "profiles": [
+      "daily-signals"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-24",
+       "source": "rising",
+       "profile": "daily-signals",
+       "stage": "rising"
+      },
+      {
+       "date": "2026-10-25",
+       "source": "rising",
+       "profile": "daily-signals",
+       "stage": "rising"
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-10-25-sspe-the-measles-complication-that-can-surface-yea",
+   "title": "SSPE: the measles complication that can surface years later, and why outbreaks in Amish communities are bringing it back into searches",
+   "created": "2026-10-25",
+   "route": "pitch",
+   "speed": "exploding",
+   "beat": "public health",
+   "angle": "Go past case counts to the long tail. SSPE is a rare, fatal brain disease that can appear years after a measles infection, so today's outbreaks carry a delayed cost few parents know about. Tie it to the Pennsylvania and New York outbreaks now in searches.",
+   "why_now": "Four measles terms broke out together on Oct 24, including people searching SSPE by name, which suggests a death or complication is in the news.",
+   "is_it_real": "Search signal is strong and clustered, but there are no news links in the input. The 'deadly' framing and any SSPE case connection are unverified. Confirm with state health departments and CDC before pitching.",
+   "confidence": "medium",
+   "evidence": [],
+   "terms": [
+    "deadly measles outbreak pennsylvania community",
+    "ssp measles",
+    "explain how sspe develops from measles and its long term neurological effects",
+    "new york amish measles outbreak"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-10-25",
+     "event": "routed",
+     "detail": "pitch"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "deadly measles outbreak pennsylvania community",
+     "speed": "exploding",
+     "first_seen": "2026-10-24",
+     "weeks_seen": 1,
+     "sources": [
+      "radar"
+     ],
+     "profiles": [
+      "public-health"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-24",
+       "source": "radar",
+       "profile": "public-health",
+       "stage": "breakout",
+       "score": 66,
+       "opportunity": 89
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    },
+    {
+     "term": "ssp measles",
+     "speed": "exploding",
+     "first_seen": "2026-10-24",
+     "weeks_seen": 1,
+     "sources": [
+      "radar"
+     ],
+     "profiles": [
+      "public-health"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-24",
+       "source": "radar",
+       "profile": "public-health",
+       "stage": "breakout",
+       "score": 66,
+       "opportunity": 89
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    },
+    {
+     "term": "explain how sspe develops from measles and its long-term neurological effects",
+     "speed": "exploding",
+     "first_seen": "2026-10-24",
+     "weeks_seen": 1,
+     "sources": [
+      "radar"
+     ],
+     "profiles": [
+      "public-health"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-24",
+       "source": "radar",
+       "profile": "public-health",
+       "stage": "breakout",
+       "score": 66,
+       "opportunity": 89
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    },
+    {
+     "term": "new york amish measles outbreak",
+     "speed": "exploding",
+     "first_seen": "2026-10-24",
+     "weeks_seen": 1,
+     "sources": [
+      "radar"
+     ],
+     "profiles": [
+      "public-health"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-24",
+       "source": "radar",
+       "profile": "public-health",
+       "stage": "breakout",
+       "score": 66,
+       "opportunity": 89
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-10-25-is-it-real-ai-beats-doctors-at-diagnosis",
+   "title": "Is it real? 'AI beats doctors at diagnosis'",
+   "created": "2026-10-25",
+   "route": "tfm",
+   "speed": "new",
+   "beat": "AI and authenticity / health AI",
+   "angle": "Take the Microsoft 'AI outperforms physicians' headline and test it: what the benchmark measured, how it differs from real clinical work, and what Stanford HAI's measurement critique says. Verdict with receipts.",
+   "why_now": "Microsoft study plus converging Stanford HAI and Nature coverage this week; the headline is the kind that spreads uncritically.",
+   "is_it_real": "The study exists per the newsroom; the 'beats doctors' framing is what needs checking. The input flags benchmark accuracy versus real-world performance, which is exactly the TFM test. The input only has outlet homepages, so primary sources must be pulled.",
+   "confidence": "medium",
+   "evidence": [],
+   "terms": [
+    "ai outperforms physicians on diagnostic accuracy microsoft study"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-10-25",
+     "event": "routed",
+     "detail": "tfm"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "AI outperforms physicians on diagnostic accuracy (Microsoft study)",
+     "speed": "new",
+     "first_seen": "2026-10-23",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-23",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 63,
+       "opportunity": 67
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-10-25-is-it-real-supplement-strips-are-replacing-gummies",
+   "title": "Is it real? Supplement strips are replacing gummies. Do they absorb better or just look better?",
+   "created": "2026-10-25",
+   "route": "tfm",
+   "speed": "new",
+   "beat": "viral health and wellness claims",
+   "angle": "Check the absorption and efficacy claims behind dissolvable supplement strips against what evidence exists for strips, gummies and capsules. Name the gap between marketing and data.",
+   "why_now": "WSJ just identified strips as an emerging consumer trend, and no evidence-based consumer explainer exists yet.",
+   "is_it_real": "The trend is reported by WSJ. The efficacy claims appear unsupported: the newsroom notes no peer-reviewed absorption data cited, which makes this a strong 'is it real?' with a likely 'not proven' verdict.",
+   "confidence": "medium",
+   "evidence": [
+    "https://www.wsj.com/health/wellness/supplement-strips-stripit-sleep-or-die-0f69c8d7"
+   ],
+   "terms": [
+    "supplement strips are replacing gummies do they actually work"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-10-25",
+     "event": "routed",
+     "detail": "tfm"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "Supplement strips are replacing gummies — do they actually work?",
+     "speed": "new",
+     "first_seen": "2026-10-25",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-25",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 52,
+       "opportunity": 64
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-10-25-4-3-million-tubes-of-toothpaste-recalled-including",
+   "title": "4.3 million tubes of toothpaste recalled, including kids' Brush Buddies: check your bathroom",
+   "created": "2026-10-25",
+   "route": "roundup",
+   "speed": "exploding",
+   "beat": "public health / recalls",
+   "angle": "Quick useful item: which products are affected, what to do if you have one, and a one-line take on the defect once FDA confirms it.",
+   "why_now": "Recall broke across 7+ outlets Oct 21-23, and 'toothpaste recall' is breaking out in search.",
+   "is_it_real": "Widely reported recall. The defect or contamination reason is not fully specified in secondary sources, so pull the FDA.gov notice before writing.",
+   "confidence": "medium",
+   "evidence": [],
+   "terms": [
+    "brush buddies evo toothpaste recall 4 3m tubes",
+    "toothpaste recall"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-10-25",
+     "event": "routed",
+     "detail": "roundup"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "Brush Buddies EVO toothpaste recall (4.3M+ tubes)",
+     "speed": "new",
+     "first_seen": "2026-10-23",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-23",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 79,
+       "opportunity": 72
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    },
+    {
+     "term": "toothpaste recall",
+     "speed": "exploding",
+     "first_seen": "2026-10-24",
+     "weeks_seen": 1,
+     "sources": [
+      "radar"
+     ],
+     "profiles": [
+      "public-health"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-24",
+       "source": "radar",
+       "profile": "public-health",
+       "stage": "breakout",
+       "score": 67,
+       "opportunity": 87
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-10-25-food-recall-week-ready-to-eat-meat-and-hot-dogs-pl",
+   "title": "Food recall week: ready-to-eat meat and hot dogs, plus Family Farmstead cheese",
+   "created": "2026-10-25",
+   "route": "roundup",
+   "speed": "exploding",
+   "beat": "food safety",
+   "angle": "A short 'check your fridge' item rounding up the week's USDA meat and hot dog recall and the cheese recall, with the reason and what to do.",
+   "why_now": "All three broke out on the food-safety radar Oct 20.",
+   "is_it_real": "Search signals only, with no notice links in the input. Brands, lots and recall reasons must be confirmed on FSIS and FDA before inclusion. The meat and hot dog terms may be the same recall.",
+   "confidence": "low",
+   "evidence": [],
+   "terms": [
+    "usda ready to eat meat recall",
+    "hot dog recall",
+    "family farmstead dairy cheese recall"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-10-25",
+     "event": "routed",
+     "detail": "roundup"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "usda ready to eat meat recall",
+     "speed": "exploding",
+     "first_seen": "2026-10-20",
+     "weeks_seen": 1,
+     "sources": [
+      "radar"
+     ],
+     "profiles": [
+      "food-safety"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-20",
+       "source": "radar",
+       "profile": "food-safety",
+       "stage": "breakout",
+       "score": 68,
+       "opportunity": 89
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    },
+    {
+     "term": "hot dog recall",
+     "speed": "exploding",
+     "first_seen": "2026-10-20",
+     "weeks_seen": 1,
+     "sources": [
+      "radar"
+     ],
+     "profiles": [
+      "food-safety"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-20",
+       "source": "radar",
+       "profile": "food-safety",
+       "stage": "emerging",
+       "score": 67,
+       "opportunity": 89
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    },
+    {
+     "term": "family farmstead dairy cheese recall",
+     "speed": "exploding",
+     "first_seen": "2026-10-20",
+     "weeks_seen": 1,
+     "sources": [
+      "radar"
+     ],
+     "profiles": [
+      "food-safety"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-20",
+       "source": "radar",
+       "profile": "food-safety",
+       "stage": "breakout",
+       "score": 66,
+       "opportunity": 89
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-10-25-clocks-fall-back-nov-1-what-the-extra-hour-actuall",
+   "title": "Clocks fall back Nov 1: what the extra hour actually does to your sleep",
+   "created": "2026-10-25",
+   "route": "roundup",
+   "speed": "exploding",
+   "beat": "sleep",
+   "angle": "Sharp, useful item on the fall-back shift: why the 'extra hour' still knocks people off for days, plus a quick take on the perennial fight over ending clock changes.",
+   "why_now": "DST ends Sunday Nov 1, and searches are exploding a week ahead.",
+   "is_it_real": "The date is a calendar fact. Any health claims should cite sleep research, and the current status of federal permanent-DST legislation must be checked, not assumed.",
+   "confidence": "medium",
+   "evidence": [],
+   "terms": [
+    "daylight saving time"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-10-25",
+     "event": "routed",
+     "detail": "roundup"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "daylight saving time",
+     "speed": "exploding",
+     "first_seen": "2026-10-25",
+     "weeks_seen": 1,
+     "sources": [
+      "wide"
+     ],
+     "profiles": [
+      "trending-now"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-25",
+       "source": "wide",
+       "profile": "trending-now",
+       "stage": "breakout",
+       "score": 200000
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-10-25-marshall-faulk-s-parkinson-s-disclosure-and-what-p",
+   "title": "Marshall Faulk's Parkinson's disclosure, and what Parkinson's before 60 looks like",
+   "created": "2026-10-25",
+   "route": "roundup",
+   "speed": "new",
+   "beat": "celebrity health moment with a hook",
+   "angle": "Short item using Faulk's disclosure to flag early-onset Parkinson's signs people miss, with a pointer to evidence on risk factors.",
+   "why_now": "Real-time Google Trends breakout tied to an ESPN disclosure on Oct 23.",
+   "is_it_real": "The disclosure is reported by ESPN per the newsroom, which flags minor fact-check issues. Confirm his age and the exact wording of the diagnosis before calling it early-onset.",
+   "confidence": "medium",
+   "evidence": [],
+   "terms": [
+    "marshall faulk reveals parkinson s diagnosis"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-10-25",
+     "event": "routed",
+     "detail": "roundup"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "Marshall Faulk reveals Parkinson's diagnosis",
+     "speed": "new",
+     "first_seen": "2026-10-23",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-23",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 61,
+       "opportunity": 61
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-10-25-new-study-says-daily-tea-is-good-for-your-heart-wh",
+   "title": "New study says daily tea is good for your heart: what it actually found",
+   "created": "2026-10-25",
+   "route": "roundup",
+   "speed": "new",
+   "beat": "nutrition science",
+   "angle": "Quick 'weird stat' item: what the tea study measured, how big the effect is, and whether it is association or causation.",
+   "why_now": "Both terms have risen three days running (Oct 23-25), so people are searching for the study itself.",
+   "is_it_real": "The study is not identified in the input. Find the paper before writing; if it is a press-release-driven observational study, the take is the caveat.",
+   "confidence": "low",
+   "evidence": [],
+   "terms": [
+    "what did the new study find about daily tea drinking and heart health",
+    "tea heart health"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-10-25",
+     "event": "routed",
+     "detail": "roundup"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "what did the new study find about daily tea drinking and heart health",
+     "speed": "new",
+     "first_seen": "2026-10-23",
+     "weeks_seen": 1,
+     "sources": [
+      "rising"
+     ],
+     "profiles": [
+      "daily-signals"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-23",
+       "source": "rising",
+       "profile": "daily-signals",
+       "stage": "rising"
+      },
+      {
+       "date": "2026-10-24",
+       "source": "rising",
+       "profile": "daily-signals",
+       "stage": "rising"
+      },
+      {
+       "date": "2026-10-25",
+       "source": "rising",
+       "profile": "daily-signals",
+       "stage": "rising"
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    },
+    {
+     "term": "tea heart health",
+     "speed": "new",
+     "first_seen": "2026-10-23",
+     "weeks_seen": 1,
+     "sources": [
+      "rising"
+     ],
+     "profiles": [
+      "daily-signals"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-23",
+       "source": "rising",
+       "profile": "daily-signals",
+       "stage": "rising"
+      },
+      {
+       "date": "2026-10-24",
+       "source": "rising",
+       "profile": "daily-signals",
+       "stage": "rising"
+      },
+      {
+       "date": "2026-10-25",
+       "source": "rising",
+       "profile": "daily-signals",
+       "stage": "rising"
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-10-25-how-long-does-menopause-last-an-evergreen-perimeno",
+   "title": "How long does menopause last? An evergreen perimenopause timeline page",
+   "created": "2026-10-25",
+   "route": "brief",
+   "speed": "exploding",
+   "beat": "menopause",
+   "angle": "An evergreen explainer covering how long perimenopause and menopause symptoms typically last, early signs, and treatment options including HRT.",
+   "why_now": "Both queries are breaking out on the women's-health radar, and this is perennial search demand the menopause site should own.",
+   "is_it_real": "Classic evergreen informational demand rather than a news spike; durable fit for a brief. Volume data still needs checking in research.",
+   "confidence": "medium",
+   "evidence": [],
+   "terms": [
+    "how long does menopause last",
+    "identify early perimenopause symptoms and outline medical treatments to relieve them"
+   ],
+   "site": "menopause",
+   "seed_keyword": "how long does menopause last",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-10-25",
+     "event": "routed",
+     "detail": "brief:menopause"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "how long does menopause last",
+     "speed": "exploding",
+     "first_seen": "2026-10-21",
+     "weeks_seen": 1,
+     "sources": [
+      "radar"
+     ],
+     "profiles": [
+      "womens-health"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-21",
+       "source": "radar",
+       "profile": "womens-health",
+       "stage": "breakout",
+       "score": 54,
+       "opportunity": 83
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    },
+    {
+     "term": "identify early perimenopause symptoms and outline medical treatments to relieve them",
+     "speed": "exploding",
+     "first_seen": "2026-10-21",
+     "weeks_seen": 1,
+     "sources": [
+      "radar"
+     ],
+     "profiles": [
+      "womens-health"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-21",
+       "source": "radar",
+       "profile": "womens-health",
+       "stage": "breakout",
+       "score": 54,
+       "opportunity": 83
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-10-25-snap-changes-explainer-for-omaha-families",
+   "title": "SNAP changes explainer for Omaha families",
+   "created": "2026-10-25",
+   "route": "brief",
+   "speed": "emerging",
+   "beat": "food assistance",
+   "angle": "A plain-language, regularly updated page on current SNAP rules and changes, with what Nebraska and Omaha residents need to do and where to get help.",
+   "why_now": "Seen rising for 9 weeks across radar and daily signals; sustained demand is the brief sweet spot.",
+   "is_it_real": "Sustained signal. The specific policy changes are not in the input and must be sourced from USDA and Nebraska DHHS, not assumed.",
+   "confidence": "medium",
+   "evidence": [],
+   "terms": [
+    "supplemental nutrition assistance program"
+   ],
+   "site": "kind-grid",
+   "seed_keyword": "snap benefits changes",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-10-25",
+     "event": "routed",
+     "detail": "brief:kind-grid"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "supplemental nutrition assistance program",
+     "speed": "emerging",
+     "first_seen": "2026-06-25",
+     "weeks_seen": 9,
+     "sources": [
+      "radar",
+      "rising"
+     ],
+     "profiles": [
+      "daily-signals",
+      "nutrition"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-04",
+       "source": "rising",
+       "profile": "daily-signals",
+       "stage": "rising"
+      },
+      {
+       "date": "2026-10-05",
+       "source": "radar",
+       "profile": "nutrition",
+       "stage": "emerging",
+       "score": 59,
+       "opportunity": 81
+      },
+      {
+       "date": "2026-10-06",
+       "source": "rising",
+       "profile": "daily-signals",
+       "stage": "rising"
+      },
+      {
+       "date": "2026-10-07",
+       "source": "rising",
+       "profile": "daily-signals",
+       "stage": "rising"
+      },
+      {
+       "date": "2026-10-08",
+       "source": "rising",
+       "profile": "daily-signals",
+       "stage": "rising"
+      },
+      {
+       "date": "2026-10-25",
+       "source": "rising",
+       "profile": "daily-signals",
+       "stage": "rising"
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  }
+ ],
+ "dropped": 136,
+ "watching": 18,
+ "notes": "Sunday list dominated by NFL/soccer noise; the real material came from the radars and newsroom: the women's health executive order (five search variants), measles/SSPE, and a heavy recall week (compounded GLP-1, toothpaste, meat, cheese). I routed two TFM candidates (AI-beats-doctors, supplement strips) since there's only one Wednesday slot; napping-and-dementia is a strong backup 'is it real?' on watch. Several radar profiles are misfiring (fitness pulling Xbox and Packers trades, adhd-focus pulling gold prices, food-safety pulling car recalls) and could use tuning. Most news terms lack primary links, so recall and measles items need FDA, FSIS and CDC confirmation before writing.",
+ "cost_usd": 0.4784
+}
