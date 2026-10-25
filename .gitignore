@@ -14,3 +14,4 @@ outputs/google_trend_radar/
 .agents
 .claude/skills
 skills-lock.json
+outputs/trend_desk/dry_run_prompt.md

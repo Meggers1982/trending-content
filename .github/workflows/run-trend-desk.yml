@@ -1,0 +1,81 @@
+name: Run Trend Desk
+
+# The Trend Judge: reads every radar scan and the daily pipeline's output, decides which trends
+# are worth Meagan's work, and routes each idea (pitch / Female Model post / roundup / site brief).
+# Runs right after the daily pipeline finishes, with a fallback schedule in case that never fires.
+# See trend_desk/README.md.
+
+on:
+  workflow_run:
+    workflows: ["Run Trending Content Pipeline"]
+    types: [completed]
+  schedule:
+    - cron: '41 16 * * *'   # fallback, ~11:41am CT; a no-op if today's handoff already exists
+  workflow_dispatch:
+    inputs:
+      force:
+        description: Judge again even if today's handoff exists
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: trend-desk
+  cancel-in-progress: false
+
+jobs:
+  trend-desk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
+      FORCE: ${{ github.event.inputs.force }}
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      # Fails soft: no SerpAPI key or quota just means no wide scan today.
+      - name: Wide-open trending scan
+        continue-on-error: true
+        timeout-minutes: 8
+        run: python -m trend_desk.wide_scan
+
+      - name: Judge and route
+        id: judge
+        timeout-minutes: 20
+        run: |
+          if [ "$FORCE" = "true" ]; then python -m trend_desk.run --force; else python -m trend_desk.run; fi
+
+      # Always commit, so a failed judging run still saves what was collected and the
+      # plain-language problem message for the Telegram bot.
+      - name: Commit Trend Desk output
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/trend_ledger.json trend_desk/handoff trend_desk/feeds trend_desk/outbox outputs/trend_desk
+          if git diff --cached --quiet; then
+            echo "Nothing changed."
+            exit 0
+          fi
+          git commit -m "Trend Desk run $(TZ=America/Chicago date +%F)"
+          for i in 1 2 3; do
+            git pull --rebase && git push && exit 0
+            sleep 10
+          done
+          exit 1

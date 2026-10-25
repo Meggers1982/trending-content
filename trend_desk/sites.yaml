@@ -1,0 +1,51 @@
+# Sites that can receive SEO briefs from Trend Desk. Any of them can get one (Meagan, 2026-10-25).
+# slug: used in handoffs and folder names. linear_project: where the brief's ticket goes
+# (null means the Trending Content project, with the site named in the title).
+# brief_dir: relative to ~/termscope-app/termscope-briefs/trend-desk/
+
+sites:
+  - slug: womens-adhd
+    name: Women's ADHD site
+    audience: Women with ADHD, often diagnosed as adults. Loud, lived-in voice. Launches 2026-11-23.
+    covers: ADHD in women, executive function, meds, hormones and ADHD, work, relationships with systems and tools
+    linear_project: Women's ADHD Site
+  - slug: menopause
+    name: Menopause site
+    audience: US women 40 to 65, perimenopause, menopause and the decade after.
+    covers: symptoms, HRT and treatments, sleep, weight, bone and heart health, sex and libido as health topics, work
+    linear_project: Menopause Site
+  - slug: home-ideas
+    name: Home ideas blog
+    audience: Homeowners and renters looking for design and improvement ideas. Numbered roundup posts.
+    covers: room ideas, storage, backyard, DIY projects, decor trends, small spaces
+    linear_project: null
+  - slug: fridge-money
+    name: Fridge Money
+    audience: US college students looking for discounts and money help.
+    covers: student discounts, budgeting, cheap food, subscriptions, back-to-school
+    linear_project: Fridge Money
+  - slug: recall-register
+    name: Recall Register
+    audience: People checking whether food they bought was recalled; data journalism readers.
+    covers: FDA and USDA food recalls, outbreaks, food safety explainers
+    linear_project: null
+  - slug: shelf-life
+    name: Shelf Life
+    audience: Food culture readers. "Where food goes viral."
+    covers: viral foods and recipes, food trends, snack launches, food internet culture
+    linear_project: null
+  - slug: kind-grid
+    name: The Kind Grid
+    audience: People in Omaha who need food today. Community project, no monetization.
+    covers: food assistance, SNAP and WIC changes, food pantries, Omaha resources
+    linear_project: Kind Grid
+  - slug: weekend-omaha
+    name: Weekend Omaha
+    audience: People looking for things to do in Omaha.
+    covers: Omaha events, venues, neighborhoods, seasonal activities (only Omaha-specific trends)
+    linear_project: Weekend Omaha
+  - slug: pawket
+    name: Pawket
+    audience: Pet owners who need their pet's records for landlords, boarders and vets.
+    covers: pet records, vaccines, boarding and travel requirements, pet health admin
+    linear_project: Pawket
