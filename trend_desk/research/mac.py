@@ -98,6 +98,12 @@ def deliver_outbox() -> None:
 
 def backlog_if_due() -> None:
     st = backlog.load_state()
+    if st and st.get("finished") and not st.get("archived"):
+        try:  # the review finished but its archive step failed: try again each tick
+            backlog.archive()
+        except Exception as err:  # noqa: BLE001
+            c.log(f"Research Desk: backlog archive failed, retrying next tick ({str(err)[:120]})")
+        return
     if not st or st.get("finished") or not backlog.in_window(run.chicago_now()):
         return
     if st.get("pause_until", "") > run.chicago_now().isoformat():
