@@ -8,6 +8,7 @@ Writes (committed and pushed to main):
   data/research_ledger.json                 every PMID judged, and every idea, so nothing is judged twice
   trend_desk/research/handoff/<date>.json   today's ideas, which the shared builder turns into work
 Local only (~/.local/state/research-desk/):
+  notes/<date>.md                           the Judge's day notes (they can name her private pitch topics)
   outbox/<stamp>.json                       plain-language problem messages for the research bot
 """
 from __future__ import annotations
@@ -272,15 +273,19 @@ def main() -> int:
     routes = {}
     for c in created:
         routes[c["route"]] = routes.get(c["route"], 0) + 1
-    run.update(ideas=len(created), routes=routes, dropped=dropped, notes=result.get("notes", ""))
+    # The Judge's notes can name topics from her private pitch ledgers, so they stay on the Mac.
+    notes = STATE / "notes" / f"{today.isoformat()}.md"
+    notes.parent.mkdir(parents=True, exist_ok=True)
+    with open(notes, "a") as f:
+        f.write(f"{result.get('notes', '')}\n")
+    run.update(ideas=len(created), routes=routes, dropped=dropped)
     data["runs"].append(run)
     data["runs"] = data["runs"][-400:]
     write_json(LEDGER, data)
     if handoff.exists():  # a forced rerun adds to the day's ideas; it never drops earlier ones
         earlier = read_json(handoff, {}).get("ideas", [])
         created = [i for i in earlier if i["id"] not in {c["id"] for c in created}] + created
-    write_json(handoff, {"date": today.isoformat(), "ideas": created, "dropped": dropped,
-                         "notes": result.get("notes", "")})
+    write_json(handoff, {"date": today.isoformat(), "ideas": created, "dropped": dropped})
     print(f"Research Desk: {len(created)} ideas {routes}, dropped {dropped}.")
     return 0
 

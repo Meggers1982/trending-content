@@ -54,7 +54,9 @@ PubMed before writing.
 
 This repo is public. The ledger and handoffs hold only study metadata from the public dashboard and
 the Judge's neutral decisions. Her pitch topics are read from `~/Pitches` into the prompt but never
-written here.
+written here. The Judge's free-text day notes can name those topics, so they go to
+`~/.local/state/research-desk/notes/<date>.md`, never to the ledger or a handoff (the first run's
+notes were committed in 3d15b2a and removed in the next commit; they named two pitch topics).
 
 ## Run it by hand
 
