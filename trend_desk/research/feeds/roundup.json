@@ -80,6 +80,154 @@
      "days_online": 9
     }
    ]
+  },
+  {
+   "id": "rd-2026-10-25-the-30-rule-for-diversity-a-review-of-277-studies",
+   "title": "The '30% rule' for diversity: a review of 277 studies finds a tipping point around 29%",
+   "created": "2026-10-25",
+   "angle": "The idea behind campaigns like the 30% Club is that a group has to reach a critical mass before it changes anything. Among studies designed well enough to test that, 83% found a threshold, averaging about 29% representation. Caveat in a clause: it is a vote count of mostly correlational studies, not a pooled estimate.",
+   "why_now": "A tidy number on a long-running debate about boards and teams. At 45 days old, it is too stale for a pitch.",
+   "is_it_real": "An integrative review, not a meta-analysis with pooled effects. About a third of studies couldn't test the idea at all, and publication bias could inflate support. The 29% average hides wide variation. The underlying studies show links, not causes.",
+   "evidence": [
+    "https://openalex.org/W7212172629",
+    "https://doi.org/10.1037/apl0001408"
+   ],
+   "studies": [
+    {
+     "pmid": "W7212172629",
+     "journal": "Journal of Applied Psychology",
+     "caveats": "This is a conceptual review and vote-count-style synthesis of published studies, not a new meta-analysis with pooled effect sizes, so publication bias and the heavy exclusion of methodologically weak studies could inflate the apparent support. The 29% average masks wide variation across settings, outcomes and which group is underrepresented, and most underlying studies are correlational — crossing a threshold is associated with better outcomes, not proven to cause them (better-performing organizations may simply be more able to reach critical mass).",
+     "days_online": 45
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-25-the-liquid-death-problem-ironic-brand-names-make-h",
+   "title": "The 'Liquid Death' problem: ironic brand names make healthy products seem less healthy",
+   "created": "2026-10-25",
+   "angle": "In a set of experiments, joke or transgressive names lowered how moral a product seemed, and that dragged down how healthy it seemed. The effect held for smoothies but not milkshakes, and a clear nutrition label on the pack softened it. Caveat: lab ratings, not sales.",
+   "why_now": "Online 12 days, uncovered. Edgy challenger-brand names are everywhere in the drinks and snack aisle.",
+   "is_it_real": "Lab experiments measuring perceptions and purchase intention. The abstract gives no sample sizes or country. Edgy names did not reliably raise purchase intention either. Fictitious brands can't reproduce real brand equity.",
+   "evidence": [
+    "https://openalex.org/W7221599533",
+    "https://doi.org/10.1002/mar.70284"
+   ],
+   "studies": [
+    {
+     "pmid": "W7221599533",
+     "journal": "Psychology and Marketing",
+     "caveats": "Lab-style experiments measuring perceptions and purchase intentions rather than observed sales; abstract does not report sample sizes, recruitment source or country; real-world brands like Liquid Death carry brand equity that fictitious stimuli cannot replicate.",
+     "days_online": 12
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-25-when-aldi-or-lidl-starts-carrying-a-big-brand-riva",
+   "title": "When Aldi or Lidl starts carrying a big brand, rival supermarkets tend to cut its price",
+   "created": "2026-10-25",
+   "angle": "More than 300 cases in three European grocery markets show conventional supermarkets cutting prices on national brands after a discounter listed them. The listings actually raised the supermarkets' sales of those brands. Caveat: European data, and whether the cuts paid off varied by brand.",
+   "why_now": "Grocery prices remain a political issue, and Aldi is still expanding in the US.",
+   "is_it_real": "Observational market data covering short-run sales only. The fact-check flags that the digest's 'most cuts don't pay off' line leaves out the abstract's finding that cuts on average improved sales. Keep the roundup line to the price-cut pattern. The publication date has not been verified.",
+   "evidence": [
+    "https://openalex.org/W7221809005",
+    "https://doi.org/10.1016/j.jretai.2026.09.007"
+   ],
+   "studies": [
+    {
+     "pmid": "W7221809005",
+     "journal": "Journal of Retailing",
+     "caveats": "Observational market data rather than a randomized experiment; three European grocery markets and leading HiLo retailers only; focuses on short-run sales effects, so longer-term brand or traffic consequences of price moves are not captured.",
+     "days_online": 24
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-25-exercise-alcohol-medications-and-even-your-period",
+   "title": "Exercise, alcohol, medications and even your period can make an allergic reaction more severe",
+   "created": "2026-10-25",
+   "angle": "Nearly 17,000 cases in the European Anaphylaxis Registry: medication was the most common cofactor in adults (41%), then exercise (27%). Menstruation was suspected in 4% of adult cases. More cofactors at once went with worse reactions and a later start of symptoms after eating a trigger food. Caveat: cofactors were suspected, not proven.",
+   "why_now": "Online 2 days, uncovered, with a useful takeaway for anyone carrying an epinephrine auto-injector.",
+   "is_it_real": "A large registry, but it is observational and cofactors were judged by suspicion. It describes how often cofactors appear, not how much each raises risk. European population.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42920250/",
+    "https://doi.org/10.1111/cea.70457"
+   ],
+   "studies": [
+    {
+     "pmid": "42920250",
+     "journal": "Clinical and Experimental Allergy",
+     "caveats": "observational design, self-reported outcomes, European registry population (may not generalize globally), cofactor data based on suspicion rather than confirmed causation",
+     "days_online": 2
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-25-in-later-life-mood-matters-as-much-as-blood-pressu",
+   "title": "In later life, mood matters as much as blood pressure: two quarter-million-person studies link low mood combos to dementia and disability",
+   "created": "2026-10-25",
+   "angle": "In about 247,000 Dutch adults, the late-life group combining loneliness, depression and inactivity had the highest dementia risk of any risk-factor group (hazard ratio 1.23). In about 258,000 adults across six international aging studies, low mood plus poor word recall was linked to roughly double the risk of needing help with daily tasks (RR 2.19). Caveat: both observational, effects modest.",
+   "why_now": "Both online within 3 days, both uncovered. Paired, they make one useful item.",
+   "is_it_real": "Very large cohorts, but observational with self-reported risk factors. The dementia hazard ratios are modest. Cognition was measured with one word-recall task. They show links, not causes. Say 'linked to.'",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42911078/",
+    "https://doi.org/10.1177/13872877261498431",
+    "https://pubmed.ncbi.nlm.nih.gov/42925897/",
+    "https://doi.org/10.1016/j.jad.2026.122666"
+   ],
+   "studies": [
+    {
+     "pmid": "42911078",
+     "journal": "J Alzheimers Dis",
+     "caveats": "Observational cohort — cannot establish that these clusters cause dementia; risk factors were largely self-reported in a single survey wave; Dutch population may not generalize elsewhere; hazard ratios are modest in size.",
+     "days_online": 3
+    },
+    {
+     "pmid": "42925897",
+     "journal": "J Affect Disord",
+     "caveats": "Observational pooled cohort data — it cannot show that depression or memory decline causes disability; depressive symptoms were self-reported and cognition was measured with a single word-recall task; mortality hazards were nonproportional; the harmonized cohorts differ in measurement and culture, so findings may not translate evenly to every population.",
+     "days_online": 1
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-25-lecanemab-outside-trials-brain-swelling-risk-is-ab",
+   "title": "Lecanemab outside trials: brain-swelling risk is about one in three for people with two APOE4 copies",
+   "created": "2026-10-25",
+   "angle": "Pooled data from 37 real-world studies: about 15% of patients overall had brain swelling or small bleeds (ARIA). The rate was 34% with two APOE4 copies versus 11% with none, and 23% versus 11.5% with or without existing microbleeds. US rates ran about double Asian rates. Caveat: there were no control groups, so these studies can't show cognitive benefit.",
+   "why_now": "Online 4 days, uncovered. Families weighing infusions can get both answers (genotype and MRI) before the first dose.",
+   "is_it_real": "A meta-analysis of uncontrolled observational cohorts with substantial heterogeneity and follow-up of 12 months or less. The risk numbers are useful and broadly match the trials. Nothing here speaks to whether the drug works.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42907679/",
+    "https://doi.org/10.1007/s00415-026-14224-y"
+   ],
+   "studies": [
+    {
+     "pmid": "42907679",
+     "journal": "J Neurol",
+     "caveats": "Meta-analysis of observational real-world cohorts with no control arms, so cognitive outcomes cannot be interpreted as efficacy; substantial heterogeneity between regions; overlapping patient cohorts across included studies required statistical adjustment; follow-up largely 12 months or less.",
+     "days_online": 4
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-25-the-first-vaccine-for-crimean-congo-hemorrhagic-fe",
+   "title": "The first vaccine for Crimean-Congo hemorrhagic fever, a tick-borne virus, passed its first human safety test",
+   "created": "2026-10-25",
+   "angle": "An Oxford-style adenovirus-vector vaccine against a WHO priority virus that kills up to 40% of people it infects was well tolerated in 46 UK adults and produced antibodies after two doses. Caveat: phase 1 safety only, years from use.",
+   "why_now": "Online 2 days in Lancet Infectious Diseases and not covered. It is a first-in-human milestone.",
+   "is_it_real": "Phase 1: small, open-label, not randomized, single center, short follow-up. It shows safety and an immune response, not protection. Too early for a pitch unless a climate-and-ticks story gives it a stake.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42914993/",
+    "https://doi.org/10.1016/S1473-3099(26)00471-8"
+   ],
+   "studies": [
+    {
+     "pmid": "42914993",
+     "journal": "The Lancet. Infectious Diseases",
+     "caveats": "small sample (N<100), open-label, non-randomised, single-center, short follow-up",
+     "days_online": 2
+    }
+   ]
   }
  ]
 }
