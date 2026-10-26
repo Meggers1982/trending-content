@@ -1,3 +1,4 @@
 [
-  {"date": "2026-10-25", "idea_id": "2026-10-25-is-it-real-supplement-strips-are-replacing-gummies", "action": "reroute", "to_route": "pitch", "to_site": "", "reason": "pitch to women's health outlet"}
+  {"date": "2026-10-25", "idea_id": "2026-10-25-is-it-real-supplement-strips-are-replacing-gummies", "action": "reroute", "to_route": "pitch", "to_site": "", "reason": "pitch to women's health outlet"},
+  {"date": "2026-10-25", "idea_id": "2026-10-25-is-it-real-supplement-strips-are-replacing-gummies", "action": "retry", "to_route": "", "to_site": "", "reason": "retry failed pitch build"}
 ]
