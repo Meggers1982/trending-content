@@ -1,7 +1,9 @@
 # Trend Desk
 
-> Research Desk (`research/`) is a sibling that judges the research dashboard's studies and
-> shares this builder (`builder.py --desk research`). See `research/README.md`.
+> Research Desk (`research/`) is a sibling that judges the research dashboard's studies (and, since
+> MEA-1865, the marketing and career digests') and shares this builder (`builder.py --desk research`).
+> See `research/README.md`. News Desk (`news/`) does the same for AgingWire and the news digest
+> (`builder.py --desk news`). See `news/README.md`.
 
 Turns the radars' output into finished work, so nobody has to read the dashboard and decide.
 Built 2026-10-25 (Linear MEA-1828 to MEA-1832, decisions on MEA-117). The plain-language picture

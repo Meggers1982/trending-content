@@ -16,3 +16,4 @@ outputs/google_trend_radar/
 skills-lock.json
 outputs/trend_desk/dry_run_prompt.md
 outputs/trend_desk/research_dry_run_prompt.md
+outputs/trend_desk/news_dry_run_prompt.md
