@@ -32,8 +32,14 @@ ROUNDUP_FEED = DESK / "feeds" / "roundup.json"
 STATE = Path.home() / ".local/state/research-desk"
 OUTBOX = STATE / "outbox"
 MIN_SCORE = 7          # the dashboard's top-picks default
-LOOKBACK_DAYS = 3      # studies found in the last 3 days are eligible the first time they're seen
-MAX_CANDIDATES = 150    # a backstop on prompt size, not a quota; a normal day is 20 to 50
+LOOKBACK_DAYS = 3      # the backlog review's handover: it skipped 7+ studies found in its last 3 days
+# A dashboard study stays eligible until it's judged, however long that takes: there is no rolling
+# window to age out of. Everything found before this date went through the backlog review
+# (backlog.py, cutoff 2026-10-25, minus the 3 days it left to the daily run). Meagan, 2026-10-25:
+# "I don't want to lose ideas just because of an artificial ceiling."
+FLOOR = "2026-10-22"
+BATCH = 150            # studies per Judge call; a big day takes several calls, never a cut
+SCREEN_BATCH = 200     # below-7 studies per Sonnet screen call
 READY_SOURCES = 8      # judge once this many digests have published today ...
 READY_ANYWAY_HOUR = 14  # ... or after 2pm Central regardless
 
@@ -121,10 +127,10 @@ def pick(studies: dict, data: dict, taken: dict, today: date) -> tuple[list[dict
     for pmid, s in studies.items():
         # OpenAlex studies (sources.openalex_study) carry their own bar: the Lead band, and a
         # two-week lookback because those digests rotate one topic a day.
-        lookback = s.get("lookback_days", LOOKBACK_DAYS)
+        since = (today - timedelta(days=s["lookback_days"])).isoformat() if "lookback_days" in s else FLOOR
         if pmid in data["studies"]:
             skipped["already judged"] += 1
-        elif (s.get("run_date") or "") < (today - timedelta(days=lookback)).isoformat():
+        elif (s.get("run_date") or "") < since:
             skipped["older"] += 1
         elif not s.get("eligible", (s.get("relevance_score") or 0) >= MIN_SCORE):
             skipped["below score"] += 1
@@ -133,13 +139,44 @@ def pick(studies: dict, data: dict, taken: dict, today: date) -> tuple[list[dict
         else:
             pool.append(s)
     pool.sort(key=lambda s: (s.get("relevance_score") or 0, s.get("run_date", "")), reverse=True)
-    pool = pool[:MAX_CANDIDATES]
     for s in pool:  # OpenAlex dates can be issue dates; Crossref's online date replaces them
         if s.get("openalex") and s.get("doi") and (online := sources.crossref_online(s["doi"])):
             d, _ = rules.online_date(online, today.isoformat())
             if d and d <= today:  # a future "online" date is a scheduled issue, not news
                 s["pubdate"], s["date_source"] = online, "crossref"
     return [view(s, today) for s in pool], skipped
+
+
+def pick_low(studies: dict, data: dict, taken: dict) -> list[dict]:
+    """Dashboard studies below the score bar, never judged: the quick screen's input. The digest
+    scores relevance to its own beat, so a 5 there can be a fine brief elsewhere (the backlog
+    screen promoted 81 of 4,900). OpenAlex studies keep their own Lead-band bar."""
+    return [s for p, s in studies.items()
+            if p not in data["studies"] and p not in taken and "eligible" not in s
+            and (s.get("run_date") or "") >= FLOOR and (s.get("relevance_score") or 0) < MIN_SCORE
+            and not rules.flags(s)["preprint"]]
+
+
+def screen(low: list[dict], data: dict, today: date) -> tuple[list[str], int]:
+    """(promoted PMIDs, studies screened). The rest are recorded as dropped "screened-out" so they're
+    never screened twice; a batch whose call fails stays unrecorded and is screened next run."""
+    from .backlog import screen_prompt
+    promoted, done = [], 0
+    for i in range(0, len(low), SCREEN_BATCH):
+        part = low[i:i + SCREEN_BATCH]
+        try:
+            res = judge.judge(screen_prompt([view(s, today) for s in part]), timeout=1800,
+                              schema=judge.SCREEN_SCHEMA, model="sonnet")
+        except Exception as err:  # noqa: BLE001
+            print(f"Research Desk: screening {len(part)} lower-scored studies failed: {err}")
+            continue
+        ok = {s["pmid"] for s in part}
+        up = [p for p in res.get("promote", []) if p in ok]
+        promoted += up
+        done += len(part)
+        for p in ok - set(up):
+            data["studies"][p] = {"judged_on": today.isoformat(), "status": "dropped", "reason": "screened-out"}
+    return promoted, done
 
 
 def recent_ideas(data: dict, today: date) -> list[dict]:
@@ -287,9 +324,16 @@ def main() -> int:
     data = load_ledger()
     taken = sources.taken_pmids()
     cands, skipped = pick(studies, data, taken, today)
-    print(f"Research Desk: {len(studies)} studies on the dashboard, {len(cands)} to judge; skipped {skipped}.")
+    low = pick_low(studies, data, taken)
+    screened = 0
+    if low and not args.dry_run:
+        promoted, screened = screen(low, data, today)
+        cands += [view(studies[p], today) for p in promoted]
+        skipped["screened out"] = screened - len(promoted)
+    print(f"Research Desk: {len(studies)} studies on the dashboard, {len(cands)} to judge "
+          f"({screened} lower-scored screened); skipped {skipped}.")
     run = {"date": today.isoformat(), "studies": len(studies), "candidates": len(cands), "skipped": skipped,
-           "model": judge.MODEL}
+           "screened": screened, "model": judge.MODEL}
 
     if not cands:
         if args.dry_run:
@@ -301,27 +345,41 @@ def main() -> int:
         write_json(handoff, {"date": today.isoformat(), "ideas": [], "notes": "No new studies cleared the bar."})
         return 0
 
-    text = judge.prompt(today.isoformat(), cands, recent_ideas(data, today), sources.pitched_topics(),
-                        sources.trending_now(today))
+    pitched, trending = sources.pitched_topics(), sources.trending_now(today)
+    parts = [cands[i:i + BATCH] for i in range(0, len(cands), BATCH)]
+    text = judge.prompt(today.isoformat(), parts[0], recent_ideas(data, today), pitched, trending)
     if args.dry_run:
         out = REPO / "outputs" / "trend_desk" / "research_dry_run_prompt.md"
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(text)
-        print(f"Dry run: prompt written to {out.relative_to(REPO)} ({len(text):,} chars). Nothing saved.")
+        print(f"Dry run: prompt for the first of {len(parts)} Judge call(s) written to "
+              f"{out.relative_to(REPO)} ({len(text):,} chars). Nothing saved.")
         return 0
 
-    try:
-        result = judge.judge(text)
-    except Exception as err:  # noqa: BLE001 - every failure becomes one plain-language message
-        print(f"Research Desk: judging failed: {err}")
-        key, msg = problem_text(err)[1], problem_text(err)[0]
+    created, dropped, notes_text, errors = [], {}, [], []
+    for n, part in enumerate(parts):
+        if n:  # later calls see the earlier calls' ideas, so they don't repeat them
+            text = judge.prompt(today.isoformat(), part, recent_ideas(data, today), pitched, trending)
+        try:
+            result = judge.judge(text)
+        except Exception as err:  # noqa: BLE001 - every failure becomes one plain-language message
+            print(f"Research Desk: judging failed: {err}")
+            errors.append(err)
+            continue  # this part stays unjudged and is picked up on the next run
+        made, gone = apply(data, result, part, studies, today)
+        created += made
+        for k, v in gone.items():
+            dropped[k] = dropped.get(k, 0) + v
+        notes_text.append(result.get("notes", ""))
+    if errors and not created and not notes_text:
+        key, msg = problem_text(errors[0])[1], problem_text(errors[0])[0]
         outbox(key, msg)
         run.update(error=key)
         data["runs"].append(run)
-        write_json(LEDGER, data)  # the studies stay unjudged, so tomorrow picks them up
+        write_json(LEDGER, data)  # the studies stay unjudged, so the next run picks them up
         return 1
-
-    created, dropped = apply(data, result, cands, studies, today)
+    if errors:
+        run.update(partial=f"{len(errors)} of {len(parts)} Judge calls failed; those studies wait for the next run")
     routes = {}
     for c in created:
         routes[c["route"]] = routes.get(c["route"], 0) + 1
@@ -329,7 +387,7 @@ def main() -> int:
     notes = STATE / "notes" / f"{today.isoformat()}.md"
     notes.parent.mkdir(parents=True, exist_ok=True)
     with open(notes, "a") as f:
-        f.write(f"{result.get('notes', '')}\n")
+        f.write("\n".join(notes_text) + "\n")
     run.update(ideas=len(created), routes=routes, dropped=dropped)
     data["runs"].append(run)
     data["runs"] = data["runs"][-400:]
