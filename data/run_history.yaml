@@ -3,6 +3,39 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-10-26'
+  niche: health and wellness
+  signals_reviewed: 160
+  topics_retained: 8
+  topics_rejected: 18
+  p1_count: 1
+  p2_count: 2
+  p3_count: 3
+  p4_count: 2
+  p5_count: 0
+  integrity_flags: 8
+  top_topic: Cheese recall — E. coli, Class I risk warning
+  key_themes:
+  - Cheese recall — E. coli, Class I risk warning
+  - Public launch of HHS/NIH Women's Health Research Task Force
+  - AHA/leading health groups redefine heart-health criteria for girls and women
+  - WHO global framework — extreme heat risk, pregnant women/newborns/children
+  - PTSD treatment — 68% remission rate, clinical trial
+  - KFF Fall 2026 tracking poll — vaccine trust
+  - Massive study maps the genetics of personality
+  - Amino acid shown to diminish age-related inflammation
+  tools_used:
+  - web_search
+  - google_news
+  - google_trends
+  - serpapi
+  tools_unavailable: []
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-10-26.html
+  estimated_cost_usd: 0.7386
+  notes: 'Most retained pool is single-source (confidence: low per strict rubric) even where source is
+    tier-1 institutional. Medical studies score low on trend_strength due to lack of search velocity.
+    Three AI-in-healthcare stories flagged stale. site_url not configured — competitor-list fallback used.
+    data/deferred_topics.yaml and data/run_history.yaml not supplied this run.'
 - run_date: '2026-10-25'
   niche: health and wellness
   signals_reviewed: 165
