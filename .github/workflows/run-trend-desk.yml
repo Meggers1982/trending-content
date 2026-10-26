@@ -28,7 +28,7 @@ concurrency:
 jobs:
   trend-desk:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 75
 
     env:
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -57,7 +57,8 @@ jobs:
 
       - name: Judge and route
         id: judge
-        timeout-minutes: 20
+        # A big day is several Judge calls (TERMS_PER_CALL in trend_desk/run.py), not a cut.
+        timeout-minutes: 60
         run: |
           if [ "$FORCE" = "true" ]; then python -m trend_desk.run --force; else python -m trend_desk.run; fi
 

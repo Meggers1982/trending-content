@@ -27,7 +27,7 @@ HANDOFF_DIR = DESK / "handoff"
 OUTBOX = DESK / "outbox"
 ROUNDUP_FEED = DESK / "feeds" / "roundup.json"
 FEEDBACK = DESK / "feedback" / "outcomes.json"
-MAX_TERMS = 300
+TERMS_PER_CALL = 300  # a big day takes several Judge calls; a term is never cut (Meagan, 2026-10-25)
 SPEED_RANK = {"exploding": 0, "emerging": 1, "new": 2, "steady": 3}
 
 
@@ -73,7 +73,7 @@ def pick_due(data: dict, today: date) -> dict:
         return (SPEED_RANK[ledger.speed(e, today)], -len(ledger.sources(e)), -best)
 
     keys.sort(key=rank)
-    return {k: ledger.summary(data["terms"][k], today) for k in keys[:MAX_TERMS]}
+    return {k: ledger.summary(data["terms"][k], today) for k in keys}
 
 
 def feedback_summary() -> dict:
@@ -219,7 +219,9 @@ def main() -> int:
         return 0
 
     system = judge.system_prompt()
-    user = judge.user_prompt(today.isoformat(), due, got["context"],
+    keys = list(due)
+    chunks = [{k: due[k] for k in keys[i:i + TERMS_PER_CALL]} for i in range(0, len(keys), TERMS_PER_CALL)]
+    user = judge.user_prompt(today.isoformat(), chunks[0], got["context"],
                              ledger.recent_ideas(data, today), feedback_summary())
     if args.dry_run:
         out = ledger.ROOT / "outputs" / "trend_desk" / "dry_run_prompt.md"
@@ -229,18 +231,31 @@ def main() -> int:
               "Ledger not saved.")
         return 0
 
-    try:
-        result, usd = judge.judge(system, user)
-    except Exception as err:  # noqa: BLE001 - every failure becomes one plain-language alert
-        text, key = problem_text(err)
-        print(f"Trend Desk: judging failed: {type(err).__name__}")
+    created, usd, notes, failures = [], 0.0, [], []
+    for n, chunk in enumerate(chunks):
+        if n:  # later calls see the ideas earlier calls made, so they don't repeat them
+            user = judge.user_prompt(today.isoformat(), chunk, got["context"],
+                                     ledger.recent_ideas(data, today), feedback_summary())
+        try:
+            result, cost = judge.judge(system, user)
+        except Exception as err:  # noqa: BLE001 - every failure becomes one plain-language alert
+            print(f"Trend Desk: judging failed: {type(err).__name__}")
+            failures.append(err)
+            continue  # this chunk's terms stay pending for tomorrow
+        usd += cost
+        notes.append(result.get("notes", ""))
+        created += apply_verdicts(data, result, chunk, today)
+        ledger.save(data)  # each call's verdicts are kept even if a later one runs out of time
+    if failures and not notes:
+        text, key = problem_text(failures[0])
         outbox("problem", text, key)
         run.update(error=key)
         data["runs"].append(run)
         ledger.save(data)  # keep what was collected; those terms stay pending for tomorrow
         return 1
-
-    created = apply_verdicts(data, result, due, today)
+    result = {"notes": "\n\n".join(x for x in notes if x)}
+    if failures:
+        run.update(partial=f"{len(failures)} of {len(chunks)} Judge calls failed; those terms stay pending")
     routes = {}
     for c in created:
         routes[c["route"]] = routes.get(c["route"], 0) + 1
