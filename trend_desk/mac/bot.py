@@ -49,8 +49,6 @@ def ideas_table() -> str:
     cutoff = (c.now().date() - timedelta(days=14)).isoformat()
     rows = []
     for path in sorted((c.DESK / "handoff").glob("*.json"), reverse=True):
-        if path.stem < cutoff:
-            continue
         for idea in c.read_json(path, {}).get("ideas", []):
             b = built.get(idea["id"], {})
             rows.append(f"- {idea['id']} | {b.get('route', idea['route'])} | {b.get('site', idea.get('site', ''))} | "
@@ -156,7 +154,6 @@ def deliver_outbox() -> None:
 
 def needs_build() -> bool:
     built = c.read_json(c.BUILT, {})
-    cutoff = (c.now().date() - timedelta(days=10)).isoformat()
     overrides = c.idea_overrides()
     today = c.now().date().isoformat()
     for path in (c.DESK / "handoff").glob("*.json"):

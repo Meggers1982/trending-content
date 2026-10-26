@@ -55,12 +55,9 @@ def judge_if_due() -> None:
 
 def needs_build() -> bool:
     built = c.read_json(c.BUILT, {})
-    cutoff = (c.now().date() - timedelta(days=10)).isoformat()
     desk = c.DESKS["research"]
     overrides = c.idea_overrides(desk["decisions"])
     for path in desk["handoff"].glob("*.json"):
-        if path.stem < cutoff:
-            continue
         for idea in c.read_json(path, {}).get("ideas", []):
             rec, o = built.get(idea["id"], {}), overrides.get(idea["id"], {})
             if o.get("action") == "skip":

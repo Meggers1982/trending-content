@@ -40,16 +40,16 @@ from . import tg
 LOCK = c.STATE / "builder.lock"
 DESK = c.DESKS["trend"]  # set from --desk in main()
 MAX_ATTEMPTS = 3
-LOOKBACK_DAYS = 10
 ROUTE_NAMES = {"pitch": "Pitch idea", "tfm": "Female Model post", "roundup": "Roundup item", "brief": "Site brief"}
 
 
 def handoff_ideas() -> list[dict]:
-    cutoff = (c.now().date() - timedelta(days=LOOKBACK_DAYS)).isoformat()
+    """Every handed-off idea, however old. There used to be a 10-day window, which silently dropped
+    any idea not built in time (a brief waiting a week on Ahrefs, or a long backlog). Built, skipped
+    and set-aside ideas are passed over by their built.json status instead (Meagan, 2026-10-25:
+    "I don't want to lose ideas just because of an artificial ceiling")."""
     ideas = []
     for path in sorted(DESK["handoff"].glob("*.json")):
-        if path.stem < cutoff:
-            continue
         for idea in c.read_json(path, {}).get("ideas", []):
             ideas.append(idea)
     return ideas
