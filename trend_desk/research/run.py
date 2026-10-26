@@ -203,9 +203,20 @@ def apply(data: dict, result: dict, cands: list[dict], studies: dict, today: dat
         for p in pmids:
             data["studies"][p] = {"judged_on": t, "status": "kept", "idea": iid}
     reasons = {d["pmid"]: d["reason"] for d in result.get("drops", [])}
+    passed = data.setdefault("passed_over", {})
     for p in by_pmid:
-        if p not in used:
-            drop(p, reasons.get(p, "not-selected"))
+        if p in used:
+            continue
+        if p in reasons:
+            drop(p, reasons[p])
+        elif passed.get(p):  # left out without a reason twice: record it so it isn't judged forever
+            drop(p, "not-selected")
+        else:  # the Judge didn't mention it; it gets one more look on the next run
+            passed[p] = t
+            dropped["unanswered"] = dropped.get("unanswered", 0) + 1
+    for p in list(passed):
+        if p in data["studies"]:
+            passed.pop(p)
     return created, dropped
 
 

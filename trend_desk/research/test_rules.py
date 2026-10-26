@@ -79,8 +79,9 @@ def test_apply_enforces_blocks_and_accounts_for_every_pmid():
     created, dropped = run.apply(data, result, cands, studies, TODAY)
     assert [c["pmids"] for c in created] == [["a"]]          # the invented PMID is ignored
     assert data["studies"]["b"]["status"] == "dropped" and data["studies"]["b"]["reason"] == "rule"
-    assert data["studies"]["c"]["reason"] == "not-selected"   # the Judge forgot it; it's still recorded
-    assert set(data["studies"]) == {"a", "b", "c"}
+    assert "c" not in data["studies"] and data["passed_over"] == {"c": "2026-10-25"}  # one more look
+    run.apply(data, {"ideas": [], "drops": [], "notes": ""}, [cands[2]], studies, TODAY)
+    assert data["studies"]["c"]["reason"] == "not-selected" and data["passed_over"] == {}
     assert created[0]["id"].startswith("rd-2026-10-25-") and created[0]["desk"] == "research"
 
 
