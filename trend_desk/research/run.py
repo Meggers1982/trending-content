@@ -32,7 +32,7 @@ STATE = Path.home() / ".local/state/research-desk"
 OUTBOX = STATE / "outbox"
 MIN_SCORE = 7          # the dashboard's top-picks default
 LOOKBACK_DAYS = 3      # studies found in the last 3 days are eligible the first time they're seen
-MAX_CANDIDATES = 80
+MAX_CANDIDATES = 150    # a backstop on prompt size, not a quota; a normal day is 20 to 50
 READY_SOURCES = 8      # judge once this many digests have published today ...
 READY_ANYWAY_HOUR = 14  # ... or after 2pm Central regardless
 

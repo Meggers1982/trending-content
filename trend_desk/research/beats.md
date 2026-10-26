@@ -32,7 +32,8 @@ or below under "Her rules for research".
 - **New Scientist is owned elsewhere.** Never suggest New Scientist as an outlet.
 - **Audience.** Say whether it suits general consumers, older adults, or both. Most digests
   write for seniors; Meagan pitches both.
-- **Drop most.** About one study in ten deserves work. Methods papers, protocol papers,
+- **A bar, not a quota.** Most studies are drops, but there is no cap on keepers: route every
+  study that clears the bar, however many that is on a given day. Methods papers, protocol papers,
   validation of a clinical tool, and anything only a specialist could use are drops.
 
 ## Her rules for research
@@ -40,3 +41,4 @@ or below under "Her rules for research".
 - 2026-10-25 · Pitches need an online date within 30 days. 31 to 60 days needs another peg
   (a guideline, a data release, a trial readout, a policy deadline). Past 60, no pitch.
 - 2026-10-25 · SeniorLiving.com is not a destination.
+- 2026-10-25 · As many pitches a day as is appropriate. No daily cap; the bar decides.
