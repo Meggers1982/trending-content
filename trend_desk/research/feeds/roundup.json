@@ -228,6 +228,586 @@
      "days_online": 2
     }
    ]
+  },
+  {
+   "id": "rd-2026-10-25-glp-1-hair-shedding-is-far-more-common-in-real-lif",
+   "title": "GLP-1 hair shedding is far more common in real life than trials reported, tied to how fast you lose weight, and usually temporary",
+   "created": "2026-10-25",
+   "angle": "A review of trial, real-world and pharmacovigilance data says hair loss on semaglutide and tirzepatide is mostly telogen effluvium driven by rapid weight loss, not drug toxicity. It's most likely in women and in people who lose more than 10% of body weight, and it's usually reversible. Caveat in a clause: it's a narrative review, and the 'over 70%' real-world figure needs its source checked.",
+   "why_now": "Online 11 days. 'Managing weight loss after glp-1' is exploding in this week's searches.",
+   "is_it_real": "Thin to moderate. It's a narrative, not systematic, review, and some of the source data is self-reported. The gap between 3–7% in trials and over 70% in real-world reports probably reflects how differently each setting counted shedding. The roundup should not print 70% without checking where it came from.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42873315/",
+    "https://doi.org/10.1007/s00592-026-02812-3"
+   ],
+   "studies": [
+    {
+     "pmid": "42873315",
+     "journal": "Acta Diabetologica",
+     "caveats": "observational design, narrative review (not systematic), self-reported outcomes in some source studies",
+     "days_online": 11
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-25-after-gestational-diabetes-lifestyle-programs-in-t",
+   "title": "After gestational diabetes, lifestyle programs in the next five years cut type 2 diabetes risk",
+   "created": "2026-10-25",
+   "angle": "An updated living meta-analysis (25 studies, 7,379 women) found mainly-lifestyle interventions within five years of a gestational-diabetes pregnancy lowered type 2 diabetes risk: risk ratio about 15% lower, hazard ratio about 32% lower. Caveat in a clause: the interventions varied a lot, and there's little data on drugs.",
+   "why_now": "Online 13 days. It's a usable number for the roughly 1 in 7 pregnancies affected worldwide.",
+   "is_it_real": "Moderate. It's a meta-analysis that includes randomized studies, but the interventions differ widely. Report the two effect measures separately and by type (RR 0.85, HR 0.68), not as 'a third'.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42864829/",
+    "https://doi.org/10.1111/dme.70486"
+   ],
+   "studies": [
+    {
+     "pmid": "42864829",
+     "journal": "Diabetic Medicine",
+     "caveats": "secondary analysis, heterogeneous interventions across included studies, predominantly lifestyle interventions with limited pharmacotherapy data, multinational study populations with varying baseline risk",
+     "days_online": 13
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-25-your-vitamin-d-pill-probably-isn-t-preventing-frai",
+   "title": "Your vitamin D pill probably isn't preventing frailty unless you're actually low, and big once-in-a-while doses have been linked to more falls",
+   "created": "2026-10-25",
+   "angle": "A review of cohort studies and RCTs finds that trials in adults with adequate vitamin D levels mostly came up neutral for frailty. Intermittent high-dose 'bolus' regimens were associated with more falls and fractures, and benefit seems limited to people who are deficient. Caveat in a clause: it's a narrative review, and the lead author has had funding from a vitamin D maker.",
+   "why_now": "Vitamin D is among the most-taken supplements by older adults. The paper's date is unverified (about 17 days), so confirm it's within the roundup window.",
+   "is_it_real": "Moderate. The conclusion matches earlier large trials, but this paper is a narrative review with an industry tie (Abiogen). It's useful as a service item, not new evidence.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42476451/",
+    "https://doi.org/10.1016/j.metabol.2026.156697"
+   ],
+   "studies": [
+    {
+     "pmid": "42476451",
+     "journal": "Metabolism: Clinical and Experimental",
+     "caveats": "observational design, narrative review (not systematic meta-analysis), industry funding [Abiogen — prior research funding to lead author]",
+     "days_online": 17
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-25-breastfeeding-longer-and-more-exclusively-was-link",
+   "title": "Breastfeeding longer and more exclusively was linked to less postpartum weight hanging on through the first year",
+   "created": "2026-10-25",
+   "angle": "A quick, usable answer to a question new parents search all the time. In 714 Chinese mothers followed to 12 months, more cumulative breastfeeding was linked to lower odds of ending up on a high or moderate weight-retention path, and exclusive early breastfeeding looked best. Caveat in a clause: it's observational, so mothers who breastfeed longer may differ in other ways.",
+   "why_now": "Online 13 days (verified), inside the roundup window, and not widely covered.",
+   "is_it_real": "Observational cohort in one country, so confounding (income, sleep, return to work) is likely and the result is an association, not proof breastfeeding causes weight loss. Funded by Danone Nutricia, a formula maker, which would if anything cut against a pro-breastfeeding result. Moderate sample, four time points, trajectory modeling.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42863706/",
+    "https://doi.org/10.1016/j.ajcnut.2026.101581"
+   ],
+   "studies": [
+    {
+     "pmid": "42863706",
+     "journal": "The American Journal of Clinical Nutrition",
+     "caveats": "observational design, single-country cohort (China — generalizability to other populations uncertain), industry funding [Danone Nutricia], self-reported breastfeeding mode possible",
+     "days_online": 13
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-25-a-bleeding-disorder-twice-as-common-as-hemophilia",
+   "title": "A bleeding disorder twice as common as hemophilia, and worst for women, has no approved drug, but six are now in trials",
+   "created": "2026-10-25",
+   "angle": "HHT causes frequent nosebleeds, anemia and hidden blood-vessel malformations that can lead to stroke. The review calls it the most damaging inherited bleeding disorder in women and counts six drug candidates in clinical development. One line with the caveat: these are early trials, not treatments yet.",
+   "why_now": "In The Lancet Haematology 14 days ago.",
+   "is_it_real": "A review with no new trial data. Several authors have consulting or research ties to the companies developing the drugs. The prevalence (about 1 in 5,000) and the 'no licensed therapy' claim are well established. Pipeline drugs may fail.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42860130/",
+    "https://doi.org/10.1016/S2352-3026(26)00190-0"
+   ],
+   "studies": [
+    {
+     "pmid": "42860130",
+     "journal": "The Lancet Haematology",
+     "caveats": "review article (no original trial data), industry funding [Agios, Atavistik, Sobi, Vaderis, Novartis, Amgen, Alnylam — author consulting and research relationships], surrogate endpoints only",
+     "days_online": 14
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-25-kids-with-selective-mutism-in-norway-weren-t-diagn",
+   "title": "Kids with selective mutism in Norway weren't diagnosed until about age 10 on average, and girls waited longer than boys",
+   "created": "2026-10-25",
+   "angle": "A quick parent-useful item with an echo of ADHD in girls. In a national registry of 1,591 children, the average age at diagnosis was 10.1. Girls were referred and diagnosed later than boys. Half had another diagnosis, usually anxiety, and nearly a third got medication, mostly SSRIs in adolescence.",
+   "why_now": "Online 16 days, inside the roundup window. Girls being diagnosed later echoes the women-and-ADHD conversation she already writes about.",
+   "is_it_real": "National registry data covering all specialist-care cases in Norway, so it's population-wide but only one health system. The digest headline 'years too late' overstates it: the measured gap from referral to diagnosis is about one year. 'Years' would depend on typical onset age, which this summary doesn't give, so check the paper before using it. The size of the girl-boy gap isn't given here either; confirm it.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42853409/",
+    "https://doi.org/10.1007/s00787-026-03211-3"
+   ],
+   "studies": [
+    {
+     "pmid": "42853409",
+     "journal": "European Child & Adolescent Psychiatry",
+     "caveats": "observational design, single-country (Norway), registry-based (ICD-10 diagnoses only), self-reported (parent-reported) outcomes not applicable — clinical registry data",
+     "days_online": 16
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-25-a-video-e-consult-model-let-pediatricians-finish-t",
+   "title": "A video e-consult model let pediatricians finish toddler autism evaluations in a median 73 days",
+   "created": "2026-10-25",
+   "angle": "Waits for autism evaluations often stretch for months. At Vanderbilt, trained primary care doctors recorded short diagnostic visits and sent the videos to psychologists, who all replied within a week. Median time from first concern to finished e-consult was 73 days, and the pediatricians' impressions largely matched the specialists'.",
+   "why_now": "Online 19 days and not widely covered. Long waits for autism diagnosis are a common pain point for parents.",
+   "is_it_real": "81 children at one health system, with no comparison group. The design shows the model works there, not that it beats usual care. The caveat fits in a clause: small, single-site, no head-to-head with standard referral.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42837143/",
+    "https://doi.org/10.1097/DBP.0000000000001522"
+   ],
+   "studies": [
+    {
+     "pmid": "42837143",
+     "journal": "Journal of Developmental and Behavioral Pediatrics",
+     "caveats": "small sample (N<100), single-center, observational design, short follow-up, narrow age range",
+     "days_online": 19
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-25-a-clear-ultrasound-doesn-t-rule-out-endometriosis",
+   "title": "A clear ultrasound doesn't rule out endometriosis",
+   "created": "2026-10-25",
+   "angle": "At one Australian hospital, specialised ultrasound found ovarian endometriosis cysts about 81% of the time but rarely spotted the peritoneal disease that also drives pain. If your scan was 'normal' and the pain isn't, that's not the end of the conversation.",
+   "why_now": "Online about 17 days by the digest's date, inside the roundup window. Confirm the date.",
+   "is_it_real": "Retrospective review of 221 patients at one hospital who went on to surgery, so the sample leans toward people suspected of having disease. The finding fits what specialists already know about ultrasound's limits, which makes it a useful reminder rather than a discovery.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42808571/",
+    "https://doi.org/10.1111/ajo.70183"
+   ],
+   "studies": [
+    {
+     "pmid": "42808571",
+     "journal": "Australian & New Zealand Journal of Obstetrics & Gynaecology",
+     "caveats": "observational design, single-center, retrospective cohort, study population in Australia, short follow-up not applicable (diagnostic study)",
+     "days_online": 17
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-25-for-many-autistic-adults-a-deep-special-interest-w",
+   "title": "For many autistic adults, a deep special interest works as a way to manage emotions, and the stigma around it is the cost",
+   "created": "2026-10-25",
+   "angle": "A German survey compared 60 autistic adults with 122 non-autistic adults. The autistic group leaned on their intense interests to manage stress more than they sought out people, and they also got more negative reactions about those interests. It's a quick reframe: the interest may be a coping tool, not just a symptom to manage.",
+   "why_now": "Online about 19 days. 'Signs of autistic burnout in adults' is exploding in Trend Desk searches this week.",
+   "is_it_real": "This is a self-reported online survey from one country with only 60 autistic participants, and the online date isn't verified. It shows what people say about how they use their interests, not measured emotional outcomes. That's fine for a single roundup line with the caveat in a clause, and not enough for more.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42557913/",
+    "https://doi.org/10.1177/13623613261471572"
+   ],
+   "studies": [
+    {
+     "pmid": "42557913",
+     "journal": "Autism",
+     "caveats": "observational design, self-reported outcomes, WEIRD sample (Western, Educated, Industrialized, Rich, Democratic), online survey, single-country (Germany)",
+     "days_online": 19
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-25-caffeine-didn-t-help-people-tune-out-distractions",
+   "title": "Caffeine didn't help people tune out distractions in a lab test, only a small speed bump",
+   "created": "2026-10-25",
+   "angle": "In three lab experiments at Texas A&M, 200 mg of caffeine (about two cups of coffee) didn't improve how well people filtered distractions or picked up visual patterns. The only gain was slightly faster target detection, in one of the three experiments. Short and useful, with the caveat in a clause: small lab study.",
+   "why_now": "Online 4 days (verified). It pairs with the clocks falling back on Nov 1, when people reach for more coffee.",
+   "is_it_real": "Thin but honest if framed narrowly. The sample was small (under 100), the design single-blind rather than double-blind, at one university, using computer visual-search tasks. It tested selective attention, not alertness, reaction time when sleep-deprived, or mood, so it can't support 'coffee doesn't help you focus' in general. Say 'in lab tests' and give no N, because the abstract count isn't in the digest.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42905302/",
+    "https://doi.org/10.1186/s41235-026-00760-8"
+   ],
+   "studies": [
+    {
+     "pmid": "42905302",
+     "journal": "Cognitive Research: Principles and Implications",
+     "caveats": "small sample (N<100), single-blind (not double-blind) design, single-center, no sex-disaggregated data, lab-based tasks may not reflect real-world attention demands",
+     "days_online": 4
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-25-over-a-decade-with-parkinson-s-psychosis-and-apath",
+   "title": "Over a decade with Parkinson's, psychosis and apathy climbed while anxiety eased",
+   "created": "2026-10-25",
+   "angle": "In 846 people with biomarker-confirmed Parkinson's tracked for 10 years, the odds of psychosis rose about 21% per year and apathy about 17% per year, while anxiety dipped slightly. It's a useful heads-up for families on what to watch for as the disease progresses.",
+   "why_now": "Trend Desk has Marshall Faulk's Parkinson's disclosure as a roundup item this week, so this could run next to it. The study has been online 19 days (verified).",
+   "is_it_real": "A large, well-characterized cohort (PPMI), but observational. The effects are per-year odds ratios, not prevalence. The digest's 'psychosis nearly doubled' line isn't backed by the summary, so don't use it. The digest calls PPMI US-only, but it has international sites, so check before saying so.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42839627/",
+    "https://doi.org/10.1002/mds.70557"
+   ],
+   "studies": [
+    {
+     "pmid": "42839627",
+     "journal": "Movement Disorders",
+     "caveats": "observational design, single-country (US) cohort",
+     "days_online": 19
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-25-an-er-visit-for-a-fall-can-be-an-early-warning-sig",
+   "title": "An ER visit for a fall can be an early warning sign of a first seizure",
+   "created": "2026-10-25",
+   "angle": "Across 57,547 adults with a first seizure in 11 states, the odds of a fall-related ER visit in the week before the seizure were about 2.6 times the odds in the same week a year earlier. The signal stretched back as far as 22 weeks. Unexplained falls deserve a second look.",
+   "why_now": "Recent (about 10 days, date unverified; confirm it's within the 21-day roundup window). It's a practical, quick takeaway for readers and caregivers.",
+   "is_it_real": "A case-crossover design using administrative ER data. That's a reasonable method, but the figure is an odds ratio, not 'times more likely', and it only covers the 7,307 people who had a prior fall visit. Mean age was 49, so it's not an older-adult finding. Some 'falls' may have been unrecognized seizures, which supports the point rather than undermining it.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42848964/",
+    "https://doi.org/10.1212/WNL.0000000000218597"
+   ],
+   "studies": [
+    {
+     "pmid": "42848964",
+     "journal": "Neurology",
+     "caveats": "observational design, secondary analysis, no age breakdown reported, mean age 49.3 years (older adult subgroup not separately analyzed)",
+     "days_online": 10
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-25-six-minutes-of-daily-stretching-eased-fibromyalgia",
+   "title": "Six minutes of daily stretching eased fibromyalgia symptoms in a small six-week trial",
+   "created": "2026-10-25",
+   "angle": "A useful, quick number. A home routine short enough to actually do improved fibromyalgia impact scores by about 19%, and adherence was 83%. That's relevant for a condition where high-intensity exercise often backfires.",
+   "why_now": "Online about 17 days (unverified). It's an RCT with a takeaway readers can use.",
+   "is_it_real": "Small RCT: 58 adults, six weeks, compared against a waitlist rather than a placebo or attention control, with self-reported outcomes. The authors flag a sex imbalance. The caveat clause: small, short, and unblinded. Confirm the online date before it runs.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42242521/",
+    "https://doi.org/10.1016/j.apmr.2026.05.016"
+   ],
+   "studies": [
+    {
+     "pmid": "42242521",
+     "journal": "Archives of Physical Medicine and Rehabilitation",
+     "caveats": "small sample (N<100), short follow-up, waitlist-controlled (not placebo-controlled), self-reported outcomes, sex imbalance noted by authors",
+     "days_online": 17
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-25-200-smart-swim-goggles-didn-t-make-swimmers-any-fa",
+   "title": "$200+ smart swim goggles didn't make swimmers any faster than the same workouts without them",
+   "created": "2026-10-25",
+   "angle": "In a 12-week randomized trial of 57 recreational swimmers, real-time-feedback goggles (FORM) did no better than following the same training plan without them. Both groups improved swim speed by about 6–7%. The plan did the work, not the gadget.",
+   "why_now": "Online 19 days. It's a quick, useful consumer-tech line that fits a Friday 'save your money' item.",
+   "is_it_real": "This was a real RCT, but small and at a single center, with only 12 weeks of follow-up. A null result in 57 people can't rule out a small benefit. The roundup line should say 'no measurable edge', not 'useless'. Check whether FORM had any role in the study.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42841409/",
+    "https://doi.org/10.1249/MSS.0000000000004165"
+   ],
+   "studies": [
+    {
+     "pmid": "42841409",
+     "journal": "Medicine and Science in Sports and Exercise",
+     "caveats": "small sample (N<100), single-center, short follow-up",
+     "days_online": 19
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-25-your-afternoon-snack-was-linked-to-a-bigger-blood",
+   "title": "Your afternoon snack was linked to a bigger blood-sugar bump than a morning one, and moving for half an hour afterward blunted it",
+   "created": "2026-10-25",
+   "angle": "785 adults without diabetes wore glucose monitors and activity trackers for nine days. Afternoon and early-evening snacks produced larger glucose rises than morning ones, even after accounting for what was eaten, and moderate-to-vigorous activity in the 30 minutes after was linked to smaller rises. A useful line for the glucose-spike crowd.",
+   "why_now": "Online 18 days (verified), and CGMs for people without diabetes are a live wellness trend.",
+   "is_it_real": "Observational, Singapore only, self-reported food. The outcome is two-hour glucose area under the curve, not health outcomes. Nobody has shown that snack-level glucose bumps matter for people without diabetes.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42843723/",
+    "https://doi.org/10.1016/j.ajcnut.2026.101574"
+   ],
+   "studies": [
+    {
+     "pmid": "42843723",
+     "journal": "The American Journal of Clinical Nutrition",
+     "caveats": "observational design, single-country cohort (Singapore), self-reported dietary intake, no clinical outcomes beyond glucose iAUC",
+     "days_online": 18
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-25-a-mediterranean-lifestyle-was-linked-to-30-lower-d",
+   "title": "A Mediterranean lifestyle was linked to 30% lower death risk across every income and education level, and higher earners saw the biggest gap",
+   "created": "2026-10-25",
+   "angle": "105,812 Dutch adults followed for 13 years. The highest adherence to a Mediterranean diet-plus-lifestyle score (food, activity, rest, social habits) was linked to 30% lower all-cause mortality. Income amplified the association more than education did, which is a quiet hint that money matters more than knowing what to eat.",
+   "why_now": "Online 16 days (verified). The disparity angle is the twist on a familiar diet story.",
+   "is_it_real": "Observational. Self-reported diet scored once at baseline, Dutch cohort. HR 0.70 is a relative figure. The 46%-lower figure for high income plus high adherence compares against a reference group that mixes income and adherence, so frame the income point as suggestive.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42854785/",
+    "https://doi.org/10.1016/j.ajcnut.2026.101580"
+   ],
+   "studies": [
+    {
+     "pmid": "42854785",
+     "journal": "The American Journal of Clinical Nutrition",
+     "caveats": "observational design, self-reported dietary intake, Dutch cohort (may not generalize globally), MEDLIFE scored at baseline only",
+     "days_online": 16
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-25-arfid-isn-t-just-picky-eating-across-84-studies-ab",
+   "title": "ARFID isn't just picky eating: across 84 studies, about 44% of kids with it also had an anxiety disorder and nearly a third had nutritional deficiencies",
+   "created": "2026-10-25",
+   "angle": "A meta-analysis putting numbers on how medically and psychiatrically tangled the 'picky eating disorder' is. GI disorders in 30%, nutritional deficiencies in 32%, anxiety in 44%, autism in 19%. Useful for parents who've seen ARFID on TikTok.",
+   "why_now": "Online 21 days (verified, the last day roundup-eligible). ARFID awareness keeps rising online.",
+   "is_it_real": "Pooled prevalence from mostly clinical samples, which skew toward sicker kids. Heterogeneity is high, publication bias was detected, and GRADE certainty is very low to low. Present the figures as rough estimates.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42830628/",
+    "https://doi.org/10.1002/erv.70172"
+   ],
+   "studies": [
+    {
+     "pmid": "42830628",
+     "journal": "European Eating Disorders Review",
+     "caveats": "observational design, high heterogeneity (I²≥75%), publication bias detected for anxiety/depression/nutritional deficiencies, very low to low GRADE certainty of evidence",
+     "days_online": 21
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-25-childhood-abuse-was-linked-to-chronic-constipation",
+   "title": "Childhood abuse was linked to chronic constipation decades later in a large Harvard-affiliated cohort",
+   "created": "2026-10-25",
+   "angle": "A gut-brain item. Gastroenterology adds chronic constipation to the list of gut conditions tied to early-life adversity, which suggests some stubborn constipation may not be a fiber problem.",
+   "why_now": "Online 17 days (verified), in a top GI journal, and not widely covered.",
+   "is_it_real": "The digest worked from the title and affiliations only; the abstract wasn't available. Before this runs, pull the paper for the cohort name, N and the odds ratio, and report it as an odds ratio. Abuse history is self-reported and recalled, and the design is observational. If the effect is small, cut it.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42849763/",
+    "https://doi.org/10.1053/j.gastro.2026.09.022"
+   ],
+   "studies": [
+    {
+     "pmid": "42849763",
+     "journal": "Gastroenterology",
+     "caveats": "observational design, self-reported dietary intake, self-reported abuse history, no mechanistic data, sample size not confirmed in abstract",
+     "days_online": 17
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-25-most-pok-mon-packs-and-labubu-blind-boxes-don-t-te",
+   "title": "Most Pokémon packs and Labubu blind boxes don't tell you your odds of a rare pull",
+   "created": "2026-10-25",
+   "angle": "Researchers checked 50 trading card packs and blind boxes. 80% gave no odds at all, and not one let a buyer work out the chance of getting a specific card. That matters for products sold to kids with no age limit.",
+   "why_now": "Online 13 days (verified). The Labubu and Pokémon card frenzies keep these products in the news.",
+   "is_it_real": "The sample is small (50 packs) and all from Hong Kong, so the US shelf may differ. The study describes packaging and measures no harm to kids. The idea that this may break consumer law is the authors' argument, not a ruling. Add the caveat in a clause.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42611551/",
+    "https://doi.org/10.1556/2006.2026.00197"
+   ],
+   "studies": [
+    {
+     "pmid": "42611551",
+     "journal": "Journal of Behavioral Addictions",
+     "caveats": "small sample (N<100), observational design, single-center, WEIRD sample (Western, Educated, Industrialized, Rich, Democratic)",
+     "days_online": 13
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-25-tourists-left-antibiotics-in-the-soil-of-one-of-ea",
+   "title": "Tourists left antibiotics in the soil of one of Earth's most remote mountaintops, even far from the campsites",
+   "created": "2026-10-25",
+   "angle": "A weird-stat item. On Roraima-tepui, a 'sky island' above the Amazon with no sanitation, researchers found 11 pharmaceuticals including ciprofloxacin, some in zones visitors don't use. Caveat in a clause: resistance genes weren't measured.",
+   "why_now": "Online 18 days (verified). It works for this Friday's roundup.",
+   "is_it_real": "Soil chemistry from one site. The detections are real, but the antimicrobial-resistance risk is a modelled estimate, not measured resistance.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42844574/",
+    "https://doi.org/10.1093/inteam/vjag158"
+   ],
+   "studies": [
+    {
+     "pmid": "42844574",
+     "journal": "Integrated Environmental Assessment and Management",
+     "caveats": "observational design, single-center",
+     "days_online": 18
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-25-a-second-kissing-bug-species-in-the-southwest-has",
+   "title": "A second kissing-bug species in the Southwest has been caught carrying the Chagas parasite",
+   "created": "2026-10-25",
+   "angle": "Surveillance on military bases near the US-Mexico border in California and Arizona found the Chagas parasite in 9% of Paratriatoma hirsuta bugs, the first confirmation in wild-caught insects of this species, and in 7% of the better-known Triatoma rubida. Kissing bugs are a recurring viral scare, so a short, accurate item is useful.",
+   "why_now": "Online 18 days with a verified date. Kissing-bug posts come back every year as viral fear content.",
+   "is_it_real": "83 insects collected from wood rat nests. This shows the parasite is present in the bugs. It does not show human infections. US-acquired Chagas is rare, and most US cases were acquired abroad. Put that in a clause.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42660107/",
+    "https://doi.org/10.4269/ajtmh.26-0007"
+   ],
+   "studies": [
+    {
+     "pmid": "42660107",
+     "journal": "The American Journal of Tropical Medicine and Hygiene",
+     "caveats": "small sample (N<100), observational design, single-region (U.S.-Mexico border)",
+     "days_online": 18
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-25-rsv-shot-for-60-people-on-immune-suppressing-drugs",
+   "title": "RSV shot for 60+: people on immune-suppressing drugs started with about nine times the hospitalization rate, and the vaccine appeared to protect them too",
+   "created": "2026-10-25",
+   "angle": "In a 131,000-person Danish pragmatic trial, the RSV vaccine cut RSV hospitalizations in adults 60 and older by about 83%. Unvaccinated people with immunosuppression had about nine times the hospitalization rate of everyone else, which is the number readers on transplant, cancer or autoimmune drugs can use. Caveat in a clause: Pfizer funded it, and the immunosuppressed estimate is very imprecise.",
+   "why_now": "RSV season is starting, and the study is 19 days old.",
+   "is_it_real": "The overall effectiveness comes from a large randomized trial, but it was open-label, and only 21 RSV hospitalizations occurred, so the subgroup estimate is very imprecise (its interval crosses zero). Pfizer makes the vaccine and employs some of the authors. The fact-check flagged minor issues, so the item should use the abstract's numbers exactly.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42838078/",
+    "https://doi.org/10.1016/j.lanhl.2026.100895"
+   ],
+   "studies": [
+    {
+     "pmid": "42838078",
+     "journal": "Lancet Healthy Longev",
+     "caveats": "Funded by Pfizer, which manufactures RSVpreF, and several Pfizer employees are co-authors. Open-label with no placebo. Only 21 RSV hospitalizations occurred in total, so the immunosuppressed subgroup estimate is very imprecise and the trial was not powered to detect subgroup differences. Danish population may not generalize everywhere.",
+     "days_online": 19
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-25-a-non-hormonal-hot-flash-drug-cut-night-waking-at",
+   "title": "A non-hormonal hot-flash drug cut night waking at 4 weeks, but the sleep benefit was gone by week 12",
+   "created": "2026-10-25",
+   "angle": "In a 110-woman trial, Bayer's elinzanetant cut about 22 minutes of night waking versus placebo at four weeks, measured in a sleep lab. By week 12 the gap was under a minute. A useful reality check for anyone asked to choose a non-hormonal menopause drug for sleep. Caveat in a clause: small, Bayer-funded, and the favorable whole-period results were post hoc.",
+   "why_now": "Online 12 days, while menopause and perimenopause searches are exploding this week.",
+   "is_it_real": "A randomized but small phase II trial (110 women, 12 weeks) funded and partly authored by Bayer. The prespecified week-12 comparison was null; the analyses favoring the drug were post hoc. Women were 40 to 65. The item should check elinzanetant's current US approval status before naming a brand.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42520241/",
+    "https://doi.org/10.1093/sleep/zsag208"
+   ],
+   "studies": [
+    {
+     "pmid": "42520241",
+     "journal": "Sleep",
+     "caveats": "Small N (110), short 12-week follow-up, and industry funded — multiple authors are employees of Bayer, which develops elinzanetant. The favorable across-the-period findings came from post hoc analyses, not the prespecified comparison, and the primary objective measure showed no group difference at week 12. Participants were aged 40–65, so results may not generalize to women over 65.",
+     "days_online": 12
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-25-exercise-alone-in-midlife-wasn-t-linked-to-less-co",
+   "title": "Exercise alone in midlife wasn't linked to less cognitive impairment; exercise plus diet, no smoking and a healthy weight was",
+   "created": "2026-10-25",
+   "angle": "A quick 'one habit isn't a shield' item. In 18 years of data on 3,011 British civil servants who were 45 to 64 at the start, the analysis simulated a trial. Starting or keeping up exercise on its own didn't significantly lower the risk of cognitive impairment. Bundling it with diet, not smoking and a normal BMI did, and adding blood pressure, cholesterol and blood sugar control did most. Caveat in a clause: a statistical emulation, not a real trial.",
+   "why_now": "Online 14 days. Brain-health and dementia searches are running high this week.",
+   "is_it_real": "Observational cohort data run through a target-trial emulation, so this is association, not causation. Whitehall II is British civil servants. Impairment was defined by test scores, not diagnosis. The fact-check flagged minor issues. Say 'wasn't linked to', not 'doesn't work'.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42865774/",
+    "https://doi.org/10.1002/trc2.70307"
+   ],
+   "studies": [
+    {
+     "pmid": "42865774",
+     "journal": "Alzheimers Dement (N Y)",
+     "caveats": "Observational cohort with statistical emulation of a trial, not an actual randomized trial — causation cannot be established. Whitehall II is a cohort of British civil servants and may not generalize to other populations; cognitive impairment was defined by cognitive testing rather than clinical diagnosis.",
+     "days_online": 14
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-25-laser-light-therapy-added-nothing-to-back-pain-exe",
+   "title": "Laser/light therapy added nothing to back-pain exercise in a fully blinded trial with a year of follow-up",
+   "created": "2026-10-25",
+   "angle": "Red-light and laser therapy is sold everywhere, from clinics to home panels. In a 148-person trial where patients, therapists and assessors were all blinded, adding photobiomodulation to a back-exercise program changed pain by 0.4 points out of 10, and had no meaningful effect on disability or an inflammation marker, at any point up to 12 months. The exercise did the work. Caveat in a clause: one device and protocol, tested only as an add-on, in adults under 65.",
+   "why_now": "Online 13 days. Red-light therapy is a steady consumer trend.",
+   "is_it_real": "A well-blinded randomized trial with long follow-up. Limits: one device and dosing protocol, an add-on design (it doesn't test light therapy alone), and ages 18 to 65. The fact-check flagged minor issues. It says nothing about red light for skin or other uses, so the item shouldn't generalize past back pain.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42864195/",
+    "https://doi.org/10.1016/j.jphys.2026.09.005"
+   ],
+   "studies": [
+    {
+     "pmid": "42864195",
+     "journal": "J Physiother",
+     "caveats": "Participants were aged 18 to 65, so results cannot be assumed to apply to adults over 65 with chronic back pain; the trial tested one specific device and dosing protocol; it addresses photobiomodulation only as an add-on to exercise, not as a standalone therapy.",
+     "days_online": 13
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-25-when-a-city-hospital-closes-older-uninsured-and-me",
+   "title": "When a city hospital closes, older, uninsured and Medicaid patients absorb most of the damage",
+   "created": "2026-10-25",
+   "angle": "A review of 24 US studies spanning six decades found urban hospital closures cluster in poorer, more diverse neighborhoods. They are followed by longer travel and waits, lost emergency and specialty access, and broken continuity of care. The harm falls hardest on elderly, uninsured, Medicaid and minority residents. Effects on deaths were mixed.",
+   "why_now": "The authors warn that expected federal Medicaid cuts could speed up closures. It's a policy item with a take, found 21 days ago.",
+   "is_it_real": "A systematic review of observational and qualitative studies (1961–2024), so it can't establish cause. The mortality findings were mixed, which belongs in the item. US urban settings only. One author has consulting ties. The online date hasn't been verified.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42343058/",
+    "https://doi.org/10.1007/s11606-026-10410-w"
+   ],
+   "studies": [
+    {
+     "pmid": "42343058",
+     "journal": "J Gen Intern Med",
+     "caveats": "Systematic review of observational and qualitative studies spanning six decades; cannot establish causation; findings on mortality were mixed and heterogeneous; U.S. urban settings only; one author reports consulting and grant relationships including Merck & Co. and federal technology policy offices.",
+     "days_online": 21
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-25-women-s-sleep-doesn-t-shrink-at-midlife-it-breaks",
+   "title": "Women's sleep doesn't shrink at midlife, it breaks up: 3.8 million smartwatch nights",
+   "created": "2026-10-25",
+   "angle": "Smartwatch data from 192,500 women showed total sleep barely changed with age. But time awake after first falling asleep rose 15% at 50–54, 25% at 55–59 and 32% at 60–64, compared with women in their early 20s. Men's rose less. Caveat in a clause: the study was funded and largely written by Bayer and Samsung.",
+   "why_now": "Online 12 days. It speaks to the menopause sleep complaint that keeps showing up in searches, and to the extra hour when clocks fall back Nov 1 (Trend Desk roundup).",
+   "is_it_real": "A huge sample, but cross-sectional: it compares age groups rather than following the same women. Wearables estimate sleep rather than measure it, and smartwatch owners skew healthier and wealthier. Most authors work for Bayer (which sells a menopause drug) or Samsung. Report it as wake time after first falling asleep, not 'less sleep'.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42518248/",
+    "https://doi.org/10.1093/sleep/zsag197"
+   ],
+   "studies": [
+    {
+     "pmid": "42518248",
+     "journal": "Sleep",
+     "caveats": "Cross-sectional comparison of age groups, not the same women followed over time, so it cannot show change within individuals. Consumer wearables estimate rather than directly measure sleep stages. Smartwatch owners are likely healthier and more affluent than the general population, and the upper age limit was 65. The study was conducted and funded by Bayer AG with Samsung Electronics; most authors are employees of one or the other.",
+     "days_online": 12
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-25-7-000-steps-a-few-days-a-week-was-linked-to-better",
+   "title": "7,000 steps a few days a week was linked to better bones before menopause, not after",
+   "created": "2026-10-25",
+   "angle": "In 3,529 Japanese women tracked with pedometers for about 3.5 years, hitting 7,000 steps on three or more days a week roughly halved the risk of a drop in bone quality, but only before menopause. After menopause, the link disappeared. Useful line for readers: keep walking for your heart and balance, but ask about strength or impact training for your bones.",
+   "why_now": "Online 2 days. Walking is the default bone advice given to postmenopausal women.",
+   "is_it_real": "Observational, with objective step counts (a plus). Bone was measured by heel ultrasound plus self-reported osteoporosis, not a DXA scan. One region of Japan, 3.5-year follow-up, minor fact-check flag. 'Linked to', not 'protects'.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42909484/",
+    "https://doi.org/10.1007/s00198-026-08263-4"
+   ],
+   "studies": [
+    {
+     "pmid": "42909484",
+     "journal": "Osteoporos Int",
+     "caveats": "Observational cohort — cannot establish causation; bone status was assessed by quantitative ultrasound plus self-reported osteoporosis diagnosis rather than DXA; single-region Japanese population may not generalize; roughly 3.5-year follow-up.",
+     "days_online": 2
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-25-most-people-say-the-wrong-thing-to-a-friend-with-i",
+   "title": "Most people say the wrong thing to a friend with infertility, and knowing the facts doesn't help",
+   "created": "2026-10-25",
+   "angle": "72% of people picked at least one unhelpful response to a woman describing infertility, and knowing more about infertility made no difference. Useful line: information campaigns alone won't fix it.",
+   "why_now": "Online 13 days, not widely covered, inside the roundup window.",
+   "is_it_real": "An online vignette survey of 419 Canadian adults. It measures what people say they would say to an imagined woman, not real conversations. The association is real but limited to one country and self-report.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42864189/",
+    "https://doi.org/10.1016/j.whi.2026.09.002"
+   ],
+   "studies": [
+    {
+     "pmid": "42864189",
+     "journal": "Women's Health Issues",
+     "caveats": "observational design, self-reported outcomes, online survey, vignette-based (hypothetical responses, not real interactions), single country (Canada)",
+     "days_online": 13
+    }
+   ]
   }
  ]
 }
