@@ -1,0 +1,242 @@
+{
+ "date": "2026-10-26",
+ "ideas": [
+  {
+   "id": "2026-10-26-heart-health-finally-gets-a-female-definition-what",
+   "title": "Heart health finally gets a female definition: what the new AHA criteria for girls and women change, from puberty to menopause",
+   "created": "2026-10-26",
+   "route": "pitch",
+   "speed": "new",
+   "beat": "women's health / cardiometabolic",
+   "angle": "Heart disease is the top killer of women, yet the standard yardsticks were built on men. The piece asks what the new sex-specific criteria add (life stages like pregnancy and menopause) and whether doctors will actually use them, or whether it stays a guideline on paper.",
+   "why_now": "Joint guidance led by the AHA was just issued and lands in the same week as the NIH women's health division and task force news.",
+   "is_it_real": "The guidance itself is solid: it is an official AHA newsroom release from leading professional groups. It is clinical guidance, not a new study, so frame it that way. Specific contents must come from the published statement, not the press release alone (upstream check flagged minor issues).",
+   "confidence": "high",
+   "evidence": [
+    "https://newsroom.heart.org/news/leading-health-groups-redefine-heart-health-for-girls-and-women"
+   ],
+   "terms": [
+    "aha leading health groups redefine heart health criteria for girls and women"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-10-26",
+     "event": "routed",
+     "detail": "pitch"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "AHA/leading health groups redefine heart-health criteria for girls and women",
+     "speed": "new",
+     "first_seen": "2026-10-26",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-26",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 54,
+       "opportunity": 79
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-10-26-kff-s-fall-poll-who-americans-trust-on-vaccines-no",
+   "title": "KFF's fall poll: who Americans trust on vaccines now",
+   "created": "2026-10-26",
+   "route": "roundup",
+   "speed": "new",
+   "beat": "public health",
+   "angle": "One sharp stat from KFF's fall trust tracker, with a one-line take on what it means heading into flu and measles season. It pairs naturally with the measles/SSPE pitch already in motion.",
+   "why_now": "KFF released its Fall 2026 update on vaccine views this week.",
+   "is_it_real": "KFF is a reliable pollster, but this is self-reported opinion data. Present it as a trust metric and pull the actual numbers from the KFF report; none are in hand yet.",
+   "confidence": "medium",
+   "evidence": [
+    "https://www.kff.org/public-opinion/kff-tracking-poll-on-health-information-and-trust-fall-2026-update-on-vaccine-views/"
+   ],
+   "terms": [
+    "kff fall 2026 tracking poll vaccine trust"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-10-26",
+     "event": "routed",
+     "detail": "roundup"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "KFF Fall 2026 tracking poll — vaccine trust",
+     "speed": "new",
+     "first_seen": "2026-10-26",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-26",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 39,
+       "opportunity": 76
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-10-26-a-ptsd-treatment-with-a-68-remission-rate-what-tha",
+   "title": "A PTSD treatment with a '68% remission' rate: what that number does and doesn't mean",
+   "created": "2026-10-26",
+   "route": "roundup",
+   "speed": "new",
+   "beat": "mental health",
+   "angle": "A short, skeptical item on a headline remission rate: what the treatment is, how big and long the trial was, and what remission means in trial terms.",
+   "why_now": "Trial results were publicized Oct. 22 and the 68% figure is the kind of number that travels.",
+   "is_it_real": "So far this rests on a single ScienceDaily summary. The trial phase, sample size, comparator and journal are unconfirmed. It only runs if the writer can find the paper, and it should not be upgraded to a pitch on this evidence.",
+   "confidence": "low",
+   "evidence": [
+    "https://www.sciencedaily.com/releases/2026/10/261022081309.htm"
+   ],
+   "terms": [
+    "ptsd treatment 68 remission rate clinical trial"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-10-26",
+     "event": "routed",
+     "detail": "roundup"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "PTSD treatment — 68% remission rate, clinical trial",
+     "speed": "new",
+     "first_seen": "2026-10-26",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-26",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 38,
+       "opportunity": 82
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-10-26-is-it-real-the-non-toxic-air-fryer-pfas-fear-ceram",
+   "title": "Is it real? The 'non-toxic air fryer': PFAS fear, ceramic marketing, and what the coatings actually do",
+   "created": "2026-10-26",
+   "route": "tfm",
+   "speed": "emerging",
+   "beat": "viral wellness claims / the house",
+   "angle": "Searches for a 'non-toxic' air fryer keep climbing. The post checks whether nonstick coatings in air fryers pose a real exposure risk at normal temperatures, or whether 'non-toxic' is mostly a marketing label for ceramic and stainless models. It ties into her own kitchen gut-reno choices.",
+   "why_now": "The term has been rising on and off for about a month and is still climbing, which suits an evergreen 'is it real?' post. It is a candidate for next Wednesday, since this week's slot already went to the AI diagnosis post.",
+   "is_it_real": "The search trend is real and sustained. The underlying claim is checkable against published research on PTFE/PFAS and FDA food-contact rules, but no sources are in hand yet and none are cited here. The post needs its own receipts.",
+   "confidence": "medium",
+   "evidence": [],
+   "terms": [
+    "non toxic air fryer"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-10-26",
+     "event": "routed",
+     "detail": "tfm"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "non-toxic air fryer",
+     "speed": "emerging",
+     "first_seen": "2026-09-25",
+     "weeks_seen": 4,
+     "sources": [
+      "rising"
+     ],
+     "profiles": [
+      "daily-signals"
+     ],
+     "recent": [
+      {
+       "date": "2026-09-25",
+       "profile": "daily-signals",
+       "source": "rising",
+       "stage": "rising"
+      },
+      {
+       "date": "2026-10-03",
+       "profile": "daily-signals",
+       "source": "rising",
+       "stage": "rising"
+      },
+      {
+       "date": "2026-10-24",
+       "profile": "daily-signals",
+       "source": "rising",
+       "stage": "rising"
+      },
+      {
+       "date": "2026-10-25",
+       "profile": "daily-signals",
+       "source": "rising",
+       "stage": "rising"
+      },
+      {
+       "date": "2026-10-26",
+       "source": "rising",
+       "profile": "daily-signals",
+       "stage": "rising"
+      }
+     ],
+     "previous_verdict": "held",
+     "previous_reason": "watch"
+    }
+   ]
+  }
+ ],
+ "dropped": 66,
+ "watching": 4,
+ "notes": "The wide trending feed was almost all sports, celebrities and politics. The keepers came from the newsroom pipeline: two attach to yesterday's ideas (the NIH task force and the cheese recall), and the AHA women's heart-health guidance is the one fresh pitch. Women's health is clustering this week (NIH division, task force, AHA criteria), which could support a bigger 'women's health moment' piece if editors bite on the pitches. Humana, Risant Health and Abbott Nutrition appeared with no context; they are on watch because open enrollment or a formula issue could turn any of them into a story. TFM already has this Wednesday's post, so the air fryer idea is queued for the following week.",
+ "cost_usd": 0.2584
+}

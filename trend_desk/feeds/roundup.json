@@ -1,6 +1,36 @@
 {
- "updated": "2026-10-25",
+ "updated": "2026-10-26",
  "items": [
+  {
+   "id": "2026-10-26-kff-s-fall-poll-who-americans-trust-on-vaccines-no",
+   "title": "KFF's fall poll: who Americans trust on vaccines now",
+   "created": "2026-10-26",
+   "angle": "One sharp stat from KFF's fall trust tracker, with a one-line take on what it means heading into flu and measles season. It pairs naturally with the measles/SSPE pitch already in motion.",
+   "why_now": "KFF released its Fall 2026 update on vaccine views this week.",
+   "is_it_real": "KFF is a reliable pollster, but this is self-reported opinion data. Present it as a trust metric and pull the actual numbers from the KFF report; none are in hand yet.",
+   "evidence": [
+    "https://www.kff.org/public-opinion/kff-tracking-poll-on-health-information-and-trust-fall-2026-update-on-vaccine-views/"
+   ],
+   "terms": [
+    "KFF Fall 2026 tracking poll — vaccine trust"
+   ],
+   "status": "routed"
+  },
+  {
+   "id": "2026-10-26-a-ptsd-treatment-with-a-68-remission-rate-what-tha",
+   "title": "A PTSD treatment with a '68% remission' rate: what that number does and doesn't mean",
+   "created": "2026-10-26",
+   "angle": "A short, skeptical item on a headline remission rate: what the treatment is, how big and long the trial was, and what remission means in trial terms.",
+   "why_now": "Trial results were publicized Oct. 22 and the 68% figure is the kind of number that travels.",
+   "is_it_real": "So far this rests on a single ScienceDaily summary. The trial phase, sample size, comparator and journal are unconfirmed. It only runs if the writer can find the paper, and it should not be upgraded to a pitch on this evidence.",
+   "evidence": [
+    "https://www.sciencedaily.com/releases/2026/10/261022081309.htm"
+   ],
+   "terms": [
+    "PTSD treatment — 68% remission rate, clinical trial"
+   ],
+   "status": "routed"
+  },
   {
    "id": "2026-10-25-4-3-million-tubes-of-toothpaste-recalled-including",
    "title": "4.3 million tubes of toothpaste recalled, including kids' Brush Buddies: check your bathroom",
@@ -16,21 +46,6 @@
    "status": "routed"
   },
   {
-   "id": "2026-10-25-food-recall-week-ready-to-eat-meat-and-hot-dogs-pl",
-   "title": "Food recall week: ready-to-eat meat and hot dogs, plus Family Farmstead cheese",
-   "created": "2026-10-25",
-   "angle": "A short 'check your fridge' item rounding up the week's USDA meat and hot dog recall and the cheese recall, with the reason and what to do.",
-   "why_now": "All three broke out on the food-safety radar Oct 20.",
-   "is_it_real": "Search signals only, with no notice links in the input. Brands, lots and recall reasons must be confirmed on FSIS and FDA before inclusion. The meat and hot dog terms may be the same recall.",
-   "evidence": [],
-   "terms": [
-    "usda ready to eat meat recall",
-    "hot dog recall",
-    "family farmstead dairy cheese recall"
-   ],
-   "status": "routed"
-  },
-  {
    "id": "2026-10-25-clocks-fall-back-nov-1-what-the-extra-hour-actuall",
    "title": "Clocks fall back Nov 1: what the extra hour actually does to your sleep",
    "created": "2026-10-25",
@@ -40,6 +55,22 @@
    "evidence": [],
    "terms": [
     "daylight saving time"
+   ],
+   "status": "routed"
+  },
+  {
+   "id": "2026-10-25-food-recall-week-ready-to-eat-meat-and-hot-dogs-pl",
+   "title": "Food recall week: ready-to-eat meat and hot dogs, plus Family Farmstead cheese",
+   "created": "2026-10-25",
+   "angle": "A short 'check your fridge' item rounding up the week's USDA meat and hot dog recall and the cheese recall, with the reason and what to do.",
+   "why_now": "All three broke out on the food-safety radar Oct 20.",
+   "is_it_real": "Search signals only, with no notice links in the input. Brands, lots and recall reasons must be confirmed on FSIS and FDA before inclusion. The meat and hot dog terms may be the same recall.",
+   "evidence": [],
+   "terms": [
+    "Cheese recall — E. coli, Class I risk warning",
+    "family farmstead dairy cheese recall",
+    "hot dog recall",
+    "usda ready to eat meat recall"
    ],
    "status": "routed"
   },
