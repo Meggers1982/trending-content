@@ -95,3 +95,19 @@ def pitched_topics(limit: int = 120) -> list[str]:
     except (OSError, json.JSONDecodeError):
         pass
     return topics
+
+
+def trending_now(today) -> list[str]:
+    """What people are searching this week, from Trend Desk's ledger: its recent ideas and the terms
+    it kept or put on watch (not the raw radar terms, which are mostly sports and celebrity noise).
+    A fresh study that tests one of these is the strongest "Is it real?" outline there is."""
+    from .. import ledger
+    try:
+        data = ledger.load()
+    except Exception:  # noqa: BLE001 - the cross-check is a bonus, never a reason to fail
+        return []
+    out = [f"{i['title']} (Trend Desk idea, {i['route']})" for i in ledger.recent_ideas(data, today, days=14)]
+    for e in data.get("terms", {}).values():
+        if e.get("status") in ("kept", "held") and ledger.speed(e, today) in ("exploding", "emerging", "new"):
+            out.append(f"{e['term']} ({ledger.speed(e, today)})")
+    return out[:80]

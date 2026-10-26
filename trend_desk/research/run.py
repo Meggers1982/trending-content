@@ -28,6 +28,7 @@ REPO = DESK.parents[1]
 LEDGER = REPO / "data" / "research_ledger.json"
 HANDOFF_DIR = DESK / "handoff"
 HOLDS = DESK / "holds.json"
+ROUNDUP_FEED = DESK / "feeds" / "roundup.json"
 STATE = Path.home() / ".local/state/research-desk"
 OUTBOX = STATE / "outbox"
 MIN_SCORE = 7          # the dashboard's top-picks default
@@ -220,6 +221,20 @@ def apply(data: dict, result: dict, cands: list[dict], studies: dict, today: dat
     return created, dropped
 
 
+def write_roundup_feed(data: dict, today: date) -> None:
+    """Research items for the Friday roundup prompt (~/.claude/scripts/female-model-roundup-prompt.md),
+    which reads this next to Trend Desk's feed and lists the ids it considered, so nothing repeats."""
+    decisions = read_json(DESK / "feedback" / "decisions.json", [])
+    skipped = {d.get("idea_id") for d in decisions if d.get("action") == "skip"}
+    cutoff = (today - timedelta(days=21)).isoformat()
+    items = [{"id": i, "title": v["title"], "created": v["created"], "angle": v["angle"], "why_now": v["why_now"],
+              "is_it_real": v["is_it_real"], "evidence": v["evidence"],
+              "studies": [{k: st.get(k) for k in ("pmid", "journal", "caveats", "days_online")} for st in v["studies"]]}
+             for i, v in sorted(data["ideas"].items(), key=lambda kv: kv[1]["created"], reverse=True)
+             if v["route"] == "roundup" and v["created"] >= cutoff and i not in skipped]
+    write_json(ROUNDUP_FEED, {"updated": today.isoformat(), "items": items})
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true")
@@ -261,7 +276,8 @@ def main() -> int:
         write_json(handoff, {"date": today.isoformat(), "ideas": [], "notes": "No new studies cleared the bar."})
         return 0
 
-    text = judge.prompt(today.isoformat(), cands, recent_ideas(data, today), sources.pitched_topics())
+    text = judge.prompt(today.isoformat(), cands, recent_ideas(data, today), sources.pitched_topics(),
+                        sources.trending_now(today))
     if args.dry_run:
         out = REPO / "outputs" / "trend_desk" / "research_dry_run_prompt.md"
         out.parent.mkdir(parents=True, exist_ok=True)
@@ -297,6 +313,7 @@ def main() -> int:
         earlier = read_json(handoff, {}).get("ideas", [])
         created = [i for i in earlier if i["id"] not in {c["id"] for c in created}] + created
     write_json(handoff, {"date": today.isoformat(), "ideas": created, "dropped": dropped})
+    write_roundup_feed(data, today)
     print(f"Research Desk: {len(created)} ideas {routes}, dropped {dropped}.")
     return 0
 

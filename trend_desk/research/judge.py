@@ -64,7 +64,8 @@ SCHEMA = {
 }
 
 
-def prompt(today: str, candidates: list[dict], recent: list[dict], pitched: list[str]) -> str:
+def prompt(today: str, candidates: list[dict], recent: list[dict], pitched: list[str],
+           trending: list[str] | None = None) -> str:
     site_lines = "\n".join(f"- {s['slug']}: {s['name']}. {s['audience']} Covers: {s['covers']}."
                            for s in trend_judge.sites())
     return f"""You are the Research Judge for Research Desk, Meagan Morris's research-to-story system.
@@ -99,6 +100,11 @@ Today is {today}.
 
 ## Already pitched or held elsewhere (don't pitch these again)
 {json.dumps(pitched, ensure_ascii=False) if pitched else "(none)"}
+
+## What people are searching this week (from Trend Desk)
+{json.dumps(trending, ensure_ascii=False) if trending else "(nothing yet)"}
+If a study tests one of these claims, that pairing is the strongest "Is it real?" outline there is:
+route it to tfm (unless an editor would pay for it as a pitch) and name the trend in why_now.
 
 ## Studies to judge today ({len(candidates)})
 {json.dumps(candidates, ensure_ascii=False, indent=0)}

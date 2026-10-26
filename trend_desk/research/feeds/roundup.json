@@ -1,0 +1,85 @@
+{
+ "updated": "2026-10-25",
+ "items": [
+  {
+   "id": "rd-2026-10-25-kids-who-got-a-rare-platelet-disorder-after-their",
+   "title": "Kids who got a rare platelet disorder after their first MMR shot showed no added risk after the second",
+   "created": "2026-10-25",
+   "angle": "Take: a large English study of hospital and vaccination records found MMR dose 1 carries a small ITP (low-platelet) risk, about 1 in 42,900 doses. Dose 2 carried no added risk, including in 336 children who had ITP after dose 1, so doctors don't need to stop the series. It's a timely, reassuring number during measles outbreaks.",
+   "why_now": "Online 1 day ago, and measles outbreaks are in the news.",
+   "is_it_real": "Self-controlled case series on national linked records, which is the standard design for vaccine-safety signals and a strong one. The dose-2 reassurance rests on 336 children, which is solid for a rare event but not huge. Give the absolute risk, not the 2.4-fold relative figure, as the headline number.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42771940/",
+    "https://doi.org/10.1016/j.vaccine.2026.129168"
+   ],
+   "studies": [
+    {
+     "pmid": "42771940",
+     "journal": "Vaccine",
+     "caveats": "observational design, secondary analysis",
+     "days_online": 1
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-25-the-rsv-antibody-shot-for-babies-protects-strongly",
+   "title": "The RSV antibody shot for babies protects strongly at first, then fades over the first year",
+   "created": "2026-10-25",
+   "angle": "Take: as RSV season starts, Queensland's first year of nirsevimab was linked to 78% fewer RSV hospitalizations in the first month of life, falling to 23% by nine months and not significant after that. That's why timing the shot to the season matters.",
+   "why_now": "US RSV season is starting now, and parents are deciding about infant RSV protection.",
+   "is_it_real": "Population surveillance data from one Australian state, observational, comparing against earlier birth cohorts, so changes in testing or circulation could affect the numbers. The waning curve is the useful new detail. The headline 78% applies only to month one.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42896226/",
+    "https://doi.org/10.33321/cdi.2026.50.066"
+   ],
+   "studies": [
+    {
+     "pmid": "42896226",
+     "journal": "Communicable Diseases Intelligence (2018)",
+     "caveats": "observational design, single-center, short follow-up",
+     "days_online": 5
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-25-small-doesn-t-mean-safe-many-melanomas-under-6-mm",
+   "title": "Small doesn't mean safe: many melanomas under 6 mm were already invasive",
+   "created": "2026-10-25",
+   "angle": "Take: the 'bigger than a pencil eraser' rule misses things. In 160 confirmed melanomas 6 mm or smaller, 42.5% were already invasive, only 30% showed three or more ABCDE warning signs, and the ABCDE score didn't predict which were invasive. Dermoscopy checks caught more of them early.",
+   "why_now": "Online 9 days ago, not covered. It's an easy, useful skin-check item.",
+   "is_it_real": "Retrospective study from Spain of lesions already confirmed as melanoma. It does NOT mean half of small moles are dangerous, which is the trap in the digest headline. It means that among small melanomas, many had already invaded. No skin-tone or sex breakdown. The item must say that in a clause.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42887854/",
+    "https://doi.org/10.1016/j.ad.2026.104759"
+   ],
+   "studies": [
+    {
+     "pmid": "42887854",
+     "journal": "Actas dermo-sifiliograficas",
+     "caveats": "observational design, retrospective, no sex-disaggregated data, single-region (Spain)",
+     "days_online": 9
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-25-water-workouts-tai-chi-and-wall-sits-ranked-near-t",
+   "title": "Water workouts, tai chi and wall sits ranked near the top for lowering blood pressure in a 284-trial analysis",
+   "created": "2026-10-25",
+   "angle": "Take: for anyone whose knees rule out jogging, a network meta-analysis of 284 trials (18,750 adults with high or borderline blood pressure) ranked aquatic exercise first for lowering systolic pressure (about 10 mmHg), mind-body exercise first for diastolic, and isometric holds as efficient at modest weekly doses.",
+   "why_now": "Online 9 days ago, not covered. It's useful and counter to the 'just walk more' default.",
+   "is_it_real": "Large pool of randomized trials, but the rankings are indirect estimates across very different trials, not head-to-head tests. Mean age is 57, so frail older adults are underrepresented, and the dose figures are modeled. Say 'ranked highest in pooled trials', not 'beats the gym'.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42887271/",
+    "https://doi.org/10.1016/j.maturitas.2026.109132"
+   ],
+   "studies": [
+    {
+     "pmid": "42887271",
+     "journal": "Maturitas",
+     "caveats": "Network meta-analysis pools trials that differ widely in design, supervision and participant characteristics, so head-to-head rankings are estimates rather than direct comparisons. Mean age was 56.8 years, so the oldest and frailest adults are likely underrepresented. Dose-response figures come from modelling, not from trials that directly tested those doses.",
+     "days_online": 9
+    }
+   ]
+  }
+ ]
+}

@@ -39,7 +39,7 @@ Approved 2026-10-25 (Linear MEA-1854; build tickets MEA-1855 to MEA-1859). Plan 
 | `judge.py` | Builds the prompt and makes the one structured call. |
 | `run.py` | One day's run. Eligible: score 7+ (the dashboard's top-picks default), found in the last 3 days, never judged, not taken elsewhere; at most 150 (a prompt-size backstop, not a quota), best first. Applies the Judge's verdicts with the rules enforced again in code (a blocked route is dropped with reason `rule`), accounts for every PMID (one the Judge leaves out without a reason gets one more look on the next run, then is recorded as `not-selected`), writes `data/research_ledger.json` and `handoff/<date>.json`. A second run the same day is a no-op unless `--force`; `--dry-run` writes the prompt to `outputs/trend_desk/research_dry_run_prompt.md` and nothing else. |
 | `mac.py` | The launchd tick: fast-forward, run the Judge after 9am Central once 8+ digests have published today (or after 2pm regardless; at most 3 tries a day), commit and push the ledger and handoff, start the builder, deliver problem messages. |
-| `holds.json` | Paused routes for research ideas. tfm, roundup and brief are paused until MEA-1857 gives them research-specific prompts and a feed; until then those ideas are recorded and wait. |
+| `holds.json` | Paused routes for research ideas (`pitch`, `tfm`, `roundup`, `brief`, `brief:<site>`), same shape as Trend Desk's. Empty since MEA-1857 opened all four on 2026-10-25. |
 | `tg.py` | Its own bot's send, with the hold-until-paired queue. |
 | `feedback/decisions.json` | Her texted decisions about research ideas (written by the bot in piece 4). |
 | `com.meagan.research-desk.plist` | Copy of the launchd job; the live one is in `~/Library/LaunchAgents`. |

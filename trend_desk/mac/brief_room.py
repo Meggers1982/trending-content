@@ -260,7 +260,7 @@ def run_critics(ctx: dict, work: Path) -> dict:
     return results
 
 
-def build(idea: dict) -> dict:
+def build(idea: dict, desk_name: str = "Trend Desk") -> dict:
     site = idea.get("site", "")
     profile = site_profile(site)
     seed = idea.get("seed_keyword") or idea["title"]
@@ -287,6 +287,12 @@ def build(idea: dict) -> dict:
                "place modifier the evidence supports). TermScope's keyword universe is often template filler, "
                "so it is a source, not a rule. Say why, and mark volume as unknown.")
     view = {k: idea.get(k) for k in ("title", "angle", "why_now", "is_it_real", "evidence", "speed")}
+    if idea.get("desk") == "research":
+        # Research Desk ideas start from studies: the brief's evidence section is built on them, and
+        # the evidence checker verifies each against its PubMed abstract like any other source.
+        view.update(studies=idea.get("studies", []), evidence_strength=idea.get("evidence_strength", ""),
+                    note="This idea comes from new peer-reviewed research, not a search trend. Use the "
+                         "studies as the page's core evidence, with their design and caveats stated plainly.")
     ctx = {"site": json.dumps(profile, indent=1), "idea": json.dumps(view, indent=1, ensure_ascii=False),
            "keyword": kw_text, "rules": (c.DESK / "rules.md").read_text(), "copy_rules": COPY_RULES,
            "lessons": brief_lessons()}
@@ -344,8 +350,12 @@ def build(idea: dict) -> dict:
                f"traffic potential {pick['metrics'].get('traffic_potential')}") if pick else "Volume unknown (Ahrefs off)"
     ticket = c.file_linear(
         project, f"Write {profile['name']} Article: {final_kw}",
-        f"Trend Desk built this brief from a rising trend.\n\n- Brief: `{docx}`\n- Focus keyword: **{final_kw}** ({metrics})\n"
-        f"- Trend: {idea['title']} ({idea.get('speed')})\n- Brief room: {rounds} round(s); see the decision log at the end of the brief\n\n"
-        f"Approve by writing it, or text the Trend Desk bot \"skip\" to drop it.")
+        f"{desk_name} built this brief from {'new research' if idea.get('desk') == 'research' else 'a rising trend'}."
+        f"\n\n- Brief: `{docx}`\n- Focus keyword: **{final_kw}** ({metrics})\n"
+        f"- {'Research' if idea.get('desk') == 'research' else 'Trend'}: {idea['title']} ({idea.get('speed')})\n"
+        + (f"- Studies: {', '.join('PMID ' + str(x.get('pmid')) for x in idea.get('studies', []))}\n"
+           if idea.get("desk") == "research" else "")
+        + f"- Brief room: {rounds} round(s); see the decision log at the end of the brief\n\n"
+        f"Approve by writing it, or text the {desk_name} bot \"skip\" to drop it.")
     return {"what": f"brief for \"{final_kw}\" ready", "where": str(docx), "linear": ticket, "keyword": final_kw,
             "ahrefs": bool(pick), "rounds": rounds, "snapshot": str(snap), "docx_mtime": docx.stat().st_mtime}

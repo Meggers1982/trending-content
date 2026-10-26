@@ -46,7 +46,8 @@ def judge_if_due() -> None:
     if p.returncode or made:  # "not ready yet" is neither a try nor a result
         tries[today] = tries.get(today, 0) + 1
         c.write_json(TRIES, {k: v for k, v in tries.items() if k >= (now.date() - timedelta(days=7)).isoformat()})
-    if made and not c.commit_push(["data/research_ledger.json", "trend_desk/research/handoff"],
+    if made and not c.commit_push(["data/research_ledger.json", "trend_desk/research/handoff",
+                                   "trend_desk/research/feeds"],
                                   f"Research Desk: judged {today}'s studies"):
         c.log("Research Desk: couldn't push the ledger and handoff (will retry next tick).")
 
