@@ -1,9 +1,27 @@
 {
- "updated": "2026-10-25T17:28:43-05:00",
+ "updated": "2026-10-26T17:34:10-05:00",
  "summary": {
   "by_route": {
    "pitch": {
-    "built": 3,
+    "built": 50,
+    "skipped": 0,
+    "failed": 2,
+    "edited": 0
+   },
+   "tfm": {
+    "built": 33,
+    "skipped": 0,
+    "failed": 0,
+    "edited": 0
+   },
+   "roundup": {
+    "built": 47,
+    "skipped": 0,
+    "failed": 0,
+    "edited": 0
+   },
+   "brief": {
+    "built": 49,
     "skipped": 0,
     "failed": 0,
     "edited": 0
@@ -12,7 +30,28 @@
   "more_like": [],
   "less_like": [],
   "skipped": [],
-  "rerouted": [],
-  "pitch_results_by_beat": {}
+  "rerouted": [
+   {
+    "title": "Is it real? Supplement strips are replacing gummies. Do they absorb better or just look better?",
+    "route": "tfm",
+    "reason": "pitch to women's health outlet"
+   }
+  ],
+  "pitch_results_by_beat": {
+   "public health": {
+    "queued": 1,
+    "launched": 0,
+    "positive": 0,
+    "passed": 0,
+    "silent": 0
+   },
+   "women's health / public health policy": {
+    "queued": 1,
+    "launched": 0,
+    "positive": 0,
+    "passed": 0,
+    "silent": 0
+   }
+  }
  }
 }
