@@ -432,6 +432,104 @@
    "judged_on": "2026-10-25",
    "status": "dropped",
    "reason": "watch"
+  },
+  "press-yoshinoya-launches-a-shoyu-ramen-menu-alongside-a-full-brand": {
+   "judged_on": "2026-10-26",
+   "status": "dropped",
+   "reason": "noise",
+   "detail": "product launch"
+  },
+  "press-coway-s-airmega-mighty2-named-one-of-time-s-best-inventions": {
+   "judged_on": "2026-10-26",
+   "status": "dropped",
+   "reason": "noise",
+   "detail": "award or ranking"
+  },
+  "press-cortekai-launches-havn-a-passive-sensor-service-for-aging-in": {
+   "judged_on": "2026-10-26",
+   "status": "dropped",
+   "reason": "noise",
+   "detail": "product launch"
+  },
+  "aw-assessing-ability-to-work-how-historical-snap-processes-may-vary-from": {
+   "judged_on": "2026-10-26",
+   "status": "dropped",
+   "reason": "already-covered"
+  },
+  "press-boar-s-head-imports-an-italian-ricotta-meant-to-be-eaten-by": {
+   "judged_on": "2026-10-26",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-atlaua-debuts-solace-an-eight-active-botanical-recovery-shot": {
+   "judged_on": "2026-10-26",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-rafael-nadal-returns-to-the-court-for-the-mgm-slam-in-las-ve": {
+   "judged_on": "2026-10-26",
+   "status": "dropped",
+   "reason": "off-beat"
+  },
+  "press-all-kaiser-permanente-plans-earn-high-2027-medicare-star-rat": {
+   "judged_on": "2026-10-26",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-axxess-partners-with-betterleave-to-expand-bereavement-and-c": {
+   "judged_on": "2026-10-26",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-independent-inspector-general-credits-cpsc-leadership-with-r": {
+   "judged_on": "2026-10-26",
+   "status": "dropped",
+   "reason": "no-reader-stake"
+  },
+  "press-live-burn-demonstration-shows-why-the-first-five-feet-around": {
+   "judged_on": "2026-10-26",
+   "status": "dropped",
+   "reason": "off-beat"
+  },
+  "press-with-california-assisted-living-topping-84-000-a-year-famili": {
+   "judged_on": "2026-10-26",
+   "status": "dropped",
+   "reason": "unverifiable-claim"
+  },
+  "press-insurance-expert-sam-kessler-outlines-the-coverage-mistakes": {
+   "judged_on": "2026-10-26",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-why-local-knowledge-matters-when-buying-an-older-home": {
+   "judged_on": "2026-10-26",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-century-communities-opens-crosswinds-new-homes-from-the-400s": {
+   "judged_on": "2026-10-26",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-uk-chancellor-healey-s-first-autumn-budget-puts-gilts-in-foc": {
+   "judged_on": "2026-10-26",
+   "status": "dropped",
+   "reason": "off-beat"
+  },
+  "press-belmont-village-grows-its-best-buddies-jobs-partnership-to-1": {
+   "judged_on": "2026-10-26",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-rokae-ships-its-10-000th-humanoid-force-controlled-robotic-a": {
+   "judged_on": "2026-10-26",
+   "status": "dropped",
+   "reason": "off-beat"
+  },
+  "press-man-announces-an-exclusive-u-s-residency-at-yaamava-resort-c": {
+   "judged_on": "2026-10-26",
+   "status": "dropped",
+   "reason": "off-beat"
   }
  },
  "ideas": {
@@ -1262,6 +1360,31 @@
     "corporate-only": 14,
     "off-beat": 9,
     "watch": 3
+   }
+  },
+  {
+   "date": "2026-10-26",
+   "items": 196,
+   "candidates": 16,
+   "skipped": {
+    "already judged": 65,
+    "taken elsewhere": 1,
+    "older": 111,
+    "noise": 3
+   },
+   "sources": {
+    "news": "2026-10-26",
+    "agingwire": "2026-10-26"
+   },
+   "model": "opus",
+   "ideas": 0,
+   "routes": {},
+   "dropped": {
+    "already-covered": 1,
+    "corporate-only": 8,
+    "off-beat": 5,
+    "no-reader-stake": 1,
+    "unverifiable-claim": 1
    }
   }
  ],
