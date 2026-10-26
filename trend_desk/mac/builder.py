@@ -4,6 +4,11 @@
   python3 -m trend_desk.mac.builder            build everything routed in the last 10 days
   python3 -m trend_desk.mac.builder --only ID  build one idea (testing)
   python3 -m trend_desk.mac.builder --dry-run  say what would be built, build nothing
+  python3 -m trend_desk.mac.builder --desk research   the same, for Research Desk's handoffs
+
+Research Desk (trend_desk/research/) shares this builder. Its ideas carry "desk": "research" and
+PMIDs; a research pitch goes to ~/Pitches/state/research-handoffs.json instead, and its message
+goes to Research Desk's own bot (held in ~/.local/state/research-desk/unsent.json until paired).
 
 Per route:
   pitch    appended to ~/Pitches/state/trend-handoffs.json; the weekday pitch routine ranks it
@@ -32,7 +37,7 @@ from . import common as c
 from . import tg
 
 LOCK = c.STATE / "builder.lock"
-LAST_LIST = c.STATE / "last_list.json"
+DESK = c.DESKS["trend"]  # set from --desk in main()
 MAX_ATTEMPTS = 3
 LOOKBACK_DAYS = 10
 ROUTE_NAMES = {"pitch": "Pitch idea", "tfm": "Female Model post", "roundup": "Roundup item", "brief": "Site brief"}
@@ -41,7 +46,7 @@ ROUTE_NAMES = {"pitch": "Pitch idea", "tfm": "Female Model post", "roundup": "Ro
 def handoff_ideas() -> list[dict]:
     cutoff = (c.now().date() - timedelta(days=LOOKBACK_DAYS)).isoformat()
     ideas = []
-    for path in sorted((c.DESK / "handoff").glob("*.json")):
+    for path in sorted(DESK["handoff"].glob("*.json")):
         if path.stem < cutoff:
             continue
         for idea in c.read_json(path, {}).get("ideas", []):
@@ -51,7 +56,7 @@ def handoff_ideas() -> list[dict]:
 
 def effective_route(idea: dict) -> tuple[str, str, str]:
     """(route, site, override_action) after her decisions."""
-    o = c.idea_overrides().get(idea["id"], {})
+    o = c.idea_overrides(DESK["decisions"]).get(idea["id"], {})
     action = o.get("action", "")
     route = (o.get("to_route") or idea["route"]) if action == "reroute" else idea["route"]
     site = (o.get("to_site") or idea.get("site", "")) if action == "reroute" else idea.get("site", "")
@@ -68,7 +73,32 @@ def safe_name(title: str, n: int = 90) -> str:
 
 # ---------- pitch ----------
 
+def build_research_pitch(idea: dict) -> dict:
+    path = c.PITCHES / "state" / "research-handoffs.json"
+    if not c.pull(c.PITCHES):
+        raise RuntimeError("the Pitches repo isn't on main or couldn't update")
+    items = c.read_json(path, [])
+    if not any(x.get("research_desk_id") == idea["id"] for x in items):
+        items.append({
+            "slug": idea["id"], "research_desk_id": idea["id"], "headline": idea["title"],
+            "angle": idea["angle"], "why_now": idea["why_now"], "is_it_real": idea["is_it_real"],
+            "evidence_strength": idea.get("evidence_strength", ""), "other_peg": idea.get("other_peg", ""),
+            "audience": idea.get("audience", ""), "beat": idea["beat"], "date": idea["created"],
+            "studies": [{k: s.get(k) for k in ("pmid", "doi", "journal", "headline", "pubdate", "days_online",
+                                               "date_verified", "caveats", "fact_check_note", "coverage", "flags")}
+                        for s in idea.get("studies", [])],
+        })
+        c.write_json(path, items)
+        if not c.commit_push(["state/research-handoffs.json"], f"Research Desk handoff: {idea['title'][:60]}",
+                             cwd=c.PITCHES):
+            raise RuntimeError("couldn't push the handoff to the Pitches repo")
+    return {"what": "handed to the pitch agents; if it ranks as strong, a paused Mailshake draft "
+                    "follows the next weekday run", "where": "~/Pitches/state/research-handoffs.json"}
+
+
 def build_pitch(idea: dict) -> dict:
+    if idea.get("desk") == "research":
+        return build_research_pitch(idea)
     path = c.PITCHES / "state" / "trend-handoffs.json"
     if not c.pull(c.PITCHES):
         raise RuntimeError("the Pitches repo isn't on main or couldn't update")
@@ -202,7 +232,10 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--only")
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--desk", choices=sorted(c.DESKS), default="trend")
     args = ap.parse_args()
+    global DESK
+    DESK = c.DESKS[args.desk]
 
     c.STATE.mkdir(parents=True, exist_ok=True)
     lock = open(LOCK, "w")
@@ -218,7 +251,7 @@ def main() -> int:
             continue
         route, site, action = effective_route(idea)
         rec = built.get(idea["id"], {})
-        o = c.idea_overrides().get(idea["id"], {})
+        o = c.idea_overrides(DESK["decisions"]).get(idea["id"], {})
         if o.get("retry_seq", 0) > rec.get("retried", 0):
             rec = {**rec, "attempts": 0, "status": "retry", "retried": o["retry_seq"]}
             built[idea["id"]] = rec
@@ -230,7 +263,7 @@ def main() -> int:
             continue
         if rec.get("status") == "failed" and rec.get("attempts", 0) >= MAX_ATTEMPTS and rec.get("route") == route:
             continue
-        if c.is_paused(route, site):
+        if c.is_paused(route, site, DESK["holds"]):
             continue
         if rec.get("status") == "waiting" and rec.get("recheck", "") > c.now().date().isoformat():
             continue
@@ -269,7 +302,7 @@ def main() -> int:
     for i, (idea, route, site, rec) in enumerate(done_now, 1):
         lines.append(f"{i}. {describe(idea, route, site, rec)}")
         numbering[str(i)] = idea["id"]
-    head = f"Trend Desk: {len(done_now)} ready" if done_now else "Trend Desk"
+    head = f"{DESK['name']}: {len(done_now)} ready" if done_now else DESK["name"]
     msg = head + (":\n\n" + "\n".join(lines) if lines else ".")
     if roundup_count:
         msg += f"\n\n{roundup_count} more went to Friday's roundup feed."
@@ -277,7 +310,11 @@ def main() -> int:
         msg += (f"\n\nCouldn't build the {ROUTE_NAMES.get(route, route).lower()} \"{idea['title']}\" after "
                 f"{MAX_ATTEMPTS} tries, so it's set aside. Text \"retry\" with its name to try again.")
     msg += "\n\nNothing was sent or published. Text \"skip 2\", \"pitch 3 instead\" or a rule any time."
-    c.write_json(LAST_LIST, {"sent": c.now().isoformat(timespec="seconds"), "items": numbering})
+    c.write_json(DESK["last_list"], {"sent": c.now().isoformat(timespec="seconds"), "items": numbering})
+    if args.desk == "research":
+        from ..research import tg as research_tg
+        research_tg.send_or_hold(msg)
+        return 0
     try:
         tg.send(msg)
     except Exception as e:  # noqa: BLE001

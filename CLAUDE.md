@@ -1440,6 +1440,12 @@ through its own Telegram bot. The dashboard stays up as the evidence log. Full d
 `trend_desk/README.md`. **The repo is public:** her texts, edits and pitch outcomes stay on the Mac;
 only settings, short decision records and aggregate counts are committed.
 
+**Research Desk** (`trend_desk/research/`, added 2026-10-25) is the same loop for the research
+dashboard's digest studies. Unlike Trend Desk's Judge it runs on the Mac (launchd
+`com.meagan.research-desk`, headless Claude Code on her subscription, no API credit), enforces
+evidence rules in code (`research/rules.py`: online date, subgroup, tiny n, preprint, coverage), and
+shares Trend Desk's builder via `builder.py --desk research`. Detail: `trend_desk/research/README.md`.
+
 ---
 
 ## Success Criteria

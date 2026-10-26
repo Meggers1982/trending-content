@@ -1,0 +1,911 @@
+{
+ "studies": {
+  "42895138": {
+   "judged_on": "2026-10-25",
+   "status": "kept",
+   "idea": "rd-2026-10-25-medicare-s-new-hospice-crackdown-mostly-flagged-ho"
+  },
+  "42895728": {
+   "judged_on": "2026-10-25",
+   "status": "kept",
+   "idea": "rd-2026-10-25-a-six-week-phone-guided-exercise-plan-sped-recover"
+  },
+  "42901478": {
+   "judged_on": "2026-10-25",
+   "status": "kept",
+   "idea": "rd-2026-10-25-the-hispanic-health-paradox-in-birth-outcomes-may"
+  },
+  "42926022": {
+   "judged_on": "2026-10-25",
+   "status": "kept",
+   "idea": "rd-2026-10-25-is-it-real-speaking-two-languages-protects-your-ag"
+  },
+  "42771940": {
+   "judged_on": "2026-10-25",
+   "status": "kept",
+   "idea": "rd-2026-10-25-kids-who-got-a-rare-platelet-disorder-after-their"
+  },
+  "42896226": {
+   "judged_on": "2026-10-25",
+   "status": "kept",
+   "idea": "rd-2026-10-25-the-rsv-antibody-shot-for-babies-protects-strongly"
+  },
+  "42887854": {
+   "judged_on": "2026-10-25",
+   "status": "kept",
+   "idea": "rd-2026-10-25-small-doesn-t-mean-safe-many-melanomas-under-6-mm"
+  },
+  "42887271": {
+   "judged_on": "2026-10-25",
+   "status": "kept",
+   "idea": "rd-2026-10-25-water-workouts-tai-chi-and-wall-sits-ranked-near-t"
+  },
+  "42914867": {
+   "judged_on": "2026-10-25",
+   "status": "kept",
+   "idea": "rd-2026-10-25-removing-both-ovaries-before-45-is-linked-to-highe"
+  },
+  "42920024": {
+   "judged_on": "2026-10-25",
+   "status": "kept",
+   "idea": "rd-2026-10-25-do-glp-1-weight-loss-drugs-cause-bone-loss-what-th"
+  },
+  "42897830": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "not-selected"
+  },
+  "42910992": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "too-thin"
+  },
+  "42914502": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "specialist-only"
+  },
+  "42925286": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "caveats-undo-it"
+  },
+  "42904390": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "off-beat"
+  },
+  "42914993": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "not-selected"
+  },
+  "42926142": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "specialist-only"
+  },
+  "42885756": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "caveats-undo-it"
+  },
+  "42919621": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "not-selected"
+  },
+  "42896718": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "not-selected"
+  },
+  "42896684": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "methods-only"
+  },
+  "42919680": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "caveats-undo-it"
+  },
+  "42885553": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "specialist-only"
+  },
+  "42891981": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "not-selected"
+  },
+  "42926197": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "not-selected"
+  },
+  "42913094": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "too-thin"
+  },
+  "42906648": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "not-selected"
+  },
+  "42901428": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "specialist-only"
+  },
+  "42242757": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "specialist-only"
+  },
+  "42920250": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "not-selected"
+  },
+  "42899558": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "not-selected"
+  },
+  "42914005": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "specialist-only"
+  },
+  "42924868": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "too-thin"
+  },
+  "42926120": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "duplicate"
+  },
+  "42921758": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "not-selected"
+  },
+  "42925897": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "not-selected"
+  },
+  "42909654": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "specialist-only"
+  },
+  "42925366": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "specialist-only"
+  },
+  "42911078": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "not-selected"
+  },
+  "42905360": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "specialist-only"
+  },
+  "42902074": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "methods-only"
+  },
+  "42926123": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "not-selected"
+  },
+  "42926124": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "too-thin"
+  },
+  "42911853": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "too-thin"
+  },
+  "42899805": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "too-thin"
+  },
+  "42910930": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "specialist-only"
+  },
+  "42905967": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "specialist-only"
+  },
+  "42899947": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "not-selected"
+  },
+  "42925416": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "caveats-undo-it"
+  },
+  "42913773": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "not-selected"
+  },
+  "42910509": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "specialist-only"
+  },
+  "42894296": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "specialist-only"
+  },
+  "42895324": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "off-beat"
+  },
+  "42918505": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "not-selected"
+  },
+  "42896865": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "not-selected"
+  },
+  "42908309": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "specialist-only"
+  },
+  "42892349": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "caveats-undo-it"
+  },
+  "42891780": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "too-thin"
+  },
+  "42891960": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "too-thin"
+  },
+  "42504714": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "not-selected"
+  },
+  "42920249": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "not-selected"
+  },
+  "42904817": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "specialist-only"
+  },
+  "42913444": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "duplicate"
+  },
+  "42909849": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "stale"
+  },
+  "42913442": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "too-thin"
+  },
+  "42920097": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "specialist-only"
+  },
+  "42910771": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "not-selected"
+  },
+  "42913074": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "specialist-only"
+  },
+  "42900661": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "specialist-only"
+  },
+  "42897443": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "methods-only"
+  },
+  "42912420": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "too-thin"
+  },
+  "42920169": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "off-beat"
+  },
+  "42892516": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "off-beat"
+  },
+  "42891876": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "not-selected"
+  },
+  "42886239": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "caveats-undo-it"
+  },
+  "42896355": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "not-selected"
+  },
+  "42888018": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "too-thin"
+  },
+  "42907679": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "not-selected"
+  },
+  "42886878": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "watch"
+  },
+  "42906881": {
+   "judged_on": "2026-10-25",
+   "status": "dropped",
+   "reason": "not-selected"
+  }
+ },
+ "ideas": {
+  "rd-2026-10-25-medicare-s-new-hospice-crackdown-mostly-flagged-ho": {
+   "desk": "research",
+   "title": "Medicare's new hospice crackdown mostly flagged hospices serving Black patients, and usually over a single metric",
+   "created": "2026-10-25",
+   "route": "pitch",
+   "speed": "online 6 days",
+   "beat": "public health, policy and insurance",
+   "angle": "CMS's Hospice Special Focus Program was built to catch failing hospices. A census of all 7,115 US hospices shows the first 50 it picked served about twice the share of non-White patients (median 35% vs 17%, driven by Black patient share), and the gap held after adjusting for quality. For 48 of the 50, one input drove most of the failing score. That raises the question of whether the algorithm is measuring care or measuring who gets served.",
+   "why_now": "Published online 6 days ago, and the program is already paused amid litigation, so there is a live policy fight with a court clock.",
+   "is_it_real": "Solid for what it claims. It covers every active hospice in the November 2024 CMS data, so this is a census, not a sample. It is cross-sectional and observational: it shows who was flagged and why, not that the flagged hospices give good care. It is a single snapshot of a program that has since been paused. The pitch agents should confirm the litigation status and what CMS has said since.",
+   "evidence_strength": "moderate",
+   "other_peg": "The Special Focus Program is paused amid litigation, and CMS's next move on hospice oversight is pending.",
+   "audience": "both",
+   "confidence": "high",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42895138"
+   ],
+   "studies": [
+    {
+     "pmid": "42895138",
+     "doi": "10.1177/10499091261500742",
+     "journal": "The American Journal of Hospice & Palliative Care",
+     "headline": "The federal program flagging hospices for poor care disproportionately targeted those serving Black patients — and usually based on a single failing metric",
+     "pubdate": "2026 Oct 19",
+     "days_online": 6,
+     "date_verified": true,
+     "digests": [
+      "Elderly & Geriatric",
+      "Senior Living — New This Week"
+     ],
+     "score": 9,
+     "caveats": "observational design, cross-sectional, single time-point snapshot, program subsequently paused amid litigation",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (SERPAPI verified)",
+     "flags": [
+      "observational"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42895138/",
+    "https://doi.org/10.1177/10499091261500742"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  "rd-2026-10-25-a-six-week-phone-guided-exercise-plan-sped-recover": {
+   "desk": "research",
+   "title": "A six-week, phone-guided exercise plan sped recovery from lingering teen concussions in a randomized trial",
+   "created": "2026-10-25",
+   "route": "pitch",
+   "speed": "online 6 days",
+   "beat": "fitness and kids' health",
+   "angle": "Parents still hear 'rest in a dark room' for concussions. In a JAMA Pediatrics randomized trial of 210 kids aged 11 to 18 in four states, graduated aerobic exercise delivered remotely (activity trackers plus weekly video calls) beat stretching for symptom recovery and quality of life at three months. The biggest benefit came when it started within three months of the injury. The service angle is that it needs no clinic visits, which matters for rural families.",
+   "why_now": "Online 6 days ago and not covered yet. It's mid fall sports season, when youth football and soccer concussions peak.",
+   "is_it_real": "One of the stronger studies today: randomized, controlled, multi-state, 210 participants, in a top pediatrics journal. The control was stretching, not rest, so it shows aerobic exercise beats light activity, not that it beats doing nothing. Benefit was concentrated in kids injured less than three months earlier. The shift away from strict rest is already in concussion guidance, so the news is remote delivery and the effect in prolonged cases, not 'exercise helps' by itself.",
+   "evidence_strength": "strong",
+   "other_peg": "Fall youth sports season",
+   "audience": "general",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42895728"
+   ],
+   "studies": [
+    {
+     "pmid": "42895728",
+     "doi": "10.1001/jamapediatrics.2026.4927",
+     "journal": "JAMA Pediatrics",
+     "headline": "A Phone-Based Exercise Program Helps Teens Recover Faster From Prolonged Concussion — No Clinic Visits Required",
+     "pubdate": "2026 Oct 19",
+     "days_online": 6,
+     "date_verified": true,
+     "digests": [
+      "Children's & Pediatric Health"
+     ],
+     "score": 9,
+     "caveats": "narrow age range",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (SERPAPI verified)",
+     "flags": []
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42895728/",
+    "https://doi.org/10.1001/jamapediatrics.2026.4927"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  "rd-2026-10-25-the-hispanic-health-paradox-in-birth-outcomes-may": {
+   "desk": "research",
+   "title": "The 'Hispanic health paradox' in birth outcomes may come down to how researchers measure education",
+   "created": "2026-10-25",
+   "route": "pitch",
+   "speed": "online 5 days",
+   "beat": "reproductive health and public health",
+   "angle": "For decades, researchers have pointed to Latina immigrants having fewer preterm births than their education and income would predict. Princeton researchers used 2012 to 2023 US birth data for mothers from eight Latin American countries. When they measured education relative to the mother's home country, many 'low-educated' mothers turned out to be above average where they came from, and the immigrant advantage in preterm birth disappeared or reversed for most nationalities. That reframes a paradox that shows up in policy and immigration debates.",
+   "why_now": "Online 5 days ago and not covered. Immigration and maternal health disparities are both live policy stories.",
+   "is_it_real": "Credible reanalysis of national birth records in a major epidemiology journal. It is observational, and it refines an existing explanation (immigrants are a selected, healthier-than-average group) rather than proving there is no protective effect. Results varied by nationality, so 'the paradox is a myth' overstates it. 'Largely explained by selection on education' is the honest version. An editor will want an outside demographer's take.",
+   "evidence_strength": "moderate",
+   "other_peg": "",
+   "audience": "general",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42901478"
+   ],
+   "studies": [
+    {
+     "pmid": "42901478",
+     "doi": "10.1093/aje/kwag267",
+     "journal": "American Journal of Epidemiology",
+     "headline": "The 'Hispanic Health Paradox' may be a statistical illusion — when education is measured correctly, immigrant mothers' birth outcome advantage largely disappears",
+     "pubdate": "2026 Oct 20",
+     "days_online": 5,
+     "date_verified": true,
+     "digests": [
+      "Science & Environment"
+     ],
+     "score": 8,
+     "caveats": "observational design, secondary analysis",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (SERPAPI verified)",
+     "flags": [
+      "observational"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42901478/",
+    "https://doi.org/10.1093/aje/kwag267"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  "rd-2026-10-25-is-it-real-speaking-two-languages-protects-your-ag": {
+   "desk": "research",
+   "title": "Is it real? Speaking two languages protects your aging brain",
+   "created": "2026-10-25",
+   "route": "tfm",
+   "speed": "online 1 days",
+   "beat": "viral health claims",
+   "angle": "'Bilingual brains age better' is everywhere: language apps, brain-health listicles, doctor's-office advice. A new review of meta-analyses and prospective cohorts finds education, job complexity and mentally stimulating activities do line up with lower dementia risk, but bilingualism does not hold up the same way. The post can explain why a claim that feels obviously true failed to replicate, and what does seem to count.",
+   "why_now": "Online 1 day ago, and the claim spreads on its own steadily. This is the strongest 'is it real?' receipt today.",
+   "is_it_real": "This is a narrative review with no new data, not a systematic meta-analysis, so it is a receipt and an argument, not a final verdict. The underlying studies are observational. The post should cite the prospective cohorts the review relies on (to be pulled and checked from the paper) and should say 'doesn't consistently show protection', not 'proven useless'. Learning a language may still be worth doing for other reasons.",
+   "evidence_strength": "moderate",
+   "other_peg": "",
+   "audience": "both",
+   "confidence": "high",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42926022"
+   ],
+   "studies": [
+    {
+     "pmid": "42926022",
+     "doi": "10.1016/j.arr.2026.103428",
+     "journal": "Ageing Research Reviews",
+     "headline": "Speaking two languages may not actually protect the aging brain — upending a popular longevity claim",
+     "pubdate": "2026 Oct 24",
+     "days_online": 1,
+     "date_verified": true,
+     "digests": [
+      "Aging & Longevity",
+      "Elderly & Geriatric",
+      "Senior Living — New This Week"
+     ],
+     "score": 8,
+     "caveats": "observational design, narrative review (not systematic meta-analysis), no new primary data",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (SERPAPI verified)",
+     "flags": [
+      "observational"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42926022/",
+    "https://doi.org/10.1016/j.arr.2026.103428"
+   ],
+   "term_details": [],
+   "status": "paused"
+  },
+  "rd-2026-10-25-kids-who-got-a-rare-platelet-disorder-after-their": {
+   "desk": "research",
+   "title": "Kids who got a rare platelet disorder after their first MMR shot showed no added risk after the second",
+   "created": "2026-10-25",
+   "route": "roundup",
+   "speed": "online 1 days",
+   "beat": "public health and vaccines",
+   "angle": "Take: a large English study of hospital and vaccination records found MMR dose 1 carries a small ITP (low-platelet) risk, about 1 in 42,900 doses. Dose 2 carried no added risk, including in 336 children who had ITP after dose 1, so doctors don't need to stop the series. It's a timely, reassuring number during measles outbreaks.",
+   "why_now": "Online 1 day ago, and measles outbreaks are in the news.",
+   "is_it_real": "Self-controlled case series on national linked records, which is the standard design for vaccine-safety signals and a strong one. The dose-2 reassurance rests on 336 children, which is solid for a rare event but not huge. Give the absolute risk, not the 2.4-fold relative figure, as the headline number.",
+   "evidence_strength": "strong",
+   "other_peg": "Ongoing US measles outbreaks",
+   "audience": "general",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42771940"
+   ],
+   "studies": [
+    {
+     "pmid": "42771940",
+     "doi": "10.1016/j.vaccine.2026.129168",
+     "journal": "Vaccine",
+     "headline": "Children who get a rare blood disorder after MMR dose 1 can safely receive dose 2 — large English study",
+     "pubdate": "2026 Oct 24",
+     "days_online": 1,
+     "date_verified": true,
+     "digests": [
+      "Conditions & Body",
+      "Dermatology & Skin Science",
+      "Science & Environment"
+     ],
+     "score": 8,
+     "caveats": "observational design, secondary analysis",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (SERPAPI verified)",
+     "flags": [
+      "observational"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42771940/",
+    "https://doi.org/10.1016/j.vaccine.2026.129168"
+   ],
+   "term_details": [],
+   "status": "paused"
+  },
+  "rd-2026-10-25-the-rsv-antibody-shot-for-babies-protects-strongly": {
+   "desk": "research",
+   "title": "The RSV antibody shot for babies protects strongly at first, then fades over the first year",
+   "created": "2026-10-25",
+   "route": "roundup",
+   "speed": "online 5 days",
+   "beat": "public health and vaccines",
+   "angle": "Take: as RSV season starts, Queensland's first year of nirsevimab was linked to 78% fewer RSV hospitalizations in the first month of life, falling to 23% by nine months and not significant after that. That's why timing the shot to the season matters.",
+   "why_now": "US RSV season is starting now, and parents are deciding about infant RSV protection.",
+   "is_it_real": "Population surveillance data from one Australian state, observational, comparing against earlier birth cohorts, so changes in testing or circulation could affect the numbers. The waning curve is the useful new detail. The headline 78% applies only to month one.",
+   "evidence_strength": "moderate",
+   "other_peg": "Start of the 2026-27 RSV season",
+   "audience": "general",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42896226"
+   ],
+   "studies": [
+    {
+     "pmid": "42896226",
+     "doi": "10.33321/cdi.2026.50.066",
+     "journal": "Communicable Diseases Intelligence (2018)",
+     "headline": "A single RSV antibody shot cut infant hospitalizations by 78% in the first month of life",
+     "pubdate": "2026 Oct 20",
+     "days_online": 5,
+     "date_verified": true,
+     "digests": [
+      "Science & Environment"
+     ],
+     "score": 8,
+     "caveats": "observational design, single-center, short follow-up",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (SERPAPI verified)",
+     "flags": [
+      "observational"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42896226/",
+    "https://doi.org/10.33321/cdi.2026.50.066"
+   ],
+   "term_details": [],
+   "status": "paused"
+  },
+  "rd-2026-10-25-small-doesn-t-mean-safe-many-melanomas-under-6-mm": {
+   "desk": "research",
+   "title": "Small doesn't mean safe: many melanomas under 6 mm were already invasive",
+   "created": "2026-10-25",
+   "route": "roundup",
+   "speed": "online 9 days",
+   "beat": "cancer and skin health",
+   "angle": "Take: the 'bigger than a pencil eraser' rule misses things. In 160 confirmed melanomas 6 mm or smaller, 42.5% were already invasive, only 30% showed three or more ABCDE warning signs, and the ABCDE score didn't predict which were invasive. Dermoscopy checks caught more of them early.",
+   "why_now": "Online 9 days ago, not covered. It's an easy, useful skin-check item.",
+   "is_it_real": "Retrospective study from Spain of lesions already confirmed as melanoma. It does NOT mean half of small moles are dangerous, which is the trap in the digest headline. It means that among small melanomas, many had already invaded. No skin-tone or sex breakdown. The item must say that in a clause.",
+   "evidence_strength": "thin",
+   "other_peg": "",
+   "audience": "both",
+   "confidence": "low",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42887854"
+   ],
+   "studies": [
+    {
+     "pmid": "42887854",
+     "doi": "10.1016/j.ad.2026.104759",
+     "journal": "Actas dermo-sifiliograficas",
+     "headline": "Nearly Half of Tiny Melanomas — Smaller Than a Pencil Eraser — Are Already Invasive When Found",
+     "pubdate": "2026 Oct 16",
+     "days_online": 9,
+     "date_verified": true,
+     "digests": [
+      "Conditions & Body"
+     ],
+     "score": 8,
+     "caveats": "observational design, retrospective, no sex-disaggregated data, single-region (Spain)",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (SERPAPI verified)",
+     "flags": [
+      "observational"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42887854/",
+    "https://doi.org/10.1016/j.ad.2026.104759"
+   ],
+   "term_details": [],
+   "status": "paused"
+  },
+  "rd-2026-10-25-water-workouts-tai-chi-and-wall-sits-ranked-near-t": {
+   "desk": "research",
+   "title": "Water workouts, tai chi and wall sits ranked near the top for lowering blood pressure in a 284-trial analysis",
+   "created": "2026-10-25",
+   "route": "roundup",
+   "speed": "online 9 days",
+   "beat": "fitness and cardiometabolic health",
+   "angle": "Take: for anyone whose knees rule out jogging, a network meta-analysis of 284 trials (18,750 adults with high or borderline blood pressure) ranked aquatic exercise first for lowering systolic pressure (about 10 mmHg), mind-body exercise first for diastolic, and isometric holds as efficient at modest weekly doses.",
+   "why_now": "Online 9 days ago, not covered. It's useful and counter to the 'just walk more' default.",
+   "is_it_real": "Large pool of randomized trials, but the rankings are indirect estimates across very different trials, not head-to-head tests. Mean age is 57, so frail older adults are underrepresented, and the dose figures are modeled. Say 'ranked highest in pooled trials', not 'beats the gym'.",
+   "evidence_strength": "moderate",
+   "other_peg": "",
+   "audience": "both",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42887271"
+   ],
+   "studies": [
+    {
+     "pmid": "42887271",
+     "doi": "10.1016/j.maturitas.2026.109132",
+     "journal": "Maturitas",
+     "headline": "Pool workouts beat the gym for lowering blood pressure, a 284-trial analysis finds",
+     "pubdate": "2026 Oct 16",
+     "days_online": 9,
+     "date_verified": true,
+     "digests": [
+      "Senior Living — New This Week"
+     ],
+     "score": 7,
+     "caveats": "Network meta-analysis pools trials that differ widely in design, supervision and participant characteristics, so head-to-head rankings are estimates rather than direct comparisons. Mean age was 56.8 years, so the oldest and frailest adults are likely underrepresented. Dose-response figures come from modelling, not from trials that directly tested those doses.",
+     "fact_check_note": "⚠️ Minor issues",
+     "coverage": "Not widely covered ✓ (Google News checked)",
+     "flags": []
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42887271/",
+    "https://doi.org/10.1016/j.maturitas.2026.109132"
+   ],
+   "term_details": [],
+   "status": "paused"
+  },
+  "rd-2026-10-25-removing-both-ovaries-before-45-is-linked-to-highe": {
+   "desk": "research",
+   "title": "Removing both ovaries before 45 is linked to higher type 2 diabetes risk years later",
+   "created": "2026-10-25",
+   "route": "brief",
+   "speed": "online 2 days",
+   "beat": "menopause and metabolism",
+   "angle": "Evergreen explainer on surgical menopause and long-term metabolic health. In 82,472 French women followed a median of 16 years, hysterectomy plus removal of both ovaries was linked to 23% higher type 2 diabetes risk overall and about 70% higher when done before 45. Hysterectomy alone was not linked. It fits a page on what to ask before an oophorectomy and how to watch blood sugar afterward.",
+   "why_now": "Fresh evidence (online 2 days ago) for a topic people search for steadily. It's one cohort, so a weaker pitch than a brief.",
+   "is_it_real": "Large, long cohort, but observational: the women who had surgery may differ in other ways, surgical history may be self-reported, and the population is mostly White, insured French women. The 70% is a relative risk in a subgroup. The page needs absolute rates and 'linked to' language.",
+   "evidence_strength": "moderate",
+   "other_peg": "",
+   "audience": "both",
+   "confidence": "medium",
+   "site": "menopause",
+   "seed_keyword": "surgical menopause diabetes risk",
+   "pmids": [
+    "42914867"
+   ],
+   "studies": [
+    {
+     "pmid": "42914867",
+     "doi": "10.1016/j.maturitas.2026.109160",
+     "journal": "Maturitas",
+     "headline": "Removing ovaries before 45 is associated with a 70% higher risk of type 2 diabetes, large study finds",
+     "pubdate": "2026 Oct 23",
+     "days_online": 2,
+     "date_verified": true,
+     "digests": [
+      "Aging & Longevity",
+      "Senior Living — New This Week"
+     ],
+     "score": 8,
+     "caveats": "observational design, French cohort (predominantly White, insured women — may not generalize fully to U.S. populations), self-reported surgical history possible",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (SERPAPI verified)",
+     "flags": [
+      "observational"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42914867/",
+    "https://doi.org/10.1016/j.maturitas.2026.109160"
+   ],
+   "term_details": [],
+   "status": "paused"
+  },
+  "rd-2026-10-25-do-glp-1-weight-loss-drugs-cause-bone-loss-what-th": {
+   "desk": "research",
+   "title": "Do GLP-1 weight-loss drugs cause bone loss? What the trials actually show",
+   "created": "2026-10-25",
+   "route": "brief",
+   "speed": "online 2 days",
+   "beat": "GLP-1s, bone health and menopause",
+   "angle": "Evergreen page for women in midlife on semaglutide or tirzepatide who worry about bones. A systematic review of eight randomized trials found bone density drops in the two highest-weight-loss trials (semaglutide, liraglutide 3 mg) and no consistent effect at lower doses. No trial has measured fractures. The practical section covers a baseline DXA scan, protein and strength training.",
+   "why_now": "GLP-1 use among women 40 to 65 keeps rising and 'Ozempic bone loss' is a steady search. This is the latest evidence summary (online 2 days ago).",
+   "is_it_real": "Thin. 493 participants across eight trials, certainty rated very low for every drug, mostly people with type 2 diabetes, and bone density rather than fractures. It supports 'a signal worth asking your doctor about', not 'GLP-1s weaken bones'.",
+   "evidence_strength": "thin",
+   "other_peg": "",
+   "audience": "both",
+   "confidence": "medium",
+   "site": "menopause",
+   "seed_keyword": "does ozempic cause bone loss",
+   "pmids": [
+    "42920024"
+   ],
+   "studies": [
+    {
+     "pmid": "42920024",
+     "doi": "10.1007/s11657-026-01785-8",
+     "journal": "Archives of Osteoporosis",
+     "headline": "Do weight-loss drugs weaken bones? The evidence is thinner than the hype — but a signal is emerging",
+     "pubdate": "2026 Oct 23",
+     "days_online": 2,
+     "date_verified": true,
+     "digests": [
+      "Senior Living — New This Week"
+     ],
+     "score": 7,
+     "caveats": "Systematic review with no meta-analysis; very small total sample (n=493 across eight trials) with individual trials as small as 64 participants; certainty of evidence rated very low for every agent; most trials enrolled adults with type 2 diabetes rather than obesity alone; bone density was the outcome, not fractures; most participants were not specifically older adults.",
+     "fact_check_note": "⚠️ Minor issues",
+     "coverage": "Not widely covered ✓ (Google News checked)",
+     "flags": [
+      "small_sample"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42920024/",
+    "https://doi.org/10.1007/s11657-026-01785-8"
+   ],
+   "term_details": [],
+   "status": "paused"
+  }
+ },
+ "runs": [
+  {
+   "date": "2026-10-25",
+   "studies": 6963,
+   "candidates": 80,
+   "skipped": {
+    "already judged": 0,
+    "taken elsewhere": 0,
+    "below score": 224,
+    "older": 6653
+   },
+   "model": "opus",
+   "ideas": 10,
+   "routes": {
+    "pitch": 3,
+    "tfm": 1,
+    "roundup": 4,
+    "brief": 2
+   },
+   "dropped": {
+    "not-selected": 24,
+    "too-thin": 11,
+    "specialist-only": 18,
+    "caveats-undo-it": 6,
+    "off-beat": 4,
+    "methods-only": 3,
+    "duplicate": 2,
+    "stale": 1,
+    "watch": 1
+   },
+   "notes": "The batch leans heavily toward geriatrics: dozens of Senior Living digest items on Parkinson's, dementia and hospice, mostly specialist or small-sample work. Only the hospice oversight disparity study has a real policy clock. Two strong items duplicate topics already pitched: the epigenetic-clock review (42926120) and the Whitehall p-tau217 study showing a positive predictive value of only 16–24% (42913444). They are good extra receipts if the 'biological age clocks' or 'Alzheimer's blood tests' pitches get picked up. The 1946-cohort study finding no link between infections and Alzheimer's (42886878) is on watch as a possible TFM receipt against 'herpes causes Alzheimer's', but its date isn't verified and the PET subgroup is small. Several digest headlines oversold their papers (melanoma 'half of moles', menstruation and anaphylaxis, the obesity-lowers-clot-risk paradox). The caveats were more reliable than the headlines."
+  }
+ ]
+}

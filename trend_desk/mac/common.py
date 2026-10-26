@@ -28,6 +28,18 @@ BRIEF_ROOT = Path.home() / "termscope-app" / "termscope-briefs" / "trend-desk"
 VAULT = Path.home() / "Meagan's Obsidian"
 DECISIONS = DESK / "feedback" / "decisions.json"
 
+# Research Desk (trend_desk/research/) shares this builder but keeps its own handoffs, holds,
+# decisions, local state and Telegram bot. builder.py --desk research selects these.
+RESEARCH = DESK / "research"
+RESEARCH_STATE = Path.home() / ".local/state/research-desk"
+DESKS = {
+    "trend": {"name": "Trend Desk", "handoff": DESK / "handoff", "holds": DESK / "holds.json",
+              "decisions": DECISIONS, "last_list": STATE / "last_list.json"},
+    "research": {"name": "Research Desk", "handoff": RESEARCH / "handoff", "holds": RESEARCH / "holds.json",
+                 "decisions": RESEARCH / "feedback" / "decisions.json",
+                 "last_list": RESEARCH_STATE / "last_list.json"},
+}
+
 
 def now() -> datetime:
     return datetime.now(ZoneInfo("America/Chicago"))
@@ -150,11 +162,11 @@ Last line of your answer: {{"id": "<identifier like MEA-123, or empty if it fail
     return ident if re.fullmatch(r"MEA-\d+", ident or "") else ""
 
 
-def decisions() -> list[dict]:
-    return read_json(DECISIONS, [])
+def decisions(path: Path = DECISIONS) -> list[dict]:
+    return read_json(path, [])
 
 
-def idea_overrides() -> dict:
+def idea_overrides(path: Path = DECISIONS) -> dict:
     """Her standing decision per idea from decisions.json, folded in order.
 
     A retry is not a change of mind about where an idea goes, so it never replaces an earlier skip
@@ -162,7 +174,7 @@ def idea_overrides() -> dict:
     compares with the seq it last honored. (Keeping just the latest entry once let "retry 5" wipe
     out "pitch 5 instead", and the builder rebuilt the old outline every 10 minutes.)"""
     out = {}
-    for i, d in enumerate(decisions()):
+    for i, d in enumerate(decisions(path)):
         iid = d.get("idea_id")
         if not iid:
             continue
@@ -175,10 +187,10 @@ def idea_overrides() -> dict:
     return out
 
 
-def holds() -> dict:
-    return read_json(DESK / "holds.json", {})
+def holds(path: Path = DESK / "holds.json") -> dict:
+    return read_json(path, {})
 
 
-def is_paused(route: str, site: str = "") -> bool:
-    h = holds()
+def is_paused(route: str, site: str = "", path: Path = DESK / "holds.json") -> bool:
+    h = holds(path)
     return route in h or (bool(site) and f"{route}:{site}" in h)

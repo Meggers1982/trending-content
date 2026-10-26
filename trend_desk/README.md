@@ -1,5 +1,8 @@
 # Trend Desk
 
+> Research Desk (`research/`) is a sibling that judges the research dashboard's studies and
+> shares this builder (`builder.py --desk research`). See `research/README.md`.
+
 Turns the radars' output into finished work, so nobody has to read the dashboard and decide.
 Built 2026-10-25 (Linear MEA-1828 to MEA-1832, decisions on MEA-117). The plain-language picture
 is the vault page `Process Diagrams/Trend Desk.html`.

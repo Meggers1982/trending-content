@@ -15,3 +15,4 @@ outputs/google_trend_radar/
 .claude/skills
 skills-lock.json
 outputs/trend_desk/dry_run_prompt.md
+outputs/trend_desk/research_dry_run_prompt.md
