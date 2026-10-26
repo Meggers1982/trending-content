@@ -89,8 +89,9 @@ def build_research_pitch(idea: dict) -> dict:
             "evidence_strength": idea.get("evidence_strength", ""), "other_peg": idea.get("other_peg", ""),
             "audience": idea.get("audience", ""), "beat": idea["beat"], "date": idea["created"],
             "kind": idea.get("kind", "single"), "backlog": bool(idea.get("backlog")),
-            "studies": [{k: s.get(k) for k in ("pmid", "doi", "journal", "headline", "pubdate", "days_online",
-                                               "date_verified", "caveats", "fact_check_note", "coverage", "flags")}
+            "studies": [{**{k: s.get(k) for k in ("pmid", "doi", "journal", "headline", "pubdate", "days_online",
+                                                  "date_verified", "caveats", "fact_check_note", "coverage", "flags")},
+                         **{k: s[k] for k in ("openalex", "evidence_type") if k in s}}
                         for s in idea.get("studies", [])],
         })
         c.write_json(path, items)
@@ -227,7 +228,7 @@ def build_tfm(idea: dict) -> dict:
         f"Proposed slot: **{slot}** (move it freely).\n\n"
         f"- Outline: `{docx}`\n- Preliminary verdict: {meta.get('verdict', 'see outline')}\n"
         f"- Why now: {idea['why_now']}\n"
-        + (f"- Studies: {', '.join('PMID ' + str(s.get('pmid')) for s in idea.get('studies', []))}\n\n" if research
+        + (f"- Studies: {', '.join(c.study_ref(s.get('pmid')) for s in idea.get('studies', []))}\n\n" if research
            else f"- Trend speed: {idea['speed']}\n\n")
         + f"Approve by writing it, or text the {DESK['name']} bot \"skip\" to drop it.")
     return {"what": f"outline ready, proposed for {slot}", "where": str(docx), "linear": ticket, "slot": slot,

@@ -41,6 +41,13 @@ DESKS = {
 }
 
 
+def study_ref(pmid) -> str:
+    """How a study is named in messages and tickets: "PMID 42895138", or "OpenAlex W7221827692" for
+    the marketing and career digests' studies, which have no PMID."""
+    pmid = str(pmid)
+    return f"OpenAlex {pmid}" if pmid.startswith("W") else f"PMID {pmid}"
+
+
 def now() -> datetime:
     return datetime.now(ZoneInfo("America/Chicago"))
 

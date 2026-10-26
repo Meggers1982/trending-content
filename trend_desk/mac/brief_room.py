@@ -353,7 +353,7 @@ def build(idea: dict, desk_name: str = "Trend Desk") -> dict:
         f"{desk_name} built this brief from {'new research' if idea.get('desk') == 'research' else 'a rising trend'}."
         f"\n\n- Brief: `{docx}`\n- Focus keyword: **{final_kw}** ({metrics})\n"
         f"- {'Research' if idea.get('desk') == 'research' else 'Trend'}: {idea['title']} ({idea.get('speed')})\n"
-        + (f"- Studies: {', '.join('PMID ' + str(x.get('pmid')) for x in idea.get('studies', []))}\n"
+        + (f"- Studies: {', '.join(c.study_ref(x.get('pmid')) for x in idea.get('studies', []))}\n"
            if idea.get("desk") == "research" else "")
         + f"- Brief room: {rounds} round(s); see the decision log at the end of the brief\n\n"
         f"Approve by writing it, or text the {desk_name} bot \"skip\" to drop it.")

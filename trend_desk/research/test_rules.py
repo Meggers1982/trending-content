@@ -130,3 +130,59 @@ if __name__ == "__main__":
         if name.startswith("test_"):
             fn()
             print("ok", name)
+
+
+# OpenAlex digests (marketing, career), reshaped by sources.openalex_study (MEA-1865).
+from trend_desk.research import sources  # noqa: E402
+
+MAGE = {  # marketing-research-digest, branding 2026-10-24
+    "title": "AI-generated video ads beat human-made ones on TikTok", "journal": "Marketing Science",
+    "published": "2026-10-14", "work_id": "W7221827692", "doi": "10.1287/mksc.2025.0150", "score": 90,
+    "band": "Lead", "evidence_type": "experiments", "sample_size": None, "coverage_state": "unreported",
+    "verdict": "✅ Accurate", "verdict_notes": "Design checks out", "caveats": "industry partner; clicks not sales",
+    "the_study": "four preregistered field studies", "story_angle_primary": "stop trusting your gut",
+}
+RUN = {"run_date": "2026-10-24", "topic": "branding"}
+
+
+def test_openalex_study_takes_the_research_shape():
+    s = sources.openalex_study(MAGE, RUN, "Marketing research")
+    assert s["pmid"] == "W7221827692" and s["eligible"] and s["relevance_score"] == 9.0
+    assert s["pubdate"] == "2026 Oct 14" and s["media_coverage"] == "No coverage found"
+    assert rules.blocked(s, TODAY) == {}
+    assert not sources.openalex_study({**MAGE, "band": "Strong"}, RUN, "Marketing research")["eligible"]
+
+
+def test_openalex_first_of_month_is_unverified_but_dated():
+    s = sources.openalex_study({**MAGE, "published": "2026-10-01"}, RUN, "Marketing research")
+    assert s["pubdate"] == "2026 Oct"
+    assert rules.age_days(s, TODAY) == (24, False)  # from the OpenAlex date, not the 60-day-window find date
+    v = run.view(s, TODAY)
+    assert v["date_verified"] is False
+
+
+def test_openalex_significant_issues_blocks_everything():
+    s = sources.openalex_study({**MAGE, "verdict": "❌ Significant issues"}, RUN, "Marketing research")
+    assert set(rules.blocked(s, TODAY)) == {"pitch", "tfm", "roundup", "brief"}
+
+
+def test_openalex_weak_designs_never_pitch():
+    one_time = sources.openalex_study({**MAGE, "evidence_type": "survey"}, RUN, "Career psychology")
+    assert "pitch" in rules.blocked(one_time, TODAY) and "roundup" not in rules.blocked(one_time, TODAY)
+    # career W7223279808: AI impostor feelings, a longitudinal survey of 329 workers
+    waves = sources.openalex_study({**MAGE, "evidence_type": "survey",
+                                    "the_study": "a three-wave longitudinal survey of 329 employees"},
+                                   RUN, "Career psychology")
+    assert "pitch" not in rules.blocked(waves, TODAY)
+    for kind in ("qualitative", None):
+        s = sources.openalex_study({**MAGE, "evidence_type": kind}, RUN, "Career psychology")
+        assert "pitch" in rules.blocked(s, TODAY)
+    # PubMed studies have no evidence_type and are never caught by this rule.
+    assert not rules.flags(study())["weak_design"]
+
+
+def test_openalex_widely_reported_is_covered():
+    s = sources.openalex_study({**MAGE, "coverage_state": "widely_reported",
+                                "covered_by": ["Forbes"]}, RUN, "Marketing research")
+    assert s["media_coverage"] == "Already covered: Forbes"
+    assert rules.blocked(s, TODAY)["pitch"] == "already covered by the press"

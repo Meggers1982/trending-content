@@ -17,6 +17,27 @@ Approved 2026-10-25 (Linear MEA-1854; build tickets MEA-1855 to MEA-1859). Plan 
                                                              pitch -> ~/Pitches/state/research-handoffs.json
 ```
 
+## Marketing and career digests (Digest Desks piece 1, MEA-1865)
+
+Two OpenAlex digests feed the same Judge: `marketing-research-digest` and
+`career-psychology-digest` (approved 2026-10-25, MEA-1864; plan page
+<https://claude.ai/artifact/WDTx9KeMmUyUWSJuJ9cy32>). `sources.load_openalex()` reads each repo's
+`docs/data/index.json` and the run files from the last 16 days, and `openalex_study()` reshapes a
+study into the dashboard's fields:
+
+- **Id:** the OpenAlex work id (`W7221827692`) stands where a PMID goes. It can't collide with a
+  numeric PMID and matches the `marketing:W…` / `career:W…` keys in the ~/Pitches triage ledgers once
+  the prefix is stripped, so the 13 October history triage is skipped automatically.
+- **Eligible:** the digest's **Lead** band only (82+ of 100; its scores run high, 452 of 522
+  marketing studies are 70+), found in the last 14 days (the digests rotate one topic a day).
+- **Date:** OpenAlex's date, in PubMed's form. A date on the 1st is treated as an issue date. For
+  studies about to be judged, Crossref's `published-online` date replaces it (cached in
+  `~/.local/state/research-desk/crossref.json`); without one, `date_verified` is false and the pitch
+  agents confirm it. Then the usual 30/60-day rule applies (Meagan, 2026-10-25).
+- **Rules:** a "Significant issues" fact-check verdict blocks every route; qualitative, unspecified
+  and one-time survey designs never pitch (a longitudinal or diary survey can). See `rules.weak_design()`.
+- Evidence links are `openalex.org/W…` plus the DOI; messages call them "OpenAlex W…".
+
 ## How it differs from Trend Desk
 
 - **Input is already reported.** Each study arrives summarized, scored, caveated, fact-checked and

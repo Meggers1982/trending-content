@@ -36,6 +36,24 @@ or below under "Her rules for research".
   study that clears the bar, however many that is on a given day. Methods papers, protocol papers,
   validation of a clinical tool, and anything only a specialist could use are drops.
 
+## Marketing and career studies (ids starting with W)
+
+These come from two OpenAlex digests (marketing research, career psychology), not PubMed. They
+are business and workplace science, so the health framing above doesn't apply; the bar does.
+
+- **pitch**: the main home. Marketing studies suit "marketing and AI" and consumer-money angles
+  (trade or consumer outlets); career studies suit work, burnout, AI at work and pay. Set
+  `audience` to `professionals` or `trade` for a trade-press pitch, `general` for consumer.
+- **Say what wasn't measured.** Most are scenario experiments or surveys of intention: clicks,
+  not sales; stated choice, not purchases; one company's data. That goes in `is_it_real`, and a
+  study whose headline needs the unmeasured thing is a drop or a roundup line.
+- **Industry partners.** A study run with a company whose interest matches the result can still
+  pitch, but the conflict goes in `is_it_real`.
+- **tfm** only when the study tests a claim people repeat about work or money ("open offices make
+  people collaborate", "four-day weeks raise output"). **brief** rarely fits; no site covers this.
+- **roundup**: a relatable, quick finding about work or shopping with its caveat in a clause.
+- Drop anything only an academic or a marketer's trade association would care about.
+
 ## Her rules for research
 
 - 2026-10-25 · Pitches need an online date within 30 days. 31 to 60 days needs another peg

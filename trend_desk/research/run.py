@@ -95,6 +95,8 @@ def digests_ready(updated: dict, now: datetime) -> bool:
 def view(s: dict, today: date) -> dict:
     """What the Judge sees for one study."""
     days, verified = rules.age_days(s, today)
+    if s.get("openalex") and s.get("date_source") != "crossref":
+        verified = False  # an OpenAlex date may be the issue date until Crossref confirms it
     angle = (s.get("pitch_angles") or [{}])[0] if isinstance(s.get("pitch_angles"), list) else {}
     cav = s.get("caveats") or ""
     return {
@@ -108,27 +110,36 @@ def view(s: dict, today: date) -> dict:
         "coverage": s.get("media_coverage", ""),
         "digest_pitch_angle": {"headline": angle.get("headline", ""), "hook": angle.get("hook", "")},
         "flags": [k for k, v in rules.flags(s).items() if v],
+        **({"id_kind": "openalex", "evidence_type": s.get("evidence_type", "")} if s.get("openalex") else {}),
         "blocked": rules.blocked(s, today), "needs_peg": rules.needs_peg(s, today),
     }
 
 
 def pick(studies: dict, data: dict, taken: dict, today: date) -> tuple[list[dict], dict]:
-    cutoff = (today - timedelta(days=LOOKBACK_DAYS)).isoformat()
     skipped = {"already judged": 0, "taken elsewhere": 0, "below score": 0, "older": 0}
     pool = []
     for pmid, s in studies.items():
+        # OpenAlex studies (sources.openalex_study) carry their own bar: the Lead band, and a
+        # two-week lookback because those digests rotate one topic a day.
+        lookback = s.get("lookback_days", LOOKBACK_DAYS)
         if pmid in data["studies"]:
             skipped["already judged"] += 1
-        elif (s.get("run_date") or "") < cutoff:
+        elif (s.get("run_date") or "") < (today - timedelta(days=lookback)).isoformat():
             skipped["older"] += 1
-        elif (s.get("relevance_score") or 0) < MIN_SCORE:
+        elif not s.get("eligible", (s.get("relevance_score") or 0) >= MIN_SCORE):
             skipped["below score"] += 1
         elif pmid in taken:
             skipped["taken elsewhere"] += 1
         else:
             pool.append(s)
     pool.sort(key=lambda s: (s.get("relevance_score") or 0, s.get("run_date", "")), reverse=True)
-    return [view(s, today) for s in pool[:MAX_CANDIDATES]], skipped
+    pool = pool[:MAX_CANDIDATES]
+    for s in pool:  # OpenAlex dates can be issue dates; Crossref's online date replaces them
+        if s.get("openalex") and s.get("doi") and (online := sources.crossref_online(s["doi"])):
+            d, _ = rules.online_date(online, today.isoformat())
+            if d and d <= today:  # a future "online" date is a scheduled issue, not news
+                s["pubdate"], s["date_source"] = online, "crossref"
+    return [view(s, today) for s in pool], skipped
 
 
 def recent_ideas(data: dict, today: date) -> list[dict]:
@@ -190,10 +201,13 @@ def apply(data: dict, result: dict, cands: list[dict], studies: dict, today: dat
                 "days_online": v["days_online"], "date_verified": v["date_verified"],
                 "digests": v["digests"], "score": v["score"], "caveats": v["caveats"],
                 "fact_check_note": v["fact_check_note"], "coverage": v["coverage"], "flags": v["flags"],
+                **({"openalex": True, "evidence_type": s.get("evidence_type", "")} if s.get("openalex") else {}),
             })
         evidence = []
         for s in study_views:
-            evidence.append(f"https://pubmed.ncbi.nlm.nih.gov/{s['pmid']}/")
+            # OpenAlex studies (marketing, career) have a work id, not a PMID
+            evidence.append(f"https://openalex.org/{s['pmid']}" if s["pmid"].startswith("W")
+                            else f"https://pubmed.ncbi.nlm.nih.gov/{s['pmid']}/")
             if s["doi"]:
                 evidence.append(f"https://doi.org/{s['doi']}")
         days = lead["days_online"]

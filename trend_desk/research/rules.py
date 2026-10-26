@@ -15,6 +15,8 @@ from datetime import date, timedelta
 PITCH_DAYS = 30   # online within 30 days for a pitch (Meagan, 2026-10-25)
 HARD_STOP = 60    # 31-60 days needs another peg; past 60 no pitch or roundup at all
 TINY_N = 50       # an explicit sample this small never headlines
+# OpenAlex evidence types that never pitch (one-time surveys too, in weak_design()).
+WEAK_DESIGNS = {"qualitative", "unspecified", ""}
 
 MONTHS = {m: i for i, m in enumerate(
     ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], 1)}
@@ -57,6 +59,10 @@ def age_days(study: dict, today: date) -> tuple[int, bool]:
     d, _ = online_date(study.get("pubdate", ""), study.get("run_date", ""))
     if d:
         return (today - d).days, True
+    try:  # OpenAlex digests search a 60-day window, so their find date says little; their date does
+        return (today - date.fromisoformat(study["published"][:10])).days, False
+    except (KeyError, TypeError, ValueError):
+        pass
     try:
         return (today - date.fromisoformat(study.get("run_date", ""))).days, False
     except ValueError:
@@ -82,7 +88,24 @@ def flags(study: dict) -> dict:
         "single_country": "single-country" in text or "single country" in text,
         "observational": "observational" in text,
         "covered": (study.get("media_coverage") or "").lower().startswith("already covered"),
+        # OpenAlex digests (marketing, career) grade the evidence themselves; see blocked().
+        "significant_issues": "significant" in (study.get("verdict") or "").lower(),
+        "weak_design": weak_design(study),
     }
+
+
+LONGITUDINAL = re.compile(r"longitudinal|panel|multi-?wave|three-wave|two-wave|time-lagged|experience sampling|diary", re.I)
+
+
+def weak_design(study: dict) -> bool:
+    """An OpenAlex study whose design can't carry a pitch: qualitative, no stated design, or a
+    one-time survey. A survey that follows people over time (waves, diaries) is not weak."""
+    if not study.get("openalex"):
+        return False
+    kind = (study.get("evidence_type") or "unspecified").lower()
+    if kind in ("survey", "surveys"):
+        return not LONGITUDINAL.search(f"{study.get('summary', '')} {study.get('caveats', '')}")
+    return kind in WEAK_DESIGNS
 
 
 def blocked(study: dict, today: date) -> dict:
@@ -95,7 +118,11 @@ def blocked(study: dict, today: date) -> dict:
     out = {}
     if f["preprint"]:
         return {r: "preprint" for r in ("pitch", "tfm", "roundup", "brief")}
-    if f["subgroup"]:
+    if f["significant_issues"]:
+        return {r: "fact check found significant issues" for r in ("pitch", "tfm", "roundup", "brief")}
+    if f["weak_design"]:
+        out["pitch"] = f"{study.get('evidence_type') or 'unspecified'} design can't carry a pitch"
+    elif f["subgroup"]:
         out["pitch"] = "subgroup or exploratory finding"
     elif f["tiny_sample"]:
         out["pitch"] = f"sample under {TINY_N}"
