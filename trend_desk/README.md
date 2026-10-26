@@ -62,3 +62,11 @@ outcome counts. Keep it that way when adding fields.
 - The Judge's notes on the first run flagged radar profiles pulling noise (fitness → Xbox and
   Packers trades, adhd-focus → gold prices, food-safety → car recalls). It drops them, but the
   seeds are worth tuning.
+- Decisions in `feedback/decisions.json` are folded per idea, not "latest wins" (`common.idea_overrides()`).
+  A retry only bumps `retry_seq` (its position in the list) and never replaces an earlier skip or
+  reroute; `built.json` keeps the seq it honored in `retried`, carried through every rewrite of the
+  record. On 2026-10-25 "retry 5" overwrote "pitch 5 instead" and the success record dropped
+  `retried`, so the builder rebuilt the old outline every 10 minutes (six copies) until outlines were
+  paused.
+- `commit_push()` pushes any local-only commits even when there is nothing new to commit, so a push
+  that lost a race with another job's commit doesn't leave the handoff stranded on the Mac.

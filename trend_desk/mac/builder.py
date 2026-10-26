@@ -53,8 +53,8 @@ def effective_route(idea: dict) -> tuple[str, str, str]:
     """(route, site, override_action) after her decisions."""
     o = c.idea_overrides().get(idea["id"], {})
     action = o.get("action", "")
-    route = o.get("to_route") or idea["route"] if action == "reroute" else idea["route"]
-    site = o.get("to_site") or idea.get("site", "") if action == "reroute" else idea.get("site", "")
+    route = (o.get("to_route") or idea["route"]) if action == "reroute" else idea["route"]
+    site = (o.get("to_site") or idea.get("site", "")) if action == "reroute" else idea.get("site", "")
     return route, site, action
 
 
@@ -219,8 +219,8 @@ def main() -> int:
         route, site, action = effective_route(idea)
         rec = built.get(idea["id"], {})
         o = c.idea_overrides().get(idea["id"], {})
-        if action == "retry" and o.get("date", "") > rec.get("retried", ""):
-            rec = {**rec, "attempts": 0, "status": "retry", "retried": o["date"]}
+        if o.get("retry_seq", 0) > rec.get("retried", 0):
+            rec = {**rec, "attempts": 0, "status": "retry", "retried": o["retry_seq"]}
             built[idea["id"]] = rec
         if action == "skip":
             if rec.get("status") != "skipped":
@@ -241,8 +241,10 @@ def main() -> int:
         try:
             c.log(f"Building {route}: {idea['title']}")
             out = build_one(idea, route, site)
+            # Carry "retried" forward: dropping it made every sync see the same retry as new.
             built[idea["id"]] = {"status": "done", "route": route, "site": site, "attempts": attempts,
-                                 "built_at": c.now().isoformat(timespec="seconds"), "title": idea["title"], **out}
+                                 "built_at": c.now().isoformat(timespec="seconds"), "title": idea["title"],
+                                 "retried": rec.get("retried", 0), **out}
             if route == "roundup":
                 roundup_count += 1
             else:

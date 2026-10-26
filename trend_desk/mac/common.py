@@ -77,8 +77,11 @@ def commit_push(paths: list[str], message: str, cwd: Path = REPO) -> bool:
         return False
     git("add", "--", *[p for p in paths if (cwd / p).exists()], cwd=cwd)
     if git("diff", "--cached", "--quiet", cwd=cwd).returncode == 0:
-        return True
-    if git("commit", "-q", "-m", message, "--", *paths, cwd=cwd).returncode:
+        # Nothing new, but an earlier commit whose push lost a race may still be local only.
+        git("fetch", "-q", "origin", "main", cwd=cwd)
+        if git("rev-list", "--count", "origin/main..HEAD", cwd=cwd).stdout.strip() in ("", "0"):
+            return True
+    elif git("commit", "-q", "-m", message, "--", *paths, cwd=cwd).returncode:
         return False
     for _ in range(3):
         if git("pull", "-q", "--rebase", "origin", "main", cwd=cwd).returncode == 0 and \
@@ -152,11 +155,23 @@ def decisions() -> list[dict]:
 
 
 def idea_overrides() -> dict:
-    """Her latest decision per idea from decisions.json: skip, reroute (with to_route), go."""
+    """Her standing decision per idea from decisions.json, folded in order.
+
+    A retry is not a change of mind about where an idea goes, so it never replaces an earlier skip
+    or reroute: it only sets "retry_seq", the decision's position in the list, which the builder
+    compares with the seq it last honored. (Keeping just the latest entry once let "retry 5" wipe
+    out "pitch 5 instead", and the builder rebuilt the old outline every 10 minutes.)"""
     out = {}
-    for d in decisions():
-        if d.get("idea_id"):
-            out[d["idea_id"]] = d
+    for i, d in enumerate(decisions()):
+        iid = d.get("idea_id")
+        if not iid:
+            continue
+        o = out.setdefault(iid, {})
+        if d.get("action") == "retry":
+            o["retry_seq"] = i + 1
+        elif d.get("action") in ("skip", "reroute", "go"):
+            o.update({"action": d["action"], "to_route": d.get("to_route", ""), "to_site": d.get("to_site", ""),
+                      "date": d.get("date", "")})
     return out
 
 

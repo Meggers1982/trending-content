@@ -168,7 +168,7 @@ def needs_build() -> bool:
                 if rec.get("status") != "skipped":
                     return True
                 continue
-            if o.get("action") == "retry" and o.get("date", "") > rec.get("retried", ""):
+            if o.get("retry_seq", 0) > rec.get("retried", 0):
                 return True
             if o.get("action") == "reroute" and o.get("to_route") and o["to_route"] != rec.get("route"):
                 return True
