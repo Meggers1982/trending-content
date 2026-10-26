@@ -3,6 +3,603 @@
  "backlog": true,
  "ideas": [
   {
+   "id": "rd-2026-10-25-does-menopause-mess-with-your-thyroid-a-20-year-st",
+   "desk": "research",
+   "title": "Does menopause mess with your thyroid? A 20-year study says aging does, not menopause",
+   "created": "2026-10-25",
+   "route": "brief",
+   "speed": "online 67 days",
+   "beat": "women's health and the mind",
+   "angle": "Evergreen answer page. Annual checkups from 7,644 Japanese women (86,967 visits, median 13.7 years) show TSH drifting up and free T4 drifting down gradually, with no extra shift at menopause itself. Use it to explain what midlife thyroid lab changes do and don't mean.",
+   "why_now": "Steady search demand on menopause-and-thyroid questions. No age limit for briefs.",
+   "is_it_real": "Solid for an evergreen page. It's large and long-running, but single-center and all Japanese, so say it may not generalize. It's observational, and thyroid disorders were self-reported.",
+   "evidence_strength": "strong",
+   "other_peg": "",
+   "audience": "general",
+   "confidence": "high",
+   "site": "menopause",
+   "seed_keyword": "does menopause affect thyroid",
+   "pmids": [
+    "42615120"
+   ],
+   "studies": [
+    {
+     "pmid": "42615120",
+     "doi": "10.1210/clinem/dgag337",
+     "journal": "The Journal of Clinical Endocrinology and Metabolism",
+     "headline": "Menopause Doesn't Change Thyroid Function — Aging Does, Large Study Finds",
+     "pubdate": "2026 Aug 19",
+     "days_online": 67,
+     "date_verified": true,
+     "digests": [
+      "Aging & Longevity"
+     ],
+     "score": 8,
+     "caveats": "single-center, Japanese population (may not generalize to other ethnicities), observational design, self-reported thyroid disorders",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (SERPAPI verified)",
+     "flags": [
+      "observational"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42615120/",
+    "https://doi.org/10.1210/clinem/dgag337"
+   ],
+   "term_details": [],
+   "status": "routed",
+   "backlog": true,
+   "kind": "single"
+  },
+  {
+   "id": "rd-2026-10-25-why-girls-with-adhd-get-help-four-years-later-than",
+   "desk": "research",
+   "title": "Why girls with ADHD get help four years later than boys",
+   "created": "2026-10-25",
+   "route": "brief",
+   "speed": "online 85 days",
+   "beat": "ADHD in women",
+   "angle": "An evergreen page on late ADHD recognition in girls, anchored by an 89,587-child cohort. Girls who reached ADHD care got there at a median age of 13.6, compared with 9.4 for boys.",
+   "why_now": "A core topic for the women's ADHD site, which launches November 23, and people search for it steadily.",
+   "is_it_real": "Large linked-records cohort from New South Wales. It measures when children first used an ADHD service, not when they were diagnosed, and Australian care pathways differ from US ones.",
+   "evidence_strength": "strong",
+   "other_peg": "",
+   "audience": "general",
+   "confidence": "high",
+   "site": "womens-adhd",
+   "seed_keyword": "adhd in girls diagnosed later",
+   "pmids": [
+    "42541370"
+   ],
+   "studies": [
+    {
+     "pmid": "42541370",
+     "doi": "10.1177/10870547261474901",
+     "journal": "Journal of Attention Disorders",
+     "headline": "Girls with ADHD aren't getting help until their teens — more than four years later than boys",
+     "pubdate": "2026 Aug 1",
+     "days_online": 85,
+     "date_verified": true,
+     "digests": [
+      "Conditions & Body",
+      "Mental Health & Psychiatry",
+      "Women's Health"
+     ],
+     "score": 8,
+     "caveats": "observational design, single-center (New South Wales, Australia — administrative healthcare context may differ from US), health service use as proxy for diagnosis (not direct diagnostic data)",
+     "fact_check_note": "",
+     "coverage": "Not verified — SERPAPI unavailable",
+     "flags": [
+      "observational"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42541370/",
+    "https://doi.org/10.1177/10870547261474901"
+   ],
+   "term_details": [],
+   "status": "routed",
+   "backlog": true,
+   "kind": "single"
+  },
+  {
+   "id": "rd-2026-10-25-does-creatine-build-muscle-for-women-over-40-what",
+   "desk": "research",
+   "title": "Does creatine build muscle for women over 40? What a 63-trial review shows",
+   "created": "2026-10-25",
+   "route": "brief",
+   "speed": "online 30 days (unverified)",
+   "beat": "aging, body and metabolism",
+   "angle": "An evergreen evidence page. Across 63 RCTs, creatine plus resistance training beat lifting alone for upper- and lower-body strength and lean mass, with a small drop in body-fat percentage. The weight gained looks like muscle, not fat. Creatine helps when paired with lifting, not instead of it.",
+   "why_now": "Creatine for women in midlife is a steady, high-volume search topic, and this is the largest pooled estimate yet. It's a solid receipt for an evergreen page, not news.",
+   "is_it_real": "The meta-analysis is solid: 63 RCTs, n=1,489, three-level random effects. Effect sizes are moderate for strength (g about 0.55) and small for lean mass (g=0.30). It is not specific to menopause. The exploratory age analysis suggested younger people gained more strength, with age groups unevenly represented, so the page must say midlife-specific evidence is thinner. Diets varied across trials. The online date isn't verified.",
+   "evidence_strength": "strong",
+   "other_peg": "",
+   "audience": "both",
+   "confidence": "medium",
+   "site": "menopause",
+   "seed_keyword": "creatine for women over 40",
+   "pmids": [
+    "42765482"
+   ],
+   "studies": [
+    {
+     "pmid": "42765482",
+     "doi": "10.1080/15502783.2026.2718316",
+     "journal": "Journal of the International Society of Sports Nutrition",
+     "headline": "Creatine Plus Resistance Training Builds More Muscle and Strength Than Lifting Alone — and the Evidence Is Now Stronger Than Ever",
+     "pubdate": "2026 Dec 31",
+     "days_online": 30,
+     "date_verified": false,
+     "digests": [
+      "Children's & Pediatric Health",
+      "Fitness & Exercise"
+     ],
+     "score": 8,
+     "caveats": "heterogeneous nutritional intake across included trials, uneven age subgroup representation, exploratory moderator analyses, secondary analysis",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (SERPAPI verified)",
+     "flags": [
+      "subgroup"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42765482/",
+    "https://doi.org/10.1080/15502783.2026.2718316"
+   ],
+   "term_details": [],
+   "status": "routed",
+   "backlog": true,
+   "kind": "single"
+  },
+  {
+   "id": "rd-2026-10-25-is-it-real-testosterone-fuels-prostate-cancer",
+   "desk": "research",
+   "title": "Is it real? Testosterone fuels prostate cancer",
+   "created": "2026-10-25",
+   "route": "tfm",
+   "speed": "online 128 days",
+   "beat": "viral health claims, the body",
+   "angle": "Online TRT clinics and 'low T' content often dismiss the cancer fear as a myth, and many doctors still repeat it. A pooled analysis of 24,510 men across 10 cohorts, with testosterone measured by mass spectrometry, found no link between higher natural testosterone and cancer death, overall cancer or prostate cancer. The catch is the receipt: natural levels aren't therapy, so the study can't settle whether TRT is safe.",
+   "why_now": "Testosterone therapy marketing to men, and increasingly to women, is a steady viral wellness claim. TFM has no age limit, and this is a high-quality data source for a 'yes, but' verdict.",
+   "is_it_real": "Strong design: individual participant data from 10 prospective cohorts, 276,931 person-years, at least 5 years of follow-up. It's still observational, and it covers endogenous hormone levels, not supplementation. The digest says the abstract was cut off mid-results, so read the full paper and confirm the exact null results before writing. The 'tiny sample' flag is a parsing error.",
+   "evidence_strength": "strong",
+   "other_peg": "",
+   "audience": "general",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42320510"
+   ],
+   "studies": [
+    {
+     "pmid": "42320510",
+     "doi": "10.1016/j.lanhl.2026.100857",
+     "journal": "The Lancet Healthy Longevity",
+     "headline": "Higher testosterone levels in older men are not linked to greater cancer risk, large study finds",
+     "pubdate": "2026 Jun 19",
+     "days_online": 128,
+     "date_verified": true,
+     "digests": [
+      "Elderly & Geriatric"
+     ],
+     "score": 9,
+     "caveats": "observational design, secondary analysis",
+     "fact_check_note": "The abstract was truncated in the source data at the findings section; summary reflects available findings. The N=24,510 and study design details are confirmed from the methods section. The direction of effect (no significant association with cancer risk) is stated in context from the background framing; journalists should verify the full published findings.",
+     "coverage": "Not verified — SERPAPI unavailable",
+     "flags": [
+      "tiny_sample",
+      "small_sample",
+      "observational"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42320510/",
+    "https://doi.org/10.1016/j.lanhl.2026.100857"
+   ],
+   "term_details": [],
+   "status": "routed",
+   "backlog": true,
+   "kind": "single"
+  },
+  {
+   "id": "rd-2026-10-25-adhd-and-having-kids-adults-with-adhd-become-paren",
+   "desk": "research",
+   "title": "ADHD and having kids: adults with ADHD become parents earlier but less often, and partnership explains most of the gap",
+   "created": "2026-10-25",
+   "route": "brief",
+   "speed": "online 124 days",
+   "beat": "women's health and the mind",
+   "angle": "An evergreen page on ADHD and parenthood. In 759,430 Finns, people with ADHD were more likely to have a first child in their late teens and early twenties and less likely between 24 and 38. Once partnership status was accounted for, the overall negative link reversed.",
+   "why_now": "Too old to pitch (124 days), but strong evidence for a steady-search topic on the women's ADHD site, which launches 2026-11-23. Fertility rate is also trending this week.",
+   "is_it_real": "A very large population-register cohort, but observational and from one country (Finland). ADHD was identified from health records and prescriptions, so it captures diagnosed ADHD only. The summary does not say whether results were split by sex, so check before writing a women-specific claim.",
+   "evidence_strength": "strong",
+   "other_peg": "",
+   "audience": "general",
+   "confidence": "medium",
+   "site": "womens-adhd",
+   "seed_keyword": "adhd and having children",
+   "pmids": [
+    "42336634"
+   ],
+   "studies": [
+    {
+     "pmid": "42336634",
+     "doi": "10.1136/jech-2026-225863",
+     "journal": "Journal of Epidemiology and Community Health",
+     "headline": "People with ADHD become parents earlier but are ultimately less likely to have children at all",
+     "pubdate": "2026 Jun 23",
+     "days_online": 124,
+     "date_verified": true,
+     "digests": [
+      "Science & Environment"
+     ],
+     "score": 8,
+     "caveats": "observational design, single-country (Finland), secondary analysis",
+     "fact_check_note": "",
+     "coverage": "Not verified — SERPAPI unavailable",
+     "flags": [
+      "single_country",
+      "observational"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42336634/",
+    "https://doi.org/10.1136/jech-2026-225863"
+   ],
+   "term_details": [],
+   "status": "routed",
+   "backlog": true,
+   "kind": "single"
+  },
+  {
+   "id": "rd-2026-10-25-laser-light-therapy-added-nothing-to-back-pain-exe",
+   "desk": "research",
+   "title": "Laser/light therapy added nothing to back-pain exercise in a fully blinded trial with a year of follow-up",
+   "created": "2026-10-25",
+   "route": "roundup",
+   "speed": "online 13 days",
+   "beat": "viral health claims; health tech",
+   "angle": "Red-light and laser therapy is sold everywhere, from clinics to home panels. In a 148-person trial where patients, therapists and assessors were all blinded, adding photobiomodulation to a back-exercise program changed pain by 0.4 points out of 10, and had no meaningful effect on disability or an inflammation marker, at any point up to 12 months. The exercise did the work. Caveat in a clause: one device and protocol, tested only as an add-on, in adults under 65.",
+   "why_now": "Online 13 days. Red-light therapy is a steady consumer trend.",
+   "is_it_real": "A well-blinded randomized trial with long follow-up. Limits: one device and dosing protocol, an add-on design (it doesn't test light therapy alone), and ages 18 to 65. The fact-check flagged minor issues. It says nothing about red light for skin or other uses, so the item shouldn't generalize past back pain.",
+   "evidence_strength": "strong",
+   "other_peg": "",
+   "audience": "general",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42864195"
+   ],
+   "studies": [
+    {
+     "pmid": "42864195",
+     "doi": "10.1016/j.jphys.2026.09.005",
+     "journal": "J Physiother",
+     "headline": "Laser therapy added to back exercises did nothing extra — a year of follow-up confirms it",
+     "pubdate": "2026 Oct 12",
+     "days_online": 13,
+     "date_verified": true,
+     "digests": [
+      "Senior Living — New This Week"
+     ],
+     "score": 7,
+     "caveats": "Participants were aged 18 to 65, so results cannot be assumed to apply to adults over 65 with chronic back pain; the trial tested one specific device and dosing protocol; it addresses photobiomodulation only as an add-on to exercise, not as a standalone therapy.",
+     "fact_check_note": "⚠️ Minor issues",
+     "coverage": "Not widely covered ✓ (Google News checked)",
+     "flags": []
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42864195/",
+    "https://doi.org/10.1016/j.jphys.2026.09.005"
+   ],
+   "term_details": [],
+   "status": "routed",
+   "backlog": true,
+   "kind": "single"
+  },
+  {
+   "id": "rd-2026-10-25-the-teen-phone-panic-may-be-aimed-at-the-wrong-tar",
+   "desk": "research",
+   "title": "The teen phone panic may be aimed at the wrong target: a large twin study and four others point to genes, family and loneliness, not screens alone",
+   "created": "2026-10-25",
+   "route": "pitch",
+   "speed": "online 17 days",
+   "beat": "parenting / teen mental health / tech policy",
+   "angle": "Phone bans and social-media age limits rest on the idea that screens drive teen depression. In 21,797 Swedish twins, screen use was linked to more symptoms across the population, but the link weakened sharply within twin pairs and didn't survive correction for multiple testing. That points to shared genes and family environment. Four other studies say what drives problem use. Loneliness and social exclusion predicted it in a German population sample. Teens who prefer online socializing were more likely to spiral. Teens skilled at online friendships were at risk through digital stress. Brain imaging found problem smartphone use doesn't look like substance addiction. If the driver is social need, bans treat a symptom.",
+   "why_now": "The lead study (Nature Human Behaviour) has been online 17 days and hasn't been widely covered. School phone bans are in force this year, and age-limit laws and the social-media-addiction lawsuits keep the argument live. Two batches pitched halves of this story.",
+   "is_it_real": "The twin design is strong but still observational. It shows the population link is largely confounded, not that screens are harmless, and the pitch must not say 'screens are fine'. The supporting studies are observational; the imaging study is small and the German sample is single-country.",
+   "evidence_strength": "moderate",
+   "other_peg": "State school cellphone bans this school year; social-media age-limit laws and addiction lawsuits against Meta and others (pitch agents: confirm current status)",
+   "audience": "general",
+   "confidence": "high",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42850270",
+    "42747517",
+    "42789332",
+    "42721316",
+    "42349369"
+   ],
+   "studies": [
+    {
+     "pmid": "42850270",
+     "doi": "10.1038/s41562-026-02607-0",
+     "journal": "Nature Human Behaviour",
+     "headline": "The Link Between Teen Screen Time and Depression May Be Mostly Genetics, Not Screens",
+     "pubdate": "2026 Oct 8",
+     "days_online": 17,
+     "date_verified": true,
+     "digests": [
+      "Fitness & Exercise"
+     ],
+     "score": 6,
+     "caveats": "observational design, self-reported outcomes, Swedish cohort (may not generalize to all populations)",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (SERPAPI verified)",
+     "flags": [
+      "observational"
+     ]
+    },
+    {
+     "pmid": "42747517",
+     "doi": "10.1007/s00787-026-03189-y",
+     "journal": "European Child & Adolescent Psychiatry",
+     "headline": "Loneliness and Social Exclusion — Not Just Screen Time — Drive Teens Into Problematic Social Media Use",
+     "pubdate": "2026 Sep 16",
+     "days_online": 39,
+     "date_verified": true,
+     "digests": [
+      "Children's & Pediatric Health"
+     ],
+     "score": 8,
+     "caveats": "observational design, single-country (Germany), parent-reported outcomes, narrow age range (adolescents only), self-reported social media use",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (SERPAPI verified)",
+     "flags": [
+      "single_country",
+      "observational"
+     ]
+    },
+    {
+     "pmid": "42789332",
+     "doi": "10.1556/2006.2026.00079",
+     "journal": "Journal of Behavioral Addictions",
+     "headline": "Teens Who Prefer Online Socializing Over Real Life Are More Likely to Spiral Into Problematic Social Media Use — But Emotion Regulation Alone Isn't the Culprit",
+     "pubdate": "2026 Sep 24",
+     "days_online": 31,
+     "date_verified": true,
+     "digests": [
+      "Children's & Pediatric Health"
+     ],
+     "score": 7,
+     "caveats": "small sample (N<100 per group context, total N=229), single-center, self-reported (parent-reported) outcomes, short follow-up, narrow age range, observational design",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (SERPAPI verified)",
+     "flags": [
+      "small_sample",
+      "observational"
+     ]
+    },
+    {
+     "pmid": "42721316",
+     "doi": "10.1037/bne0000668",
+     "journal": "Behavioral Neuroscience",
+     "headline": "Teens Who Overuse Smartphones Show Heightened Brain Reward Sensitivity — But It's Not Quite Like Other Addictions",
+     "pubdate": "2026 Sep 10",
+     "days_online": 45,
+     "date_verified": true,
+     "digests": [
+      "Children's & Pediatric Health",
+      "Mental Health & Psychiatry"
+     ],
+     "score": 7,
+     "caveats": "small sample (N<100), single-center, observational design, narrow age range, cross-sectional — cannot establish causation",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (SERPAPI verified)",
+     "flags": [
+      "small_sample",
+      "observational"
+     ]
+    },
+    {
+     "pmid": "42349369",
+     "doi": "10.1016/j.addbeh.2026.108781",
+     "journal": "Addictive Behaviors",
+     "headline": "Teens Who Are Better at Online Relationships May Actually Be More at Risk for Social Media Addiction",
+     "pubdate": "2026 Jun 23",
+     "days_online": 124,
+     "date_verified": true,
+     "digests": [
+      "Children's & Pediatric Health"
+     ],
+     "score": 8,
+     "caveats": "observational design, self-reported (parent-reported) outcomes, short follow-up, narrow age range",
+     "fact_check_note": "",
+     "coverage": "Not verified — SERPAPI unavailable",
+     "flags": [
+      "observational"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42850270/",
+    "https://doi.org/10.1038/s41562-026-02607-0",
+    "https://pubmed.ncbi.nlm.nih.gov/42747517/",
+    "https://doi.org/10.1007/s00787-026-03189-y",
+    "https://pubmed.ncbi.nlm.nih.gov/42789332/",
+    "https://doi.org/10.1556/2006.2026.00079",
+    "https://pubmed.ncbi.nlm.nih.gov/42721316/",
+    "https://doi.org/10.1037/bne0000668",
+    "https://pubmed.ncbi.nlm.nih.gov/42349369/",
+    "https://doi.org/10.1016/j.addbeh.2026.108781"
+   ],
+   "term_details": [],
+   "status": "routed",
+   "backlog": true,
+   "kind": "pattern"
+  },
+  {
+   "id": "rd-2026-10-25-is-it-real-your-benzoyl-peroxide-acne-cream-is-loa",
+   "desk": "research",
+   "title": "Is it real? Your benzoyl peroxide acne cream is loading your blood with benzene",
+   "created": "2026-10-25",
+   "route": "tfm",
+   "speed": "online 47 days (unverified)",
+   "beat": "viral health claims",
+   "angle": "The benzene scare in benzoyl peroxide acne products went viral in 2024. A US national survey analysis (NHANES) found no link between using benzoyl peroxide and blood benzene levels. The honest answer is 'mostly no, with a gap': the scare was about products breaking down in heat, and this study measures people's blood, not the products.",
+   "why_now": "Meagan saved this one. The claim still circulates on skincare TikTok and in product reviews, and people still search for it.",
+   "is_it_real": "This is a short research letter, and the abstract doesn't give the sample size or methods. Blood benzene reflects recent exposure and is driven mostly by smoking and traffic or gasoline. A single blood draw may miss intermittent exposure, and the study doesn't test products stored in heat, which is where the original testing found benzene forming. It's a good receipt against 'it's poisoning you', not proof that no product ever contains benzene. Pull the full paper and the FDA's own product testing before writing.",
+   "evidence_strength": "moderate",
+   "other_peg": "",
+   "audience": "general",
+   "confidence": "high",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42242374"
+   ],
+   "studies": [
+    {
+     "pmid": "42242374",
+     "doi": "10.1016/j.jaad.2026.05.119",
+     "journal": "Journal of the American Academy of Dermatology",
+     "headline": "Benzoyl peroxide does not raise blood benzene levels, large US survey finds",
+     "pubdate": "2026 Sep",
+     "days_online": 47,
+     "date_verified": false,
+     "digests": [
+      "Conditions & Body",
+      "Dermatology & Skin Science"
+     ],
+     "score": 8,
+     "caveats": "secondary analysis, no sex-disaggregated data",
+     "fact_check_note": "Abstract is a brief editorial/commentary with no detailed methods reported; sample size (N) of the NHANES dataset used is not specified in the abstract. Summary reflects what is stated; readers should note the full analysis details are in the referenced article.",
+     "coverage": "Not widely covered ✓ (SERPAPI verified)",
+     "flags": []
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42242374/",
+    "https://doi.org/10.1016/j.jaad.2026.05.119"
+   ],
+   "term_details": [],
+   "status": "routed",
+   "backlog": true,
+   "kind": "single"
+  },
+  {
+   "id": "rd-2026-10-25-non-hormonal-treatments-for-hot-flashes-what-s-app",
+   "desk": "research",
+   "title": "Non-hormonal treatments for hot flashes: what's approved, what's coming, and the liver question",
+   "created": "2026-10-25",
+   "route": "brief",
+   "speed": "online 85 days",
+   "beat": "menopause treatments",
+   "angle": "An evergreen page on non-hormonal options for hot flashes, centered on the NK3 receptor drug class. This trial can carry a 'what's in the pipeline' section: a newer NK3R antagonist cut hot flash frequency and severity over 12 weeks with no liver signal. That matters because liver safety is the class's open question.",
+   "why_now": "Search demand for non-hormonal hot flash treatment is steady and growing as this drug class reaches the market. The menopause site needs this page whatever the news cycle.",
+   "is_it_real": "A multicenter, randomized, double-blind, placebo-controlled phase 2 trial in 276 postmenopausal Chinese women. It ran only 12 weeks, was funded by the drug's maker (three authors are company employees), and the drug is not approved anywhere. Twelve weeks is too short to clear liver safety. The page should present this as early pipeline evidence, not a treatment option. The brief room should confirm the current FDA status and label warnings of the approved drugs in the class.",
+   "evidence_strength": "moderate",
+   "other_peg": "",
+   "audience": "older adults",
+   "confidence": "high",
+   "site": "menopause",
+   "seed_keyword": "non-hormonal treatment for hot flashes",
+   "pmids": [
+    "41979542"
+   ],
+   "studies": [
+    {
+     "pmid": "41979542",
+     "doi": "10.1097/GME.0000000000002748",
+     "journal": "Menopause",
+     "headline": "A non-hormonal hot flash drug works in Chinese women — and it doesn't harm the liver",
+     "pubdate": "2026 Aug 1",
+     "days_online": 85,
+     "date_verified": true,
+     "digests": [
+      "Conditions & Body",
+      "Women's Health"
+     ],
+     "score": 7,
+     "caveats": "short follow-up (12 weeks), single-country (China) — results may not generalize beyond Chinese postmenopausal women, industry funding (Changchun GeneScience Pharmaceutical Co., Ltd., with three authors as company employees), phase 2 trial only",
+     "fact_check_note": "",
+     "coverage": "Not verified — SERPAPI unavailable",
+     "flags": [
+      "single_country"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/41979542/",
+    "https://doi.org/10.1097/GME.0000000000002748"
+   ],
+   "term_details": [],
+   "status": "routed",
+   "backlog": true,
+   "kind": "single"
+  },
+  {
+   "id": "rd-2026-10-25-what-is-cyclospora-the-produce-borne-parasite-behi",
+   "desk": "research",
+   "title": "What is Cyclospora? The produce-borne parasite behind repeated US outbreaks, explained",
+   "created": "2026-10-25",
+   "route": "brief",
+   "speed": "online 43 days",
+   "beat": "public health: food safety",
+   "angle": "An evergreen Recall Register explainer. Cyclospora spreads on fresh produce. Outbreaks are hard to trace back because of short shelf life and fragmented supply chains. Symptoms are prolonged or relapsing watery diarrhea, and there is one proven treatment (TMP-SMX) with no good backup.",
+   "why_now": "Cyclospora searches spike with every summer outbreak announcement. An evergreen page ranks before the next one. Readers are already in food-recall mode this week (meat, hot dog and cheese recalls).",
+   "is_it_real": "Solid for an explainer. It's a systematic review of the literature through August 2026, not new data, and it restates established facts (produce transmission, TMP-SMX as the only proven drug, attribution problems). It isn't news on its own, so it isn't a pitch.",
+   "evidence_strength": "moderate",
+   "other_peg": "",
+   "audience": "general",
+   "confidence": "high",
+   "site": "recall-register",
+   "seed_keyword": "cyclospora",
+   "pmids": [
+    "42744668"
+   ],
+   "studies": [
+    {
+     "pmid": "42744668",
+     "doi": "10.1016/j.jmii.2026.09.001",
+     "journal": "Journal of Microbiology, Immunology, and Infection",
+     "headline": "The stomach bug hiding in your salad: a parasite behind recurring US outbreaks still has no good backup treatment",
+     "pubdate": "2026 Sep 12",
+     "days_online": 43,
+     "date_verified": true,
+     "digests": [
+      "Conditions & Body",
+      "Gut & Digestive Health"
+     ],
+     "score": 5,
+     "caveats": "observational design, review article (not original research), no sex-disaggregated data",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (SERPAPI verified)",
+     "flags": [
+      "observational"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42744668/",
+    "https://doi.org/10.1016/j.jmii.2026.09.001"
+   ],
+   "term_details": [],
+   "status": "routed",
+   "backlog": true,
+   "kind": "single"
+  },
+  {
    "id": "rd-2026-10-25-older-heart-patients-are-being-turned-away-on-assu",
    "desk": "research",
    "title": "Older heart patients are being turned away on assumptions the data don't back up",
@@ -342,56 +939,6 @@
    "evidence": [
     "https://pubmed.ncbi.nlm.nih.gov/42476451/",
     "https://doi.org/10.1016/j.metabol.2026.156697"
-   ],
-   "term_details": [],
-   "status": "routed",
-   "backlog": true,
-   "kind": "single"
-  },
-  {
-   "id": "rd-2026-10-25-does-menopause-mess-with-your-thyroid-a-20-year-st",
-   "desk": "research",
-   "title": "Does menopause mess with your thyroid? A 20-year study says aging does, not menopause",
-   "created": "2026-10-25",
-   "route": "brief",
-   "speed": "online 67 days",
-   "beat": "women's health and the mind",
-   "angle": "Evergreen answer page. Annual checkups from 7,644 Japanese women (86,967 visits, median 13.7 years) show TSH drifting up and free T4 drifting down gradually, with no extra shift at menopause itself. Use it to explain what midlife thyroid lab changes do and don't mean.",
-   "why_now": "Steady search demand on menopause-and-thyroid questions. No age limit for briefs.",
-   "is_it_real": "Solid for an evergreen page. It's large and long-running, but single-center and all Japanese, so say it may not generalize. It's observational, and thyroid disorders were self-reported.",
-   "evidence_strength": "strong",
-   "other_peg": "",
-   "audience": "general",
-   "confidence": "high",
-   "site": "menopause",
-   "seed_keyword": "does menopause affect thyroid",
-   "pmids": [
-    "42615120"
-   ],
-   "studies": [
-    {
-     "pmid": "42615120",
-     "doi": "10.1210/clinem/dgag337",
-     "journal": "The Journal of Clinical Endocrinology and Metabolism",
-     "headline": "Menopause Doesn't Change Thyroid Function — Aging Does, Large Study Finds",
-     "pubdate": "2026 Aug 19",
-     "days_online": 67,
-     "date_verified": true,
-     "digests": [
-      "Aging & Longevity"
-     ],
-     "score": 8,
-     "caveats": "single-center, Japanese population (may not generalize to other ethnicities), observational design, self-reported thyroid disorders",
-     "fact_check_note": "",
-     "coverage": "Not widely covered ✓ (SERPAPI verified)",
-     "flags": [
-      "observational"
-     ]
-    }
-   ],
-   "evidence": [
-    "https://pubmed.ncbi.nlm.nih.gov/42615120/",
-    "https://doi.org/10.1210/clinem/dgag337"
    ],
    "term_details": [],
    "status": "routed",
@@ -1281,57 +1828,6 @@
    "kind": "single"
   },
   {
-   "id": "rd-2026-10-25-does-creatine-build-muscle-for-women-over-40-what",
-   "desk": "research",
-   "title": "Does creatine build muscle for women over 40? What a 63-trial review shows",
-   "created": "2026-10-25",
-   "route": "brief",
-   "speed": "online 30 days (unverified)",
-   "beat": "aging, body and metabolism",
-   "angle": "An evergreen evidence page. Across 63 RCTs, creatine plus resistance training beat lifting alone for upper- and lower-body strength and lean mass, with a small drop in body-fat percentage. The weight gained looks like muscle, not fat. Creatine helps when paired with lifting, not instead of it.",
-   "why_now": "Creatine for women in midlife is a steady, high-volume search topic, and this is the largest pooled estimate yet. It's a solid receipt for an evergreen page, not news.",
-   "is_it_real": "The meta-analysis is solid: 63 RCTs, n=1,489, three-level random effects. Effect sizes are moderate for strength (g about 0.55) and small for lean mass (g=0.30). It is not specific to menopause. The exploratory age analysis suggested younger people gained more strength, with age groups unevenly represented, so the page must say midlife-specific evidence is thinner. Diets varied across trials. The online date isn't verified.",
-   "evidence_strength": "strong",
-   "other_peg": "",
-   "audience": "both",
-   "confidence": "medium",
-   "site": "menopause",
-   "seed_keyword": "creatine for women over 40",
-   "pmids": [
-    "42765482"
-   ],
-   "studies": [
-    {
-     "pmid": "42765482",
-     "doi": "10.1080/15502783.2026.2718316",
-     "journal": "Journal of the International Society of Sports Nutrition",
-     "headline": "Creatine Plus Resistance Training Builds More Muscle and Strength Than Lifting Alone — and the Evidence Is Now Stronger Than Ever",
-     "pubdate": "2026 Dec 31",
-     "days_online": 30,
-     "date_verified": false,
-     "digests": [
-      "Children's & Pediatric Health",
-      "Fitness & Exercise"
-     ],
-     "score": 8,
-     "caveats": "heterogeneous nutritional intake across included trials, uneven age subgroup representation, exploratory moderator analyses, secondary analysis",
-     "fact_check_note": "",
-     "coverage": "Not widely covered ✓ (SERPAPI verified)",
-     "flags": [
-      "subgroup"
-     ]
-    }
-   ],
-   "evidence": [
-    "https://pubmed.ncbi.nlm.nih.gov/42765482/",
-    "https://doi.org/10.1080/15502783.2026.2718316"
-   ],
-   "term_details": [],
-   "status": "routed",
-   "backlog": true,
-   "kind": "single"
-  },
-  {
    "id": "rd-2026-10-25-kids-with-selective-mutism-in-norway-weren-t-diagn",
    "desk": "research",
    "title": "Kids with selective mutism in Norway weren't diagnosed until about age 10 on average, and girls waited longer than boys",
@@ -1690,55 +2186,6 @@
    "kind": "pattern"
   },
   {
-   "id": "rd-2026-10-25-is-it-real-your-benzoyl-peroxide-acne-cream-is-loa",
-   "desk": "research",
-   "title": "Is it real? Your benzoyl peroxide acne cream is loading your blood with benzene",
-   "created": "2026-10-25",
-   "route": "tfm",
-   "speed": "online 47 days (unverified)",
-   "beat": "viral health claims",
-   "angle": "The benzene scare in benzoyl peroxide acne products went viral in 2024. A US national survey analysis (NHANES) found no link between using benzoyl peroxide and blood benzene levels. The honest answer is 'mostly no, with a gap': the scare was about products breaking down in heat, and this study measures people's blood, not the products.",
-   "why_now": "Meagan saved this one. The claim still circulates on skincare TikTok and in product reviews, and people still search for it.",
-   "is_it_real": "This is a short research letter, and the abstract doesn't give the sample size or methods. Blood benzene reflects recent exposure and is driven mostly by smoking and traffic or gasoline. A single blood draw may miss intermittent exposure, and the study doesn't test products stored in heat, which is where the original testing found benzene forming. It's a good receipt against 'it's poisoning you', not proof that no product ever contains benzene. Pull the full paper and the FDA's own product testing before writing.",
-   "evidence_strength": "moderate",
-   "other_peg": "",
-   "audience": "general",
-   "confidence": "high",
-   "site": "",
-   "seed_keyword": "",
-   "pmids": [
-    "42242374"
-   ],
-   "studies": [
-    {
-     "pmid": "42242374",
-     "doi": "10.1016/j.jaad.2026.05.119",
-     "journal": "Journal of the American Academy of Dermatology",
-     "headline": "Benzoyl peroxide does not raise blood benzene levels, large US survey finds",
-     "pubdate": "2026 Sep",
-     "days_online": 47,
-     "date_verified": false,
-     "digests": [
-      "Conditions & Body",
-      "Dermatology & Skin Science"
-     ],
-     "score": 8,
-     "caveats": "secondary analysis, no sex-disaggregated data",
-     "fact_check_note": "Abstract is a brief editorial/commentary with no detailed methods reported; sample size (N) of the NHANES dataset used is not specified in the abstract. Summary reflects what is stated; readers should note the full analysis details are in the referenced article.",
-     "coverage": "Not widely covered ✓ (SERPAPI verified)",
-     "flags": []
-    }
-   ],
-   "evidence": [
-    "https://pubmed.ncbi.nlm.nih.gov/42242374/",
-    "https://doi.org/10.1016/j.jaad.2026.05.119"
-   ],
-   "term_details": [],
-   "status": "routed",
-   "backlog": true,
-   "kind": "single"
-  },
-  {
    "id": "rd-2026-10-25-is-it-real-bullies-have-low-self-esteem-and-narcis",
    "desk": "research",
    "title": "Is it real? Bullies have low self-esteem and narcissists are secretly insecure",
@@ -1981,58 +2428,6 @@
    "evidence": [
     "https://pubmed.ncbi.nlm.nih.gov/42808571/",
     "https://doi.org/10.1111/ajo.70183"
-   ],
-   "term_details": [],
-   "status": "routed",
-   "backlog": true,
-   "kind": "single"
-  },
-  {
-   "id": "rd-2026-10-25-why-girls-with-adhd-get-help-four-years-later-than",
-   "desk": "research",
-   "title": "Why girls with ADHD get help four years later than boys",
-   "created": "2026-10-25",
-   "route": "brief",
-   "speed": "online 85 days",
-   "beat": "ADHD in women",
-   "angle": "An evergreen page on late ADHD recognition in girls, anchored by an 89,587-child cohort. Girls who reached ADHD care got there at a median age of 13.6, compared with 9.4 for boys.",
-   "why_now": "A core topic for the women's ADHD site, which launches November 23, and people search for it steadily.",
-   "is_it_real": "Large linked-records cohort from New South Wales. It measures when children first used an ADHD service, not when they were diagnosed, and Australian care pathways differ from US ones.",
-   "evidence_strength": "strong",
-   "other_peg": "",
-   "audience": "general",
-   "confidence": "high",
-   "site": "womens-adhd",
-   "seed_keyword": "adhd in girls diagnosed later",
-   "pmids": [
-    "42541370"
-   ],
-   "studies": [
-    {
-     "pmid": "42541370",
-     "doi": "10.1177/10870547261474901",
-     "journal": "Journal of Attention Disorders",
-     "headline": "Girls with ADHD aren't getting help until their teens — more than four years later than boys",
-     "pubdate": "2026 Aug 1",
-     "days_online": 85,
-     "date_verified": true,
-     "digests": [
-      "Conditions & Body",
-      "Mental Health & Psychiatry",
-      "Women's Health"
-     ],
-     "score": 8,
-     "caveats": "observational design, single-center (New South Wales, Australia — administrative healthcare context may differ from US), health service use as proxy for diagnosis (not direct diagnostic data)",
-     "fact_check_note": "",
-     "coverage": "Not verified — SERPAPI unavailable",
-     "flags": [
-      "observational"
-     ]
-    }
-   ],
-   "evidence": [
-    "https://pubmed.ncbi.nlm.nih.gov/42541370/",
-    "https://doi.org/10.1177/10870547261474901"
    ],
    "term_details": [],
    "status": "routed",
@@ -2550,57 +2945,6 @@
    "kind": "single"
   },
   {
-   "id": "rd-2026-10-25-non-hormonal-treatments-for-hot-flashes-what-s-app",
-   "desk": "research",
-   "title": "Non-hormonal treatments for hot flashes: what's approved, what's coming, and the liver question",
-   "created": "2026-10-25",
-   "route": "brief",
-   "speed": "online 85 days",
-   "beat": "menopause treatments",
-   "angle": "An evergreen page on non-hormonal options for hot flashes, centered on the NK3 receptor drug class. This trial can carry a 'what's in the pipeline' section: a newer NK3R antagonist cut hot flash frequency and severity over 12 weeks with no liver signal. That matters because liver safety is the class's open question.",
-   "why_now": "Search demand for non-hormonal hot flash treatment is steady and growing as this drug class reaches the market. The menopause site needs this page whatever the news cycle.",
-   "is_it_real": "A multicenter, randomized, double-blind, placebo-controlled phase 2 trial in 276 postmenopausal Chinese women. It ran only 12 weeks, was funded by the drug's maker (three authors are company employees), and the drug is not approved anywhere. Twelve weeks is too short to clear liver safety. The page should present this as early pipeline evidence, not a treatment option. The brief room should confirm the current FDA status and label warnings of the approved drugs in the class.",
-   "evidence_strength": "moderate",
-   "other_peg": "",
-   "audience": "older adults",
-   "confidence": "high",
-   "site": "menopause",
-   "seed_keyword": "non-hormonal treatment for hot flashes",
-   "pmids": [
-    "41979542"
-   ],
-   "studies": [
-    {
-     "pmid": "41979542",
-     "doi": "10.1097/GME.0000000000002748",
-     "journal": "Menopause",
-     "headline": "A non-hormonal hot flash drug works in Chinese women — and it doesn't harm the liver",
-     "pubdate": "2026 Aug 1",
-     "days_online": 85,
-     "date_verified": true,
-     "digests": [
-      "Conditions & Body",
-      "Women's Health"
-     ],
-     "score": 7,
-     "caveats": "short follow-up (12 weeks), single-country (China) — results may not generalize beyond Chinese postmenopausal women, industry funding (Changchun GeneScience Pharmaceutical Co., Ltd., with three authors as company employees), phase 2 trial only",
-     "fact_check_note": "",
-     "coverage": "Not verified — SERPAPI unavailable",
-     "flags": [
-      "single_country"
-     ]
-    }
-   ],
-   "evidence": [
-    "https://pubmed.ncbi.nlm.nih.gov/41979542/",
-    "https://doi.org/10.1097/GME.0000000000002748"
-   ],
-   "term_details": [],
-   "status": "routed",
-   "backlog": true,
-   "kind": "single"
-  },
-  {
    "id": "rd-2026-10-25-is-it-real-coq10-nad-and-resveratrol-improve-egg-q",
    "desk": "research",
    "title": "Is it real? CoQ10, NAD+ and resveratrol improve egg quality",
@@ -2693,57 +3037,6 @@
    "evidence": [
     "https://pubmed.ncbi.nlm.nih.gov/42905302/",
     "https://doi.org/10.1186/s41235-026-00760-8"
-   ],
-   "term_details": [],
-   "status": "routed",
-   "backlog": true,
-   "kind": "single"
-  },
-  {
-   "id": "rd-2026-10-25-what-is-cyclospora-the-produce-borne-parasite-behi",
-   "desk": "research",
-   "title": "What is Cyclospora? The produce-borne parasite behind repeated US outbreaks, explained",
-   "created": "2026-10-25",
-   "route": "brief",
-   "speed": "online 43 days",
-   "beat": "public health: food safety",
-   "angle": "An evergreen Recall Register explainer. Cyclospora spreads on fresh produce. Outbreaks are hard to trace back because of short shelf life and fragmented supply chains. Symptoms are prolonged or relapsing watery diarrhea, and there is one proven treatment (TMP-SMX) with no good backup.",
-   "why_now": "Cyclospora searches spike with every summer outbreak announcement. An evergreen page ranks before the next one. Readers are already in food-recall mode this week (meat, hot dog and cheese recalls).",
-   "is_it_real": "Solid for an explainer. It's a systematic review of the literature through August 2026, not new data, and it restates established facts (produce transmission, TMP-SMX as the only proven drug, attribution problems). It isn't news on its own, so it isn't a pitch.",
-   "evidence_strength": "moderate",
-   "other_peg": "",
-   "audience": "general",
-   "confidence": "high",
-   "site": "recall-register",
-   "seed_keyword": "cyclospora",
-   "pmids": [
-    "42744668"
-   ],
-   "studies": [
-    {
-     "pmid": "42744668",
-     "doi": "10.1016/j.jmii.2026.09.001",
-     "journal": "Journal of Microbiology, Immunology, and Infection",
-     "headline": "The stomach bug hiding in your salad: a parasite behind recurring US outbreaks still has no good backup treatment",
-     "pubdate": "2026 Sep 12",
-     "days_online": 43,
-     "date_verified": true,
-     "digests": [
-      "Conditions & Body",
-      "Gut & Digestive Health"
-     ],
-     "score": 5,
-     "caveats": "observational design, review article (not original research), no sex-disaggregated data",
-     "fact_check_note": "",
-     "coverage": "Not widely covered ✓ (SERPAPI verified)",
-     "flags": [
-      "observational"
-     ]
-    }
-   ],
-   "evidence": [
-    "https://pubmed.ncbi.nlm.nih.gov/42744668/",
-    "https://doi.org/10.1016/j.jmii.2026.09.001"
    ],
    "term_details": [],
    "status": "routed",
@@ -3185,58 +3478,6 @@
    "status": "routed",
    "backlog": true,
    "kind": "pattern"
-  },
-  {
-   "id": "rd-2026-10-25-is-it-real-testosterone-fuels-prostate-cancer",
-   "desk": "research",
-   "title": "Is it real? Testosterone fuels prostate cancer",
-   "created": "2026-10-25",
-   "route": "tfm",
-   "speed": "online 128 days",
-   "beat": "viral health claims, the body",
-   "angle": "Online TRT clinics and 'low T' content often dismiss the cancer fear as a myth, and many doctors still repeat it. A pooled analysis of 24,510 men across 10 cohorts, with testosterone measured by mass spectrometry, found no link between higher natural testosterone and cancer death, overall cancer or prostate cancer. The catch is the receipt: natural levels aren't therapy, so the study can't settle whether TRT is safe.",
-   "why_now": "Testosterone therapy marketing to men, and increasingly to women, is a steady viral wellness claim. TFM has no age limit, and this is a high-quality data source for a 'yes, but' verdict.",
-   "is_it_real": "Strong design: individual participant data from 10 prospective cohorts, 276,931 person-years, at least 5 years of follow-up. It's still observational, and it covers endogenous hormone levels, not supplementation. The digest says the abstract was cut off mid-results, so read the full paper and confirm the exact null results before writing. The 'tiny sample' flag is a parsing error.",
-   "evidence_strength": "strong",
-   "other_peg": "",
-   "audience": "general",
-   "confidence": "medium",
-   "site": "",
-   "seed_keyword": "",
-   "pmids": [
-    "42320510"
-   ],
-   "studies": [
-    {
-     "pmid": "42320510",
-     "doi": "10.1016/j.lanhl.2026.100857",
-     "journal": "The Lancet Healthy Longevity",
-     "headline": "Higher testosterone levels in older men are not linked to greater cancer risk, large study finds",
-     "pubdate": "2026 Jun 19",
-     "days_online": 128,
-     "date_verified": true,
-     "digests": [
-      "Elderly & Geriatric"
-     ],
-     "score": 9,
-     "caveats": "observational design, secondary analysis",
-     "fact_check_note": "The abstract was truncated in the source data at the findings section; summary reflects available findings. The N=24,510 and study design details are confirmed from the methods section. The direction of effect (no significant association with cancer risk) is stated in context from the background framing; journalists should verify the full published findings.",
-     "coverage": "Not verified — SERPAPI unavailable",
-     "flags": [
-      "tiny_sample",
-      "small_sample",
-      "observational"
-     ]
-    }
-   ],
-   "evidence": [
-    "https://pubmed.ncbi.nlm.nih.gov/42320510/",
-    "https://doi.org/10.1016/j.lanhl.2026.100857"
-   ],
-   "term_details": [],
-   "status": "routed",
-   "backlog": true,
-   "kind": "single"
   },
   {
    "id": "rd-2026-10-25-over-a-decade-with-parkinson-s-psychosis-and-apath",
@@ -5999,57 +6240,6 @@
    "kind": "single"
   },
   {
-   "id": "rd-2026-10-25-adhd-and-having-kids-adults-with-adhd-become-paren",
-   "desk": "research",
-   "title": "ADHD and having kids: adults with ADHD become parents earlier but less often, and partnership explains most of the gap",
-   "created": "2026-10-25",
-   "route": "brief",
-   "speed": "online 124 days",
-   "beat": "women's health and the mind",
-   "angle": "An evergreen page on ADHD and parenthood. In 759,430 Finns, people with ADHD were more likely to have a first child in their late teens and early twenties and less likely between 24 and 38. Once partnership status was accounted for, the overall negative link reversed.",
-   "why_now": "Too old to pitch (124 days), but strong evidence for a steady-search topic on the women's ADHD site, which launches 2026-11-23. Fertility rate is also trending this week.",
-   "is_it_real": "A very large population-register cohort, but observational and from one country (Finland). ADHD was identified from health records and prescriptions, so it captures diagnosed ADHD only. The summary does not say whether results were split by sex, so check before writing a women-specific claim.",
-   "evidence_strength": "strong",
-   "other_peg": "",
-   "audience": "general",
-   "confidence": "medium",
-   "site": "womens-adhd",
-   "seed_keyword": "adhd and having children",
-   "pmids": [
-    "42336634"
-   ],
-   "studies": [
-    {
-     "pmid": "42336634",
-     "doi": "10.1136/jech-2026-225863",
-     "journal": "Journal of Epidemiology and Community Health",
-     "headline": "People with ADHD become parents earlier but are ultimately less likely to have children at all",
-     "pubdate": "2026 Jun 23",
-     "days_online": 124,
-     "date_verified": true,
-     "digests": [
-      "Science & Environment"
-     ],
-     "score": 8,
-     "caveats": "observational design, single-country (Finland), secondary analysis",
-     "fact_check_note": "",
-     "coverage": "Not verified — SERPAPI unavailable",
-     "flags": [
-      "single_country",
-      "observational"
-     ]
-    }
-   ],
-   "evidence": [
-    "https://pubmed.ncbi.nlm.nih.gov/42336634/",
-    "https://doi.org/10.1136/jech-2026-225863"
-   ],
-   "term_details": [],
-   "status": "routed",
-   "backlog": true,
-   "kind": "single"
-  },
-  {
    "id": "rd-2026-10-25-traveling-abroad-with-adhd-medication-what-to-chec",
    "desk": "research",
    "title": "Traveling abroad with ADHD medication: what to check before you fly",
@@ -7009,54 +7199,6 @@
    "evidence": [
     "https://pubmed.ncbi.nlm.nih.gov/42865774/",
     "https://doi.org/10.1002/trc2.70307"
-   ],
-   "term_details": [],
-   "status": "routed",
-   "backlog": true,
-   "kind": "single"
-  },
-  {
-   "id": "rd-2026-10-25-laser-light-therapy-added-nothing-to-back-pain-exe",
-   "desk": "research",
-   "title": "Laser/light therapy added nothing to back-pain exercise in a fully blinded trial with a year of follow-up",
-   "created": "2026-10-25",
-   "route": "roundup",
-   "speed": "online 13 days",
-   "beat": "viral health claims; health tech",
-   "angle": "Red-light and laser therapy is sold everywhere, from clinics to home panels. In a 148-person trial where patients, therapists and assessors were all blinded, adding photobiomodulation to a back-exercise program changed pain by 0.4 points out of 10, and had no meaningful effect on disability or an inflammation marker, at any point up to 12 months. The exercise did the work. Caveat in a clause: one device and protocol, tested only as an add-on, in adults under 65.",
-   "why_now": "Online 13 days. Red-light therapy is a steady consumer trend.",
-   "is_it_real": "A well-blinded randomized trial with long follow-up. Limits: one device and dosing protocol, an add-on design (it doesn't test light therapy alone), and ages 18 to 65. The fact-check flagged minor issues. It says nothing about red light for skin or other uses, so the item shouldn't generalize past back pain.",
-   "evidence_strength": "strong",
-   "other_peg": "",
-   "audience": "general",
-   "confidence": "medium",
-   "site": "",
-   "seed_keyword": "",
-   "pmids": [
-    "42864195"
-   ],
-   "studies": [
-    {
-     "pmid": "42864195",
-     "doi": "10.1016/j.jphys.2026.09.005",
-     "journal": "J Physiother",
-     "headline": "Laser therapy added to back exercises did nothing extra — a year of follow-up confirms it",
-     "pubdate": "2026 Oct 12",
-     "days_online": 13,
-     "date_verified": true,
-     "digests": [
-      "Senior Living — New This Week"
-     ],
-     "score": 7,
-     "caveats": "Participants were aged 18 to 65, so results cannot be assumed to apply to adults over 65 with chronic back pain; the trial tested one specific device and dosing protocol; it addresses photobiomodulation only as an add-on to exercise, not as a standalone therapy.",
-     "fact_check_note": "⚠️ Minor issues",
-     "coverage": "Not widely covered ✓ (Google News checked)",
-     "flags": []
-    }
-   ],
-   "evidence": [
-    "https://pubmed.ncbi.nlm.nih.gov/42864195/",
-    "https://doi.org/10.1016/j.jphys.2026.09.005"
    ],
    "term_details": [],
    "status": "routed",
@@ -9131,148 +9273,6 @@
     "https://doi.org/10.1016/j.jpainsymman.2026.09.024",
     "https://pubmed.ncbi.nlm.nih.gov/41763335/",
     "https://doi.org/10.1016/j.jpainsymman.2026.02.017"
-   ],
-   "term_details": [],
-   "status": "routed",
-   "backlog": true,
-   "kind": "pattern"
-  },
-  {
-   "id": "rd-2026-10-25-the-teen-phone-panic-may-be-aimed-at-the-wrong-tar",
-   "desk": "research",
-   "title": "The teen phone panic may be aimed at the wrong target: a large twin study and four others point to genes, family and loneliness, not screens alone",
-   "created": "2026-10-25",
-   "route": "pitch",
-   "speed": "online 17 days",
-   "beat": "parenting / teen mental health / tech policy",
-   "angle": "Phone bans and social-media age limits rest on the idea that screens drive teen depression. In 21,797 Swedish twins, screen use was linked to more symptoms across the population, but the link weakened sharply within twin pairs and didn't survive correction for multiple testing. That points to shared genes and family environment. Four other studies say what drives problem use. Loneliness and social exclusion predicted it in a German population sample. Teens who prefer online socializing were more likely to spiral. Teens skilled at online friendships were at risk through digital stress. Brain imaging found problem smartphone use doesn't look like substance addiction. If the driver is social need, bans treat a symptom.",
-   "why_now": "The lead study (Nature Human Behaviour) has been online 17 days and hasn't been widely covered. School phone bans are in force this year, and age-limit laws and the social-media-addiction lawsuits keep the argument live. Two batches pitched halves of this story.",
-   "is_it_real": "The twin design is strong but still observational. It shows the population link is largely confounded, not that screens are harmless, and the pitch must not say 'screens are fine'. The supporting studies are observational; the imaging study is small and the German sample is single-country.",
-   "evidence_strength": "moderate",
-   "other_peg": "State school cellphone bans this school year; social-media age-limit laws and addiction lawsuits against Meta and others (pitch agents: confirm current status)",
-   "audience": "general",
-   "confidence": "high",
-   "site": "",
-   "seed_keyword": "",
-   "pmids": [
-    "42850270",
-    "42747517",
-    "42789332",
-    "42721316",
-    "42349369"
-   ],
-   "studies": [
-    {
-     "pmid": "42850270",
-     "doi": "10.1038/s41562-026-02607-0",
-     "journal": "Nature Human Behaviour",
-     "headline": "The Link Between Teen Screen Time and Depression May Be Mostly Genetics, Not Screens",
-     "pubdate": "2026 Oct 8",
-     "days_online": 17,
-     "date_verified": true,
-     "digests": [
-      "Fitness & Exercise"
-     ],
-     "score": 6,
-     "caveats": "observational design, self-reported outcomes, Swedish cohort (may not generalize to all populations)",
-     "fact_check_note": "",
-     "coverage": "Not widely covered ✓ (SERPAPI verified)",
-     "flags": [
-      "observational"
-     ]
-    },
-    {
-     "pmid": "42747517",
-     "doi": "10.1007/s00787-026-03189-y",
-     "journal": "European Child & Adolescent Psychiatry",
-     "headline": "Loneliness and Social Exclusion — Not Just Screen Time — Drive Teens Into Problematic Social Media Use",
-     "pubdate": "2026 Sep 16",
-     "days_online": 39,
-     "date_verified": true,
-     "digests": [
-      "Children's & Pediatric Health"
-     ],
-     "score": 8,
-     "caveats": "observational design, single-country (Germany), parent-reported outcomes, narrow age range (adolescents only), self-reported social media use",
-     "fact_check_note": "",
-     "coverage": "Not widely covered ✓ (SERPAPI verified)",
-     "flags": [
-      "single_country",
-      "observational"
-     ]
-    },
-    {
-     "pmid": "42789332",
-     "doi": "10.1556/2006.2026.00079",
-     "journal": "Journal of Behavioral Addictions",
-     "headline": "Teens Who Prefer Online Socializing Over Real Life Are More Likely to Spiral Into Problematic Social Media Use — But Emotion Regulation Alone Isn't the Culprit",
-     "pubdate": "2026 Sep 24",
-     "days_online": 31,
-     "date_verified": true,
-     "digests": [
-      "Children's & Pediatric Health"
-     ],
-     "score": 7,
-     "caveats": "small sample (N<100 per group context, total N=229), single-center, self-reported (parent-reported) outcomes, short follow-up, narrow age range, observational design",
-     "fact_check_note": "",
-     "coverage": "Not widely covered ✓ (SERPAPI verified)",
-     "flags": [
-      "small_sample",
-      "observational"
-     ]
-    },
-    {
-     "pmid": "42721316",
-     "doi": "10.1037/bne0000668",
-     "journal": "Behavioral Neuroscience",
-     "headline": "Teens Who Overuse Smartphones Show Heightened Brain Reward Sensitivity — But It's Not Quite Like Other Addictions",
-     "pubdate": "2026 Sep 10",
-     "days_online": 45,
-     "date_verified": true,
-     "digests": [
-      "Children's & Pediatric Health",
-      "Mental Health & Psychiatry"
-     ],
-     "score": 7,
-     "caveats": "small sample (N<100), single-center, observational design, narrow age range, cross-sectional — cannot establish causation",
-     "fact_check_note": "",
-     "coverage": "Not widely covered ✓ (SERPAPI verified)",
-     "flags": [
-      "small_sample",
-      "observational"
-     ]
-    },
-    {
-     "pmid": "42349369",
-     "doi": "10.1016/j.addbeh.2026.108781",
-     "journal": "Addictive Behaviors",
-     "headline": "Teens Who Are Better at Online Relationships May Actually Be More at Risk for Social Media Addiction",
-     "pubdate": "2026 Jun 23",
-     "days_online": 124,
-     "date_verified": true,
-     "digests": [
-      "Children's & Pediatric Health"
-     ],
-     "score": 8,
-     "caveats": "observational design, self-reported (parent-reported) outcomes, short follow-up, narrow age range",
-     "fact_check_note": "",
-     "coverage": "Not verified — SERPAPI unavailable",
-     "flags": [
-      "observational"
-     ]
-    }
-   ],
-   "evidence": [
-    "https://pubmed.ncbi.nlm.nih.gov/42850270/",
-    "https://doi.org/10.1038/s41562-026-02607-0",
-    "https://pubmed.ncbi.nlm.nih.gov/42747517/",
-    "https://doi.org/10.1007/s00787-026-03189-y",
-    "https://pubmed.ncbi.nlm.nih.gov/42789332/",
-    "https://doi.org/10.1556/2006.2026.00079",
-    "https://pubmed.ncbi.nlm.nih.gov/42721316/",
-    "https://doi.org/10.1037/bne0000668",
-    "https://pubmed.ncbi.nlm.nih.gov/42349369/",
-    "https://doi.org/10.1016/j.addbeh.2026.108781"
    ],
    "term_details": [],
    "status": "routed",
