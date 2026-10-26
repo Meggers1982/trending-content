@@ -42,6 +42,7 @@ Approved 2026-10-25 (Linear MEA-1854; build tickets MEA-1855 to MEA-1859). Plan 
 | `holds.json` | Paused routes for research ideas (`pitch`, `tfm`, `roundup`, `brief`, `brief:<site>`), same shape as Trend Desk's. Empty since MEA-1857 opened all four on 2026-10-25. |
 | `tg.py` | Its own bot's send, with the hold-until-paired queue. |
 | `feedback/decisions.json` | Her texted decisions about research ideas (written by the bot in piece 4). |
+| `backlog.py` | The one-time backlog review (MEA-1862) and the dashboard archive (MEA-1863). See below. |
 | `com.meagan.research-desk.plist` | Copy of the launchd job; the live one is in `~/Library/LaunchAgents`. |
 
 The builder (`trend_desk/mac/builder.py --desk research`) uses `common.DESKS["research"]` for its
@@ -49,6 +50,44 @@ handoffs, holds, decisions and numbered list; `built.json` is shared, and resear
 with `rd-`. A research pitch goes to `~/Pitches/state/research-handoffs.json`, which the weekday
 pitch routine ranks as the "Research Desk" lane (`daily/PLAYBOOK.md` step 3) and re-verifies at
 PubMed before writing.
+
+## The backlog review (one time, October 2026)
+
+Approved 2026-10-25 ([plan](https://claude.ai/artifact/FL8AzNWyqjjveowHEziE3M)). The daily Judge only
+reads three days, so `backlog.py` reads everything the dashboard held on the start date, once, then
+archives it. `--start` snapshots the pile to `~/.local/state/research-desk/backlog/`, and the tick
+(`mac.py`) runs `--step` overnight (10pm to 6am Central) until it's done, pausing an hour when it
+hits the usage limit. Each batch is saved as it finishes.
+
+1. **Sort** in code: merge by PMID, drop preprints, studies already judged, and the daily Judge's
+   current three-day window.
+2. **Screen** studies scored 6 or lower, 200 at a time, on Sonnet: which deserve a real look.
+3. **Judge** the 7+ studies, her saved ones and whatever the screen promoted, about 80 at a time
+   grouped by digest, with the daily prompt plus a backlog note. Old studies may go to tfm and
+   brief at any age. A single-study pitch keeps the 30/60 rule, and the roundup takes 21 days at
+   most. A study already triaged for pitches is blocked from pitch only.
+4. **Final pass** (Opus) over every batch's ideas and "watch" studies: merge cross-digest duplicates
+   and build **pattern pitches**. `kind: "pattern"` is 3+ human studies from 2+ journals, one online
+   within 90 days, and a lead that could headline (`rules.pattern_problem`). Only `apply(...,
+   backlog=True)` accepts them.
+5. **Finish**: `handoff/backlog-<date>.json` (its ideas carry `backlog: true`), the ledger, the vault
+   report `Research Desk Backlog Review Report.md`, a Linear read-it ticket, then the archive.
+
+The builder paces backlog ideas (`builder.BACKLOG_PACE`): 4 outlines and 3 briefs a day. Outlines
+are banked in `Research Desk Outlines/Backlog/` with no Wednesday and no ticket each. Pitches go to
+the pitch lane, where PLAYBOOK ranks at most two backlog entries a day and pattern pitches have no
+30-day clock.
+
+**Archive.** The dashboard has an `archived` status (research-digest-dashboard 5f34749). Archived
+studies are hidden unless the status menu asks for them. `--archive` marks every digest's copy of
+every study found on or before the cutoff, skipping any study with a saved, pitched, passed or
+deleted copy. It records the exact rows in `backlog/archived.json`, and `--unarchive` sets those
+rows back to `new`.
+
+```bash
+python3 -m trend_desk.research.backlog --status
+python3 -m trend_desk.research.backlog --step --now    # run outside the night window
+```
 
 ## Privacy
 

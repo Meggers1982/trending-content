@@ -138,7 +138,11 @@ def recent_ideas(data: dict, today: date) -> list[dict]:
             for i, v in data["ideas"].items() if v["created"] >= cutoff]
 
 
-def apply(data: dict, result: dict, cands: list[dict], studies: dict, today: date) -> tuple[list, dict]:
+def apply(data: dict, result: dict, cands: list[dict], studies: dict, today: date,
+          backlog: bool = False) -> tuple[list, dict]:
+    """Record the Judge's answer, enforcing the code rules again. backlog=True is the one-time
+    backlog review (backlog.py): its ideas are marked so the builder paces them, and a pitch with
+    kind "pattern" is checked by rules.pattern_problem instead of the single-study freshness rule."""
     t = today.isoformat()
     by_pmid = {c["pmid"]: c for c in cands}
     paused = read_json(HOLDS, {})
@@ -157,8 +161,13 @@ def apply(data: dict, result: dict, cands: list[dict], studies: dict, today: dat
         used.update(pmids)
         lead, route = by_pmid[pmids[0]], idea["route"]
         site = idea.get("site", "") if route == "brief" else ""
-        why_not = lead["blocked"].get(route, "")
-        if not why_not and route == "pitch" and lead["needs_peg"] and not idea.get("other_peg", "").strip():
+        kind = "pattern" if backlog and route == "pitch" and idea.get("kind") == "pattern" else "single"
+        if kind == "pattern":
+            why_not = rules.pattern_problem([by_pmid[p] for p in pmids])
+        else:
+            why_not = lead["blocked"].get(route, "")
+        if not why_not and kind == "single" and route == "pitch" and lead["needs_peg"] and \
+           not idea.get("other_peg", "").strip():
             why_not = f"online {lead['days_online']} days ago with no other peg"
         if not why_not and route == "brief" and site not in site_slugs:
             why_not = "brief without a known site"
@@ -199,6 +208,8 @@ def apply(data: dict, result: dict, cands: list[dict], studies: dict, today: dat
             "pmids": pmids, "studies": study_views, "evidence": evidence, "term_details": [],
             "status": status,
         }
+        if backlog:
+            record.update(backlog=True, kind=kind)
         data["ideas"][iid] = record
         created.append({"id": iid, **record})
         for p in pmids:

@@ -115,3 +115,27 @@ def needs_peg(study: dict, today: date) -> bool:
     """31-60 days old: a pitch is allowed only with a peg other than the paper itself."""
     days, _ = age_days(study, today)
     return PITCH_DAYS < days <= HARD_STOP
+
+
+PATTERN_MIN = 3        # a pattern pitch rests on 3+ human studies ...
+PATTERN_JOURNALS = 2   # ... from 2+ journals ...
+PATTERN_RECENT = 90    # ... one of them online in the last 90 days (backlog review, 2026-10-25)
+
+
+def pattern_problem(views: list[dict]) -> str:
+    """Why a set of studies can't carry a pattern pitch, or "" if it can.
+
+    `views` are the Judge's study views (run.view), lead first. A pattern pitch's news is the
+    accumulating evidence, so no single study's age blocks it, but the lead must be a finding
+    that could headline on its own merits and the set must be recent enough to say "the latest"."""
+    human = [v for v in views if "animal_or_lab" not in v["flags"]]
+    if len(human) < PATTERN_MIN:
+        return f"fewer than {PATTERN_MIN} human studies"
+    if len({(v.get("journal") or "").lower() for v in human}) < PATTERN_JOURNALS:
+        return f"fewer than {PATTERN_JOURNALS} journals"
+    if min(v["days_online"] for v in views) > PATTERN_RECENT:
+        return f"no study online in the last {PATTERN_RECENT} days"
+    lead = set(views[0]["flags"])
+    if lead & {"subgroup", "tiny_sample", "animal_or_lab", "preprint"}:
+        return "lead study can't headline (" + ", ".join(sorted(lead & {"subgroup", "tiny_sample", "animal_or_lab", "preprint"})) + ")"
+    return ""

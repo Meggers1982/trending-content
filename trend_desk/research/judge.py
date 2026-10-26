@@ -8,6 +8,7 @@ is used.
 """
 from __future__ import annotations
 
+import copy
 import json
 import os
 import subprocess
@@ -64,6 +65,23 @@ SCHEMA = {
 }
 
 
+# The backlog review (backlog.py) adds "kind": a pattern pitch rests on several studies at once.
+BACKLOG_SCHEMA = copy.deepcopy(SCHEMA)
+_idea = BACKLOG_SCHEMA["properties"]["ideas"]["items"]
+_idea["properties"]["kind"] = {"type": "string", "enum": ["single", "pattern"],
+                               "description": "pattern = route pitch on 3+ studies from 2+ journals"}
+_idea["required"].append("kind")
+
+# The backlog's quick screen of low-scored studies: which deserve the Judge's full look.
+SCREEN_SCHEMA = {
+    "type": "object",
+    "properties": {"promote": {"type": "array", "items": {"type": "string"}, "description": "PMIDs to judge"},
+                   "notes": {"type": "string"}},
+    "required": ["promote", "notes"],
+    "additionalProperties": False,
+}
+
+
 def prompt(today: str, candidates: list[dict], recent: list[dict], pitched: list[str],
            trending: list[str] | None = None) -> str:
     site_lines = "\n".join(f"- {s['slug']}: {s['name']}. {s['audience']} Covers: {s['covers']}."
@@ -111,11 +129,11 @@ route it to tfm (unless an editor would pay for it as a pitch) and name the tren
 """
 
 
-def judge(text: str, timeout: int = 2400) -> dict:
+def judge(text: str, timeout: int = 2400, schema: dict = SCHEMA, model: str = MODEL) -> dict:
     env = {k: v for k, v in os.environ.items() if k != "ANTHROPIC_API_KEY"}
     env["PATH"] = f"{Path.home()}/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin"
-    cmd = [CLAUDE, "-p", "--model", MODEL, "--effort", "high", "--output-format", "json",
-           "--json-schema", json.dumps(SCHEMA), "--allowedTools", "",
+    cmd = [CLAUDE, "-p", "--model", model, "--effort", "high", "--output-format", "json",
+           "--json-schema", json.dumps(schema), "--allowedTools", "",
            "--strict-mcp-config", "--mcp-config", '{"mcpServers":{}}']
     p = subprocess.run(cmd, input=text, env=env, capture_output=True, text=True, timeout=timeout,
                        cwd=str(Path.home() / ".local/state"))
@@ -127,5 +145,7 @@ def judge(text: str, timeout: int = 2400) -> dict:
     except json.JSONDecodeError:
         raise RuntimeError(f"the judge returned no JSON (exit {p.returncode})")
     if out.get("is_error") or not isinstance(out.get("structured_output"), dict):
-        raise RuntimeError(f"the judge failed ({out.get('subtype', 'no structured output')})")
+        # The result text says when the usage limit is the cause; callers check for "limit".
+        raise RuntimeError(f"the judge failed ({out.get('subtype', 'no structured output')}): "
+                           f"{str(out.get('result', ''))[:160]}")
     return out["structured_output"]

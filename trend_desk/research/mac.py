@@ -7,6 +7,7 @@ Each tick:
      published (up to 3 tries a day), then commits and pushes the ledger and handoff
   3. starts the shared builder (--desk research) if a routed idea isn't built yet
   4. delivers problem messages from ~/.local/state/research-desk/outbox through its own bot
+  5. overnight, while the one-time backlog review is unfinished, starts its next step (backlog.py)
 
 Logs: ~/Library/Logs/research-desk/.  State: ~/.local/state/research-desk/.
 """
@@ -19,7 +20,8 @@ import sys
 from datetime import datetime, timedelta
 
 from ..mac import common as c
-from . import run, tg
+from ..mac.builder import BACKLOG_PACE
+from . import backlog, run, tg
 
 STATE = c.RESEARCH_STATE
 LOGDIR = c.Path.home() / "Library/Logs/research-desk"
@@ -57,6 +59,9 @@ def needs_build() -> bool:
     cutoff = (c.now().date() - timedelta(days=10)).isoformat()
     desk = c.DESKS["research"]
     overrides = c.idea_overrides(desk["decisions"])
+    today = c.now().date().isoformat()
+    paced = {r: sum(1 for b in built.values() if b.get("backlog") and b.get("route") == r
+                    and str(b.get("built_at", "")).startswith(today)) >= n for r, n in BACKLOG_PACE.items()}
     for path in desk["handoff"].glob("*.json"):
         if path.stem < cutoff:
             continue
@@ -71,6 +76,8 @@ def needs_build() -> bool:
                 continue
             if c.is_paused(idea["route"], idea.get("site", ""), desk["holds"]):
                 continue
+            if idea.get("backlog") and paced.get(idea["route"]):
+                continue  # today's share of the backlog is built; the rest waits for tomorrow
             return True
     return False
 
@@ -89,6 +96,19 @@ def deliver_outbox() -> None:
     c.write_json(STATE / "delivered.json", {k: v for k, v in sent.items() if v >= cutoff})
 
 
+def backlog_if_due() -> None:
+    st = backlog.load_state()
+    if not st or st.get("finished") or not backlog.in_window(run.chicago_now()):
+        return
+    if st.get("pause_until", "") > run.chicago_now().isoformat():
+        return
+    LOGDIR.mkdir(parents=True, exist_ok=True)
+    # backlog.py holds its own lock, so a tick that lands mid-step starts nothing.
+    subprocess.Popen([sys.executable, "-m", "trend_desk.research.backlog", "--step"], cwd=c.REPO,
+                     stdout=open(LOGDIR / f"backlog-{datetime.now():%Y-%m}.log", "a"),
+                     stderr=subprocess.STDOUT, start_new_session=True)
+
+
 def main() -> int:
     STATE.mkdir(parents=True, exist_ok=True)
     lock = open(STATE / "tick.lock", "w")
@@ -99,6 +119,7 @@ def main() -> int:
     if not c.pull():
         c.log("Research Desk: couldn't fast-forward trending-content (not on main, offline, or local commits).")
     judge_if_due()
+    backlog_if_due()
     deliver_outbox()
     if needs_build():
         LOGDIR.mkdir(parents=True, exist_ok=True)

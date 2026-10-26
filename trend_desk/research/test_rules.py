@@ -85,6 +85,46 @@ def test_apply_enforces_blocks_and_accounts_for_every_pmid():
     assert created[0]["id"].startswith("rd-2026-10-25-") and created[0]["desk"] == "research"
 
 
+def test_pattern_pitch_rules():
+    def v(pmid, journal, days, flags=()):
+        return {"pmid": pmid, "journal": journal, "days_online": days, "flags": list(flags)}
+    ok = [v("a", "BMJ", 120), v("b", "JAMA", 80), v("c", "BMJ", 200)]
+    assert rules.pattern_problem(ok) == ""
+    assert "journals" in rules.pattern_problem([v("a", "BMJ", 10), v("b", "BMJ", 20), v("c", "bmj", 30)])
+    assert "90 days" in rules.pattern_problem([v("a", "BMJ", 120), v("b", "JAMA", 95), v("c", "Lancet", 300)])
+    assert "human" in rules.pattern_problem(ok[:2] + [v("d", "Cell", 5, ["animal_or_lab"])])
+    assert "headline" in rules.pattern_problem([v("a", "BMJ", 50, ["subgroup"])] + ok[1:] + [v("e", "NEJM", 9)])
+
+
+def test_backlog_apply_allows_old_pattern_pitch_but_not_old_single():
+    old = {p: study(pmid=p, journal=j, pubdate=d, run_date=r) for p, j, d, r in [
+        ("p1", "BMJ", "2026 Jul 1", "2026-07-02"), ("p2", "JAMA", "2026 Aug 20", "2026-08-21"),
+        ("p3", "Lancet", "2026 Jun 10", "2026-06-11"), ("p4", "BMJ", "2026 Jun 1", "2026-06-02")]}
+    cands = [run.view(s, TODAY) for s in old.values()]
+    base = {"beat": "", "angle": "", "why_now": "", "is_it_real": "", "evidence_strength": "moderate",
+            "other_peg": "", "audience": "general", "site": "", "seed_keyword": "", "confidence": "medium"}
+    data = {"studies": {}, "ideas": {}, "runs": []}
+    result = {"ideas": [{**base, "title": "Three studies, one story", "pmids": ["p2", "p1", "p3"],
+                         "route": "pitch", "kind": "pattern"},
+                        {**base, "title": "One old study", "pmids": ["p4"], "route": "pitch", "kind": "single"}],
+              "drops": [], "notes": ""}
+    created, _ = run.apply(data, result, cands, old, TODAY, backlog=True)
+    assert [c["kind"] for c in created] == ["pattern"] and created[0]["backlog"] is True
+    assert data["studies"]["p4"]["reason"] == "rule"
+    # The daily run never builds pattern pitches, even when asked.
+    data2 = {"studies": {}, "ideas": {}, "runs": []}
+    created2, _ = run.apply(data2, result, cands, old, TODAY)
+    assert created2 == [] and data2["studies"]["p2"]["reason"] == "rule"
+
+
+def test_backlog_view_blocks_old_roundup_and_triaged_pitch():
+    from trend_desk.research import backlog
+    s = study(pmid="t1", pubdate="2026 Sep 25", run_date="2026-09-26")  # 30 days
+    v = backlog.backlog_view(s, TODAY, {"t1": "digest triage"}, {"t1"})
+    assert "roundup" in v["blocked"] and "triaged" in v["blocked"]["pitch"] and v["saved"]
+    assert "tfm" not in v["blocked"] and "brief" not in v["blocked"]
+
+
 if __name__ == "__main__":
     for name, fn in list(globals().items()):
         if name.startswith("test_"):
