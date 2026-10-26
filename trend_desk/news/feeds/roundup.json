@@ -1,0 +1,77 @@
+{
+ "updated": "2026-10-25",
+ "items": [
+  {
+   "id": "nd-2026-10-25-social-security-s-3-6-cola-for-2027-is-official-wh",
+   "title": "Social Security's 3.6% COLA for 2027 is official: what changes in December checks",
+   "created": "2026-10-25",
+   "angle": "The Federal Register makes it official: a 3.6% cost-of-living increase effective December 2026, paid in January, plus a 2025 national average wage index of $72,800.33, which moves the taxable maximum and earnings-test limits. One sharp line: how much the Part B premium change takes back.",
+   "why_now": "Federal Register notice dated Oct 26.",
+   "is_it_real": "Primary government document. Pair it with the 2027 Part B premium only once CMS publishes that figure; don't estimate it.",
+   "evidence": [
+    "https://www.federalregister.gov/documents/2026/10/26/2026-21796/cost-of-living-increase-and-other-determinations-for-2027",
+    "https://justiceinaging.org/from-dc-10162026/"
+   ],
+   "items": [
+    {
+     "kind": "notice",
+     "publisher": "federal-register",
+     "released": "2026-10-26",
+     "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21796/cost-of-living-increase-and-other-determinations-for-2027"
+    },
+    {
+     "kind": "analysis",
+     "publisher": "justice-in-aging",
+     "released": "2026-10-16",
+     "url": "https://justiceinaging.org/from-dc-10162026/"
+    }
+   ]
+  },
+  {
+   "id": "nd-2026-10-25-workers-now-pay-7-471-a-year-for-family-coverage-u",
+   "title": "Workers now pay $7,471 a year for family coverage, up 9%, and health costs remain Americans' top money worry",
+   "created": "2026-10-25",
+   "angle": "KFF's benchmark survey: workers' share of family premiums rose $621 (9%) to $7,471, and people at small firms are hit hardest. KFF polling shows costs are pushing people to delay care. A short item with one usable number, in time for benefits season.",
+   "why_now": "KFF Employer Health Benefits Survey released Oct 22.",
+   "is_it_real": "KFF's independent survey. The digest headline's claim that 'older workers are squeezed hardest' is not in KFF's own summary, which names small-firm workers, so don't use it. That digest item's URL also points to an unrelated KFF SNAP/Medicaid page.",
+   "evidence": [
+    "https://www.kff.org/private-insurance/workers-now-pay-7471-on-average-annually-for-family-health-coverage-up-9-or-621-from-2025-benchmark-employer-health-benefits-survey-finds/",
+    "https://www.kff.org/medicaid/assessing-ability-to-work-how-historical-snap-processes-may-vary-from-medicaid/",
+    "https://www.kff.org/health-costs/premiums-worker-contributions-among-workers-covered-by-employer-sponsored-coverage/",
+    "https://www.kff.org/health-costs/how-much-is-health-spending-expected-to-grow/"
+   ],
+   "items": [
+    {
+     "kind": "analysis",
+     "publisher": "kff-feed",
+     "released": "2026-10-22",
+     "url": "https://www.kff.org/private-insurance/workers-now-pay-7471-on-average-annually-for-family-health-coverage-up-9-or-621-from-2025-benchmark-employer-health-benefits-survey-finds/"
+    },
+    {
+     "kind": "analysis",
+     "publisher": "KFF Publications",
+     "released": "2026-10-22",
+     "url": "https://www.kff.org/medicaid/assessing-ability-to-work-how-historical-snap-processes-may-vary-from-medicaid/"
+    },
+    {
+     "kind": "analysis",
+     "publisher": "kff-feed",
+     "released": "2026-10-22",
+     "url": "https://www.kff.org/health-costs/premiums-worker-contributions-among-workers-covered-by-employer-sponsored-coverage/"
+    },
+    {
+     "kind": "analysis",
+     "publisher": "kff-feed",
+     "released": "2026-10-22",
+     "url": "https://www.kff.org/health-costs/how-much-is-health-spending-expected-to-grow/"
+    },
+    {
+     "kind": "org_release",
+     "publisher": "KFF Publications",
+     "released": "2026-10-23",
+     "url": ""
+    }
+   ]
+  }
+ ]
+}

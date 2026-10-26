@@ -1,0 +1,822 @@
+{
+ "date": "2026-10-25",
+ "ideas": [
+  {
+   "id": "nd-2026-10-25-trump-s-order-to-split-the-mmr-shot-runs-into-meas",
+   "desk": "news",
+   "title": "Trump's order to split the MMR shot runs into measles outbreaks and a poll showing half of parents believe spacing vaccines out is safer",
+   "created": "2026-10-25",
+   "route": "pitch",
+   "speed": "released 5 days ago",
+   "beat": "public health / vaccines",
+   "angle": "An executive order wants to break the combined MMR shot into three separate vaccines given at different visits. Measles outbreaks in Amish communities are spreading and people are searching for SSPE. The reporting questions: are single-antigen measles, mumps and rubella vaccines even licensed and available in the US, how many more visits would a split schedule take, and what happens to coverage during the gaps? KFF's poll adds a second point: about half of parents wrongly believe spacing vaccines out is healthier, so the order matches a belief people already hold.",
+   "why_now": "The fall 2026 KFF tracking poll came out Oct 20. The executive order is recent, and measles outbreaks plus SSPE searches are exploding this week.",
+   "is_it_real": "KFF is an independent pollster, and the poll numbers belong to KFF. What the order says comes from KFF's summary and has to be checked against the order's text. Whether single-antigen vaccines are available in the US is a question for the reporter to answer, not a fact stated here. The pregnancy COVID-vaccine finding (falling confidence, uncertainty about a false miscarriage claim) is from the same poll series and can be a secondary thread.",
+   "primary_test": "Text of the executive order; FDA's list of licensed vaccines (does a monovalent measles, mumps or rubella product exist in the US?); CDC measles case counts; KFF Tracking Poll topline and methods",
+   "standout": false,
+   "standout_reason": "",
+   "needs_independent_test": false,
+   "other_peg": "Measles outbreaks in Amish communities in New York and Pennsylvania, and the SSPE search spike Trend Desk flagged",
+   "audience": "general",
+   "evidence_strength": "strong",
+   "confidence": "high",
+   "site": "",
+   "seed_keyword": "",
+   "keys": [
+    "aw-kff-tracking-poll-on-health-information-and-trust-fall-2026-update-on",
+    "aw-recently-released-kff-poll-shows-uncertainty-over-established-safety-o",
+    "aw-kff-polling-on-health-information-and-trust"
+   ],
+   "items": [
+    {
+     "key": "aw-kff-tracking-poll-on-health-information-and-trust-fall-2026-update-on",
+     "kind": "analysis",
+     "interested_party": false,
+     "title": "KFF Tracking Poll on Health Information and Trust: Fall 2026 Update on Vaccine Views",
+     "publisher": "kff-feed",
+     "url": "https://www.kff.org/public-opinion/kff-tracking-poll-on-health-information-and-trust-fall-2026-update-on-vaccine-views/",
+     "released": "2026-10-20",
+     "date_basis": "source date",
+     "days_old": 5,
+     "source": "AgingWire",
+     "summary": "The latest KFF Tracking Poll on Health Information and Trust finds about half of parents mistakenly believe spacing out vaccines is healthier for children, while confidence in many long-standing childhood vaccines is high across partisans. These findings take on new relevance following President Trump's recent executive order calling for changes in U.S. childhood vaccine recommendations, including splitting the measles, mumps, and rubella (MMR) vaccine—currently given as a single combined shot—into three separate vaccines across multiple visits."
+    },
+    {
+     "key": "aw-recently-released-kff-poll-shows-uncertainty-over-established-safety-o",
+     "kind": "analysis",
+     "interested_party": false,
+     "title": "Recently Released KFF Poll Shows Uncertainty Over Established Safety of COVID-19 Vaccines During Pregnancy – The Monitor",
+     "publisher": "kff-feed",
+     "url": "https://www.kff.org/health-information-trust/recently-released-kff-poll-shows-uncertainty-over-established-safety-of-covid-19-vaccines-during-pregnancy/",
+     "released": "2026-10-22",
+     "date_basis": "source date",
+     "days_old": 3,
+     "source": "AgingWire",
+     "summary": "KFF’s recently released Tracking Poll finds that public confidence in the safety of COVID-19 vaccines for use during pregnancy has fallen, and many are uncertain about a false claim linking the vaccines with higher risk of miscarriage. Separately, conversations about childhood vaccines frame vaccination as an individual parental decision."
+    },
+    {
+     "key": "aw-kff-polling-on-health-information-and-trust",
+     "kind": "analysis",
+     "interested_party": false,
+     "title": "KFF Polling on Health Information and Trust",
+     "publisher": "kff-feed",
+     "url": "https://www.kff.org/public-opinion/kff-polling-on-health-information-and-trust/",
+     "released": "2026-10-20",
+     "date_basis": "source date",
+     "days_old": 5,
+     "source": "AgingWire",
+     "summary": "Drawing on KFF's poll findings, this interactive dashboard tracks the public’s trusted sources for health information, attitudes toward vaccines, and use of news, social media, and AI for health-related information. It provides visual representations of the key trends in the public’s trust in health information and tracks exposure to and belief in false and unproven health claims."
+    }
+   ],
+   "evidence": [
+    "https://www.kff.org/public-opinion/kff-tracking-poll-on-health-information-and-trust-fall-2026-update-on-vaccine-views/",
+    "https://www.kff.org/health-information-trust/recently-released-kff-poll-shows-uncertainty-over-established-safety-of-covid-19-vaccines-during-pregnancy/",
+    "https://www.kff.org/public-opinion/kff-polling-on-health-information-and-trust/"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "nd-2026-10-25-medicare-s-new-rule-targets-ghost-network-provider",
+   "desk": "news",
+   "title": "Medicare's new rule targets 'ghost network' provider directories, Part D low-income cost-sharing and PBMs, and it lands during open enrollment",
+   "created": "2026-10-25",
+   "route": "pitch",
+   "speed": "released 5 days ago",
+   "beat": "Medicare / insurance",
+   "angle": "Seniors are picking Medicare plans right now from provider directories that are often wrong. CMS has proposed a rule to carry out the REAL Health Providers Act (directory accuracy), along with PBM accountability and changes to Part D cost-sharing reductions for low-income people. The story: what the rule would actually make plans do, when it takes effect (too late for this enrollment season?), and how to check a directory yourself before Dec 7.",
+   "why_now": "Proposed rule published Oct 20; Medicare open enrollment runs Oct 15 to Dec 7; there is a public comment period.",
+   "is_it_real": "The Federal Register proposed rule is the primary document. It shows what CMS proposes, not that directories will improve. Comment deadline and effective dates need reading from the rule itself.",
+   "primary_test": "Federal Register 2026-21420 (proposed rule text, comment deadline, effective dates); CMS directory accuracy audits and earlier secret-shopper findings on Medicare Advantage directories",
+   "standout": false,
+   "standout_reason": "",
+   "needs_independent_test": false,
+   "other_peg": "Medicare open enrollment, Oct 15 to Dec 7",
+   "audience": "older adults",
+   "evidence_strength": "strong",
+   "confidence": "high",
+   "site": "",
+   "seed_keyword": "",
+   "keys": [
+    "aw-medicare-program-implementation-of-sections-6219-6220-and-6224-of-the"
+   ],
+   "items": [
+    {
+     "key": "aw-medicare-program-implementation-of-sections-6219-6220-and-6224-of-the",
+     "kind": "notice",
+     "interested_party": false,
+     "title": "Medicare Program; Implementation of Sections 6219, 6220, and 6224 of the Consolidated Appropriations Act, 2026",
+     "publisher": "federal-register",
+     "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21420/medicare-program-implementation-of-sections-6219-6220-and-6224-of-the-consolidated-appropriations",
+     "released": "2026-10-20",
+     "date_basis": "source date",
+     "days_old": 5,
+     "source": "AgingWire",
+     "summary": "This proposed rule would implement section 6219 (Adjustments to Medicare Part D Cost-Sharing Reductions for Low-Income Individuals), section 6220 (Requiring Enhanced and Accurate Lists of (REAL) Health Providers Act), and section 6224 (Modernizing and Ensuring Pharmacy Benefit Manager Accountability) of the Consolidated Appropriations Act, 2026."
+    }
+   ],
+   "evidence": [
+    "https://www.federalregister.gov/documents/2026/10/20/2026-21420/medicare-program-implementation-of-sections-6219-6220-and-6224-of-the-consolidated-appropriations"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "nd-2026-10-25-275-million-to-recruit-nursing-home-nurses-what-it",
+   "desk": "news",
+   "title": "$275 million to recruit nursing home nurses: what it buys, and whether Medicaid's state directed payments to nursing homes reach staff at all",
+   "created": "2026-10-25",
+   "route": "pitch",
+   "speed": "released 2 days ago",
+   "beat": "long-term care / caregiving",
+   "angle": "CMS's Nurses for Nursing Homes program puts $275 million toward roughly 4,000 nurses. KFF's new brief traces how much money states send to nursing homes through state directed payments, and two Boston College CRR papers look at how Medicaid long-term care policy affects aide and nurse jobs and wages. Together they raise a question families care about: when public money goes to nursing homes, does it change staffing at the bedside? Payroll-based staffing data can answer it.",
+   "why_now": "The CMS initiative, the KFF brief and both CRR papers came out Oct 20 to 23, and the federal minimum-staffing rule is still in flux.",
+   "is_it_real": "The $275M figure and the 4,000-nurse estimate are CMS's own and come from a digest summary with no URL, so they need confirming at the CMS newsroom. KFF and CRR are independent analyses; their findings are not in the item text and need reading. The same CMS digest summary also mentions an unrelated ACA eligibility-verification proposed rule (CMS-9873-P), which should not be mixed in.",
+   "primary_test": "CMS Payroll-Based Journal nursing home staffing data; CMS program announcement for Nurses for Nursing Homes; KFF's state directed payment analysis; the CRR working papers",
+   "standout": false,
+   "standout_reason": "",
+   "needs_independent_test": false,
+   "other_peg": "Status of the federal nursing home minimum staffing rule",
+   "audience": "older adults",
+   "evidence_strength": "moderate",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "keys": [
+    "org-cms-puts-275-million-into-recruiting-nurses-for-nursing-homes-enough-f",
+    "aw-a-closer-look-at-state-directed-payments-for-nursing-home-services",
+    "aw-how-do-medicaid-ltc-policies-impact-jobs-and-wages-of-nurses-and-aides",
+    "aw-how-do-medicaid-policies-for-home-and-community-based-services-impact"
+   ],
+   "items": [
+    {
+     "key": "org-cms-puts-275-million-into-recruiting-nurses-for-nursing-homes-enough-f",
+     "kind": "org_release",
+     "interested_party": true,
+     "title": "CMS puts $275 million into recruiting nurses for nursing homes — enough for about 4,000 nurses",
+     "publisher": "CMS Newsroom",
+     "url": "",
+     "released": "2026-10-23",
+     "date_basis": "feed date",
+     "days_old": 2,
+     "source": "news digest",
+     "summary": "CMS and participating states launched the \"Nurses for Nursing Homes\" initiative, a $275 million effort expected to support more than 4,000 nurses and nursing students, with explicit attention to rural facilities. The money arrives as nursing homes continue to report chronic RN and LPN vacancies and as the federal minimum staffing rule's future remains unsettled. CMS proposed a rule (CMS-9873-P) implementing the Working Families Tax Cuts law that would require consumers to pass eligibility verification before receiving advance premium tax credits or cost-sharing reductions, rather than being en"
+    },
+    {
+     "key": "aw-a-closer-look-at-state-directed-payments-for-nursing-home-services",
+     "kind": "analysis",
+     "interested_party": false,
+     "title": "A Closer Look at State Directed Payments for Nursing Home Services",
+     "publisher": "kff-feed",
+     "url": "https://www.kff.org/medicaid/a-closer-look-at-state-directed-payments-for-nursing-home-services/",
+     "released": "2026-10-21",
+     "date_basis": "source date",
+     "days_old": 4,
+     "source": "AgingWire",
+     "summary": "Building on previous analysis of state directed payments (SDPs), this issue brief takes a closer look at SDPs for nursing home services."
+    },
+    {
+     "key": "aw-how-do-medicaid-ltc-policies-impact-jobs-and-wages-of-nurses-and-aides",
+     "kind": "org_release",
+     "interested_party": true,
+     "title": "How Do Medicaid LTC Policies Impact Jobs and Wages of Nurses and Aides?",
+     "publisher": "center-retirement-research",
+     "url": "https://crr.bc.edu/how-do-medicaid-ltc-policies-impact-jobs-and-wages-of-nurses-and-aides/",
+     "released": "2026-10-20",
+     "date_basis": "source date",
+     "days_old": 5,
+     "source": "AgingWire",
+     "summary": "Gal Wettstein , and Nilufer Gok October 20, 2026"
+    },
+    {
+     "key": "aw-how-do-medicaid-policies-for-home-and-community-based-services-impact",
+     "kind": "org_release",
+     "interested_party": true,
+     "title": "How Do Medicaid Policies for Home- and Community-Based Services Impact the Jobs and Wages of the Formal Care Workforce?",
+     "publisher": "center-retirement-research",
+     "url": "https://crr.bc.edu/how-do-medicaid-policies-for-home-and-community-based-services-impact-the-jobs-and-wages-of-the-formal-care-workforce/",
+     "released": "2026-10-20",
+     "date_basis": "source date",
+     "days_old": 5,
+     "source": "AgingWire",
+     "summary": "Gal Wettstein , and Nilufer Gok October 20, 2026"
+    }
+   ],
+   "evidence": [
+    "https://www.kff.org/medicaid/a-closer-look-at-state-directed-payments-for-nursing-home-services/",
+    "https://crr.bc.edu/how-do-medicaid-ltc-policies-impact-jobs-and-wages-of-nurses-and-aides/",
+    "https://crr.bc.edu/how-do-medicaid-policies-for-home-and-community-based-services-impact-the-jobs-and-wages-of-the-formal-care-workforce/"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "nd-2026-10-25-do-employers-still-cover-glp-1s-what-kff-s-2026-em",
+   "desk": "news",
+   "title": "Do employers still cover GLP-1s? What KFF's 2026 employer survey found on weight-loss drugs and IVF",
+   "created": "2026-10-25",
+   "route": "pitch",
+   "speed": "released 3 days ago",
+   "beat": "GLP-1s / insurance",
+   "angle": "This year KFF's 28th Employer Health Benefits Survey asked employers in detail about GLP-1 and IVF coverage, and about what they're doing as costs climb. Workers are choosing benefits for 2027 right now. The story is whether weight-loss drug coverage is spreading or being cut, and what employers are doing in place of coverage (prior authorization, BMI cutoffs, lifestyle-program requirements).",
+   "why_now": "Survey released Oct 22; employer open enrollment season for 2027 benefits.",
+   "is_it_real": "KFF's survey is independent data. The GLP-1 and IVF numbers are not in the item text and need pulling from the report. Nothing about the findings is assumed here.",
+   "primary_test": "KFF 2026 Employer Health Benefits Survey, GLP-1 and IVF sections and methodology",
+   "standout": false,
+   "standout_reason": "",
+   "needs_independent_test": false,
+   "other_peg": "Employer open enrollment for 2027 plans",
+   "audience": "general",
+   "evidence_strength": "moderate",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "keys": [
+    "aw-2026-employer-health-benefits-survey"
+   ],
+   "items": [
+    {
+     "key": "aw-2026-employer-health-benefits-survey",
+     "kind": "analysis",
+     "interested_party": false,
+     "title": "2026 Employer Health Benefits Survey",
+     "publisher": "kff-feed",
+     "url": "https://www.kff.org/health-costs/2026-employer-health-benefits-survey/",
+     "released": "2026-10-22",
+     "date_basis": "source date",
+     "days_old": 3,
+     "source": "AgingWire",
+     "summary": "This is the 28th Employer Health Benefits Survey (EHBS) and reflects employer-sponsored health benefits in 2026. As in years past, the survey examines trends in employer coverage, including premiums, employee contributions, deductibles, offer rates, and employer practices. This year, we asked employers detailed questions about satisfaction with their health plans; coverage of GLP-1 agonists and IVF; actions taken in response to projected cost increases; and firms’ ability to obtain information about health care costs and utilization."
+    }
+   ],
+   "evidence": [
+    "https://www.kff.org/health-costs/2026-employer-health-benefits-survey/"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "nd-2026-10-25-the-500-aca-checks-who-s-getting-them-and-how-othe",
+   "desk": "news",
+   "title": "The $500 ACA checks: who's getting them, and how other marketplace enrollees' user fees are paying for them",
+   "created": "2026-10-25",
+   "route": "pitch",
+   "speed": "released 2 days ago",
+   "beat": "insurance / ACA",
+   "angle": "About 1 million HealthCare.gov enrollees in 30 states who get no premium tax credit are receiving $500 checks, paid for by Marketplace user fees. That's a small slice of the 19.2 million people enrolled. Right before open enrollment, the story is who qualifies, who is paying (everyone whose premiums carry the fee), and whether $500 covers the premium increases enrollees face.",
+   "why_now": "KFF analysis Oct 23; ACA open enrollment opens Nov 1.",
+   "is_it_real": "KFF's analysis is independent and supplies the 1 million and 19.2 million figures. How the checks and user fees work should be confirmed in CMS documents.",
+   "primary_test": "KFF analysis; CMS notice or announcement setting up the payments and user-fee rates (Notice of Benefit and Payment Parameters)",
+   "standout": false,
+   "standout_reason": "",
+   "needs_independent_test": false,
+   "other_peg": "ACA open enrollment begins Nov 1",
+   "audience": "general",
+   "evidence_strength": "moderate",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "keys": [
+    "aw-what-we-know-about-trump-s-500-aca-checks-and-the-user-fees-funding-th"
+   ],
+   "items": [
+    {
+     "key": "aw-what-we-know-about-trump-s-500-aca-checks-and-the-user-fees-funding-th",
+     "kind": "analysis",
+     "interested_party": false,
+     "title": "What We Know about Trump’s $500 ACA Checks and the User Fees Funding Them",
+     "publisher": "kff-feed",
+     "url": "https://www.kff.org/affordable-care-act/what-we-know-about-trumps-500-aca-checks-and-the-user-fees-funding-them/",
+     "released": "2026-10-23",
+     "date_basis": "source date",
+     "days_old": 2,
+     "source": "AgingWire",
+     "summary": "This analysis examines the $500 checks that the Trump administration is sending to some Affordable Care Act Marketplace enrollees and the user fees that are paying for them. The checks are going to about 1 million enrollees in the 30 states that rely on the federal HealthCare.gov Marketplace who are not receiving any tax credits this year – a small share of the 19.2 million people who were enrolled nationally as of February."
+    }
+   ],
+   "evidence": [
+    "https://www.kff.org/affordable-care-act/what-we-know-about-trumps-500-aca-checks-and-the-user-fees-funding-them/"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "nd-2026-10-25-is-it-real-esmo-week-s-75-response-and-cuts-risk-6",
+   "desk": "news",
+   "title": "Is it real? ESMO week's '75% response' and 'cuts risk 62%' cancer headlines, and the one release that actually shows people living longer",
+   "created": "2026-10-25",
+   "route": "tfm",
+   "speed": "released 1 days ago",
+   "beat": "cancer / health claims",
+   "angle": "In one week, drug companies put out 75%, 77% and 79% response rates (J&J's RIPTAC prostate molecule, Rybrevant in head and neck, Lilly's ovarian ADC) and a '62% lower risk' (Erleada). The test: tumor shrinkage in an early, single-arm trial is not living longer. Only a couple of these releases report overall survival from a Phase III trial (sac-TMT's 25.9 vs 17.4 months; Ziihera's three-year survival). Sort each headline by phase, endpoint and comparator, and show readers how to read the next one.",
+   "why_now": "ESMO 2026 releases, Oct 22 to 24. OptiTROP-Lung06 was published in NEJM at the same time.",
+   "is_it_real": "Every number is the sponsor's own claim. The response-rate releases appear to be early-phase and single-arm, with no survival data; that has to be confirmed in each registry entry. The release that cuts 'risk by 62%' should be checked for whether the endpoint is recurrence or death or something else, and whether there is overall-survival data. sac-TMT's survival result is a Phase III hard outcome, but the trial population and whether it applies outside China need checking.",
+   "primary_test": "ClinicalTrials.gov entries for each trial (phase, arms, primary endpoint); ESMO 2026 abstracts; the NEJM OptiTROP-Lung06 paper",
+   "standout": false,
+   "standout_reason": "",
+   "needs_independent_test": false,
+   "other_peg": "ESMO 2026 Congress",
+   "audience": "both",
+   "evidence_strength": "strong",
+   "confidence": "high",
+   "site": "",
+   "seed_keyword": "",
+   "keys": [
+    "press-johnson-johnson-reports-75-tumor-response-rate-in-advanced-p",
+    "press-rybrevant-faspro-combination-posts-77-overall-response-rate",
+    "press-lilly-reports-79-confirmed-response-rate-for-its-next-gen-fr",
+    "press-johnson-johnson-says-erleada-apalutamide-before-and-after-su",
+    "press-sacituzumab-tirumotecan-extends-median-overall-survival-by-8",
+    "press-optitrop-lung06-results-cut-risk-of-progression-or-death-by",
+    "press-ziihera-zanidatamab-hrii-combinations-show-sustained-three-y",
+    "press-lilly-s-olomorasib-shows-durable-first-line-activity-in-kras",
+    "press-bio-thera-shares-early-data-for-trop2-adc-bat8008-plus-bat13"
+   ],
+   "items": [
+    {
+     "key": "press-johnson-johnson-reports-75-tumor-response-rate-in-advanced-p",
+     "kind": "press_release",
+     "interested_party": true,
+     "title": "Johnson & Johnson reports 75% tumor response rate in advanced prostate cancer with first-in-class RIPTAC molecule",
+     "publisher": "PR Newswire",
+     "url": "https://www.prnewswire.com/news-releases/johnson--johnson-reports-75-tumor-response-rate-in-advanced-prostate-cancer-with-jnj-6143-a-first-in-class-riptac-molecule-302918733.html",
+     "released": "2026-10-24",
+     "date_basis": "within 1 day(s) of the digest run",
+     "days_old": 1,
+     "source": "news digest",
+     "summary": "JNJ-6143 uses a novel dual-protein \"lock\" between BRD4 and the androgen receptor to kill cancer cells, an entirely new mechanism for a notoriously hard-to-treat setting."
+    },
+    {
+     "key": "press-rybrevant-faspro-combination-posts-77-overall-response-rate",
+     "kind": "press_release",
+     "interested_party": true,
+     "title": "RYBREVANT FASPRO combination posts 77% overall response rate in first-line advanced head and neck cancer",
+     "publisher": "PR Newswire",
+     "url": "https://www.prnewswire.com/news-releases/rybrevant-faspro-amivantamab-and-hyaluronidase-lpuj-combination-demonstrates-77-overall-response-rate-in-first-line-treatment-of-patients-with-advanced-head-and-neck-cancer-302918746.html",
+     "released": "2026-10-24",
+     "date_basis": "within 1 day(s) of the digest run",
+     "days_old": 1,
+     "source": "news digest",
+     "summary": "Dual EGFR/MET targeting delivered deep responses with 65% still ongoing at cutoff, supporting the regimen's move into a first-line Phase 3 study."
+    },
+    {
+     "key": "press-lilly-reports-79-confirmed-response-rate-for-its-next-gen-fr",
+     "kind": "press_release",
+     "interested_party": true,
+     "title": "Lilly reports 79% confirmed response rate for its next-gen FRα-targeting ADC in platinum-sensitive ovarian cancer",
+     "publisher": "PR Newswire",
+     "url": "https://www.prnewswire.com/news-releases/lilly-presents-first-clinical-data-in-platinum-sensitive-ovarian-cancer-for-its-investigational-next-generation-fr-targeting-adc-at-esmo-2026-302918153.html",
+     "released": "2026-10-23",
+     "date_basis": "within 1 day(s) of the digest run",
+     "days_old": 2,
+     "source": "news digest",
+     "summary": "First clinical data for sofetabart mipitecan plus bevacizumab showed a 100% disease control rate and activity across FRα expression levels, a notable signal in women's cancer care."
+    },
+    {
+     "key": "press-johnson-johnson-says-erleada-apalutamide-before-and-after-su",
+     "kind": "press_release",
+     "interested_party": true,
+     "title": "Johnson & Johnson says ERLEADA® (apalutamide) before and after surgery cuts risk of recurrence or death by 62% in high-risk prostate cancer",
+     "publisher": "PR Newswire",
+     "url": "https://www.prnewswire.com/news-releases/johnson--johnson-announces-erleada-apalutamide-treatment-before-and-after-surgery-reduces-risk-of-recurrence-or-death-by-62-versus-surgery-alone-in-high-risk-prostate-cancer-302918654.html",
+     "released": "2026-10-23",
+     "date_basis": "within 1 day(s) of the digest run",
+     "days_old": 2,
+     "source": "news digest",
+     "summary": "A perioperative treatment window, rather than surgery alone, meaningfully changed outcomes, with twice as many patients treatment-free at three years."
+    },
+    {
+     "key": "press-sacituzumab-tirumotecan-extends-median-overall-survival-by-8",
+     "kind": "press_release",
+     "interested_party": true,
+     "title": "Sacituzumab tirumotecan extends median overall survival by 8.5 months in Phase III OptiTROP-Lung04",
+     "publisher": "PR Newswire",
+     "url": "https://www.prnewswire.com/news-releases/final-os-analysis-results-from-phase-iii-optitrop-lung04-study-of-sacituzumab-tirumotecan-sac-tmt-presented-at-2026-esmo-302918760.html",
+     "released": "2026-10-24",
+     "date_basis": "within 1 day(s) of the digest run",
+     "days_old": 1,
+     "source": "news digest",
+     "summary": "The ADC beat platinum doublet chemotherapy (25.9 vs. 17.4 months) with a 31% reduction in risk of death, presented at ESMO 2026."
+    },
+    {
+     "key": "press-optitrop-lung06-results-cut-risk-of-progression-or-death-by",
+     "kind": "press_release",
+     "interested_party": true,
+     "title": "OptiTROP-Lung06 results cut risk of progression or death by 51%, published simultaneously in NEJM",
+     "publisher": "PR Newswire",
+     "url": "https://www.prnewswire.com/news-releases/the-results-of-phase-iii-optitrop-lung06-study-of-sacituzumab-tirumotecan-sac-tmt-presented-as-an-esmo-oral-presentation-and-simultaneously-published-in-the-new-england-journal-of-medicine-302918758.html",
+     "released": "2026-10-24",
+     "date_basis": "within 1 day(s) of the digest run",
+     "days_old": 1,
+     "source": "news digest",
+     "summary": "A second major Phase III win for sac-TMT in the same week, with NEJM publication signaling how seriously the data is being taken."
+    },
+    {
+     "key": "press-ziihera-zanidatamab-hrii-combinations-show-sustained-three-y",
+     "kind": "press_release",
+     "interested_party": true,
+     "title": "Ziihera (zanidatamab-hrii) Combinations Show Sustained Three-Year Survival in First-Line HER2+ Advanced Gastroesophageal Adenocarcinoma",
+     "publisher": "PR Newswire",
+     "url": "https://www.prnewswire.com/news-releases/ziihera-zanidatamab-hrii-combinations-demonstrate-sustained-survival-at-three-years-in-first-line-her2-advanced-gastroesophageal-adenocarcinoma-at-esmo-2026-302917899.html",
+     "released": "2026-10-22",
+     "date_basis": "within 1 day(s) of the digest run",
+     "days_old": 3,
+     "source": "news digest",
+     "summary": "Mature HERIZON-GEA-01 data presented at ESMO 2026 show nearly 40% of patients alive at three years on Ziihera plus tislelizumab and chemo, with a 27-month median overall survival regardless of PD-L1 status."
+    },
+    {
+     "key": "press-lilly-s-olomorasib-shows-durable-first-line-activity-in-kras",
+     "kind": "press_release",
+     "interested_party": true,
+     "title": "Lilly's olomorasib shows durable first-line activity in KRAS G12C-mutant non-small cell lung cancer",
+     "publisher": "PR Newswire",
+     "url": "https://www.prnewswire.com/news-releases/new-data-on-lillys-investigational-treatment-olomorasib-at-esmo-2026-show-durable-first-line-activity-in-kras-g12c-mutant-non-small-cell-lung-cancer-302918479.html",
+     "released": "2026-10-24",
+     "date_basis": "within 1 day(s) of the digest run",
+     "days_old": 1,
+     "source": "news digest",
+     "summary": "Efficacy held across PD-L1 expression levels in combination with standard immunotherapy, addressing a patient group with limited first-line options."
+    },
+    {
+     "key": "press-bio-thera-shares-early-data-for-trop2-adc-bat8008-plus-bat13",
+     "kind": "press_release",
+     "interested_party": true,
+     "title": "Bio-Thera shares early data for TROP2 ADC BAT8008 plus BAT1308 in first-line non-small cell lung cancer at ESMO 2026",
+     "publisher": "PR Newswire",
+     "url": "https://www.prnewswire.com/news-releases/bio-thera-announces-promising-clinical-data-for-bat8008-in-combination-with-bat1308-in-first-line-non-small-cell-lung-cancer-at-esmo-2026-302918492.html",
+     "released": "2026-10-23",
+     "date_basis": "within 1 day(s) of the digest run",
+     "days_old": 2,
+     "source": "news digest",
+     "summary": "Another entry in the fast-moving antibody-drug conjugate race, this time in one of the largest cancer indications."
+    }
+   ],
+   "evidence": [
+    "https://www.prnewswire.com/news-releases/johnson--johnson-reports-75-tumor-response-rate-in-advanced-prostate-cancer-with-jnj-6143-a-first-in-class-riptac-molecule-302918733.html",
+    "https://www.prnewswire.com/news-releases/rybrevant-faspro-amivantamab-and-hyaluronidase-lpuj-combination-demonstrates-77-overall-response-rate-in-first-line-treatment-of-patients-with-advanced-head-and-neck-cancer-302918746.html",
+    "https://www.prnewswire.com/news-releases/lilly-presents-first-clinical-data-in-platinum-sensitive-ovarian-cancer-for-its-investigational-next-generation-fr-targeting-adc-at-esmo-2026-302918153.html",
+    "https://www.prnewswire.com/news-releases/johnson--johnson-announces-erleada-apalutamide-treatment-before-and-after-surgery-reduces-risk-of-recurrence-or-death-by-62-versus-surgery-alone-in-high-risk-prostate-cancer-302918654.html",
+    "https://www.prnewswire.com/news-releases/final-os-analysis-results-from-phase-iii-optitrop-lung04-study-of-sacituzumab-tirumotecan-sac-tmt-presented-at-2026-esmo-302918760.html",
+    "https://www.prnewswire.com/news-releases/the-results-of-phase-iii-optitrop-lung06-study-of-sacituzumab-tirumotecan-sac-tmt-presented-as-an-esmo-oral-presentation-and-simultaneously-published-in-the-new-england-journal-of-medicine-302918758.html",
+    "https://www.prnewswire.com/news-releases/ziihera-zanidatamab-hrii-combinations-demonstrate-sustained-survival-at-three-years-in-first-line-her2-advanced-gastroesophageal-adenocarcinoma-at-esmo-2026-302917899.html",
+    "https://www.prnewswire.com/news-releases/new-data-on-lillys-investigational-treatment-olomorasib-at-esmo-2026-show-durable-first-line-activity-in-kras-g12c-mutant-non-small-cell-lung-cancer-302918479.html",
+    "https://www.prnewswire.com/news-releases/bio-thera-announces-promising-clinical-data-for-bat8008-in-combination-with-bat1308-in-first-line-non-small-cell-lung-cancer-at-esmo-2026-302918492.html"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "nd-2026-10-25-is-it-real-ai-beats-doctors-rand-says-headline-ben",
+   "desk": "news",
+   "title": "Is it real? 'AI beats doctors': RAND says headline benchmark scores hide where medical AI fails, mental health especially",
+   "created": "2026-10-25",
+   "route": "tfm",
+   "speed": "released 4 days ago",
+   "beat": "health AI",
+   "angle": "This is evidence for Trend Desk's existing 'AI beats doctors at diagnosis' TFM idea and should be merged into it, not run as a second post. RAND argues that an aggregate score on benchmarks like HealthBench can hide large differences between clinical areas, and it uses mental health as its test case. That is exactly the gap behind 'outperforms physicians' headlines.",
+   "why_now": "RAND perspective Oct 21; Microsoft's 'AI outperforms physicians' study is trending this week.",
+   "is_it_real": "RAND is independent analysis; this is a perspective piece, not new trial data. Its specific domain-level numbers need reading from the paper.",
+   "primary_test": "The RAND paper (EP71489) and the HealthBench domain-level results; the Microsoft study's methods",
+   "standout": false,
+   "standout_reason": "",
+   "needs_independent_test": false,
+   "other_peg": "Microsoft 'AI outperforms physicians' study trending",
+   "audience": "general",
+   "evidence_strength": "moderate",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "keys": [
+    "aw-making-medical-ai-benchmarks-clinically-interpretable"
+   ],
+   "items": [
+    {
+     "key": "aw-making-medical-ai-benchmarks-clinically-interpretable",
+     "kind": "analysis",
+     "interested_party": false,
+     "title": "Making Medical AI Benchmarks Clinically Interpretable",
+     "publisher": "rand-research",
+     "url": "https://www.rand.org/pubs/external_publications/EP71489.html",
+     "released": "2026-10-21",
+     "date_basis": "source date",
+     "days_old": 4,
+     "source": "AgingWire",
+     "summary": "This perspective examines how aggregate scores on medical AI benchmarks like HealthBench can mask variation across clinical domains. It argues for domain-specific reporting, using mental health as a test case."
+    }
+   ],
+   "evidence": [
+    "https://www.rand.org/pubs/external_publications/EP71489.html"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "nd-2026-10-25-social-security-s-3-6-cola-for-2027-is-official-wh",
+   "desk": "news",
+   "title": "Social Security's 3.6% COLA for 2027 is official: what changes in December checks",
+   "created": "2026-10-25",
+   "route": "roundup",
+   "speed": "released 0 days ago",
+   "beat": "money / older adults",
+   "angle": "The Federal Register makes it official: a 3.6% cost-of-living increase effective December 2026, paid in January, plus a 2025 national average wage index of $72,800.33, which moves the taxable maximum and earnings-test limits. One sharp line: how much the Part B premium change takes back.",
+   "why_now": "Federal Register notice dated Oct 26.",
+   "is_it_real": "Primary government document. Pair it with the 2027 Part B premium only once CMS publishes that figure; don't estimate it.",
+   "primary_test": "Federal Register 2026-21796",
+   "standout": false,
+   "standout_reason": "",
+   "needs_independent_test": false,
+   "other_peg": "",
+   "audience": "older adults",
+   "evidence_strength": "strong",
+   "confidence": "high",
+   "site": "",
+   "seed_keyword": "",
+   "keys": [
+    "aw-cost-of-living-increase-and-other-determinations-for-2027",
+    "aw-from-dc-eviction-crisis-act-2027-social-security-cola-hcbs-updates-and"
+   ],
+   "items": [
+    {
+     "key": "aw-cost-of-living-increase-and-other-determinations-for-2027",
+     "kind": "notice",
+     "interested_party": false,
+     "title": "Cost-of-Living Increase and Other Determinations for 2027",
+     "publisher": "federal-register",
+     "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21796/cost-of-living-increase-and-other-determinations-for-2027",
+     "released": "2026-10-26",
+     "date_basis": "source date",
+     "days_old": 0,
+     "source": "AgingWire",
+     "summary": "Under title II of the Social Security Act (Act), there will be a 3.6 percent cost-of-living increase in Social Security benefits effective December 2026. In addition, the national average wage index for 2025 is $72,800.33. The cost-of-living increase and national average wage index affect other program parameters as described below."
+    },
+    {
+     "key": "aw-from-dc-eviction-crisis-act-2027-social-security-cola-hcbs-updates-and",
+     "kind": "analysis",
+     "interested_party": false,
+     "title": "From DC: Eviction Crisis Act, 2027 Social Security COLA, HCBS Updates, and More",
+     "publisher": "justice-in-aging",
+     "url": "https://justiceinaging.org/from-dc-10162026/",
+     "released": "2026-10-16",
+     "date_basis": "source date",
+     "days_old": 9,
+     "source": "AgingWire",
+     "summary": "In this week's edition: Eviction Crisis Act, 2027 Social Security COLA, HCBS Updates, and More. The post From DC: Eviction Crisis Act, 2027 Social Security COLA, HCBS Updates, and More appeared first on Justice in Aging ."
+    }
+   ],
+   "evidence": [
+    "https://www.federalregister.gov/documents/2026/10/26/2026-21796/cost-of-living-increase-and-other-determinations-for-2027",
+    "https://justiceinaging.org/from-dc-10162026/"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "nd-2026-10-25-workers-now-pay-7-471-a-year-for-family-coverage-u",
+   "desk": "news",
+   "title": "Workers now pay $7,471 a year for family coverage, up 9%, and health costs remain Americans' top money worry",
+   "created": "2026-10-25",
+   "route": "roundup",
+   "speed": "released 3 days ago",
+   "beat": "insurance / money",
+   "angle": "KFF's benchmark survey: workers' share of family premiums rose $621 (9%) to $7,471, and people at small firms are hit hardest. KFF polling shows costs are pushing people to delay care. A short item with one usable number, in time for benefits season.",
+   "why_now": "KFF Employer Health Benefits Survey released Oct 22.",
+   "is_it_real": "KFF's independent survey. The digest headline's claim that 'older workers are squeezed hardest' is not in KFF's own summary, which names small-firm workers, so don't use it. That digest item's URL also points to an unrelated KFF SNAP/Medicaid page.",
+   "primary_test": "KFF 2026 Employer Health Benefits Survey",
+   "standout": false,
+   "standout_reason": "",
+   "needs_independent_test": false,
+   "other_peg": "",
+   "audience": "general",
+   "evidence_strength": "strong",
+   "confidence": "high",
+   "site": "",
+   "seed_keyword": "",
+   "keys": [
+    "aw-workers-now-pay-7-471-on-average-annually-for-family-health-coverage-u",
+    "org-family-health-premiums-jump-9-workers-now-pay-7-471-a-year-and-older-w",
+    "aw-premiums-and-worker-contributions-among-workers-covered-by-employer-sp",
+    "aw-how-much-is-health-spending-expected-to-grow",
+    "org-new-kff-polling-health-costs-remain-americans-top-financial-worry-and"
+   ],
+   "items": [
+    {
+     "key": "aw-workers-now-pay-7-471-on-average-annually-for-family-health-coverage-u",
+     "kind": "analysis",
+     "interested_party": false,
+     "title": "Workers Now Pay $7,471 on Average Annually for Family Health Coverage, Up 9% or $621 from 2025, Benchmark Employer Health Benefits Survey Finds",
+     "publisher": "kff-feed",
+     "url": "https://www.kff.org/private-insurance/workers-now-pay-7471-on-average-annually-for-family-health-coverage-up-9-or-621-from-2025-benchmark-employer-health-benefits-survey-finds/",
+     "released": "2026-10-22",
+     "date_basis": "source date",
+     "days_old": 3,
+     "source": "AgingWire",
+     "summary": "Workers are paying on average $7,471 annually toward the premiums for employer-sponsored family health benefits this year, which is up 9%, or $621, from 2025, per KFF’s annual benchmark health benefits survey of large and small employers. The burden of family premiums hits particularly hard for workers at small firms with less than 200 workers."
+    },
+    {
+     "key": "org-family-health-premiums-jump-9-workers-now-pay-7-471-a-year-and-older-w",
+     "kind": "analysis",
+     "interested_party": false,
+     "title": "Family health premiums jump 9% — workers now pay $7,471 a year, and older workers are squeezed hardest",
+     "publisher": "KFF Publications",
+     "url": "https://www.kff.org/medicaid/assessing-ability-to-work-how-historical-snap-processes-may-vary-from-medicaid/",
+     "released": "2026-10-22",
+     "date_basis": "feed date",
+     "days_old": 3,
+     "source": "news digest",
+     "summary": "KFF's 28th annual Employer Health Benefits Survey finds workers contributing an average of $7,471 annually toward family premiums, up $621 (9%) from 2025, with small-firm employees bearing the heaviest burden. This year's survey adds detail on GLP-1 and IVF coverage, employer satisfaction with plans, and what employers did in response to projected cost increases. KFF's updated chart collection projects health spending growth in coming years, with breakouts for prescription drug spending, out-of-pocket spending, and related trends. With states facing uncertainty over how to verify the Medicaid "
+    },
+    {
+     "key": "aw-premiums-and-worker-contributions-among-workers-covered-by-employer-sp",
+     "kind": "analysis",
+     "interested_party": false,
+     "title": "Premiums and Worker Contributions Among Workers Covered by Employer-Sponsored Coverage, 1999-2026",
+     "publisher": "kff-feed",
+     "url": "https://www.kff.org/health-costs/premiums-worker-contributions-among-workers-covered-by-employer-sponsored-coverage/",
+     "released": "2026-10-22",
+     "date_basis": "source date",
+     "days_old": 3,
+     "source": "AgingWire",
+     "summary": "Since 1999, the Employer Health Benefits Survey has documented trends in employer-sponsored health insurance. Every year, private and non-federal public employers with 10 or more employees complete the survey."
+    },
+    {
+     "key": "aw-how-much-is-health-spending-expected-to-grow",
+     "kind": "analysis",
+     "interested_party": false,
+     "title": "How Much is Health Spending Expected to Grow?",
+     "publisher": "kff-feed",
+     "url": "https://www.kff.org/health-costs/how-much-is-health-spending-expected-to-grow/",
+     "released": "2026-10-22",
+     "date_basis": "source date",
+     "days_old": 3,
+     "source": "AgingWire",
+     "summary": "This chart collection explores how much health spending is expected to grow in the coming years, with a look at growth in prescription drug spending, out-of-pocket spending, and related trends."
+    },
+    {
+     "key": "org-new-kff-polling-health-costs-remain-americans-top-financial-worry-and",
+     "kind": "org_release",
+     "interested_party": true,
+     "title": "New KFF polling: health costs remain Americans' top financial worry — and are driving care delays",
+     "publisher": "KFF Publications",
+     "url": "",
+     "released": "2026-10-23",
+     "date_basis": "feed date",
+     "days_old": 2,
+     "source": "news digest",
+     "summary": "KFF's updated data note compiles polling on how health care costs shape coverage decisions and whether people seek care at all, and confirms costs rank consistently as a leading household financial anxiety. (Specific topline figures are in the data note; summary from feed text is thin.) KFF analyzes $500 checks going to roughly 1 million HealthCare.gov enrollees in 30 states who receive no premium tax credits — a fraction of the 19.2 million people enrolled nationally in February — funded by Marketplace user fees."
+    }
+   ],
+   "evidence": [
+    "https://www.kff.org/private-insurance/workers-now-pay-7471-on-average-annually-for-family-health-coverage-up-9-or-621-from-2025-benchmark-employer-health-benefits-survey-finds/",
+    "https://www.kff.org/medicaid/assessing-ability-to-work-how-historical-snap-processes-may-vary-from-medicaid/",
+    "https://www.kff.org/health-costs/premiums-worker-contributions-among-workers-covered-by-employer-sponsored-coverage/",
+    "https://www.kff.org/health-costs/how-much-is-health-spending-expected-to-grow/"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "nd-2026-10-25-medicaid-can-take-the-family-house-how-states-diff",
+   "desk": "news",
+   "title": "Medicaid can take the family house: how states differ on estate recovery, and what families can do",
+   "created": "2026-10-25",
+   "route": "pitch",
+   "speed": "released 5 days ago",
+   "beat": "caregiving / Medicaid",
+   "angle": "Many families learn only after a parent dies that the state can claim the home to repay Medicaid long-term care costs. Justice in Aging's new report lays out how states can limit the damage: hardship waivers, home exemptions, cost-effectiveness thresholds. That makes a state-by-state story about who loses the house and why it depends on where you live.",
+   "why_now": "Justice in Aging report Oct 20; Medicaid long-term care and caregiving are in the news ahead of the midterms.",
+   "is_it_real": "Justice in Aging is an advocacy group, so its policy recommendations are its own. State estate recovery rules and recovery amounts are documented in state plans and CMS or MACPAC data. No specific numbers are in the item.",
+   "primary_test": "State Medicaid plans and CMS/MACPAC data on estate recovery collections by state",
+   "standout": false,
+   "standout_reason": "",
+   "needs_independent_test": false,
+   "other_peg": "",
+   "audience": "older adults",
+   "evidence_strength": "moderate",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "keys": [
+    "aw-medicaid-estate-recovery-state-strategies-to-mitigate-harm"
+   ],
+   "items": [
+    {
+     "key": "aw-medicaid-estate-recovery-state-strategies-to-mitigate-harm",
+     "kind": "analysis",
+     "interested_party": false,
+     "title": "Medicaid Estate Recovery: State Strategies to Mitigate Harm",
+     "publisher": "justice-in-aging",
+     "url": "https://justiceinaging.org/medicaid-estate-recovery-state-strategies-to-mitigate-harm/",
+     "released": "2026-10-20",
+     "date_basis": "source date",
+     "days_old": 5,
+     "source": "AgingWire",
+     "summary": "Explore how states can reduce the harms of Medicaid estate recovery and protect low-income older adults, their families, and their homes. The post Medicaid Estate Recovery: State Strategies to Mitigate Harm appeared first on Justice in Aging ."
+    }
+   ],
+   "evidence": [
+    "https://justiceinaging.org/medicaid-estate-recovery-state-strategies-to-mitigate-harm/"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "nd-2026-10-25-cdc-is-ending-hiv-prevention-grants-to-community-g",
+   "desk": "news",
+   "title": "CDC is ending HIV prevention grants to community groups; KFF maps who loses, and the South loses most",
+   "created": "2026-10-25",
+   "route": "pitch",
+   "speed": "released 4 days ago",
+   "beat": "public health policy",
+   "angle": "KFF traced where CDC's community-organization HIV prevention money went in the last grant cycle and found Southern groups stand to lose the most. The story: which services (testing, PrEP outreach) disappear, and where.",
+   "why_now": "KFF analysis Oct 21, after reports that CDC is ending the funding.",
+   "is_it_real": "KFF's grant analysis is independent. That CDC is ending the funding comes from 'reports' and needs confirming with CDC or a funding notice.",
+   "primary_test": "CDC grant award data (USAspending/TAGGS) and any CDC notice ending the PS-series CBO funding; KFF's analysis",
+   "standout": false,
+   "standout_reason": "",
+   "needs_independent_test": false,
+   "other_peg": "",
+   "audience": "general",
+   "evidence_strength": "moderate",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "keys": [
+    "aw-the-future-of-cdc-hiv-prevention-funding-for-community-organizations"
+   ],
+   "items": [
+    {
+     "key": "aw-the-future-of-cdc-hiv-prevention-funding-for-community-organizations",
+     "kind": "analysis",
+     "interested_party": false,
+     "title": "The Future of CDC HIV Prevention Funding for Community Organizations",
+     "publisher": "kff-feed",
+     "url": "https://www.kff.org/other-health/the-future-of-cdc-hiv-prevention-funding-for-community-organizations/",
+     "released": "2026-10-21",
+     "date_basis": "source date",
+     "days_old": 4,
+     "source": "AgingWire",
+     "summary": "Following reports that CDC is ending Community Based Organization (CBO) funding for HIV prevention, this analysis provides a snapshot of where, to whom, and at what level these community grants were distributed in the past grant cycle. We find community organizations stand to lose significant amounts of funding, especially those located in the south."
+    }
+   ],
+   "evidence": [
+    "https://www.kff.org/other-health/the-future-of-cdc-hiv-prevention-funding-for-community-organizations/"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "nd-2026-10-25-hip-replacements-last-15-to-20-years-is-that-figur",
+   "desk": "news",
+   "title": "Hip replacements 'last 15 to 20 years': is that figure out of date, and is it making people wait too long?",
+   "created": "2026-10-25",
+   "route": "pitch",
+   "speed": "released 3 days ago",
+   "beat": "aging / body",
+   "angle": "The often-quoted 15 to 20 year lifespan for a hip implant shapes when people agree to surgery. Joint registry data can show how long modern implants really last and whether the figure pushes younger patients to put surgery off.",
+   "why_now": "No hard peg. This is an evergreen service question set off by a promotional release.",
+   "is_it_real": "The release is promotional; the source and its 'new research' are not identified. Registry data is the real test. Treat the release only as the prompt.",
+   "primary_test": "National joint registry survival data (American Joint Replacement Registry, UK National Joint Registry) and published registry meta-analyses of implant survival at 25 years",
+   "standout": false,
+   "standout_reason": "",
+   "needs_independent_test": false,
+   "other_peg": "",
+   "audience": "older adults",
+   "evidence_strength": "thin",
+   "confidence": "low",
+   "site": "",
+   "seed_keyword": "",
+   "keys": [
+    "press-25-years-one-hip-and-still-winning-races-what-an-80-year-old"
+   ],
+   "items": [
+    {
+     "key": "press-25-years-one-hip-and-still-winning-races-what-an-80-year-old",
+     "kind": "press_release",
+     "interested_party": true,
+     "title": "25 Years, One Hip, and Still Winning Races: What an 80-Year-Old Runner Reveals About Hip Replacement Longevity",
+     "publisher": "PR Newswire",
+     "url": "https://www.prnewswire.com/news-releases/25-years-one-hip-and-still-winning-races-what-an-80-year-old-runner-reveals-about-how-long-hip-replacements-really-last-302917130.html",
+     "released": "2026-10-22",
+     "date_basis": "within 1 day(s) of the digest run",
+     "days_old": 3,
+     "source": "news digest",
+     "summary": "New research suggests modern hip implants last considerably longer than the commonly cited 15-to-20-year figure, a counterintuitive finding for patients weighing surgery earlier in life."
+    }
+   ],
+   "evidence": [
+    "https://www.prnewswire.com/news-releases/25-years-one-hip-and-still-winning-races-what-an-80-year-old-runner-reveals-about-how-long-hip-replacements-really-last-302917130.html"
+   ],
+   "term_details": [],
+   "status": "routed"
+  }
+ ],
+ "dropped": {
+  "rule": 1,
+  "too-thin": 7,
+  "no-reader-stake": 1,
+  "already-covered": 1,
+  "corporate-only": 14,
+  "off-beat": 9,
+  "watch": 3
+ }
+}
