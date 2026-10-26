@@ -5,6 +5,7 @@
   python3 -m trend_desk.mac.builder --only ID  build one idea (testing)
   python3 -m trend_desk.mac.builder --dry-run  say what would be built, build nothing
   python3 -m trend_desk.mac.builder --desk research   the same, for Research Desk's handoffs
+  python3 -m trend_desk.mac.builder --desk news       the same, for News Desk's (news/README.md)
 
 Research Desk (trend_desk/research/) shares this builder. Its ideas carry "desk": "research" and
 PMIDs; a research pitch goes to ~/Pitches/state/research-handoffs.json instead, and its message
@@ -40,10 +41,6 @@ LOCK = c.STATE / "builder.lock"
 DESK = c.DESKS["trend"]  # set from --desk in main()
 MAX_ATTEMPTS = 3
 LOOKBACK_DAYS = 10
-# The one-time backlog review (research/backlog.py) hands over dozens of ideas at once. They build at
-# this many a day per route so the daily ideas keep moving and SerpAPI (about 8 searches a brief)
-# isn't drained. A pace, not a quota: everything kept gets built eventually.
-BACKLOG_PACE = {"tfm": 4, "brief": 3}
 ROUTE_NAMES = {"pitch": "Pitch idea", "tfm": "Female Model post", "roundup": "Roundup item", "brief": "Site brief"}
 
 
@@ -102,9 +99,37 @@ def build_research_pitch(idea: dict) -> dict:
                     "follows the next weekday run", "where": "~/Pitches/state/research-handoffs.json"}
 
 
+def build_news_pitch(idea: dict) -> dict:
+    path = c.PITCHES / "state" / "news-handoffs.json"
+    if not c.pull(c.PITCHES):
+        raise RuntimeError("the Pitches repo isn't on main or couldn't update")
+    items = c.read_json(path, [])
+    if not any(x.get("news_desk_id") == idea["id"] for x in items):
+        items.append({
+            "slug": idea["id"], "news_desk_id": idea["id"], "headline": idea["title"],
+            "angle": idea["angle"], "why_now": idea["why_now"], "is_it_real": idea["is_it_real"],
+            "primary_test": idea.get("primary_test", ""), "standout": bool(idea.get("standout")),
+            "standout_reason": idea.get("standout_reason", ""),
+            "needs_independent_test": bool(idea.get("needs_independent_test")),
+            "evidence_strength": idea.get("evidence_strength", ""), "other_peg": idea.get("other_peg", ""),
+            "audience": idea.get("audience", ""), "beat": idea["beat"], "date": idea["created"],
+            "items": [{k: x.get(k) for k in ("key", "kind", "interested_party", "title", "publisher", "url",
+                                             "released", "date_basis", "days_old")}
+                      for x in idea.get("items", [])],
+        })
+        c.write_json(path, items)
+        if not c.commit_push(["state/news-handoffs.json"], f"News Desk handoff: {idea['title'][:60]}",
+                             cwd=c.PITCHES):
+            raise RuntimeError("couldn't push the handoff to the Pitches repo")
+    return {"what": "handed to the pitch agents; if it ranks as strong, a paused Mailshake draft "
+                    "follows the next weekday run", "where": "~/Pitches/state/news-handoffs.json"}
+
+
 def build_pitch(idea: dict) -> dict:
     if idea.get("desk") == "research":
         return build_research_pitch(idea)
+    if idea.get("desk") == "news":
+        return build_news_pitch(idea)
     path = c.PITCHES / "state" / "trend-handoffs.json"
     if not c.pull(c.PITCHES):
         raise RuntimeError("the Pitches repo isn't on main or couldn't update")
@@ -130,6 +155,10 @@ TFM_INTRO = {
     "research": ("Research Desk found new peer-reviewed research that tests a claim people repeat, which "
                  "could be a Test issue. The studies listed with the idea are the starting receipts: read each "
                  "one's abstract on PubMed first, and report its design, sample and caveats plainly"),
+    "news": ("News Desk found a claim in a press release or a government notice that people are likely to "
+             "repeat, which could be a Test issue. The release is the claim, not the evidence: open each linked "
+             "item first, then find the primary source that tests it (the trial registry entry, the filing, the "
+             "agency data or the study) and report what it actually shows"),
 }
 
 TFM_PROMPT = """You are writing an outline, not a post, for The Female Model, Meagan Morris's newsletter
@@ -182,8 +211,12 @@ def build_tfm(idea: dict) -> dict:
     md = work / "outline.md"
     view = {k: idea[k] for k in ("title", "angle", "why_now", "is_it_real", "evidence", "speed", "beat")}
     research = idea.get("desk") == "research"
+    news = idea.get("desk") == "news"
     if research:
         view.update(studies=idea.get("studies", []), evidence_strength=idea.get("evidence_strength", ""))
+    elif news:
+        view.update(items=idea.get("items", []), primary_test=idea.get("primary_test", ""),
+                    evidence_strength=idea.get("evidence_strength", ""))
     else:
         view["terms"] = idea.get("term_details", [])
     banked = bool(idea.get("backlog"))
@@ -198,7 +231,8 @@ def build_tfm(idea: dict) -> dict:
                      f"{(c.now().date() + timedelta(days=7)).isoformat()}\n  with no post assigned and not in this list "
                      f"of slots Trend Desk already proposed: {'; '.join(taken)}.\n  That is the proposed slot. If you "
                      f"can't tell, say \"next open Wednesday\".")
-    prompt = TFM_PROMPT.format(intro=TFM_INTRO["research" if research else "trend"], desk_name=DESK["name"],
+    prompt = TFM_PROMPT.format(intro=TFM_INTRO["research" if research else "news" if news else "trend"],
+                               desk_name=DESK["name"],
                                vault=c.VAULT, desk=c.DESK, state=c.STATE, slot_rule=slot_rule, out=md,
                                idea=json.dumps(view, indent=1, ensure_ascii=False))
     out = c.claude(prompt, "Read,Write,Glob,Grep,WebSearch,WebFetch", cwd=work, timeout=2400, logname="tfm-outline")
@@ -224,11 +258,12 @@ def build_tfm(idea: dict) -> dict:
     slot = meta.get("proposed_slot") or "next open Wednesday"
     ticket = c.file_linear(
         "The Female Model", f"Write Female Model Post: {idea['title']}",
-        f"{DESK['name']} found this {'research' if research else 'trend'} and built an outline. "
+        f"{DESK['name']} found this {'research' if research else 'claim' if news else 'trend'} and built an outline. "
         f"Proposed slot: **{slot}** (move it freely).\n\n"
         f"- Outline: `{docx}`\n- Preliminary verdict: {meta.get('verdict', 'see outline')}\n"
         f"- Why now: {idea['why_now']}\n"
         + (f"- Studies: {', '.join(c.study_ref(s.get('pmid')) for s in idea.get('studies', []))}\n\n" if research
+           else f"- Items: {', '.join(x.get('url', '') for x in idea.get('items', []))}\n\n" if news
            else f"- Trend speed: {idea['speed']}\n\n")
         + f"Approve by writing it, or text the {DESK['name']} bot \"skip\" to drop it.")
     return {"what": f"outline ready, proposed for {slot}", "where": str(docx), "linear": ticket, "slot": slot,
@@ -246,6 +281,9 @@ def build_one(idea: dict, route: str, site: str) -> dict:
         if idea.get("desk") == "research":
             return {"what": "added to the Friday roundup's Research Desk section",
                     "where": "trend_desk/research/feeds/roundup.json"}
+        if idea.get("desk") == "news":
+            return {"what": "added to the Friday roundup's News Desk section",
+                    "where": "trend_desk/news/feeds/roundup.json"}
         return {"what": "added to the Friday roundup's Trend Desk section", "where": "trend_desk/feeds/roundup.json"}
     if route == "brief":
         from . import brief_room
@@ -303,12 +341,6 @@ def main() -> int:
             continue
         if rec.get("status") == "waiting" and rec.get("recheck", "") > c.now().date().isoformat():
             continue
-        if idea.get("backlog") and route in BACKLOG_PACE:
-            today = c.now().date().isoformat()
-            done_today = sum(1 for r in built.values() if r.get("backlog") and r.get("route") == route
-                             and str(r.get("built_at", "")).startswith(today))
-            if done_today >= BACKLOG_PACE[route]:
-                continue
         if args.dry_run:
             print(f"would build {route}{':' + site if site else ''}: {idea['title']}")
             continue
@@ -356,6 +388,10 @@ def main() -> int:
     if args.desk == "research":
         from ..research import tg as research_tg
         research_tg.send_or_hold(msg)
+        return 0
+    if args.desk == "news":
+        from ..news import tg as news_tg
+        news_tg.send_or_hold(msg)
         return 0
     try:
         tg.send(msg)

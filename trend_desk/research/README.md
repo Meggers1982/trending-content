@@ -94,10 +94,10 @@ hits the usage limit. Each batch is saved as it finishes.
 5. **Finish**: `handoff/backlog-<date>.json` (its ideas carry `backlog: true`), the ledger, the vault
    report `Research Desk Backlog Review Report.md`, a Linear read-it ticket, then the archive.
 
-The builder paces backlog ideas (`builder.BACKLOG_PACE`): 4 outlines and 3 briefs a day. Outlines
-are banked in `Research Desk Outlines/Backlog/` with no Wednesday and no ticket each. Pitches go to
-the pitch lane, where PLAYBOOK ranks at most two backlog entries a day and pattern pitches have no
-30-day clock.
+The builder builds every backlog idea, with no pacing ("as many outlines, pitches or briefs as
+necessary", Meagan, 2026-10-25). Each brief uses about 8 SerpAPI searches. Outlines are banked in
+`Research Desk Outlines/Backlog/` with no Wednesday and no ticket each. Pitches go to the pitch
+lane, where pattern pitches have no 30-day clock.
 
 **Archive.** The dashboard has an `archived` status (research-digest-dashboard 5f34749). Archived
 studies are hidden unless the status menu asks for them. `--archive` marks every digest's copy of

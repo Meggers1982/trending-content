@@ -32,12 +32,18 @@ DECISIONS = DESK / "feedback" / "decisions.json"
 # decisions, local state and Telegram bot. builder.py --desk research selects these.
 RESEARCH = DESK / "research"
 RESEARCH_STATE = Path.home() / ".local/state/research-desk"
+# News Desk (trend_desk/news/, Digest Desks MEA-1867): AgingWire and the news digest, same pattern.
+NEWS = DESK / "news"
+NEWS_STATE = Path.home() / ".local/state/news-desk"
 DESKS = {
     "trend": {"name": "Trend Desk", "handoff": DESK / "handoff", "holds": DESK / "holds.json",
               "decisions": DECISIONS, "last_list": STATE / "last_list.json"},
     "research": {"name": "Research Desk", "handoff": RESEARCH / "handoff", "holds": RESEARCH / "holds.json",
                  "decisions": RESEARCH / "feedback" / "decisions.json",
                  "last_list": RESEARCH_STATE / "last_list.json"},
+    "news": {"name": "News Desk", "handoff": NEWS / "handoff", "holds": NEWS / "holds.json",
+             "decisions": NEWS / "feedback" / "decisions.json",
+             "last_list": NEWS_STATE / "last_list.json"},
 }
 
 

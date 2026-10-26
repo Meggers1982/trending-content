@@ -287,6 +287,11 @@ def build(idea: dict, desk_name: str = "Trend Desk") -> dict:
                "place modifier the evidence supports). TermScope's keyword universe is often template filler, "
                "so it is a source, not a rule. Say why, and mark volume as unknown.")
     view = {k: idea.get(k) for k in ("title", "angle", "why_now", "is_it_real", "evidence", "speed")}
+    if idea.get("desk") == "news":
+        view.update(items=idea.get("items", []), primary_test=idea.get("primary_test", ""),
+                    note="This idea comes from a government notice, an agency release or an analysis, not a "
+                         "search trend. Use the linked primary documents as the page's core evidence; a company's "
+                         "release is a claim to attribute, never a fact.")
     if idea.get("desk") == "research":
         # Research Desk ideas start from studies: the brief's evidence section is built on them, and
         # the evidence checker verifies each against its PubMed abstract like any other source.
@@ -350,9 +355,10 @@ def build(idea: dict, desk_name: str = "Trend Desk") -> dict:
                f"traffic potential {pick['metrics'].get('traffic_potential')}") if pick else "Volume unknown (Ahrefs off)"
     ticket = c.file_linear(
         project, f"Write {profile['name']} Article: {final_kw}",
-        f"{desk_name} built this brief from {'new research' if idea.get('desk') == 'research' else 'a rising trend'}."
+        f"{desk_name} built this brief from "
+        f"{ {'research': 'new research', 'news': 'news items'}.get(idea.get('desk'), 'a rising trend')}."
         f"\n\n- Brief: `{docx}`\n- Focus keyword: **{final_kw}** ({metrics})\n"
-        f"- {'Research' if idea.get('desk') == 'research' else 'Trend'}: {idea['title']} ({idea.get('speed')})\n"
+        f"- { {'research': 'Research', 'news': 'News'}.get(idea.get('desk'), 'Trend')}: {idea['title']} ({idea.get('speed')})\n"
         + (f"- Studies: {', '.join(c.study_ref(x.get('pmid')) for x in idea.get('studies', []))}\n"
            if idea.get("desk") == "research" else "")
         + f"- Brief room: {rounds} round(s); see the decision log at the end of the brief\n\n"

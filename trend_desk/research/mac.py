@@ -20,7 +20,6 @@ import sys
 from datetime import datetime, timedelta
 
 from ..mac import common as c
-from ..mac.builder import BACKLOG_PACE
 from . import backlog, run, tg
 
 STATE = c.RESEARCH_STATE
@@ -59,9 +58,6 @@ def needs_build() -> bool:
     cutoff = (c.now().date() - timedelta(days=10)).isoformat()
     desk = c.DESKS["research"]
     overrides = c.idea_overrides(desk["decisions"])
-    today = c.now().date().isoformat()
-    paced = {r: sum(1 for b in built.values() if b.get("backlog") and b.get("route") == r
-                    and str(b.get("built_at", "")).startswith(today)) >= n for r, n in BACKLOG_PACE.items()}
     for path in desk["handoff"].glob("*.json"):
         if path.stem < cutoff:
             continue
@@ -76,8 +72,6 @@ def needs_build() -> bool:
                 continue
             if c.is_paused(idea["route"], idea.get("site", ""), desk["holds"]):
                 continue
-            if idea.get("backlog") and paced.get(idea["route"]):
-                continue  # today's share of the backlog is built; the rest waits for tomorrow
             return True
     return False
 
