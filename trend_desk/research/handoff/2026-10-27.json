@@ -1,0 +1,716 @@
+{
+ "date": "2026-10-27",
+ "ideas": [
+  {
+   "id": "rd-2026-10-27-for-women-with-endometriosis-and-infertility-going",
+   "desk": "research",
+   "title": "For women with endometriosis and infertility, going straight to IVF doubled live births compared with surgery first in a randomized trial",
+   "created": "2026-10-27",
+   "route": "pitch",
+   "speed": "online 3 days",
+   "beat": "women's health: reproductive",
+   "angle": "Surgery to remove endometriosis before trying to conceive is still a common first step. In this trial, women who went straight to IVF had a live birth 57% of the time, against 26% after surgery plus natural attempts. That raises a hard question about who should still be steered into the operating room, and what the surgery-first default costs women in time and risk.",
+   "why_now": "Published online 3 days ago in AJOG with no coverage found. Endometriosis diagnosis and treatment delays are a steady story in women's health outlets.",
+   "is_it_real": "This is a partially randomized patient-preference trial at three Italian tertiary centers. The summary's caveats wrongly call it single-center. It enrolled 130 women in total, and the randomized arm was under 100. The trial was stopped early at 130 of a planned 206 because IVF was doing better, and early stopping tends to inflate effect sizes. The relative risk is 2.20 with a wide interval (95% CI 1.08 to 4.50), so lead with the absolute rates: 57% vs 26%. The preference and combined cohorts pointed the same way. It applies only to women under 40 with ovarian or deep endometriosis seen on ultrasound, and pain outcomes, which often drive surgery, are not the point here. Pitch agents should confirm with the authors what 'up to three cycles' means for cost.",
+   "evidence_strength": "moderate",
+   "other_peg": "",
+   "audience": "general",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42925945"
+   ],
+   "studies": [
+    {
+     "pmid": "42925945",
+     "doi": "10.1016/j.ajog.2026.10.024",
+     "journal": "American Journal of Obstetrics and Gynecology",
+     "headline": "For women with endometriosis and infertility, IVF may be twice as likely to result in a live birth as surgery",
+     "pubdate": "2026 Oct 24",
+     "days_online": 3,
+     "date_verified": true,
+     "digests": [
+      "Conditions & Body"
+     ],
+     "score": 9,
+     "caveats": "small sample (N<100 in randomized cohort), single-center, short follow-up, stopped early before full enrollment, Italian tertiary centers may not generalize broadly, secondary analysis of combined cohorts",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (SERPAPI verified)",
+     "flags": [
+      "small_sample"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42925945/",
+    "https://doi.org/10.1016/j.ajog.2026.10.024"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "rd-2026-10-27-many-transgender-youth-who-died-by-suicide-had-alr",
+   "desk": "research",
+   "title": "Many transgender youth who died by suicide had already told a health worker they were at risk",
+   "created": "2026-10-27",
+   "route": "pitch",
+   "speed": "online 4 days",
+   "beat": "mental health / public health",
+   "angle": "In 19 years of national death records, transgender youth who died by suicide were more likely than matched peers to have disclosed suicidal intent to a healthcare worker beforehand. They also had more prior attempts and diagnoses. That makes this a missed-intervention story about what clinics do after the disclosure. Their methods also differed (fewer firearms, more hanging and poisoning), which changes what means-restriction advice looks like for this group.",
+   "why_now": "Online 4 days in LGBT Health, not covered. It lands amid continuing state and federal fights over care and crisis services for trans youth.",
+   "is_it_real": "This is a secondary analysis of the National Violent Death Reporting System, 2003 to 2021: 384 transgender decedents aged 10 to 24 against 1,119 matched non-transgender decedents. It is descriptive and observational, so the comparisons are odds, not causes. Trans identity is almost certainly undercounted in death records, which may bias who gets captured. The sample is 78% White, and the 19-year window spans big cultural and policy shifts. The 'nearly one in four disclosed' figure comes from the digest hook, so confirm it against the paper before it headlines. This needs careful, safe-messaging-compliant handling.",
+   "evidence_strength": "moderate",
+   "other_peg": "The 988 Lifeline ended its specialized LGBTQ+ youth option in July 2025; confirm current status and any 2026 replacement services.",
+   "audience": "general",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42924499"
+   ],
+   "studies": [
+    {
+     "pmid": "42924499",
+     "doi": "10.1177/23258292261498058",
+     "journal": "LGBT Health",
+     "headline": "Transgender Youth Who Die by Suicide Use Different Methods Than Their Peers — And More Often Had Told a Doctor They Were at Risk",
+     "pubdate": "2026 Oct 23",
+     "days_online": 4,
+     "date_verified": true,
+     "digests": [
+      "Children's & Pediatric Health"
+     ],
+     "score": 8,
+     "caveats": "secondary analysis, observational design, potential underascertainment of transgender identity in mortality data, predominantly White sample (78.3%), long data window (2003–2021) spans major policy and cultural shifts",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (SERPAPI verified)",
+     "flags": [
+      "observational"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42924499/",
+    "https://doi.org/10.1177/23258292261498058"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "rd-2026-10-27-shoppers-will-let-an-ai-agent-buy-for-them-but-onl",
+   "desk": "research",
+   "title": "Shoppers will let an AI agent buy for them, but only if it shows its limits and lets them grab back control",
+   "created": "2026-10-27",
+   "route": "pitch",
+   "speed": "online 10 days (unverified)",
+   "beat": "marketing and AI / consumer tech",
+   "angle": "As retailers and AI companies push 'agentic checkout', three new experiment sets agree that the pitch of full autonomy is not what wins people over. Delegation rose when the agent showed it would stick to the shopper's goals and stay inside set boundaries. For products that feel threatening, autonomy was acceptable only with a visible override. People also resisted an AI that 'decides for you' on values-framed purchases unless it explained itself.",
+   "why_now": "Holiday 2026 is shaping up as the first mainstream season for AI agents that can complete purchases; confirm the current state of OpenAI, Google and Amazon agentic checkout. All three papers came out online 6 to 14 days ago.",
+   "is_it_real": "All three are experiments, mostly scenario-based and online. W7222787541 has 4,680 quantitative participants, and its 'authorization' happened inside an experimental shopping task, not with real payments, deliveries or returns. Its mediation evidence is correlational, its interventions were bundled so no single cue can be credited, and its online date is unverified, so pitch agents must confirm it. W7223130166 reports behavioral-ish measures (choice, test-drive decisions, willingness to pay), but all inside the study, with sample size and country not given. W7221585809 measured intentions and willingness to pay only and was flagged for subgroup findings, so it supports the story rather than leading it. Taken together, the studies point the same way about stated trust, not observed buying.",
+   "evidence_strength": "moderate",
+   "other_peg": "Holiday shopping season with AI agents that can check out on the shopper's behalf (confirm which platforms are live).",
+   "audience": "trade",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "W7222787541",
+    "W7223130166",
+    "W7221585809"
+   ],
+   "studies": [
+    {
+     "pmid": "W7222787541",
+     "doi": "10.1016/j.jretconser.2026.105174",
+     "journal": "Journal of Retailing and Consumer Services",
+     "headline": "Shoppers Will Hand the Credit Card to an AI Agent — If It Can Prove It Understands Them",
+     "pubdate": "2026 Oct 17",
+     "days_online": 10,
+     "date_verified": false,
+     "digests": [
+      "Marketing research: ai & marketing technology"
+     ],
+     "score": 9.0,
+     "caveats": "Authorization was measured in an experimental shopping task, not verified commercial purchases with real payments, delivery, returns or repeat use; the authors explicitly flag this limit and note the mediation evidence is correlational. Effects of \"bundled\" interventions cannot be attributed to any single cue.",
+     "fact_check_note": "✅ Accurate: Study count, 4,680 quantitative participants, 210 qualitative respondents, the bundled interventions, the expertise-dependent assortment finding and the authors' own limits on authorization vs. verified purchases are all faithfully represented.",
+     "coverage": "No coverage found",
+     "flags": [],
+     "openalex": true,
+     "evidence_type": "experiments"
+    },
+    {
+     "pmid": "W7223130166",
+     "doi": "10.1002/mar.70283",
+     "journal": "Psychology and Marketing",
+     "headline": "Consumers Will Hand the Wheel to AI — But Only If They Can Grab It Back",
+     "pubdate": "2026 Oct 21",
+     "days_online": 6,
+     "date_verified": true,
+     "digests": [
+      "Marketing research: ai & marketing technology"
+     ],
+     "score": 8.2,
+     "caveats": "Experimental studies likely relying on scenario-based stimuli and online participants; sample sizes and nationality not specified in the abstract; behavioral measures such as test-driving decisions were made inside the study context rather than in a real showroom.",
+     "fact_check_note": "⚠️ Minor issues: Study count (one qualitative plus three experiments), the threat-contingent pattern and the extended outcome measures match the abstract; the conditional is slightly harder-edged than the reported interaction.",
+     "coverage": "No coverage found",
+     "flags": [],
+     "openalex": true,
+     "evidence_type": "experiments"
+    },
+    {
+     "pmid": "W7221585809",
+     "doi": "10.1002/cb.70253",
+     "journal": "Journal of Consumer Behaviour",
+     "headline": "Whether an AI recommender should decide for you or with you depends on how the green product is pitched",
+     "pubdate": "2026 Oct 13",
+     "days_online": 14,
+     "date_verified": true,
+     "digests": [
+      "Marketing research: ai & marketing technology"
+     ],
+     "score": 9.0,
+     "caveats": "All four studies were scenario-based online experiments measuring intention, preference and willingness to pay rather than actual purchases; sample composition and country not specified in the abstract.",
+     "fact_check_note": "✅ Accurate: Four scenario experiments, N=1114, the substitute/augmented by utility/sustainability congruence effect, sense-of-control mediation and the post hoc explanation remedy all match the abstract, and the caveats correctly note intention-based outcomes.",
+     "coverage": "No coverage found",
+     "flags": [
+      "subgroup"
+     ],
+     "openalex": true,
+     "evidence_type": "experiments"
+    }
+   ],
+   "evidence": [
+    "https://openalex.org/W7222787541",
+    "https://doi.org/10.1016/j.jretconser.2026.105174",
+    "https://openalex.org/W7223130166",
+    "https://doi.org/10.1002/mar.70283",
+    "https://openalex.org/W7221585809",
+    "https://doi.org/10.1002/cb.70253"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "rd-2026-10-27-personalized-daily-pep-talk-texts-lifted-retail-sa",
+   "desk": "research",
+   "title": "Personalized daily pep-talk texts lifted retail sales, and made workers stop looking at their numbers",
+   "created": "2026-10-27",
+   "route": "pitch",
+   "speed": "online 8 days",
+   "beat": "work / AI at work",
+   "angle": "Companies are automating personalized goal nudges to frontline staff through CRM and messaging tools. A 100-store field experiment found the texts worked, especially for the weakest performers. It also found an 'ostrich effect': motivated workers avoided checking their within-day progress, which can drag performance back down. It's a story about the hidden side effects of automated motivation.",
+   "why_now": "Online 8 days in Marketing Science, no coverage. Automated, AI-written employee nudges are spreading.",
+   "is_it_real": "A real field experiment with real sales, which is rare for this kind of study. It is one retailer's store network in Sweden over a fairly short period. The information avoidance is inferred from how often agents checked their monitoring tools, not from asking them why. The texts were written from each agent's own past performance; whether AI wrote them is a framing for the pitch, not something the study tested, so don't overclaim.",
+   "evidence_strength": "moderate",
+   "other_peg": "",
+   "audience": "professionals",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "W7222957362"
+   ],
+   "studies": [
+    {
+     "pmid": "W7222957362",
+     "doi": "10.1287/mksc.2024.1051",
+     "journal": "Marketing Science",
+     "headline": "Daily motivational texts lifted sales — and made agents stop checking their numbers",
+     "pubdate": "2026 Oct 19",
+     "days_online": 8,
+     "date_verified": true,
+     "digests": [
+      "Marketing research: ai & marketing technology"
+     ],
+     "score": 9.5,
+     "caveats": "Single country and a single retail partner's store network; the field setting means the mechanism (information avoidance) is inferred from monitoring behavior rather than directly observed reasoning; relatively short time horizon.",
+     "fact_check_note": "✅ Accurate: Design, setting (100 stores, Sweden), direction of effects and the ostrich-effect mechanism all match the abstract; caveats are appropriately hedged.",
+     "coverage": "No coverage found",
+     "flags": [
+      "single_country"
+     ],
+     "openalex": true,
+     "evidence_type": "field experiment"
+    }
+   ],
+   "evidence": [
+    "https://openalex.org/W7222957362",
+    "https://doi.org/10.1287/mksc.2024.1051"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "rd-2026-10-27-signing-up-for-dashpass-or-postmates-unlimited-was",
+   "desk": "research",
+   "title": "Signing up for DashPass or Postmates Unlimited was linked to nearly double the spending on that app, without cutting what people spent elsewhere",
+   "created": "2026-10-27",
+   "route": "roundup",
+   "speed": "online 9 days",
+   "beat": "consumer money",
+   "angle": "The delivery membership isn't so much a discount as a habit machine. Spending on the subscribed app rose about 90% with no average drop at rival apps, though transaction data can only show a link.",
+   "why_now": "Online 9 days in the Journal of Marketing Research, and the holiday delivery-subscription promos are coming.",
+   "is_it_real": "Individual-level transaction data analyzed with a matched difference-in-differences design. That reduces, but cannot remove, the bias that heavy orderers are the ones who subscribe. The 90.4% figure is for the combined data, not Postmates alone. The data come from an early, partly pre-COVID platform era. Don't promise readers they'll keep spending more after cancelling; the fact-check flagged that as an overreach.",
+   "evidence_strength": "moderate",
+   "other_peg": "",
+   "audience": "general",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "W7222938569"
+   ],
+   "studies": [
+    {
+     "pmid": "W7222938569",
+     "doi": "10.1177/00222437261502330",
+     "journal": "Journal of Marketing Research",
+     "headline": "Delivery subscriptions nearly double spending — and sometimes grow the whole category",
+     "pubdate": "2026 Oct 18",
+     "days_online": 9,
+     "date_verified": true,
+     "digests": [
+      "Marketing research: pricing & promotions"
+     ],
+     "score": 9.0,
+     "caveats": "Observational transaction data from two U.S. platforms in one category; difference-in-differences with matching reduces but cannot fully eliminate selection into subscribing; effects are associations, and the pre-COVID/early-platform era may not generalize to today's market.",
+     "fact_check_note": "⚠️ Minor issues: Core numbers and segment split are right; the 90.4% figure is attributed to the combined data rather than Postmates Unlimited specifically, the DashPass nuance is dropped, and the consumer angle turns an association into a personal prediction.",
+     "coverage": "No coverage found",
+     "flags": [
+      "observational"
+     ],
+     "openalex": true,
+     "evidence_type": "field experiment"
+    }
+   ],
+   "evidence": [
+    "https://openalex.org/W7222938569",
+    "https://doi.org/10.1177/00222437261502330"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "rd-2026-10-27-shoppers-who-couldn-t-use-search-filters-browsed-w",
+   "desk": "research",
+   "title": "Shoppers who couldn't use search filters browsed wider and picked pricier headphones",
+   "created": "2026-10-27",
+   "route": "roundup",
+   "speed": "online 6 days",
+   "beat": "consumer money / shopping",
+   "angle": "Filters don't just reveal what you want, they shape it. Shoppers on a site with filters restricted explored more and ended up paying more and choosing more varied products. That's a quick, counterintuitive line about how online store design steers your basket.",
+   "why_now": "Online 6 days in Marketing Science, ahead of holiday online shopping.",
+   "is_it_real": "A randomized, incentive-aligned experiment with 1,200 online panelists on a store the researchers built. It covered one product category (wireless headphones) in a single session. It's a good lab-to-life hint, not proof that real retailers' filters cost you money.",
+   "evidence_strength": "moderate",
+   "other_peg": "",
+   "audience": "general",
+   "confidence": "low",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "W7223129134"
+   ],
+   "studies": [
+    {
+     "pmid": "W7223129134",
+     "doi": "10.1287/mksc.2025.0261",
+     "journal": "Marketing Science",
+     "headline": "Take away the filters and shoppers buy pricier, more varied products",
+     "pubdate": "2026 Oct 21",
+     "days_online": 6,
+     "date_verified": true,
+     "digests": [
+      "Marketing research: pricing & promotions"
+     ],
+     "score": 9.3,
+     "caveats": "Online panel participants on a researcher-built platform, single product category (headphones), single shopping session; incentive-aligned but not a real retail environment.",
+     "fact_check_note": "✅ Accurate: Design, N, outcomes and mediation framing all match the abstract; caveats correctly flag the online-panel, single-category setting.",
+     "coverage": "No coverage found",
+     "flags": [],
+     "openalex": true,
+     "evidence_type": "experiments"
+    }
+   ],
+   "evidence": [
+    "https://openalex.org/W7223129134",
+    "https://doi.org/10.1287/mksc.2025.0261"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "rd-2026-10-27-the-chatbot-that-gushes-great-question-over-your-r",
+   "desk": "research",
+   "title": "The chatbot that gushes 'Great question!' over your refund status is doing it wrong, and friendlier medical intake bots don't get people to open up about embarrassing problems",
+   "created": "2026-10-27",
+   "route": "roundup",
+   "speed": "online 12 days",
+   "beat": "AI and consumer tech / health AI",
+   "angle": "Two new experiment sets say warmth and personalization from a bot help only in some situations. Cheerful tone helped on taste-based tasks but hurt on factual ones. Personalized pre-visit medical chatbots raised willingness to disclose only for low-stigma conditions.",
+   "why_now": "Both online within the last 12 days. Brands and health systems are rolling out chatbots with a single 'friendly' voice.",
+   "is_it_real": "Both are scenario experiments measuring satisfaction or stated willingness to disclose, not real conversations. The tone study used three experiments with 587 people plus Weibo posts, in a Chinese context. The health-bot study's sample sizes and country aren't given, and its confirming field survey is cross-sectional. Keep it in a clause: 'in scenario experiments'.",
+   "evidence_strength": "thin",
+   "other_peg": "",
+   "audience": "general",
+   "confidence": "low",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "W7221784971",
+    "W7223240864"
+   ],
+   "studies": [
+    {
+     "pmid": "W7221784971",
+     "doi": "10.1108/ejm-07-2025-0569",
+     "journal": "European Journal of Marketing",
+     "headline": "When should a chatbot sound cheerful? Only when the task is subjective",
+     "pubdate": "2026 Oct 15",
+     "days_online": 12,
+     "date_verified": true,
+     "digests": [
+      "Marketing research: ai & marketing technology"
+     ],
+     "score": 9.2,
+     "caveats": "Scenario experiments rather than real service encounters; 587 participants across three studies means modest cell sizes; Chinese context and commercial text-based service only; satisfaction was the sole outcome, with no repurchase or word-of-mouth measures.",
+     "fact_check_note": "✅ Accurate: Four studies (Weibo secondary data plus three scenario experiments, N=587), the task-by-emotion interaction and the dual mind-perception pathways are reported correctly; caveats mirror the abstract's own stated limitations.",
+     "coverage": "No coverage found",
+     "flags": [],
+     "openalex": true,
+     "evidence_type": "experiments"
+    },
+    {
+     "pmid": "W7223240864",
+     "doi": "10.1108/apjml-01-2026-0238",
+     "journal": "Asia Pacific Journal of Marketing and Logistics",
+     "headline": "Personalized health chatbots get patients to open up — unless the condition is embarrassing",
+     "pubdate": "2026 Oct 23",
+     "days_online": 4,
+     "date_verified": true,
+     "digests": [
+      "Marketing research: ai & marketing technology"
+     ],
+     "score": 8.7,
+     "caveats": "Scenario experiments with stated disclosure intentions rather than observed disclosure; the confirmatory study is a cross-sectional survey that cannot establish causation; sample sizes and country not specified in the abstract.",
+     "fact_check_note": "✅ Accurate: Three scenario experiments plus a field survey, the AI interactive trust mediator and the disease-sensitivity boundary condition are all represented accurately, including the caveat that disclosure was an intention.",
+     "coverage": "No coverage found",
+     "flags": [],
+     "openalex": true,
+     "evidence_type": "experiments"
+    }
+   ],
+   "evidence": [
+    "https://openalex.org/W7221784971",
+    "https://doi.org/10.1108/ejm-07-2025-0569",
+    "https://openalex.org/W7223240864",
+    "https://doi.org/10.1108/apjml-01-2026-0238"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "rd-2026-10-27-people-buy-for-their-pets-the-way-they-buy-for-the",
+   "desk": "research",
+   "title": "People buy for their pets the way they buy for themselves: wellness shoppers get the healthy kibble, treat buyers get the treats",
+   "created": "2026-10-27",
+   "route": "roundup",
+   "speed": "online 12 days",
+   "beat": "shopping / pets",
+   "angle": "Nearly 876,000 supermarket baskets show 'pet-owner synchrony': shoppers who buy healthy or indulgent products for themselves tend to buy the matching kind for their pets on the same trip. It's a fun, relatable one-liner.",
+   "why_now": "Online 12 days in the Journal of the Academy of Marketing Science; pet spending is a perennial consumer story.",
+   "is_it_real": "Scanner data from one regional US supermarket chain (875,853 baskets). Pet ownership is inferred from purchases, and items appearing in the same basket is correlation, not evidence of a psychological motive. It works as a quirky stat, not a finding about why.",
+   "evidence_strength": "moderate",
+   "other_peg": "",
+   "audience": "general",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "W7221947266"
+   ],
+   "studies": [
+    {
+     "pmid": "W7221947266",
+     "doi": "10.1007/s11747-026-01214-9",
+     "journal": "Journal of the Academy of Marketing Science",
+     "headline": "What 876,000 shopping baskets reveal: people buy for their pets the way they buy for themselves",
+     "pubdate": "2026 Oct 15",
+     "days_online": 12,
+     "date_verified": true,
+     "digests": [
+      "Marketing research: pricing & promotions"
+     ],
+     "score": 8.5,
+     "caveats": "One regional supermarket chain in a single country; basket co-occurrence is correlational and pet ownership is inferred from purchases rather than observed; no causal test of the proposed psychological mechanism.",
+     "fact_check_note": "⚠️ Minor issues: Basket counts, moderators and additional factors match; the chain's country is not stated in the abstract.",
+     "coverage": "No coverage found",
+     "flags": [
+      "single_country"
+     ],
+     "openalex": true,
+     "evidence_type": "behavioral data"
+    }
+   ],
+   "evidence": [
+    "https://openalex.org/W7221947266",
+    "https://doi.org/10.1007/s11747-026-01214-9"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "rd-2026-10-27-start-the-workday-thinking-about-what-went-right-i",
+   "desk": "research",
+   "title": "Start the workday thinking about what went right: in a 10-day randomized study, replaying errors made workers less willing to try new things",
+   "created": "2026-10-27",
+   "route": "roundup",
+   "speed": "online 55 days",
+   "beat": "work",
+   "angle": "This complicates the 'learn from your mistakes' journaling advice. Morning reflection on errors cut exploration through lower attentiveness and more shame, and status-driven employees were hit hardest. Reflecting on successes did the opposite.",
+   "why_now": "An evergreen productivity-advice counterpoint; online 55 days, so it suits the roundup, not a pitch.",
+   "is_it_real": "A randomized experience-sampling field experiment, but small: 102 full-time employees over 10 workdays. Behavior was self-reported each day, and long-term learning wasn't measured. The country isn't stated in the abstract.",
+   "evidence_strength": "moderate",
+   "other_peg": "",
+   "audience": "general",
+   "confidence": "low",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "W7207539887"
+   ],
+   "studies": [
+    {
+     "pmid": "W7207539887",
+     "doi": "10.1111/apps.70137",
+     "journal": "Applied Psychology",
+     "headline": "Don't start your day replaying yesterday's mistakes",
+     "pubdate": "2026 Sep 2",
+     "days_online": 55,
+     "date_verified": true,
+     "digests": [
+      "Career psychology: "
+     ],
+     "score": 8.7,
+     "caveats": "Single study with 102 employees over 10 workdays; outcomes are self-reported daily behavior; short time horizon means long-term learning effects are unknown; sample and national context not fully specified in the abstract.",
+     "fact_check_note": "⚠️ Minor issues: Design (randomized 10-day ESM field experiment, N=102), conditions and mechanisms all match; only the moderator's precise path is slightly blurred.",
+     "coverage": "No coverage found",
+     "flags": [],
+     "openalex": true,
+     "evidence_type": "field experiment"
+    }
+   ],
+   "evidence": [
+    "https://openalex.org/W7207539887",
+    "https://doi.org/10.1111/apps.70137"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "rd-2026-10-27-when-a-hospital-asks-a-court-for-guardianship-over",
+   "desk": "research",
+   "title": "When a hospital asks a court for guardianship over an older patient, it almost always gets it, and poorer patients get strangers and fuller control",
+   "created": "2026-10-27",
+   "route": "roundup",
+   "speed": "online 1 days",
+   "beat": "aging / elder rights",
+   "angle": "Courts granted 99% of hospital-filed guardianship petitions that were heard. Medicaid recipients were less likely to get a guardian who knew them, and less-educated patients were more often put under full rather than limited guardianship. It's a sharp number on a process with little oversight.",
+   "why_now": "Online 1 day in JAGS; guardianship and conservatorship abuse remains a live public concern.",
+   "is_it_real": "A retrospective review of 236 petitions filed by one large academic health system in one county's probate court, 2019 to 2024. The subgroups are small, and the code blocks a pitch because the findings rest on subgroups. The 99% grant rate is descriptive and solid for this one system, but the Medicaid and education links are associations from one place. Say 'at one health system'.",
+   "evidence_strength": "moderate",
+   "other_peg": "",
+   "audience": "older adults",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42929333"
+   ],
+   "studies": [
+    {
+     "pmid": "42929333",
+     "doi": "10.1111/jgs.70782",
+     "journal": "Journal of the American Geriatrics Society",
+     "headline": "Hospitals filing for guardianship over older patients are nearly always granted it — and poverty shapes who gets the most restrictive control",
+     "pubdate": "2026 Oct 26",
+     "days_online": 1,
+     "date_verified": true,
+     "digests": [
+      "Elderly & Geriatric",
+      "Senior Living — New This Week"
+     ],
+     "score": 9,
+     "caveats": "small sample (N<100 per subgroup), observational design, single-center, secondary analysis",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (SERPAPI verified)",
+     "flags": [
+      "subgroup",
+      "small_sample",
+      "observational"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42929333/",
+    "https://doi.org/10.1111/jgs.70782"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "rd-2026-10-27-every-hypoallergenic-vulvar-soothing-product-in-a",
+   "desk": "research",
+   "title": "Every 'hypoallergenic' vulvar soothing product in a 65-product US check contained a known skin allergen",
+   "created": "2026-10-27",
+   "route": "roundup",
+   "speed": "online 7 days",
+   "beat": "women's health / consumer products",
+   "angle": "'Natural', 'hypoallergenic' and 'fragrance-free' labels didn't predict a lower allergen load. 78% of products had at least one allergen, and 28% of 'fragrance-free' ones had botanical scent allergens. Plain ointments fared best, which gives readers a practical takeaway.",
+   "why_now": "Online 7 days in Menopause, and 'clean' and 'gentle' labeling claims are under constant scrutiny.",
+   "is_it_real": "A cross-sectional ingredient-list analysis of 65 over-the-counter products checked against an 80-allergen patch-test series. Containing an allergen is not the same as causing reactions, and no patients were tested. One author reports institutional funding from Galderma. It overlaps the existing menopause-site brief on vulvar itching (42817742) and the earlier 'gentle ingredients' pitch, so keep this to a single roundup line, and the brief can cite it.",
+   "evidence_strength": "moderate",
+   "other_peg": "",
+   "audience": "both",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42899814"
+   ],
+   "studies": [
+    {
+     "pmid": "42899814",
+     "doi": "10.1097/GME.0000000000002935",
+     "journal": "Menopause (New York, N.Y.)",
+     "headline": "'Natural' and 'hypoallergenic' vulvar products almost always contain allergens — and the label tells you nothing",
+     "pubdate": "2026 Oct 20",
+     "days_online": 7,
+     "date_verified": true,
+     "digests": [
+      "Conditions & Body"
+     ],
+     "score": 8,
+     "caveats": "small sample (N<100), observational design, cross-sectional, industry funding [Galderma — institutional funding to one author]",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (SERPAPI verified)",
+     "flags": [
+      "small_sample",
+      "observational"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42899814/",
+    "https://doi.org/10.1097/GME.0000000000002935"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "rd-2026-10-27-fewer-than-half-of-older-americans-with-probable-d",
+   "desk": "research",
+   "title": "Fewer than half of older Americans with probable dementia had a diagnosis in their Medicare records, and Medicare Advantage lagged behind Traditional Medicare",
+   "created": "2026-10-27",
+   "route": "roundup",
+   "speed": "online 6 days",
+   "beat": "aging / Medicare",
+   "angle": "In the latest years studied (2015 to 2019), adjusted detection was 48.8% in Traditional Medicare vs 39.2% in Medicare Advantage. Detection of early-stage dementia, when a diagnosis matters most, stayed flat. A useful line with a clock: the annual wellness visit includes a cognitive check.",
+   "why_now": "Medicare open enrollment runs Oct 15 to Dec 7, when people are choosing between Traditional and Advantage plans.",
+   "is_it_real": "A Yale analysis linking Health and Retirement Study surveys to Medicare claims for 3,144 people with probable dementia. Dementia status comes from a survey algorithm (Langa-Weir), not a clinical exam, and claims can miss diagnoses that were made but never coded. It can't say why the plan types differ. It overlaps the 10-25 pitch on early dementia signs being written off, so if that pitch lands, fold this number into it instead.",
+   "evidence_strength": "moderate",
+   "other_peg": "Medicare open enrollment, Oct 15 to Dec 7, 2026",
+   "audience": "older adults",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42923120"
+   ],
+   "studies": [
+    {
+     "pmid": "42923120",
+     "doi": "10.1002/dad2.70503",
+     "journal": "Alzheimers Dement (Amst)",
+     "headline": "Fewer than half of older adults with dementia ever get a diagnosis in their Medicare records",
+     "pubdate": "2026 Oct 21",
+     "days_online": 6,
+     "date_verified": true,
+     "digests": [
+      "Senior Living — New This Week"
+     ],
+     "score": 7,
+     "caveats": "Observational cohort study — cannot establish why detection differs by plan type; dementia status was determined by a survey-based algorithm (Langa-Weir), not clinical exam; claims data may miss diagnoses made but not coded.",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (Google News checked)",
+     "flags": [
+      "observational"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42923120/",
+    "https://doi.org/10.1002/dad2.70503"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "rd-2026-10-27-at-one-croatian-hospital-the-share-of-community-c",
+   "desk": "research",
+   "title": "At one Croatian hospital, the share of community C. diff cases that followed a dentist's antibiotic more than doubled in nine years, often clindamycin given without a penicillin allergy",
+   "created": "2026-10-27",
+   "route": "roundup",
+   "speed": "online 7 days",
+   "beat": "public health / antibiotics",
+   "angle": "A useful prompt for readers: ask whether you really need an antibiotic for dental work, and why you're getting clindamycin if you aren't allergic to penicillin. Clindamycin is one of the antibiotics most tied to C. diff.",
+   "why_now": "Online 7 days in Infection; antibiotic stewardship in dentistry is a recurring theme.",
+   "is_it_real": "A retrospective study of 666 adults with community-acquired C. diff after outpatient antibiotics at one Croatian infectious-disease hospital, 2011 to 2019. The dental share rose from 13.1% to 31.1% (28.5% overall). The digest headline's 'nearly 1 in 3 dangerous gut infections' overstates it: these are only post-antibiotic community cases at one center, and Croatian prescribing may differ from US practice. Use 'at one hospital in Croatia'.",
+   "evidence_strength": "moderate",
+   "other_peg": "",
+   "audience": "both",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42900457"
+   ],
+   "studies": [
+    {
+     "pmid": "42900457",
+     "doi": "10.1007/s15010-026-03028-x",
+     "journal": "Infection",
+     "headline": "Nearly 1 in 3 Dangerous Gut Infections Are Now Linked to Dental Antibiotics — and It's Getting Worse",
+     "pubdate": "2026 Oct 20",
+     "days_online": 7,
+     "date_verified": true,
+     "digests": [
+      "Conditions & Body"
+     ],
+     "score": 6,
+     "caveats": "single-center, observational design, single-region (Croatia — prescribing patterns may differ from US/UK dental practice), no sex-disaggregated data, retrospective design",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (SERPAPI verified)",
+     "flags": [
+      "observational"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42900457/",
+    "https://doi.org/10.1007/s15010-026-03028-x"
+   ],
+   "term_details": [],
+   "status": "routed"
+  }
+ ],
+ "dropped": {
+  "too-thin": 16,
+  "specialist-only": 10,
+  "duplicate": 4,
+  "caveats-undo-it": 5,
+  "watch": 6,
+  "already-covered": 1,
+  "off-beat": 1
+ }
+}

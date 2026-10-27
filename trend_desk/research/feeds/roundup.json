@@ -1,6 +1,194 @@
 {
- "updated": "2026-10-26",
+ "updated": "2026-10-27",
  "items": [
+  {
+   "id": "rd-2026-10-27-signing-up-for-dashpass-or-postmates-unlimited-was",
+   "title": "Signing up for DashPass or Postmates Unlimited was linked to nearly double the spending on that app, without cutting what people spent elsewhere",
+   "created": "2026-10-27",
+   "angle": "The delivery membership isn't so much a discount as a habit machine. Spending on the subscribed app rose about 90% with no average drop at rival apps, though transaction data can only show a link.",
+   "why_now": "Online 9 days in the Journal of Marketing Research, and the holiday delivery-subscription promos are coming.",
+   "is_it_real": "Individual-level transaction data analyzed with a matched difference-in-differences design. That reduces, but cannot remove, the bias that heavy orderers are the ones who subscribe. The 90.4% figure is for the combined data, not Postmates alone. The data come from an early, partly pre-COVID platform era. Don't promise readers they'll keep spending more after cancelling; the fact-check flagged that as an overreach.",
+   "evidence": [
+    "https://openalex.org/W7222938569",
+    "https://doi.org/10.1177/00222437261502330"
+   ],
+   "studies": [
+    {
+     "pmid": "W7222938569",
+     "journal": "Journal of Marketing Research",
+     "caveats": "Observational transaction data from two U.S. platforms in one category; difference-in-differences with matching reduces but cannot fully eliminate selection into subscribing; effects are associations, and the pre-COVID/early-platform era may not generalize to today's market.",
+     "days_online": 9
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-27-shoppers-who-couldn-t-use-search-filters-browsed-w",
+   "title": "Shoppers who couldn't use search filters browsed wider and picked pricier headphones",
+   "created": "2026-10-27",
+   "angle": "Filters don't just reveal what you want, they shape it. Shoppers on a site with filters restricted explored more and ended up paying more and choosing more varied products. That's a quick, counterintuitive line about how online store design steers your basket.",
+   "why_now": "Online 6 days in Marketing Science, ahead of holiday online shopping.",
+   "is_it_real": "A randomized, incentive-aligned experiment with 1,200 online panelists on a store the researchers built. It covered one product category (wireless headphones) in a single session. It's a good lab-to-life hint, not proof that real retailers' filters cost you money.",
+   "evidence": [
+    "https://openalex.org/W7223129134",
+    "https://doi.org/10.1287/mksc.2025.0261"
+   ],
+   "studies": [
+    {
+     "pmid": "W7223129134",
+     "journal": "Marketing Science",
+     "caveats": "Online panel participants on a researcher-built platform, single product category (headphones), single shopping session; incentive-aligned but not a real retail environment.",
+     "days_online": 6
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-27-the-chatbot-that-gushes-great-question-over-your-r",
+   "title": "The chatbot that gushes 'Great question!' over your refund status is doing it wrong, and friendlier medical intake bots don't get people to open up about embarrassing problems",
+   "created": "2026-10-27",
+   "angle": "Two new experiment sets say warmth and personalization from a bot help only in some situations. Cheerful tone helped on taste-based tasks but hurt on factual ones. Personalized pre-visit medical chatbots raised willingness to disclose only for low-stigma conditions.",
+   "why_now": "Both online within the last 12 days. Brands and health systems are rolling out chatbots with a single 'friendly' voice.",
+   "is_it_real": "Both are scenario experiments measuring satisfaction or stated willingness to disclose, not real conversations. The tone study used three experiments with 587 people plus Weibo posts, in a Chinese context. The health-bot study's sample sizes and country aren't given, and its confirming field survey is cross-sectional. Keep it in a clause: 'in scenario experiments'.",
+   "evidence": [
+    "https://openalex.org/W7221784971",
+    "https://doi.org/10.1108/ejm-07-2025-0569",
+    "https://openalex.org/W7223240864",
+    "https://doi.org/10.1108/apjml-01-2026-0238"
+   ],
+   "studies": [
+    {
+     "pmid": "W7221784971",
+     "journal": "European Journal of Marketing",
+     "caveats": "Scenario experiments rather than real service encounters; 587 participants across three studies means modest cell sizes; Chinese context and commercial text-based service only; satisfaction was the sole outcome, with no repurchase or word-of-mouth measures.",
+     "days_online": 12
+    },
+    {
+     "pmid": "W7223240864",
+     "journal": "Asia Pacific Journal of Marketing and Logistics",
+     "caveats": "Scenario experiments with stated disclosure intentions rather than observed disclosure; the confirmatory study is a cross-sectional survey that cannot establish causation; sample sizes and country not specified in the abstract.",
+     "days_online": 4
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-27-people-buy-for-their-pets-the-way-they-buy-for-the",
+   "title": "People buy for their pets the way they buy for themselves: wellness shoppers get the healthy kibble, treat buyers get the treats",
+   "created": "2026-10-27",
+   "angle": "Nearly 876,000 supermarket baskets show 'pet-owner synchrony': shoppers who buy healthy or indulgent products for themselves tend to buy the matching kind for their pets on the same trip. It's a fun, relatable one-liner.",
+   "why_now": "Online 12 days in the Journal of the Academy of Marketing Science; pet spending is a perennial consumer story.",
+   "is_it_real": "Scanner data from one regional US supermarket chain (875,853 baskets). Pet ownership is inferred from purchases, and items appearing in the same basket is correlation, not evidence of a psychological motive. It works as a quirky stat, not a finding about why.",
+   "evidence": [
+    "https://openalex.org/W7221947266",
+    "https://doi.org/10.1007/s11747-026-01214-9"
+   ],
+   "studies": [
+    {
+     "pmid": "W7221947266",
+     "journal": "Journal of the Academy of Marketing Science",
+     "caveats": "One regional supermarket chain in a single country; basket co-occurrence is correlational and pet ownership is inferred from purchases rather than observed; no causal test of the proposed psychological mechanism.",
+     "days_online": 12
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-27-start-the-workday-thinking-about-what-went-right-i",
+   "title": "Start the workday thinking about what went right: in a 10-day randomized study, replaying errors made workers less willing to try new things",
+   "created": "2026-10-27",
+   "angle": "This complicates the 'learn from your mistakes' journaling advice. Morning reflection on errors cut exploration through lower attentiveness and more shame, and status-driven employees were hit hardest. Reflecting on successes did the opposite.",
+   "why_now": "An evergreen productivity-advice counterpoint; online 55 days, so it suits the roundup, not a pitch.",
+   "is_it_real": "A randomized experience-sampling field experiment, but small: 102 full-time employees over 10 workdays. Behavior was self-reported each day, and long-term learning wasn't measured. The country isn't stated in the abstract.",
+   "evidence": [
+    "https://openalex.org/W7207539887",
+    "https://doi.org/10.1111/apps.70137"
+   ],
+   "studies": [
+    {
+     "pmid": "W7207539887",
+     "journal": "Applied Psychology",
+     "caveats": "Single study with 102 employees over 10 workdays; outcomes are self-reported daily behavior; short time horizon means long-term learning effects are unknown; sample and national context not fully specified in the abstract.",
+     "days_online": 55
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-27-when-a-hospital-asks-a-court-for-guardianship-over",
+   "title": "When a hospital asks a court for guardianship over an older patient, it almost always gets it, and poorer patients get strangers and fuller control",
+   "created": "2026-10-27",
+   "angle": "Courts granted 99% of hospital-filed guardianship petitions that were heard. Medicaid recipients were less likely to get a guardian who knew them, and less-educated patients were more often put under full rather than limited guardianship. It's a sharp number on a process with little oversight.",
+   "why_now": "Online 1 day in JAGS; guardianship and conservatorship abuse remains a live public concern.",
+   "is_it_real": "A retrospective review of 236 petitions filed by one large academic health system in one county's probate court, 2019 to 2024. The subgroups are small, and the code blocks a pitch because the findings rest on subgroups. The 99% grant rate is descriptive and solid for this one system, but the Medicaid and education links are associations from one place. Say 'at one health system'.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42929333/",
+    "https://doi.org/10.1111/jgs.70782"
+   ],
+   "studies": [
+    {
+     "pmid": "42929333",
+     "journal": "Journal of the American Geriatrics Society",
+     "caveats": "small sample (N<100 per subgroup), observational design, single-center, secondary analysis",
+     "days_online": 1
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-27-every-hypoallergenic-vulvar-soothing-product-in-a",
+   "title": "Every 'hypoallergenic' vulvar soothing product in a 65-product US check contained a known skin allergen",
+   "created": "2026-10-27",
+   "angle": "'Natural', 'hypoallergenic' and 'fragrance-free' labels didn't predict a lower allergen load. 78% of products had at least one allergen, and 28% of 'fragrance-free' ones had botanical scent allergens. Plain ointments fared best, which gives readers a practical takeaway.",
+   "why_now": "Online 7 days in Menopause, and 'clean' and 'gentle' labeling claims are under constant scrutiny.",
+   "is_it_real": "A cross-sectional ingredient-list analysis of 65 over-the-counter products checked against an 80-allergen patch-test series. Containing an allergen is not the same as causing reactions, and no patients were tested. One author reports institutional funding from Galderma. It overlaps the existing menopause-site brief on vulvar itching (42817742) and the earlier 'gentle ingredients' pitch, so keep this to a single roundup line, and the brief can cite it.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42899814/",
+    "https://doi.org/10.1097/GME.0000000000002935"
+   ],
+   "studies": [
+    {
+     "pmid": "42899814",
+     "journal": "Menopause (New York, N.Y.)",
+     "caveats": "small sample (N<100), observational design, cross-sectional, industry funding [Galderma — institutional funding to one author]",
+     "days_online": 7
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-27-fewer-than-half-of-older-americans-with-probable-d",
+   "title": "Fewer than half of older Americans with probable dementia had a diagnosis in their Medicare records, and Medicare Advantage lagged behind Traditional Medicare",
+   "created": "2026-10-27",
+   "angle": "In the latest years studied (2015 to 2019), adjusted detection was 48.8% in Traditional Medicare vs 39.2% in Medicare Advantage. Detection of early-stage dementia, when a diagnosis matters most, stayed flat. A useful line with a clock: the annual wellness visit includes a cognitive check.",
+   "why_now": "Medicare open enrollment runs Oct 15 to Dec 7, when people are choosing between Traditional and Advantage plans.",
+   "is_it_real": "A Yale analysis linking Health and Retirement Study surveys to Medicare claims for 3,144 people with probable dementia. Dementia status comes from a survey algorithm (Langa-Weir), not a clinical exam, and claims can miss diagnoses that were made but never coded. It can't say why the plan types differ. It overlaps the 10-25 pitch on early dementia signs being written off, so if that pitch lands, fold this number into it instead.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42923120/",
+    "https://doi.org/10.1002/dad2.70503"
+   ],
+   "studies": [
+    {
+     "pmid": "42923120",
+     "journal": "Alzheimers Dement (Amst)",
+     "caveats": "Observational cohort study — cannot establish why detection differs by plan type; dementia status was determined by a survey-based algorithm (Langa-Weir), not clinical exam; claims data may miss diagnoses made but not coded.",
+     "days_online": 6
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-27-at-one-croatian-hospital-the-share-of-community-c",
+   "title": "At one Croatian hospital, the share of community C. diff cases that followed a dentist's antibiotic more than doubled in nine years, often clindamycin given without a penicillin allergy",
+   "created": "2026-10-27",
+   "angle": "A useful prompt for readers: ask whether you really need an antibiotic for dental work, and why you're getting clindamycin if you aren't allergic to penicillin. Clindamycin is one of the antibiotics most tied to C. diff.",
+   "why_now": "Online 7 days in Infection; antibiotic stewardship in dentistry is a recurring theme.",
+   "is_it_real": "A retrospective study of 666 adults with community-acquired C. diff after outpatient antibiotics at one Croatian infectious-disease hospital, 2011 to 2019. The dental share rose from 13.1% to 31.1% (28.5% overall). The digest headline's 'nearly 1 in 3 dangerous gut infections' overstates it: these are only post-antibiotic community cases at one center, and Croatian prescribing may differ from US practice. Use 'at one hospital in Croatia'.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42900457/",
+    "https://doi.org/10.1007/s15010-026-03028-x"
+   ],
+   "studies": [
+    {
+     "pmid": "42900457",
+     "journal": "Infection",
+     "caveats": "single-center, observational design, single-region (Croatia — prescribing patterns may differ from US/UK dental practice), no sex-disaggregated data, retrospective design",
+     "days_online": 7
+    }
+   ]
+  },
   {
    "id": "rd-2026-10-26-how-you-drive-not-how-fast-flagged-coming-cognitiv",
    "title": "How you drive, not how fast, flagged coming cognitive decline about 18 months before diagnosis in a small WashU study",
