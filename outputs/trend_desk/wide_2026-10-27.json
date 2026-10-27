@@ -1,0 +1,635 @@
+{
+ "run_date": "2026-10-27",
+ "geo": "US",
+ "items": [
+  {
+   "query": "dallas cowboys vs philadelphia eagles",
+   "search_volume": 1000000,
+   "increase_percentage": 600,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Cowboys keep pace in NFC East, end 2-game slide with road win over Eagles",
+     "link": "https://www.espn.com/nfl/story/_/id/50294687/prsecott-cowboys-keep-pace-nfc-east-road-win-eagles",
+     "source": "ESPN"
+    },
+    {
+     "title": "Pic 6: 'Linemen lead the way' in Cowboys' 38-21 win over Eagles",
+     "link": "https://www.dallascowboys.com/news/pic-6-linemen-lead-the-way-in-cowboys-38-21-win-over-eagles",
+     "source": "Dallas Cowboys | Official Site of the Dallas Cowboys"
+    }
+   ]
+  },
+  {
+   "query": "harry kane",
+   "search_volume": 500000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Kane's long road to Ballon d'Or glory ends with his crowning moment",
+     "link": "https://www.espn.com/soccer/story/_/id/50265615/harry-kanes-long-road-ballon-dor-glory-ends-crowning-moment",
+     "source": "ESPN"
+    },
+    {
+     "title": "Retracing Harry Kane’s journey in a day, from a London park to the Ballon d’Or - The Athletic",
+     "link": "https://www.nytimes.com/athletic/7727084/2026/10/26/harry-kane-ballon-dor-winner-england-journey/",
+     "source": "The New York Times"
+    }
+   ]
+  },
+  {
+   "query": "world series game 4",
+   "search_volume": 500000,
+   "increase_percentage": 100,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Brewers ride 8-run fifth to Game 3 rout of Rays, take 3-0 World Series lead",
+     "link": "https://www.espn.com/mlb/story/_/id/50293953/brewers-rout-rays-game-3-1-win-first-world-series-title",
+     "source": "ESPN"
+    },
+    {
+     "title": "Breakdown on Robert Gasser's dominant performance",
+     "link": "https://www.mlb.com/mariners/video/breakdown-on-robert-gasser-s-dominant-performance",
+     "source": "MLB.com"
+    }
+   ]
+  },
+  {
+   "query": "timberwolves vs cavaliers",
+   "search_volume": 200000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Anthony Edwards’ heroics are not enough as Wolves fall to Cavs in OT",
+     "link": "https://www.startribune.com/minnesota-timberwolves-cleveland-cavaliers-score-anthony-edwards-injury-update-lamelo-ball-stats/601902968",
+     "source": "Star Tribune"
+    },
+    {
+     "title": "Anthony Edwards erupts for 47 points despite knee discomfort. Is an early break looming?",
+     "link": "https://www.nytimes.com/athletic/7727651/2026/10/27/anthony-edwards-47-points-timberwolves-stats-knee/",
+     "source": "The New York Times"
+    }
+   ]
+  },
+  {
+   "query": "susan saint james",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Entertainment"
+   ],
+   "news": [
+    {
+     "title": "Susan Saint James, ‘Kate & Allie’ and ‘McMillan & Wife’ actress, dies at 80",
+     "link": "https://www.washingtonpost.com/obituaries/2026/10/27/susan-saint-james-kate-allie-mcmillan-wife-actress-dies-80/",
+     "source": "The Washington Post"
+    },
+    {
+     "title": "Susan Saint James Was Diagnosed with Pancreatic Cancer Before Her Death, Her Family Confirms",
+     "link": "https://people.com/susan-saint-james-diagnosed-pancreatic-cancer-before-death-12195711",
+     "source": "People.com"
+    }
+   ]
+  },
+  {
+   "query": "alan dysert",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Entertainment"
+   ],
+   "news": [
+    {
+     "title": "Alan Dysert, ‘All My Children’ star, dies at 75",
+     "link": "https://www.nbcnews.com/news/us-news/alan-dysert-children-star-dies-75-rcna605892",
+     "source": "NBC News"
+    },
+    {
+     "title": "‘All My Children’ actor Alan Dysert dead at 75",
+     "link": "https://globalnews.ca/news/12122673/all-my-children-actor-alan-dysert-dead/",
+     "source": "Global News"
+    }
+   ]
+  },
+  {
+   "query": "warriors vs nuggets",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Game Preview: Warriors at Nuggets - 10/26/26",
+     "link": "https://warriors.com/news/gameday-preview-20261026",
+     "source": "NBA.com"
+    },
+    {
+     "title": "Warriors Announce Injury Decisions Ahead of Nuggets Game",
+     "link": "https://sports.yahoo.com/articles/warriors-announce-injury-decisions-ahead-144803062.html",
+     "source": "Yahoo Sports"
+    }
+   ]
+  },
+  {
+   "query": "savannah chrisley",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Entertainment"
+   ],
+   "news": [
+    {
+     "title": "Savannah Chrisley Is Pregnant and Engaged, Expecting First Baby with Fiancé Jason",
+     "link": "https://people.com/savannah-chrisley-pregnant-with-first-baby-engaged-mystery-fiance-jason-12196202",
+     "source": "People.com"
+    },
+    {
+     "title": "Reality star Savannah Chrisley gets engaged and reveals pregnancy",
+     "link": "https://www.fox5atlanta.com/news/reality-star-savannah-chrisley-gets-engaged-reveals-pregnancy",
+     "source": "FOX 5 Atlanta"
+    }
+   ]
+  },
+  {
+   "query": "at&t 2024 data breach settlement",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Shopping"
+   ],
+   "news": [
+    {
+     "title": "AT&T data breach settlement payments could arrive soon: What customers need to know",
+     "link": "https://www.click2houston.com/news/local/2026/10/27/att-data-breach-settlement-payments-could-arrive-soon-what-customers-need-to-know/",
+     "source": "Click2Houston"
+    },
+    {
+     "title": "PREVIOUS COVERAGE: AT&T customers' records exposed in data breach",
+     "link": "https://www.fox4news.com/news/att-2024-data-breach-settlement-payout-details",
+     "source": "FOX 4 News Dallas-Fort Worth"
+    }
+   ]
+  },
+  {
+   "query": "superbowl 2027",
+   "search_volume": 100000,
+   "increase_percentage": 300,
+   "categories": [
+    "Entertainment"
+   ],
+   "news": [
+    {
+     "title": "Jay-Z to headline Super Bowl LXI halftime show",
+     "link": "https://www.espn.com/nfl/story/_/id/50293241/jay-z-headline-super-bowl-lxi-half-show",
+     "source": "ESPN"
+    },
+    {
+     "title": "Who Really Picks the Super Bowl Halftime Show Performer? Inside the Selection Process",
+     "link": "https://www.yahoo.com/entertainment/music/articles/really-picks-super-bowl-halftime-164602954.html",
+     "source": "Yahoo"
+    }
+   ]
+  },
+  {
+   "query": "walmart great value fruit cocktail recall",
+   "search_volume": 50000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Food and Drink"
+   ],
+   "news": [
+    {
+     "title": "1.5 Million Pounds of Meat and Walmart Canned Fruit Recalled—Here’s What to Check",
+     "link": "https://www.seriouseats.com/walmart-canned-fruit-kayem-meat-recalls-12194889",
+     "source": "Serious Eats"
+    },
+    {
+     "title": "More than 44,000 cans of Walmart’s Great Value fruit cocktail recalled over lead concerns",
+     "link": "https://www.yahoo.com/news/us/articles/more-44-000-cans-walmart-153757694.html",
+     "source": "Yahoo"
+    }
+   ]
+  },
+  {
+   "query": "donnie iris",
+   "search_volume": 50000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Entertainment"
+   ],
+   "news": [
+    {
+     "title": "Donnie Iris’ death prompts outpouring of tributes on social media",
+     "link": "https://triblive.com/local/regional/donnie-iris-death-prompts-outpouring-of-tributes-on-social-media/",
+     "source": "TribLIVE.com"
+    },
+    {
+     "title": "Donnie Iris, rock legend behind ‘Ah! Leah!’, dead at 83",
+     "link": "https://pagesix.com/2026/10/27/entertainment/donnie-iris-rock-legend-behind-ah-leah-dead-at-83/",
+     "source": "Page Six"
+    }
+   ]
+  },
+  {
+   "query": "quenton nelson",
+   "search_volume": 50000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "noah wyle",
+   "search_volume": 50000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "troy aikman monday night football emotion",
+   "search_volume": 50000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Other"
+   ]
+  },
+  {
+   "query": "alexia putellas",
+   "search_volume": 50000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "chrishell stause",
+   "search_volume": 50000,
+   "increase_percentage": 400,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "saquon barkley injury",
+   "search_volume": 50000,
+   "increase_percentage": 200,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "abdifatah yusuf guilty verdict reinstated",
+   "search_volume": 20000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "israel election results",
+   "search_volume": 20000,
+   "increase_percentage": 500,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "unruly aircraft passenger",
+   "search_volume": 20000,
+   "increase_percentage": 700,
+   "categories": [
+    "Other"
+   ]
+  },
+  {
+   "query": "kylie kelce",
+   "search_volume": 20000,
+   "increase_percentage": 600,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "from netflix horror series review",
+   "search_volume": 20000,
+   "increase_percentage": 300,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "royal caribbean",
+   "search_volume": 20000,
+   "increase_percentage": 200,
+   "categories": [
+    "Business and Finance"
+   ]
+  },
+  {
+   "query": "pat mcafee utah",
+   "search_volume": 20000,
+   "increase_percentage": 100,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "week 8 fantasy rankings",
+   "search_volume": 20000,
+   "increase_percentage": 75,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "eric swalwell",
+   "search_volume": 10000,
+   "increase_percentage": 900,
+   "categories": [
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "texas roadhouse",
+   "search_volume": 10000,
+   "increase_percentage": 100,
+   "categories": [
+    "Food and Drink",
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "jonathan taylor trade",
+   "search_volume": 10000,
+   "increase_percentage": 200,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "ebola",
+   "search_volume": 10000,
+   "increase_percentage": 500,
+   "categories": [
+    "Health",
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "missouri attorney general",
+   "search_volume": 10000,
+   "increase_percentage": 400,
+   "categories": [
+    "Health",
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "blue ash",
+   "search_volume": 10000,
+   "increase_percentage": 300,
+   "categories": [
+    "Other"
+   ]
+  },
+  {
+   "query": "pokemon unite",
+   "search_volume": 10000,
+   "increase_percentage": 400,
+   "categories": [
+    "Games"
+   ]
+  },
+  {
+   "query": "soccer",
+   "search_volume": 10000,
+   "increase_percentage": 100,
+   "categories": [
+    "Other"
+   ]
+  },
+  {
+   "query": "sofi stock",
+   "search_volume": 10000,
+   "increase_percentage": 200,
+   "categories": [
+    "Business and Finance"
+   ]
+  },
+  {
+   "query": "exponential time hypothesis",
+   "search_volume": 10000,
+   "increase_percentage": 300,
+   "categories": [
+    "Science"
+   ]
+  },
+  {
+   "query": "meleek thomas",
+   "search_volume": 10000,
+   "increase_percentage": 400,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "sarah j maas",
+   "search_volume": 10000,
+   "increase_percentage": 100,
+   "categories": [
+    "Other"
+   ]
+  },
+  {
+   "query": "microsoft buyouts employees",
+   "search_volume": 10000,
+   "increase_percentage": 600,
+   "categories": [
+    "Business and Finance"
+   ]
+  },
+  {
+   "query": "dre kirkpatrick jr",
+   "search_volume": 10000,
+   "increase_percentage": 75,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "sophie cunningham cowboy hat wnba",
+   "search_volume": 10000,
+   "increase_percentage": 200,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "jacob morley",
+   "search_volume": 10000,
+   "increase_percentage": 50,
+   "categories": [
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "essen vs rb leipzig",
+   "search_volume": 5000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "deion sanders videographer uncle neely",
+   "search_volume": 5000,
+   "increase_percentage": 500,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "carlos alcaraz",
+   "search_volume": 5000,
+   "increase_percentage": 600,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "efl cup",
+   "search_volume": 5000,
+   "increase_percentage": 100,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "wendy's company",
+   "search_volume": 5000,
+   "increase_percentage": 200,
+   "categories": [
+    "Food and Drink"
+   ]
+  },
+  {
+   "query": "ba stock",
+   "search_volume": 5000,
+   "increase_percentage": 200,
+   "categories": [
+    "Business and Finance"
+   ]
+  },
+  {
+   "query": "ofrenda",
+   "search_volume": 5000,
+   "increase_percentage": 75,
+   "categories": [
+    "Hobbies and Leisure"
+   ]
+  },
+  {
+   "query": "nfl trades",
+   "search_volume": 5000,
+   "increase_percentage": 400,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "matthew perry",
+   "search_volume": 5000,
+   "increase_percentage": 200,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "queen",
+   "search_volume": 5000,
+   "increase_percentage": 200,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "nvidia rtx",
+   "search_volume": 5000,
+   "increase_percentage": 200,
+   "categories": [
+    "Technology"
+   ]
+  },
+  {
+   "query": "mao zedong",
+   "search_volume": 5000,
+   "increase_percentage": 100,
+   "categories": [
+    "Other"
+   ]
+  },
+  {
+   "query": "nicki minaj citizenship",
+   "search_volume": 5000,
+   "increase_percentage": 50,
+   "categories": [
+    "Entertainment",
+    "Politics"
+   ]
+  },
+  {
+   "query": "gta 6 delay",
+   "search_volume": 2000,
+   "increase_percentage": 500,
+   "categories": [
+    "Games"
+   ]
+  },
+  {
+   "query": "ben earle crissie rhodes break",
+   "search_volume": 2000,
+   "increase_percentage": 200,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "kyle larson",
+   "search_volume": 2000,
+   "increase_percentage": 400,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "paul pierce",
+   "search_volume": 2000,
+   "increase_percentage": 200,
+   "categories": [
+    "Other"
+   ]
+  },
+  {
+   "query": "jennifer lawrence",
+   "search_volume": 2000,
+   "increase_percentage": 200,
+   "categories": [
+    "Entertainment",
+    "Beauty and Fashion"
+   ]
+  }
+ ]
+}

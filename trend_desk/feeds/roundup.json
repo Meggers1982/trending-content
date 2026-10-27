@@ -1,18 +1,20 @@
 {
- "updated": "2026-10-26",
+ "updated": "2026-10-27",
  "items": [
   {
-   "id": "2026-10-26-kff-s-fall-poll-who-americans-trust-on-vaccines-no",
-   "title": "KFF's fall poll: who Americans trust on vaccines now",
-   "created": "2026-10-26",
-   "angle": "One sharp stat from KFF's fall trust tracker, with a one-line take on what it means heading into flu and measles season. It pairs naturally with the measles/SSPE pitch already in motion.",
-   "why_now": "KFF released its Fall 2026 update on vaccine views this week.",
-   "is_it_real": "KFF is a reliable pollster, but this is self-reported opinion data. Present it as a trust metric and pull the actual numbers from the KFF report; none are in hand yet.",
+   "id": "2026-10-27-the-drc-ebola-outbreak-passes-10-000-cases-what-th",
+   "title": "The DRC Ebola outbreak passes 10,000 cases: what that milestone means, and where the vaccine trial stands",
+   "created": "2026-10-27",
+   "angle": "A short, sharp item: the size of this outbreak in context, what the newly launched WHO vaccine trial can and can't do at this scale, and an honest answer on US risk.",
+   "why_now": "The case count reportedly crossed 10,000 days after WHO announced a vaccine trial in DRC, and 'ebola' is rising in general search today.",
+   "is_it_real": "The vaccine trial start is reported by Al Jazeera. The 10,000 figure comes from secondary aggregation and is flagged for verification; confirm it against the latest WHO situation report before writing. Big outlets have staff on this, so it fits the roundup better than a pitch.",
    "evidence": [
-    "https://www.kff.org/public-opinion/kff-tracking-poll-on-health-information-and-trust-fall-2026-update-on-vaccine-views/"
+    "https://www.aljazeera.com/news/2026/10/24/who-announces-start-of-ebola-vaccine-clinical-trial-in-dr-congo",
+    "https://www.who.int"
    ],
    "terms": [
-    "KFF Fall 2026 tracking poll — vaccine trust"
+    "DRC Ebola outbreak tops 10,000 cases",
+    "ebola"
    ],
    "status": "routed"
   },
@@ -28,6 +30,21 @@
    ],
    "terms": [
     "PTSD treatment — 68% remission rate, clinical trial"
+   ],
+   "status": "routed"
+  },
+  {
+   "id": "2026-10-26-kff-s-fall-poll-who-americans-trust-on-vaccines-no",
+   "title": "KFF's fall poll: who Americans trust on vaccines now",
+   "created": "2026-10-26",
+   "angle": "One sharp stat from KFF's fall trust tracker, with a one-line take on what it means heading into flu and measles season. It pairs naturally with the measles/SSPE pitch already in motion.",
+   "why_now": "KFF released its Fall 2026 update on vaccine views this week.",
+   "is_it_real": "KFF is a reliable pollster, but this is self-reported opinion data. Present it as a trust metric and pull the actual numbers from the KFF report; none are in hand yet.",
+   "evidence": [
+    "https://www.kff.org/public-opinion/kff-tracking-poll-on-health-information-and-trust-fall-2026-update-on-vaccine-views/"
+   ],
+   "terms": [
+    "KFF Fall 2026 tracking poll — vaccine trust"
    ],
    "status": "routed"
   },
@@ -70,7 +87,8 @@
     "Cheese recall — E. coli, Class I risk warning",
     "family farmstead dairy cheese recall",
     "hot dog recall",
-    "usda ready to eat meat recall"
+    "usda ready to eat meat recall",
+    "walmart great value fruit cocktail recall"
    ],
    "status": "routed"
   },

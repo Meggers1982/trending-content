@@ -1,0 +1,195 @@
+{
+ "date": "2026-10-27",
+ "ideas": [
+  {
+   "id": "2026-10-27-medical-debt-hit-1-in-4-americans-last-year-insure",
+   "title": "Medical debt hit 1 in 4 Americans last year, insured included, just as open enrollment opens",
+   "created": "2026-10-27",
+   "route": "pitch",
+   "speed": "emerging",
+   "beat": "public health / insurance",
+   "angle": "Having insurance no longer protects people from medical debt. Several new datasets landed in the same week, and the piece would show what that debt does to health decisions: delayed care, skipped prescriptions, deductible math. It should be framed as a patient-facing guide heading into enrollment season, not a policy wonk piece.",
+   "why_now": "KFF, Commonwealth Fund and Peterson-KFF data plus NYT and NPR coverage all landed this week. 'Health insurance' searches have been rising for weeks, and open enrollment season gives the story a clock.",
+   "is_it_real": "Solid. Multiple independent research organizations reached the same finding, and the fact check marked it accurate. The '1 in 4' figure comes via Ohio Capital Journal's reading of the study; cite the primary Commonwealth Fund/KFF report directly. The 'health insurance' search term is generic, so treat it as supporting signal only.",
+   "confidence": "medium",
+   "evidence": [
+    "https://ohiocapitaljournal.com/2026/10/27/medical-debt-hit-1-in-4-americans-and-1-in-5-ohioans-last-year-even-the-insured-study-shows/",
+    "https://www.nytimes.com/2026/10/22/business/health-insurance-costs-workers-premiums-deductibles.html",
+    "https://www.npr.org/2026/10/22/nx-s1-6008153/health-insurance-costs-kff-commonwealth"
+   ],
+   "terms": [
+    "health care costs and medical debt squeeze kff commonwealth fund convergence",
+    "health insurance"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-10-27",
+     "event": "routed",
+     "detail": "pitch"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "Health care costs and medical debt squeeze (KFF/Commonwealth Fund convergence)",
+     "speed": "new",
+     "first_seen": "2026-10-27",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-27",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 70,
+       "opportunity": 62
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    },
+    {
+     "term": "health insurance",
+     "speed": "emerging",
+     "first_seen": "2026-06-19",
+     "weeks_seen": 7,
+     "sources": [
+      "rising"
+     ],
+     "profiles": [
+      "daily-signals"
+     ],
+     "recent": [
+      {
+       "date": "2026-09-24",
+       "profile": "daily-signals",
+       "source": "rising",
+       "stage": "rising"
+      },
+      {
+       "date": "2026-09-28",
+       "profile": "daily-signals",
+       "source": "rising",
+       "stage": "rising"
+      },
+      {
+       "date": "2026-09-30",
+       "profile": "daily-signals",
+       "source": "rising",
+       "stage": "rising"
+      },
+      {
+       "date": "2026-10-23",
+       "profile": "daily-signals",
+       "source": "rising",
+       "stage": "rising"
+      },
+      {
+       "date": "2026-10-26",
+       "profile": "daily-signals",
+       "source": "rising",
+       "stage": "rising"
+      },
+      {
+       "date": "2026-10-27",
+       "source": "rising",
+       "profile": "daily-signals",
+       "stage": "rising"
+      }
+     ],
+     "previous_verdict": "dropped",
+     "previous_reason": "noise"
+    }
+   ]
+  },
+  {
+   "id": "2026-10-27-the-drc-ebola-outbreak-passes-10-000-cases-what-th",
+   "title": "The DRC Ebola outbreak passes 10,000 cases: what that milestone means, and where the vaccine trial stands",
+   "created": "2026-10-27",
+   "route": "roundup",
+   "speed": "new",
+   "beat": "public health",
+   "angle": "A short, sharp item: the size of this outbreak in context, what the newly launched WHO vaccine trial can and can't do at this scale, and an honest answer on US risk.",
+   "why_now": "The case count reportedly crossed 10,000 days after WHO announced a vaccine trial in DRC, and 'ebola' is rising in general search today.",
+   "is_it_real": "The vaccine trial start is reported by Al Jazeera. The 10,000 figure comes from secondary aggregation and is flagged for verification; confirm it against the latest WHO situation report before writing. Big outlets have staff on this, so it fits the roundup better than a pitch.",
+   "confidence": "medium",
+   "evidence": [
+    "https://www.aljazeera.com/news/2026/10/24/who-announces-start-of-ebola-vaccine-clinical-trial-in-dr-congo",
+    "https://www.who.int"
+   ],
+   "terms": [
+    "drc ebola outbreak tops 10 000 cases",
+    "ebola"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-10-27",
+     "event": "routed",
+     "detail": "roundup"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "DRC Ebola outbreak tops 10,000 cases",
+     "speed": "new",
+     "first_seen": "2026-10-27",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-27",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 82,
+       "opportunity": 68
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    },
+    {
+     "term": "ebola",
+     "speed": "new",
+     "first_seen": "2026-10-27",
+     "weeks_seen": 1,
+     "sources": [
+      "wide"
+     ],
+     "profiles": [
+      "trending-now"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-27",
+       "source": "wide",
+       "profile": "trending-now",
+       "stage": "rising",
+       "score": 10000
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  }
+ ],
+ "dropped": 94,
+ "watching": 7,
+ "notes": "Most of today's list was sports, obituaries and celebrity noise. The fitness radar keeps catching political 'running for' queries, so its keyword matching likely needs a fix. Three keepers: the fruit cocktail lead recall folds into the existing food recall roundup, the medical-debt convergence is the strongest pitch, and Ebola goes to the roundup pending WHO confirmation of the 10K count. The bariatric durability study is on-lane but rests on one press release with significant fact-check issues, so it was dropped. If a second outlet corroborates it, it would make a good surgery-vs-GLP-1 pitch. Gym closures and fiber searches are on watch.",
+ "cost_usd": 0.3092
+}
