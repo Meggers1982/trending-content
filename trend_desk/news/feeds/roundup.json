@@ -1,6 +1,25 @@
 {
- "updated": "2026-10-26",
+ "updated": "2026-10-27",
  "items": [
+  {
+   "id": "nd-2026-10-27-4-3-million-medicare-enrollees-will-lose-their-adv",
+   "title": "4.3 million Medicare enrollees will lose their Advantage or Part D plan at year's end, and 1.4 million more are in plans being merged: check your mail before Dec 7",
+   "created": "2026-10-27",
+   "angle": "A short, useful item for open enrollment: KFF's count from CMS data is 3.1 million Medicare Advantage drug plan enrollees and 1.2 million stand-alone Part D enrollees whose plans end, plus 1.4 million in consolidating plans. It tells readers what a non-renewal notice means and what their options are.",
+   "why_now": "Open enrollment runs through Dec 7, and terminated plans end Dec 31. Pitching is blocked because this is already widely covered, but the number is usable this week.",
+   "is_it_real": "These are KFF's analysis of CMS plan data, an independent source. Before running it, confirm the special enrollment period and Medigap guaranteed-issue rights for people whose plans are not renewed against CMS and Medicare.gov guidance. Don't state them from memory.",
+   "evidence": [
+    "https://www.kff.org/medicare/more-than-4-million-medicare-beneficiaries-will-have-their-medicare-advantage-or-stand-alone-prescription-drug-plan-terminated-at-the-end-of-2026/"
+   ],
+   "items": [
+    {
+     "kind": "analysis",
+     "publisher": "kff-feed",
+     "released": "2026-10-27",
+     "url": "https://www.kff.org/medicare/more-than-4-million-medicare-beneficiaries-will-have-their-medicare-advantage-or-stand-alone-prescription-drug-plan-terminated-at-the-end-of-2026/"
+    }
+   ]
+  },
   {
    "id": "nd-2026-10-25-social-security-s-3-6-cola-for-2027-is-official-wh",
    "title": "Social Security's 3.6% COLA for 2027 is official: what changes in December checks",
