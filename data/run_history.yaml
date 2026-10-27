@@ -3,6 +3,34 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-10-27'
+  niche: Health & Wellness
+  signals_reviewed: 144
+  topics_retained: 4
+  topics_rejected: 20
+  p1_count: 1
+  p2_count: 2
+  p3_count: 1
+  p4_count: 0
+  p5_count: 0
+  integrity_flags: 4
+  top_topic: DRC Ebola outbreak tops 10,000 cases
+  key_themes:
+  - DRC Ebola outbreak tops 10,000 cases
+  - Weight-loss surgery lasting diabetes remission (OU long-term study)
+  - Health care costs and medical debt squeeze (KFF/Commonwealth Fund convergence)
+  - Colorectal cancer immune-evasion study (USF/Tampa General discovery)
+  tools_used:
+  - google_news
+  - google_trends
+  - web_search
+  tools_unavailable: []
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-10-27.html
+  estimated_cost_usd: 0.6033
+  notes: GLP-1/weight-loss and recall/cancer-immunotherapy clusters have recurred 3+ consecutive runs
+    — genuine news cycle continuation, not noise, but monitor for diminishing differentiation. Google
+    News Radar's 'tea heart health' trending query has no traceable article — held at Skill 02b. 'health
+    care costs' cluster promoted to P2 due to rare 5-source convergence.
 - run_date: '2026-10-26'
   niche: health and wellness
   signals_reviewed: 160
