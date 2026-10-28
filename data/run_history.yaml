@@ -3,6 +3,39 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-10-28'
+  niche: health and wellness
+  signals_reviewed: 144
+  topics_retained: 5
+  topics_rejected: 23
+  p1_count: 2
+  p2_count: 2
+  p3_count: 1
+  p4_count: 0
+  p5_count: 0
+  integrity_flags: 5
+  top_topic: Ebola outbreak spreads beyond DRC — first confirmed case in Nigeria evacuated to Switzerland
+  key_themes:
+  - Ebola outbreak spreads beyond DRC — first confirmed case in Nigeria evacuated to Switzerland
+  - CDC flags top antibiotic-resistant 'superbug' threats
+  - Retatrutide vs. Ozempic — new trial data on weight loss and A1c
+  - WHO/Lancet Countdown climate-health emergency report
+  - FDA escalates risk warning on recalled Miyoko's Creamery butter
+  tools_used:
+  - serpapi_news
+  - serpapi_trends
+  - google_trends
+  tools_unavailable:
+  - reddit_live
+  - exa_search
+  - social_x_search
+  - content_database
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-10-28.html
+  estimated_cost_usd: 0.7551
+  notes: Ebola is a 3rd-consecutive-day recurring theme but retained as update given genuine new development
+    (cross-border spread). Health-care-cost cluster recurring but rejected as existing with no new development.
+    Site URL absent; competitor-list fallback used for SERP-saturation calls. Reddit/Exa/X not independently
+    queried; Google Trends + Google News Radar prefetch used as primary live signal.
 - run_date: '2026-10-27'
   niche: Health & Wellness
   signals_reviewed: 144
