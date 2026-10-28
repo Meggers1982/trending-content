@@ -1,0 +1,3 @@
+rank,topic,trend_stage,urgency,radar_score,emergence_score,velocity_score,confidence_score,saturation_score,opportunity_score,confidence,rising_label,latest_interest,peak_interest,slope,seed_terms,discovery_sources,tags,why_now,recommended_action
+1,zoe gut health bar,emerging,this_week,58,64,40,75,0,78,high,'+600%,0,100,0,gut health,rising query,,Google Trends labels it +600%; interest moved from 0 to 0; found through rising query,Build an angle this week and monitor the next 24-48 hours.
+2,when does bloating from period go away,watch,monitor,51,48,40,75,0,69,high,'+250%,0,19,0,bloating,rising query,,Google Trends labels it +250%; interest moved from 0 to 0; found through rising query,Keep on watchlist unless another signal channel confirms it.
