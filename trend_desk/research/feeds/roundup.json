@@ -1,6 +1,214 @@
 {
- "updated": "2026-10-27",
+ "updated": "2026-10-28",
  "items": [
+  {
+   "id": "rd-2026-10-28-fall-back-week-evening-workouts-didn-t-wreck-older",
+   "title": "Fall back week: evening workouts didn't wreck older adults' sleep, and morning light and movement nudge your body clock earlier",
+   "created": "2026-10-28",
+   "angle": "Two quick receipts for the clock change. In a small Dutch crossover trial of insomniacs aged 60 to 80, the time of day they exercised made no difference to insomnia, though morning activity shifted the middle of their sleep about 19 minutes earlier. In a separate 182-worker experiment, 30 minutes of bright blue light at breakfast improved that night's sleep and next-day alertness.",
+   "why_now": "Clocks fall back Nov 1, and 'daylight saving time' and 'circadian depression' are both rising in Trend Desk. Friday's issue lands two days before the change.",
+   "is_it_real": "Both are small and short. The exercise trial had 31 people with usable sleep data over two-week periods, insomnia improved even in the inactive period, and a co-author's company was paid for the melatonin assays. The light study ran for two weeks, its work outcomes were self-reported, and the age and sleep-problem subgroups were exploratory. Neither study is enough for a pitch, but they're fine as a hedged item.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42945713/",
+    "https://doi.org/10.1016/j.sleep.2026.109332",
+    "https://openalex.org/W7207621701",
+    "https://doi.org/10.1037/apl0001418"
+   ],
+   "studies": [
+    {
+     "pmid": "42945713",
+     "journal": "Sleep Med",
+     "caveats": "Small N (31 participants with sleep data); short two-week intervention periods; single center in the Netherlands; subjective sleep quality was self-reported via app; insomnia scores improved in the inactive period too, suggesting participation effects; a co-author's company received payment for the melatonin assessments.",
+     "days_online": 5
+    },
+    {
+     "pmid": "W7207621701",
+     "journal": "Journal of Applied Psychology",
+     "caveats": "Two-week time horizon; work outcomes were self-reported by the same participants; the sleep-alertness-performance chain is a mediation model within an experiment, not separately manipulated; moderation findings (age, prior sleep problems) were exploratory.",
+     "days_online": 55
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-28-is-your-baby-sleeping-through-the-night-a-wrist-tr",
+   "title": "Is your baby sleeping through the night? A wrist tracker says 91% of 6-month-olds are; mothers' diaries say 40%",
+   "created": "2026-10-28",
+   "angle": "The 'sleeping through the night' milestone depends on how you measure it. By actigraphy, 91% of babies qualified; by diary, 40%. Mothers judged it by the longest unbroken stretch, which is something to keep in mind before trusting a baby sleep tracker or comparing notes in a parenting group.",
+   "why_now": "Online for 1 day (verified), not covered. Baby sleep trackers and sleep-milestone advice get a lot of online attention.",
+   "is_it_real": "A small study: 56 mothers at one center (McGill), 6-month-olds only. It's a measurement comparison, not a finding about how babies should sleep.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42944567/",
+    "https://doi.org/10.1111/apa.70812"
+   ],
+   "studies": [
+    {
+     "pmid": "42944567",
+     "journal": "Acta Paediatrica",
+     "caveats": "small sample (N<100), single-center, narrow age range (6 months only), observational design",
+     "days_online": 1
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-28-using-fewer-restraints-on-older-ventilated-icu-pat",
+   "title": "Using fewer restraints on older ventilated ICU patients was as safe and got them off the ventilator sooner",
+   "created": "2026-10-28",
+   "angle": "Something families can ask about: in a randomized trial of 485 ventilated sepsis patients aged 65 and older, restraining them only when severely agitated didn't increase deaths, self-extubation or sedative use. It also meant a little more time off the ventilator and out of a coma.",
+   "why_now": "Online for 1 day (verified), not covered.",
+   "is_it_real": "A randomized trial at five Chinese ICUs. It was open-label, the main outcome (days alive without delirium or coma) didn't differ, and the benefits were under a day. ICU practice varies by country.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42944623/",
+    "https://doi.org/10.1111/jgs.70814"
+   ],
+   "studies": [
+    {
+     "pmid": "42944623",
+     "journal": "J Am Geriatr Soc",
+     "caveats": "Open-label design (staff knew group assignment); conducted entirely in Chinese ICUs, so practice patterns may not match other countries; benefits were real but modest in absolute terms (under a day); the authors themselves note the safety of restraint minimization needs further evaluation.",
+     "days_online": 1
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-28-slower-thinking-not-forgetting-is-the-first-sign-o",
+   "title": "Slower thinking, not forgetting, is the first sign of the 'white matter changes' on so many older adults' MRIs",
+   "created": "2026-10-28",
+   "angle": "If a scan report mentions white matter hyperintensities, a 24-study analysis maps what tends to change and in what order: processing speed first, even with mild changes; planning and judgment at moderate stages; memory mostly at severe stages; general intelligence not at all.",
+   "why_now": "'Slow cognitive processing in conversation' is exploding in Trend Desk searches. Online today (verified).",
+   "is_it_real": "A meta-analysis of observational studies (16 had enough data to pool) with large unexplained differences between them. It can't show cause and covers white matter changes only.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42946888/",
+    "https://doi.org/10.1007/s11065-026-09717-6"
+   ],
+   "studies": [
+    {
+     "pmid": "42946888",
+     "journal": "Neuropsychol Rev",
+     "caveats": "Meta-analysis of observational studies — cannot establish causation; substantial unexplained heterogeneity across studies; attention and working memory estimates were based on too few studies to reach significance; focused almost entirely on white matter hyperintensities rather than other small-vessel pathologies.",
+     "days_online": 0
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-28-cold-snaps-raise-the-risk-of-a-copd-flare-up-about",
+   "title": "Cold snaps raise the risk of a COPD flare-up about two weeks later; heat waves do it the same day",
+   "created": "2026-10-28",
+   "angle": "A useful timing fact for winter: after cold weather, COPD flare risk peaked 14 to 18 days later, which is long enough that patients rarely connect the two. Heat risk peaked within 24 hours. The link was stronger in older adults, men and smokers.",
+   "why_now": "Winter is starting. Online for 7 days (verified), not covered.",
+   "is_it_real": "A case-crossover study of 5,981 flare-ups in Korean national insurance data. Relative risks were modest (1.23 for cold, 1.06 for heat), it covers one country, and it's observational.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42906829/",
+    "https://doi.org/10.1016/j.rmed.2026.109241"
+   ],
+   "studies": [
+    {
+     "pmid": "42906829",
+     "journal": "Respiratory Medicine",
+     "caveats": "observational design, single-country cohort (South Korea), surrogate endpoints only",
+     "days_online": 7
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-28-a-probiotic-sold-as-an-iron-booster-added-nothing",
+   "title": "A probiotic sold as an iron booster added nothing to iron pills for anemia in a placebo-controlled trial",
+   "created": "2026-10-28",
+   "angle": "A null result that saves money: in a double-blind trial of 200 adults aged 60+ with anemia, adding a 30-billion-CFU probiotic to iron-folic acid didn't raise hemoglobin any more than iron plus placebo did over 12 weeks. Iron stores actually rose more on placebo.",
+   "why_now": "Online for 2 days (verified). Supplements marketed for gut health and absorption are everywhere.",
+   "is_it_real": "A well-designed RCT, but in one community in India with one probiotic formula over 12 weeks. 16 of 200 dropped out (handled with last-value-carried-forward), and baseline microbiomes differed between groups. It doesn't rule out every probiotic strain.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42933603/",
+    "https://doi.org/10.1016/j.clnesp.2026.105208"
+   ],
+   "studies": [
+    {
+     "pmid": "42933603",
+     "journal": "Clin Nutr ESPEN",
+     "caveats": "Single trial conducted in one region of India in a community cohort, so findings may not generalize to all older populations or to other probiotic formulations and doses; 12-week follow-up is short; 16 of 200 participants did not complete follow-up and missing values were imputed by last observation carried forward; baseline gut microbiome diversity differed between groups.",
+     "days_online": 2
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-28-an-online-brain-training-game-meant-to-make-junk-f",
+   "title": "An online brain-training game meant to make junk food less tempting didn't change what 512 people ordered for dinner",
+   "created": "2026-10-28",
+   "angle": "A pre-registered trial tested 'inhibitory control training,' the tap-to-resist games pitched as a craving fix. The trained group ordered 1,270 calories versus 1,287 in the control group, and no fewer of them picked pizza.",
+   "why_now": "Online for 6 days (verified). Craving-control apps keep getting pitched.",
+   "is_it_real": "Randomized and pre-registered with 512 UK adults, but the orders were hypothetical on a mock delivery site, not real purchases, and training done at home is hard to control.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42913077/",
+    "https://doi.org/10.1016/j.appet.2026.108805"
+   ],
+   "studies": [
+    {
+     "pmid": "42913077",
+     "journal": "Appetite",
+     "caveats": "hypothetical food ordering (not real purchases), online delivery limits intervention fidelity, UK-based sample",
+     "days_online": 6
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-28-reviews-from-paid-premium-members-are-rosier-and-l",
+   "title": "Reviews from paid 'premium members' are rosier and less useful, according to 153,000 JD.com reviews",
+   "created": "2026-10-28",
+   "angle": "A shopping tip with a hook: the badged loyalty-member rave tends to rate higher, run more emotional and get fewer helpful votes. The badge makes readers trust it more, but not enough to make up for content that says less.",
+   "why_now": "Online for 2 days (verified). Holiday shopping season is about to start, and paid memberships like Prime and Walmart+ are everywhere.",
+   "is_it_real": "The review data come from one Chinese platform and are correlational. Members choose to join, so happier customers may both sign up and rate higher. The follow-up experiments were lab-based. Helpfulness is measured by readers' votes, not by better purchases.",
+   "evidence": [
+    "https://openalex.org/W7223652730",
+    "https://doi.org/10.1002/cb.70265"
+   ],
+   "studies": [
+    {
+     "pmid": "W7223652730",
+     "journal": "Journal of Consumer Behaviour",
+     "caveats": "Field evidence is correlational and from a single platform in one country (JD.com); membership is self-selected, so happier customers may both join and rate higher. Supporting experiments were lab-based.",
+     "days_online": 2
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-28-a-smiley-face-on-the-snack-wrapper-makes-dieters-g",
+   "title": "A smiley face on the snack wrapper makes dieters guess it has more calories",
+   "created": "2026-10-28",
+   "angle": "A fun food-packaging line: across five experiments, smiling faces on indulgent foods made people see them as more of a treat, which raised their calorie estimates. The effect was strongest in people actively watching what they eat, and it made them less likely to pick the item.",
+   "why_now": "Online for 12 days (verified), not covered.",
+   "is_it_real": "These were experiments measuring perceptions and stated choices, probably on online panels, not real purchases. Sample sizes and country aren't in the abstract. It applies only to foods that can read as indulgent.",
+   "evidence": [
+    "https://openalex.org/W7222498555",
+    "https://doi.org/10.1002/mar.70279"
+   ],
+   "studies": [
+    {
+     "pmid": "W7222498555",
+     "journal": "Psychology and Marketing",
+     "caveats": "Experimental studies, likely online panels, with perceptions and choice measures rather than real retail purchases; effect is specific to foods that can be construed as indulgent; sample sizes and country not specified in the abstract.",
+     "days_online": 12
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-28-41-000-dogs-mixed-breeds-outlived-purebreds-of-the",
+   "title": "41,000 dogs: mixed breeds outlived purebreds of the same size, and dog deaths tracked human deaths state by state",
+   "created": "2026-10-28",
+   "angle": "A light item from the Dog Aging Project: median lifespan ran from about 14 years for small dogs to under 10 for giant breeds. Females outlived males, AKC purebreds lived slightly shorter lives than mixed breeds of the same size, and regional dog mortality followed human mortality.",
+   "why_now": "Online for 1 day (verified), not covered.",
+   "is_it_real": "Owner-reported deaths in a self-selected volunteer cohort. The purebred gap was modest, and the 804-variable scan generates hypotheses only. This is a dog study, so none of it applies to people.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42945030/",
+    "https://doi.org/10.1007/s11357-026-02448-9"
+   ],
+   "studies": [
+    {
+     "pmid": "42945030",
+     "journal": "Geroscience",
+     "caveats": "This is a dog study, not a human one; findings about aging in dogs cannot be applied to people. Deaths and health exposures were owner-reported, the cohort is a self-selected volunteer sample of engaged pet owners, and the survey-wide association scan is hypothesis-generating only — the authors explicitly call for causal follow-up.",
+     "days_online": 1
+    }
+   ]
+  },
   {
    "id": "rd-2026-10-27-signing-up-for-dashpass-or-postmates-unlimited-was",
    "title": "Signing up for DashPass or Postmates Unlimited was linked to nearly double the spending on that app, without cutting what people spent elsewhere",
