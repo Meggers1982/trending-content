@@ -1,6 +1,54 @@
 {
- "updated": "2026-10-27",
+ "updated": "2026-10-28",
  "items": [
+  {
+   "id": "2026-10-28-miyoko-s-plant-based-butter-recall-gets-an-fda-ris",
+   "title": "Miyoko's plant-based butter recall gets an FDA risk classification: what changed and what to check in your fridge",
+   "created": "2026-10-28",
+   "angle": "A short service item explaining that this is an escalation of an existing Miyoko's recall, not a new incident. It covers what the FDA classification means, which states are affected, and why 'plant-based' doesn't mean contamination-proof.",
+   "why_now": "'butter' hit breakout volume today (200K) on the FDA classification news, and multiple outlets covered it on 10/28.",
+   "is_it_real": "The recall is real and widely reported by ABC, NY Post and The Hill. The newsroom tool flagged significant fact-check issues because the FDA.gov notice wasn't retrieved, so the exact classification class, lot codes and states must be confirmed against the FDA enforcement report before the item runs.",
+   "evidence": [
+    "https://abcnews.com/Health/plant-based-butter-recalled-yeast-mold-ecoli-concerns/story?id=137635485",
+    "https://nypost.com/2026/10/28/lifestyle/fda-recalls-plant-based-miyoko-butter-due-to-e-coli-mold-and-yeast/",
+    "https://thehill.com/homenews/state-watch/6175447-miyokos-creamery-butter-recalled/",
+    "https://www.thehealthy.com/news/butter-recall-october-2026/"
+   ],
+   "terms": [
+    "butter",
+    "FDA escalates risk warning on recalled Miyoko's Creamery butter"
+   ],
+   "status": "routed"
+  },
+  {
+   "id": "2026-10-28-the-cdc-s-new-superbug-threat-list-what-urgent-vs",
+   "title": "The CDC's new superbug threat list: what 'urgent' vs. 'serious' actually means for you",
+   "created": "2026-10-28",
+   "angle": "A sharp item that translates the CDC's three threat tiers (urgent, serious, concerning) into plain risk. It names the one or two organisms that matter most to ordinary patients and skips generic 'superbug' fear language.",
+   "why_now": "'drug resistance' is breaking out today, tied to Washington Post coverage of the CDC report.",
+   "is_it_real": "Plausible and fact-check rated accurate. However, no source URL came through in the input, so the CDC report itself needs to be pulled before writing. Without a fresher angle it is too thin for a pitch.",
+   "evidence": [],
+   "terms": [
+    "CDC flags top antibiotic-resistant 'superbug' threats",
+    "drug resistance"
+   ],
+   "status": "routed"
+  },
+  {
+   "id": "2026-10-28-the-new-lancet-countdown-says-climate-is-a-health",
+   "title": "The new Lancet Countdown says climate is a health emergency: the three numbers that matter for your body",
+   "created": "2026-10-28",
+   "angle": "Skip the policy framing and pull the report's heat, air quality and infectious disease indicators into concrete personal health risks. It should be clear about which findings are projections and which are measured.",
+   "why_now": "WHO is amplifying the annual Lancet Countdown report, published 10/28.",
+   "is_it_real": "Solid. This is an annual peer-reviewed report with a WHO release. As a recurring annual report it lacks the tension for a paid pitch unless a specific heat-mortality number stands out.",
+   "evidence": [
+    "https://www.who.int/news/item/28-10-2026-climate-change-is-a-growing-health-emergency--lancet-countdown-warns"
+   ],
+   "terms": [
+    "WHO/Lancet Countdown climate-health emergency report"
+   ],
+   "status": "routed"
+  },
   {
    "id": "2026-10-27-the-drc-ebola-outbreak-passes-10-000-cases-what-th",
    "title": "The DRC Ebola outbreak passes 10,000 cases: what that milestone means, and where the vaccine trial stands",
@@ -14,7 +62,8 @@
    ],
    "terms": [
     "DRC Ebola outbreak tops 10,000 cases",
-    "ebola"
+    "ebola",
+    "Ebola outbreak spreads beyond DRC — first confirmed case in Nigeria evacuated to Switzerland"
    ],
    "status": "routed"
   },
@@ -58,6 +107,8 @@
    "evidence": [],
    "terms": [
     "Brush Buddies EVO toothpaste recall (4.3M+ tubes)",
+    "brush buddies recall",
+    "fda toothpaste recall",
     "toothpaste recall"
    ],
    "status": "routed"

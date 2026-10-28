@@ -1,0 +1,640 @@
+{
+ "run_date": "2026-10-28",
+ "geo": "US",
+ "items": [
+  {
+   "query": "who won the world series 2026",
+   "search_volume": 1000000,
+   "increase_percentage": 700,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Lineups, live updates from Brewers-Rays World Series Game 5",
+     "link": "https://www.espn.com/mlb/story/_/id/50241136/world-series-game-5-brewers-rays-live-updates-takeaways",
+     "source": "ESPN"
+    },
+    {
+     "title": "WS Game 4 Preview",
+     "link": "https://sports.yahoo.com/articles/ws-game-4-preview-164804662.html",
+     "source": "Yahoo Sports"
+    }
+   ]
+  },
+  {
+   "query": "butter",
+   "search_volume": 200000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Food and Drink",
+    "Business and Finance"
+   ],
+   "news": [
+    {
+     "title": "Plant-based butter recalled over yeast, mold and E.coli concerns receives FDA risk classification",
+     "link": "https://abcnews.com/Health/plant-based-butter-recalled-yeast-mold-ecoli-concerns/story?id=137635485",
+     "source": "ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+     "title": "FDA recalls butter brand over potential illness caused by E.coli, mold and yeast",
+     "link": "https://nypost.com/2026/10/28/lifestyle/fda-recalls-plant-based-miyoko-butter-due-to-e-coli-mold-and-yeast/",
+     "source": "New York Post"
+    }
+   ]
+  },
+  {
+   "query": "trail blazers vs lakers",
+   "search_volume": 200000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Trail Blazers 136-129 Lakers (Oct 27, 2026) Game Recap",
+     "link": "https://www.espn.com/nba/recap?gameId=401909880",
+     "source": "ESPN"
+    },
+    {
+     "title": "Los Angeles Lakers vs. Portland Trail Blazers - 2nd Quarter Highlights",
+     "link": "https://www.nba.com/watch/video/los-angeles-lakers-vs-portland-trail-blazers-2nd-quarter-highlights-2",
+     "source": "NBA.com"
+    }
+   ]
+  },
+  {
+   "query": "pistons vs knicks",
+   "search_volume": 200000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Knicks 'focus on little things,' beat Pistons for first win of season",
+     "link": "https://www.espn.com/nba/story/_/id/50305071/knicks-focus-little-things-earn-first-win-season",
+     "source": "ESPN"
+    },
+    {
+     "title": "Game Recap: Knicks 111, Pistons 97",
+     "link": "https://www.nba.com/watch/video/game-recap-knicks-111-pistons-97",
+     "source": "NBA.com"
+    }
+   ]
+  },
+  {
+   "query": "fleetwood town",
+   "search_volume": 200000,
+   "increase_percentage": 600,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Arsenal to appeal Max Dowman's red card against Fleetwood - reports",
+     "link": "https://www.espn.com/soccer/story/_/id/50307173/arsenal-appeal-max-dowman-red-card-fleetwood",
+     "source": "ESPN"
+    },
+    {
+     "title": "Fleetwood's Cod Army still reveling after pulling off major cup upset over Arsenal",
+     "link": "https://www.10tv.com/article/syndication/associatedpress/fleetwoods-cod-army-still-reveling-after-pulling-off-major-cup-upset-over-arsenal/616-9fc7986b-20bb-4879-90a9-ce0c8cd108a5",
+     "source": "10TV"
+    }
+   ]
+  },
+  {
+   "query": "rout",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Brewers ride 8-run fifth to Game 3 rout of Rays, take 3-0 World Series lead",
+     "link": "https://www.espn.com/mlb/story/_/id/50293953/brewers-rout-rays-game-3-1-win-first-world-series-title",
+     "source": "ESPN"
+    },
+    {
+     "title": "Brewers vs Rays World Series Game 3 Highlights | MLB on FOX",
+     "link": "https://www.foxsports.com/watch/fmc-wskrdxrdixegl3nx",
+     "source": "FOX Sports"
+    }
+   ]
+  },
+  {
+   "query": "did netanyahu win the election",
+   "search_volume": 100000,
+   "increase_percentage": 300,
+   "categories": [
+    "Politics"
+   ],
+   "news": [
+    {
+     "title": "Israel Election Results Live Updates: Exit Polls Show No Clear Winner",
+     "link": "https://www.nytimes.com/live/2026/10/28/world/israel-elections",
+     "source": "The New York Times"
+    },
+    {
+     "title": "How Israel decides on a government when no one wins the election",
+     "link": "https://www.axios.com/2026/10/28/israel-elections-results-netanyahu-eisenkot-what-happens",
+     "source": "Axios"
+    }
+   ]
+  },
+  {
+   "query": "anthony edwards injury",
+   "search_volume": 100000,
+   "increase_percentage": 700,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Timberwolves' Anthony Edwards (knee) to miss up to 2 months, sources say",
+     "link": "https://www.espn.com/nba/story/_/id/50302115/timberwolves-anthony-edwards-miss-2-months-arthroscopic-knee-procedure",
+     "source": "ESPN"
+    },
+    {
+     "title": "Anthony Edwards out at least eight weeks: What’s next for Wolves without him?",
+     "link": "https://www.startribune.com/anthony-edwards-injury-timeline-minnesota-timberwolves-golden-state-warriors-game-wolves-roster-news/601906109",
+     "source": "Star Tribune"
+    }
+   ]
+  },
+  {
+   "query": "who got eliminated from dancing with the stars tonight",
+   "search_volume": 100000,
+   "increase_percentage": 700,
+   "categories": [
+    "Entertainment"
+   ],
+   "news": [
+    {
+     "title": "'DWTS: Who Was Sent Home on Horror Movie Night?",
+     "link": "https://www.tvinsider.com/1300200/dancing-with-the-stars-horror-movie-night-2026-scores-double-elimination-recap/",
+     "source": "TV Insider"
+    },
+    {
+     "title": "Tyler Cameron Explains Awkward ‘DWTS’ Walk-Off After Judges’ Scores",
+     "link": "https://www.yahoo.com/entertainment/tv/articles/tyler-cameron-explains-awkward-dwts-164551616.html",
+     "source": "Yahoo"
+    }
+   ]
+  },
+  {
+   "query": "dolores huerta",
+   "search_volume": 50000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Law and Government"
+   ],
+   "news": [
+    {
+     "title": "Dolores Huerta, Who Founded United Farm Workers With Cesar Chavez, Dies",
+     "link": "https://www.nytimes.com/2026/10/28/us/dolores-huerta-dead.html",
+     "source": "The New York Times"
+    },
+    {
+     "title": "Dolores Huerta, labor activist and civil rights icon, dies at age 96",
+     "link": "https://www.cbsnews.com/news/dolores-huerta-dies-age-96-labor-activist-civil-rights-leader/",
+     "source": "CBS News"
+    }
+   ]
+  },
+  {
+   "query": "spain train crash",
+   "search_volume": 50000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Other"
+   ],
+   "news": [
+    {
+     "title": "Spain train crash kills at least 68 as witnesses describe devastating scenes",
+     "link": "https://www.cnn.com/2026/10/28/world/live-news/spain-train-crash-collision-intl",
+     "source": "CNN"
+    },
+    {
+     "title": "Spanish rail crash: Bloodied, dazed and angry - how passengers' rail journey turned to disaster",
+     "link": "https://www.bbc.com/news/articles/cm9qzd47ng98o",
+     "source": "BBC"
+    }
+   ]
+  },
+  {
+   "query": "quentin tarantino",
+   "search_volume": 50000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Entertainment",
+    "Business and Finance"
+   ],
+   "news": [
+    {
+     "title": "Quentin Tarantino refuses to give a 'penny' of his $150 million net worth to his mother",
+     "link": "https://fortune.com/2026/10/28/despite-having-two-oscars-and-a-150-million-fortune-quentin-tarantino-refuses-to-give-a-penny-of-his-wealth-to-his-mother-no-house-no-cadillac/",
+     "source": "Fortune"
+    },
+    {
+     "title": "Quentin Tarantino makes surprise admission about $150 million net worth",
+     "link": "https://www.the-independent.com/arts-entertainment/films/news/quentin-tarantino-net-worth-mother-b3074864.html",
+     "source": "The Independent"
+    }
+   ]
+  },
+  {
+   "query": "justin tucker",
+   "search_volume": 50000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "gta 6 size",
+   "search_volume": 50000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Games"
+   ]
+  },
+  {
+   "query": "apple event",
+   "search_volume": 20000,
+   "increase_percentage": 400,
+   "categories": [
+    "Technology"
+   ]
+  },
+  {
+   "query": "patrick mahomes",
+   "search_volume": 20000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "noah kahan tour 2027",
+   "search_volume": 20000,
+   "increase_percentage": 600,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "freddie prinze jr son new look",
+   "search_volume": 20000,
+   "increase_percentage": 700,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "david walliams",
+   "search_volume": 20000,
+   "increase_percentage": 600,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "cassidy hutchinson",
+   "search_volume": 20000,
+   "increase_percentage": 700,
+   "categories": [
+    "Law and Government",
+    "Politics"
+   ]
+  },
+  {
+   "query": "sunrise on the reaping movie tickets",
+   "search_volume": 20000,
+   "increase_percentage": 300,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "sunrise on the reaping",
+   "search_volume": 20000,
+   "increase_percentage": 200,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "the voice elimination episode kelly clarkson",
+   "search_volume": 20000,
+   "increase_percentage": 400,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "scott jennings",
+   "search_volume": 20000,
+   "increase_percentage": 400,
+   "categories": [
+    "Other"
+   ]
+  },
+  {
+   "query": "supplemental security income",
+   "search_volume": 10000,
+   "increase_percentage": 800,
+   "categories": [
+    "Business and Finance",
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "derailment",
+   "search_volume": 10000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Other"
+   ]
+  },
+  {
+   "query": "mauritian tidal trapdoor spider",
+   "search_volume": 10000,
+   "increase_percentage": 900,
+   "categories": [
+    "Science",
+    "Hobbies and Leisure",
+    "Pets and Animals"
+   ]
+  },
+  {
+   "query": "novak djokovic",
+   "search_volume": 10000,
+   "increase_percentage": 900,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "arby's deep fried turkey gobbler",
+   "search_volume": 10000,
+   "increase_percentage": 300,
+   "categories": [
+    "Food and Drink"
+   ]
+  },
+  {
+   "query": "fomc",
+   "search_volume": 10000,
+   "increase_percentage": 100,
+   "categories": [
+    "Business and Finance"
+   ]
+  },
+  {
+   "query": "san judas tadeo",
+   "search_volume": 10000,
+   "increase_percentage": 200,
+   "categories": [
+    "Hobbies and Leisure"
+   ]
+  },
+  {
+   "query": "drug resistance",
+   "search_volume": 10000,
+   "increase_percentage": 100,
+   "categories": [
+    "Health"
+   ]
+  },
+  {
+   "query": "danny masterson",
+   "search_volume": 10000,
+   "increase_percentage": 100,
+   "categories": [
+    "Other"
+   ]
+  },
+  {
+   "query": "krispy kreme new glazed doughnut",
+   "search_volume": 10000,
+   "increase_percentage": 200,
+   "categories": [
+    "Food and Drink"
+   ]
+  },
+  {
+   "query": "infinity ward",
+   "search_volume": 10000,
+   "increase_percentage": 200,
+   "categories": [
+    "Games"
+   ]
+  },
+  {
+   "query": "brewers watch party tickets",
+   "search_volume": 10000,
+   "increase_percentage": 300,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "shark lunges woman fishing trip",
+   "search_volume": 10000,
+   "increase_percentage": 300,
+   "categories": [
+    "Hobbies and Leisure",
+    "Pets and Animals"
+   ]
+  },
+  {
+   "query": "native hawaiians",
+   "search_volume": 10000,
+   "increase_percentage": 300,
+   "categories": [
+    "Science"
+   ]
+  },
+  {
+   "query": "tom jones postpones california concerts",
+   "search_volume": 10000,
+   "increase_percentage": 200,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "90 day power outage",
+   "search_volume": 10000,
+   "increase_percentage": 100,
+   "categories": [
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "muggsy bogues",
+   "search_volume": 10000,
+   "increase_percentage": 100,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "mv odyssey",
+   "search_volume": 10000,
+   "increase_percentage": 200,
+   "categories": [
+    "Travel and Transportation"
+   ]
+  },
+  {
+   "query": "sk hynix stock",
+   "search_volume": 10000,
+   "increase_percentage": 100,
+   "categories": [
+    "Business and Finance"
+   ]
+  },
+  {
+   "query": "chipotle",
+   "search_volume": 10000,
+   "increase_percentage": 75,
+   "categories": [
+    "Business and Finance"
+   ]
+  },
+  {
+   "query": "milan vs bologna",
+   "search_volume": 5000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "allegiant air canceled destinations list",
+   "search_volume": 5000,
+   "increase_percentage": 400,
+   "categories": [
+    "Travel and Transportation",
+    "Business and Finance"
+   ]
+  },
+  {
+   "query": "college gameday week 9 location",
+   "search_volume": 5000,
+   "increase_percentage": 400,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "singer",
+   "search_volume": 5000,
+   "increase_percentage": 400,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "jennifer lawrence plastic surgery",
+   "search_volume": 5000,
+   "increase_percentage": 100,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "ramses ii colossal statues discovery egypt",
+   "search_volume": 5000,
+   "increase_percentage": 300,
+   "categories": [
+    "Other"
+   ]
+  },
+  {
+   "query": "caitlin clark all wnba first team",
+   "search_volume": 5000,
+   "increase_percentage": 300,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "national first responders day",
+   "search_volume": 5000,
+   "increase_percentage": 200,
+   "categories": [
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "emari demercado",
+   "search_volume": 5000,
+   "increase_percentage": 200,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "laura bozzo",
+   "search_volume": 5000,
+   "increase_percentage": 300,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "jon lovitz",
+   "search_volume": 5000,
+   "increase_percentage": 200,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "paul anthony kelly",
+   "search_volume": 5000,
+   "increase_percentage": 200,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "perseverance",
+   "search_volume": 5000,
+   "increase_percentage": 200,
+   "categories": [
+    "Science",
+    "Business and Finance"
+   ]
+  },
+  {
+   "query": "canelo fight",
+   "search_volume": 5000,
+   "increase_percentage": 100,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "a ja wilson",
+   "search_volume": 5000,
+   "increase_percentage": 200,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "weil",
+   "search_volume": 5000,
+   "increase_percentage": 75,
+   "categories": [
+    "Business and Finance",
+    "Law and Government"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,268 @@
+{
+ "date": "2026-10-28",
+ "ideas": [
+  {
+   "id": "2026-10-28-miyoko-s-plant-based-butter-recall-gets-an-fda-ris",
+   "title": "Miyoko's plant-based butter recall gets an FDA risk classification: what changed and what to check in your fridge",
+   "created": "2026-10-28",
+   "route": "roundup",
+   "speed": "exploding",
+   "beat": "food safety",
+   "angle": "A short service item explaining that this is an escalation of an existing Miyoko's recall, not a new incident. It covers what the FDA classification means, which states are affected, and why 'plant-based' doesn't mean contamination-proof.",
+   "why_now": "'butter' hit breakout volume today (200K) on the FDA classification news, and multiple outlets covered it on 10/28.",
+   "is_it_real": "The recall is real and widely reported by ABC, NY Post and The Hill. The newsroom tool flagged significant fact-check issues because the FDA.gov notice wasn't retrieved, so the exact classification class, lot codes and states must be confirmed against the FDA enforcement report before the item runs.",
+   "confidence": "high",
+   "evidence": [
+    "https://abcnews.com/Health/plant-based-butter-recalled-yeast-mold-ecoli-concerns/story?id=137635485",
+    "https://nypost.com/2026/10/28/lifestyle/fda-recalls-plant-based-miyoko-butter-due-to-e-coli-mold-and-yeast/",
+    "https://thehill.com/homenews/state-watch/6175447-miyokos-creamery-butter-recalled/",
+    "https://www.thehealthy.com/news/butter-recall-october-2026/"
+   ],
+   "terms": [
+    "butter",
+    "fda escalates risk warning on recalled miyoko s creamery butter"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-10-28",
+     "event": "routed",
+     "detail": "roundup"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "butter",
+     "speed": "exploding",
+     "first_seen": "2026-10-28",
+     "weeks_seen": 1,
+     "sources": [
+      "wide"
+     ],
+     "profiles": [
+      "trending-now"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-28",
+       "source": "wide",
+       "profile": "trending-now",
+       "stage": "breakout",
+       "score": 200000
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    },
+    {
+     "term": "FDA escalates risk warning on recalled Miyoko's Creamery butter",
+     "speed": "new",
+     "first_seen": "2026-10-28",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-28",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 58,
+       "opportunity": 62
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-10-28-the-cdc-s-new-superbug-threat-list-what-urgent-vs",
+   "title": "The CDC's new superbug threat list: what 'urgent' vs. 'serious' actually means for you",
+   "created": "2026-10-28",
+   "route": "roundup",
+   "speed": "new",
+   "beat": "public health",
+   "angle": "A sharp item that translates the CDC's three threat tiers (urgent, serious, concerning) into plain risk. It names the one or two organisms that matter most to ordinary patients and skips generic 'superbug' fear language.",
+   "why_now": "'drug resistance' is breaking out today, tied to Washington Post coverage of the CDC report.",
+   "is_it_real": "Plausible and fact-check rated accurate. However, no source URL came through in the input, so the CDC report itself needs to be pulled before writing. Without a fresher angle it is too thin for a pitch.",
+   "confidence": "medium",
+   "evidence": [],
+   "terms": [
+    "cdc flags top antibiotic resistant superbug threats",
+    "drug resistance"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-10-28",
+     "event": "routed",
+     "detail": "roundup"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "CDC flags top antibiotic-resistant 'superbug' threats",
+     "speed": "new",
+     "first_seen": "2026-10-28",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-28",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 80,
+       "opportunity": 74
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    },
+    {
+     "term": "drug resistance",
+     "speed": "new",
+     "first_seen": "2026-10-28",
+     "weeks_seen": 1,
+     "sources": [
+      "wide"
+     ],
+     "profiles": [
+      "trending-now"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-28",
+       "source": "wide",
+       "profile": "trending-now",
+       "stage": "rising",
+       "score": 10000
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-10-28-retatrutide-doubles-ozempic-s-weight-loss-what-lil",
+   "title": "Retatrutide 'doubles' Ozempic's weight loss: what Lilly's head-to-head topline data does and doesn't prove",
+   "created": "2026-10-28",
+   "route": "pitch",
+   "speed": "new",
+   "beat": "aging, body and metabolism",
+   "angle": "Use the first head-to-head triple-agonist vs. semaglutide data to explain what 'double' measures and how the weight and A1c endpoints differ. It should also cover what company-reported topline results leave out before peer review, and what this means for patients weighing the GLP-1 they're on now.",
+   "why_now": "Lilly announced the data this week, ABC covered it, and a breakout search for 'ozempic versus retatrutide a1c study' is tied to that coverage.",
+   "is_it_real": "The announcement is real per the newsroom tool, which cited ABC News, but these are Lilly-reported topline results that are not yet peer-reviewed. The pitch must frame them that way and keep the weight and A1c endpoints separate. No source URL came through in the input, so the Lilly release and ABC story need to be retrieved first.",
+   "confidence": "medium",
+   "evidence": [],
+   "terms": [
+    "retatrutide vs ozempic new trial data on weight loss and a1c"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-10-28",
+     "event": "routed",
+     "detail": "pitch"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "Retatrutide vs. Ozempic — new trial data on weight loss and A1c",
+     "speed": "new",
+     "first_seen": "2026-10-28",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-28",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 73,
+       "opportunity": 68
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-10-28-the-new-lancet-countdown-says-climate-is-a-health",
+   "title": "The new Lancet Countdown says climate is a health emergency: the three numbers that matter for your body",
+   "created": "2026-10-28",
+   "route": "roundup",
+   "speed": "new",
+   "beat": "public health, environment",
+   "angle": "Skip the policy framing and pull the report's heat, air quality and infectious disease indicators into concrete personal health risks. It should be clear about which findings are projections and which are measured.",
+   "why_now": "WHO is amplifying the annual Lancet Countdown report, published 10/28.",
+   "is_it_real": "Solid. This is an annual peer-reviewed report with a WHO release. As a recurring annual report it lacks the tension for a paid pitch unless a specific heat-mortality number stands out.",
+   "confidence": "medium",
+   "evidence": [
+    "https://www.who.int/news/item/28-10-2026-climate-change-is-a-growing-health-emergency--lancet-countdown-warns"
+   ],
+   "terms": [
+    "who lancet countdown climate health emergency report"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-10-28",
+     "event": "routed",
+     "detail": "roundup"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "WHO/Lancet Countdown climate-health emergency report",
+     "speed": "new",
+     "first_seen": "2026-10-28",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-28",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 62,
+       "opportunity": 65
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  }
+ ],
+ "dropped": 82,
+ "watching": 6,
+ "notes": "",
+ "cost_usd": 0.2953
+}
