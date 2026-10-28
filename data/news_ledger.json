@@ -665,6 +665,73 @@
    "judged_on": "2026-10-27",
    "status": "dropped",
    "reason": "too-thin"
+  },
+  "aw-cms-refreshed-dataset-dialysis-facility-listing-by-facility": {
+   "judged_on": "2026-10-28",
+   "status": "dropped",
+   "reason": "noise",
+   "detail": "dataset refresh"
+  },
+  "aw-cms-refreshed-dataset-skilled-nursing-facility-quality-reporting-progr": {
+   "judged_on": "2026-10-28",
+   "status": "dropped",
+   "reason": "noise",
+   "detail": "dataset refresh"
+  },
+  "aw-cms-refreshed-dataset-dialysis-facility-state-averages": {
+   "judged_on": "2026-10-28",
+   "status": "dropped",
+   "reason": "noise",
+   "detail": "dataset refresh"
+  },
+  "aw-cms-refreshed-dataset-dialysis-facility-national-averages": {
+   "judged_on": "2026-10-28",
+   "status": "dropped",
+   "reason": "noise",
+   "detail": "dataset refresh"
+  },
+  "aw-cms-refreshed-dataset-patient-survey-ich-cahps-facility": {
+   "judged_on": "2026-10-28",
+   "status": "dropped",
+   "reason": "noise",
+   "detail": "dataset refresh"
+  },
+  "aw-cms-refreshed-dataset-patient-survey-ich-cahps-national": {
+   "judged_on": "2026-10-28",
+   "status": "dropped",
+   "reason": "noise",
+   "detail": "dataset refresh"
+  },
+  "aw-cms-refreshed-dataset-patient-survey-ich-cahps-state": {
+   "judged_on": "2026-10-28",
+   "status": "dropped",
+   "reason": "noise",
+   "detail": "dataset refresh"
+  },
+  "aw-midterm-election-update-immigrant-health-policy": {
+   "judged_on": "2026-10-28",
+   "status": "kept",
+   "idea": "nd-2026-10-28-open-enrollment-opens-nov-1-for-immigrants-who-are"
+  },
+  "aw-explaining-health-care-reform-questions-about-health-insurance-subsidi": {
+   "judged_on": "2026-10-28",
+   "status": "dropped",
+   "reason": "too-thin"
+  },
+  "aw-national-academy-of-medicine-s-2026-annual-meeting-scientific-symposiu": {
+   "judged_on": "2026-10-28",
+   "status": "dropped",
+   "reason": "too-thin"
+  },
+  "aw-frequently-asked-questions-about-the-aca-s-health-insurance-marketplac": {
+   "judged_on": "2026-10-28",
+   "status": "dropped",
+   "reason": "too-thin"
+  },
+  "aw-preguntas-frecuentes-sobre-el-mercado-de-seguros-m-dicos-de-la-ley-de": {
+   "judged_on": "2026-10-28",
+   "status": "dropped",
+   "reason": "duplicate"
   }
  },
  "ideas": {
@@ -1610,6 +1677,50 @@
    ],
    "term_details": [],
    "status": "routed"
+  },
+  "nd-2026-10-28-open-enrollment-opens-nov-1-for-immigrants-who-are": {
+   "desk": "news",
+   "title": "Open enrollment opens Nov 1 for immigrants who are about to lose coverage they legally hold: the eligibility cutoffs in the 2025 budget law, and the citizen kids dropping off Medicaid out of fear",
+   "created": "2026-10-28",
+   "route": "pitch",
+   "speed": "released 1 days ago",
+   "beat": "public health policy / insurance",
+   "angle": "Not a midterm explainer. The story is the reader clock: refugees, asylees and other lawfully present immigrants who bought marketplace coverage or enrolled in Medicare face eligibility cutoffs around the 2027 plan year. Meanwhile enforcement fear is pushing families to drop coverage for children who are U.S. citizens and still eligible. A secondary angle for her aging lane: nursing homes and home care depend on an immigrant workforce that visa limits now strain.",
+   "why_now": "ACA open enrollment starts Nov 1 and the midterms are Nov 3. KFF published the update Oct 27. People shopping for 2027 plans now are the ones the eligibility changes hit.",
+   "is_it_real": "KFF is independent analysis, but the item summary only states in general terms that federal law 'narrowed eligibility' for lawfully present immigrants and that families are avoiding care. It gives no figures here. The specific effective dates I have in mind are from memory and must be confirmed against the statute and CMS guidance before anyone cites them: marketplace premium tax credits limited mainly to green-card holders and a few other groups from 2027, and Medicare eligibility ending for some lawfully present enrollees about 18 months after enactment. The chilling-effect claim needs KFF's own survey data behind it, not just the summary.",
+   "primary_test": "The text of the 2025 reconciliation law (P.L. 119-21) eligibility sections, CMS/HHS implementing guidance on marketplace and Medicare eligibility for lawfully present immigrants, and KFF's survey data on immigrant families' coverage and care avoidance",
+   "standout": false,
+   "standout_reason": "",
+   "needs_independent_test": false,
+   "other_peg": "ACA open enrollment begins Nov 1, 2026; midterm election Nov 3",
+   "audience": "general",
+   "evidence_strength": "moderate",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "keys": [
+    "aw-midterm-election-update-immigrant-health-policy"
+   ],
+   "items": [
+    {
+     "key": "aw-midterm-election-update-immigrant-health-policy",
+     "kind": "analysis",
+     "interested_party": false,
+     "title": "Midterm Election Update: Immigrant Health Policy",
+     "publisher": "kff-feed",
+     "url": "https://www.kff.org/elections/midterm-election-update-immigrant-health-policy/",
+     "released": "2026-10-27",
+     "date_basis": "source date",
+     "days_old": 1,
+     "source": "AgingWire",
+     "summary": "Immigration restrictions and enforcement are central to the Trump administration’s domestic agenda and a focus of debate in the 2026 midterm elections. These policies have ripple effects on health care: immigration-related fears are leading some immigrant families to avoid medical care and drop coverage, including for U.S. citizen children, and visa restrictions could strain a health care workforce that relies on immigrants. Federal law has also narrowed eligibility for health coverage among lawfully present immigrants, and states are responding in different ways."
+    }
+   ],
+   "evidence": [
+    "https://www.kff.org/elections/midterm-election-update-immigrant-health-policy/"
+   ],
+   "term_details": [],
+   "status": "routed"
   }
  },
  "runs": [
@@ -1696,6 +1807,30 @@
     "too-thin": 3,
     "corporate-only": 13,
     "unverifiable-claim": 1
+   }
+  },
+  {
+   "date": "2026-10-28",
+   "items": 202,
+   "candidates": 5,
+   "skipped": {
+    "already judged": 65,
+    "taken elsewhere": 25,
+    "older": 100,
+    "noise": 7
+   },
+   "sources": {
+    "news": "2026-10-28",
+    "agingwire": "2026-10-28"
+   },
+   "model": "opus",
+   "ideas": 1,
+   "routes": {
+    "pitch": 1
+   },
+   "dropped": {
+    "too-thin": 3,
+    "duplicate": 1
    }
   }
  ],
