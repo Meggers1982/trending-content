@@ -1,0 +1,298 @@
+{
+ "date": "2026-10-29",
+ "ideas": [
+  {
+   "id": "2026-10-29-hhs-opens-the-door-to-unapproved-wellness-peptides",
+   "title": "HHS opens the door to unapproved 'wellness peptides': what's now for sale, what 'unapproved' means, and what we don't know about self-injecting them",
+   "created": "2026-10-29",
+   "route": "pitch",
+   "speed": "new",
+   "beat": "public health / FDA policy",
+   "angle": "A consumer-safety explainer with tension. Federal health officials just loosened access to compounds the FDA never approved, and peptide culture overlaps with GLP-1 and biohacking audiences. The piece separates unverified manufacturing and dosing from proven harm and asks who carries the risk now.",
+   "why_now": "Policy announced 10/28. A rising search query asks almost exactly this question, and consumers have no authoritative answer yet.",
+   "is_it_real": "The policy is reported by Reuters and ABC News, so the news peg is solid. Specifics are not confirmed yet: which peptides are covered, the 'temporary' terms, and how compliance works. These must be checked against the FDA/HHS notice before any claim is made. Don't frame 'unapproved' as meaning either 'dangerous' or 'safe'.",
+   "confidence": "high",
+   "evidence": [
+    "https://www.reuters.com/legal/litigation/us-health-department-allow-temporary-sale-some-unapproved-peptides-2026-10-28/",
+    "https://abcnews.com/Health/wellness-peptides-become-widely-hhs/story?id=137650076"
+   ],
+   "terms": [
+    "hhs policy change easing access to unapproved wellness peptides",
+    "why did the us ease access to unapproved wellness peptides and what are the safety concerns"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-10-29",
+     "event": "routed",
+     "detail": "pitch"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "HHS policy change easing access to unapproved wellness peptides",
+     "speed": "new",
+     "first_seen": "2026-10-29",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-29",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 70,
+       "opportunity": 85
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    },
+    {
+     "term": "why did the us ease access to unapproved wellness peptides and what are the safety concerns?",
+     "speed": "new",
+     "first_seen": "2026-10-29",
+     "weeks_seen": 1,
+     "sources": [
+      "rising"
+     ],
+     "profiles": [
+      "daily-signals"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-29",
+       "source": "rising",
+       "profile": "daily-signals",
+       "stage": "rising"
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-10-29-gatorade-recalls-122-000-cases-over-undeclared-foo",
+   "title": "Gatorade recalls 122,000+ cases over undeclared food dyes: which bottles, and why an undeclared dye triggers a recall",
+   "created": "2026-10-29",
+   "route": "roundup",
+   "speed": "new",
+   "beat": "food safety",
+   "angle": "A quick, useful item: what's affected, why labeling dyes matters for people with sensitivities, and where to check lot codes. It also ties lightly into the broader food-dye policy moment.",
+   "why_now": "Recall reported 10/27 for a mass-market brand. It's timely for Friday's issue.",
+   "is_it_real": "Recall reported by ABC News and described as FDA-confirmed. That's a single source in the input, so confirm the lot and UPC list against the FDA enforcement report before publishing.",
+   "confidence": "high",
+   "evidence": [
+    "https://abcnews.com/GMA/Food/122k-cases-gatorade-recalled-due-undeclared-food-dyes/story?id=137002347"
+   ],
+   "terms": [
+    "gatorade recall undeclared food dyes 122 000 cases"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-10-29",
+     "event": "routed",
+     "detail": "roundup"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "Gatorade recall — undeclared food dyes (122,000+ cases)",
+     "speed": "new",
+     "first_seen": "2026-10-29",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-29",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 65,
+       "opportunity": 72
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-10-29-rectal-cancer-without-surgery-fda-approves-an-immu",
+   "title": "Rectal cancer without surgery: FDA approves an immunotherapy-only path, and who actually qualifies",
+   "created": "2026-10-29",
+   "route": "pitch",
+   "speed": "new",
+   "beat": "cancer",
+   "angle": "A patient-facing piece on what this approval changes for a biomarker-defined subset of rectal cancer patients, set against rising early-onset colorectal cancer. It also covers what 'no surgery' realistically means for the rest of patients and how to find out whether you're in the subset.",
+   "why_now": "An FDA approval is described as new this week, with explanation from the originating institution on 10/25.",
+   "is_it_real": "Medium. The only input source is an MSK page whose URL reads like coverage of the earlier small trial. The FDA approval itself, the drug name and the exact indication must be confirmed on FDA.gov before pitching. Be clear that this applies only to a biomarker-defined subset, not to rectal cancer broadly.",
+   "confidence": "medium",
+   "evidence": [
+    "https://www.mskcc.org/news/rectal-cancer-disappears-after-experimental-use-immunotherapy"
+   ],
+   "terms": [
+    "fda approval of immunotherapy only rectal cancer treatment"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-10-29",
+     "event": "routed",
+     "detail": "pitch"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "FDA approval of immunotherapy-only rectal cancer treatment",
+     "speed": "new",
+     "first_seen": "2026-10-29",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-29",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 56,
+       "opportunity": 75
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-10-29-barbara-barrie-died-with-medical-assistance-at-95",
+   "title": "Barbara Barrie died with medical assistance at 95: what medical aid in dying is, and who can access it",
+   "created": "2026-10-29",
+   "route": "roundup",
+   "speed": "exploding",
+   "beat": "aging / end-of-life policy",
+   "angle": "Use the celebrity moment as the hook for a short, clear take on medical aid in dying: what it is, how eligibility generally works, and why a 95-year-old's choice is making headlines.",
+   "why_now": "Her death was reported 10/28, and NBC's headline foregrounds the medical assistance. The search breakout is large.",
+   "is_it_real": "The death and the medical-assistance detail are reported by NBC News, and the NYT confirms the death. Don't state how many states allow aid in dying, or any eligibility rules, without checking current law. Keep it respectful and avoid speculation about her health.",
+   "confidence": "medium",
+   "evidence": [
+    "https://www.nbcnews.com/news/us-news/barbara-barrie-dies-medical-assistance-95-rcna606361",
+    "https://www.nytimes.com/2026/10/28/theater/barbara-barrie-dead.html"
+   ],
+   "terms": [
+    "barbara barrie"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-10-29",
+     "event": "routed",
+     "detail": "roundup"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "barbara barrie",
+     "speed": "exploding",
+     "first_seen": "2026-10-29",
+     "weeks_seen": 1,
+     "sources": [
+      "wide"
+     ],
+     "profiles": [
+      "trending-now"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-29",
+       "source": "wide",
+       "profile": "trending-now",
+       "stage": "breakout",
+       "score": 100000
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-10-29-menopause-after-a-partial-hysterectomy-symptoms-ti",
+   "title": "Menopause after a partial hysterectomy: symptoms, timing, and how you know it's happening without periods",
+   "created": "2026-10-29",
+   "route": "brief",
+   "speed": "exploding",
+   "beat": "menopause",
+   "angle": "An evergreen page answering a specific question many women have. Without a uterus, the period signal is gone, so the page explains how to recognize perimenopause, when to test hormones, and the evidence on whether ovary-sparing hysterectomy shifts the timing.",
+   "why_now": "The question surfaced as a breakout on the women's health radar. It's a perennial query with weak existing answers, which suits the menopause site.",
+   "is_it_real": "Search demand rests on one radar sighting, but the topic is durable and evergreen. No claims are involved; the page will need clinical sourcing such as ACOG and The Menopause Society.",
+   "confidence": "medium",
+   "evidence": [],
+   "terms": [
+    "what are the symptoms of menopause after a partial hysterectomy"
+   ],
+   "site": "menopause",
+   "seed_keyword": "menopause after partial hysterectomy",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-10-29",
+     "event": "routed",
+     "detail": "brief:menopause"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "what are the symptoms of menopause after a partial hysterectomy",
+     "speed": "exploding",
+     "first_seen": "2026-10-28",
+     "weeks_seen": 1,
+     "sources": [
+      "radar"
+     ],
+     "profiles": [
+      "womens-health"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-28",
+       "source": "radar",
+       "profile": "womens-health",
+       "stage": "breakout",
+       "score": 66,
+       "opportunity": 89
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  }
+ ],
+ "dropped": 82,
+ "watching": 5,
+ "notes": "",
+ "cost_usd": 0.2867
+}

@@ -1,6 +1,37 @@
 {
- "updated": "2026-10-28",
+ "updated": "2026-10-29",
  "items": [
+  {
+   "id": "2026-10-29-gatorade-recalls-122-000-cases-over-undeclared-foo",
+   "title": "Gatorade recalls 122,000+ cases over undeclared food dyes: which bottles, and why an undeclared dye triggers a recall",
+   "created": "2026-10-29",
+   "angle": "A quick, useful item: what's affected, why labeling dyes matters for people with sensitivities, and where to check lot codes. It also ties lightly into the broader food-dye policy moment.",
+   "why_now": "Recall reported 10/27 for a mass-market brand. It's timely for Friday's issue.",
+   "is_it_real": "Recall reported by ABC News and described as FDA-confirmed. That's a single source in the input, so confirm the lot and UPC list against the FDA enforcement report before publishing.",
+   "evidence": [
+    "https://abcnews.com/GMA/Food/122k-cases-gatorade-recalled-due-undeclared-food-dyes/story?id=137002347"
+   ],
+   "terms": [
+    "Gatorade recall — undeclared food dyes (122,000+ cases)"
+   ],
+   "status": "routed"
+  },
+  {
+   "id": "2026-10-29-barbara-barrie-died-with-medical-assistance-at-95",
+   "title": "Barbara Barrie died with medical assistance at 95: what medical aid in dying is, and who can access it",
+   "created": "2026-10-29",
+   "angle": "Use the celebrity moment as the hook for a short, clear take on medical aid in dying: what it is, how eligibility generally works, and why a 95-year-old's choice is making headlines.",
+   "why_now": "Her death was reported 10/28, and NBC's headline foregrounds the medical assistance. The search breakout is large.",
+   "is_it_real": "The death and the medical-assistance detail are reported by NBC News, and the NYT confirms the death. Don't state how many states allow aid in dying, or any eligibility rules, without checking current law. Keep it respectful and avoid speculation about her health.",
+   "evidence": [
+    "https://www.nbcnews.com/news/us-news/barbara-barrie-dies-medical-assistance-95-rcna606361",
+    "https://www.nytimes.com/2026/10/28/theater/barbara-barrie-dead.html"
+   ],
+   "terms": [
+    "barbara barrie"
+   ],
+   "status": "routed"
+  },
   {
    "id": "2026-10-28-miyoko-s-plant-based-butter-recall-gets-an-fda-ris",
    "title": "Miyoko's plant-based butter recall gets an FDA risk classification: what changed and what to check in your fridge",
@@ -16,7 +47,8 @@
    ],
    "terms": [
     "butter",
-    "FDA escalates risk warning on recalled Miyoko's Creamery butter"
+    "FDA escalates risk warning on recalled Miyoko's Creamery butter",
+    "miyoko's creamery plant butter recall"
    ],
    "status": "routed"
   },

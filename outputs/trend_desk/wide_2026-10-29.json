@@ -1,0 +1,632 @@
+{
+ "run_date": "2026-10-29",
+ "geo": "US",
+ "items": [
+  {
+   "query": "brewers parade",
+   "search_volume": 500000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "CC Sabathia, J.J. Watt top social media reaction to Brewers' World Series win",
+     "link": "https://www.espn.com/mlb/story/_/id/50301908/brewers-world-series-winners-reaction",
+     "source": "ESPN"
+    },
+    {
+     "title": "Milwaukee Brewers are World Series Champs! No school tomorrow!",
+     "link": "https://milwaukeerecord.com/city-life/milwaukee-brewers-are-world-series-champs-no-school-tomorrow/",
+     "source": "Milwaukee Record"
+    }
+   ]
+  },
+  {
+   "query": "jeffery simmons",
+   "search_volume": 200000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Bears acquire All-Pro DT Jeffery Simmons in trade with Titans",
+     "link": "https://www.espn.com/nfl/story/_/id/50318351/sources-bears-trade-all-pro-dt-jeffery-simmons",
+     "source": "ESPN"
+    },
+    {
+     "title": "Chicago Bears acquire DT Jeffery Simmons in pricey trade with the Tennessee Titans",
+     "link": "https://www.channel3000.com/news/top-stories/chicago-bears-acquire-dt-jeffery-simmons-in-pricey-trade-with-the-tennessee-titans/article_e7a5d252-19f3-5dff-87f3-dd1b9688a307.html",
+     "source": "Channel 3000"
+    }
+   ]
+  },
+  {
+   "query": "google stock",
+   "search_volume": 200000,
+   "increase_percentage": 700,
+   "categories": [
+    "Business and Finance"
+   ],
+   "news": [
+    {
+     "title": "Alphabet Crushed Cloud Expectations, But the AI Bills Are Coming Due",
+     "link": "https://finance.yahoo.com/technology/ai/articles/alphabet-crushed-cloud-expectations-ai-164702603.html",
+     "source": "Yahoo Finance"
+    },
+    {
+     "title": "A potentially historic drop for Alphabet's stock drags the US market lower",
+     "link": "https://www.channel3000.com/news/national-and-world-news/a-potentially-historic-drop-for-alphabets-stock-drags-the-us-market-lower/article_dbf36ef4-ad04-519d-bb92-f267ad57112a.html",
+     "source": "Channel 3000"
+    }
+   ]
+  },
+  {
+   "query": "warriors vs timberwolves",
+   "search_volume": 200000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Stephen Curry torches Wolves for 44 as Warriors win 2nd straight after 0-3 start",
+     "link": "https://www.espn.com/nba/story/_/id/50315043/stephen-curry-torches-wolves-44-warriors-win-2nd-straight",
+     "source": "ESPN"
+    },
+    {
+     "title": "Timberwolves come up short vs. Warriors in first game without Anthony Edwards",
+     "link": "https://www.startribune.com/minnesota-timberwolves-golden-state-warriors-score-today-anthony-edwards-injury-lamelo-ball-stats/601902969",
+     "source": "Star Tribune"
+    }
+   ]
+  },
+  {
+   "query": "william contreras",
+   "search_volume": 200000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Brewers' William Contreras eighth catcher to earn World Series MVP honors",
+     "link": "https://www.espn.com/mlb/story/_/id/50314424/brewers-william-contreras-earns-world-series-mvp-honors",
+     "source": "ESPN"
+    },
+    {
+     "title": "Huge year for Contreras brothers ends with World Series embrace",
+     "link": "https://www.mlb.com/news/contreras-brothers-finish-huge-2026-season",
+     "source": "MLB.com"
+    }
+   ]
+  },
+  {
+   "query": "barbara barrie",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Entertainment"
+   ],
+   "news": [
+    {
+     "title": "Barbara Barrie, Oscar Nominee Known for Mom Roles and More, Has Died",
+     "link": "https://www.nytimes.com/2026/10/28/theater/barbara-barrie-dead.html",
+     "source": "The New York Times"
+    },
+    {
+     "title": "Oscar-nominated actor Barbara Barrie dies with medical assistance at 95",
+     "link": "https://www.nbcnews.com/news/us-news/barbara-barrie-dies-medical-assistance-95-rcna606361",
+     "source": "NBC News"
+    }
+   ]
+  },
+  {
+   "query": "valkyries vs dream",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "WNBA Finals live: Valkyries-Dream Game 6 analysis, updates and highlights",
+     "link": "https://www.espn.com/wnba/story/_/id/50310203/2026-wnba-finals-valkyries-dream-game-6-live-updates",
+     "source": "ESPN"
+    },
+    {
+     "title": "Dream didn't get fan playoff shirts to the arena on time for Game 6",
+     "link": "https://www.sfgate.com/valkyries/article/dream-playoff-shirts-arena-22500851.php",
+     "source": "SFGATE"
+    }
+   ]
+  },
+  {
+   "query": "ernie johnson",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Ernie Johnson says this is his final season as 'Inside the NBA' host",
+     "link": "https://www.espn.com/nba/story/_/id/50309868/ernie-johnson-leaving-nba-host-season",
+     "source": "ESPN"
+    },
+    {
+     "title": "BOBBY BURACK: Here is who could replace Ernie Johnson as the next host of 'Inside the NBA'",
+     "link": "https://www.foxnews.com/outkick-sports/bobby-burack-who-could-replace-ernie-johnson-next-host-inside-nba",
+     "source": "Fox News"
+    }
+   ]
+  },
+  {
+   "query": "knicks vs bulls",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Knicks 133-127 Bulls (Oct 28, 2026) Game Recap",
+     "link": "https://www.espn.com/nba/recap/_/gameId/401909886",
+     "source": "ESPN"
+    },
+    {
+     "title": "Late Bulls rally comes up short against defending champion Knicks",
+     "link": "https://bulls.com/news/late-bulls-rally-comes-up-short-against-defending-champion-knicks",
+     "source": "NBA.com"
+    }
+   ]
+  },
+  {
+   "query": "spurs vs jazz",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Spurs 117-111 Jazz (Oct 28, 2026) Game Recap",
+     "link": "https://www.espn.com/nba/recap/_/gameId/401909890",
+     "source": "ESPN"
+    },
+    {
+     "title": "15 MUST-START or SIT Players in Week 8! | Rachaad White, Tony Pollard, Hunter Henry & Caleb Williams | Fantasy Football Today Stream of National Football League",
+     "link": "https://www.cbssports.com/watch/general/video/15-must-start-or-sit-players-in-week-8-rachaad-white-tony-pollard-hunter-henry-caleb-williams-fantasy-football-today",
+     "source": "CBS Sports"
+    }
+   ]
+  },
+  {
+   "query": "76ers vs pacers",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "76ers 114-109 Pacers (Oct 28, 2026) Game Recap",
+     "link": "https://www.espn.com/nba/recap/_/gameId/401909884",
+     "source": "ESPN"
+    },
+    {
+     "title": "Sixers Bell Ringer: James, Embiid, Brown post double-doubles, Maxey comes alive late",
+     "link": "https://www.libertyballers.com/76ers-scores-results/100202/sixers-bell-ringer-indiana-pacers-embiid-lebron-james-tyrese-maxey-jaylen-brown-anfernee-simons",
+     "source": "Liberty Ballers"
+    }
+   ]
+  },
+  {
+   "query": "thunder vs mavericks",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Mavericks 120-96 Thunder (Oct 28, 2026) Game Recap",
+     "link": "https://www.espn.com/nba/recap/_/gameId/401909891",
+     "source": "ESPN"
+    },
+    {
+     "title": "“Cooper Flagg For MVP Don’t Get It Twisted” – Mavericks Fans On Cloud Nine After ROY’s Surgical Performance Leads to Blowout Win Over Thunder",
+     "link": "https://sports.yahoo.com/articles/cooper-flagg-mvp-don-t-164527216.html",
+     "source": "Yahoo Sports"
+    }
+   ]
+  },
+  {
+   "query": "bob uecker",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "ohio powerball winners october 2026",
+   "search_volume": 50000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Games"
+   ]
+  },
+  {
+   "query": "pat murphy dugout comments yankees",
+   "search_volume": 50000,
+   "increase_percentage": 500,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "corey heim",
+   "search_volume": 20000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "waddle",
+   "search_volume": 20000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "snow",
+   "search_volume": 20000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Climate"
+   ]
+  },
+  {
+   "query": "sophie cunningham",
+   "search_volume": 20000,
+   "increase_percentage": 600,
+   "categories": [
+    "Other"
+   ]
+  },
+  {
+   "query": "valkyries",
+   "search_volume": 20000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "zelda switch 2",
+   "search_volume": 20000,
+   "increase_percentage": 200,
+   "categories": [
+    "Games",
+    "Technology"
+   ]
+  },
+  {
+   "query": "now stock",
+   "search_volume": 20000,
+   "increase_percentage": 200,
+   "categories": [
+    "Business and Finance"
+   ]
+  },
+  {
+   "query": "amy roloff",
+   "search_volume": 20000,
+   "increase_percentage": 600,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "blake lively, justin baldoni documentary",
+   "search_volume": 20000,
+   "increase_percentage": 800,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "doordash acquire instacart",
+   "search_volume": 20000,
+   "increase_percentage": 300,
+   "categories": [
+    "Business and Finance"
+   ]
+  },
+  {
+   "query": "hayden panettiere",
+   "search_volume": 20000,
+   "increase_percentage": 600,
+   "categories": [
+    "Other"
+   ]
+  },
+  {
+   "query": "miyoko's creamery plant butter recall",
+   "search_volume": 20000,
+   "increase_percentage": 400,
+   "categories": [
+    "Food and Drink"
+   ]
+  },
+  {
+   "query": "dhs data leak",
+   "search_volume": 20000,
+   "increase_percentage": 300,
+   "categories": [
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "savannah river site",
+   "search_volume": 20000,
+   "increase_percentage": 400,
+   "categories": [
+    "Other"
+   ]
+  },
+  {
+   "query": "dwarf planet beyond pluto",
+   "search_volume": 20000,
+   "increase_percentage": 100,
+   "categories": [
+    "Science"
+   ]
+  },
+  {
+   "query": "spanish royal family",
+   "search_volume": 20000,
+   "increase_percentage": 100,
+   "categories": [
+    "Other"
+   ]
+  },
+  {
+   "query": "dylan dreyer hair part change",
+   "search_volume": 10000,
+   "increase_percentage": 600,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "steam free games october 2026",
+   "search_volume": 10000,
+   "increase_percentage": 500,
+   "categories": [
+    "Games"
+   ]
+  },
+  {
+   "query": "noah kahan presale",
+   "search_volume": 10000,
+   "increase_percentage": 400,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "hyrox athlete joanna wietrzyk statement",
+   "search_volume": 10000,
+   "increase_percentage": 200,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "amazon stock",
+   "search_volume": 10000,
+   "increase_percentage": 50,
+   "categories": [
+    "Business and Finance"
+   ]
+  },
+  {
+   "query": "al-nassr vs al kholood",
+   "search_volume": 5000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "elke sommer",
+   "search_volume": 5000,
+   "increase_percentage": 400,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "dylan larkin",
+   "search_volume": 5000,
+   "increase_percentage": 600,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "ai impacts theoretical computer science",
+   "search_volume": 5000,
+   "increase_percentage": 400,
+   "categories": [
+    "Science"
+   ]
+  },
+  {
+   "query": "cbs news",
+   "search_volume": 5000,
+   "increase_percentage": 200,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "mahomes family pumpkin patch pictures",
+   "search_volume": 5000,
+   "increase_percentage": 200,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "the dog stars streaming success",
+   "search_volume": 5000,
+   "increase_percentage": 300,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "alice huang",
+   "search_volume": 5000,
+   "increase_percentage": 100,
+   "categories": [
+    "Other"
+   ]
+  },
+  {
+   "query": "rihanna",
+   "search_volume": 5000,
+   "increase_percentage": 100,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "brett sylvia",
+   "search_volume": 5000,
+   "increase_percentage": 100,
+   "categories": [
+    "Politics",
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "khalil mack",
+   "search_volume": 5000,
+   "increase_percentage": 300,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "arresto",
+   "search_volume": 5000,
+   "increase_percentage": 100,
+   "categories": [
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "brushton",
+   "search_volume": 5000,
+   "increase_percentage": 100,
+   "categories": [
+    "Other"
+   ]
+  },
+  {
+   "query": "cat stock",
+   "search_volume": 5000,
+   "increase_percentage": 200,
+   "categories": [
+    "Business and Finance"
+   ]
+  },
+  {
+   "query": "cambodia",
+   "search_volume": 5000,
+   "increase_percentage": 100,
+   "categories": [
+    "Travel and Transportation"
+   ]
+  },
+  {
+   "query": "kaden matsuda colorado",
+   "search_volume": 5000,
+   "increase_percentage": 100,
+   "categories": [
+    "Other"
+   ]
+  },
+  {
+   "query": "jill wagner hollywood to tennessee",
+   "search_volume": 2000,
+   "increase_percentage": 300,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "piracy off the coast of somalia",
+   "search_volume": 2000,
+   "increase_percentage": 200,
+   "categories": [
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "father",
+   "search_volume": 2000,
+   "increase_percentage": 200,
+   "categories": [
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "nebraska examiner",
+   "search_volume": 2000,
+   "increase_percentage": 200,
+   "categories": [
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "rockville 2027 lineup",
+   "search_volume": 2000,
+   "increase_percentage": 200,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "panthers vs packers",
+   "search_volume": 2000,
+   "increase_percentage": 75,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "kevin bleyer daily show writer",
+   "search_volume": 2000,
+   "increase_percentage": 200,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "adt",
+   "search_volume": 2000,
+   "increase_percentage": 50,
+   "categories": [
+    "Business and Finance"
+   ]
+  }
+ ]
+}
