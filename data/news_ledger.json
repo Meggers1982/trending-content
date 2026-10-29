@@ -732,6 +732,11 @@
    "judged_on": "2026-10-28",
    "status": "dropped",
    "reason": "duplicate"
+  },
+  "aw-what-s-in-a-name-from-today-s-medicare-to-medicare-for-all": {
+   "judged_on": "2026-10-29",
+   "status": "dropped",
+   "reason": "too-thin"
   }
  },
  "ideas": {
@@ -1831,6 +1836,27 @@
    "dropped": {
     "too-thin": 3,
     "duplicate": 1
+   }
+  },
+  {
+   "date": "2026-10-29",
+   "items": 199,
+   "candidates": 1,
+   "skipped": {
+    "already judged": 58,
+    "taken elsewhere": 42,
+    "older": 98,
+    "noise": 0
+   },
+   "sources": {
+    "news": "2026-10-29",
+    "agingwire": "2026-10-29"
+   },
+   "model": "opus",
+   "ideas": 0,
+   "routes": {},
+   "dropped": {
+    "too-thin": 1
    }
   }
  ],
