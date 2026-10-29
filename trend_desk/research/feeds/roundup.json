@@ -1,6 +1,154 @@
 {
- "updated": "2026-10-28",
+ "updated": "2026-10-29",
  "items": [
+  {
+   "id": "rd-2026-10-29-checking-work-email-on-the-commute-in-seemed-to-he",
+   "title": "Checking work email on the commute in seemed to help people start the day; doing it on the way home brought work into the house",
+   "created": "2026-10-29",
+   "angle": "Same habit, opposite effect depending on direction. Workers who used work tech on the way in detached from home and got into work faster. Doing it on the way home was linked to more work-to-home conflict.",
+   "why_now": "6 days online. It's a relatable work finding for the Friday issue.",
+   "is_it_real": "Thin to moderate. 149 employees tracked over 10 workdays, all self-reported. One hypothesized path (evening conflict hurting next-day engagement) was not significant. Daily associations can't rule out reverse causation. The caveat fits in a clause.",
+   "evidence": [
+    "https://openalex.org/W7223307249",
+    "https://doi.org/10.1111/apps.70150"
+   ],
+   "studies": [
+    {
+     "pmid": "W7223307249",
+     "journal": "Applied Psychology",
+     "caveats": "All measures are self-reported, including engagement speed; one key hypothesized path (work-to-home conflict predicting next-day engagement speed) was not significant; N=149 over a short 10-day window; daily within-person associations cannot fully rule out reverse causation or unmeasured daily events; country and occupational context not specified in the abstract.",
+     "days_online": 6
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-29-new-job-focusing-only-on-mastering-the-tasks-was-t",
+   "title": "New job? Focusing only on mastering the tasks was the worst way to settle in over 18 months; learning the people and the place mattered too",
+   "created": "2026-10-29",
+   "angle": "The instinct to prove yourself by nailing the work alone was the onboarding path tied to the worst outcomes among 932 new hires. People who also invested in their team and the wider organization did better.",
+   "why_now": "About 5 days online (date not verified). It's useful advice for anyone starting a job.",
+   "is_it_real": "Thin to moderate. 932 newcomers over 18 months, but observational. The profile analysis is sensitive to modeling choices, and outcomes appear to be self-reported. The digest's fact-check says 'task-only is worst' matches the abstract, but the specific claims about exhaustion and turnover go slightly beyond it. Stick to 'fared worst' unless the paper confirms more. The online date needs confirming.",
+   "evidence": [
+    "https://openalex.org/W7223449472",
+    "https://doi.org/10.1016/j.jvb.2026.104309"
+   ],
+   "studies": [
+    {
+     "pmid": "W7223449472",
+     "journal": "Journal of Vocational Behavior",
+     "caveats": "Observational longitudinal design, so profile membership is associated with, not proven to cause, outcomes; outcomes appear to be self-reported, including performance; profile analyses are sensitive to modeling choices; sample composition and country context are not detailed in the abstract.",
+     "days_online": 5
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-29-a-nerve-silencing-knee-injection-for-arthritis-pai",
+   "title": "A nerve-silencing knee injection for arthritis pain did no better than placebo over a full year, and caused more side effects",
+   "created": "2026-10-29",
+   "angle": "RTX-GRT7039 (resiniferatoxin), a once-promising non-opioid option for knee osteoarthritis, failed its Phase 3 trial at 12, 26 and 52 weeks. Both groups improved a lot, which says something about how much of injection relief is placebo.",
+   "why_now": "7 days online. It's a clean negative Phase 3 result in a condition millions of older adults live with.",
+   "is_it_real": "Strong for what it tests: a 469-person double-blind randomized trial over 52 weeks, with an effect over placebo of -0.11 WOMAC points (p=0.569). Adverse events were 62.8% vs 48.3%. Grünenthal funded it. The sponsor may have announced topline results earlier, so check before calling it new.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42913877/",
+    "https://doi.org/10.1016/j.joca.2026.10.011"
+   ],
+   "studies": [
+    {
+     "pmid": "42913877",
+     "journal": "Osteoarthritis and Cartilage",
+     "caveats": "industry funding [Grünenthal GmbH], no age breakdown reported, short follow-up relative to chronic disease course",
+     "days_online": 7
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-29-two-years-after-the-first-over-the-counter-birth-c",
+   "title": "Two years after the first over-the-counter birth control pill launched, 4 of 344 young Latine adults in a California farm region had used it",
+   "created": "2026-10-29",
+   "angle": "Putting Opill on the shelf didn't mean people knew about it. Awareness rose only from 11% to 19%. Those who knew tended to get sexual health information from doctors, which suggests outreach and trusted messengers are the missing step.",
+   "why_now": "2 days online. Contraception access is in the news again (the post-Dobbs KFF knowledge-gap item is already queued).",
+   "is_it_real": "Thin but honest. A prospective cohort of 344 people in one agricultural California community, with self-reported use. It isn't national, so frame it as one community.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42946322/",
+    "https://doi.org/10.1016/j.contraception.2026.111757"
+   ],
+   "studies": [
+    {
+     "pmid": "42946322",
+     "journal": "Contraception",
+     "caveats": "small sample (N<100 for some subgroups; total N=344), single-center, observational design, self-reported outcomes, narrow to one agricultural California community",
+     "days_online": 2
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-29-college-athletes-told-to-aim-for-10-hours-of-sleep",
+   "title": "College athletes told to aim for 10 hours of sleep a night ended up sleeping about 7.5, the same as before",
+   "created": "2026-10-29",
+   "angle": "'Just sleep more' is advice that's hard to follow. When 50 Division I athletes were told to target 10 hours, total sleep didn't rise (7.63 to 7.51 hours), though bedtimes got a little more regular. This complicates the much-repeated idea that elite athletes bank sleep for performance.",
+   "why_now": "1 day online. It pairs with this week's daylight-saving 'fall back' sleep searches.",
+   "is_it_real": "Thin. Small (n=50), offseason, a two-week intervention measured by WHOOP wristbands, and WHOOP funded the study. It tests whether people can extend sleep, not whether extending it helps performance.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42949008/",
+    "https://doi.org/10.1177/19417381261496986"
+   ],
+   "studies": [
+    {
+     "pmid": "42949008",
+     "journal": "Sports Health",
+     "caveats": "small sample (N<100), elite athlete sample (may not generalize), short follow-up, single-center, industry funding [WHOOP Inc.]",
+     "days_online": 1
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-29-hrt-use-in-denmark-doubled-after-a-decade-at-recor",
+   "title": "HRT use in Denmark doubled after a decade at record lows, and vaginal estrogen use has more than doubled since 1999",
+   "created": "2026-10-29",
+   "angle": "National sales data show systemic hormone therapy among women 45 to 64 fell from 20% in 2001 to 4% in 2013 and is back to 8% in 2025, still well under half the pre-WHI peak. The take: a comeback, but a slow one.",
+   "why_now": "3 days online. 'New hormone therapy patch' is exploding in searches this week. It is also nearly a year since the FDA moved to drop the boxed warning on menopause HRT (announced November 2025; confirm the current label status before citing it).",
+   "is_it_real": "Moderate for what it is. These are national pharmacy sales, which don't show actual use or why it was prescribed. It is Denmark only, so it can't stand in for US use.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42945653/",
+    "https://doi.org/10.1016/j.maturitas.2026.109175"
+   ],
+   "studies": [
+    {
+     "pmid": "42945653",
+     "journal": "Maturitas",
+     "caveats": "observational design, single-country (Denmark), sales data may not reflect actual use or clinical indication",
+     "days_online": 3
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-29-recess-before-lunch-gets-kids-eating-more-of-their",
+   "title": "Recess before lunch gets kids eating more of their school lunch, two studies find, though in one it only moved the fruit",
+   "created": "2026-10-29",
+   "angle": "In Anchorage, schools with recess first and longer lunch and recess periods saw kids eat more entrées, milk, fruit and vegetables. In Virginia, recess first nudged up fruit only and didn't change overall diet quality. That's a cheap scheduling fix with a modest, real effect.",
+   "why_now": "Both are 1 to 2 days online in the Journal of the Academy of Nutrition and Dietetics. 'Reverse recess' is a recurring school-policy topic.",
+   "is_it_real": "Moderate taken together, thin apart. Both are cross-sectional plate-waste studies (2,963 trays in Anchorage, 2,524 in Virginia), and each covers one region. The Virginia data is from a single day in 2019-2020. Neither shows causation.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42946160/",
+    "https://doi.org/10.1016/j.jand.2026.156918",
+    "https://pubmed.ncbi.nlm.nih.gov/42951019/",
+    "https://doi.org/10.1016/j.jand.2026.156922"
+   ],
+   "studies": [
+    {
+     "pmid": "42946160",
+     "journal": "Journal of the Academy of Nutrition and Dietetics",
+     "caveats": "observational design, cross-sectional, single-region (Anchorage, Alaska), post-test only, no sex-disaggregated data",
+     "days_online": 2
+    },
+    {
+     "pmid": "42951019",
+     "journal": "Journal of the Academy of Nutrition and Dietetics",
+     "caveats": "observational design, cross-sectional, secondary analysis, single-day assessment, Virginia-only schools, no sex-disaggregated data",
+     "days_online": 1
+    }
+   ]
+  },
   {
    "id": "rd-2026-10-28-fall-back-week-evening-workouts-didn-t-wreck-older",
    "title": "Fall back week: evening workouts didn't wreck older adults' sleep, and morning light and movement nudge your body clock earlier",

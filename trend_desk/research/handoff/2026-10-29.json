@@ -1,0 +1,523 @@
+{
+ "date": "2026-10-29",
+ "ideas": [
+  {
+   "id": "rd-2026-10-29-when-rival-airlines-share-the-same-big-investors-f",
+   "desk": "research",
+   "title": "When rival airlines share the same big investors, fares run higher and service runs worse, according to 30 years of US data",
+   "created": "2026-10-29",
+   "route": "pitch",
+   "speed": "online 3 days",
+   "beat": "public health, policy and money / consumer money",
+   "angle": "The index funds in your 401(k) probably own pieces of every airline you choose between. This study links that overlap, called common ownership, to higher prices and worse service. It also finds the effect is strongest where the same carriers meet on many routes. The story is the consumer cost of passive investing, told through the thing travelers actually feel.",
+   "why_now": "3 days online, no coverage, and it lands as people book holiday flights. It is also the first study to carry the common-ownership debate, which has been about fares, over to service quality.",
+   "is_it_real": "Moderate. It uses behavioral data on US airlines from 1995 to 2025, but it is an observational panel, so the link is not proven causal. It covers one industry in one country, and service quality comes from industry metrics. Earlier economics work tied common ownership to higher airline fares (Azar, Schmalz and Tecu, Journal of Finance 2018), and that finding has been strongly contested. The pitch should name the dispute, not hide it. Say 'linked to', never 'causes'.",
+   "evidence_strength": "moderate",
+   "other_peg": "Holiday air-travel booking season",
+   "audience": "general",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "W7223706258"
+   ],
+   "studies": [
+    {
+     "pmid": "W7223706258",
+     "doi": "10.1007/s11747-026-01213-w",
+     "journal": "Journal of the Academy of Marketing Science",
+     "headline": "When Rival Airlines Share the Same Big Investors, Service Gets Worse and Fares Go Up",
+     "pubdate": "2026 Oct 26",
+     "days_online": 3,
+     "date_verified": true,
+     "digests": [
+      "Marketing research: customer experience & service"
+     ],
+     "score": 9.0,
+     "caveats": "Single industry (U.S. airlines) and single country; observational panel data, so causality is inferred rather than experimentally established; service quality measured through available industry metrics.",
+     "fact_check_note": "✅ Accurate: Dataset (U.S. airlines, 1995-2025), direction of effects and both moderators (attenuated by customer-asset value, amplified for multi-market rivals) all match; caveats correctly flag the observational panel design.",
+     "coverage": "No coverage found",
+     "flags": [
+      "single_country",
+      "observational"
+     ],
+     "openalex": true,
+     "evidence_type": "behavioral data"
+    }
+   ],
+   "evidence": [
+    "https://openalex.org/W7223706258",
+    "https://doi.org/10.1007/s11747-026-01213-w"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "rd-2026-10-29-the-standard-first-trimester-preeclampsia-screen-m",
+   "desk": "research",
+   "title": "The standard first-trimester preeclampsia screen may give false reassurance to women who conceived by frozen embryo transfer in a hormone-programmed cycle",
+   "created": "2026-10-29",
+   "route": "pitch",
+   "speed": "online 1 days",
+   "beat": "women's health / reproductive health",
+   "angle": "In programmed-cycle frozen embryo transfers, hormones replace ovulation. Those pregnancies had more preeclampsia, yet their uterine-artery Doppler readings looked lower-risk, so the routine screen pointed the wrong way. That matters because first-trimester screening decides who gets aspirin. The piece asks IVF patients and their doctors whether the cycle type should change how their risk is read.",
+   "why_now": "1 day online in Fertility and Sterility, with no coverage. Frozen transfers now make up a large share of IVF, and natural versus programmed cycles is a live debate in fertility care.",
+   "is_it_real": "Moderate to thin. It is one Belgian hospital, observational, and 3,651 pregnancies in total, but the number of programmed-cycle FET pregnancies isn't given here and could be small, so the pitch agents must pull it from the paper. Earlier research already links programmed FET cycles (with no corpus luteum) to more preeclampsia. What's new is the claim that the screen underperforms in this group, which needs replication. Pitch agents should confirm the current US share of frozen transfers from SART or CDC rather than state it from memory.",
+   "evidence_strength": "moderate",
+   "other_peg": "",
+   "audience": "general",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42950944"
+   ],
+   "studies": [
+    {
+     "pmid": "42950944",
+     "doi": "10.1016/j.fertnstert.2026.10.017",
+     "journal": "Fertility and Sterility",
+     "headline": "A standard first-trimester ultrasound test may miss preeclampsia risk in IVF pregnancies conceived without ovulation",
+     "pubdate": "2026 Oct 28",
+     "days_online": 1,
+     "date_verified": true,
+     "digests": [
+      "Conditions & Body",
+      "Women's Health"
+     ],
+     "score": 8,
+     "caveats": "single-center, observational design, narrow to IVF/ART population",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (SERPAPI verified)",
+     "flags": [
+      "observational"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42950944/",
+    "https://doi.org/10.1016/j.fertnstert.2026.10.017"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "rd-2026-10-29-checking-work-email-on-the-commute-in-seemed-to-he",
+   "desk": "research",
+   "title": "Checking work email on the commute in seemed to help people start the day; doing it on the way home brought work into the house",
+   "created": "2026-10-29",
+   "route": "roundup",
+   "speed": "online 6 days",
+   "beat": "work and money",
+   "angle": "Same habit, opposite effect depending on direction. Workers who used work tech on the way in detached from home and got into work faster. Doing it on the way home was linked to more work-to-home conflict.",
+   "why_now": "6 days online. It's a relatable work finding for the Friday issue.",
+   "is_it_real": "Thin to moderate. 149 employees tracked over 10 workdays, all self-reported. One hypothesized path (evening conflict hurting next-day engagement) was not significant. Daily associations can't rule out reverse causation. The caveat fits in a clause.",
+   "evidence_strength": "thin",
+   "other_peg": "",
+   "audience": "general",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "W7223307249"
+   ],
+   "studies": [
+    {
+     "pmid": "W7223307249",
+     "doi": "10.1111/apps.70150",
+     "journal": "Applied Psychology",
+     "headline": "Answering email on the morning commute helps; doing it on the way home doesn't",
+     "pubdate": "2026 Oct 23",
+     "days_online": 6,
+     "date_verified": true,
+     "digests": [
+      "Career psychology: workplace stress & burnout"
+     ],
+     "score": 8.7,
+     "caveats": "All measures are self-reported, including engagement speed; one key hypothesized path (work-to-home conflict predicting next-day engagement speed) was not significant; N=149 over a short 10-day window; daily within-person associations cannot fully rule out reverse causation or unmeasured daily events; country and occupational context not specified in the abstract.",
+     "fact_check_note": "✅ Accurate: Design, N, duration, mediation paths, the non-significant path and the task-significance moderation all match the abstract; caveats appropriately flag self-report and the null path.",
+     "coverage": "No coverage found",
+     "flags": [],
+     "openalex": true,
+     "evidence_type": "experience sampling"
+    }
+   ],
+   "evidence": [
+    "https://openalex.org/W7223307249",
+    "https://doi.org/10.1111/apps.70150"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "rd-2026-10-29-new-job-focusing-only-on-mastering-the-tasks-was-t",
+   "desk": "research",
+   "title": "New job? Focusing only on mastering the tasks was the worst way to settle in over 18 months; learning the people and the place mattered too",
+   "created": "2026-10-29",
+   "route": "roundup",
+   "speed": "online 5 days (unverified)",
+   "beat": "work and money",
+   "angle": "The instinct to prove yourself by nailing the work alone was the onboarding path tied to the worst outcomes among 932 new hires. People who also invested in their team and the wider organization did better.",
+   "why_now": "About 5 days online (date not verified). It's useful advice for anyone starting a job.",
+   "is_it_real": "Thin to moderate. 932 newcomers over 18 months, but observational. The profile analysis is sensitive to modeling choices, and outcomes appear to be self-reported. The digest's fact-check says 'task-only is worst' matches the abstract, but the specific claims about exhaustion and turnover go slightly beyond it. Stick to 'fared worst' unless the paper confirms more. The online date needs confirming.",
+   "evidence_strength": "thin",
+   "other_peg": "",
+   "audience": "general",
+   "confidence": "low",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "W7223449472"
+   ],
+   "studies": [
+    {
+     "pmid": "W7223449472",
+     "doi": "10.1016/j.jvb.2026.104309",
+     "journal": "Journal of Vocational Behavior",
+     "headline": "Five ways people settle into a new job — and the one that goes badly",
+     "pubdate": "2026 Oct 24",
+     "days_online": 5,
+     "date_verified": false,
+     "digests": [
+      "Career psychology: workplace stress & burnout"
+     ],
+     "score": 8.3,
+     "caveats": "Observational longitudinal design, so profile membership is associated with, not proven to cause, outcomes; outcomes appear to be self-reported, including performance; profile analyses are sensitive to modeling choices; sample composition and country context are not detailed in the abstract.",
+     "fact_check_note": "⚠️ Minor issues: Sample, design, profile names and the \"task-only is worst\" conclusion match; the specific outcome directions attributed to the task-only profile and the selective mention of supervisor/coworker commitment go slightly beyond the abstract.",
+     "coverage": "No coverage found",
+     "flags": [
+      "observational"
+     ],
+     "openalex": true,
+     "evidence_type": "longitudinal"
+    }
+   ],
+   "evidence": [
+    "https://openalex.org/W7223449472",
+    "https://doi.org/10.1016/j.jvb.2026.104309"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "rd-2026-10-29-a-nerve-silencing-knee-injection-for-arthritis-pai",
+   "desk": "research",
+   "title": "A nerve-silencing knee injection for arthritis pain did no better than placebo over a full year, and caused more side effects",
+   "created": "2026-10-29",
+   "route": "roundup",
+   "speed": "online 7 days",
+   "beat": "aging, body and metabolism",
+   "angle": "RTX-GRT7039 (resiniferatoxin), a once-promising non-opioid option for knee osteoarthritis, failed its Phase 3 trial at 12, 26 and 52 weeks. Both groups improved a lot, which says something about how much of injection relief is placebo.",
+   "why_now": "7 days online. It's a clean negative Phase 3 result in a condition millions of older adults live with.",
+   "is_it_real": "Strong for what it tests: a 469-person double-blind randomized trial over 52 weeks, with an effect over placebo of -0.11 WOMAC points (p=0.569). Adverse events were 62.8% vs 48.3%. Grünenthal funded it. The sponsor may have announced topline results earlier, so check before calling it new.",
+   "evidence_strength": "strong",
+   "other_peg": "",
+   "audience": "both",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42913877"
+   ],
+   "studies": [
+    {
+     "pmid": "42913877",
+     "doi": "10.1016/j.joca.2026.10.011",
+     "journal": "Osteoarthritis and Cartilage",
+     "headline": "A novel nerve-ablating injection for knee arthritis pain fails to beat placebo in a large Phase 3 trial",
+     "pubdate": "2026 Oct 22",
+     "days_online": 7,
+     "date_verified": true,
+     "digests": [
+      "Elderly & Geriatric"
+     ],
+     "score": 8,
+     "caveats": "industry funding [Grünenthal GmbH], no age breakdown reported, short follow-up relative to chronic disease course",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (SERPAPI verified)",
+     "flags": []
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42913877/",
+    "https://doi.org/10.1016/j.joca.2026.10.011"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "rd-2026-10-29-two-years-after-the-first-over-the-counter-birth-c",
+   "desk": "research",
+   "title": "Two years after the first over-the-counter birth control pill launched, 4 of 344 young Latine adults in a California farm region had used it",
+   "created": "2026-10-29",
+   "route": "roundup",
+   "speed": "online 2 days",
+   "beat": "women's health / reproductive health",
+   "angle": "Putting Opill on the shelf didn't mean people knew about it. Awareness rose only from 11% to 19%. Those who knew tended to get sexual health information from doctors, which suggests outreach and trusted messengers are the missing step.",
+   "why_now": "2 days online. Contraception access is in the news again (the post-Dobbs KFF knowledge-gap item is already queued).",
+   "is_it_real": "Thin but honest. A prospective cohort of 344 people in one agricultural California community, with self-reported use. It isn't national, so frame it as one community.",
+   "evidence_strength": "thin",
+   "other_peg": "",
+   "audience": "general",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42946322"
+   ],
+   "studies": [
+    {
+     "pmid": "42946322",
+     "doi": "10.1016/j.contraception.2026.111757",
+     "journal": "Contraception",
+     "headline": "Only 1% of Latine Young Adults in Rural California Have Actually Used the First OTC Birth Control Pill — Even Two Years After Its Launch",
+     "pubdate": "2026 Oct 27",
+     "days_online": 2,
+     "date_verified": true,
+     "digests": [
+      "Conditions & Body"
+     ],
+     "score": 7,
+     "caveats": "small sample (N<100 for some subgroups; total N=344), single-center, observational design, self-reported outcomes, narrow to one agricultural California community",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (SERPAPI verified)",
+     "flags": [
+      "subgroup",
+      "small_sample",
+      "observational"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42946322/",
+    "https://doi.org/10.1016/j.contraception.2026.111757"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "rd-2026-10-29-college-athletes-told-to-aim-for-10-hours-of-sleep",
+   "desk": "research",
+   "title": "College athletes told to aim for 10 hours of sleep a night ended up sleeping about 7.5, the same as before",
+   "created": "2026-10-29",
+   "route": "roundup",
+   "speed": "online 1 days",
+   "beat": "aging, body and metabolism / sleep",
+   "angle": "'Just sleep more' is advice that's hard to follow. When 50 Division I athletes were told to target 10 hours, total sleep didn't rise (7.63 to 7.51 hours), though bedtimes got a little more regular. This complicates the much-repeated idea that elite athletes bank sleep for performance.",
+   "why_now": "1 day online. It pairs with this week's daylight-saving 'fall back' sleep searches.",
+   "is_it_real": "Thin. Small (n=50), offseason, a two-week intervention measured by WHOOP wristbands, and WHOOP funded the study. It tests whether people can extend sleep, not whether extending it helps performance.",
+   "evidence_strength": "thin",
+   "other_peg": "Clocks fall back Nov 1 (Trend Desk roundup idea)",
+   "audience": "general",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42949008"
+   ],
+   "studies": [
+    {
+     "pmid": "42949008",
+     "doi": "10.1177/19417381261496986",
+     "journal": "Sports Health",
+     "headline": "Telling College Athletes to Sleep 10 Hours a Night Barely Moves the Needle on Actual Sleep Time",
+     "pubdate": "2026 Oct 28",
+     "days_online": 1,
+     "date_verified": true,
+     "digests": [
+      "Fitness & Exercise"
+     ],
+     "score": 7,
+     "caveats": "small sample (N<100), elite athlete sample (may not generalize), short follow-up, single-center, industry funding [WHOOP Inc.]",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (SERPAPI verified)",
+     "flags": [
+      "small_sample"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42949008/",
+    "https://doi.org/10.1177/19417381261496986"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "rd-2026-10-29-apob-vs-ldl-what-the-cholesterol-test-many-doctors",
+   "desk": "research",
+   "title": "ApoB vs. LDL: what the cholesterol test many doctors don't order says about type 2 diabetes risk",
+   "created": "2026-10-29",
+   "route": "brief",
+   "speed": "online 2 days",
+   "beat": "aging, body and metabolism",
+   "angle": "An evergreen explainer on what apoB measures, how it differs from LDL, who might ask for it, and what a 402,000-person UK Biobank study found. When the two disagree, high apoB was linked to more diabetes and high LDL to less.",
+   "why_now": "ApoB is a steadily searched wellness-lab topic. The menopause site already has a statin-and-diabetes brief this would sit beside.",
+   "is_it_real": "Moderate. It is a large observational cohort with up to 16 years of follow-up. But apoB and LDL correlate at r=0.958, so the mutually adjusted 'opposite directions' estimates are fragile and fall short of proof. The finding fits known biology about small, dense LDL and insulin resistance. No results by sex were reported. The page should present it as association and as one study.",
+   "evidence_strength": "moderate",
+   "other_peg": "",
+   "audience": "both",
+   "confidence": "medium",
+   "site": "menopause",
+   "seed_keyword": "apob test",
+   "pmids": [
+    "42935175"
+   ],
+   "studies": [
+    {
+     "pmid": "42935175",
+     "doi": "10.1111/dom.71454",
+     "journal": "Diabetes, Obesity & Metabolism",
+     "headline": "Two cholesterol numbers tell opposite stories about diabetes risk — and doctors have been reading only one",
+     "pubdate": "2026 Oct 27",
+     "days_online": 2,
+     "date_verified": true,
+     "digests": [
+      "Women's Health"
+     ],
+     "score": 7,
+     "caveats": "observational design, no sex-disaggregated data",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (SERPAPI verified)",
+     "flags": [
+      "observational"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42935175/",
+    "https://doi.org/10.1111/dom.71454"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "rd-2026-10-29-hrt-use-in-denmark-doubled-after-a-decade-at-recor",
+   "desk": "research",
+   "title": "HRT use in Denmark doubled after a decade at record lows, and vaginal estrogen use has more than doubled since 1999",
+   "created": "2026-10-29",
+   "route": "roundup",
+   "speed": "online 3 days",
+   "beat": "women's health / menopause",
+   "angle": "National sales data show systemic hormone therapy among women 45 to 64 fell from 20% in 2001 to 4% in 2013 and is back to 8% in 2025, still well under half the pre-WHI peak. The take: a comeback, but a slow one.",
+   "why_now": "3 days online. 'New hormone therapy patch' is exploding in searches this week. It is also nearly a year since the FDA moved to drop the boxed warning on menopause HRT (announced November 2025; confirm the current label status before citing it).",
+   "is_it_real": "Moderate for what it is. These are national pharmacy sales, which don't show actual use or why it was prescribed. It is Denmark only, so it can't stand in for US use.",
+   "evidence_strength": "moderate",
+   "other_peg": "Roughly one year since FDA's November 2025 move to remove HRT's boxed warning; 'new hormone therapy patch' trending",
+   "audience": "general",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42945653"
+   ],
+   "studies": [
+    {
+     "pmid": "42945653",
+     "doi": "10.1016/j.maturitas.2026.109175",
+     "journal": "Maturitas",
+     "headline": "Hormone therapy use in women nearly doubled in Denmark in recent years after a decade of historic lows",
+     "pubdate": "2026 Oct 26",
+     "days_online": 3,
+     "date_verified": true,
+     "digests": [
+      "Aging & Longevity"
+     ],
+     "score": 6,
+     "caveats": "observational design, single-country (Denmark), sales data may not reflect actual use or clinical indication",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (SERPAPI verified)",
+     "flags": [
+      "single_country",
+      "observational"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42945653/",
+    "https://doi.org/10.1016/j.maturitas.2026.109175"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "rd-2026-10-29-recess-before-lunch-gets-kids-eating-more-of-their",
+   "desk": "research",
+   "title": "Recess before lunch gets kids eating more of their school lunch, two studies find, though in one it only moved the fruit",
+   "created": "2026-10-29",
+   "route": "roundup",
+   "speed": "online 2 days",
+   "beat": "food / nutrition science",
+   "angle": "In Anchorage, schools with recess first and longer lunch and recess periods saw kids eat more entrées, milk, fruit and vegetables. In Virginia, recess first nudged up fruit only and didn't change overall diet quality. That's a cheap scheduling fix with a modest, real effect.",
+   "why_now": "Both are 1 to 2 days online in the Journal of the Academy of Nutrition and Dietetics. 'Reverse recess' is a recurring school-policy topic.",
+   "is_it_real": "Moderate taken together, thin apart. Both are cross-sectional plate-waste studies (2,963 trays in Anchorage, 2,524 in Virginia), and each covers one region. The Virginia data is from a single day in 2019-2020. Neither shows causation.",
+   "evidence_strength": "moderate",
+   "other_peg": "",
+   "audience": "general",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42946160",
+    "42951019"
+   ],
+   "studies": [
+    {
+     "pmid": "42946160",
+     "doi": "10.1016/j.jand.2026.156918",
+     "journal": "Journal of the Academy of Nutrition and Dietetics",
+     "headline": "Giving kids longer lunches, longer recess, and recess before eating significantly boosted how much of their school meal they actually consumed",
+     "pubdate": "2026 Oct 27",
+     "days_online": 2,
+     "date_verified": true,
+     "digests": [
+      "Women's Health"
+     ],
+     "score": 4,
+     "caveats": "observational design, cross-sectional, single-region (Anchorage, Alaska), post-test only, no sex-disaggregated data",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (SERPAPI verified)",
+     "flags": [
+      "observational"
+     ]
+    },
+    {
+     "pmid": "42951019",
+     "doi": "10.1016/j.jand.2026.156922",
+     "journal": "Journal of the Academy of Nutrition and Dietetics",
+     "headline": "Scheduling recess before lunch nudges kids to eat more fruit and waste less — but doesn't move the needle on overall diet quality",
+     "pubdate": "2026 Oct 28",
+     "days_online": 1,
+     "date_verified": true,
+     "digests": [
+      "Women's Health"
+     ],
+     "score": 4,
+     "caveats": "observational design, cross-sectional, secondary analysis, single-day assessment, Virginia-only schools, no sex-disaggregated data",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (SERPAPI verified)",
+     "flags": [
+      "observational"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42946160/",
+    "https://doi.org/10.1016/j.jand.2026.156918",
+    "https://pubmed.ncbi.nlm.nih.gov/42951019/",
+    "https://doi.org/10.1016/j.jand.2026.156922"
+   ],
+   "term_details": [],
+   "status": "routed"
+  }
+ ],
+ "dropped": {
+  "specialist-only": 3,
+  "already-covered": 2,
+  "too-thin": 10,
+  "caveats-undo-it": 4,
+  "watch": 1,
+  "duplicate": 1,
+  "methods-only": 2
+ }
+}
