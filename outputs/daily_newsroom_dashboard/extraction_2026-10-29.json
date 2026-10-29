@@ -1,0 +1,385 @@
+{
+  "run_date": "2026-10-29",
+  "niche": "health and wellness",
+  "signal_summary": {
+    "total_reviewed": 172,
+    "total_retained": 5,
+    "total_rejected": 165,
+    "tools_active": [
+      "web_search",
+      "google_news",
+      "google_trends",
+      "serpapi"
+    ],
+    "tools_unavailable": [],
+    "notes": "Google News Radar + Google Trends pre-fetch both available; no collector outages. Recurring-theme flags: Ebola/DRC outbreak, FDA recalls, and GLP-1/weight-loss stories have each appeared in 3+ consecutive runs — only genuinely new developments within those clusters (Gatorade, fruit cocktail) were retained today. site_url not configured; self-check skipped in favor of competitor-list fallback per configs/competitor_list.yaml."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "HHS policy change easing access to unapproved wellness peptides",
+      "primary_entity": "HHS / Secretary Robert F. Kennedy Jr.",
+      "signal_type": "policy_or_regulatory_change",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 70,
+      "opportunity_score": 85,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "source_urls": [
+        "https://www.reuters.com/legal/litigation/us-health-department-allow-temporary-sale-some-unapproved-peptides-2026-10-28/",
+        "https://abcnews.com/Health/wellness-peptides-become-widely-hhs/story?id=137650076"
+      ],
+      "recommended_angle": "Consumer-safety explainer — what's now accessible, what 'unapproved' means in FDA terms, and what doctors say about self-administering unregulated peptides",
+      "why_now": "Policy announced 10/28 by HHS Secretary Kennedy; directly matches a top rising Google search query asking exactly what the safety concerns are — zero authoritative consumer answer exists yet",
+      "primary_headline": "HHS Just Made Unapproved 'Wellness Peptides' Legal to Sell — Here's What That Means for Your Safety",
+      "next_steps": "Publish peptides explainer within 24–48h while search interest is active; confirm FDA/HHS primary notice before finalizing dosage/safety language.",
+      "integrity_flags": [
+        "No direct FDA/HHS notice link retrieved yet — confirm via FDA.gov/HHS.gov before publishing dosage/compliance specifics",
+        "Avoid framing 'unapproved' as synonymous with 'dangerous' or 'harmless' — distinguish unverified manufacturing/dosing from inherent danger"
+      ],
+      "trend_score_reason": "Policy announced 10/28 by HHS Secretary Kennedy; exact match to rising Google Trends query on wellness peptides safety",
+      "opportunity_score_reason": "Direct consumer-safety utility, policy-driven urgency, authoritative sourcing opportunity",
+      "discover_score_reason": "Exact query-match entity clarity with strong audience relevance; durability depends on regulatory follow-up",
+      "notes": "Time-sensitive — publish within 24–48h; update once FDA/HHS notice located. Estimated word count 1,100–1,300.",
+      "fact_check": {
+        "verdict": "minor_issues",
+        "issues": [
+          "Reuters describes this as a 'temporary' allowance for sale, but the headline states peptides are now simply 'legal to sell' without noting the temporary/limited nature of the policy."
+        ],
+        "checked_against": "Reuters headline + ABC News headline in Google News Radar"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Gatorade recall — undeclared food dyes (122,000+ cases)",
+      "primary_entity": "Gatorade / PepsiCo",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 65,
+      "opportunity_score": 72,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://abcnews.com/GMA/Food/122k-cases-gatorade-recalled-due-undeclared-food-dyes/story?id=137002347"
+      ],
+      "recommended_angle": "Direct consumer-safety utility — affected lots, why undeclared dyes matter, what to do",
+      "why_now": "FDA-confirmed recall of a major, widely consumed brand (122,000+ cases) reported 10/27 — mass consumer reach, labeling/allergen safety issue",
+      "primary_headline": "Gatorade Recalls Over 122,000 Cases Nationwide Over Undeclared Food Dyes — What to Know",
+      "next_steps": "Confirm full lot/UPC list against FDA enforcement report before publishing; secure RDN comment on food dye sensitivities if possible.",
+      "integrity_flags": [
+        "Single news source in evidence set — confirm full lot/UPC list against FDA enforcement report before publishing"
+      ],
+      "trend_score_reason": "Major branded recall affecting 122,000+ cases with labeling/allergen significance",
+      "opportunity_score_reason": "High consumer relevance, broad product distribution, direct utility for readers",
+      "discover_score_reason": "Recognizable brand, natural query fit, FDA source locatable; ephemeral news-cycle topic",
+      "notes": "Estimated word count 700–900. Standard recall reporting format.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "ABC News headline in Google News Radar (122K cases, undeclared food dyes, 10/27/2026)"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "FDA approval of immunotherapy-only rectal cancer treatment",
+      "primary_entity": "Memorial Sloan Kettering / FDA",
+      "signal_type": "drug_or_treatment_claim",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 56,
+      "opportunity_score": 75,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.mskcc.org/news/rectal-cancer-disappears-after-experimental-use-immunotherapy"
+      ],
+      "recommended_angle": "Patient-facing explainer on who qualifies (biomarker-defined subset), what the approval really changes, and realistic expectations",
+      "why_now": "FDA approval of a non-surgical immunotherapy pathway for a defined rectal cancer subset — landmark shift from default surgery, explained by the originating institution 10/25",
+      "primary_headline": "FDA Approves Immunotherapy-Only Treatment for Some Rectal Cancers — No Surgery Required",
+      "next_steps": "Secure biomarker eligibility criteria and oncologist quote; clarify patient subset in all headlines and leads.",
+      "integrity_flags": [
+        "Single-source institutional coverage — clearly state this applies to a biomarker-defined subset, not rectal cancer broadly",
+        "Distinguish FDA-approved indication from earlier small-trial findings on the same approach"
+      ],
+      "trend_score_reason": "FDA-approved breakthrough for a specific biomarker-defined rectal cancer subset with durable clinical relevance",
+      "opportunity_score_reason": "Strong Q&A fit, specific entity, substantive clinical newsworthiness for eligible patients",
+      "discover_score_reason": "Specific entity, strong FAQ/explainer format alignment, durable clinical relevance",
+      "notes": "Estimated word count 900–1,100. Requires moderate evidence depth — biomarker/eligibility criteria plus oncologist context. Avoid 'cancer vanishes' sensationalism.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Memorial Sloan Kettering Cancer Center headline in Google News Radar, 10/25/2026"
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "short_term",
+      "topic": "Walmart Great Value fruit cocktail recall",
+      "primary_entity": "Walmart",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 51,
+      "opportunity_score": 66,
+      "discover_score": 3,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.freep.com/story/entertainment/dining/2026/10/27/recall-great-value-walmart-fruit-cocktail-michigan-fda/92456963007/"
+      ],
+      "recommended_angle": "Quick consumer-safety utility — affected product, reason, what to do",
+      "why_now": "Recall reported 10/27; also a live rising Google Trends query — active consumer search demand",
+      "primary_headline": "Walmart Recalls Great Value Fruit Cocktail — Check If You're Affected",
+      "next_steps": "Confirm full national FDA recall scope and affected states before publishing; verify against FDA enforcement report.",
+      "integrity_flags": [
+        "Coverage is regional (Michigan-focused) — confirm full national FDA recall scope before publishing"
+      ],
+      "trend_score_reason": "Consumer brand recall with active search demand; regional-only coverage limits trend strength",
+      "opportunity_score_reason": "Direct utility for Walmart shoppers; moderate audience relevance",
+      "discover_score_reason": "Recognizable brand and natural query fit; regional scope limits discover potential",
+      "notes": "Estimated word count 350–450. Standard short recall brief format. Single regional source requires national scope verification.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Detroit Free Press headline in Google News Radar + 'walmart great value fruit cocktail recall' listed as rising related query under food safety in Google Trends"
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "short_term",
+      "topic": "Stanford study on long COVID health effects and study design",
+      "primary_entity": "Stanford University",
+      "signal_type": "study_or_research",
+      "allowed_category": "infectious disease",
+      "trend_strength_score": 51,
+      "opportunity_score": 67,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://news.stanford.edu/stories/2026/10/long-covid-health-affects-study-design"
+      ],
+      "recommended_angle": "Explain in plain terms what changed in the research and what it means for diagnosis going forward",
+      "why_now": "Stanford University news release 10/27 — long COVID remains a high-interest topic with evolving research landscape",
+      "primary_headline": "New Stanford Research Refines What We Know About Long COVID",
+      "next_steps": "Confirm specific effect-size or methodological finding before drafting; secure study author or infectious disease epidemiologist quote.",
+      "integrity_flags": [
+        "Headline framing is vague ('refines understanding') — confirm specific finding before drafting to avoid thin, generic writeup"
+      ],
+      "trend_score_reason": "Long COVID remains a durable audience interest; Stanford institutional source provides credibility",
+      "opportunity_score_reason": "Research explainer format with solid institutional sourcing and audience relevance",
+      "discover_score_reason": "Moderate discover potential; vague headline framing requires specificity before publication",
+      "notes": "Estimated word count 500–650. Requires confirmation of specific methodological or effect-size findings. Expert sourcing (study author or infectious disease epidemiologist) needed.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Stanford University news release headline in Google News Radar, 10/27/2026"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "Lancet Countdown climate-health report",
+      "reason": "existing"
+    },
+    {
+      "topic": "Miyoko's/Prosperity Organic butter recall",
+      "reason": "existing"
+    },
+    {
+      "topic": "Brush Buddies toothpaste recall",
+      "reason": "existing"
+    },
+    {
+      "topic": "USF/Tampa General colorectal cancer immune-evasion study",
+      "reason": "existing"
+    },
+    {
+      "topic": "Penn Medicine genetics of personality",
+      "reason": "existing"
+    },
+    {
+      "topic": "NIH precision T-cell therapy",
+      "reason": "existing"
+    },
+    {
+      "topic": "PTSD treatment 68% remission",
+      "reason": "existing"
+    },
+    {
+      "topic": "WHO Ebola vaccine trial DRC",
+      "reason": "existing"
+    },
+    {
+      "topic": "Ohio/KFF medical debt study",
+      "reason": "existing"
+    },
+    {
+      "topic": "Calley Means HHS resignation",
+      "reason": "off_category"
+    },
+    {
+      "topic": "STAT Epic EHR antitrust",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Anthropic/Claude drug development",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Walmart/Care Access clinical trial centers",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Cleveland Clinic AI clinical trial matching award",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Ochsner/Paradigm clinical trial expansion (Gulf South)",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Congressional rural clinical trial access bill (Morgan Griffith)",
+      "reason": "off_category"
+    },
+    {
+      "topic": "VCU NIH heart failure grant",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Purdue researchers seeking participants recruitment",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Nature 'no direct benefit' clinical research ethics piece",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "AI-in-doctor's-visit billing findings",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Oura/UC San Diego GLP-1 smart ring study",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Beer/wine/spirits mortality study (News-Medical)",
+      "reason": "unverified_claim"
+    },
+    {
+      "topic": "Gen Z wellness darties",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Wellness tokens",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Gym expansions",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Wellness fairs",
+      "reason": "off_category"
+    },
+    {
+      "topic": "PwC wellness market report",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Wellness counseling profile",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Granada Theater wellness brand purchase",
+      "reason": "off_category"
+    },
+    {
+      "topic": "VCU Wellness Week",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Wedgewood pet medicine recall",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Morgan — Nobody Wants This weight loss chatter",
+      "reason": "brand_safety"
+    },
+    {
+      "topic": "Trends autocomplete noise (ernie johnson health, health insurance agency, fairmount behavioral health system, advocate health careers, mcrib nutrition facts, magnesium bisglycinate gummies review, beller nutrition, ai personal assistant, ai image enhancer, aura points/slang, viral tiktok trends)",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "GLP-1/retatrutide ad-ruling chatter (Eli Lilly)",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Ebola/DRC outbreak",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "CDC superbug list",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "GLP-1 shortage",
+      "reason": "duplicate"
+    }
+  ],
+  "fact_check_summary": {
+    "minor_issues": 1,
+    "accurate": 4
+  },
+  "run_cost": {
+    "total_usd": 0.9427,
+    "calls": [
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11668,
+        "output_tokens": 32000,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 43142,
+        "estimated_cost_usd": 0.6768
+      },
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 43707,
+        "output_tokens": 2115,
+        "cache_read_tokens": 43142,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.1758
+      },
+      {
+        "model": "claude-haiku-4-5",
+        "input_tokens": 10395,
+        "output_tokens": 3019,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0255
+      },
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11876,
+        "output_tokens": 1931,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0646
+      }
+    ]
+  }
+}
