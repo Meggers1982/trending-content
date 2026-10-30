@@ -1,0 +1,579 @@
+{
+  "run_date": "2026-10-30",
+  "generated_at": "2026-10-30T18:25:14",
+  "topic": "adhd-focus",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "adhd-focus",
+    "adult ADHD",
+    "ADHD medication",
+    "focus",
+    "adhd-focus trends",
+    "adhd-focus products",
+    "adhd-focus news",
+    "adhd-focus for beginners",
+    "adhd-focus routine",
+    "adhd-focus benefits",
+    "adhd-focus ideas",
+    "adhd-focus reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 12,
+    "total_reviewed": 80,
+    "total_retained": 1,
+    "total_rejected": 79,
+    "breakouts": 0,
+    "emerging": 0,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "topic": "focus mcisd",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 50,
+      "emergence_score": 39,
+      "velocity_score": 51,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 63,
+      "confidence": "high",
+      "rising_label": "+60%",
+      "latest_interest": 14,
+      "peak_interest": 23,
+      "slope": 14,
+      "acceleration": 3,
+      "seed_terms": [
+        "focus"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        12,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        14,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        19,
+        0,
+        0,
+        12,
+        0,
+        12,
+        0,
+        0,
+        13,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        23,
+        13,
+        11,
+        13,
+        11,
+        0,
+        13,
+        17,
+        20,
+        12,
+        0,
+        10,
+        0,
+        17,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        19,
+        20,
+        17,
+        14
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +60%; interest moved from 0 to 14; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "auditory processing disorder",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "adult ADHD"
+      ]
+    },
+    {
+      "topic": "escitalopram",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "ADHD medication"
+      ]
+    },
+    {
+      "topic": "psychiatrists near me",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "adult ADHD"
+      ]
+    },
+    {
+      "topic": "dyscalculia",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "adult ADHD"
+      ]
+    },
+    {
+      "topic": "seroquel",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "ADHD medication"
+      ]
+    },
+    {
+      "topic": "venlafaxine",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "ADHD medication"
+      ]
+    },
+    {
+      "topic": "anxiety medication names",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "ADHD medication"
+      ]
+    },
+    {
+      "topic": "anxiety medication",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "ADHD medication"
+      ]
+    },
+    {
+      "topic": "depression medication",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "ADHD medication"
+      ]
+    },
+    {
+      "topic": "great gatsby class focus 7 little words",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "thriving with adult adhd",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "focus band pokemon",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "asrs v1.1",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "adderall generic name",
+      "reason": "Weak radar score (49)"
+    },
+    {
+      "topic": "how to get adhd medication without insurance",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "can you treat adhd without medication",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "adhd stimulant medication list",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "treating adhd without medication",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "adhd medication brands",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "adhd medication conversion",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "focus granite schools",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "how to deal with adhd without medication",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "pros and cons of adhd medication",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "focus risd",
+      "reason": "Weak radar score (40)"
+    },
+    {
+      "topic": "adult adhd women",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "adhd as an adult",
+      "reason": "Weak radar score (36)"
+    },
+    {
+      "topic": "adhd adult symptoms",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "adhd symptoms",
+      "reason": "Weak radar score (38)"
+    },
+    {
+      "topic": "adhd in adult women",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "adhd in women",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "what is adhd",
+      "reason": "Weak radar score (38)"
+    },
+    {
+      "topic": "what is adult adhd",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "symptoms of adhd",
+      "reason": "Weak radar score (35)"
+    },
+    {
+      "topic": "symptoms of adult adhd",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "signs of adult adhd",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "signs of adhd",
+      "reason": "Weak radar score (39)"
+    },
+    {
+      "topic": "adhd test",
+      "reason": "Weak radar score (39)"
+    },
+    {
+      "topic": "adhd adult diagnosis",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "adhd adult medication",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "adhd medication",
+      "reason": "Weak radar score (39)"
+    },
+    {
+      "topic": "adhd symptoms in women",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "adhd in adult women symptoms",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "adhd testing",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "adult adhd assessment",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "adult adhd testing",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "signs of adhd in adult women",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "adhd in adult men",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "adhd in adults",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "adult adhd treatment",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "medication for adhd",
+      "reason": "Weak radar score (36)"
+    },
+    {
+      "topic": "what is adhd medication",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "best adhd medication",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "adhd stimulant medication",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "kids adhd medication",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "best medication for adhd",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "adhd medication adderall",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "adderall",
+      "reason": "Weak radar score (38)"
+    },
+    {
+      "topic": "adhd without medication",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "new adhd medication",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "adhd medication for kids",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "adhd meds",
+      "reason": "Weak radar score (40)"
+    },
+    {
+      "topic": "adhd medication side effects",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "adhd medication vyvanse",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "vyvanse",
+      "reason": "Weak radar score (40)"
+    },
+    {
+      "topic": "adhd medication for adults",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "non stimulant adhd medication",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "how to get adhd medication",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "anxiety and adhd medication",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "adult adhd medication",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "adhd medications",
+      "reason": "Weak radar score (39)"
+    },
+    {
+      "topic": "ford focus",
+      "reason": "Weak radar score (36)"
+    },
+    {
+      "topic": "focus group",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "focus portal",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "focus st",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "focus login",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "focus on the family",
+      "reason": "Weak radar score (40)"
+    },
+    {
+      "topic": "ford focus 2014",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "focus groups",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "2012 ford focus",
+      "reason": "Weak radar score (40)"
+    }
+  ]
+}
