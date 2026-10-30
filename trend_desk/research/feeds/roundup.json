@@ -1,6 +1,26 @@
 {
- "updated": "2026-10-29",
+ "updated": "2026-10-30",
  "items": [
+  {
+   "id": "rd-2026-10-30-ice-bath-after-your-evening-workout-do-it-more-tha",
+   "title": "Ice bath after your evening workout? Do it more than two hours before bed, or it may cost you sleep; a sauna may help instead",
+   "created": "2026-10-30",
+   "angle": "A Sports Medicine review of post-exercise cold and heat finds a timing split. Cold water immersion within about two hours of bedtime may delay sleep by disrupting the skin-temperature shift the body uses to fall asleep. Earlier cold exposure, and post-workout sauna or hot water, look neutral to helpful. One line, with the caveat that it's a narrative review built mostly on athletes.",
+   "why_now": "Cold plunges are still a mainstream recovery trend. Clocks fall back Nov 1, and this week's roundup already leans toward sleep-and-exercise timing.",
+   "is_it_real": "This is a narrative review, not a systematic one. The studies it draws on vary in method and are mostly in athletes, and the mechanism is largely theoretical. Use it as a reasonable timing tip with the caveat in a clause, not as proof that ice baths ruin sleep.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42934391/",
+    "https://doi.org/10.1007/s40279-026-02555-9"
+   ],
+   "studies": [
+    {
+     "pmid": "42934391",
+     "journal": "Sports Medicine",
+     "caveats": "Narrative review (not systematic); methodological heterogeneity across reviewed studies; primarily athlete sample (may not generalize); mechanisms largely theoretical",
+     "days_online": 4
+    }
+   ]
+  },
   {
    "id": "rd-2026-10-29-checking-work-email-on-the-commute-in-seemed-to-he",
    "title": "Checking work email on the commute in seemed to help people start the day; doing it on the way home brought work into the house",
