@@ -1,6 +1,32 @@
 {
- "updated": "2026-10-29",
+ "updated": "2026-10-30",
  "items": [
+  {
+   "id": "nd-2026-10-30-the-0-part-d-plan-is-gone-for-2027-stand-alone-dru",
+   "title": "The $0 Part D plan is gone for 2027: stand-alone drug plan premiums are on track to jump 50%, from $34 to $51 a month, for anyone who doesn't switch by Dec 7",
+   "created": "2026-10-30",
+   "angle": "A usable number with a deadline. KFF says no stand-alone Part D plans will have a $0 premium in 2027, so the 4 million-plus people in one now will pay something unless they shop around. The plan with the lowest average premium nationally is Wellcare Value Script at $6.50. AARP Medicare Rx Preferred goes from $126 to $204.50. The deductible cap rises to $700. The take: compare plans before Dec 7, because staying put is what produces the 50% figure. This pairs with Tuesday's roundup item on the 4.3 million people losing their Advantage or Part D plan.",
+   "why_now": "Open enrollment runs through Dec 7, and KFF published this today (Oct 30). The next Friday roundup still lands with about a month left to switch.",
+   "is_it_real": "This is KFF's independent analysis of CMS 2027 plan data. The $51 average is a projection that assumes current enrollees stay in their plans and leaves out people getting the Low-Income Subsidy. It's an enrollment-weighted average, not anyone's actual bill. KFF puts the jump down mainly to the loss of $0-premium plans. The release doesn't say whether the scaled-back Part D premium stabilization demonstration played a part, so don't claim a cause beyond what KFF says. I checked the numbers against the KFF page today: $34→$51, 4M+ in zero-premium PDPs, Wellcare $6.50, AARP $204.50, $700 deductible cap, $643 average PDP deductible.",
+   "evidence": [
+    "https://www.kff.org/medicare/the-average-monthly-premium-for-medicare-part-d-stand-alone-plans-is-projected-to-increase-by-50-from-34-to-51-in-2027-unless-enrollees-switch-to-lower-cost-plans/",
+    "https://www.kff.org/medicare/medicare-part-d-premiums-and-cost-sharing-in-2027/"
+   ],
+   "items": [
+    {
+     "kind": "analysis",
+     "publisher": "kff-feed",
+     "released": "2026-10-30",
+     "url": "https://www.kff.org/medicare/the-average-monthly-premium-for-medicare-part-d-stand-alone-plans-is-projected-to-increase-by-50-from-34-to-51-in-2027-unless-enrollees-switch-to-lower-cost-plans/"
+    },
+    {
+     "kind": "analysis",
+     "publisher": "kff-feed",
+     "released": "2026-10-30",
+     "url": "https://www.kff.org/medicare/medicare-part-d-premiums-and-cost-sharing-in-2027/"
+    }
+   ]
+  },
   {
    "id": "nd-2026-10-27-4-3-million-medicare-enrollees-will-lose-their-adv",
    "title": "4.3 million Medicare enrollees will lose their Advantage or Part D plan at year's end, and 1.4 million more are in plans being merged: check your mail before Dec 7",

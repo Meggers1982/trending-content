@@ -737,6 +737,31 @@
    "judged_on": "2026-10-29",
    "status": "dropped",
    "reason": "too-thin"
+  },
+  "aw-the-average-monthly-premium-for-medicare-part-d-stand-alone-plans-is-p": {
+   "judged_on": "2026-10-30",
+   "status": "kept",
+   "idea": "nd-2026-10-30-the-0-part-d-plan-is-gone-for-2027-stand-alone-dru"
+  },
+  "aw-medicare-part-d-premiums-and-cost-sharing-in-2027": {
+   "judged_on": "2026-10-30",
+   "status": "kept",
+   "idea": "nd-2026-10-30-the-0-part-d-plan-is-gone-for-2027-stand-alone-dru"
+  },
+  "aw-medicare-program-cy-2027-changes-to-the-end-stage-renal-disease-esrd-p": {
+   "judged_on": "2026-10-30",
+   "status": "dropped",
+   "reason": "too-thin"
+  },
+  "aw-development-validation-and-ai-chatbot-evaluation-of-the-adolescent-men": {
+   "judged_on": "2026-10-30",
+   "status": "dropped",
+   "reason": "watch"
+  },
+  "aw-justice-in-aging-s-comments-on-proposed-rule-changes-to-decennial-cens": {
+   "judged_on": "2026-10-30",
+   "status": "dropped",
+   "reason": "too-thin"
   }
  },
  "ideas": {
@@ -1726,6 +1751,65 @@
    ],
    "term_details": [],
    "status": "routed"
+  },
+  "nd-2026-10-30-the-0-part-d-plan-is-gone-for-2027-stand-alone-dru": {
+   "desk": "news",
+   "title": "The $0 Part D plan is gone for 2027: stand-alone drug plan premiums are on track to jump 50%, from $34 to $51 a month, for anyone who doesn't switch by Dec 7",
+   "created": "2026-10-30",
+   "route": "roundup",
+   "speed": "released 0 days ago",
+   "beat": "Medicare / drug prices",
+   "angle": "A usable number with a deadline. KFF says no stand-alone Part D plans will have a $0 premium in 2027, so the 4 million-plus people in one now will pay something unless they shop around. The plan with the lowest average premium nationally is Wellcare Value Script at $6.50. AARP Medicare Rx Preferred goes from $126 to $204.50. The deductible cap rises to $700. The take: compare plans before Dec 7, because staying put is what produces the 50% figure. This pairs with Tuesday's roundup item on the 4.3 million people losing their Advantage or Part D plan.",
+   "why_now": "Open enrollment runs through Dec 7, and KFF published this today (Oct 30). The next Friday roundup still lands with about a month left to switch.",
+   "is_it_real": "This is KFF's independent analysis of CMS 2027 plan data. The $51 average is a projection that assumes current enrollees stay in their plans and leaves out people getting the Low-Income Subsidy. It's an enrollment-weighted average, not anyone's actual bill. KFF puts the jump down mainly to the loss of $0-premium plans. The release doesn't say whether the scaled-back Part D premium stabilization demonstration played a part, so don't claim a cause beyond what KFF says. I checked the numbers against the KFF page today: $34→$51, 4M+ in zero-premium PDPs, Wellcare $6.50, AARP $204.50, $700 deductible cap, $643 average PDP deductible.",
+   "primary_test": "CMS 2027 Part D plan landscape files and the CMS 2027 Part D premium and bid announcement",
+   "standout": false,
+   "standout_reason": "",
+   "needs_independent_test": false,
+   "other_peg": "",
+   "audience": "older adults",
+   "evidence_strength": "strong",
+   "confidence": "high",
+   "site": "",
+   "seed_keyword": "",
+   "keys": [
+    "aw-the-average-monthly-premium-for-medicare-part-d-stand-alone-plans-is-p",
+    "aw-medicare-part-d-premiums-and-cost-sharing-in-2027"
+   ],
+   "items": [
+    {
+     "key": "aw-the-average-monthly-premium-for-medicare-part-d-stand-alone-plans-is-p",
+     "kind": "analysis",
+     "interested_party": false,
+     "title": "The Average Monthly Premium for Medicare Part D Stand-Alone Plans Is Projected to Increase by 50% From $34 to $51 in 2027 Unless Enrollees Switch to Lower-Cost Plans",
+     "publisher": "kff-feed",
+     "url": "https://www.kff.org/medicare/the-average-monthly-premium-for-medicare-part-d-stand-alone-plans-is-projected-to-increase-by-50-from-34-to-51-in-2027-unless-enrollees-switch-to-lower-cost-plans/",
+     "released": "2026-10-30",
+     "date_basis": "source date",
+     "days_old": 0,
+     "source": "AgingWire",
+     "summary": "A new KFF analysis finds that the average monthly premium for Medicare Part D coverage in stand-alone prescription drug plans (PDPs) will increase to $51 in 2027, up 50% from $34 in 2026, if current enrollees don’t switch into lower-premium plans during open enrollment, which runs through December 7."
+    },
+    {
+     "key": "aw-medicare-part-d-premiums-and-cost-sharing-in-2027",
+     "kind": "analysis",
+     "interested_party": false,
+     "title": "Medicare Part D Premiums and Cost Sharing in 2027",
+     "publisher": "kff-feed",
+     "url": "https://www.kff.org/medicare/medicare-part-d-premiums-and-cost-sharing-in-2027/",
+     "released": "2026-10-30",
+     "date_basis": "source date",
+     "days_old": 0,
+     "source": "AgingWire",
+     "summary": "Medicare Part D is a voluntary outpatient prescription drug benefit for people with Medicare provided through private plans, including stand-alone prescription drug plans and Medicare Advantage plans that offer drug coverage. This analysis provides an overview of Medicare Part D premiums and cost sharing in 2027 and key trends over time."
+    }
+   ],
+   "evidence": [
+    "https://www.kff.org/medicare/the-average-monthly-premium-for-medicare-part-d-stand-alone-plans-is-projected-to-increase-by-50-from-34-to-51-in-2027-unless-enrollees-switch-to-lower-cost-plans/",
+    "https://www.kff.org/medicare/medicare-part-d-premiums-and-cost-sharing-in-2027/"
+   ],
+   "term_details": [],
+   "status": "routed"
   }
  },
  "runs": [
@@ -1857,6 +1941,30 @@
    "routes": {},
    "dropped": {
     "too-thin": 1
+   }
+  },
+  {
+   "date": "2026-10-30",
+   "items": 198,
+   "candidates": 5,
+   "skipped": {
+    "already judged": 40,
+    "taken elsewhere": 58,
+    "older": 95,
+    "noise": 0
+   },
+   "sources": {
+    "news": "2026-10-30",
+    "agingwire": "2026-10-30"
+   },
+   "model": "opus",
+   "ideas": 1,
+   "routes": {
+    "roundup": 1
+   },
+   "dropped": {
+    "too-thin": 2,
+    "watch": 1
    }
   }
  ],
