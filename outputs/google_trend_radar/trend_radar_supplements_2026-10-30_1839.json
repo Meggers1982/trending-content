@@ -1,0 +1,829 @@
+{
+  "run_date": "2026-10-30",
+  "generated_at": "2026-10-30T18:39:53",
+  "topic": "supplements",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "supplements",
+    "creatine",
+    "collagen",
+    "electrolytes",
+    "vitamin D",
+    "iron deficiency",
+    "omega-3",
+    "supplements trends",
+    "supplements products",
+    "supplements news",
+    "supplements for beginners",
+    "supplements routine",
+    "supplements benefits",
+    "supplements ideas",
+    "supplements reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 15,
+    "total_reviewed": 80,
+    "total_retained": 2,
+    "total_rejected": 78,
+    "breakouts": 1,
+    "emerging": 0,
+    "rising": 1,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "topic": "axit béo omega-3",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 66,
+      "emergence_score": 82,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 100,
+      "slope": 0,
+      "acceleration": 2,
+      "seed_terms": [
+        "omega-3"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        18,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        52,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        100,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 2,
+      "topic": "joint supplements for dogs",
+      "trend_stage": "rising",
+      "urgency": "monitor",
+      "radar_score": 53,
+      "emergence_score": 40,
+      "velocity_score": 57,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 64,
+      "confidence": "high",
+      "rising_label": "+70%",
+      "latest_interest": 22,
+      "peak_interest": 59,
+      "slope": 22,
+      "acceleration": 3,
+      "seed_terms": [
+        "supplements reviews"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        28,
+        0,
+        0,
+        23,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        22,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        59,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        23,
+        0,
+        23,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        25,
+        0,
+        22
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +70%; interest moved from 0 to 22; found through rising query",
+      "recommended_action": "Track as a developing query and compare against existing coverage."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "dr gundry products",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements products"
+      ]
+    },
+    {
+      "topic": "which treatment would most likely be used for cardiovascular disease? pacemaker radiation blood transfusions bone marrow transplants",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements products"
+      ]
+    },
+    {
+      "topic": "which factor contributes to the development of osteoporosis? genetics lack of calcium naturally occurring exposure ingestion of gluten products",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements products"
+      ]
+    },
+    {
+      "topic": "ginkgo biloba supplement",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements benefits"
+      ]
+    },
+    {
+      "topic": "hormify reviews",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements reviews"
+      ]
+    },
+    {
+      "topic": "thorne omega 3",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "omega-3"
+      ]
+    },
+    {
+      "topic": "ferritin face",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "iron deficiency"
+      ]
+    },
+    {
+      "topic": "best pizza near me",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "omega-3"
+      ]
+    },
+    {
+      "topic": "reef",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "omega-3"
+      ]
+    },
+    {
+      "topic": "benefits of fish oil for women",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements benefits"
+      ]
+    },
+    {
+      "topic": "iherb",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "omega-3"
+      ]
+    },
+    {
+      "topic": "glowing goddess reviews",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements reviews"
+      ]
+    },
+    {
+      "topic": "brooks",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "omega-3"
+      ]
+    },
+    {
+      "topic": "best laptop for work",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "omega-3"
+      ]
+    },
+    {
+      "topic": "pertronix",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "omega-3"
+      ]
+    },
+    {
+      "topic": "night shred reviews",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements reviews"
+      ]
+    },
+    {
+      "topic": "nordic naturals ultimate omega 2x",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "omega-3"
+      ]
+    },
+    {
+      "topic": "what is a roth ira",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "omega-3"
+      ]
+    },
+    {
+      "topic": "yahoo news",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements news"
+      ]
+    },
+    {
+      "topic": "what is a 401k",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements products"
+      ]
+    },
+    {
+      "topic": "true nutra lymphatic complex reviews",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements reviews"
+      ]
+    },
+    {
+      "topic": "best hair growth products for women",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements products"
+      ]
+    },
+    {
+      "topic": "shilajit",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements benefits"
+      ]
+    },
+    {
+      "topic": "ferritin level",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "vitamin D"
+      ]
+    },
+    {
+      "topic": "iron",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements"
+      ]
+    },
+    {
+      "topic": "supplement",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements"
+      ]
+    },
+    {
+      "topic": "magnesium",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "supplements"
+      ]
+    },
+    {
+      "topic": "ora supplements",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "organic herbal supplements",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "compare and contrast drugs and supplements. give two ways that they are similar and two ways that they are different.",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "best liver supplements for fatty liver",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "now foods omega-3",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "best lymphatic drainage supplements",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "collagen supplement benefits",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "megared omega-3 krill oil",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "maison cosmetics deep collagen reviews",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "ancestral supplements reviews",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "thorne omega-3 with coq10",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "benefits of hyaluronic acid supplements",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "bulk supplements reviews",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "ancestral supplements",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "maison cosmetics deep collagen",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "quia collagen mask",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "modere collagen",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "do pickles have electrolytes",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "is 5000 iu of vitamin d safe",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "new iron deficiency guidelines",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "double wood supplements reviews",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "choline supplements",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "raw creatine monohydrate",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "does creatine make you pee more",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "quia collagen night wrapping mask",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "vegan collagen eye serum",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "best collagen for women over 40",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "stur electrolytes",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "low vitamin d 25-hydroxy",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "what are five possible reasons for taking supplements or drugs as part of a workout regiment?",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "hyaluronic acid supplements benefits",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "men's health supplements",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "elemis pro collagen marine cream",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "momentous collagen peptides",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "cevitol marine collagen peptides",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "best hair growth supplements for women",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "best supplements",
+      "reason": "Weak radar score (39)"
+    },
+    {
+      "topic": "iron supplements",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "vitamin supplements",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "magnesium supplements",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "hair supplements",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "calcium supplements",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "collagen supplements",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "collagen",
+      "reason": "Weak radar score (40)"
+    },
+    {
+      "topic": "liver supplements",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "vitamin d supplements",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "vitamin d",
+      "reason": "Weak radar score (40)"
+    },
+    {
+      "topic": "protein supplements",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "creatine supplements",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "joint supplements",
+      "reason": "Weak radar score (39)"
+    },
+    {
+      "topic": "dietary supplements",
+      "reason": "Weak radar score (41)"
+    }
+  ]
+}
