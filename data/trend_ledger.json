@@ -48,6 +48,11 @@
      "date": "2026-10-25",
      "detail": "roundup",
      "event": "routed"
+    },
+    {
+     "date": "2026-10-30",
+     "detail": "do we get an extra hour of sleep tonight",
+     "event": "new-signal"
     }
    ],
    "is_it_real": "The date is a calendar fact. Any health claims should cite sleep research, and the current status of federal permanent-DST legislation must be checked, not assumed.",
@@ -57,7 +62,8 @@
    "speed": "exploding",
    "status": "routed",
    "terms": [
-    "daylight saving time"
+    "daylight saving time",
+    "do we get an extra hour of sleep tonight"
    ],
    "title": "Clocks fall back Nov 1: what the extra hour actually does to your sleep",
    "why_now": "DST ends Sunday Nov 1, and searches are exploding a week ahead."
@@ -581,6 +587,11 @@
      "date": "2026-10-28",
      "detail": "pitch",
      "event": "routed"
+    },
+    {
+     "date": "2026-10-30",
+     "detail": "eli lilly retatrutide sleep study",
+     "event": "new-signal"
     }
    ],
    "is_it_real": "The announcement is real per the newsroom tool, which cited ABC News, but these are Lilly-reported topline results that are not yet peer-reviewed. The pitch must frame them that way and keep the weight and A1c endpoints separate. No source URL came through in the input, so the Lilly release and ABC story need to be retrieved first.",
@@ -590,6 +601,7 @@
    "speed": "new",
    "status": "routed",
    "terms": [
+    "eli lilly retatrutide sleep study",
     "retatrutide vs ozempic new trial data on weight loss and a1c"
    ],
    "title": "Retatrutide 'doubles' Ozempic's weight loss: what Lilly's head-to-head topline data does and doesn't prove",
@@ -717,6 +729,11 @@
      "date": "2026-10-29",
      "detail": "pitch",
      "event": "routed"
+    },
+    {
+     "date": "2026-10-30",
+     "detail": "richard norton, HHS easing enforcement on unapproved wellness peptides — safety concerns explainer",
+     "event": "new-signal"
     }
    ],
    "is_it_real": "The policy is reported by Reuters and ABC News, so the news peg is solid. Specifics are not confirmed yet: which peptides are covered, the 'temporary' terms, and how compliance works. These must be checked against the FDA/HHS notice before any claim is made. Don't frame 'unapproved' as meaning either 'dangerous' or 'safe'.",
@@ -726,7 +743,9 @@
    "speed": "new",
    "status": "routed",
    "terms": [
+    "hhs easing enforcement on unapproved wellness peptides safety concerns explainer",
     "hhs policy change easing access to unapproved wellness peptides",
+    "richard norton",
     "why did the us ease access to unapproved wellness peptides and what are the safety concerns"
    ],
    "title": "HHS opens the door to unapproved 'wellness peptides': what's now for sale, what 'unapproved' means, and what we don't know about self-injecting them",
@@ -783,6 +802,166 @@
    ],
    "title": "Rectal cancer without surgery: FDA approves an immunotherapy-only path, and who actually qualifies",
    "why_now": "An FDA approval is described as new this week, with explanation from the originating institution on 10/25."
+  },
+  "2026-10-30-75-of-nfl-players-had-cte-why-that-number-isn-t-wh": {
+   "angle": "A sharp take: the figure comes from donated brains. Families who suspect CTE are more likely to donate, so it isn't a prevalence rate for all players. Say what the study does show.",
+   "beat": "public health / brain",
+   "confidence": "medium",
+   "created": "2026-10-30",
+   "evidence": [
+    "https://sports.yahoo.com/nfl/article/new-study-estimates-that-nearly-75-of-former-nfl-players-had-cte-at-death-190841288.html"
+   ],
+   "history": [
+    {
+     "date": "2026-10-30",
+     "detail": "roundup",
+     "event": "routed"
+    }
+   ],
+   "is_it_real": "The study coverage looks accurate, but the input only has Yahoo Sports as a secondary source. Confirm the primary paper before writing. The selection-bias caveat is well established for brain-donor cohorts.",
+   "route": "roundup",
+   "seed_keyword": "",
+   "site": "",
+   "speed": "new",
+   "status": "routed",
+   "terms": [
+    "cte found in approximately 75 of studied former nfl players brain donor study"
+   ],
+   "title": "'75% of NFL players had CTE': why that number isn't what the headlines imply",
+   "why_now": "The headline is spreading across sports media this week without the methods context."
+  },
+  "2026-10-30-beer-vs-wine-vs-spirits-a-big-study-finds-differen": {
+   "angle": "A quick, useful item. Give the finding, then the confounders: who drinks wine versus beer differs by income, diet and other habits. Note what it means against current alcohol guidance.",
+   "beat": "nutrition science",
+   "confidence": "medium",
+   "created": "2026-10-30",
+   "evidence": [
+    "https://www.news-medical.net/news/20261025/Beer-wine-or-spirits-A-large-study-finds-different-mortality-patterns-for-each.aspx"
+   ],
+   "history": [
+    {
+     "date": "2026-10-30",
+     "detail": "roundup",
+     "event": "routed"
+    }
+   ],
+   "is_it_real": "The input sources it only to News-Medical. Find the primary paper. It is observational, so no causal claims.",
+   "route": "roundup",
+   "seed_keyword": "",
+   "site": "",
+   "speed": "new",
+   "status": "routed",
+   "terms": [
+    "beer vs wine vs spirits large study finds different mortality patterns by alcohol type"
+   ],
+   "title": "Beer vs. wine vs. spirits: a big study finds different death rates by drink. Here's why it's probably not the drink",
+   "why_now": "New observational data is getting picked up, and alcohol and health stays a live topic."
+  },
+  "2026-10-30-is-it-real-corporate-wellness-programs-make-worker": {
+   "angle": "An AMA leader says wellness perks won't fix physician burnout. Test the broader claim employers sell: do wellness programs measurably improve health, burnout or costs? Check it against the randomized trials. Fits TFM's work-and-money and viral-claims themes.",
+   "beat": "work and money / health claims",
+   "confidence": "medium",
+   "created": "2026-10-30",
+   "evidence": [
+    "https://www.docwirenews.com/post/wellness-programs-wont-fix-a-broken-workplace-ama-leader-says"
+   ],
+   "history": [
+    {
+     "date": "2026-10-30",
+     "detail": "tfm",
+     "event": "routed"
+    }
+   ],
+   "is_it_real": "The peg is modest: one DocWire News story on the AMA comments. The claim is very checkable, though, since randomized workplace wellness trials exist (for example the Illinois Workplace Wellness Study). The writer should pull the primary studies and not rely on summaries.",
+   "route": "tfm",
+   "seed_keyword": "",
+   "site": "",
+   "speed": "new",
+   "status": "routed",
+   "terms": [
+    "corporate wellness perks won t fix physician burnout ama leader skepticism",
+    "corporate wellness programs"
+   ],
+   "title": "Is it real? Corporate wellness programs make workers healthier",
+   "why_now": "'Corporate wellness programs' is a new rising query, and a physician-leader just publicly questioned the premise heading into benefits season."
+  },
+  "2026-10-30-la-fitness-closing-gyms-what-s-actually-happening": {
+   "angle": "A quick, useful item for members. Separate the closure rumor from what is confirmed, and explain the FTC's case against parent company Fitness International over how hard it is to cancel. Close with what to do if your gym closes.",
+   "beat": "fitness / consumer",
+   "confidence": "medium",
+   "created": "2026-10-30",
+   "evidence": [],
+   "history": [
+    {
+     "date": "2026-10-30",
+     "detail": "roundup",
+     "event": "routed"
+    }
+   ],
+   "is_it_real": "Demand is real: four days of sightings, breakout stage on the fitness radar, plus the related lawsuit query. The facts are unverified. The input has no news links, so the closure count and the lawsuit's status must be confirmed before writing. If the closures turn out to be a rumor, that becomes the item.",
+   "route": "roundup",
+   "seed_keyword": "",
+   "site": "",
+   "speed": "exploding",
+   "status": "routed",
+   "terms": [
+    "la fitness shutting down gyms",
+    "fitness international ftc lawsuit"
+   ],
+   "title": "LA Fitness closing gyms? What's actually happening, and what the FTC case over cancellations means for members",
+   "why_now": "This was held as a watch term on 10-26 and kept rising, and the FTC lawsuit query is now climbing alongside it."
+  },
+  "2026-10-30-menopause-brain-fog-why-it-happens-how-long-it-las": {
+   "angle": "Build an evergreen page on menopause brain fog for the menopause site, using the current spike around UCLA neurologist Rhonda Voskuhl's advice as the signal. Cover causes, the timeline, when to see a doctor, and what the evidence says about HRT and lifestyle.",
+   "beat": "menopause / brain",
+   "confidence": "medium",
+   "created": "2026-10-30",
+   "evidence": [],
+   "history": [
+    {
+     "date": "2026-10-30",
+     "detail": "brief:menopause",
+     "event": "routed"
+    }
+   ],
+   "is_it_real": "The spike is news-driven and single-source radar, and the specific Voskuhl coverage isn't in the input. The underlying topic is steady and well researched, so it suits an evergreen page. Don't attribute specific advice to Voskuhl without finding the source.",
+   "route": "brief",
+   "seed_keyword": "menopause brain fog",
+   "site": "menopause",
+   "speed": "exploding",
+   "status": "routed",
+   "terms": [
+    "rhonda voskuhl brain fog advice",
+    "brain fog and fatigue"
+   ],
+   "title": "Menopause brain fog: why it happens, how long it lasts, and what helps",
+   "why_now": "Searches for an expert's brain fog advice are exploding, and 'brain fog and fatigue' is rising. Menopause brain fog has durable search demand beyond this week."
+  },
+  "2026-10-30-the-sleep-habit-everyone-says-predicts-dementia-wh": {
+   "angle": "'Nighttime habit is a key indicator of dementia' is classic clickbait framing. The item names the study, says whether the link is association or prediction, and explains what a reader should actually do.",
+   "beat": "sleep / brain aging",
+   "confidence": "low",
+   "created": "2026-10-30",
+   "evidence": [],
+   "history": [
+    {
+     "date": "2026-10-30",
+     "detail": "roundup",
+     "event": "routed"
+    }
+   ],
+   "is_it_real": "The trend looks real, since two distinct queries are exploding together. The underlying study is unidentified in the input, so the writer must find the primary paper. Expect observational data and reverse causation, because sleep changes can be an early symptom rather than a cause.",
+   "route": "roundup",
+   "seed_keyword": "",
+   "site": "",
+   "speed": "exploding",
+   "status": "routed",
+   "terms": [
+    "daytime sleep habits cognitive decline research",
+    "nighttime habit key indicator of dementia"
+   ],
+   "title": "The sleep habit everyone says predicts dementia: what the new research actually links",
+   "why_now": "Two related phrasings broke out the same day on the brain-aging radar, which suggests a fresh study is circulating."
   }
  },
  "runs": [
@@ -889,6 +1068,27 @@
     "roundup": 2
    },
    "watching": 5
+  },
+  {
+   "collected": {
+    "newsroom": 14,
+    "radar": 30,
+    "rising": 60,
+    "wide": 180
+   },
+   "cost_usd": 0.3157,
+   "date": "2026-10-30",
+   "dropped": 72,
+   "due": 87,
+   "ideas": 6,
+   "model": "claude-opus-5-5",
+   "notes": "Most of today's wide trends were markets, sports and celebrity noise. The real health signal came from the radar and newsroom feeds. The biggest development is the Richard Norton peptide death, which gives the existing HHS peptides pitch a strong human peg, so it was attached rather than duplicated. Several radar terms (the sleep-dementia pair, Voskuhl, the retatrutide sleep study, LA Fitness) arrived without news links, so their facts need confirming before writing. Roundup is getting crowded this week, and the wellness-programs piece is the only new TFM pick.",
+   "routes": {
+    "brief": 1,
+    "roundup": 4,
+    "tfm": 1
+   },
+   "watching": 1
   }
  ],
  "terms": {
@@ -1981,8 +2181,8 @@
    "drop_reason": "noise",
    "first_seen": "2026-06-22",
    "idea": null,
-   "judged_on": "2026-10-29",
-   "last_seen": "2026-10-29",
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
    "sightings": [
     {
      "date": "2026-06-22",
@@ -2042,6 +2242,14 @@
     },
     {
      "date": "2026-10-29",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    },
+    {
+     "date": "2026-10-30",
      "opportunity": null,
      "profile": "daily-signals",
      "score": null,
@@ -2192,10 +2400,18 @@
    "first_seen": "2026-10-29",
    "idea": null,
    "judged_on": "2026-10-29",
-   "last_seen": "2026-10-29",
+   "last_seen": "2026-10-30",
    "sightings": [
     {
      "date": "2026-10-29",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    },
+    {
+     "date": "2026-10-30",
      "opportunity": null,
      "profile": "daily-signals",
      "score": null,
@@ -2357,6 +2573,25 @@
    ],
    "status": "pending",
    "term": "alan jackson health issues"
+  },
+  "alcaraz": {
+   "drop_reason": "noise",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 2000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "alcaraz"
   },
   "aldi lower food prices savings": {
    "drop_reason": null,
@@ -2861,6 +3096,25 @@
    ],
    "status": "dropped",
    "term": "amazon stock"
+  },
+  "amd stock": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 20000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "amd stock"
   },
   "amino acid shown to diminish age related inflammation": {
    "drop_reason": "too-thin",
@@ -3560,8 +3814,8 @@
    "drop_reason": "not-selected",
    "first_seen": "2026-06-22",
    "idea": null,
-   "judged_on": "2026-10-29",
-   "last_seen": "2026-10-29",
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
    "sightings": [
     {
      "date": "2026-06-22",
@@ -3621,6 +3875,14 @@
     },
     {
      "date": "2026-10-29",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    },
+    {
+     "date": "2026-10-30",
      "opportunity": null,
      "profile": "daily-signals",
      "score": null,
@@ -4220,6 +4482,25 @@
    ],
    "status": "pending",
    "term": "beef tallow skincare effectiveness"
+  },
+  "beer vs wine vs spirits large study finds different mortality patterns by alcohol type": {
+   "drop_reason": null,
+   "first_seen": "2026-10-30",
+   "idea": "2026-10-30-beer-vs-wine-vs-spirits-a-big-study-finds-differen",
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": 78,
+     "profile": "daily-pipeline",
+     "score": 50,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "kept",
+   "term": "Beer vs. wine vs. spirits — large study finds different mortality patterns by alcohol type"
   },
   "beeya wellness": {
    "drop_reason": null,
@@ -5107,6 +5388,25 @@
    "status": "dropped",
    "term": "billy joel health"
   },
+  "binance": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 200000,
+     "source": "wide",
+     "stage": "breakout"
+    }
+   ],
+   "status": "dropped",
+   "term": "binance"
+  },
   "biological aging clocks new research in health disease": {
    "drop_reason": null,
    "first_seen": "2026-07-10",
@@ -5927,6 +6227,25 @@
    "status": "pending",
    "term": "Brain-eating amoeba (Naegleria fowleri) case sparks search surge"
   },
+  "brain fog and fatigue": {
+   "drop_reason": null,
+   "first_seen": "2026-10-29",
+   "idea": "2026-10-30-menopause-brain-fog-why-it-happens-how-long-it-las",
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-29",
+   "sightings": [
+    {
+     "date": "2026-10-29",
+     "opportunity": 22,
+     "profile": "brain-aging",
+     "score": 56,
+     "source": "radar",
+     "stage": "rising"
+    }
+   ],
+   "status": "kept",
+   "term": "brain fog and fatigue"
+  },
   "bratz doll makeup tutorial": {
    "drop_reason": null,
    "first_seen": "2026-07-14",
@@ -6340,6 +6659,25 @@
    ],
    "status": "dropped",
    "term": "brushton"
+  },
+  "bryce hall": {
+   "drop_reason": "celebrity-only",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 10000,
+     "source": "wide",
+     "stage": "breakout"
+    }
+   ],
+   "status": "dropped",
+   "term": "bryce hall"
   },
   "bubble bounce mindfulness": {
    "drop_reason": null,
@@ -6790,6 +7128,25 @@
    ],
    "status": "dropped",
    "term": "canelo fight"
+  },
+  "canelo fight time": {
+   "drop_reason": "noise",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 5000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "canelo fight time"
   },
   "carlos alcaraz": {
    "drop_reason": "off-beat",
@@ -7728,6 +8085,25 @@
    "status": "pending",
    "term": "christa pike health update"
   },
+  "christian watson injury": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 100000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "christian watson injury"
+  },
   "cinnamon recall 2026": {
    "drop_reason": null,
    "first_seen": "2026-09-29",
@@ -8520,6 +8896,25 @@
    "status": "pending",
    "term": "Coffee, Gut Health, and Aging: What New Studies Found"
   },
+  "coinbase": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 5000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "coinbase"
+  },
   "cold plunge near me": {
    "drop_reason": "navigational",
    "first_seen": "2026-10-24",
@@ -9048,6 +9443,44 @@
    "status": "pending",
    "term": "corn on the cob nutrition facts"
   },
+  "corporate wellness perks won t fix physician burnout ama leader skepticism": {
+   "drop_reason": null,
+   "first_seen": "2026-10-30",
+   "idea": "2026-10-30-is-it-real-corporate-wellness-programs-make-worker",
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": 67,
+     "profile": "daily-pipeline",
+     "score": 58,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "kept",
+   "term": "Corporate wellness perks won't fix physician burnout — AMA leader skepticism"
+  },
+  "corporate wellness programs": {
+   "drop_reason": null,
+   "first_seen": "2026-10-30",
+   "idea": "2026-10-30-is-it-real-corporate-wellness-programs-make-worker",
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    }
+   ],
+   "status": "kept",
+   "term": "corporate wellness programs"
+  },
   "costa rica senior wellness travel": {
    "drop_reason": null,
    "first_seen": "2026-08-06",
@@ -9448,6 +9881,25 @@
    "status": "pending",
    "term": "Creatine supplementation for women — new RCT in postmenopausal women"
   },
+  "crime": {
+   "drop_reason": "noise",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 10000,
+     "source": "wide",
+     "stage": "breakout"
+    }
+   ],
+   "status": "dropped",
+   "term": "crime"
+  },
   "crossfit workouts": {
    "drop_reason": null,
    "first_seen": "2026-08-31",
@@ -9827,6 +10279,25 @@
    ],
    "status": "pending",
    "term": "crunch fitness greenfield reviews"
+  },
+  "cte found in approximately 75 of studied former nfl players brain donor study": {
+   "drop_reason": null,
+   "first_seen": "2026-10-30",
+   "idea": "2026-10-30-75-of-nfl-players-had-cte-why-that-number-isn-t-wh",
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": 76,
+     "profile": "daily-pipeline",
+     "score": 61,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "kept",
+   "term": "CTE found in approximately 75% of studied former NFL players — brain-donor study"
   },
   "cte prevalence in former nfl players who died 2016 2021 1 in 4 had chronic traumatic encephalopathy": {
    "drop_reason": null,
@@ -10576,6 +11047,25 @@
    "status": "pending",
    "term": "darrell waltrip health"
   },
+  "darrell waltrip rick hendrick mro auction": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 10000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "darrell waltrip rick hendrick mro auction"
+  },
   "dash diet food list": {
    "drop_reason": null,
    "first_seen": "2026-09-29",
@@ -10786,6 +11276,25 @@
    ],
    "status": "kept",
    "term": "daylight saving time"
+  },
+  "daytime sleep habits cognitive decline research": {
+   "drop_reason": null,
+   "first_seen": "2026-10-29",
+   "idea": "2026-10-30-the-sleep-habit-everyone-says-predicts-dementia-wh",
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-29",
+   "sightings": [
+    {
+     "date": "2026-10-29",
+     "opportunity": 89,
+     "profile": "brain-aging",
+     "score": 66,
+     "source": "radar",
+     "stage": "breakout"
+    }
+   ],
+   "status": "kept",
+   "term": "daytime sleep habits cognitive decline research"
   },
   "dazn": {
    "drop_reason": "navigational",
@@ -11650,8 +12159,8 @@
    "drop_reason": "off-beat",
    "first_seen": "2026-07-14",
    "idea": null,
-   "judged_on": "2026-10-27",
-   "last_seen": "2026-10-27",
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
    "sightings": [
     {
      "date": "2026-07-14",
@@ -11695,6 +12204,14 @@
     },
     {
      "date": "2026-10-27",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    },
+    {
+     "date": "2026-10-30",
      "opportunity": null,
      "profile": "daily-signals",
      "score": null,
@@ -11769,6 +12286,44 @@
    ],
    "status": "pending",
    "term": "dimensions of wellness"
+  },
+  "disney plus": {
+   "drop_reason": "navigational",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 20000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "disney plus"
+  },
+  "disneyplus": {
+   "drop_reason": "navigational",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 2000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "disneyplus"
   },
   "distinguish between different kinds of cardiorespiratory fitness assessments and explain why different tests provide dif": {
    "drop_reason": null,
@@ -11872,6 +12427,25 @@
    ],
    "status": "pending",
    "term": "do i qualify for weight loss surgery quiz"
+  },
+  "do we get an extra hour of sleep tonight": {
+   "drop_reason": null,
+   "first_seen": "2026-10-29",
+   "idea": "2026-10-25-clocks-fall-back-nov-1-what-the-extra-hour-actuall",
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-29",
+   "sightings": [
+    {
+     "date": "2026-10-29",
+     "opportunity": 78,
+     "profile": "sleep",
+     "score": 58,
+     "source": "radar",
+     "stage": "emerging"
+    }
+   ],
+   "status": "kept",
+   "term": "do we get an extra hour of sleep tonight"
   },
   "doctors paid to promote glp 1": {
    "drop_reason": null,
@@ -12624,6 +13198,25 @@
    "status": "pending",
    "term": "dr. steven heymsfield glp-1 research"
   },
+  "drake umg contract renewal rumor": {
+   "drop_reason": "celebrity-only",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 2000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "drake umg contract renewal rumor"
+  },
   "drc ebola outbreak tops 10 000 cases": {
    "drop_reason": null,
    "first_seen": "2026-10-27",
@@ -12794,6 +13387,25 @@
    ],
    "status": "dropped",
    "term": "dwarf planet beyond pluto"
+  },
+  "dwyane wade": {
+   "drop_reason": "celebrity-only",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 2000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "dwyane wade"
   },
   "dylan dreyer hair part change": {
    "drop_reason": "celebrity-only",
@@ -13327,6 +13939,25 @@
    "status": "dropped",
    "term": "eight sleep"
   },
+  "ejiro evero": {
+   "drop_reason": "noise",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 100000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "ejiro evero"
+  },
   "el nino us winter forecast": {
    "drop_reason": "noise",
    "first_seen": "2026-10-26",
@@ -13345,6 +13976,25 @@
    ],
    "status": "dropped",
    "term": "el nino us winter forecast"
+  },
+  "eleanor bernie gerson longevity advice": {
+   "drop_reason": "too-thin",
+   "first_seen": "2026-10-29",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-29",
+   "sightings": [
+    {
+     "date": "2026-10-29",
+     "opportunity": 89,
+     "profile": "heart-metabolic",
+     "score": 66,
+     "source": "radar",
+     "stage": "breakout"
+    }
+   ],
+   "status": "dropped",
+   "term": "eleanor bernie gerson longevity advice"
   },
   "election day": {
    "drop_reason": "navigational",
@@ -13480,6 +14130,25 @@
    ],
    "status": "pending",
    "term": "elemental wellness club"
+  },
+  "eli lilly retatrutide sleep study": {
+   "drop_reason": null,
+   "first_seen": "2026-10-29",
+   "idea": "2026-10-28-retatrutide-doubles-ozempic-s-weight-loss-what-lil",
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-29",
+   "sightings": [
+    {
+     "date": "2026-10-29",
+     "opportunity": 89,
+     "profile": "sleep",
+     "score": 67,
+     "source": "radar",
+     "stage": "breakout"
+    }
+   ],
+   "status": "kept",
+   "term": "eli lilly retatrutide sleep study"
   },
   "eli lilly weight loss ads ruling": {
    "drop_reason": "watch",
@@ -15277,6 +15946,25 @@
    "status": "pending",
    "term": "FDA holds public meeting on testosterone use in menopausal women"
   },
+  "fda infant formula nutrition updates": {
+   "drop_reason": "watch",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    }
+   ],
+   "status": "held",
+   "term": "fda infant formula nutrition updates"
+  },
   "fda infant formula safety advisory botulism risk": {
    "drop_reason": null,
    "first_seen": "2026-07-14",
@@ -16044,6 +16732,25 @@
    "status": "pending",
    "term": "fermented foods gastric cancer"
   },
+  "fernando mendoza indiana football departure impact": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 2000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "fernando mendoza indiana football departure impact"
+  },
   "fiber definition": {
    "drop_reason": null,
    "first_seen": "2026-08-31",
@@ -16306,6 +17013,25 @@
    ],
    "status": "pending",
    "term": "fitness centre"
+  },
+  "fitness international ftc lawsuit": {
+   "drop_reason": null,
+   "first_seen": "2026-10-30",
+   "idea": "2026-10-30-la-fitness-closing-gyms-what-s-actually-happening",
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    }
+   ],
+   "status": "kept",
+   "term": "fitness international ftc lawsuit"
   },
   "fitness nutrition twspoondietary": {
    "drop_reason": null,
@@ -17924,6 +18650,25 @@
    "status": "pending",
    "term": "greenheal.net wellness coach"
   },
+  "grizzlies vs trail blazers": {
+   "drop_reason": "noise",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 100000,
+     "source": "wide",
+     "stage": "breakout"
+    }
+   ],
+   "status": "dropped",
+   "term": "grizzlies vs trail blazers"
+  },
   "grocery delivery": {
    "drop_reason": null,
    "first_seen": "2026-09-18",
@@ -18435,6 +19180,25 @@
    ],
    "status": "pending",
    "term": "hair loss elastin protein research"
+  },
+  "halloween store": {
+   "drop_reason": "navigational",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 20000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "halloween store"
   },
   "hancock wellness center": {
    "drop_reason": null,
@@ -20403,6 +21167,25 @@
    ],
    "status": "pending",
    "term": "HHS Awards $96M for Mental Health, Suicide Prevention, and Substance Use Services"
+  },
+  "hhs easing enforcement on unapproved wellness peptides safety concerns explainer": {
+   "drop_reason": null,
+   "first_seen": "2026-10-30",
+   "idea": "2026-10-29-hhs-opens-the-door-to-unapproved-wellness-peptides",
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": 85,
+     "profile": "daily-pipeline",
+     "score": 85,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "kept",
+   "term": "HHS easing enforcement on unapproved wellness peptides — safety concerns explainer"
   },
   "hhs executive order creates new nih division for women s health research": {
    "drop_reason": null,
@@ -22891,6 +23674,44 @@
    "status": "dropped",
    "term": "Inside the wellness event where 'the advice could kill' — vetting dangerous influencer health claims"
   },
+  "insomnia riize": {
+   "drop_reason": "noise",
+   "first_seen": "2026-10-29",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-29",
+   "sightings": [
+    {
+     "date": "2026-10-29",
+     "opportunity": 89,
+     "profile": "sleep",
+     "score": 66,
+     "source": "radar",
+     "stage": "emerging"
+    }
+   ],
+   "status": "dropped",
+   "term": "insomnia riize"
+  },
+  "intel stock": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 100000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "intel stock"
+  },
   "intellectual wellness": {
    "drop_reason": null,
    "first_seen": "2026-08-27",
@@ -23612,6 +24433,25 @@
    "status": "pending",
    "term": "jans health bar"
   },
+  "javits frimpong": {
+   "drop_reason": "too-thin",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 10000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "javits frimpong"
+  },
   "jax skincare": {
    "drop_reason": "noise",
    "first_seen": "2026-10-19",
@@ -24168,6 +25008,25 @@
    ],
    "status": "dropped",
    "term": "jonathan taylor trade"
+  },
+  "jonestown massacre fox news": {
+   "drop_reason": "too-thin",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 5000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "jonestown massacre fox news"
   },
   "josh jacobs suspension": {
    "drop_reason": "noise",
@@ -25155,6 +26014,44 @@
    "status": "pending",
    "term": "koniver wellness"
   },
+  "konyaspor galatasaray": {
+   "drop_reason": "noise",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 2000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "konyaspor - galatasaray"
+  },
+  "konyaspor vs galatasaray": {
+   "drop_reason": "noise",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 5000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "konyaspor vs galatasaray"
+  },
   "korres santorini grape velvet skin drink": {
    "drop_reason": "too-thin",
    "first_seen": "2026-10-26",
@@ -25286,11 +26183,11 @@
    "term": "la bona nail care and spa"
   },
   "la fitness shutting down gyms": {
-   "drop_reason": "watch",
+   "drop_reason": null,
    "first_seen": "2026-10-26",
-   "idea": null,
-   "judged_on": "2026-10-27",
-   "last_seen": "2026-10-26",
+   "idea": "2026-10-30-la-fitness-closing-gyms-what-s-actually-happening",
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
    "sightings": [
     {
      "date": "2026-10-26",
@@ -25299,9 +26196,17 @@
      "score": 66,
      "source": "radar",
      "stage": "breakout"
+    },
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
     }
    ],
-   "status": "held",
+   "status": "kept",
    "term": "la fitness shutting down gyms"
   },
   "la liga": {
@@ -25629,6 +26534,63 @@
    "status": "dropped",
    "term": "lawrence mccutcheon"
   },
+  "layla sleep reviews": {
+   "drop_reason": "navigational",
+   "first_seen": "2026-10-29",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-29",
+   "sightings": [
+    {
+     "date": "2026-10-29",
+     "opportunity": 89,
+     "profile": "sleep",
+     "score": 66,
+     "source": "radar",
+     "stage": "emerging"
+    }
+   ],
+   "status": "dropped",
+   "term": "layla sleep reviews"
+  },
+  "le havre psg": {
+   "drop_reason": "noise",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 2000,
+     "source": "wide",
+     "stage": "breakout"
+    }
+   ],
+   "status": "dropped",
+   "term": "le havre - psg"
+  },
+  "le havre vs psg": {
+   "drop_reason": "noise",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 5000,
+     "source": "wide",
+     "stage": "breakout"
+    }
+   ],
+   "status": "dropped",
+   "term": "le havre vs psg"
+  },
   "le labo holiday fragrance drop": {
    "drop_reason": null,
    "first_seen": "2026-09-21",
@@ -25653,10 +26615,18 @@
    "first_seen": "2026-10-26",
    "idea": null,
    "judged_on": "2026-10-26",
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-10-30",
    "sightings": [
     {
      "date": "2026-10-26",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    },
+    {
+     "date": "2026-10-30",
      "opportunity": null,
      "profile": "daily-signals",
      "score": null,
@@ -26409,6 +27379,44 @@
    "status": "pending",
    "term": "lynn petukhova glp-1 study hair"
   },
+  "maame ewusi mensah frimpong ice injunction": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 5000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "maame ewusi-mensah frimpong ice injunction"
+  },
+  "mac jones dating red flags": {
+   "drop_reason": "celebrity-only",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 5000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "mac jones dating red flags"
+  },
   "magnesium supplement recall fda announces removal of popular magnesium product": {
    "drop_reason": null,
    "first_seen": "2026-06-24",
@@ -26808,6 +27816,25 @@
    "status": "dropped",
    "term": "mauritian tidal trapdoor spider"
   },
+  "max": {
+   "drop_reason": "noise",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 2000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "max"
+  },
   "maxx crosby postgame comments raiders": {
    "drop_reason": "noise",
    "first_seen": "2026-10-26",
@@ -26970,10 +27997,18 @@
    "first_seen": "2026-10-29",
    "idea": null,
    "judged_on": "2026-10-29",
-   "last_seen": "2026-10-29",
+   "last_seen": "2026-10-30",
    "sightings": [
     {
      "date": "2026-10-29",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    },
+    {
+     "date": "2026-10-30",
      "opportunity": null,
      "profile": "daily-signals",
      "score": null,
@@ -27982,6 +29017,25 @@
    ],
    "status": "dropped",
    "term": "mental health women villakalima.com"
+  },
+  "mercado cambiario": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 2000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "mercado cambiario"
   },
   "meritain health provider portal": {
    "drop_reason": null,
@@ -29242,6 +30296,25 @@
    "status": "pending",
    "term": "my numy wellness"
   },
+  "myglamper hitch mounted tent trailer": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 5000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "myglamper hitch mounted tent trailer"
+  },
   "nad therapy near me": {
    "drop_reason": null,
    "first_seen": "2026-09-09",
@@ -30328,6 +31401,25 @@
    "status": "dropped",
    "term": "nhtsa toyota rav4 recall notice"
   },
+  "nicholas mckelvey uss lincoln navy discharge": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 10000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "nicholas mckelvey uss lincoln navy discharge"
+  },
   "nicki minaj": {
    "drop_reason": "celebrity-only",
    "first_seen": "2026-10-25",
@@ -30365,6 +31457,25 @@
    ],
    "status": "dropped",
    "term": "nicki minaj citizenship"
+  },
+  "nighttime habit key indicator of dementia": {
+   "drop_reason": null,
+   "first_seen": "2026-10-29",
+   "idea": "2026-10-30-the-sleep-habit-everyone-says-predicts-dementia-wh",
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-29",
+   "sightings": [
+    {
+     "date": "2026-10-29",
+     "opportunity": 89,
+     "profile": "brain-aging",
+     "score": 66,
+     "source": "radar",
+     "stage": "breakout"
+    }
+   ],
+   "status": "kept",
+   "term": "nighttime habit key indicator of dementia"
   },
   "nih funded trial antiviral drug did not improve long covid symptoms": {
    "drop_reason": null,
@@ -31376,6 +32487,44 @@
    "status": "dropped",
    "term": "nvidia rtx"
   },
+  "nvidia stock": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 20000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "nvidia stock"
+  },
+  "nyc marathon": {
+   "drop_reason": "noise",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 5000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "nyc marathon"
+  },
   "nyt ai chatbot clinical trial for urgent care triage": {
    "drop_reason": null,
    "first_seen": "2026-10-09",
@@ -31421,6 +32570,25 @@
    ],
    "status": "pending",
    "term": "ocean state community wellness"
+  },
+  "ochai agbaji": {
+   "drop_reason": "noise",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 2000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "ochai agbaji"
   },
   "ofrenda": {
    "drop_reason": "off-beat",
@@ -32098,6 +33266,25 @@
    "status": "dropped",
    "term": "packers vs lions"
   },
+  "packers vs panthers": {
+   "drop_reason": "noise",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 50000,
+     "source": "wide",
+     "stage": "breakout"
+    }
+   ],
+   "status": "dropped",
+   "term": "packers vs panthers"
+  },
   "pancreatic cancer two advances fuel new optimism in treatment": {
    "drop_reason": null,
    "first_seen": "2026-06-19",
@@ -32297,6 +33484,25 @@
    ],
    "status": "pending",
    "term": "parenting wellness infoguide famparentlife"
+  },
+  "pasaporte": {
+   "drop_reason": "navigational",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 5000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "pasaporte"
   },
   "passport health": {
    "drop_reason": null,
@@ -32519,6 +33725,25 @@
    ],
    "status": "dropped",
    "term": "patrick mahomes"
+  },
+  "patrick stewart": {
+   "drop_reason": "celebrity-only",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 5000000,
+     "source": "wide",
+     "stage": "breakout"
+    }
+   ],
+   "status": "dropped",
+   "term": "patrick stewart"
   },
   "paul anthony kelly": {
    "drop_reason": "celebrity-only",
@@ -33140,6 +34365,25 @@
    "status": "pending",
    "term": "pilot mental health bill"
   },
+  "pink": {
+   "drop_reason": "noise",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 10000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "pink"
+  },
   "piracy off the coast of somalia": {
    "drop_reason": "off-beat",
    "first_seen": "2026-10-29",
@@ -33254,6 +34498,25 @@
    "status": "held",
    "term": "planet fitness closing locations"
   },
+  "planet fitness customer retention issues": {
+   "drop_reason": "too-thin",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "planet fitness customer retention issues"
+  },
   "planet fitness labor day": {
    "drop_reason": null,
    "first_seen": "2026-09-07",
@@ -33310,6 +34573,25 @@
    ],
    "status": "pending",
    "term": "pms symptoms"
+  },
+  "pokemon mcdonalds happy meal": {
+   "drop_reason": "too-thin",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 5000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "pokemon mcdonalds happy meal"
   },
   "pokemon unite": {
    "drop_reason": "off-beat",
@@ -34105,6 +35387,63 @@
    "status": "pending",
    "term": "publix blueberry recall"
   },
+  "pumpkin seed nutrition": {
+   "drop_reason": "too-thin",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "pumpkin seed nutrition"
+  },
+  "pumpkin seed nutrition facts": {
+   "drop_reason": "too-thin",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "pumpkin seed nutrition facts"
+  },
+  "puppy": {
+   "drop_reason": "noise",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 2000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "puppy"
+  },
   "purple yam": {
    "drop_reason": null,
    "first_seen": "2026-10-01",
@@ -34123,6 +35462,25 @@
    ],
    "status": "pending",
    "term": "purple yam"
+  },
+  "qqq": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 20000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "qqq"
   },
   "quarterman park bird flu warning": {
    "drop_reason": "watch",
@@ -34606,6 +35964,25 @@
    "status": "pending",
    "term": "recommend the best fermented foods to add to a daily diet for gut health"
   },
+  "red baron employee": {
+   "drop_reason": "too-thin",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 10000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "red baron employee"
+  },
   "red light therapy vibrator for menopause symptoms": {
    "drop_reason": null,
    "first_seen": "2026-09-30",
@@ -34651,6 +36028,25 @@
    ],
    "status": "pending",
    "term": "red moon wellness"
+  },
+  "reddit stock": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 20000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "reddit stock"
   },
   "rem sleep linked to lower risk of 83 diseases large cohort study": {
    "drop_reason": null,
@@ -34977,6 +36373,25 @@
    "status": "pending",
    "term": "reverse health cost"
   },
+  "revolver sleep token": {
+   "drop_reason": "noise",
+   "first_seen": "2026-10-29",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-29",
+   "sightings": [
+    {
+     "date": "2026-10-29",
+     "opportunity": 89,
+     "profile": "sleep",
+     "score": 66,
+     "source": "radar",
+     "stage": "emerging"
+    }
+   ],
+   "status": "dropped",
+   "term": "revolver sleep token"
+  },
   "rfk jr s 700 million mental health announcement what the grants actually are": {
    "drop_reason": null,
    "first_seen": "2026-06-19",
@@ -34995,6 +36410,44 @@
    ],
    "status": "pending",
    "term": "RFK Jr.'s $700 Million Mental Health Announcement: What the Grants Actually Are"
+  },
+  "rhonda voskuhl brain fog advice": {
+   "drop_reason": null,
+   "first_seen": "2026-10-29",
+   "idea": "2026-10-30-menopause-brain-fog-why-it-happens-how-long-it-las",
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-29",
+   "sightings": [
+    {
+     "date": "2026-10-29",
+     "opportunity": 89,
+     "profile": "brain-aging",
+     "score": 66,
+     "source": "radar",
+     "stage": "breakout"
+    }
+   ],
+   "status": "kept",
+   "term": "rhonda voskuhl brain fog advice"
+  },
+  "richard norton": {
+   "drop_reason": null,
+   "first_seen": "2026-10-30",
+   "idea": "2026-10-29-hhs-opens-the-door-to-unapproved-wellness-peptides",
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 20000,
+     "source": "wide",
+     "stage": "breakout"
+    }
+   ],
+   "status": "kept",
+   "term": "richard norton"
   },
   "rihanna": {
    "drop_reason": "celebrity-only",
@@ -35098,6 +36551,25 @@
    ],
    "status": "pending",
    "term": "rj mitte depression"
+  },
+  "rob gronkowski": {
+   "drop_reason": "celebrity-only",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 2000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "rob gronkowski"
   },
   "rockville 2027 lineup": {
    "drop_reason": "off-beat",
@@ -35604,6 +37076,25 @@
    ],
    "status": "dropped",
    "term": "san judas tadeo"
+  },
+  "sandisk stock": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 20000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "sandisk stock"
   },
   "saquon barkley injury": {
    "drop_reason": "off-beat",
@@ -36223,6 +37714,25 @@
    "status": "pending",
    "term": "serena williams training day diet"
   },
+  "servicio de ciudadan a e inmigraci n de los estados unidos": {
+   "drop_reason": "navigational",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 20000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "servicio de ciudadanía e inmigración de los estados unidos"
+  },
   "seth rollins hair loss": {
    "drop_reason": null,
    "first_seen": "2026-08-03",
@@ -36355,6 +37865,25 @@
    ],
    "status": "dropped",
    "term": "shark lunges woman fishing trip"
+  },
+  "sharon stone daily fitness routine": {
+   "drop_reason": "celebrity-only",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "sharon stone daily fitness routine"
   },
   "sheba cat food recall": {
    "drop_reason": null,
@@ -36819,6 +38348,25 @@
    "status": "dropped",
    "term": "sk hynix stock"
   },
+  "skeleton": {
+   "drop_reason": "noise",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 5000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "skeleton"
+  },
   "skillsclonelife com health wellness": {
    "drop_reason": null,
    "first_seen": "2026-07-11",
@@ -36918,6 +38466,25 @@
    ],
    "status": "dropped",
    "term": "skin longevity dermatologist tips"
+  },
+  "skin nutrition botanicals": {
+   "drop_reason": "too-thin",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "skin nutrition botanicals"
   },
   "skincare for oily skin": {
    "drop_reason": null,
@@ -37051,6 +38618,25 @@
    ],
    "status": "pending",
    "term": "Sleep Deprivation Linked to Weight Gain — Columbia Study"
+  },
+  "sleep evolution of": {
+   "drop_reason": "too-thin",
+   "first_seen": "2026-10-29",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-29",
+   "sightings": [
+    {
+     "date": "2026-10-29",
+     "opportunity": 68,
+     "profile": "sleep",
+     "score": 53,
+     "source": "radar",
+     "stage": "watch"
+    }
+   ],
+   "status": "dropped",
+   "term": "sleep evolution of"
   },
   "slow cognitive processing in conversation": {
    "drop_reason": "watch",
@@ -37463,7 +39049,7 @@
    "first_seen": "2026-10-28",
    "idea": null,
    "judged_on": "2026-10-28",
-   "last_seen": "2026-10-29",
+   "last_seen": "2026-10-30",
    "sightings": [
     {
      "date": "2026-10-28",
@@ -37475,6 +39061,14 @@
     },
     {
      "date": "2026-10-29",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    },
+    {
+     "date": "2026-10-30",
      "opportunity": null,
      "profile": "daily-signals",
      "score": null,
@@ -37519,6 +39113,25 @@
    ],
    "status": "pending",
    "term": "sp nutrition magnesium bisglycinate gummies reviews"
+  },
+  "sp500": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 5000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "sp500"
   },
   "spa and wellness locations": {
    "drop_reason": null,
@@ -37824,6 +39437,25 @@
    ],
    "status": "dropped",
    "term": "spurs vs jazz"
+  },
+  "spy": {
+   "drop_reason": "noise",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 5000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "spy"
   },
   "ssp measles": {
    "drop_reason": null,
@@ -38392,6 +40024,25 @@
    "status": "pending",
    "term": "stephen a smith mental health"
   },
+  "stock market": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 50000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "stock market"
+  },
   "strait of hormuz drives global oil anxiety": {
    "drop_reason": null,
    "first_seen": "2026-10-07",
@@ -38806,7 +40457,7 @@
    "first_seen": "2026-06-25",
    "idea": "2026-10-25-snap-changes-explainer-for-omaha-families",
    "judged_on": "2026-10-25",
-   "last_seen": "2026-10-28",
+   "last_seen": "2026-10-30",
    "sightings": [
     {
      "date": "2026-06-25",
@@ -38983,6 +40634,14 @@
      "score": null,
      "source": "rising",
      "stage": "rising"
+    },
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
     }
    ],
    "status": "kept",
@@ -39154,10 +40813,18 @@
    "first_seen": "2026-10-29",
    "idea": "2026-10-25-snap-changes-explainer-for-omaha-families",
    "judged_on": "2026-10-29",
-   "last_seen": "2026-10-29",
+   "last_seen": "2026-10-30",
    "sightings": [
     {
      "date": "2026-10-29",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    },
+    {
+     "date": "2026-10-30",
      "opportunity": null,
      "profile": "daily-signals",
      "score": null,
@@ -39475,6 +41142,25 @@
    ],
    "status": "dropped",
    "term": "tank dell"
+  },
+  "tarek el moussa daughter bmw gift": {
+   "drop_reason": "celebrity-only",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 10000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "tarek el moussa daughter bmw gift"
   },
   "tate mcrae beauty brand": {
    "drop_reason": null,
@@ -40108,6 +41794,25 @@
    "status": "dropped",
    "term": "the dog stars streaming success"
   },
+  "the elder scrolls vi": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 20000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "the elder scrolls vi"
+  },
   "the fatal diet meals": {
    "drop_reason": null,
    "first_seen": "2026-10-13",
@@ -40641,6 +42346,25 @@
    "status": "pending",
    "term": "Tirzepatide cardiovascular outcomes trial — mortality and heart failure benefit confirmed"
   },
+  "today show halloween 2026": {
+   "drop_reason": "celebrity-only",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 50000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "today show halloween 2026"
+  },
   "todd engel glp 1 attorney interview": {
    "drop_reason": null,
    "first_seen": "2026-09-29",
@@ -40787,7 +42511,7 @@
    "first_seen": "2026-10-25",
    "idea": null,
    "judged_on": "2026-10-25",
-   "last_seen": "2026-10-29",
+   "last_seen": "2026-10-30",
    "sightings": [
     {
      "date": "2026-10-25",
@@ -40815,6 +42539,14 @@
     },
     {
      "date": "2026-10-29",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    },
+    {
+     "date": "2026-10-30",
      "opportunity": null,
      "profile": "daily-signals",
      "score": null,
@@ -42539,6 +44271,25 @@
    "status": "held",
    "term": "veradermics hair loss pill"
   },
+  "verdict": {
+   "drop_reason": "noise",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 20000,
+     "source": "wide",
+     "stage": "breakout"
+    }
+   ],
+   "status": "dropped",
+   "term": "verdict"
+  },
   "versed rich barrier cream": {
    "drop_reason": null,
    "first_seen": "2026-08-20",
@@ -42732,6 +44483,63 @@
    ],
    "status": "pending",
    "term": "vitruvias therapeutics thyroid recall fda"
+  },
+  "voo": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 5000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "voo"
+  },
+  "voo stock": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 2000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "voo stock"
+  },
+  "vti": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 5000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "vti"
   },
   "vyora wellness": {
    "drop_reason": null,
@@ -45280,6 +47088,25 @@
    "status": "pending",
    "term": "when is women's mental health month"
   },
+  "where to vote": {
+   "drop_reason": "navigational",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 2000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "where to vote"
+  },
   "which eggs are recalled": {
    "drop_reason": null,
    "first_seen": "2026-08-20",
@@ -45776,10 +47603,18 @@
    "first_seen": "2026-10-29",
    "idea": "2026-10-29-hhs-opens-the-door-to-unapproved-wellness-peptides",
    "judged_on": "2026-10-29",
-   "last_seen": "2026-10-29",
+   "last_seen": "2026-10-30",
    "sightings": [
     {
      "date": "2026-10-29",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    },
+    {
+     "date": "2026-10-30",
      "opportunity": null,
      "profile": "daily-signals",
      "score": null,
@@ -45995,6 +47830,25 @@
    ],
    "status": "dropped",
    "term": "winter storm"
+  },
+  "wired an ai breakthrough": {
+   "drop_reason": "too-thin",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 10000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "wired an ai breakthrough"
   },
   "wired investigation into wellness influencers promoting unproven supplements and nootropics as natural adderall alternat": {
    "drop_reason": null,
@@ -46710,6 +48564,25 @@
    ],
    "status": "pending",
    "term": "years buckwheat pet food recall"
+  },
+  "yolanda andrade": {
+   "drop_reason": "celebrity-only",
+   "first_seen": "2026-10-30",
+   "idea": null,
+   "judged_on": "2026-10-30",
+   "last_seen": "2026-10-30",
+   "sightings": [
+    {
+     "date": "2026-10-30",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 2000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "yolanda andrade"
   },
   "ysl beauty new sandalwood fragrance": {
    "drop_reason": null,

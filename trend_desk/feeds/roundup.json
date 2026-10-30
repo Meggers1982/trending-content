@@ -1,18 +1,61 @@
 {
- "updated": "2026-10-29",
+ "updated": "2026-10-30",
  "items": [
   {
-   "id": "2026-10-29-gatorade-recalls-122-000-cases-over-undeclared-foo",
-   "title": "Gatorade recalls 122,000+ cases over undeclared food dyes: which bottles, and why an undeclared dye triggers a recall",
-   "created": "2026-10-29",
-   "angle": "A quick, useful item: what's affected, why labeling dyes matters for people with sensitivities, and where to check lot codes. It also ties lightly into the broader food-dye policy moment.",
-   "why_now": "Recall reported 10/27 for a mass-market brand. It's timely for Friday's issue.",
-   "is_it_real": "Recall reported by ABC News and described as FDA-confirmed. That's a single source in the input, so confirm the lot and UPC list against the FDA enforcement report before publishing.",
+   "id": "2026-10-30-la-fitness-closing-gyms-what-s-actually-happening",
+   "title": "LA Fitness closing gyms? What's actually happening, and what the FTC case over cancellations means for members",
+   "created": "2026-10-30",
+   "angle": "A quick, useful item for members. Separate the closure rumor from what is confirmed, and explain the FTC's case against parent company Fitness International over how hard it is to cancel. Close with what to do if your gym closes.",
+   "why_now": "This was held as a watch term on 10-26 and kept rising, and the FTC lawsuit query is now climbing alongside it.",
+   "is_it_real": "Demand is real: four days of sightings, breakout stage on the fitness radar, plus the related lawsuit query. The facts are unverified. The input has no news links, so the closure count and the lawsuit's status must be confirmed before writing. If the closures turn out to be a rumor, that becomes the item.",
+   "evidence": [],
+   "terms": [
+    "la fitness shutting down gyms",
+    "fitness international ftc lawsuit"
+   ],
+   "status": "routed"
+  },
+  {
+   "id": "2026-10-30-the-sleep-habit-everyone-says-predicts-dementia-wh",
+   "title": "The sleep habit everyone says predicts dementia: what the new research actually links",
+   "created": "2026-10-30",
+   "angle": "'Nighttime habit is a key indicator of dementia' is classic clickbait framing. The item names the study, says whether the link is association or prediction, and explains what a reader should actually do.",
+   "why_now": "Two related phrasings broke out the same day on the brain-aging radar, which suggests a fresh study is circulating.",
+   "is_it_real": "The trend looks real, since two distinct queries are exploding together. The underlying study is unidentified in the input, so the writer must find the primary paper. Expect observational data and reverse causation, because sleep changes can be an early symptom rather than a cause.",
+   "evidence": [],
+   "terms": [
+    "daytime sleep habits cognitive decline research",
+    "nighttime habit key indicator of dementia"
+   ],
+   "status": "routed"
+  },
+  {
+   "id": "2026-10-30-75-of-nfl-players-had-cte-why-that-number-isn-t-wh",
+   "title": "'75% of NFL players had CTE': why that number isn't what the headlines imply",
+   "created": "2026-10-30",
+   "angle": "A sharp take: the figure comes from donated brains. Families who suspect CTE are more likely to donate, so it isn't a prevalence rate for all players. Say what the study does show.",
+   "why_now": "The headline is spreading across sports media this week without the methods context.",
+   "is_it_real": "The study coverage looks accurate, but the input only has Yahoo Sports as a secondary source. Confirm the primary paper before writing. The selection-bias caveat is well established for brain-donor cohorts.",
    "evidence": [
-    "https://abcnews.com/GMA/Food/122k-cases-gatorade-recalled-due-undeclared-food-dyes/story?id=137002347"
+    "https://sports.yahoo.com/nfl/article/new-study-estimates-that-nearly-75-of-former-nfl-players-had-cte-at-death-190841288.html"
    ],
    "terms": [
-    "Gatorade recall — undeclared food dyes (122,000+ cases)"
+    "CTE found in approximately 75% of studied former NFL players — brain-donor study"
+   ],
+   "status": "routed"
+  },
+  {
+   "id": "2026-10-30-beer-vs-wine-vs-spirits-a-big-study-finds-differen",
+   "title": "Beer vs. wine vs. spirits: a big study finds different death rates by drink. Here's why it's probably not the drink",
+   "created": "2026-10-30",
+   "angle": "A quick, useful item. Give the finding, then the confounders: who drinks wine versus beer differs by income, diet and other habits. Note what it means against current alcohol guidance.",
+   "why_now": "New observational data is getting picked up, and alcohol and health stays a live topic.",
+   "is_it_real": "The input sources it only to News-Medical. Find the primary paper. It is observational, so no causal claims.",
+   "evidence": [
+    "https://www.news-medical.net/news/20261025/Beer-wine-or-spirits-A-large-study-finds-different-mortality-patterns-for-each.aspx"
+   ],
+   "terms": [
+    "Beer vs. wine vs. spirits — large study finds different mortality patterns by alcohol type"
    ],
    "status": "routed"
   },
@@ -29,6 +72,21 @@
    ],
    "terms": [
     "barbara barrie"
+   ],
+   "status": "routed"
+  },
+  {
+   "id": "2026-10-29-gatorade-recalls-122-000-cases-over-undeclared-foo",
+   "title": "Gatorade recalls 122,000+ cases over undeclared food dyes: which bottles, and why an undeclared dye triggers a recall",
+   "created": "2026-10-29",
+   "angle": "A quick, useful item: what's affected, why labeling dyes matters for people with sensitivities, and where to check lot codes. It also ties lightly into the broader food-dye policy moment.",
+   "why_now": "Recall reported 10/27 for a mass-market brand. It's timely for Friday's issue.",
+   "is_it_real": "Recall reported by ABC News and described as FDA-confirmed. That's a single source in the input, so confirm the lot and UPC list against the FDA enforcement report before publishing.",
+   "evidence": [
+    "https://abcnews.com/GMA/Food/122k-cases-gatorade-recalled-due-undeclared-food-dyes/story?id=137002347"
+   ],
+   "terms": [
+    "Gatorade recall — undeclared food dyes (122,000+ cases)"
    ],
    "status": "routed"
   },
@@ -154,7 +212,8 @@
    "is_it_real": "The date is a calendar fact. Any health claims should cite sleep research, and the current status of federal permanent-DST legislation must be checked, not assumed.",
    "evidence": [],
    "terms": [
-    "daylight saving time"
+    "daylight saving time",
+    "do we get an extra hour of sleep tonight"
    ],
    "status": "routed"
   },

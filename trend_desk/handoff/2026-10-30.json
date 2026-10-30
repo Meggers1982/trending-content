@@ -1,0 +1,428 @@
+{
+ "date": "2026-10-30",
+ "ideas": [
+  {
+   "id": "2026-10-30-la-fitness-closing-gyms-what-s-actually-happening",
+   "title": "LA Fitness closing gyms? What's actually happening, and what the FTC case over cancellations means for members",
+   "created": "2026-10-30",
+   "route": "roundup",
+   "speed": "exploding",
+   "beat": "fitness / consumer",
+   "angle": "A quick, useful item for members. Separate the closure rumor from what is confirmed, and explain the FTC's case against parent company Fitness International over how hard it is to cancel. Close with what to do if your gym closes.",
+   "why_now": "This was held as a watch term on 10-26 and kept rising, and the FTC lawsuit query is now climbing alongside it.",
+   "is_it_real": "Demand is real: four days of sightings, breakout stage on the fitness radar, plus the related lawsuit query. The facts are unverified. The input has no news links, so the closure count and the lawsuit's status must be confirmed before writing. If the closures turn out to be a rumor, that becomes the item.",
+   "confidence": "medium",
+   "evidence": [],
+   "terms": [
+    "la fitness shutting down gyms",
+    "fitness international ftc lawsuit"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-10-30",
+     "event": "routed",
+     "detail": "roundup"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "la fitness shutting down gyms",
+     "speed": "exploding",
+     "first_seen": "2026-10-26",
+     "weeks_seen": 1,
+     "sources": [
+      "radar",
+      "rising"
+     ],
+     "profiles": [
+      "daily-signals",
+      "fitness"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-26",
+       "opportunity": 89,
+       "profile": "fitness",
+       "score": 66,
+       "source": "radar",
+       "stage": "breakout"
+      },
+      {
+       "date": "2026-10-30",
+       "source": "rising",
+       "profile": "daily-signals",
+       "stage": "rising"
+      }
+     ],
+     "previous_verdict": "held",
+     "previous_reason": "watch"
+    },
+    {
+     "term": "fitness international ftc lawsuit",
+     "speed": "new",
+     "first_seen": "2026-10-30",
+     "weeks_seen": 1,
+     "sources": [
+      "rising"
+     ],
+     "profiles": [
+      "daily-signals"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-30",
+       "source": "rising",
+       "profile": "daily-signals",
+       "stage": "rising"
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-10-30-the-sleep-habit-everyone-says-predicts-dementia-wh",
+   "title": "The sleep habit everyone says predicts dementia: what the new research actually links",
+   "created": "2026-10-30",
+   "route": "roundup",
+   "speed": "exploding",
+   "beat": "sleep / brain aging",
+   "angle": "'Nighttime habit is a key indicator of dementia' is classic clickbait framing. The item names the study, says whether the link is association or prediction, and explains what a reader should actually do.",
+   "why_now": "Two related phrasings broke out the same day on the brain-aging radar, which suggests a fresh study is circulating.",
+   "is_it_real": "The trend looks real, since two distinct queries are exploding together. The underlying study is unidentified in the input, so the writer must find the primary paper. Expect observational data and reverse causation, because sleep changes can be an early symptom rather than a cause.",
+   "confidence": "low",
+   "evidence": [],
+   "terms": [
+    "daytime sleep habits cognitive decline research",
+    "nighttime habit key indicator of dementia"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-10-30",
+     "event": "routed",
+     "detail": "roundup"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "daytime sleep habits cognitive decline research",
+     "speed": "exploding",
+     "first_seen": "2026-10-29",
+     "weeks_seen": 1,
+     "sources": [
+      "radar"
+     ],
+     "profiles": [
+      "brain-aging"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-29",
+       "source": "radar",
+       "profile": "brain-aging",
+       "stage": "breakout",
+       "score": 66,
+       "opportunity": 89
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    },
+    {
+     "term": "nighttime habit key indicator of dementia",
+     "speed": "exploding",
+     "first_seen": "2026-10-29",
+     "weeks_seen": 1,
+     "sources": [
+      "radar"
+     ],
+     "profiles": [
+      "brain-aging"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-29",
+       "source": "radar",
+       "profile": "brain-aging",
+       "stage": "breakout",
+       "score": 66,
+       "opportunity": 89
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-10-30-menopause-brain-fog-why-it-happens-how-long-it-las",
+   "title": "Menopause brain fog: why it happens, how long it lasts, and what helps",
+   "created": "2026-10-30",
+   "route": "brief",
+   "speed": "exploding",
+   "beat": "menopause / brain",
+   "angle": "Build an evergreen page on menopause brain fog for the menopause site, using the current spike around UCLA neurologist Rhonda Voskuhl's advice as the signal. Cover causes, the timeline, when to see a doctor, and what the evidence says about HRT and lifestyle.",
+   "why_now": "Searches for an expert's brain fog advice are exploding, and 'brain fog and fatigue' is rising. Menopause brain fog has durable search demand beyond this week.",
+   "is_it_real": "The spike is news-driven and single-source radar, and the specific Voskuhl coverage isn't in the input. The underlying topic is steady and well researched, so it suits an evergreen page. Don't attribute specific advice to Voskuhl without finding the source.",
+   "confidence": "medium",
+   "evidence": [],
+   "terms": [
+    "rhonda voskuhl brain fog advice",
+    "brain fog and fatigue"
+   ],
+   "site": "menopause",
+   "seed_keyword": "menopause brain fog",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-10-30",
+     "event": "routed",
+     "detail": "brief:menopause"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "rhonda voskuhl brain fog advice",
+     "speed": "exploding",
+     "first_seen": "2026-10-29",
+     "weeks_seen": 1,
+     "sources": [
+      "radar"
+     ],
+     "profiles": [
+      "brain-aging"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-29",
+       "source": "radar",
+       "profile": "brain-aging",
+       "stage": "breakout",
+       "score": 66,
+       "opportunity": 89
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    },
+    {
+     "term": "brain fog and fatigue",
+     "speed": "new",
+     "first_seen": "2026-10-29",
+     "weeks_seen": 1,
+     "sources": [
+      "radar"
+     ],
+     "profiles": [
+      "brain-aging"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-29",
+       "source": "radar",
+       "profile": "brain-aging",
+       "stage": "rising",
+       "score": 56,
+       "opportunity": 22
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-10-30-is-it-real-corporate-wellness-programs-make-worker",
+   "title": "Is it real? Corporate wellness programs make workers healthier",
+   "created": "2026-10-30",
+   "route": "tfm",
+   "speed": "new",
+   "beat": "work and money / health claims",
+   "angle": "An AMA leader says wellness perks won't fix physician burnout. Test the broader claim employers sell: do wellness programs measurably improve health, burnout or costs? Check it against the randomized trials. Fits TFM's work-and-money and viral-claims themes.",
+   "why_now": "'Corporate wellness programs' is a new rising query, and a physician-leader just publicly questioned the premise heading into benefits season.",
+   "is_it_real": "The peg is modest: one DocWire News story on the AMA comments. The claim is very checkable, though, since randomized workplace wellness trials exist (for example the Illinois Workplace Wellness Study). The writer should pull the primary studies and not rely on summaries.",
+   "confidence": "medium",
+   "evidence": [
+    "https://www.docwirenews.com/post/wellness-programs-wont-fix-a-broken-workplace-ama-leader-says"
+   ],
+   "terms": [
+    "corporate wellness perks won t fix physician burnout ama leader skepticism",
+    "corporate wellness programs"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-10-30",
+     "event": "routed",
+     "detail": "tfm"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "Corporate wellness perks won't fix physician burnout — AMA leader skepticism",
+     "speed": "new",
+     "first_seen": "2026-10-30",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-30",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 58,
+       "opportunity": 67
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    },
+    {
+     "term": "corporate wellness programs",
+     "speed": "new",
+     "first_seen": "2026-10-30",
+     "weeks_seen": 1,
+     "sources": [
+      "rising"
+     ],
+     "profiles": [
+      "daily-signals"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-30",
+       "source": "rising",
+       "profile": "daily-signals",
+       "stage": "rising"
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-10-30-75-of-nfl-players-had-cte-why-that-number-isn-t-wh",
+   "title": "'75% of NFL players had CTE': why that number isn't what the headlines imply",
+   "created": "2026-10-30",
+   "route": "roundup",
+   "speed": "new",
+   "beat": "public health / brain",
+   "angle": "A sharp take: the figure comes from donated brains. Families who suspect CTE are more likely to donate, so it isn't a prevalence rate for all players. Say what the study does show.",
+   "why_now": "The headline is spreading across sports media this week without the methods context.",
+   "is_it_real": "The study coverage looks accurate, but the input only has Yahoo Sports as a secondary source. Confirm the primary paper before writing. The selection-bias caveat is well established for brain-donor cohorts.",
+   "confidence": "medium",
+   "evidence": [
+    "https://sports.yahoo.com/nfl/article/new-study-estimates-that-nearly-75-of-former-nfl-players-had-cte-at-death-190841288.html"
+   ],
+   "terms": [
+    "cte found in approximately 75 of studied former nfl players brain donor study"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-10-30",
+     "event": "routed",
+     "detail": "roundup"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "CTE found in approximately 75% of studied former NFL players — brain-donor study",
+     "speed": "new",
+     "first_seen": "2026-10-30",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-30",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 61,
+       "opportunity": 76
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-10-30-beer-vs-wine-vs-spirits-a-big-study-finds-differen",
+   "title": "Beer vs. wine vs. spirits: a big study finds different death rates by drink. Here's why it's probably not the drink",
+   "created": "2026-10-30",
+   "route": "roundup",
+   "speed": "new",
+   "beat": "nutrition science",
+   "angle": "A quick, useful item. Give the finding, then the confounders: who drinks wine versus beer differs by income, diet and other habits. Note what it means against current alcohol guidance.",
+   "why_now": "New observational data is getting picked up, and alcohol and health stays a live topic.",
+   "is_it_real": "The input sources it only to News-Medical. Find the primary paper. It is observational, so no causal claims.",
+   "confidence": "medium",
+   "evidence": [
+    "https://www.news-medical.net/news/20261025/Beer-wine-or-spirits-A-large-study-finds-different-mortality-patterns-for-each.aspx"
+   ],
+   "terms": [
+    "beer vs wine vs spirits large study finds different mortality patterns by alcohol type"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-10-30",
+     "event": "routed",
+     "detail": "roundup"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "Beer vs. wine vs. spirits — large study finds different mortality patterns by alcohol type",
+     "speed": "new",
+     "first_seen": "2026-10-30",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-30",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 50,
+       "opportunity": 78
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  }
+ ],
+ "dropped": 72,
+ "watching": 1,
+ "notes": "Most of today's wide trends were markets, sports and celebrity noise. The real health signal came from the radar and newsroom feeds. The biggest development is the Richard Norton peptide death, which gives the existing HHS peptides pitch a strong human peg, so it was attached rather than duplicated. Several radar terms (the sleep-dementia pair, Voskuhl, the retatrutide sleep study, LA Fitness) arrived without news links, so their facts need confirming before writing. Roundup is getting crowded this week, and the wellness-programs piece is the only new TFM pick.",
+ "cost_usd": 0.3157
+}

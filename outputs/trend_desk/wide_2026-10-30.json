@@ -1,0 +1,639 @@
+{
+ "run_date": "2026-10-30",
+ "geo": "US",
+ "items": [
+  {
+   "query": "patrick stewart",
+   "search_volume": 5000000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Entertainment"
+   ],
+   "news": [
+    {
+     "title": "Patrick Stewart, Shakespearean actor and Star Trek star, dies at 86",
+     "link": "https://www.washingtonpost.com/obituaries/2026/10/29/patrick-stewart-shakespearean-actor-star-trek-star-dies-86-2/",
+     "source": "The Washington Post"
+    },
+    {
+     "title": "Patrick Stewart Was Regal, Stately and Quite Hilarious",
+     "link": "https://www.nytimes.com/2026/10/30/arts/television/patrick-stewart-humor-comedy.html",
+     "source": "The New York Times"
+    }
+   ]
+  },
+  {
+   "query": "binance",
+   "search_volume": 200000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Business and Finance"
+   ],
+   "news": [
+    {
+     "title": "The $6.3 Billion Binance Hack Was Pulled Off in Just 20 Minutes",
+     "link": "https://www.wired.com/story/the-dollar63-billion-binance-hack-was-pulled-off-in-just-20-minutes/",
+     "source": "WIRED"
+    },
+    {
+     "title": "How hackers allegedly used AI to hide a $6.3B Binance heist",
+     "link": "https://finance.yahoo.com/video/how-hackers-allegedly-used-ai-to-hide-a-63b-binance-heist-162338122.html",
+     "source": "Yahoo Finance"
+    }
+   ]
+  },
+  {
+   "query": "intel stock",
+   "search_volume": 100000,
+   "increase_percentage": 900,
+   "categories": [
+    "Business and Finance"
+   ],
+   "news": [
+    {
+     "title": "Intel on course for worst day ever, triggers global chip rout",
+     "link": "https://www.reuters.com/business/intel-warning-sparks-chip-rout-pc-weakness-clouds-turnaround-2026-10-30/",
+     "source": "Reuters"
+    },
+    {
+     "title": "Why Intel Is Down Today",
+     "link": "https://finance.yahoo.com/markets/stocks/articles/why-intel-down-today-170902245.html",
+     "source": "Yahoo Finance"
+    }
+   ]
+  },
+  {
+   "query": "grizzlies vs trail blazers",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Trail Blazers' Ja Morant exits first game vs. Grizzlies with hamstring injury",
+     "link": "https://www.espn.com/nba/story/_/id/50325662/trail-blazers-ja-morant-exit-grizzlies-hamstring-injury",
+     "source": "ESPN"
+    },
+    {
+     "title": "Two Injuries Tell the Story of Portland’s First Loss",
+     "link": "https://www.blazersedge.com/from-press-row/117703/portland-trail-blazers-ja-morant-injury-nba-news-memphis-grizzlies-recap-robert-williams-zach-edey-donovan-clingan",
+     "source": "Blazer's Edge"
+    }
+   ]
+  },
+  {
+   "query": "christian watson injury",
+   "search_volume": 100000,
+   "increase_percentage": 700,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Packers' Christian Watson returns to play after hospital trip for chest injury",
+     "link": "https://www.espn.com/nfl/story/_/id/50324081/packers-christian-watson-hospital-chest-injury-panthers",
+     "source": "ESPN"
+    },
+    {
+     "title": "Packers’ Christian Watson reveals alarming symptom behind hospital visit",
+     "link": "https://sports.yahoo.com/articles/packers-christian-watson-reveals-alarming-155612821.html",
+     "source": "Yahoo Sports"
+    }
+   ]
+  },
+  {
+   "query": "ejiro evero",
+   "search_volume": 100000,
+   "increase_percentage": 500,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Panthers relieve Ejiro Evero of defensive coordinator duties",
+     "link": "https://www.espn.com/nfl/story/_/id/50328239/panthers-relieve-ejiro-evero-defensive-coordinator-duties",
+     "source": "ESPN"
+    },
+    {
+     "title": "‘Should Have Happened 2–3 Years Ago,’ ‘Defense Wasn’t the Problem Last Night’ — NFL Fans Divided Over Panthers Firing DC Ejiro Evero",
+     "link": "https://sports.yahoo.com/articles/happened-2-3-years-ago-170604818.html",
+     "source": "Yahoo Sports"
+    }
+   ]
+  },
+  {
+   "query": "packers vs panthers",
+   "search_volume": 50000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Packers' Josh Jacobs: TD celebration was ode to gospel song, not mocking arrest",
+     "link": "https://www.espn.com/nfl/story/_/id/50325876/packers-josh-jacobs-says-td-celebration-mocking-arrest",
+     "source": "ESPN"
+    },
+    {
+     "title": "‘It Was Very Strange,’ ‘A Sobering Experience’ — NFL Analyst Weighs In on Josh Jacobs Playing for Packers Following Major Off-Field Issues",
+     "link": "https://sports.yahoo.com/articles/very-strange-sobering-experience-nfl-170053264.html",
+     "source": "Yahoo Sports"
+    }
+   ]
+  },
+  {
+   "query": "stock market",
+   "search_volume": 50000,
+   "increase_percentage": 200,
+   "categories": [
+    "Business and Finance"
+   ],
+   "news": [
+    {
+     "title": "Nasdaq plunges 3%, heads for worst day since June as tech stocks lead sell-off: Live updates",
+     "link": "https://www.cnbc.com/2026/10/29/stock-market-today-live-updates.html",
+     "source": "CNBC"
+    },
+    {
+     "title": "Tech stocks tumble as Amazon, Intel fuel AI spending fears",
+     "link": "https://www.staradvertiser.com/2026/10/30/breaking-news/tech-stocks-tumble-as-amazon-intel-fuel-ai-spending-fears/",
+     "source": "Honolulu Star-Advertiser"
+    }
+   ]
+  },
+  {
+   "query": "today show halloween 2026",
+   "search_volume": 50000,
+   "increase_percentage": 200,
+   "categories": [
+    "Entertainment",
+    "Hobbies and Leisure"
+   ],
+   "news": [
+    {
+     "title": "TODAY Halloween 2026: See The Costume Reveals and Best Moments Live",
+     "link": "https://www.today.com/life/holidays/live-blog/2026-today-show-halloween-costume-reveal-rcna605004",
+     "source": "TODAY.com"
+    },
+    {
+     "title": "Halloween 2026 – See 'Today' show, Kelly and Mark and more TV hosts' costumes",
+     "link": "https://www.usatoday.com/story/entertainment/tv-streaming/2026/10/30/today-show-kelly-and-mark-tv-hosts-halloween-costumes-2026/92368469007/",
+     "source": "USA Today"
+    }
+   ]
+  },
+  {
+   "query": "verdict",
+   "search_volume": 20000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Other"
+   ],
+   "news": [
+    {
+     "title": "Appeals court reinstates $4.7B ‘Sunday Ticket’ class action verdict against NFL",
+     "link": "https://nypost.com/2026/10/30/media/appeals-court-reinstates-4-7b-sunday-ticket-class-action-verdict-against-nfl/",
+     "source": "New York Post"
+    },
+    {
+     "title": "NFL Faces New Trial Over Damages in Sunday Ticket Fight",
+     "link": "https://www.bloomberg.com/news/articles/2026-10-30/nfl-faces-new-trial-over-damages-in-sunday-ticket-fight",
+     "source": "Bloomberg.com"
+    }
+   ]
+  },
+  {
+   "query": "richard norton",
+   "search_volume": 20000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Other"
+   ],
+   "news": [
+    {
+     "title": "‘Mad Max’ Actor Richard Norton Cause of Death Revealed to Be Linked to Peptide Usage",
+     "link": "https://people.com/mad-max-actor-richard-norton-cause-of-death-revealed-to-be-linked-to-peptide-usage-12202542",
+     "source": "People.com"
+    },
+    {
+     "title": "Actor's death may be first confirmed fatality linked to unapproved peptides",
+     "link": "https://www.abc.net.au/news/2026-10-29/victoria-peptide-death-coroners-report-richard-norton/107320590",
+     "source": "ABC News & Headlines – Australian Broadcasting Corporation"
+    }
+   ]
+  },
+  {
+   "query": "servicio de ciudadanía e inmigración de los estados unidos",
+   "search_volume": 20000,
+   "increase_percentage": 700,
+   "categories": [
+    "Law and Government",
+    "Politics"
+   ],
+   "news": [
+    {
+     "title": "\"Estoy arrepentida de darles el voto, nos han traicionado a todos\": exvotantes republicanos advierten que no repetirán su apoyo a Trump",
+     "link": "https://www.univision.com/noticias/inmigracion/estoy-arrepentida-de-darles-el-voto-nos-han-traicionado-a-todos-exvotantes-republicanos-advierten-que-no-repetiran-su-apoyo-a-trump",
+     "source": "Univision"
+    },
+    {
+     "title": "Cómo la ofensiva migratoria de Trump provocó rechazo que podría volverse en su contra en las urnas",
+     "link": "https://www.chicagotribune.com/2026/10/29/cmo-la-ofensiva-migratoria-de-trump-provoc-rechazo-que-podra-volverse-en-su-contra-en-las-urnas/",
+     "source": "Chicago Tribune"
+    }
+   ]
+  },
+  {
+   "query": "disney plus",
+   "search_volume": 20000,
+   "increase_percentage": 75,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "reddit stock",
+   "search_volume": 20000,
+   "increase_percentage": 100,
+   "categories": [
+    "Business and Finance"
+   ]
+  },
+  {
+   "query": "qqq",
+   "search_volume": 20000,
+   "increase_percentage": 75,
+   "categories": [
+    "Business and Finance"
+   ]
+  },
+  {
+   "query": "sandisk stock",
+   "search_volume": 20000,
+   "increase_percentage": 100,
+   "categories": [
+    "Business and Finance"
+   ]
+  },
+  {
+   "query": "amd stock",
+   "search_volume": 20000,
+   "increase_percentage": 75,
+   "categories": [
+    "Business and Finance"
+   ]
+  },
+  {
+   "query": "nvidia stock",
+   "search_volume": 20000,
+   "increase_percentage": 50,
+   "categories": [
+    "Business and Finance"
+   ]
+  },
+  {
+   "query": "the elder scrolls vi",
+   "search_volume": 20000,
+   "increase_percentage": 100,
+   "categories": [
+    "Games"
+   ]
+  },
+  {
+   "query": "halloween store",
+   "search_volume": 20000,
+   "increase_percentage": 100,
+   "categories": [
+    "Shopping",
+    "Hobbies and Leisure"
+   ]
+  },
+  {
+   "query": "bryce hall",
+   "search_volume": 10000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "darrell waltrip rick hendrick mro auction",
+   "search_volume": 10000,
+   "increase_percentage": 700,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "javits frimpong",
+   "search_volume": 10000,
+   "increase_percentage": 200,
+   "categories": [
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "wired an ai breakthrough",
+   "search_volume": 10000,
+   "increase_percentage": 300,
+   "categories": [
+    "Science"
+   ]
+  },
+  {
+   "query": "crime",
+   "search_volume": 10000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "tarek el moussa daughter bmw gift",
+   "search_volume": 10000,
+   "increase_percentage": 600,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "nicholas mckelvey uss lincoln navy discharge",
+   "search_volume": 10000,
+   "increase_percentage": 200,
+   "categories": [
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "red baron employee",
+   "search_volume": 10000,
+   "increase_percentage": 75,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "pink",
+   "search_volume": 10000,
+   "increase_percentage": 75,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "le havre vs psg",
+   "search_volume": 5000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "konyaspor vs galatasaray",
+   "search_volume": 5000,
+   "increase_percentage": 900,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "canelo fight time",
+   "search_volume": 5000,
+   "increase_percentage": 100,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "pasaporte",
+   "search_volume": 5000,
+   "increase_percentage": 200,
+   "categories": [
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "myglamper hitch mounted tent trailer",
+   "search_volume": 5000,
+   "increase_percentage": 200,
+   "categories": [
+    "Hobbies and Leisure",
+    "Autos and Vehicles"
+   ]
+  },
+  {
+   "query": "jonestown massacre fox news",
+   "search_volume": 5000,
+   "increase_percentage": 200,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "pokemon mcdonalds happy meal",
+   "search_volume": 5000,
+   "increase_percentage": 200,
+   "categories": [
+    "Food and Drink",
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "sp500",
+   "search_volume": 5000,
+   "increase_percentage": 50,
+   "categories": [
+    "Business and Finance"
+   ]
+  },
+  {
+   "query": "voo",
+   "search_volume": 5000,
+   "increase_percentage": 50,
+   "categories": [
+    "Travel and Transportation",
+    "Business and Finance"
+   ]
+  },
+  {
+   "query": "maame ewusi-mensah frimpong ice injunction",
+   "search_volume": 5000,
+   "increase_percentage": 200,
+   "categories": [
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "mac jones dating red flags",
+   "search_volume": 5000,
+   "increase_percentage": 100,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "vti",
+   "search_volume": 5000,
+   "increase_percentage": 50,
+   "categories": [
+    "Business and Finance"
+   ]
+  },
+  {
+   "query": "spy",
+   "search_volume": 5000,
+   "increase_percentage": 50,
+   "categories": [
+    "Other"
+   ]
+  },
+  {
+   "query": "skeleton",
+   "search_volume": 5000,
+   "increase_percentage": 50,
+   "categories": [
+    "Hobbies and Leisure"
+   ]
+  },
+  {
+   "query": "nyc marathon",
+   "search_volume": 5000,
+   "increase_percentage": 50,
+   "categories": [
+    "Sports",
+    "Hobbies and Leisure"
+   ]
+  },
+  {
+   "query": "coinbase",
+   "search_volume": 5000,
+   "increase_percentage": 50,
+   "categories": [
+    "Business and Finance"
+   ]
+  },
+  {
+   "query": "le havre - psg",
+   "search_volume": 2000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "fernando mendoza indiana football departure impact",
+   "search_volume": 2000,
+   "increase_percentage": 500,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "konyaspor - galatasaray",
+   "search_volume": 2000,
+   "increase_percentage": 400,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "ochai agbaji",
+   "search_volume": 2000,
+   "increase_percentage": 700,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "disneyplus",
+   "search_volume": 2000,
+   "increase_percentage": 100,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "mercado cambiario",
+   "search_volume": 2000,
+   "increase_percentage": 200,
+   "categories": [
+    "Business and Finance"
+   ]
+  },
+  {
+   "query": "puppy",
+   "search_volume": 2000,
+   "increase_percentage": 500,
+   "categories": [
+    "Hobbies and Leisure",
+    "Pets and Animals"
+   ]
+  },
+  {
+   "query": "rob gronkowski",
+   "search_volume": 2000,
+   "increase_percentage": 200,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "voo stock",
+   "search_volume": 2000,
+   "increase_percentage": 50,
+   "categories": [
+    "Business and Finance"
+   ]
+  },
+  {
+   "query": "yolanda andrade",
+   "search_volume": 2000,
+   "increase_percentage": 75,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "where to vote",
+   "search_volume": 2000,
+   "increase_percentage": 50,
+   "categories": [
+    "Politics",
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "dwyane wade",
+   "search_volume": 2000,
+   "increase_percentage": 75,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "max",
+   "search_volume": 2000,
+   "increase_percentage": 100,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "drake umg contract renewal rumor",
+   "search_volume": 2000,
+   "increase_percentage": 100,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "alcaraz",
+   "search_volume": 2000,
+   "increase_percentage": 100,
+   "categories": [
+    "Sports"
+   ]
+  }
+ ]
+}
