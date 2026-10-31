@@ -1,0 +1,290 @@
+{
+  "run_date": "2026-10-31",
+  "niche": "health and wellness",
+  "signal_summary": {
+    "total_reviewed": 144,
+    "total_retained": 3,
+    "total_rejected": 141,
+    "tools_active": [
+      "web_search",
+      "google_news",
+      "google_trends",
+      "serpapi"
+    ],
+    "tools_unavailable": [
+      "reddit_json",
+      "exa_semantic",
+      "twitter_live"
+    ],
+    "notes": "site_url not configured — self-check skipped; competitor-list fallback used. Recurring themes flagged: GLP-1/weight-loss (3rd consecutive run — today's angle is distinct, a wearable/outcomes study, so treated as update not duplicate), HHS wellness peptides (same story as 10/29–10/30, rejected as existing), food/device recalls (recurring daily but each under-sourced today), DRC Ebola outbreak (ongoing, monitored not re-briefed). Four FDA recall stories rejected purely on sourcing thinness, not credibility of the underlying claim — recommend re-scanning tomorrow. Today's radar skewed heavily toward local/business/off-category noise and duplicate coverage — a genuinely thin news day relative to prior week."
+  },
+  "candidates": [
+    {
+      "priority_level": "P2",
+      "publish_timing": "immediate",
+      "topic": "HHS/FDA removes broad black-box warning from three estrogen patch products",
+      "primary_entity": "Estrogen patch (hormone replacement therapy)",
+      "signal_type": "dosage_or_safety_guidance",
+      "allowed_category": "women's health",
+      "trend_strength_score": 62,
+      "opportunity_score": 68,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.reuters.com/legal/litigation/us-health-department-remove-broad-black-box-warning-three-estrogen-patch-2026-10-30/"
+      ],
+      "recommended_angle": "What the FDA's black-box removal actually changes for women on hormone therapy",
+      "why_now": "Breaking regulatory action reported 10/30 by Reuters; directly affects a widely prescribed therapy class with no prior coverage on this site.",
+      "primary_headline": "FDA Just Removed a Major Safety Warning From Estrogen Patches — Here's What Changed",
+      "next_steps": "Verify official FDA Drug Safety Communication before publish; add context from AHA/NIH women's-health task force coverage",
+      "integrity_flags": [
+        "Primary HHS/FDA notice not independently retrieved in this pull — single wire source. Confirm via FDA Drug Safety Communications before publishing exact scope.",
+        "Do not conflate 'warning removed from patches' with 'hormone therapy has no risks' — oral estrogen label is reportedly unchanged; clarify route-specific distinction."
+      ],
+      "trend_score_reason": "Tier-1 wire source reporting factual regulatory action on widely-prescribed therapy class; 62 reflects single-source constraint.",
+      "opportunity_score_reason": "Directly affects patients on hormone therapy; strong informational search intent ('what changed,' 'is this safe'); high editorial differentiation potential via primary source verification.",
+      "discover_score_reason": "Strong named-entity and natural question format; capped at 4 pending primary source confirmation rather than higher due to single-source limitation.",
+      "notes": "Hold for FDA.gov confirmation before publishing exact rationale/scope language. Tie to broader 2026 women's-health policy activity (AHA heart-health redefinition, NIH Women's Health Research Task Force).",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Reuters headline in Google News Radar (10/30/2026, US health department remove broad black box warning three estrogen patch)"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "immediate",
+      "topic": "Daylight Saving Time ends Nov 1 — circadian and cardiovascular health effects",
+      "primary_entity": "Daylight Saving Time",
+      "signal_type": "rising_search_interest",
+      "allowed_category": "sleep science",
+      "trend_strength_score": 58,
+      "opportunity_score": 60,
+      "discover_score": 3,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "source_urls": [],
+      "recommended_angle": "Skip generic 'tips to adjust' — lead with cardiovascular/mood risk data tied to the clock change",
+      "why_now": "DST ends this Sunday; Google Trends shows a live rising query on this exact phrasing; differentiate via specific circadian-research data citation to break through saturated SERP.",
+      "primary_headline": "What Actually Happens to Your Body When the Clocks Fall Back",
+      "next_steps": "Pull specific circadian-research citations (heart attack/stroke incidence data) to differentiate from saturated SERP; consult sleep medicine specialist for expert sourcing.",
+      "integrity_flags": [
+        "Frame as relative-risk/short-term association, not guaranteed individual causation for cardiac events."
+      ],
+      "trend_score_reason": "Google Trends rising query confirmed; seasonal hook (DST ends Nov 1) drives search velocity; 58 reflects moderate but predictable demand spike.",
+      "opportunity_score_reason": "Highly saturated SERP but differentiation via peer-reviewed circadian data is achievable; medium editorial lift required; audience search intent is evaluative ('what actually happens').",
+      "discover_score_reason": "Seasonal/recurring topic with built-in audience demand; score reflects moderate discovery challenge due to annual saturation and need for data-driven differentiation.",
+      "notes": "Most DST coverage is generic sleep-adjustment advice. Differentiate by leading with relative-risk data on cardiovascular events and mood disturbance tied to circadian transition.",
+      "fact_check": {
+        "verdict": "unverifiable",
+        "issues": [
+          "No source in the evidence supports specific cardiovascular/mood risk data tied to the clock change; only a rising search query about 'health effects' exists, with no underlying study or news article cited."
+        ],
+        "checked_against": "Google Trends 7-day interest (health) rising related query: 'explain the daylight savings schedule, clock adjustment rules, and health effects'"
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "short_term",
+      "topic": "Oura Ring + UC San Diego Health launch clinical trial tracking GLP-1 outcomes via continuous wearable data",
+      "primary_entity": "Oura Ring + GLP-1 (tirzepatide/semaglutide)",
+      "signal_type": "clinical_trial",
+      "allowed_category": "chronic disease management",
+      "trend_strength_score": 51,
+      "opportunity_score": 72,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "source_urls": [
+        "https://www.fiercehealthcare.com/health-tech/oura-uc-san-diego-health-study-glp-1-outcomes-using-continuous-smart-ring-data",
+        "https://finance.yahoo.com/healthcare/articles/ura-expands-healthcare-research-first-181500184.html"
+      ],
+      "recommended_angle": "Can your smart ring tell if your GLP-1 drug is working? Frame as early-stage trial, not results announcement.",
+      "why_now": "New clinical trial just launched combining wearable data + GLP-1 outcomes — fresh angle on recurring GLP-1 topic; distinct from prior Retatrutide/surgery stories already covered.",
+      "primary_headline": "Oura and UC San Diego Are Using Smart Rings to Track GLP-1 Results in Real Time",
+      "next_steps": "Monitor for first data readout; flag as early-stage announcement, not results. Consider update story once trial begins generating outcomes data.",
+      "integrity_flags": [
+        "This is a trial launch announcement, not results — do not imply efficacy findings exist."
+      ],
+      "trend_score_reason": "New institutional partnership announcement (Oura/UCSD); fresh wearable-outcomes angle on recurring GLP-1 cluster; 51 reflects early-stage trial with no outcomes data yet.",
+      "opportunity_score_reason": "High editorial differentiation from prior GLP-1 coverage (wearable + predictive outcomes angle); medium audience interest; 72 reflects strong opportunity to own this distinct narrative.",
+      "discover_score_reason": "Thin competitive coverage so far; wearable + GLP-1 intersection is emerging vertical; moderate discovery potential for health-tech and chronic-disease audiences.",
+      "notes": "Trial just launched — no outcomes exist yet, avoid implying efficacy findings. Ties into ongoing GLP-1 content cluster without duplicating Retatrutide/surgery coverage. This is distinctly a 'can a wearable predict who GLP-1 drugs will work for' angle.",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Fierce Healthcare and Yahoo Finance articles in Google News Radar (10/28-10/29/2026) on Oura/UC San Diego Health GLP-1 clinical trial launch"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "HHS wellness peptides wider availability (ABC News)",
+      "reason": "existing"
+    },
+    {
+      "topic": "Physician burnout / corporate wellness programs (AMA)",
+      "reason": "existing"
+    },
+    {
+      "topic": "Long COVID study design (Stanford)",
+      "reason": "existing"
+    },
+    {
+      "topic": "Medical debt (KFF/Ohio)",
+      "reason": "existing"
+    },
+    {
+      "topic": "Rectal cancer FDA approval",
+      "reason": "existing"
+    },
+    {
+      "topic": "Beer/wine/spirits mortality",
+      "reason": "existing"
+    },
+    {
+      "topic": "NFL CTE",
+      "reason": "existing"
+    },
+    {
+      "topic": "Ebola vaccine trial begins in DRC (NPR)",
+      "reason": "existing"
+    },
+    {
+      "topic": "Miyoko's butter recall",
+      "reason": "existing"
+    },
+    {
+      "topic": "Great Value fruit cocktail recall",
+      "reason": "existing"
+    },
+    {
+      "topic": "Impella heart pump Class I recall",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Flour recall",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Ground cinnamon lead recall",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Compounded GLP-1 injection recall",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "CIDRAP vaccine-conversation study",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Psychedelic-use database",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Nature AI oncology adverse-event study",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Pew Research AI-healthcare-trust survey",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Darwin's cat food Salmonella recall",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Walmart/Care Access trial centers",
+      "reason": "off_category"
+    },
+    {
+      "topic": "BCBSMA/Medzown",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Cleveland Clinic AI award",
+      "reason": "off_category"
+    },
+    {
+      "topic": "MedStar teen illness advisory",
+      "reason": "off_category"
+    },
+    {
+      "topic": "SLO County E. coli cases",
+      "reason": "off_category"
+    },
+    {
+      "topic": "FSU building naming",
+      "reason": "off_category"
+    },
+    {
+      "topic": "UVA Health real-estate acquisition",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Newsom behavioral-health facility opening",
+      "reason": "off_category"
+    },
+    {
+      "topic": "CalMatters political fact-check",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Local wellness fairs",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Holiday gift guide",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Album review",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Open-enrollment notices",
+      "reason": "off_category"
+    }
+  ],
+  "fact_check_summary": {
+    "accurate": 2,
+    "unverifiable": 1
+  },
+  "run_cost": {
+    "total_usd": 0.6533,
+    "calls": [
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 12147,
+        "output_tokens": 25518,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 43142,
+        "estimated_cost_usd": 0.581
+      },
+      {
+        "model": "claude-haiku-4-5",
+        "input_tokens": 8587,
+        "output_tokens": 2306,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0201
+      },
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11598,
+        "output_tokens": 1163,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0522
+      }
+    ]
+  }
+}
