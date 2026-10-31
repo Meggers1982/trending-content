@@ -1,0 +1,113 @@
+{
+ "date": "2026-10-31",
+ "ideas": [
+  {
+   "id": "2026-10-31-fda-pulls-the-broad-black-box-warning-from-three-e",
+   "title": "FDA pulls the broad black-box warning from three estrogen patches: what changes for women on hormone therapy, and what doesn't",
+   "created": "2026-10-31",
+   "route": "pitch",
+   "speed": "new",
+   "beat": "women's health / menopause / FDA",
+   "angle": "Explain what a black-box warning removal does and doesn't mean in practice. Cover why it applies to transdermal patches and reportedly not oral estrogen, and whether it shifts what doctors prescribe and what women hear after two decades of WHI-driven fear. The route difference (patch vs. pill) is the tension.",
+   "why_now": "Regulatory action reported 10/30 by Reuters. It affects a widely prescribed therapy class in her core menopause lane.",
+   "is_it_real": "Single wire source (Reuters). The primary FDA/HHS notice wasn't retrieved, so the exact products and label language must be confirmed against FDA documents. The reported patch-vs-oral distinction also needs checking, and the pitch must not imply HRT is now risk-free.",
+   "confidence": "high",
+   "evidence": [
+    "https://www.reuters.com/legal/litigation/us-health-department-remove-broad-black-box-warning-three-estrogen-patch-2026-10-30/"
+   ],
+   "terms": [
+    "hhs fda removes broad black box warning from three estrogen patch products"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-10-31",
+     "event": "routed",
+     "detail": "pitch"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "HHS/FDA removes broad black-box warning from three estrogen patch products",
+     "speed": "new",
+     "first_seen": "2026-10-31",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-31",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 62,
+       "opportunity": 68
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-10-31-once-upon-a-farm-tractor-wheels-recall-which-kids",
+   "title": "Once Upon a Farm 'Tractor Wheels' recall: which kids' snacks, and what to check",
+   "created": "2026-10-31",
+   "route": "roundup",
+   "speed": "new",
+   "beat": "food safety / recalls",
+   "angle": "A quick service item for parents: which products, lot codes and reason, and what to do. It continues the run of recall items the Friday issue has been carrying.",
+   "why_now": "Search spiked today; recalls of kids' food move fast.",
+   "is_it_real": "Unconfirmed. The input has no news link or FDA notice, so the product, scope and reason are all unknown. The roundup job must verify against the FDA recall database or the company before writing a word, and drop it if no recall exists.",
+   "confidence": "low",
+   "evidence": [],
+   "terms": [
+    "once upon a farm tractor wheels recall"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-10-31",
+     "event": "routed",
+     "detail": "roundup"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "once upon a farm tractor wheels recall",
+     "speed": "new",
+     "first_seen": "2026-10-31",
+     "weeks_seen": 1,
+     "sources": [
+      "wide"
+     ],
+     "profiles": [
+      "trending-now"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-31",
+       "source": "wide",
+       "profile": "trending-now",
+       "stage": "rising",
+       "score": 5000
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  }
+ ],
+ "dropped": 68,
+ "watching": 7,
+ "notes": "A Halloween Saturday, so the wide feed is mostly college football, Premier League and celebrity chatter. Two real stories stand out. The estrogen-patch black-box removal is a fresh menopause pitch, though it rests on a single wire source. The Richard Norton coroner finding gives the existing HHS peptides pitch a strong human peg. DST and employee wellness terms fold into ideas already routed this week. Several radar terms (thyroid eyebrows/palms, infant formula, The Wellness Company kit, McRib lawsuit) arrived with no context and are on watch until they show a news hook.",
+ "cost_usd": 0.2527
+}

@@ -1,31 +1,16 @@
 {
- "updated": "2026-10-30",
+ "updated": "2026-10-31",
  "items": [
   {
-   "id": "2026-10-30-la-fitness-closing-gyms-what-s-actually-happening",
-   "title": "LA Fitness closing gyms? What's actually happening, and what the FTC case over cancellations means for members",
-   "created": "2026-10-30",
-   "angle": "A quick, useful item for members. Separate the closure rumor from what is confirmed, and explain the FTC's case against parent company Fitness International over how hard it is to cancel. Close with what to do if your gym closes.",
-   "why_now": "This was held as a watch term on 10-26 and kept rising, and the FTC lawsuit query is now climbing alongside it.",
-   "is_it_real": "Demand is real: four days of sightings, breakout stage on the fitness radar, plus the related lawsuit query. The facts are unverified. The input has no news links, so the closure count and the lawsuit's status must be confirmed before writing. If the closures turn out to be a rumor, that becomes the item.",
+   "id": "2026-10-31-once-upon-a-farm-tractor-wheels-recall-which-kids",
+   "title": "Once Upon a Farm 'Tractor Wheels' recall: which kids' snacks, and what to check",
+   "created": "2026-10-31",
+   "angle": "A quick service item for parents: which products, lot codes and reason, and what to do. It continues the run of recall items the Friday issue has been carrying.",
+   "why_now": "Search spiked today; recalls of kids' food move fast.",
+   "is_it_real": "Unconfirmed. The input has no news link or FDA notice, so the product, scope and reason are all unknown. The roundup job must verify against the FDA recall database or the company before writing a word, and drop it if no recall exists.",
    "evidence": [],
    "terms": [
-    "la fitness shutting down gyms",
-    "fitness international ftc lawsuit"
-   ],
-   "status": "routed"
-  },
-  {
-   "id": "2026-10-30-the-sleep-habit-everyone-says-predicts-dementia-wh",
-   "title": "The sleep habit everyone says predicts dementia: what the new research actually links",
-   "created": "2026-10-30",
-   "angle": "'Nighttime habit is a key indicator of dementia' is classic clickbait framing. The item names the study, says whether the link is association or prediction, and explains what a reader should actually do.",
-   "why_now": "Two related phrasings broke out the same day on the brain-aging radar, which suggests a fresh study is circulating.",
-   "is_it_real": "The trend looks real, since two distinct queries are exploding together. The underlying study is unidentified in the input, so the writer must find the primary paper. Expect observational data and reverse causation, because sleep changes can be an early symptom rather than a cause.",
-   "evidence": [],
-   "terms": [
-    "daytime sleep habits cognitive decline research",
-    "nighttime habit key indicator of dementia"
+    "once upon a farm tractor wheels recall"
    ],
    "status": "routed"
   },
@@ -56,6 +41,34 @@
    ],
    "terms": [
     "Beer vs. wine vs. spirits — large study finds different mortality patterns by alcohol type"
+   ],
+   "status": "routed"
+  },
+  {
+   "id": "2026-10-30-la-fitness-closing-gyms-what-s-actually-happening",
+   "title": "LA Fitness closing gyms? What's actually happening, and what the FTC case over cancellations means for members",
+   "created": "2026-10-30",
+   "angle": "A quick, useful item for members. Separate the closure rumor from what is confirmed, and explain the FTC's case against parent company Fitness International over how hard it is to cancel. Close with what to do if your gym closes.",
+   "why_now": "This was held as a watch term on 10-26 and kept rising, and the FTC lawsuit query is now climbing alongside it.",
+   "is_it_real": "Demand is real: four days of sightings, breakout stage on the fitness radar, plus the related lawsuit query. The facts are unverified. The input has no news links, so the closure count and the lawsuit's status must be confirmed before writing. If the closures turn out to be a rumor, that becomes the item.",
+   "evidence": [],
+   "terms": [
+    "la fitness shutting down gyms",
+    "fitness international ftc lawsuit"
+   ],
+   "status": "routed"
+  },
+  {
+   "id": "2026-10-30-the-sleep-habit-everyone-says-predicts-dementia-wh",
+   "title": "The sleep habit everyone says predicts dementia: what the new research actually links",
+   "created": "2026-10-30",
+   "angle": "'Nighttime habit is a key indicator of dementia' is classic clickbait framing. The item names the study, says whether the link is association or prediction, and explains what a reader should actually do.",
+   "why_now": "Two related phrasings broke out the same day on the brain-aging radar, which suggests a fresh study is circulating.",
+   "is_it_real": "The trend looks real, since two distinct queries are exploding together. The underlying study is unidentified in the input, so the writer must find the primary paper. Expect observational data and reverse causation, because sleep changes can be an early symptom rather than a cause.",
+   "evidence": [],
+   "terms": [
+    "daytime sleep habits cognitive decline research",
+    "nighttime habit key indicator of dementia"
    ],
    "status": "routed"
   },
@@ -213,7 +226,9 @@
    "evidence": [],
    "terms": [
     "daylight saving time",
-    "do we get an extra hour of sleep tonight"
+    "Daylight Saving Time ends Nov 1 — circadian and cardiovascular health effects",
+    "do we get an extra hour of sleep tonight",
+    "explain the daylight savings schedule, clock adjustment rules, and health effects"
    ],
    "status": "routed"
   },

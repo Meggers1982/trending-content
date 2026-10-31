@@ -1,0 +1,637 @@
+{
+ "run_date": "2026-10-31",
+ "geo": "US",
+ "items": [
+  {
+   "query": "michael douglas on jack nicholson",
+   "search_volume": 200000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Entertainment"
+   ],
+   "news": [
+    {
+     "title": "Michael Douglas Reveals What Jack Nicholson Is Doing After He \"Disappeared\" From Hollywood",
+     "link": "https://www.eonline.com/news/1437687/michael-douglas-details-jack-nicholson-retirement-after-last-acting-role",
+     "source": "E! News"
+    },
+    {
+     "title": "Michael Douglas reveals why Jack Nicholson ‘disappeared’ from Hollywood",
+     "link": "https://www.nine.com.au/entertainment/celebrity/michael-douglas-reveals-why-jack-nicholson-disappeared-from-hollywood-20261031-p61a7e.html",
+     "source": "Nine.com.au"
+    }
+   ]
+  },
+  {
+   "query": "richard norton peptides",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Health"
+   ],
+   "news": [
+    {
+     "title": "Richard Norton, actor and martial artist, died after peptides triggered heart attack, coroner says",
+     "link": "https://www.nbcnews.com/pop-culture/pop-culture-news/richard-norton-actor-martial-artist-died-peptides-triggered-heart-atta-rcna606555",
+     "source": "NBC News"
+    },
+    {
+     "title": "Chuck Norris and Jackie Chan Costar Richard Norton’s Cause of Death Revealed: Peptide Injection",
+     "link": "https://www.yahoo.com/entertainment/celebrity/articles/chuck-norris-jackie-chan-costar-150651390.html",
+     "source": "Yahoo"
+    }
+   ]
+  },
+  {
+   "query": "chelsea vs man utd",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Man United's Michael Carrick brushes off talk of Premier League relegation battle",
+     "link": "https://www.espn.com/soccer/story/_/id/50336265/man-united-michael-carrick-brushes-talk-premier-league-relegation-battle",
+     "source": "ESPN"
+    },
+    {
+     "title": "Chelsea v Man Utd player ratings: Rogers and Palmer make the difference - how did Martinez rate?",
+     "link": "https://www.bbc.com/sport/football/articles/c3j47prvlz04o",
+     "source": "BBC"
+    }
+   ]
+  },
+  {
+   "query": "poland",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Law and Government",
+    "Politics"
+   ],
+   "news": [
+    {
+     "title": "Police deployed during stand-off over control of top Poland court",
+     "link": "https://www.bbc.com/news/articles/crz9824d5e88o",
+     "source": "BBC"
+    },
+    {
+     "title": "Polish president accuses Tusk of forced takeover of country's top court",
+     "link": "https://www.usatoday.com/story/news/world/2026/10/31/polish-president-accuses-tusk-of-forced-takeover-of-countrys-top-court/92533564007/",
+     "source": "USA Today"
+    }
+   ]
+  },
+  {
+   "query": "fairfield shooting",
+   "search_volume": 100000,
+   "increase_percentage": 300,
+   "categories": [
+    "Law and Government"
+   ],
+   "news": [
+    {
+     "title": "1 dead, 6 others hurt in shooting at Spirit Halloween in Fairfield, police say",
+     "link": "https://www.kcra.com/article/fairfield-police-investigate-solano-town-center-incident/74301177",
+     "source": "KCRA"
+    },
+    {
+     "title": "1 dead, 6 injured in shooting at Spirit Halloween store in California",
+     "link": "https://www.oregonlive.com/nation/2026/10/1-dead-6-injured-in-shooting-at-spirit-halloween-store-in-california.html",
+     "source": "OregonLive.com"
+    }
+   ]
+  },
+  {
+   "query": "west ham vs west brom",
+   "search_volume": 100000,
+   "increase_percentage": 200,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Notre Dame vs. Navy (Oct 31, 2026) Box Score",
+     "link": "https://www.espn.com/college-football/boxscore/_/gameId/401859185",
+     "source": "ESPN"
+    },
+    {
+     "title": "Jeremy Fowler: Interest in Jonathan Taylor is 'heavy' and 'real'",
+     "link": "https://www.espn.co.uk/video/clip/_/id/50336119/interest-jonathan-taylor-heavy-real",
+     "source": "ESPN"
+    }
+   ]
+  },
+  {
+   "query": "steph curry stats",
+   "search_volume": 100000,
+   "increase_percentage": 100,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Curry's ankle-breaker on Luka highlights Warriors' stunning 25-point comeback",
+     "link": "https://www.espn.com/nba/story/_/id/50333810/stephen-curry-leads-warriors-25-point-comeback-lakers",
+     "source": "ESPN"
+    },
+    {
+     "title": "Warriors’ De’Anthony Melton’s immediate reaction to Steph Curry’s ankle-breaker on Luka Doncic",
+     "link": "https://sports.yahoo.com/articles/warriors-anthony-melton-immediate-reaction-151655464.html",
+     "source": "Yahoo Sports"
+    }
+   ]
+  },
+  {
+   "query": "notre dame vs navy",
+   "search_volume": 50000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Notre Dame looking to rebound from first loss in matchup vs. Navy at Gillette Stadium",
+     "link": "https://www.bostonglobe.com/2026/10/30/sports/notre-dame-navy-football-gillette-stadium/",
+     "source": "The Boston Globe"
+    },
+    {
+     "title": "Notre Dame football goes without Kyngstonn Viliamu-Asa vs. Navy",
+     "link": "https://sports.yahoo.com/articles/notre-dame-football-goes-without-151806107.html",
+     "source": "Yahoo Sports"
+    }
+   ]
+  },
+  {
+   "query": "michigan vs rutgers",
+   "search_volume": 50000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "How to Watch Michigan vs. Rutgers: TV Channel, Live Stream, Time",
+     "link": "https://www.foxsports.com/stories/college-football/how-to-watch-michigan-vs-rutgers-tv-channel-live-stream-time-oct-31-2026",
+     "source": "FOX Sports"
+    },
+    {
+     "title": "Michigan football has big injury questions heading into Rutgers game",
+     "link": "https://www.freep.com/story/sports/college/university-michigan/wolverines/2026/10/31/michigan-football-injury-report-rutgers-defensive-line/92532874007/",
+     "source": "Detroit Free Press"
+    }
+   ]
+  },
+  {
+   "query": "samsung news app discontinued 2026",
+   "search_volume": 50000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Technology",
+    "Science"
+   ],
+   "news": [
+    {
+     "title": "Samsung News app on Galaxy devices is being shut down",
+     "link": "https://www.sammobile.com/news/samsung-news-shut-down-galaxy-phones-tablets/",
+     "source": "SamMobile"
+    },
+    {
+     "title": "Check your Galaxy phone: Samsung is shutting down a built-in feature",
+     "link": "https://www.phonearena.com/news/check-your-galaxy-phone-samsung-is-shutting-down-a-built-in-feature_id184419",
+     "source": "PhoneArena"
+    }
+   ]
+  },
+  {
+   "query": "bo bice short hair transformation",
+   "search_volume": 50000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Entertainment"
+   ],
+   "news": [
+    {
+     "title": "'American Idol's Bo Bice looks unrecognizable after major transformation",
+     "link": "https://www.yahoo.com/entertainment/music/articles/american-idols-bo-bice-looks-154648984.html",
+     "source": "Yahoo"
+    },
+    {
+     "title": "American Idol Runner-Up Bo Bice Debuts Major Before-and-After Transformation",
+     "link": "https://www.eonline.com/news/1437679/american-idols-bo-bice-debuts-major-haircut-body-transformation",
+     "source": "E! News"
+    }
+   ]
+  },
+  {
+   "query": "man city vs brighton",
+   "search_volume": 50000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports",
+    "Entertainment"
+   ],
+   "news": [
+    {
+     "title": "Manchester City v Brighton, Bournemouth v Leeds, and more: clockwatch - live",
+     "link": "https://www.theguardian.com/football/live/2026/oct/31/manchester-city-v-brighton-bournemouth-v-leeds-and-more-clockwatch-live",
+     "source": "The Guardian"
+    },
+    {
+     "title": "Follow Saturday's Premier League games live",
+     "link": "https://www.bbc.com/sport/football/articles/cqj9k0j2ny79o",
+     "source": "BBC"
+    }
+   ]
+  },
+  {
+   "query": "what time is the canelo fight",
+   "search_volume": 50000,
+   "increase_percentage": 300,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "levante - atlético madrid",
+   "search_volume": 50000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "nuggets vs suns",
+   "search_volume": 50000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "nikita kucherov",
+   "search_volume": 50000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "jordon hudson",
+   "search_volume": 50000,
+   "increase_percentage": 400,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "when is the next time halloween will be on a saturday",
+   "search_volume": 50000,
+   "increase_percentage": 75,
+   "categories": [
+    "Other"
+   ]
+  },
+  {
+   "query": "wisconsin vs iowa",
+   "search_volume": 20000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "auburn vs ole miss",
+   "search_volume": 20000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "noche de brujas",
+   "search_volume": 20000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Hobbies and Leisure"
+   ]
+  },
+  {
+   "query": "arizona vs texas tech",
+   "search_volume": 20000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "inés gómez mont",
+   "search_volume": 20000,
+   "increase_percentage": 600,
+   "categories": [
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "sanjay gupta",
+   "search_volume": 20000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "sahara desert martian meteorite discovery",
+   "search_volume": 20000,
+   "increase_percentage": 300,
+   "categories": [
+    "Science"
+   ]
+  },
+  {
+   "query": "heidi klum",
+   "search_volume": 20000,
+   "increase_percentage": 200,
+   "categories": [
+    "Entertainment",
+    "Hobbies and Leisure"
+   ]
+  },
+  {
+   "query": "mcrib lawsuit",
+   "search_volume": 20000,
+   "increase_percentage": 600,
+   "categories": [
+    "Law and Government",
+    "Food and Drink"
+   ]
+  },
+  {
+   "query": "daytime emmy winners 2026",
+   "search_volume": 20000,
+   "increase_percentage": 300,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "sam altman",
+   "search_volume": 20000,
+   "increase_percentage": 100,
+   "categories": [
+    "Technology"
+   ]
+  },
+  {
+   "query": "illinois vs maryland",
+   "search_volume": 10000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "sri lanka vs pakistan",
+   "search_volume": 10000,
+   "increase_percentage": 500,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "welcome to derry",
+   "search_volume": 10000,
+   "increase_percentage": 600,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "florida georgia game",
+   "search_volume": 10000,
+   "increase_percentage": 300,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "what time is trick or treating",
+   "search_volume": 10000,
+   "increase_percentage": 300,
+   "categories": [
+    "Hobbies and Leisure"
+   ]
+  },
+  {
+   "query": "josh jacobs",
+   "search_volume": 10000,
+   "increase_percentage": 300,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "ncaa football today",
+   "search_volume": 10000,
+   "increase_percentage": 75,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "tim mcgraw taylor swift wedding rumor",
+   "search_volume": 10000,
+   "increase_percentage": 300,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "jonathan taylor",
+   "search_volume": 10000,
+   "increase_percentage": 100,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "lauren bennett",
+   "search_volume": 10000,
+   "increase_percentage": 100,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "nick saban birthday",
+   "search_volume": 10000,
+   "increase_percentage": 100,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "california vs nc state",
+   "search_volume": 5000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "smu vs syracuse",
+   "search_volume": 5000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "isiah thomas",
+   "search_volume": 5000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "boston college vs duke",
+   "search_volume": 5000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "thomas castellanos",
+   "search_volume": 5000,
+   "increase_percentage": 500,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "bowling green vs wmu",
+   "search_volume": 5000,
+   "increase_percentage": 900,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "sony hack cancelled martin scorsese film",
+   "search_volume": 5000,
+   "increase_percentage": 400,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "coventry vs sunderland",
+   "search_volume": 5000,
+   "increase_percentage": 700,
+   "categories": [
+    "Sports",
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "once upon a farm tractor wheels recall",
+   "search_volume": 5000,
+   "increase_percentage": 700,
+   "categories": [
+    "Business and Finance"
+   ]
+  },
+  {
+   "query": "uab vs south florida",
+   "search_volume": 5000,
+   "increase_percentage": 700,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "jason statham",
+   "search_volume": 5000,
+   "increase_percentage": 500,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "criminal minds",
+   "search_volume": 5000,
+   "increase_percentage": 100,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "gang",
+   "search_volume": 5000,
+   "increase_percentage": 200,
+   "categories": [
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "halloween parade nyc",
+   "search_volume": 5000,
+   "increase_percentage": 100,
+   "categories": [
+    "Hobbies and Leisure"
+   ]
+  },
+  {
+   "query": "nidhi razdan",
+   "search_volume": 5000,
+   "increase_percentage": 300,
+   "categories": [
+    "Politics",
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "vincent price",
+   "search_volume": 5000,
+   "increase_percentage": 300,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "levante ud vs atlético madrid standings",
+   "search_volume": 5000,
+   "increase_percentage": 600,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "mark hamill",
+   "search_volume": 5000,
+   "increase_percentage": 100,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "justice department model cities initiative",
+   "search_volume": 5000,
+   "increase_percentage": 200,
+   "categories": [
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "brighton",
+   "search_volume": 5000,
+   "increase_percentage": 200,
+   "categories": [
+    "Sports"
+   ]
+  }
+ ]
+}
