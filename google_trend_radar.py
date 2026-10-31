@@ -44,6 +44,7 @@ from email import encoders
 from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+from functools import lru_cache
 from pathlib import Path
 from statistics import mean
 
@@ -466,6 +467,304 @@ GENERIC_ANCHOR_WORDS = {
     "count",
     "screening",
     "iron",
+    # MEA-1834 (2026-10-31): offline audit of every saved scan in
+    # outputs/google_trend_radar/ (scripts/anchor_audit.py). Generic halves of
+    # compound seeds that were matching unrelated queries, or could:
+    # "home workout" -> "home" ("home insurance quotes", "smart home
+    # devices"), "gut health"/"mental health"/"period health" -> "health"
+    # ("jay glazer mental health" kept by gut-health, "sprinter health
+    # careers" by mental-health), "healthy aging" -> "healthy", "whole foods"
+    # -> "whole", "added sugar" -> "added", "meal prep" -> "prep", "fiber
+    # intake" -> "intake", "portion control" -> "portion", "mindful eating"
+    # -> "mindful", "weight loss journey"/"sustainable weight loss"/"weight
+    # loss plateau" -> "journey"/"sustainable"/"plateau", "cross
+    # contamination" -> "cross" ("crossword"), "calorie deficit" ->
+    # "deficit" ("budget deficit"), "elimination diet" -> "elimination"
+    # ("elimination chamber"), "gut brain axis" -> "axis" ("axis bank"),
+    # "leaky gut" -> "leaky" ("leaky faucet"), and the wellness/health
+    # profiles' "public health", "self care", "plant based diet", "protein
+    # powder" -> "public", "self", "plant", "based", "powder". The full
+    # phrases still anchor; only the standalone half is dropped. Words that
+    # are generic in one profile but the point of another ("recall",
+    # "running", "focus", "therapy") are NOT here - see PROFILE_WEAK_ANCHORS.
+    "home",
+    "health",
+    "healthy",
+    "whole",
+    "added",
+    "prep",
+    "intake",
+    "portion",
+    "mindful",
+    "journey",
+    "sustainable",
+    "plateau",
+    "cross",
+    "deficit",
+    "elimination",
+    "axis",
+    "leaky",
+    "public",
+    "self",
+    "plant",
+    "based",
+    "powder",
+}
+
+# --- Per-profile relevance rules (MEA-1834) ---------------------------------
+#
+# A global blocklist can't fix a word that is generic in one profile and the
+# whole point of another: "recall" is food-safety's core beat but also
+# matches "nhtsa toyota rav4 recall notice"; "running" is fitness but also
+# "green bay packers running back trade". Two per-profile layers handle it:
+#
+# PROFILE_WEAK_ANCHORS: anchor -> context terms. A weak anchor only keeps a
+#   candidate when the query also contains one of its context terms (or some
+#   other, strong anchor). This also covers seeds that are themselves one
+#   generic word ("running", "focus", "therapy"), which become full-phrase
+#   anchors and so never reach GENERIC_ANCHOR_WORDS.
+# PROFILE_EXCLUSION_TERMS: phrases that reject a candidate outright even when
+#   it matched an anchor - for senses a context whitelist can't rule out
+#   ("tropical depression", "running back", "recall election").
+#
+# Context and exclusion terms match at the start of a word, so a stem like
+# "contamina" covers contamination/contaminated and "egg" covers eggs, but
+# "egg" doesn't hit "reggae" and "ford" doesn't hit "affordable".
+
+# Food words for food-safety's weak anchors. Brand-only queries ("gatorade
+# recall") can't be told apart from "clorox recall" without a brand list and
+# are deliberately not covered.
+_FOOD_TERMS = [
+    "food", "egg", "beef", "chicken", "pork", "meat", "poultry", "turkey",
+    "sausage", "hot dog", "ham", "bacon", "lunchmeat", "deli", "cheese",
+    "dairy", "milk", "ice cream", "yogurt", "butter", "seafood", "fish",
+    "shrimp", "oyster", "tuna", "produce", "lettuce", "spinach", "salad",
+    "sprout", "cucumber", "tomato", "onion", "pepper", "jalape",
+    "peperoncini", "fruit", "berr", "blueberr", "strawberr", "raspberr",
+    "melon", "cantaloupe", "avocado", "guacamole", "salsa", "frozen", "snack",
+    "bars", "granola", "cereal", "bread", "bakery", "bakehouse", "cookie",
+    "chocolat", "candy", "nut", "peanut", "almond", "flour", "rice", "pasta",
+    "noodle", "tofu", "spice", "cinnamon", "juice", "coconut", "beverage",
+    "infant formula", "baby formula", "meal", "recipe", "kibble",
+]
+_PATHOGEN_TERMS = [
+    "listeria", "salmonella", "e coli", "e. coli", "coli", "cyclospor",
+    "norovirus", "botulism", "hepatitis a", "campylobacter", "vibrio",
+    "shigella", "poisoning", "foodborne", "fsis", "usda",
+]
+_FOOD_SAFETY_CONTEXT = [
+    "safe", "safety", "recall", "contamina", "outbreak", "poison", "illness",
+    "borne", "sick", "listeria", "salmonella", "coli", "botulism",
+    "norovirus", "cyclospor", "hepatitis", "inspect", "handler", "handling",
+    "worker", "storage", "temperature", "cook", "undercook", "raw", "expir",
+    "spoil", "mold", "mould", "fda", "usda", "fsis", "hazard", "allerg",
+    "sanitiz", "hygiene", "pathogen", "bacteria", "parasite", "cdc",
+    "warning", "label", "additive", "dye", "heavy metal", "pesticide",
+    "microplastic", "chemical", "thaw", "leftover", "danger zone",
+]
+_WEIGHT_CONTEXT = [
+    "loss", "lose", "losing", "gain", "fat", "diet", "obes", "glp", "bmi",
+    "management", "scale", "kg", "pound", "lbs", "regain", "calori", "body",
+    "semaglutide", "tirzepatide", "ozempic", "wegovy", "zepbound",
+    "mounjaro", "watchers",
+]
+
+PROFILE_WEAK_ANCHORS: dict[str, dict[str, list[str]]] = {
+    "fitness": {
+        # Seed "running" alone matched politics ("running for governor"),
+        # the NFL ("running back"), gaming ("running on xbox") and music
+        # ("longest running number one").
+        "running": [
+            "shoe", "gear", "plan", "beginner", "marathon", "half marathon",
+            "5k", "10k", "race", "festival", "pace", "mile", "runner", "club",
+            "form", "stretch", "workout", "trail", "treadmill", "couch to",
+            "endurance", "fitness", "cardio", "calori", "on running", "watch",
+            "app", "tips", "jacket", "shorts", "socks", "vest", "belt",
+            "headphone", "zone 2", "speed", "interval", "sprint",
+        ],
+    },
+    "adhd-focus": {
+        # Seed "focus" alone matched "metals focus gold price forecast",
+        # school-portal names ("hcps focus", "focus mcisd") and a vape.
+        "focus": [
+            "adhd", "attention", "concentrat", "study", "studying",
+            "productiv", "brain", "distract", "deep work", "mind", "mental",
+            "memory", "stimulant", "nootropic", "supplement", "tips",
+            "improve", "how to", "better", "can't focus", "cant focus",
+            "trouble", "unable", "lack of", "music for", "exercise",
+            "meditat", "work", "fatigue", "fog",
+        ],
+    },
+    "food-safety": {
+        # Food recalls are the beat; car, drug, toothpaste and baby-wipe
+        # recalls are not ("hyundai vehicle fire risk recall", "levothyroxine
+        # recall"). Drug recalls belong to public-health's "drug recall" seed.
+        "recall": _FOOD_TERMS + _PATHOGEN_TERMS + ["allergen", "undeclared"],
+        "food": _FOOD_SAFETY_CONTEXT,
+        "outbreak": _FOOD_TERMS + _PATHOGEN_TERMS,
+        "illness": _FOOD_TERMS + _PATHOGEN_TERMS,
+        "contamination": _FOOD_TERMS + _PATHOGEN_TERMS + ["kitchen", "cutting board"],
+        "restaurant": [
+            "inspect", "health", "violation", "grade", "score", "closed",
+            "closure", "shut", "sick", "poison", "outbreak", "roach",
+            "rodent", "rat", "mice", "sanitation", "code", "critical",
+            "food safety", "fail", "listeria", "salmonella", "coli",
+            "norovirus", "hepatitis",
+        ],
+        "usda": [
+            "recall", "food", "meat", "beef", "poultry", "chicken", "pork",
+            "egg", "inspect", "fsis", "safety", "alert", "outbreak",
+            "salmonella", "listeria", "coli", "label", "guideline",
+            "temperature",
+        ],
+        "inspection": [
+            "restaurant", "food", "kitchen", "health", "usda", "fda", "fsis",
+            "meat", "poultry", "plant", "sanitation", "grade", "violation",
+            "score",
+        ],
+    },
+    "diet": {
+        # "macro tracking" -> "macro" matched "what is a macro in excel".
+        "macro": [
+            "tracking", "track", "count", "calculator", "diet", "protein",
+            "carb", "fat", "nutrition", "meal", "calori", "food", "weight",
+            "cut", "bulk", "keto", "fitness",
+        ],
+        "weight": _WEIGHT_CONTEXT,
+    },
+    "nutrition": {
+        "sugar": [
+            "added", "intake", "free", "substitute", "craving", "diet",
+            "detox", "gram", "daily", "sweetener", "alternative",
+            "consumption", "health", "blood", "low", "no sugar", "food",
+            "drink", "nutrition", "how much",
+        ],
+    },
+    "weight-loss": {
+        "weight": _WEIGHT_CONTEXT,
+    },
+    "mental-health": {
+        # Seed "therapy" alone matched "bangkok stem cell therapy", "nad
+        # therapy near me", "physical therapy clinic near me", a band and a
+        # spa.
+        "therapy": [
+            "mental", "anxiety", "depress", "trauma", "cbt", "dbt", "erp",
+            "emdr", "couples", "family", "grief", "talk", "online",
+            "counsel", "psych", "ocd", "ptsd", "adhd", "behavioral",
+            "cognitive", "session", "therapist", "betterhelp", "talkspace",
+            "exposure", "teen", "child",
+        ],
+        # Seed "burnout" alone matched "dodge demon burnout", "burnout
+        # revenge soundtrack", "burnout nationals".
+        "burnout": [
+            "work", "job", "teacher", "nurse", "caregiver", "autistic",
+            "autism", "empathy", "symptom", "sign", "quiz", "test", "recover",
+            "mental", "stress", "meaning", "how to", "deal", "parent",
+            "career", "employee", "doctor", "physician", "prevent",
+            "emotional", "compassion", "adhd", "student",
+        ],
+        # "mental health awareness" -> "awareness" matched "breast cancer
+        # awareness month".
+        "awareness": [
+            "mental", "suicide", "anxiety", "depress", "ptsd", "adhd",
+            "autism", "eating disorder", "stress", "wellbeing", "well-being",
+            "bipolar", "ocd", "schizo",
+        ],
+    },
+    "heart-metabolic": {
+        "blood": [
+            "pressure", "sugar", "glucose", "test", "work", "cholesterol",
+            "lipid", "a1c", "insulin", "diabet", "heart", "clot",
+            "circulation", "flow", "panel", "level", "vessel",
+        ],
+        "sugar": [
+            "blood", "glucose", "diabet", "insulin", "level", "spike",
+            "low", "high", "test", "monitor", "cgm", "a1c", "prediabet",
+        ],
+    },
+    "brain-aging": {
+        "bone": [
+            "density", "health", "loss", "osteopor", "osteopen", "strength",
+            "fracture", "mass", "scan", "dexa", "calcium", "vitamin d",
+            "aging", "older",
+        ],
+        "aging": [
+            "brain", "cogniti", "memory", "dementia", "alzheim", "healthy",
+            "longevity", "older", "senior", "elderly", "muscle", "bone",
+            "process", "slow", "research", "study", "biolog", "frailty",
+            "sarcopenia",
+        ],
+    },
+    "gut-health": {
+        # "gut brain axis" -> "brain" anchored any brain query.
+        "brain": ["gut", "microbio", "vagus", "axis", "probiotic", "digest", "intestin"],
+        "bacteria": [
+            "gut", "microbio", "probiotic", "intestin", "digest", "stomach",
+            "colon", "good", "bad", "healthy", "beneficial",
+        ],
+    },
+    "habits-body": {
+        # "cold plunge" -> "plunge" matched "stock market plunge".
+        "plunge": [
+            "cold", "ice", "polar", "tub", "bath", "water", "benefit",
+            "therapy", "recovery", "chiller", "sauna",
+        ],
+    },
+    "screening-prevention": {
+        # "skin cancer screening" -> "skin" anchored any skincare query.
+        "skin": [
+            "cancer", "screen", "check", "exam", "mole", "melanoma",
+            "dermatolog", "spot", "lesion", "biopsy", "carcinoma",
+        ],
+    },
+    "beauty": {
+        # "skin barrier" -> "barrier" would match "sound barrier",
+        # "language barrier"; barrier-cream products still pass.
+        "barrier": [
+            "skin", "cream", "toner", "repair", "serum", "moistur",
+            "ceramide", "face", "lotion", "balm", "lip", "essence",
+        ],
+    },
+}
+
+_DIET_SODA_TERMS = [
+    "diet coke", "diet pepsi", "diet sprite", "diet dr pepper",
+    "diet mountain dew", "diet rite", "science diet",
+]
+_VEHICLE_RECALL_TERMS = [
+    "nhtsa", "vehicle", "toyota", "ford", "hyundai", "honda", "tesla",
+    "chevrolet", "chevy", "kia", "jeep", "nissan", "subaru", "rav4", "truck",
+    "airbag", "recall election", "recall vote", "recall petition",
+    "recall effort", "recall campaign", "total recall",
+]
+
+PROFILE_EXCLUSION_TERMS: dict[str, list[str]] = {
+    "fitness": [
+        "running back", "running for", "running against", "running mate",
+        "longest running", "running joke", "running on", "running style",
+        "running gag", "running list", "running total", "running water",
+        "fantasy", "nfl", "depth chart",
+    ],
+    "mental-health": [
+        "tropical depression", "great depression", "economic depression",
+        "danakil", "volcan",
+    ],
+    "diet": _DIET_SODA_TERMS,
+    "nutrition": _DIET_SODA_TERMS + [
+        "whole foods market", "fiber optic", "fiber internet",
+        "fiber broadband", "att fiber", "google fiber", "fiber arts",
+    ],
+    # food-safety needs no vehicle list: its "recall" is weak and only counts
+    # next to a food word. public-health's "drug recall" seed makes "recall"
+    # an ordinary anchor there (drug, device and food recalls all belong to
+    # it), so the car/election senses are excluded by name instead.
+    "public-health": _VEHICLE_RECALL_TERMS,
+    "screening-prevention": [
+        "horoscope", "zodiac", "astrolog", "cancer season", "cancer sign",
+        "cancer moon", "cancer rising", "compatib",
+    ],
+    "sleep": ["sleep token", "insomnia cookies", "riize"],
+    "gut-health": ["nahb"],
 }
 
 
@@ -832,11 +1131,103 @@ def relevance_anchors(topic: str, seeds: list[str]) -> set[str]:
     return anchors
 
 
-def is_relevant_candidate(candidate: Candidate, anchors: set[str]) -> bool:
-    query = normalize(candidate.query)
+@lru_cache(maxsize=4096)
+def _word_anchor_pattern(anchor: str) -> re.Pattern:
+    # Whole word, plus common inflections so "recall" still matches
+    # "recalls"/"recalled" and "diet" matches "diets", but "cross" no longer
+    # matches "crossword" and "stress" no longer matches "distress". A
+    # hyphen counts as a word boundary ("anti-inflammatory" contains
+    # "inflammatory").
+    return re.compile(rf"(?<!\w){re.escape(anchor)}(?:s|es|ed|ing)?(?!\w)")
+
+
+@lru_cache(maxsize=4096)
+def _word_start_pattern(term: str) -> re.Pattern:
+    return re.compile(rf"(?<!\w){re.escape(term)}")
+
+
+def anchor_matches(anchor: str, query: str) -> bool:
+    """Seed-derived anchors: single words match on word boundaries, phrases
+    (anything containing a space) as plain substrings."""
+    if " " in anchor:
+        return anchor in query
+    return _word_anchor_pattern(anchor).search(query) is not None
+
+
+def term_at_word_start(term: str, query: str) -> bool:
+    """Context/exclusion terms: match at the start of a word, so stems work
+    ("contamina", "egg" -> "eggs") without mid-word hits ("egg" in "reggae")."""
+    return _word_start_pattern(term).search(query) is not None
+
+
+def relevance_verdict(
+    query: str,
+    anchors: set[str],
+    *,
+    substring_anchors: set[str] | frozenset[str] = frozenset(),
+    weak_anchors: dict[str, list[str]] | None = None,
+    exclusions: set[str] | frozenset[str] = frozenset(),
+) -> tuple[bool, str]:
+    """Single source of truth for whether a candidate is on-topic.
+
+    Returns (keep, reason). `anchors` are seed-derived (word-boundary match
+    for single words); `substring_anchors` are curated stems/phrases
+    (PROFILE_EXTRA_ANCHORS, beauty taxonomy) that keep plain substring
+    matching because they are deliberately prefixes ("menstrua",
+    "hyperactiv"). Used by build_data() and scripts/anchor_audit.py.
+    """
+    query = normalize(query)
     if not query:
-        return False
-    return any(anchor in query for anchor in anchors)
+        return False, "Off-topic after expanded seed scan"
+    excluded_term = next((term for term in sorted(exclusions) if term_at_word_start(term, query)), None)
+    if excluded_term:
+        return False, f"Off-topic: matched exclusion term {excluded_term!r}"
+    weak_anchors = weak_anchors or {}
+    matched = [a for a in anchors if anchor_matches(a, query)]
+    matched += [a for a in substring_anchors if a in query]
+    if any(a not in weak_anchors for a in matched):
+        return True, ""
+    weak_hits = sorted(set(matched))
+    for anchor in weak_hits:
+        if any(term_at_word_start(normalize(t), query) for t in weak_anchors[anchor]):
+            return True, ""
+    if weak_hits:
+        return False, f"Off-topic: weak anchor {', '.join(map(repr, weak_hits))} without profile context"
+    return False, "Off-topic after expanded seed scan"
+
+
+def is_relevant_candidate(
+    candidate: Candidate,
+    anchors: set[str],
+    *,
+    substring_anchors: set[str] | frozenset[str] = frozenset(),
+    weak_anchors: dict[str, list[str]] | None = None,
+) -> bool:
+    keep, _ = relevance_verdict(
+        candidate.query, anchors, substring_anchors=substring_anchors, weak_anchors=weak_anchors
+    )
+    return keep
+
+
+def profile_relevance_inputs(profile: str, taxonomy: dict[str, list[str]] | None = None) -> dict:
+    """Per-profile extra anchors, exclusions and weak anchors, as main()
+    passes them to build_data(). Shared with scripts/anchor_audit.py so the
+    audit can't drift from production."""
+    profile = (profile or "").strip().lower()
+    taxonomy = taxonomy or {}
+    extra_anchor_terms = None
+    if profile == "beauty":
+        extra_anchor_terms = sorted({term for terms in taxonomy.values() for term in terms})
+    if profile in PROFILE_EXTRA_ANCHORS:
+        extra_anchor_terms = PROFILE_EXTRA_ANCHORS[profile]
+    exclusion_terms = list(PROFILE_EXCLUSION_TERMS.get(profile, []))
+    if profile == "beauty":
+        exclusion_terms += load_exclusion_terms()
+    return {
+        "extra_anchor_terms": extra_anchor_terms,
+        "exclusion_terms": exclusion_terms or None,
+        "weak_anchors": PROFILE_WEAK_ANCHORS.get(profile),
+    }
 
 
 def discover_candidates(
@@ -1251,6 +1642,7 @@ def build_data(
     autocomplete_terms: list[str] | None = None,
     exclusion_terms: list[str] | None = None,
     anchor_seeds: list[str] | None = None,
+    weak_anchors: dict[str, list[str]] | None = None,
 ) -> dict:
     exclusions = {normalize(term) for term in (exclusion_terms or []) if normalize(term)}
     # Anchors come from the curated seed list only (topic + profile terms +
@@ -1280,33 +1672,39 @@ def build_data(
         # bare token "even", which then matches any candidate containing
         # "events" (confirmed in production: "upcoming events" slipped through
         # this way). Full-phrase-only anchors avoid that whole class of bug.
-        anchors |= {normalize(term) for term in extra_anchor_terms if normalize(term)}
+        #
+        # Kept as a separate set from the seed anchors: these are curated
+        # stems ("menstrua", "hyperactiv") that need plain substring matching,
+        # while seed-derived single words match on word boundaries.
+        substring_anchors = {normalize(term) for term in extra_anchor_terms if normalize(term)}
+    else:
+        substring_anchors = set()
     relevant = []
     off_topic = []
     for candidate in candidates:
-        normalized_query = normalize(candidate.query)
-        excluded_term = next((term for term in exclusions if term in normalized_query), None)
-        if excluded_term:
-            # Anchor-matched but a different sense of the seed word (e.g.
-            # "peptides" the skincare ingredient vs. "peptides" the
-            # injectable research chemical) - see beauty_taxonomy.yaml.
-            off_topic.append(candidate)
-            rejected.append({
-                "topic": candidate.query,
-                "reason": f"Off-topic: matched exclusion term {excluded_term!r}",
-                "seed_terms": sorted(candidate.seed_terms),
-            })
-        elif is_relevant_candidate(candidate, anchors):
+        keep, reason = relevance_verdict(
+            candidate.query,
+            anchors,
+            substring_anchors=substring_anchors,
+            weak_anchors=weak_anchors,
+            exclusions=exclusions,
+        )
+        if keep:
             relevant.append(candidate)
         else:
+            # Exclusion hits are a different sense of an anchor word (e.g.
+            # "peptides" the skincare ingredient vs. the injectable research
+            # chemical, "tropical depression"); weak-anchor misses are a
+            # generic word without its profile's context ("toyota recall" for
+            # food-safety). Off-topic candidates cluster by originating seed
+            # (e.g. a thin "diet news"/"diet products" combo falling back to
+            # Google's generic trending-searches filler) - keeping the seed(s)
+            # here lets us trace and prune the offending seed instead of
+            # guessing.
             off_topic.append(candidate)
-            # Off-topic candidates cluster by originating seed (e.g. a thin
-            # "diet news"/"diet products" combo falling back to Google's
-            # generic trending-searches filler) - keeping the seed(s) here
-            # lets us trace and prune the offending seed instead of guessing.
             rejected.append({
                 "topic": candidate.query,
-                "reason": "Off-topic after expanded seed scan",
+                "reason": reason,
                 "seed_terms": sorted(candidate.seed_terms),
             })
 
@@ -1684,18 +2082,16 @@ def main() -> None:
             print(f"Skipping candidate '{candidate.query}' due to scoring error: {exc}", file=sys.stderr)
             continue
 
-    extra_anchor_terms = sorted({term for terms in taxonomy.values() for term in terms}) if args.seed_profile == "beauty" else None
-    if args.seed_profile in PROFILE_EXTRA_ANCHORS:
-        extra_anchor_terms = PROFILE_EXTRA_ANCHORS[args.seed_profile]
-    exclusion_terms = load_exclusion_terms() if args.seed_profile == "beauty" else None
+    relevance = profile_relevance_inputs(args.seed_profile, taxonomy)
     data = build_data(
         args.topic, args.geo, args.date, seeds, candidates, rejected,
-        extra_anchor_terms=extra_anchor_terms,
+        extra_anchor_terms=relevance["extra_anchor_terms"],
         trending_now_terms=trending_now_terms,
         trending_now_context=trending_now_items,
         autocomplete_terms=autocomplete_terms,
-        exclusion_terms=exclusion_terms,
+        exclusion_terms=relevance["exclusion_terms"],
         anchor_seeds=core_seeds,
+        weak_anchors=relevance["weak_anchors"],
     )
     stamp = datetime.now().strftime("%Y-%m-%d_%H%M")
     slug = re.sub(r"[^a-z0-9]+", "-", args.topic.lower()).strip("-") or "topic"

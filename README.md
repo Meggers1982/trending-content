@@ -114,6 +114,32 @@ Second batch of health profiles, each with its own weekly `run-<profile>-radar.y
 | `habits-body` | cold plunge, red light therapy, step count |
 | `screening-prevention` | colonoscopy, mammogram, skin cancer screening |
 
+### How the scanner decides a query is on-topic
+
+Every Google Trends related query has to match a relevance anchor taken from the profile's
+seeds, or it's dropped as off-topic. Since 2026-10-31 (MEA-1834) the rules are stricter than a
+plain substring match:
+
+- **Single words match whole words.** "cross" no longer matches "crossword", but "recall"
+  still matches "recalls"/"recalled".
+- **Weak anchors need context, per profile.** `PROFILE_WEAK_ANCHORS` in
+  `google_trend_radar.py` lists words that are the point of one profile but generic
+  elsewhere: food-safety's `recall` only counts next to a food word ("granola recall" stays,
+  "toyota recalls" goes), fitness's `running` needs a running word ("running shoes"), and
+  adhd-focus's `focus` needs an attention word.
+- **Exclusion phrases per profile.** `PROFILE_EXCLUSION_TERMS` rejects senses a whitelist
+  can't rule out: "running back", "running for", "tropical depression", "diet coke",
+  "recall election". Beauty's list stays in `configs/beauty_taxonomy.yaml`.
+
+When you add a seed or a profile, rerun the offline audit against every saved scan before
+shipping (no SerpAPI calls):
+
+```bash
+python scripts/anchor_audit.py --baseline-ref origin/main   # what your change flips
+python scripts/anchor_audit.py --show-kept                  # still-kept single-word matches
+python -m pytest -q tests                                   # keep/reject examples
+```
+
 The most recent scan's plain keyword list (topic, stage, radar/opportunity scores, tags) also
 shows up inline on the main dashboard under "Trending keywords" (`#keywords`), so you don't have
 to open a separate HTML file to see what's trending.
