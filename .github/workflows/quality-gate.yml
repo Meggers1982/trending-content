@@ -40,3 +40,8 @@ jobs:
 
       - name: Check Python entrypoints
         run: python -m py_compile run_pipeline.py google_trend_radar.py run_tracked_topics.py
+
+      - name: Radar relevance-anchor tests (offline)
+        run: |
+          pip install pyyaml pytest
+          python -m pytest -q tests

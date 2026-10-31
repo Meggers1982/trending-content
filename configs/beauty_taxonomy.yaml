@@ -97,3 +97,10 @@ exclusions:
   - sentenced
   - criminal case
   - arrested
+  # MEA-1834 audit (2026-10-31): TV/film titles that matched the bare
+  # "beauty" anchor ("beauty in black renewed season 4", "kate spade beauty
+  # and the beast", "the beauty fx series cast").
+  - beauty and the beast
+  - beauty in black
+  - the beauty fx
+  - beauty fx series
