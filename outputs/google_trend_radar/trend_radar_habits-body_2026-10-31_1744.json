@@ -1,0 +1,338 @@
+{
+  "run_date": "2026-10-31",
+  "generated_at": "2026-10-31T17:44:15",
+  "topic": "habits-body",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "habits-body",
+    "cold plunge",
+    "red light therapy",
+    "step count",
+    "habits-body trends",
+    "habits-body products",
+    "habits-body news",
+    "habits-body for beginners",
+    "habits-body routine",
+    "habits-body benefits",
+    "habits-body ideas",
+    "habits-body reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 12,
+    "total_reviewed": 65,
+    "total_retained": 0,
+    "total_rejected": 66,
+    "breakouts": 0,
+    "emerging": 0,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [],
+  "rejected": [
+    {
+      "topic": "habits-body ideas",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "top tourist attractions in paris",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "step count"
+      ]
+    },
+    {
+      "topic": "omnilux contour face",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "red light therapy"
+      ]
+    },
+    {
+      "topic": "omnilux contour face led mask",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "red light therapy"
+      ]
+    },
+    {
+      "topic": "sauna",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "cold plunge"
+      ]
+    },
+    {
+      "topic": "sauna near me",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "cold plunge"
+      ]
+    },
+    {
+      "topic": "ice bath",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "cold plunge"
+      ]
+    },
+    {
+      "topic": "red light mask",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "red light therapy"
+      ]
+    },
+    {
+      "topic": "best red light mask",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "red light therapy"
+      ]
+    },
+    {
+      "topic": "blue light therapy",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "red light therapy"
+      ]
+    },
+    {
+      "topic": "apple watch",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "step count"
+      ]
+    },
+    {
+      "topic": "word count",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "step count"
+      ]
+    },
+    {
+      "topic": "how many steps in a mile",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "step count"
+      ]
+    },
+    {
+      "topic": "how often should you do red light therapy on your face",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "ihome red light therapy mask",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "how long to do red light therapy on face",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "ihome red light therapy",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "does red light therapy work through clothes",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "what does a red light therapy mask do",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "sauna cold plunge",
+      "reason": "Weak radar score (39)"
+    },
+    {
+      "topic": "plunge cold tub",
+      "reason": "Weak radar score (39)"
+    },
+    {
+      "topic": "cold plunge and sauna",
+      "reason": "Weak radar score (38)"
+    },
+    {
+      "topic": "cold plunge benefits",
+      "reason": "Weak radar score (39)"
+    },
+    {
+      "topic": "best cold plunge",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "cold plunge near me",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "cold water plunge",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "benefits of cold plunge",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "cold plunge chiller",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "cold plunge therapy",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "what is a cold plunge",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "home cold plunge",
+      "reason": "Weak radar score (45)"
+    },
+    {
+      "topic": "how cold is a cold plunge",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "cold plunge temperature",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "how long to cold plunge",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "cold plunge pool",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "cold plunge temp",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "outdoor cold plunge",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "cold plunge after workout",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "what does cold plunge do",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "sauna and cold plunge near me",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "benefits of a cold plunge",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "red light therapy mask",
+      "reason": "Weak radar score (40)"
+    },
+    {
+      "topic": "best red light therapy",
+      "reason": "Weak radar score (40)"
+    },
+    {
+      "topic": "red light therapy benefits",
+      "reason": "Weak radar score (40)"
+    },
+    {
+      "topic": "face red light therapy",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "what is red light therapy",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "does red light therapy work",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "hair red light therapy",
+      "reason": "Weak radar score (40)"
+    },
+    {
+      "topic": "what does red light therapy do",
+      "reason": "Weak radar score (39)"
+    },
+    {
+      "topic": "home red light therapy",
+      "reason": "Weak radar score (46)"
+    },
+    {
+      "topic": "best red light therapy mask",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "red light therapy for face",
+      "reason": "Weak radar score (46)"
+    },
+    {
+      "topic": "led red light therapy",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "sauna red light therapy",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "infrared light therapy",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "red light therapy near me",
+      "reason": "Weak radar score (36)"
+    },
+    {
+      "topic": "red light therapy face mask",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "red light therapy for hair",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "benefits of red light therapy",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "red light therapy reviews",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "red light therapy device",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "red light therapy at home",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "step count on iphone",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "step counter",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "how to see step count on apple watch",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "average step count per day",
+      "reason": "Weak radar score (43)"
+    }
+  ]
+}
