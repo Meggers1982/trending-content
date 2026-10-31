@@ -1,6 +1,25 @@
 {
- "updated": "2026-10-30",
+ "updated": "2026-10-31",
  "items": [
+  {
+   "id": "nd-2026-10-31-aca-open-enrollment-opens-nov-1-benchmark-premiums",
+   "title": "ACA open enrollment opens Nov. 1: benchmark premiums up 13% for 2027 and 42% since 2025, Cigna is leaving the individual market in all 11 of its states, and there's no longer a cap on paying back subsidies at tax time",
+   "created": "2026-10-31",
+   "angle": "KFF's numbers in short: the second straight year of double-digit benchmark increases, people above 400% of poverty paying full price, 11 insurers leaving at least one state, and repayment caps on excess tax credits gone starting with 2026 returns. Use it to tell readers to shop around and re-estimate income before Dec. 15 (the HealthCare.gov deadline; verify), not to auto-renew.",
+   "why_now": "Open enrollment starts tomorrow, Nov. 1. Readers face higher premiums and fewer insurers this week.",
+   "is_it_real": "These figures are KFF's own analysis (Oct. 30), drawn from insurer filings, CMS enrollment data and CBO, and should be cited as KFF's. They came from a fetched summary of the page, so recheck them against the page before running. The 2027 open enrollment end date isn't in the item; KFF notes a rule shortening the window was vacated, so confirm the deadline on HealthCare.gov.",
+   "evidence": [
+    "https://www.kff.org/affordable-care-act/9-things-to-watch-for-the-2027-aca-open-enrollment-period/"
+   ],
+   "items": [
+    {
+     "kind": "analysis",
+     "publisher": "kff-feed",
+     "released": "2026-10-30",
+     "url": "https://www.kff.org/affordable-care-act/9-things-to-watch-for-the-2027-aca-open-enrollment-period/"
+    }
+   ]
+  },
   {
    "id": "nd-2026-10-30-the-0-part-d-plan-is-gone-for-2027-stand-alone-dru",
    "title": "The $0 Part D plan is gone for 2027: stand-alone drug plan premiums are on track to jump 50%, from $34 to $51 a month, for anyone who doesn't switch by Dec 7",

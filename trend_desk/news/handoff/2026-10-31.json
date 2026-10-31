@@ -1,0 +1,101 @@
+{
+ "date": "2026-10-31",
+ "ideas": [
+  {
+   "id": "nd-2026-10-31-two-months-before-medicaid-work-requirements-start",
+   "desk": "news",
+   "title": "Two months before Medicaid work requirements start, a federal court has struck down the Trump administration's narrow 'medically frail' exemption in 26 states. Who counts as too sick to work now depends on where you live",
+   "created": "2026-10-31",
+   "route": "pitch",
+   "speed": "released 1 days ago",
+   "beat": "medicare_medicaid / public health policy",
+   "angle": "The medical frailty exemption decides whether a 58-year-old with COPD, cancer or a mental illness has to log 80 hours a month or lose Medicaid. Massachusetts v. Oz vacated the rule's 'substantially impair' test and barred penalties against the 26 plaintiff states for six months. That leaves a patchwork on Jan. 1: people in the other 17 required states plus DC still face the narrow definition, and under the 2025 law, losing Medicaid over work rules also bars ACA subsidies (KFF).",
+   "why_now": "The ruling came about Oct. 29, 2026. Work requirements must be in place in 43 states and DC by Jan. 1, 2027, so states are building exemption screens right now, and ACA open enrollment opens Nov. 1.",
+   "is_it_real": "The ruling comes from Justice in Aging's weekly advocacy newsletter (Oct. 30). That group is an advocate but independent, and it joined an amicus brief in the related case Taylor v. Kennedy. The case name, the 26 states, the vacatur and the six-month penalty bar came from a fetched summary of that newsletter, not from the opinion. Before writing, confirm the court, the date and the scope against the opinion itself. The 43 states plus DC by Jan. 1 and the subsidy bar come from KFF's Oct. 30 open enrollment analysis. Nobody has shown yet how many enrollees the frailty definition affects; that number is the reporting job.",
+   "primary_test": "The district court opinion and order in Massachusetts v. Oz (PACER / state AG press releases), the CMS rule text defining medical frailty under the 2025 reconciliation law's community engagement requirement, and CBO's coverage-loss estimates for the work requirement",
+   "standout": false,
+   "standout_reason": "",
+   "needs_independent_test": false,
+   "other_peg": "Jan. 1, 2027 work-requirement start date; ACA open enrollment opens Nov. 1",
+   "audience": "both",
+   "evidence_strength": "moderate",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "keys": [
+    "aw-from-dc-court-ruling-on-medicaid-work-requirements-estate-recovery-adv"
+   ],
+   "items": [
+    {
+     "key": "aw-from-dc-court-ruling-on-medicaid-work-requirements-estate-recovery-adv",
+     "kind": "analysis",
+     "interested_party": false,
+     "title": "From DC: Court Ruling on Medicaid Work Requirements, Estate Recovery Advocacy, and Public Charge Updates",
+     "publisher": "justice-in-aging",
+     "url": "https://justiceinaging.org/from-dc-10302026/",
+     "released": "2026-10-30",
+     "date_basis": "source date",
+     "days_old": 1,
+     "source": "AgingWire",
+     "summary": "In this week's edition: Court Ruling on Medicaid Work Requirements, Estate Recovery Advocacy, and Public Charge Updates. The post From DC: Court Ruling on Medicaid Work Requirements, Estate Recovery Advocacy, and Public Charge Updates appeared first on Justice in Aging ."
+    }
+   ],
+   "evidence": [
+    "https://justiceinaging.org/from-dc-10302026/"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "nd-2026-10-31-aca-open-enrollment-opens-nov-1-benchmark-premiums",
+   "desk": "news",
+   "title": "ACA open enrollment opens Nov. 1: benchmark premiums up 13% for 2027 and 42% since 2025, Cigna is leaving the individual market in all 11 of its states, and there's no longer a cap on paying back subsidies at tax time",
+   "created": "2026-10-31",
+   "route": "roundup",
+   "speed": "released 1 days ago",
+   "beat": "insurance",
+   "angle": "KFF's numbers in short: the second straight year of double-digit benchmark increases, people above 400% of poverty paying full price, 11 insurers leaving at least one state, and repayment caps on excess tax credits gone starting with 2026 returns. Use it to tell readers to shop around and re-estimate income before Dec. 15 (the HealthCare.gov deadline; verify), not to auto-renew.",
+   "why_now": "Open enrollment starts tomorrow, Nov. 1. Readers face higher premiums and fewer insurers this week.",
+   "is_it_real": "These figures are KFF's own analysis (Oct. 30), drawn from insurer filings, CMS enrollment data and CBO, and should be cited as KFF's. They came from a fetched summary of the page, so recheck them against the page before running. The 2027 open enrollment end date isn't in the item; KFF notes a rule shortening the window was vacated, so confirm the deadline on HealthCare.gov.",
+   "primary_test": "",
+   "standout": false,
+   "standout_reason": "",
+   "needs_independent_test": false,
+   "other_peg": "",
+   "audience": "general",
+   "evidence_strength": "strong",
+   "confidence": "high",
+   "site": "",
+   "seed_keyword": "",
+   "keys": [
+    "aw-9-things-to-watch-for-the-2027-aca-open-enrollment-period"
+   ],
+   "items": [
+    {
+     "key": "aw-9-things-to-watch-for-the-2027-aca-open-enrollment-period",
+     "kind": "analysis",
+     "interested_party": false,
+     "title": "9 Things to Watch for the 2027 ACA Open Enrollment Period",
+     "publisher": "kff-feed",
+     "url": "https://www.kff.org/affordable-care-act/9-things-to-watch-for-the-2027-aca-open-enrollment-period/",
+     "released": "2026-10-30",
+     "date_basis": "source date",
+     "days_old": 1,
+     "source": "AgingWire",
+     "summary": "The ACA Marketplace Open Enrollment season begins November 1, bringing higher out-of-pocket premium payments, new eligibility requirements for certain groups, and state efforts to offset premium increases following the expiration of enhanced premium tax credits. Read our analysis of what these and other changes could mean for enrollees."
+    }
+   ],
+   "evidence": [
+    "https://www.kff.org/affordable-care-act/9-things-to-watch-for-the-2027-aca-open-enrollment-period/"
+   ],
+   "term_details": [],
+   "status": "routed"
+  }
+ ],
+ "dropped": {
+  "already-covered": 1,
+  "corporate-only": 3,
+  "no-reader-stake": 1,
+  "off-beat": 2
+ }
+}
