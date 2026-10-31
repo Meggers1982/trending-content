@@ -1,0 +1,1276 @@
+{
+  "run_date": "2026-10-31",
+  "generated_at": "2026-10-31T17:35:03",
+  "topic": "public-health",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "public-health",
+    "measles",
+    "flu season",
+    "RSV",
+    "bird flu",
+    "FDA approval",
+    "drug recall",
+    "vaccine schedule",
+    "public-health trends",
+    "public-health products",
+    "public-health news",
+    "public-health for beginners",
+    "public-health routine",
+    "public-health benefits",
+    "public-health ideas",
+    "public-health reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 16,
+    "total_reviewed": 80,
+    "total_retained": 4,
+    "total_rejected": 72,
+    "breakouts": 2,
+    "emerging": 1,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "topic": "usda bird flu egg farm cull",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 66,
+      "emergence_score": 82,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 20,
+      "slope": 0,
+      "acceleration": -1,
+      "seed_terms": [
+        "bird flu"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        12,
+        20,
+        19,
+        8,
+        7,
+        4,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        13,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing.",
+      "similar": [
+        {
+          "topic": "bird flu mink",
+          "trend_stage": "emerging",
+          "radar_score": 65,
+          "why_now": "Google Trends labels it +2400%; interest moved from 0 to 0; found through rising query"
+        },
+        {
+          "topic": "bird flu mink farm",
+          "trend_stage": "emerging",
+          "radar_score": 63,
+          "why_now": "Google Trends labels it +950%; interest moved from 0 to 0; found through rising query"
+        },
+        {
+          "topic": "utah mink farm bird flu",
+          "trend_stage": "watch",
+          "radar_score": 54,
+          "why_now": "Google Trends labels it +450%; interest moved from 0 to 0; found through rising query"
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "topic": "walmart great value fruit cocktail recall",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 65,
+      "emergence_score": 80,
+      "velocity_score": 39,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 88,
+      "confidence": "high",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 61,
+      "slope": 0,
+      "acceleration": -4,
+      "seed_terms": [
+        "drug recall"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        3,
+        4,
+        4,
+        3,
+        3,
+        6,
+        16,
+        22,
+        23,
+        40,
+        58,
+        61,
+        60,
+        50,
+        45,
+        34,
+        24,
+        17,
+        12,
+        9,
+        8,
+        6,
+        6,
+        6,
+        24,
+        29,
+        24,
+        20,
+        17,
+        13,
+        14,
+        14,
+        18,
+        24,
+        39,
+        30,
+        26,
+        22,
+        18,
+        15,
+        12,
+        11,
+        8,
+        7,
+        7,
+        7,
+        8,
+        8,
+        7,
+        6,
+        5,
+        5,
+        4,
+        4,
+        2,
+        3,
+        3,
+        2,
+        4,
+        3,
+        3,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 3,
+      "topic": "amlodipine recall",
+      "trend_stage": "emerging",
+      "urgency": "this_week",
+      "radar_score": 64,
+      "emergence_score": 79,
+      "velocity_score": 38,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 87,
+      "confidence": "high",
+      "rising_label": "+950%",
+      "latest_interest": 0,
+      "peak_interest": 27,
+      "slope": 0,
+      "acceleration": -6,
+      "seed_terms": [
+        "drug recall"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        23,
+        27,
+        27,
+        21,
+        18,
+        23,
+        20,
+        18,
+        18,
+        15,
+        14,
+        19,
+        23,
+        23,
+        21,
+        18,
+        17,
+        13,
+        10,
+        12,
+        13,
+        0,
+        0,
+        0,
+        14,
+        17,
+        14,
+        11,
+        12,
+        11,
+        10,
+        8,
+        13,
+        9,
+        12,
+        14,
+        13,
+        12,
+        11,
+        10,
+        9,
+        6,
+        7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        11,
+        11,
+        8,
+        6,
+        11,
+        8,
+        7,
+        5,
+        5,
+        4,
+        5,
+        0,
+        4,
+        4,
+        0,
+        3,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        4,
+        0,
+        3,
+        4,
+        6,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +950%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Build an angle this week and monitor the next 24-48 hours.",
+      "similar": [
+        {
+          "topic": "amlodipine drug recall",
+          "trend_stage": "emerging",
+          "radar_score": 56,
+          "why_now": "Google Trends labels it +500%; interest moved from 0 to 0; found through rising query"
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "topic": "measles outbreak indiana",
+      "trend_stage": "watch",
+      "urgency": "monitor",
+      "radar_score": 50,
+      "emergence_score": 46,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 68,
+      "confidence": "high",
+      "rising_label": "+200%",
+      "latest_interest": 0,
+      "peak_interest": 16,
+      "slope": 0,
+      "acceleration": 0,
+      "seed_terms": [
+        "measles"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        16,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it +200%; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Keep on watchlist unless another signal channel confirms it."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "abc high potential season 3",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "flu season"
+      ]
+    },
+    {
+      "topic": "antimatter",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "bird flu"
+      ]
+    },
+    {
+      "topic": "mein schiff cruise ship",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "bird flu"
+      ]
+    },
+    {
+      "topic": "molly hatchet",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "bird flu"
+      ]
+    },
+    {
+      "topic": "winter storm forecast",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "bird flu"
+      ]
+    },
+    {
+      "topic": "google gmail ai privacy updates",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "bird flu"
+      ]
+    },
+    {
+      "topic": "microsoft buyouts",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "bird flu"
+      ]
+    },
+    {
+      "topic": "microsoft layoffs",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "bird flu"
+      ]
+    },
+    {
+      "topic": "alan dysert",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "bird flu"
+      ]
+    },
+    {
+      "topic": "microsoft buyouts employees",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "bird flu"
+      ]
+    },
+    {
+      "topic": "gerrothorax maritimus",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "bird flu"
+      ]
+    },
+    {
+      "topic": "what is a mink farm",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "bird flu"
+      ]
+    },
+    {
+      "topic": "walter koenig star trek actor",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "bird flu"
+      ]
+    },
+    {
+      "topic": "hennepin county judge sarah west",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "bird flu"
+      ]
+    },
+    {
+      "topic": "apple new ipad mini",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "bird flu"
+      ]
+    },
+    {
+      "topic": "iphone duo apple",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "bird flu"
+      ]
+    },
+    {
+      "topic": "slow loris",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "bird flu"
+      ]
+    },
+    {
+      "topic": "iran",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "bird flu"
+      ]
+    },
+    {
+      "topic": "musician",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "drug recall"
+      ]
+    },
+    {
+      "topic": "mink farm",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "bird flu"
+      ]
+    },
+    {
+      "topic": "mink",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "bird flu"
+      ]
+    },
+    {
+      "topic": "drug resistance",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "drug recall"
+      ]
+    },
+    {
+      "topic": "ino stock",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "FDA approval"
+      ]
+    },
+    {
+      "topic": "the national research act of 1974",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "FDA approval"
+      ]
+    },
+    {
+      "topic": "inovio stock",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "FDA approval"
+      ]
+    },
+    {
+      "topic": "retatrutide peptide",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "FDA approval"
+      ]
+    },
+    {
+      "topic": "sinus infection symptoms",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "flu season"
+      ]
+    },
+    {
+      "topic": "todd county",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "measles"
+      ]
+    },
+    {
+      "topic": "cholera",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "measles"
+      ]
+    },
+    {
+      "topic": "pure food and drug act of 1906",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "drug recall"
+      ]
+    },
+    {
+      "topic": "suffrage",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "drug recall"
+      ]
+    },
+    {
+      "topic": "how long does the flu shot last",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "flu season"
+      ]
+    },
+    {
+      "topic": "meat inspection act",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "drug recall"
+      ]
+    },
+    {
+      "topic": "malaria",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "measles"
+      ]
+    },
+    {
+      "topic": "tuberculosis",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "measles"
+      ]
+    },
+    {
+      "topic": "rubella virus",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "measles"
+      ]
+    },
+    {
+      "topic": "molluscum contagiosum",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "measles"
+      ]
+    },
+    {
+      "topic": "tdap",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "measles"
+      ]
+    },
+    {
+      "topic": "diphtheria",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "measles"
+      ]
+    },
+    {
+      "topic": "referendum",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "drug recall"
+      ]
+    },
+    {
+      "topic": "maculopapular rash",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "measles"
+      ]
+    },
+    {
+      "topic": "meningitis",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "measles"
+      ]
+    },
+    {
+      "topic": "walmart shrinkflation frozen shrimp lawsuit",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "drug recall"
+      ]
+    },
+    {
+      "topic": "todd county measles outbreak 2026",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "washington dairy bird flu cases",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "measles resurgence in the united states",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "bird flu updates",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "rose acre farms bird flu outbreak",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "nashville measles",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "maryann measles",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "inovio fda approval",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "bird flu",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "can you get measles if you have been vaccinated",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "drug recall lawyer",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "indiana measles cases",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "indiana measles",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "when do kids get the measles vaccine",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "cdc infant vaccine schedule",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "when is measles vaccine given",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "early signs of rsv in babies",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "pneumonia vaccine schedule 65 years old",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "measles outbreak mn",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "measles vs chickenpox",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "blood pressure drug recall",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "product recall",
+      "reason": "Weak radar score (49)"
+    },
+    {
+      "topic": "when was the measles vaccine created",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "acip vaccine schedule",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "melanoma vaccine",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "mmr vaccine side effects",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "is rubella the same as measles",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "walmart fruit cocktail lead recall",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "is rhinovirus the same as rsv",
+      "reason": "Weak radar score (41)"
+    }
+  ]
+}
