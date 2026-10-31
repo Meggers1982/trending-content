@@ -36827,6 +36827,421 @@
    "judged_on": "2026-10-30",
    "status": "dropped",
    "reason": "caveats-undo-it"
+  },
+  "42953259": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42956395": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42950894": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42951838": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42925264": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42945397": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42955377": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "41916749": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42962415": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42954618": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42962968": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42953268": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42962423": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42962759": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42956696": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42956729": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42962924": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42954140": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42960730": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42933843": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42954453": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42962265": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42957010": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42954294": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42950801": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42932829": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42464899": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42959393": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42958956": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42960537": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42586770": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42955760": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42963242": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42957180": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42955373": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42956938": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42960478": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42962336": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42958638": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42925994": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42950708": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42944768": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42955585": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42956318": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42954385": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42951232": {
+   "judged_on": "2026-10-31",
+   "status": "kept",
+   "idea": "rd-2026-10-31-black-women-get-every-type-of-uterine-sarcoma-more"
+  },
+  "W7222969019": {
+   "judged_on": "2026-10-31",
+   "status": "kept",
+   "idea": "rd-2026-10-31-the-validity-numbers-behind-hiring-tests-were-most"
+  },
+  "42957065": {
+   "judged_on": "2026-10-31",
+   "status": "kept",
+   "idea": "rd-2026-10-31-is-it-real-going-to-museums-concerts-and-the-libra"
+  },
+  "W7220982864": {
+   "judged_on": "2026-10-31",
+   "status": "kept",
+   "idea": "rd-2026-10-31-can-you-eat-canned-food-past-its-date-shoppers-in"
+  },
+  "42955660": {
+   "judged_on": "2026-10-31",
+   "status": "kept",
+   "idea": "rd-2026-10-31-daily-low-dose-aspirin-didn-t-preserve-older-adult"
+  },
+  "42954170": {
+   "judged_on": "2026-10-31",
+   "status": "kept",
+   "idea": "rd-2026-10-31-balance-tech-check-phone-apps-measure-sway-well-bu"
+  },
+  "42956683": {
+   "judged_on": "2026-10-31",
+   "status": "kept",
+   "idea": "rd-2026-10-31-balance-tech-check-phone-apps-measure-sway-well-bu"
+  },
+  "42956453": {
+   "judged_on": "2026-10-31",
+   "status": "kept",
+   "idea": "rd-2026-10-31-after-hip-fracture-surgery-care-needs-kept-worseni"
+  },
+  "42955093": {
+   "judged_on": "2026-10-31",
+   "status": "kept",
+   "idea": "rd-2026-10-31-most-unfortified-plant-based-meat-and-milk-swaps-f"
+  },
+  "W7223189021": {
+   "judged_on": "2026-10-31",
+   "status": "kept",
+   "idea": "rd-2026-10-31-most-unfortified-plant-based-meat-and-milk-swaps-f"
+  },
+  "W7214167465": {
+   "judged_on": "2026-10-31",
+   "status": "kept",
+   "idea": "rd-2026-10-31-on-mornings-your-stock-portfolio-is-up-you-may-tak"
+  },
+  "W7222847257": {
+   "judged_on": "2026-10-31",
+   "status": "kept",
+   "idea": "rd-2026-10-31-medium-complexity-jobs-not-the-dullest-or-hardest"
+  },
+  "W7223010138": {
+   "judged_on": "2026-10-31",
+   "status": "kept",
+   "idea": "rd-2026-10-31-calmly-reflecting-on-death-made-people-want-to-own"
+  },
+  "W7223232846": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "already-covered"
+  },
+  "W7223031859": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "specialist-only"
+  },
+  "W7224916875": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "too-thin"
+  },
+  "W7223696657": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "specialist-only"
+  },
+  "W7223275804": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "too-thin"
+  },
+  "W7221331977": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "too-thin"
+  },
+  "W7220360145": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "too-thin"
+  },
+  "W7224129116": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "specialist-only"
+  },
+  "W7221245981": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "too-thin"
+  },
+  "W7222470451": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "methods-only"
+  },
+  "W7223183113": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "too-thin"
+  },
+  "W7224004846": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "too-thin"
+  },
+  "W7221437963": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "caveats-undo-it"
+  },
+  "W7221783757": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "too-thin"
+  },
+  "42957764": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "rule"
+  },
+  "42933334": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "specialist-only"
+  },
+  "42961389": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "too-thin"
+  },
+  "42956695": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "too-thin"
+  },
+  "42956919": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "methods-only"
+  },
+  "42948885": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "too-thin"
+  },
+  "42952310": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "too-thin"
+  },
+  "42958736": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "too-thin"
+  },
+  "42954374": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "off-beat"
+  },
+  "42961329": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "watch"
+  },
+  "42956894": {
+   "judged_on": "2026-10-31",
+   "status": "dropped",
+   "reason": "too-thin"
   }
  },
  "ideas": {
@@ -50686,6 +51101,576 @@
    ],
    "term_details": [],
    "status": "routed"
+  },
+  "rd-2026-10-31-black-women-get-every-type-of-uterine-sarcoma-more": {
+   "desk": "research",
+   "title": "Black women get every type of uterine sarcoma more often, are diagnosed later, and survive it less: 20 years of US cancer-registry data",
+   "created": "2026-10-31",
+   "route": "pitch",
+   "speed": "online 3 days",
+   "beat": "women's health / cancer disparities",
+   "angle": "Uterine sarcoma is rare and aggressive. Leiomyosarcoma, the most common type, can look like a fibroid, and Black women have more fibroids and more hysterectomies. This analysis adjusts incidence for hysterectomy, which most past estimates didn't, and finds the gap in every subtype and stage: 41.9% five-year survival for Black women vs 55.4% for white women. The reporting question is where the delay happens: fibroid assumptions, imaging, access to specialist surgery, or treatment.",
+   "why_now": "Online 3 days ago in AJOG and not covered yet. Uterine cancer deaths are rising, and the news covers endometrial cancer, not sarcoma.",
+   "is_it_real": "Large registry study (14,801 women, SEER 2000–2019) with a sensible hysterectomy correction. It is descriptive and observational: it has no treatment, insurance or fibroid-history data, so it shows that the disparity exists, not why. The fibroid and morcellation angle is the reporter's thread, not a finding of this paper.",
+   "evidence_strength": "moderate",
+   "other_peg": "",
+   "audience": "general",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42951232"
+   ],
+   "studies": [
+    {
+     "pmid": "42951232",
+     "doi": "10.1016/j.ajog.2026.10.034",
+     "journal": "American Journal of Obstetrics and Gynecology",
+     "headline": "Black women face a double burden with uterine sarcoma: higher rates and worse survival across every subtype",
+     "pubdate": "2026 Oct 28",
+     "days_online": 3,
+     "date_verified": true,
+     "digests": [
+      "Women's Health"
+     ],
+     "score": 8,
+     "caveats": "observational design, retrospective registry data, no information on treatment differences or underlying risk factors by race",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (SERPAPI verified)",
+     "flags": [
+      "observational"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42951232/",
+    "https://doi.org/10.1016/j.ajog.2026.10.034"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  "rd-2026-10-31-the-validity-numbers-behind-hiring-tests-were-most": {
+   "desk": "research",
+   "title": "The validity numbers behind hiring tests were mostly measured on employees with nothing at stake, a new review argues",
+   "created": "2026-10-31",
+   "route": "pitch",
+   "speed": "online 12 days",
+   "beat": "work / hiring and AI at work",
+   "angle": "Vendors and HR decks cite meta-analytic validity figures for cognitive tests, structured interviews and personality tools. This review says most of the underlying data comes from current employees taking the test with no job on the line, and that the statistical corrections rest on assumptions. A trade pitch: the due-diligence question every hiring manager should ask a vendor, especially AI assessment vendors who borrow these numbers.",
+   "why_now": "Online 12 days. AI-driven screening and assessment tools are spreading fast and leaning on the legitimacy of this literature.",
+   "is_it_real": "A critical review with no new data. It argues the evidence is uncertain, not that the tests don't work, and the field is actively divided over these corrections (the Sackett vs. Schmidt-Hunter debate), so the piece needs a researcher from the other side. Author count and the claim that other researchers dispute it aren't in the abstract; verify both.",
+   "evidence_strength": "thin",
+   "other_peg": "",
+   "audience": "professionals",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "W7222969019"
+   ],
+   "studies": [
+    {
+     "pmid": "W7222969019",
+     "doi": "10.1111/ijsa.70086",
+     "journal": "International Journal of Selection and Assessment",
+     "headline": "The evidence that hiring tests predict job performance is shakier than the textbooks say",
+     "pubdate": "2026 Oct 19",
+     "days_online": 12,
+     "date_verified": true,
+     "digests": [
+      "Career psychology: hiring & selection"
+     ],
+     "score": 8.3,
+     "caveats": "A critical review, not new empirical data; it argues the evidence is uncertain rather than demonstrating that the predictors do not work, and other researchers in the field dispute the severity of these corrections.",
+     "fact_check_note": "⚠️ Minor issues: The review's core argument and conclusion are represented faithfully. Author count and the claim that other researchers dispute the critique are not in the abstract; the review's positive observations are omitted.",
+     "coverage": "No coverage found",
+     "flags": [],
+     "openalex": true,
+     "evidence_type": "meta-analysis"
+    }
+   ],
+   "evidence": [
+    "https://openalex.org/W7222969019",
+    "https://doi.org/10.1111/ijsa.70086"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  "rd-2026-10-31-is-it-real-going-to-museums-concerts-and-the-libra": {
+   "desk": "research",
+   "title": "Is it real? Going to museums, concerts and the library is good for your health",
+   "created": "2026-10-31",
+   "route": "tfm",
+   "speed": "online 2 days",
+   "beat": "wellness claims / aging",
+   "angle": "'Arts on prescription' and 'museum visits help you live longer' circulate widely. A new UCL study of 6,180 people links broader arts engagement to 17 blood proteins tied to inflammation and to lower rates of 11 conditions including dementia and heart disease. The receipt complicates the claim: the link is real and consistent, but people who go to museums are healthier and wealthier, and the proteins were measured at the same time as engagement, so the 'mechanism' isn't proven.",
+   "why_now": "Online 2 days and not covered yet. It is the first claimed blood signature for arts engagement, so expect the 'museums change your blood' headlines to arrive.",
+   "is_it_real": "Observational UK Household Longitudinal Study data. Engagement and many disease outcomes are self-reported, residual confounding by income and education is likely, and the authors themselves say the protein mediation isn't causal. Good material for an 'it's complicated' verdict, not for a yes.",
+   "evidence_strength": "moderate",
+   "other_peg": "",
+   "audience": "both",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42957065"
+   ],
+   "studies": [
+    {
+     "pmid": "42957065",
+     "doi": "10.1016/j.bbi.2026.107088",
+     "journal": "Brain Behav Immun",
+     "headline": "Arts and museum visits leave a measurable fingerprint in the blood — and track with lower dementia and heart disease risk",
+     "pubdate": "2026 Oct 29",
+     "days_online": 2,
+     "date_verified": true,
+     "digests": [
+      "Senior Living — New This Week"
+     ],
+     "score": 7,
+     "caveats": "Observational cohort; cannot establish causation, and the authors explicitly state the mediation analysis does not prove a causal protein pathway because engagement and proteins were measured at roughly the same time. Arts engagement and many disease outcomes were self-reported, and healthier, wealthier people engage more with the arts — residual confounding is likely despite adjustment. UK sample spanning adulthood rather than an exclusively older cohort.",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (Google News checked)",
+     "flags": [
+      "observational"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42957065/",
+    "https://doi.org/10.1016/j.bbi.2026.107088"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  "rd-2026-10-31-can-you-eat-canned-food-past-its-date-shoppers-in": {
+   "desk": "research",
+   "title": "Can you eat canned food past its date? Shoppers in a new study were warier of near-date cans than near-date fresh food",
+   "created": "2026-10-31",
+   "route": "brief",
+   "speed": "online 22 days",
+   "beat": "food safety",
+   "angle": "An evergreen explainer on what 'best by' and 'use by' mean on shelf-stable food. The hook is the finding that shoppers read a looming date on a can as a health risk more than they do on fresh food, the opposite of how food safety actually works.",
+   "why_now": "Steady search demand on canned food date questions, and pantry and food-drive season is starting.",
+   "is_it_real": "Two small hypothetical-purchase experiments (N=111 and N=210) about perception only. The brief's safety answers have to come from USDA/FSIS date-labeling guidance; this study only supports the 'people misjudge it' framing.",
+   "evidence_strength": "thin",
+   "other_peg": "",
+   "audience": "general",
+   "confidence": "medium",
+   "site": "recall-register",
+   "seed_keyword": "can you eat canned food after the expiration date",
+   "pmids": [
+    "W7220982864"
+   ],
+   "studies": [
+    {
+     "pmid": "W7220982864",
+     "doi": "10.1108/apjml-01-2026-0151",
+     "journal": "Asia Pacific Journal of Marketing and Logistics",
+     "headline": "Shoppers judge near-expiry canned goods more harshly than near-expiry fresh food",
+     "pubdate": "2026 Oct 9",
+     "days_online": 22,
+     "date_verified": true,
+     "digests": [
+      "Marketing research: food, health & wellbeing"
+     ],
+     "score": 8.2,
+     "caveats": "Online/lab experiments with hypothetical purchase intentions rather than observed buying; small samples (study 1 N=111 across conditions); single-country context; no real discount or price manipulation reported.",
+     "fact_check_note": "⚠️ Minor issues: Both sample sizes, the mediation by perceived health risk and the unexpected perishability moderation are accurate; the moderation applied to the health-risk path specifically, and the single-country caveat is not verifiable from the abstract.",
+     "coverage": "No coverage found",
+     "flags": [
+      "small_sample",
+      "single_country"
+     ],
+     "openalex": true,
+     "evidence_type": "experiments"
+    }
+   ],
+   "evidence": [
+    "https://openalex.org/W7220982864",
+    "https://doi.org/10.1108/apjml-01-2026-0151"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  "rd-2026-10-31-daily-low-dose-aspirin-didn-t-preserve-older-adult": {
+   "desk": "research",
+   "title": "Daily low-dose aspirin didn't preserve older adults' everyday physical and mental function over five years",
+   "created": "2026-10-31",
+   "route": "roundup",
+   "speed": "online 2 days",
+   "beat": "aging",
+   "angle": "A reanalysis of an 18,581-person trial of adults 65+ found aspirin did nothing to slow decline in cognition, mobility, vitality or mood. One more reason not to take it 'just in case' without a doctor's reason, and not a reason to stop a prescribed one.",
+   "why_now": "Online 2 days and not covered. Many older adults still take aspirin as a general preventive.",
+   "is_it_real": "The trial was randomized, but this is a post-hoc analysis of a secondary outcome. The hint that women declined slightly faster is borderline (p=0.06) and may be chance, so it doesn't belong in the headline. One co-author holds patents on the aging clocks used.",
+   "evidence_strength": "moderate",
+   "other_peg": "",
+   "audience": "older adults",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42955660"
+   ],
+   "studies": [
+    {
+     "pmid": "42955660",
+     "doi": "10.1007/s11357-026-02624-x",
+     "journal": "Geroscience",
+     "headline": "Daily low-dose aspirin didn't protect older adults' physical and mental capacity — and women fared slightly worse",
+     "pubdate": "2026 Oct 29",
+     "days_online": 2,
+     "date_verified": true,
+     "digests": [
+      "Senior Living — New This Week"
+     ],
+     "score": 7,
+     "caveats": "Post-hoc secondary analysis of a trial designed for a different primary outcome; the aspirin effect in women was very small and the three-way sex-by-treatment interaction was borderline (p = 0.06), so it could be chance. One co-author holds patents on the epigenetic clocks used and is affiliated with a biotech company.",
+     "fact_check_note": "⚠️ Minor issues",
+     "coverage": "Not widely covered ✓ (Google News checked)",
+     "flags": [
+      "subgroup"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42955660/",
+    "https://doi.org/10.1007/s11357-026-02624-x"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  "rd-2026-10-31-balance-tech-check-phone-apps-measure-sway-well-bu": {
+   "desk": "research",
+   "title": "Balance tech check: phone apps measure sway well but didn't predict falls, and screen-based balance training beat doing nothing but not a regular class",
+   "created": "2026-10-31",
+   "route": "roundup",
+   "speed": "online 3 days",
+   "beat": "aging / fitness",
+   "angle": "Two studies point the same way: the gadgets work as measurement and as an option when you can't get to a class, but they don't beat the basics. Fall history, medications, vision, strength and an in-person class still carry the weight.",
+   "why_now": "Both are new this week, and insurers and senior communities are pushing app- and console-based fall programs.",
+   "is_it_real": "The meta-analysis covers 60 RCTs, but certainty was low or very low for 37 of 39 comparisons and no trial measured falls, only balance tests. The phone study is a solid prospective cohort of 580 people with 12 months of fall tracking, but the app's developer is an author and runs the company that makes it.",
+   "evidence_strength": "moderate",
+   "other_peg": "",
+   "audience": "older adults",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42954170",
+    "42956683"
+   ],
+   "studies": [
+    {
+     "pmid": "42954170",
+     "doi": "10.2196/101231",
+     "journal": "JMIR Aging",
+     "headline": "Video and console-based balance training beats doing nothing — but not a regular exercise class",
+     "pubdate": "2026 Oct 28",
+     "days_online": 3,
+     "date_verified": true,
+     "digests": [
+      "Senior Living — New This Week"
+     ],
+     "score": 7,
+     "caveats": "Evidence certainty was low or very low for 37 of 39 comparisons; the top-ranked telerehabilitation estimate rested on just five trials totaling 198 participants; no included trial actually measured falls, so these are balance-test results, not fall-prevention evidence.",
+     "fact_check_note": "⚠️ Minor issues",
+     "coverage": "Not widely covered ✓ (Google News checked)",
+     "flags": []
+    },
+    {
+     "pmid": "42956683",
+     "doi": "10.1016/j.gaitpost.2026.110680",
+     "journal": "Gait Posture",
+     "headline": "Your phone can measure your balance — but it still can't predict whether you'll fall",
+     "pubdate": "2026 Oct 27",
+     "days_online": 4,
+     "date_verified": true,
+     "digests": [
+      "Senior Living — New This Week"
+     ],
+     "score": 7,
+     "caveats": "Observational cohort, so causation cannot be established; the smartphone app's developer is an author and serves as president of the company that makes it (Control One LLC); single-region US community sample that may not generalize; fall history was self-reported.",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (Google News checked)",
+     "flags": [
+      "observational"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42954170/",
+    "https://doi.org/10.2196/101231",
+    "https://pubmed.ncbi.nlm.nih.gov/42956683/",
+    "https://doi.org/10.1016/j.gaitpost.2026.110680"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  "rd-2026-10-31-after-hip-fracture-surgery-care-needs-kept-worseni": {
+   "desk": "research",
+   "title": "After hip fracture surgery, care needs kept worsening into years two and three for more than a third of patients 75+",
+   "created": "2026-10-31",
+   "route": "roundup",
+   "speed": "online 2 days",
+   "beat": "aging",
+   "angle": "In 6,556 Kyoto patients, care needs had worsened for 10.6% at one year, 28.3% at two and 37.4% at three. Most of the decline comes after standard follow-up ends, so families should ask for reassessment at the one- and two-year marks.",
+   "why_now": "Online 2 days and not covered.",
+   "is_it_real": "The decline figures are descriptive claims data and hold up. The link between longer rehab and less decline is not causal, the authors warn against reading it that way, and it vanished when death was counted, so leave it out of the headline. Japan's long-term care insurance system may not map onto US care.",
+   "evidence_strength": "moderate",
+   "other_peg": "",
+   "audience": "older adults",
+   "confidence": "low",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42956453"
+   ],
+   "studies": [
+    {
+     "pmid": "42956453",
+     "doi": "10.1016/j.jamda.2026.106413",
+     "journal": "J Am Med Dir Assoc",
+     "headline": "After hip fracture surgery, the real decline often starts in year two — and longer rehab was linked to less of it",
+     "pubdate": "2026 Oct 29",
+     "days_online": 2,
+     "date_verified": true,
+     "digests": [
+      "Senior Living — New This Week"
+     ],
+     "score": 7,
+     "caveats": "Retrospective observational study using administrative claims — it cannot establish that rehabilitation caused better outcomes; the authors explicitly warn against a causal reading, and no benefit appeared on the composite outcome that included death. Single-city Japanese population with a national long-term care insurance system that may not generalize elsewhere.",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (Google News checked)",
+     "flags": [
+      "observational"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42956453/",
+    "https://doi.org/10.1016/j.jamda.2026.106413"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  "rd-2026-10-31-most-unfortified-plant-based-meat-and-milk-swaps-f": {
+   "desk": "research",
+   "title": "Most unfortified plant-based meat and milk swaps fall short on key nutrients, and shoppers in a separate study couldn't tell tofu from processed plant 'chicken' nutritionally",
+   "created": "2026-10-31",
+   "route": "roundup",
+   "speed": "online 3 days",
+   "beat": "nutrition / food",
+   "angle": "Norwegian diet data found most unfortified alternatives carry fewer micronutrients than the animal foods they replace, while fortified ones can match them. A UK experiment found people rated chickpeas, tofu and processed plant chicken as nutritionally equivalent and were swayed mostly by how 'natural' a product seemed. The takeaway: read the fortification line, not the vibe.",
+   "why_now": "Both are new this month. Plant-based swaps keep growing among younger women.",
+   "is_it_real": "The nutrient comparison uses self-reported diet recall from Norway, and Norwegian products may differ from US shelves. The UK study is a 300-person online survey of stated acceptance, not purchases, and its publication date is unverified.",
+   "evidence_strength": "moderate",
+   "other_peg": "",
+   "audience": "general",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42955093",
+    "W7223189021"
+   ],
+   "studies": [
+    {
+     "pmid": "42955093",
+     "doi": "10.1007/s00394-026-04144-y",
+     "journal": "European Journal of Nutrition",
+     "headline": "Most Plant-Based Meat and Dairy Swaps Are Missing Key Nutrients — Unless They're Fortified",
+     "pubdate": "2026 Oct 28",
+     "days_online": 3,
+     "date_verified": true,
+     "digests": [
+      "Fitness & Exercise"
+     ],
+     "score": 6,
+     "caveats": "observational design, self-reported outcomes, single-center, Norway-specific sample (may not reflect US market products or consumption patterns)",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (SERPAPI verified)",
+     "flags": [
+      "observational"
+     ]
+    },
+    {
+     "pmid": "W7223189021",
+     "doi": "10.1016/j.foodqual.2026.106149",
+     "journal": "Food Quality and Preference",
+     "headline": "\"Natural\" beats \"tastes like chicken\": what really sells meat alternatives",
+     "pubdate": "2026 Oct 22",
+     "days_online": 9,
+     "date_verified": false,
+     "digests": [
+      "Marketing research: food, health & wellbeing"
+     ],
+     "score": 8.3,
+     "caveats": "Online survey with hypothetical product stimuli rather than real purchases; single country (UK); N=300 across three product conditions; self-reported acceptance rather than observed behavior.",
+     "fact_check_note": "⚠️ Minor issues: N=300, UK online experimental survey, all three predictors significant and 33% variance explained are accurate; two small embellishments.",
+     "coverage": "No coverage found",
+     "flags": [
+      "single_country"
+     ],
+     "openalex": true,
+     "evidence_type": "experiments"
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42955093/",
+    "https://doi.org/10.1007/s00394-026-04144-y",
+    "https://openalex.org/W7223189021",
+    "https://doi.org/10.1016/j.foodqual.2026.106149"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  "rd-2026-10-31-on-mornings-your-stock-portfolio-is-up-you-may-tak": {
+   "desk": "research",
+   "title": "On mornings your stock portfolio is up, you may take more risks and speak up more at work",
+   "created": "2026-10-31",
+   "route": "roundup",
+   "speed": "online 37 days",
+   "beat": "work / money",
+   "angle": "In a 10-day daily-diary study, South Korean workers who invest spoke up and took more chances at work on days their holdings rose, and pulled back on down days. The effect was strongest for people with a short-term outlook. Your investing app may be setting your meeting mood.",
+   "why_now": "Relatable for the millions who check a brokerage app before work; online 37 days, so it's a roundup line, not a pitch.",
+   "is_it_real": "One country, self-selected retail investors, and self-reported behavior over 10 days. The mechanism comes from lab experiments, and the daily effects are modest.",
+   "evidence_strength": "moderate",
+   "other_peg": "",
+   "audience": "general",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "W7214167465"
+   ],
+   "studies": [
+    {
+     "pmid": "W7214167465",
+     "doi": "10.1037/apl0001433",
+     "journal": "Journal of Applied Psychology",
+     "headline": "Your morning portfolio check may be deciding how bold you are at work",
+     "pubdate": "2026 Sep 24",
+     "days_online": 37,
+     "date_verified": true,
+     "digests": [
+      "Career psychology: career development & mobility"
+     ],
+     "score": 9.0,
+     "caveats": "The field portion was a single-country sample of self-selected retail investors in South Korea with self-reported behavior over a short 10-day window; the mechanism tests were experiments, not real investment losses. Effects are daily and within-person, so magnitudes are modest.",
+     "fact_check_note": "✅ Accurate: Experience-sampling design, experiments, mechanism and long-term-orientation moderator all match the abstract; caveats appropriately limit the sample.",
+     "coverage": "No coverage found",
+     "flags": [
+      "single_country"
+     ],
+     "openalex": true,
+     "evidence_type": "experience sampling"
+    }
+   ],
+   "evidence": [
+    "https://openalex.org/W7214167465",
+    "https://doi.org/10.1037/apl0001433"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  "rd-2026-10-31-medium-complexity-jobs-not-the-dullest-or-hardest": {
+   "desk": "research",
+   "title": "Medium-complexity jobs, not the dullest or hardest, were the ones that made people most want to change careers",
+   "created": "2026-10-31",
+   "route": "roundup",
+   "speed": "online 11 days",
+   "beat": "work / careers",
+   "angle": "Across 43,859 workers in 29 European countries plus a Chinese follow-up, wanting to switch careers peaked in jobs of middling complexity. The authors say those jobs don't give people a clear professional identity. Restless but not burned out may be a different problem with a different fix.",
+   "why_now": "Fits the ongoing quiet-quitting and career-switch conversation; online 11 days.",
+   "is_it_real": "All self-report, and the outcome is intention to switch careers, not actual moves. The large study is cross-sectional and complexity is perceived, not coded. The fact-check says the managerial advice about 'sense of power' goes beyond the abstract, so leave it out.",
+   "evidence_strength": "moderate",
+   "other_peg": "",
+   "audience": "general",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "W7222847257"
+   ],
+   "studies": [
+    {
+     "pmid": "W7222847257",
+     "doi": "10.1108/cdi-06-2026-0475",
+     "journal": "Career Development International",
+     "headline": "Jobs that are moderately complex — not simple or hard — make people most likely to want out",
+     "pubdate": "2026 Oct 20",
+     "days_online": 11,
+     "date_verified": true,
+     "digests": [
+      "Career psychology: career development & mobility"
+     ],
+     "score": 8.7,
+     "caveats": "Both studies are survey-based and self-report; Study 1 is cross-sectional, and Study 2's two waves cannot firmly establish causation. The outcome is intention to change careers, not actual career change. Complexity is perceived rather than objectively coded.",
+     "fact_check_note": "⚠️ Minor issues: Samples and inverted-U finding are accurate, but the sense-of-power moderation is simplified in a way that drives managerial advice the abstract doesn't support.",
+     "coverage": "No coverage found",
+     "flags": [],
+     "openalex": true,
+     "evidence_type": "longitudinal"
+    }
+   ],
+   "evidence": [
+    "https://openalex.org/W7222847257",
+    "https://doi.org/10.1108/cdi-06-2026-0475"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  "rd-2026-10-31-calmly-reflecting-on-death-made-people-want-to-own": {
+   "desk": "research",
+   "title": "Calmly reflecting on death made people want to own less, while fearing it pushed them to buy more",
+   "created": "2026-10-31",
+   "route": "roundup",
+   "speed": "online 10 days",
+   "beat": "money / culture",
+   "angle": "Across five studies of 1,831 people, reflective thinking about mortality nudged people toward buying and owning less, while death anxiety did the reverse. A research footnote to the 'Swedish death cleaning' idea.",
+   "why_now": "Lands in the Day of the Dead and All Souls' window, and decluttering content is perennial.",
+   "is_it_real": "Mostly self-reported simplicity, not observed purchases, with a narrow age range. The link to flourishing is labeled exploratory, so leave it out.",
+   "evidence_strength": "thin",
+   "other_peg": "",
+   "audience": "general",
+   "confidence": "low",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "W7223010138"
+   ],
+   "studies": [
+    {
+     "pmid": "W7223010138",
+     "doi": "10.1108/ejm-03-2025-0215",
+     "journal": "European Journal of Marketing",
+     "headline": "Thinking about death makes people want less stuff — but only the right kind of thinking",
+     "pubdate": "2026 Oct 21",
+     "days_online": 10,
+     "date_verified": true,
+     "digests": [
+      "Marketing research: food, health & wellbeing"
+     ],
+     "score": 8.8,
+     "caveats": "Largely self-reported simplicity rather than observed purchases; the authors note a narrow age range; mechanism evidence is mediational, not experimentally isolated.",
+     "fact_check_note": "⚠️ Minor issues: Five studies, n=1,831, methods and the reflection/anxiety contrast all match; the flourishing link is labelled exploratory in the abstract.",
+     "coverage": "No coverage found",
+     "flags": [
+      "subgroup",
+      "tiny_sample",
+      "small_sample"
+     ],
+     "openalex": true,
+     "evidence_type": "experiments"
+    }
+   ],
+   "evidence": [
+    "https://openalex.org/W7223010138",
+    "https://doi.org/10.1108/ejm-03-2025-0215"
+   ],
+   "term_details": [],
+   "status": "routed"
   }
  },
  "runs": [
@@ -50923,6 +51908,37 @@
     "caveats-undo-it": 8,
     "too-thin": 3,
     "duplicate": 1
+   }
+  },
+  {
+   "date": "2026-10-31",
+   "studies": 7594,
+   "candidates": 38,
+   "skipped": {
+    "already judged": 7352,
+    "taken elsewhere": 0,
+    "below score": 146,
+    "older": 61,
+    "screened out": 45
+   },
+   "screened": 48,
+   "model": "opus",
+   "ideas": 11,
+   "routes": {
+    "pitch": 2,
+    "tfm": 1,
+    "brief": 1,
+    "roundup": 7
+   },
+   "dropped": {
+    "already-covered": 1,
+    "specialist-only": 4,
+    "too-thin": 14,
+    "methods-only": 2,
+    "caveats-undo-it": 1,
+    "rule": 1,
+    "off-beat": 1,
+    "watch": 1
    }
   }
  ],

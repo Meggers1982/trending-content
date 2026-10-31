@@ -1,6 +1,162 @@
 {
- "updated": "2026-10-30",
+ "updated": "2026-10-31",
  "items": [
+  {
+   "id": "rd-2026-10-31-daily-low-dose-aspirin-didn-t-preserve-older-adult",
+   "title": "Daily low-dose aspirin didn't preserve older adults' everyday physical and mental function over five years",
+   "created": "2026-10-31",
+   "angle": "A reanalysis of an 18,581-person trial of adults 65+ found aspirin did nothing to slow decline in cognition, mobility, vitality or mood. One more reason not to take it 'just in case' without a doctor's reason, and not a reason to stop a prescribed one.",
+   "why_now": "Online 2 days and not covered. Many older adults still take aspirin as a general preventive.",
+   "is_it_real": "The trial was randomized, but this is a post-hoc analysis of a secondary outcome. The hint that women declined slightly faster is borderline (p=0.06) and may be chance, so it doesn't belong in the headline. One co-author holds patents on the aging clocks used.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42955660/",
+    "https://doi.org/10.1007/s11357-026-02624-x"
+   ],
+   "studies": [
+    {
+     "pmid": "42955660",
+     "journal": "Geroscience",
+     "caveats": "Post-hoc secondary analysis of a trial designed for a different primary outcome; the aspirin effect in women was very small and the three-way sex-by-treatment interaction was borderline (p = 0.06), so it could be chance. One co-author holds patents on the epigenetic clocks used and is affiliated with a biotech company.",
+     "days_online": 2
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-31-balance-tech-check-phone-apps-measure-sway-well-bu",
+   "title": "Balance tech check: phone apps measure sway well but didn't predict falls, and screen-based balance training beat doing nothing but not a regular class",
+   "created": "2026-10-31",
+   "angle": "Two studies point the same way: the gadgets work as measurement and as an option when you can't get to a class, but they don't beat the basics. Fall history, medications, vision, strength and an in-person class still carry the weight.",
+   "why_now": "Both are new this week, and insurers and senior communities are pushing app- and console-based fall programs.",
+   "is_it_real": "The meta-analysis covers 60 RCTs, but certainty was low or very low for 37 of 39 comparisons and no trial measured falls, only balance tests. The phone study is a solid prospective cohort of 580 people with 12 months of fall tracking, but the app's developer is an author and runs the company that makes it.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42954170/",
+    "https://doi.org/10.2196/101231",
+    "https://pubmed.ncbi.nlm.nih.gov/42956683/",
+    "https://doi.org/10.1016/j.gaitpost.2026.110680"
+   ],
+   "studies": [
+    {
+     "pmid": "42954170",
+     "journal": "JMIR Aging",
+     "caveats": "Evidence certainty was low or very low for 37 of 39 comparisons; the top-ranked telerehabilitation estimate rested on just five trials totaling 198 participants; no included trial actually measured falls, so these are balance-test results, not fall-prevention evidence.",
+     "days_online": 3
+    },
+    {
+     "pmid": "42956683",
+     "journal": "Gait Posture",
+     "caveats": "Observational cohort, so causation cannot be established; the smartphone app's developer is an author and serves as president of the company that makes it (Control One LLC); single-region US community sample that may not generalize; fall history was self-reported.",
+     "days_online": 4
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-31-after-hip-fracture-surgery-care-needs-kept-worseni",
+   "title": "After hip fracture surgery, care needs kept worsening into years two and three for more than a third of patients 75+",
+   "created": "2026-10-31",
+   "angle": "In 6,556 Kyoto patients, care needs had worsened for 10.6% at one year, 28.3% at two and 37.4% at three. Most of the decline comes after standard follow-up ends, so families should ask for reassessment at the one- and two-year marks.",
+   "why_now": "Online 2 days and not covered.",
+   "is_it_real": "The decline figures are descriptive claims data and hold up. The link between longer rehab and less decline is not causal, the authors warn against reading it that way, and it vanished when death was counted, so leave it out of the headline. Japan's long-term care insurance system may not map onto US care.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42956453/",
+    "https://doi.org/10.1016/j.jamda.2026.106413"
+   ],
+   "studies": [
+    {
+     "pmid": "42956453",
+     "journal": "J Am Med Dir Assoc",
+     "caveats": "Retrospective observational study using administrative claims — it cannot establish that rehabilitation caused better outcomes; the authors explicitly warn against a causal reading, and no benefit appeared on the composite outcome that included death. Single-city Japanese population with a national long-term care insurance system that may not generalize elsewhere.",
+     "days_online": 2
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-31-most-unfortified-plant-based-meat-and-milk-swaps-f",
+   "title": "Most unfortified plant-based meat and milk swaps fall short on key nutrients, and shoppers in a separate study couldn't tell tofu from processed plant 'chicken' nutritionally",
+   "created": "2026-10-31",
+   "angle": "Norwegian diet data found most unfortified alternatives carry fewer micronutrients than the animal foods they replace, while fortified ones can match them. A UK experiment found people rated chickpeas, tofu and processed plant chicken as nutritionally equivalent and were swayed mostly by how 'natural' a product seemed. The takeaway: read the fortification line, not the vibe.",
+   "why_now": "Both are new this month. Plant-based swaps keep growing among younger women.",
+   "is_it_real": "The nutrient comparison uses self-reported diet recall from Norway, and Norwegian products may differ from US shelves. The UK study is a 300-person online survey of stated acceptance, not purchases, and its publication date is unverified.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42955093/",
+    "https://doi.org/10.1007/s00394-026-04144-y",
+    "https://openalex.org/W7223189021",
+    "https://doi.org/10.1016/j.foodqual.2026.106149"
+   ],
+   "studies": [
+    {
+     "pmid": "42955093",
+     "journal": "European Journal of Nutrition",
+     "caveats": "observational design, self-reported outcomes, single-center, Norway-specific sample (may not reflect US market products or consumption patterns)",
+     "days_online": 3
+    },
+    {
+     "pmid": "W7223189021",
+     "journal": "Food Quality and Preference",
+     "caveats": "Online survey with hypothetical product stimuli rather than real purchases; single country (UK); N=300 across three product conditions; self-reported acceptance rather than observed behavior.",
+     "days_online": 9
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-31-on-mornings-your-stock-portfolio-is-up-you-may-tak",
+   "title": "On mornings your stock portfolio is up, you may take more risks and speak up more at work",
+   "created": "2026-10-31",
+   "angle": "In a 10-day daily-diary study, South Korean workers who invest spoke up and took more chances at work on days their holdings rose, and pulled back on down days. The effect was strongest for people with a short-term outlook. Your investing app may be setting your meeting mood.",
+   "why_now": "Relatable for the millions who check a brokerage app before work; online 37 days, so it's a roundup line, not a pitch.",
+   "is_it_real": "One country, self-selected retail investors, and self-reported behavior over 10 days. The mechanism comes from lab experiments, and the daily effects are modest.",
+   "evidence": [
+    "https://openalex.org/W7214167465",
+    "https://doi.org/10.1037/apl0001433"
+   ],
+   "studies": [
+    {
+     "pmid": "W7214167465",
+     "journal": "Journal of Applied Psychology",
+     "caveats": "The field portion was a single-country sample of self-selected retail investors in South Korea with self-reported behavior over a short 10-day window; the mechanism tests were experiments, not real investment losses. Effects are daily and within-person, so magnitudes are modest.",
+     "days_online": 37
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-31-medium-complexity-jobs-not-the-dullest-or-hardest",
+   "title": "Medium-complexity jobs, not the dullest or hardest, were the ones that made people most want to change careers",
+   "created": "2026-10-31",
+   "angle": "Across 43,859 workers in 29 European countries plus a Chinese follow-up, wanting to switch careers peaked in jobs of middling complexity. The authors say those jobs don't give people a clear professional identity. Restless but not burned out may be a different problem with a different fix.",
+   "why_now": "Fits the ongoing quiet-quitting and career-switch conversation; online 11 days.",
+   "is_it_real": "All self-report, and the outcome is intention to switch careers, not actual moves. The large study is cross-sectional and complexity is perceived, not coded. The fact-check says the managerial advice about 'sense of power' goes beyond the abstract, so leave it out.",
+   "evidence": [
+    "https://openalex.org/W7222847257",
+    "https://doi.org/10.1108/cdi-06-2026-0475"
+   ],
+   "studies": [
+    {
+     "pmid": "W7222847257",
+     "journal": "Career Development International",
+     "caveats": "Both studies are survey-based and self-report; Study 1 is cross-sectional, and Study 2's two waves cannot firmly establish causation. The outcome is intention to change careers, not actual career change. Complexity is perceived rather than objectively coded.",
+     "days_online": 11
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-10-31-calmly-reflecting-on-death-made-people-want-to-own",
+   "title": "Calmly reflecting on death made people want to own less, while fearing it pushed them to buy more",
+   "created": "2026-10-31",
+   "angle": "Across five studies of 1,831 people, reflective thinking about mortality nudged people toward buying and owning less, while death anxiety did the reverse. A research footnote to the 'Swedish death cleaning' idea.",
+   "why_now": "Lands in the Day of the Dead and All Souls' window, and decluttering content is perennial.",
+   "is_it_real": "Mostly self-reported simplicity, not observed purchases, with a narrow age range. The link to flourishing is labeled exploratory, so leave it out.",
+   "evidence": [
+    "https://openalex.org/W7223010138",
+    "https://doi.org/10.1108/ejm-03-2025-0215"
+   ],
+   "studies": [
+    {
+     "pmid": "W7223010138",
+     "journal": "European Journal of Marketing",
+     "caveats": "Largely self-reported simplicity rather than observed purchases; the authors note a narrow age range; mechanism evidence is mediational, not experimentally isolated.",
+     "days_online": 10
+    }
+   ]
+  },
   {
    "id": "rd-2026-10-30-ice-bath-after-your-evening-workout-do-it-more-tha",
    "title": "Ice bath after your evening workout? Do it more than two hours before bed, or it may cost you sleep; a sauna may help instead",
