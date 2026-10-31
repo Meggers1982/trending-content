@@ -1,0 +1,344 @@
+{
+  "run_date": "2026-10-31",
+  "generated_at": "2026-10-31T17:51:04",
+  "topic": "screening-prevention",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "screening-prevention",
+    "colonoscopy",
+    "mammogram",
+    "skin cancer screening",
+    "screening-prevention trends",
+    "screening-prevention products",
+    "screening-prevention news",
+    "screening-prevention for beginners",
+    "screening-prevention routine",
+    "screening-prevention benefits",
+    "screening-prevention ideas",
+    "screening-prevention reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 12,
+    "total_reviewed": 72,
+    "total_retained": 0,
+    "total_rejected": 72,
+    "breakouts": 0,
+    "emerging": 0,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [],
+  "rejected": [
+    {
+      "topic": "colon",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "colonoscopy"
+      ]
+    },
+    {
+      "topic": "endoscopy",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "colonoscopy"
+      ]
+    },
+    {
+      "topic": "miralax",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "colonoscopy"
+      ]
+    },
+    {
+      "topic": "polyps",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "colonoscopy"
+      ]
+    },
+    {
+      "topic": "diagnostic",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "mammogram"
+      ]
+    },
+    {
+      "topic": "breast ultrasound",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "mammogram"
+      ]
+    },
+    {
+      "topic": "free mammogram costume",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "how often do you need a colonoscopy",
+      "reason": "Weak radar score (49)"
+    },
+    {
+      "topic": "how often should you get a mammogram",
+      "reason": "Weak radar score (49)"
+    },
+    {
+      "topic": "mammogram halloween costume",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "what age should you get a mammogram",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "mammogram costume",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "cost of mammogram without insurance",
+      "reason": "Weak radar score (48)"
+    },
+    {
+      "topic": "why no deodorant before mammogram",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "who invented the mammogram machine",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "jeff foxworthy colonoscopy",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "new colonoscopy prep",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "mammogram age range",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "foods to avoid before a colonoscopy",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "what age should you get a colonoscopy",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "is a colonoscopy covered by insurance",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "which is one cancer screening that is important for the maintenance of reproductive health? skin colon liver cervical",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "how much does a mammogram cost without insurance",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "mammogram cost without insurance",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "colonoscopy prep",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "after colonoscopy",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "what is colonoscopy",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "prep for colonoscopy",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "colonoscopy drink",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "what is a colonoscopy",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "colonoscopy diet",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "how long colonoscopy take",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "colonoscopy age",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "colonoscopy procedure",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "how long does colonoscopy take",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "screening colonoscopy",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "polyps colonoscopy",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "endoscopy and colonoscopy",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "colonoscopy doctor",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "colonoscopy test",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "colon cancer",
+      "reason": "Weak radar score (36)"
+    },
+    {
+      "topic": "how long does a colonoscopy take",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "diet before colonoscopy",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "colonoscopy prep drink",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "what is colonoscopy prep",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "breast mammogram",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "what is mammogram",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "screening mammogram",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "what is a mammogram",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "ultrasound mammogram",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "diagnostic mammogram",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "mammogram near me",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "breast cancer mammogram",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "breast cancer",
+      "reason": "Weak radar score (36)"
+    },
+    {
+      "topic": "mammogram age",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "mammogram imaging",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "mammogram results",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "what age mammogram",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "how often mammogram",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "schedule mammogram",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "3d mammogram",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "free mammogram",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "first mammogram",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "mammogram icd 10",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "mammogram cost",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "mammogram test",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "dense breast mammogram",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "bilateral mammogram",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "skin cancer screening near me",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "skin cancer screening icd 10",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "full body skin cancer screening",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "free skin cancer screening near me",
+      "reason": "Weak radar score (31)"
+    }
+  ]
+}
