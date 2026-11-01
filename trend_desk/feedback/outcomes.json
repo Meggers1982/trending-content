@@ -1,27 +1,27 @@
 {
- "updated": "2026-10-30T18:59:03-05:00",
+ "updated": "2026-10-31T19:00:42-05:00",
  "summary": {
   "by_route": {
    "pitch": {
-    "built": 76,
-    "skipped": 0,
-    "failed": 0,
-    "edited": 0
-   },
-   "tfm": {
-    "built": 37,
-    "skipped": 0,
-    "failed": 0,
-    "edited": 0
-   },
-   "roundup": {
     "built": 79,
     "skipped": 0,
     "failed": 0,
     "edited": 0
    },
+   "tfm": {
+    "built": 38,
+    "skipped": 0,
+    "failed": 0,
+    "edited": 0
+   },
+   "roundup": {
+    "built": 87,
+    "skipped": 0,
+    "failed": 0,
+    "edited": 0
+   },
    "brief": {
-    "built": 59,
+    "built": 60,
     "skipped": 0,
     "failed": 0,
     "edited": 0
