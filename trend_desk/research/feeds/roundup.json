@@ -1,6 +1,146 @@
 {
- "updated": "2026-10-31",
+ "updated": "2026-11-01",
  "items": [
+  {
+   "id": "rd-2026-11-01-black-friday-trick-second-one-for-1-beats-second-o",
+   "title": "Black Friday trick: 'second one for 1¢' beats 'second one free' with shoppers, but can make the main item seem worth less",
+   "created": "2026-11-01",
+   "angle": "In four experiments, shoppers found penny-price deals more attractive than BOGO-free. When the two items were identical, though, the penny deal led people to value the main product less afterward. A quick, counterintuitive deal-psychology item for Black Friday week.",
+   "why_now": "Online 5 days (verified). Black Friday is Nov 27, when BOGO deals are everywhere.",
+   "is_it_real": "Four experiments, two of them hypothetical purchase scenarios and two with real incentives. All ran online or in a lab, not in stores. Country and product categories weren't specified in the abstract. It measures how attractive the deal seemed and how people valued the product, not actual sales.",
+   "evidence": [
+    "https://openalex.org/W7223666241",
+    "https://doi.org/10.1108/ejm-02-2023-0121"
+   ],
+   "studies": [
+    {
+     "pmid": "W7223666241",
+     "journal": "European Journal of Marketing",
+     "caveats": "Two of the four studies used hypothetical scenarios; experiments are lab/online rather than real retail; country and category scope not specified in the abstract; no test of how the size of the token price changes the effect.",
+     "days_online": 5
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-11-01-older-men-had-about-half-the-osteoporosis-diagnose",
+   "title": "Older men had about half the osteoporosis diagnoses of women but nearly the same rate of spine fractures in a Taiwanese hospital study",
+   "created": "2026-11-01",
+   "angle": "Among 2,031 men and 2,031 age-matched women who had bone scans, 32% of the men had osteoporosis versus 51% of the women, yet vertebral fractures ran 22.7% vs 22.8%. Male sex stayed linked to fractures even after adjusting for bone density. That fits the long-standing worry that bone screening thresholds undercount men's risk.",
+   "why_now": "Online 1 day (verified). Men's bone health is chronically under-covered, and US screening guidance still says the evidence is insufficient to recommend routine screening for men.",
+   "is_it_real": "One hospital in Taiwan, looking back at records. Everyone had a DXA scan, so these were people already referred for bone concerns, which probably inflates fracture rates in both sexes and limits generalizing to men at large. Bone-density norms differ between Asian and Western populations. The study shows a link, not a cause.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42965625/",
+    "https://doi.org/10.1007/s11657-026-01782-x"
+   ],
+   "studies": [
+    {
+     "pmid": "42965625",
+     "journal": "Archives of Osteoporosis",
+     "caveats": "single-center, observational design, retrospective cohort, Taiwan-specific population (results may not generalize to Western populations with different bone density norms)",
+     "days_online": 1
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-11-01-the-first-two-weeks-home-from-the-hospital-carried",
+   "title": "The first two weeks home from the hospital carried a 77% higher risk of a major osteoporotic fracture in a nationwide Danish study",
+   "created": "2026-11-01",
+   "angle": "A useful window for readers and caregivers: compared with matched people who weren't hospitalized, fracture risk was sharply raised in the first 14 days after discharge, still 28% higher at 30 days, and tapered over a year. Longer and repeated stays meant more risk. The practical line is to treat the first few weeks home as a fall-proofing period.",
+   "why_now": "Online 2 days (verified). Fall and winter are when older adults are most often hospitalized.",
+   "is_it_real": "National registry covering everyone over 45 in Denmark, with matched controls, so the size is strong. But it's observational and can't separate the effect of the hospital stay from the illness that caused it. The 77% is a relative figure, and the absolute two-week risk needs pulling from the paper before it runs. Two authors hold stock options in Eli Lilly, Novo Nordisk and Gubra. Results may not carry over outside Denmark.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42963373/",
+    "https://doi.org/10.1007/s00198-026-08298-7"
+   ],
+   "studies": [
+    {
+     "pmid": "42963373",
+     "journal": "Osteoporos Int",
+     "caveats": "Observational registry study — it cannot prove hospitalization itself causes fractures rather than the underlying illness that prompted admission; Danish population may not generalize elsewhere; two authors report stock options in Eli Lilly, Novo Nordisk, and Gubra.",
+     "days_online": 2
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-11-01-a-daily-cup-s-worth-of-blueberries-raised-blood-fl",
+   "title": "A daily cup's worth of blueberries raised blood flow to brain areas for focus and control in older adults in a 3-month placebo-controlled trial",
+   "created": "2026-11-01",
+   "angle": "Short and true with the caveat in a clause: blueberry powder raised blood flow in brain regions tied to executive function in 65- to 89-year-olds who rarely ate berries. Brain antioxidant levels didn't change, which undercuts the usual 'antioxidant' story. It measured blood flow, not memory or thinking.",
+   "why_now": "Online 4 days in the American Journal of Clinical Nutrition (verified).",
+   "is_it_real": "Randomized, double-blind and placebo-controlled, which is good, but small (60 people), single-center and three months long. The outcome is a brain scan measure, not a cognitive one. Blueberry trials are often funded by the industry, so check the funding line before writing.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42951114/",
+    "https://doi.org/10.1016/j.ajcnut.2026.101613"
+   ],
+   "studies": [
+    {
+     "pmid": "42951114",
+     "journal": "The American Journal of Clinical Nutrition",
+     "caveats": "small sample (N<100), single-center, short follow-up",
+     "days_online": 4
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-11-01-an-anesthesia-drug-cut-post-surgery-delirium-in-ol",
+   "title": "An anesthesia drug cut post-surgery delirium in older patients by about 44% across 22 trials, at the cost of more slow heart rates and low blood pressure",
+   "created": "2026-11-01",
+   "angle": "A concrete 'ask your anesthesiologist' item. Pooled randomized trials of dexmedetomidine in 4,161 older surgical patients showed less delirium and less nausea, with real cardiovascular trade-offs that call for individual judgment.",
+   "why_now": "Online 2 days (verified). Delirium after surgery is one of the outcomes older patients fear most.",
+   "is_it_real": "Meta-analysis of randomized trials, so stronger than most. But the trials varied in surgery type, dose and how delirium was measured, and heterogeneity was moderate. The 44% is relative, so give the absolute rates. Several earlier meta-analyses point the same way, so this confirms prior work rather than breaking news.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42963481/",
+    "https://doi.org/10.1007/s41999-026-01636-2"
+   ],
+   "studies": [
+    {
+     "pmid": "42963481",
+     "journal": "Eur Geriatr Med",
+     "caveats": "Meta-analysis of trials that varied in surgery type, dosing, and delirium assessment; moderate heterogeneity; the increased bradycardia and hypotension are real risks requiring individualized judgment, not a blanket recommendation.",
+     "days_online": 2
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-11-01-skeptical-of-video-physical-therapy-knee-arthritis",
+   "title": "Skeptical of video physical therapy? Knee-arthritis patients randomized to try it came to prefer it, 68% to the alternative",
+   "created": "2026-11-01",
+   "angle": "In an Australian trial of people 45 and older with knee pain, those assigned to telerehab ended up preferring it and valuing it more than those who'd only had in-person PT. That suggests unfamiliarity, not dislike, holds people back.",
+   "why_now": "Newly indexed (date not verified, so confirm). Fits the ongoing fight over Medicare telehealth coverage.",
+   "is_it_real": "The preference survey sat inside a randomized trial of 319 people, a sound design, but it measures stated preference and hypothetical willingness to pay, not actual use. The 'nearly $90' is Australian dollars (about US$55 to 60), so don't headline the dollar figure as US. Australian setting.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42966905/",
+    "https://doi.org/10.2519/jospt.2026.14073"
+   ],
+   "studies": [
+    {
+     "pmid": "42966905",
+     "journal": "The Journal of Orthopaedic and Sports Physical Therapy",
+     "caveats": "observational design, Australian population (results may not generalize directly to US payer or access context), short follow-up, self-reported outcomes",
+     "days_online": 0
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-11-01-walking-pneumonia-came-back-after-covid-in-taiwan",
+   "title": "'Walking pneumonia' came back after COVID in Taiwan with drug-resistant strains and a 14-fold jump in brain and nerve complications in kids",
+   "created": "2026-11-01",
+   "angle": "A winter respiratory-season item for parents: in Taiwan, Mycoplasma infections in children doubled versus the 2019 peak, ICU admissions rose 2.2-fold, and new macrolide-resistant subtypes replaced older lineages, one tied to neurological complications.",
+   "why_now": "Newly indexed in Emerging Infectious Diseases (date not verified). Respiratory season is starting, and walking pneumonia searches spiked in the US during the 2024 surge.",
+   "is_it_real": "Multicenter Taiwanese surveillance plus genome analysis. The 13.7-fold rise is relative to a small base of complications. Macrolide resistance is much more common in East Asia than in the US, so don't imply US kids face the same strains. Frame it as a watch item.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42909847/",
+    "https://doi.org/10.3201/eid3211.260439"
+   ],
+   "studies": [
+    {
+     "pmid": "42909847",
+     "journal": "Emerging Infectious Diseases",
+     "caveats": "single-center, observational design, short follow-up, geographically limited to Taiwan",
+     "days_online": 0
+    }
+   ]
+  },
   {
    "id": "rd-2026-10-31-daily-low-dose-aspirin-didn-t-preserve-older-adult",
    "title": "Daily low-dose aspirin didn't preserve older adults' everyday physical and mental function over five years",

@@ -1,0 +1,447 @@
+{
+ "date": "2026-11-01",
+ "ideas": [
+  {
+   "id": "rd-2026-11-01-it-s-customary-to-leave-a-tip-got-more-people-to-t",
+   "desk": "research",
+   "title": "\"It's customary to leave a tip\" got more people to tip than appeals to reciprocity, and it didn't drive customers away, in a field experiment on a freelance marketplace",
+   "created": "2026-11-01",
+   "route": "pitch",
+   "speed": "online 2 days",
+   "beat": "work and money / consumer behavior",
+   "angle": "Tip fatigue is real, and platforms worry that asking for tips costs them repeat business. A randomized field experiment found the opposite for one kind of wording: a plain social-norm line beat 'thank your seller' reciprocity appeals and did not reduce customers' later buying. The story is that the wording on the tip screen is designed on purpose, and this is the first field evidence on which words work.",
+   "why_now": "Published online 2 days ago in Marketing Science (verified). Tip-screen fatigue is a steady consumer complaint heading into the holiday tipping season.",
+   "is_it_real": "Randomized field experiment on real customers, measuring actual tips and actual return purchases rather than stated intentions. That is stronger than most marketing work. Limits: one global freelance platform and one service category, so it may not carry over to restaurants or counter-service tablets. Long-run effects on tipping norms weren't tested. The digest's fact-check says one mechanism claim goes beyond the abstract, so stick to the main result.",
+   "evidence_strength": "moderate",
+   "other_peg": "Holiday tipping season and the year-end debate about tip screens",
+   "audience": "general",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "W7224889302"
+   ],
+   "studies": [
+    {
+     "pmid": "W7224889302",
+     "doi": "10.1287/mksc.2025.0392",
+     "journal": "Marketing Science",
+     "headline": "\"It's customary to leave a tip\" beats appeals to reciprocity — and doesn't scare customers away",
+     "pubdate": "2026 Oct 30",
+     "days_online": 2,
+     "date_verified": true,
+     "digests": [
+      "Marketing research: money & spending"
+     ],
+     "score": 9.0,
+     "caveats": "Single platform (a global freelance marketplace) and a single service category; effects on tipping norms over longer horizons are not established.",
+     "fact_check_note": "⚠️ Minor issues: Design, appeals and main result match the abstract; a mechanism claim and one caveat detail go beyond what the abstract states.",
+     "coverage": "No coverage found",
+     "flags": [],
+     "openalex": true,
+     "evidence_type": "field experiment"
+    }
+   ],
+   "evidence": [
+    "https://openalex.org/W7224889302",
+    "https://doi.org/10.1287/mksc.2025.0392"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "rd-2026-11-01-black-friday-trick-second-one-for-1-beats-second-o",
+   "desk": "research",
+   "title": "Black Friday trick: 'second one for 1¢' beats 'second one free' with shoppers, but can make the main item seem worth less",
+   "created": "2026-11-01",
+   "route": "roundup",
+   "speed": "online 5 days",
+   "beat": "money and shopping",
+   "angle": "In four experiments, shoppers found penny-price deals more attractive than BOGO-free. When the two items were identical, though, the penny deal led people to value the main product less afterward. A quick, counterintuitive deal-psychology item for Black Friday week.",
+   "why_now": "Online 5 days (verified). Black Friday is Nov 27, when BOGO deals are everywhere.",
+   "is_it_real": "Four experiments, two of them hypothetical purchase scenarios and two with real incentives. All ran online or in a lab, not in stores. Country and product categories weren't specified in the abstract. It measures how attractive the deal seemed and how people valued the product, not actual sales.",
+   "evidence_strength": "moderate",
+   "other_peg": "Black Friday, Nov 27",
+   "audience": "general",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "W7223666241"
+   ],
+   "studies": [
+    {
+     "pmid": "W7223666241",
+     "doi": "10.1108/ejm-02-2023-0121",
+     "journal": "European Journal of Marketing",
+     "headline": "Charging a penny for the second item beats giving it away free",
+     "pubdate": "2026 Oct 27",
+     "days_online": 5,
+     "date_verified": true,
+     "digests": [
+      "Marketing research: money & spending"
+     ],
+     "score": 8.5,
+     "caveats": "Two of the four studies used hypothetical scenarios; experiments are lab/online rather than real retail; country and category scope not specified in the abstract; no test of how the size of the token price changes the effect.",
+     "fact_check_note": "⚠️ Minor issues: Four experiments, the attractiveness result and the reversal of value discounting are all reported correctly; one term is swapped (\"complementary\" for \"nonidentical\").",
+     "coverage": "No coverage found",
+     "flags": [],
+     "openalex": true,
+     "evidence_type": "experiments"
+    }
+   ],
+   "evidence": [
+    "https://openalex.org/W7223666241",
+    "https://doi.org/10.1108/ejm-02-2023-0121"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "rd-2026-11-01-older-men-had-about-half-the-osteoporosis-diagnose",
+   "desk": "research",
+   "title": "Older men had about half the osteoporosis diagnoses of women but nearly the same rate of spine fractures in a Taiwanese hospital study",
+   "created": "2026-11-01",
+   "route": "roundup",
+   "speed": "online 1 days",
+   "beat": "aging, body and metabolism",
+   "angle": "Among 2,031 men and 2,031 age-matched women who had bone scans, 32% of the men had osteoporosis versus 51% of the women, yet vertebral fractures ran 22.7% vs 22.8%. Male sex stayed linked to fractures even after adjusting for bone density. That fits the long-standing worry that bone screening thresholds undercount men's risk.",
+   "why_now": "Online 1 day (verified). Men's bone health is chronically under-covered, and US screening guidance still says the evidence is insufficient to recommend routine screening for men.",
+   "is_it_real": "One hospital in Taiwan, looking back at records. Everyone had a DXA scan, so these were people already referred for bone concerns, which probably inflates fracture rates in both sexes and limits generalizing to men at large. Bone-density norms differ between Asian and Western populations. The study shows a link, not a cause.",
+   "evidence_strength": "moderate",
+   "other_peg": "",
+   "audience": "older adults",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42965625"
+   ],
+   "studies": [
+    {
+     "pmid": "42965625",
+     "doi": "10.1007/s11657-026-01782-x",
+     "journal": "Archives of Osteoporosis",
+     "headline": "Older men have half the osteoporosis rate of women — but nearly the same rate of broken bones",
+     "pubdate": "2026 Oct 31",
+     "days_online": 1,
+     "date_verified": true,
+     "digests": [
+      "Aging & Longevity",
+      "Elderly & Geriatric",
+      "Women's Health"
+     ],
+     "score": 8,
+     "caveats": "single-center, observational design, retrospective cohort, Taiwan-specific population (results may not generalize to Western populations with different bone density norms)",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (SERPAPI verified)",
+     "flags": [
+      "observational"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42965625/",
+    "https://doi.org/10.1007/s11657-026-01782-x"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "rd-2026-11-01-the-first-two-weeks-home-from-the-hospital-carried",
+   "desk": "research",
+   "title": "The first two weeks home from the hospital carried a 77% higher risk of a major osteoporotic fracture in a nationwide Danish study",
+   "created": "2026-11-01",
+   "route": "roundup",
+   "speed": "online 2 days",
+   "beat": "aging, body and metabolism",
+   "angle": "A useful window for readers and caregivers: compared with matched people who weren't hospitalized, fracture risk was sharply raised in the first 14 days after discharge, still 28% higher at 30 days, and tapered over a year. Longer and repeated stays meant more risk. The practical line is to treat the first few weeks home as a fall-proofing period.",
+   "why_now": "Online 2 days (verified). Fall and winter are when older adults are most often hospitalized.",
+   "is_it_real": "National registry covering everyone over 45 in Denmark, with matched controls, so the size is strong. But it's observational and can't separate the effect of the hospital stay from the illness that caused it. The 77% is a relative figure, and the absolute two-week risk needs pulling from the paper before it runs. Two authors hold stock options in Eli Lilly, Novo Nordisk and Gubra. Results may not carry over outside Denmark.",
+   "evidence_strength": "moderate",
+   "other_peg": "",
+   "audience": "older adults",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42963373"
+   ],
+   "studies": [
+    {
+     "pmid": "42963373",
+     "doi": "10.1007/s00198-026-08298-7",
+     "journal": "Osteoporos Int",
+     "headline": "A hospital stay itself raises your fracture risk — and the first two weeks home are the riskiest",
+     "pubdate": "2026 Oct 30",
+     "days_online": 2,
+     "date_verified": true,
+     "digests": [
+      "Senior Living — New This Week"
+     ],
+     "score": 7,
+     "caveats": "Observational registry study — it cannot prove hospitalization itself causes fractures rather than the underlying illness that prompted admission; Danish population may not generalize elsewhere; two authors report stock options in Eli Lilly, Novo Nordisk, and Gubra.",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (Google News checked)",
+     "flags": [
+      "observational"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42963373/",
+    "https://doi.org/10.1007/s00198-026-08298-7"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "rd-2026-11-01-a-daily-cup-s-worth-of-blueberries-raised-blood-fl",
+   "desk": "research",
+   "title": "A daily cup's worth of blueberries raised blood flow to brain areas for focus and control in older adults in a 3-month placebo-controlled trial",
+   "created": "2026-11-01",
+   "route": "roundup",
+   "speed": "online 4 days",
+   "beat": "nutrition science / aging",
+   "angle": "Short and true with the caveat in a clause: blueberry powder raised blood flow in brain regions tied to executive function in 65- to 89-year-olds who rarely ate berries. Brain antioxidant levels didn't change, which undercuts the usual 'antioxidant' story. It measured blood flow, not memory or thinking.",
+   "why_now": "Online 4 days in the American Journal of Clinical Nutrition (verified).",
+   "is_it_real": "Randomized, double-blind and placebo-controlled, which is good, but small (60 people), single-center and three months long. The outcome is a brain scan measure, not a cognitive one. Blueberry trials are often funded by the industry, so check the funding line before writing.",
+   "evidence_strength": "moderate",
+   "other_peg": "",
+   "audience": "older adults",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42951114"
+   ],
+   "studies": [
+    {
+     "pmid": "42951114",
+     "doi": "10.1016/j.ajcnut.2026.101613",
+     "journal": "The American Journal of Clinical Nutrition",
+     "headline": "A Cup of Blueberries a Day Boosts Blood Flow to the Brain's Executive Control Center in Older Adults",
+     "pubdate": "2026 Oct 28",
+     "days_online": 4,
+     "date_verified": true,
+     "digests": [
+      "Fitness & Exercise"
+     ],
+     "score": 8,
+     "caveats": "small sample (N<100), single-center, short follow-up",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (SERPAPI verified)",
+     "flags": [
+      "small_sample"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42951114/",
+    "https://doi.org/10.1016/j.ajcnut.2026.101613"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "rd-2026-11-01-an-anesthesia-drug-cut-post-surgery-delirium-in-ol",
+   "desk": "research",
+   "title": "An anesthesia drug cut post-surgery delirium in older patients by about 44% across 22 trials, at the cost of more slow heart rates and low blood pressure",
+   "created": "2026-11-01",
+   "route": "roundup",
+   "speed": "online 2 days",
+   "beat": "aging / patient advocacy",
+   "angle": "A concrete 'ask your anesthesiologist' item. Pooled randomized trials of dexmedetomidine in 4,161 older surgical patients showed less delirium and less nausea, with real cardiovascular trade-offs that call for individual judgment.",
+   "why_now": "Online 2 days (verified). Delirium after surgery is one of the outcomes older patients fear most.",
+   "is_it_real": "Meta-analysis of randomized trials, so stronger than most. But the trials varied in surgery type, dose and how delirium was measured, and heterogeneity was moderate. The 44% is relative, so give the absolute rates. Several earlier meta-analyses point the same way, so this confirms prior work rather than breaking news.",
+   "evidence_strength": "strong",
+   "other_peg": "",
+   "audience": "older adults",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42963481"
+   ],
+   "studies": [
+    {
+     "pmid": "42963481",
+     "doi": "10.1007/s41999-026-01636-2",
+     "journal": "Eur Geriatr Med",
+     "headline": "A common sedative cuts post-surgery confusion in older patients nearly in half — but slows the heart",
+     "pubdate": "2026 Oct 30",
+     "days_online": 2,
+     "date_verified": true,
+     "digests": [
+      "Senior Living — New This Week"
+     ],
+     "score": 7,
+     "caveats": "Meta-analysis of trials that varied in surgery type, dosing, and delirium assessment; moderate heterogeneity; the increased bradycardia and hypotension are real risks requiring individualized judgment, not a blanket recommendation.",
+     "fact_check_note": "⚠️ Minor issues",
+     "coverage": "Not widely covered ✓ (Google News checked)",
+     "flags": []
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42963481/",
+    "https://doi.org/10.1007/s41999-026-01636-2"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "rd-2026-11-01-skeptical-of-video-physical-therapy-knee-arthritis",
+   "desk": "research",
+   "title": "Skeptical of video physical therapy? Knee-arthritis patients randomized to try it came to prefer it, 68% to the alternative",
+   "created": "2026-11-01",
+   "route": "roundup",
+   "speed": "online 0 days (unverified)",
+   "beat": "aging / health tech",
+   "angle": "In an Australian trial of people 45 and older with knee pain, those assigned to telerehab ended up preferring it and valuing it more than those who'd only had in-person PT. That suggests unfamiliarity, not dislike, holds people back.",
+   "why_now": "Newly indexed (date not verified, so confirm). Fits the ongoing fight over Medicare telehealth coverage.",
+   "is_it_real": "The preference survey sat inside a randomized trial of 319 people, a sound design, but it measures stated preference and hypothetical willingness to pay, not actual use. The 'nearly $90' is Australian dollars (about US$55 to 60), so don't headline the dollar figure as US. Australian setting.",
+   "evidence_strength": "moderate",
+   "other_peg": "",
+   "audience": "older adults",
+   "confidence": "low",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42966905"
+   ],
+   "studies": [
+    {
+     "pmid": "42966905",
+     "doi": "10.2519/jospt.2026.14073",
+     "journal": "The Journal of Orthopaedic and Sports Physical Therapy",
+     "headline": "Trying telehealth once makes knee pain patients willing to pay nearly $90 more for it",
+     "pubdate": "2026 Nov",
+     "days_online": 0,
+     "date_verified": false,
+     "digests": [
+      "Elderly & Geriatric",
+      "Fitness & Exercise"
+     ],
+     "score": 8,
+     "caveats": "observational design, Australian population (results may not generalize directly to US payer or access context), short follow-up, self-reported outcomes",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (SERPAPI verified)",
+     "flags": [
+      "observational"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42966905/",
+    "https://doi.org/10.2519/jospt.2026.14073"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "rd-2026-11-01-walking-pneumonia-came-back-after-covid-in-taiwan",
+   "desk": "research",
+   "title": "'Walking pneumonia' came back after COVID in Taiwan with drug-resistant strains and a 14-fold jump in brain and nerve complications in kids",
+   "created": "2026-11-01",
+   "route": "roundup",
+   "speed": "online 0 days (unverified)",
+   "beat": "public health",
+   "angle": "A winter respiratory-season item for parents: in Taiwan, Mycoplasma infections in children doubled versus the 2019 peak, ICU admissions rose 2.2-fold, and new macrolide-resistant subtypes replaced older lineages, one tied to neurological complications.",
+   "why_now": "Newly indexed in Emerging Infectious Diseases (date not verified). Respiratory season is starting, and walking pneumonia searches spiked in the US during the 2024 surge.",
+   "is_it_real": "Multicenter Taiwanese surveillance plus genome analysis. The 13.7-fold rise is relative to a small base of complications. Macrolide resistance is much more common in East Asia than in the US, so don't imply US kids face the same strains. Frame it as a watch item.",
+   "evidence_strength": "moderate",
+   "other_peg": "Start of the winter respiratory season",
+   "audience": "general",
+   "confidence": "low",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42909847"
+   ],
+   "studies": [
+    {
+     "pmid": "42909847",
+     "doi": "10.3201/eid3211.260439",
+     "journal": "Emerging Infectious Diseases",
+     "headline": "A drug-resistant 'walking pneumonia' bug came back stronger after COVID — with a new brain-targeting strain",
+     "pubdate": "2026 Nov",
+     "days_online": 0,
+     "date_verified": false,
+     "digests": [
+      "Science & Environment"
+     ],
+     "score": 8,
+     "caveats": "single-center, observational design, short follow-up, geographically limited to Taiwan",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (SERPAPI verified)",
+     "flags": [
+      "observational"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42909847/",
+    "https://doi.org/10.3201/eid3211.260439"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "rd-2026-11-01-autistic-women-report-more-trouble-with-impulse-co",
+   "desk": "research",
+   "title": "Autistic women report more trouble with impulse control than autistic men, and among those who also screen positive for ADHD, it's more tightly tied to anxiety",
+   "created": "2026-11-01",
+   "route": "brief",
+   "speed": "online 0 days (unverified)",
+   "beat": "women's health and the mind",
+   "angle": "Evergreen material for an AuDHD-in-women page: in 732 autistic adults, women exceeded their sex-adjusted norms on self-reported inhibition problems more than men did. The link between inhibition and anxiety depended on whether the person also screened positive for ADHD.",
+   "why_now": "Evergreen. AuDHD in women is a steady search topic and fits the womens-adhd site's launch on Nov 23.",
+   "is_it_real": "Online self-report survey, which probably skews toward articulate, higher-functioning adults. ADHD was flagged by a screening tool, not diagnosed. Observational. The PMID suggests it was published months ago, so it suits a brief, not a pitch.",
+   "evidence_strength": "thin",
+   "other_peg": "",
+   "audience": "general",
+   "confidence": "low",
+   "site": "womens-adhd",
+   "seed_keyword": "audhd women anxiety",
+   "pmids": [
+    "40381091"
+   ],
+   "studies": [
+    {
+     "pmid": "40381091",
+     "doi": "10.1007/s10803-025-06799-8",
+     "journal": "Journal of Autism and Developmental Disorders",
+     "headline": "Autistic women struggle more with impulse control than autistic men — and it's fueling their anxiety",
+     "pubdate": "2026 Nov",
+     "days_online": 0,
+     "date_verified": false,
+     "digests": [
+      "Women's Health"
+     ],
+     "score": 7,
+     "caveats": "observational design, self-reported outcomes, online sample (may skew toward higher-functioning individuals), ADHD status based on screening tool not clinical diagnosis",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (SERPAPI verified)",
+     "flags": [
+      "observational"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/40381091/",
+    "https://doi.org/10.1007/s10803-025-06799-8"
+   ],
+   "term_details": [],
+   "status": "routed"
+  }
+ ],
+ "dropped": {
+  "specialist-only": 7,
+  "too-thin": 7,
+  "watch": 2,
+  "caveats-undo-it": 3,
+  "methods-only": 1,
+  "already-covered": 1,
+  "off-beat": 1
+ }
+}
