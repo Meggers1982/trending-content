@@ -843,6 +843,86 @@
    "judged_on": "2026-10-31",
    "status": "dropped",
    "reason": "off-beat"
+  },
+  "press-dutch-bros-unwraps-its-most-festive-holiday-lineup-yet": {
+   "judged_on": "2026-11-01",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-brigham-nurses-issue-notice-for-open-ended-strike-beginning": {
+   "judged_on": "2026-11-01",
+   "status": "dropped",
+   "reason": "watch"
+  },
+  "press-veterinary-expert-explains-lily-toxicity-in-cats": {
+   "judged_on": "2026-11-01",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-fitness-expert-joshua-bankes-explains-progressive-overload-f": {
+   "judged_on": "2026-11-01",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-tessan-premieres-jump-into-the-unknown-documentary": {
+   "judged_on": "2026-11-01",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-new-era-celebrates-golden-state-valkyries-first-ever-wnba-ti": {
+   "judged_on": "2026-11-01",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-aiper-previews-black-friday-savings-of-up-to-550-on-robotic": {
+   "judged_on": "2026-11-01",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-retirement-planning-expert-janie-kelly-explains-required-min": {
+   "judged_on": "2026-11-01",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-insurance-expert-chuck-clark-explains-underinsured-motorist": {
+   "judged_on": "2026-11-01",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-interior-design-expert-wendy-anguiano-explains-lrv-and-paint": {
+   "judged_on": "2026-11-01",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-hvac-expert-bob-schmid-explains-manual-j-load-calculation": {
+   "judged_on": "2026-11-01",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-flooring-expert-austin-j-messina-explains-acclimation-before": {
+   "judged_on": "2026-11-01",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-plumbing-experts-explain-anode-rod-maintenance-for-water-hea": {
+   "judged_on": "2026-11-01",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-roofing-expert-jeremiah-lightsey-explains-roof-flashing-and": {
+   "judged_on": "2026-11-01",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-pest-control-expert-kent-nielsen-explains-termite-swarmers-a": {
+   "judged_on": "2026-11-01",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-afghanistan-lift-maiden-hong-kong-sixes-title-in-stunning-fi": {
+   "judged_on": "2026-11-01",
+   "status": "dropped",
+   "reason": "off-beat"
   }
  },
  "ideas": {
@@ -2161,6 +2241,29 @@
     "corporate-only": 3,
     "no-reader-stake": 1,
     "off-beat": 2
+   }
+  },
+  {
+   "date": "2026-11-01",
+   "items": 183,
+   "candidates": 16,
+   "skipped": {
+    "already judged": 58,
+    "taken elsewhere": 21,
+    "older": 88,
+    "noise": 0
+   },
+   "sources": {
+    "news": "2026-11-01",
+    "agingwire": "2026-11-01"
+   },
+   "model": "opus",
+   "ideas": 0,
+   "routes": {},
+   "dropped": {
+    "corporate-only": 14,
+    "watch": 1,
+    "off-beat": 1
    }
   }
  ],
