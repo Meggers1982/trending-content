@@ -1,0 +1,637 @@
+{
+ "run_date": "2026-11-01",
+ "geo": "US",
+ "items": [
+  {
+   "query": "daylight savings",
+   "search_volume": 1000000,
+   "increase_percentage": 600,
+   "categories": [
+    "Other"
+   ],
+   "news": [
+    {
+     "title": "Daylight saving time 2026 ended today. Here's what time the clocks changed and more key details.",
+     "link": "https://www.cbsnews.com/news/daylight-saving-time-ends-2026/",
+     "source": "CBS News"
+    },
+    {
+     "title": "Opinion | Why daylight saving time should be eliminated entirely",
+     "link": "https://www.washingtonpost.com/opinions/2026/10/31/daylight-saving-time-is-bad-your-health-here-better-option/",
+     "source": "The Washington Post"
+    }
+   ]
+  },
+  {
+   "query": "usc vs ohio state",
+   "search_volume": 500000,
+   "increase_percentage": 900,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "USC saves CFP hopes with upset of Ohio State as embattled Riley savors win",
+     "link": "https://www.espn.com/college-football/story/_/id/50343945/usc-stuns-no-2-ohio-state-biggest-win-riley-tenure",
+     "source": "ESPN"
+    },
+    {
+     "title": "Mics Caught What Frustrated Ryan Day Said On Sideline During Loss",
+     "link": "https://sports.yahoo.com/articles/mics-caught-frustrated-ryan-day-135301024.html",
+     "source": "Yahoo Sports"
+    }
+   ]
+  },
+  {
+   "query": "minnesota vs indiana",
+   "search_volume": 500000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Gophers suffer heartbreaking overtime loss to No. 4 Indiana",
+     "link": "https://www.twincities.com/2026/10/31/gophers-suffer-heartbreaking-loss-to-no-4-indiana-in-overtime/",
+     "source": "Pioneer Press"
+    },
+    {
+     "title": "Indiana-Minnesota made college football history. Kirk Herbstreit lost his mind",
+     "link": "https://www.usatoday.com/story/sports/ncaaf/bigten/2026/11/01/indiana-minnesota-football-kirk-herbstreit-60-yard-field-goals/92549214007/",
+     "source": "USA Today"
+    }
+   ]
+  },
+  {
+   "query": "gabby williams",
+   "search_volume": 500000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Golden State Valkyries top Atlanta Dream in Game 7 to secure first WNBA title",
+     "link": "https://www.espn.com/wnba/story/_/id/50343701/golden-state-valkyries-win-game-7-secure-first-wnba-title",
+     "source": "ESPN"
+    },
+    {
+     "title": "UConn Women's Basketball Alums: How Much History Was Created in WNBA Finals?",
+     "link": "https://sports.yahoo.com/articles/uconn-womens-basketball-alums-much-163027116.html",
+     "source": "Yahoo Sports"
+    }
+   ]
+  },
+  {
+   "query": "racing santander vs real madrid",
+   "search_volume": 200000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Racing - Real Madrid, en directo | Última hora de LALIGA EA Sports en vivo hoy",
+     "link": "https://www.marca.com/futbol/laliga-ea-sports/racing-santander-r-madrid/2026/11/01/01_0101_20261101_189_186-directo.html",
+     "source": "MARCA"
+    },
+    {
+     "title": "Real Madrid: alineación y probabilidades vs Racing de Santander",
+     "link": "https://espndeportes.espn.com/futbol/espana/nota/_/id/17462147/racing-santander-real-madrid-alineaciones-probabilidades-laliga-jornada-11",
+     "source": "ESPN Deportes"
+    }
+   ]
+  },
+  {
+   "query": "clemson vs florida state",
+   "search_volume": 200000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Florida State comeback falls short in loss to Clemson",
+     "link": "https://www.wctv.tv/2026/11/01/florida-state-comeback-falls-short-loss-clemson/",
+     "source": "WCTV"
+    },
+    {
+     "title": "Dabo Swinney Sends Fierce Message on Clemson’s Future After Florida State Win",
+     "link": "https://sports.yahoo.com/articles/dabo-swinney-sends-fierce-message-161848571.html",
+     "source": "Yahoo Sports"
+    }
+   ]
+  },
+  {
+   "query": "miami fl vs unc",
+   "search_volume": 200000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "No. 1 Miami rallies to remain unbeaten, looks ahead to No. 5 Notre Dame",
+     "link": "https://www.espn.com/college-football/story/_/id/50344050/no-1-miami-rallies-dodges-upset-bid-north-carolina",
+     "source": "ESPN"
+    },
+    {
+     "title": "No. 1 Miami Hurricanes hold off North Carolina Tar Heels to remain undefeated",
+     "link": "https://www.miamiherald.com/sports/college/acc/university-of-miami/article317843001.html",
+     "source": "Miami Herald"
+    }
+   ]
+  },
+  {
+   "query": "timberwolves vs spurs",
+   "search_volume": 200000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Spurs' Victor Wembanyama notches 43 points on career-best 34 shots in win",
+     "link": "https://www.espn.com/nba/story/_/id/50344505/spurs-victor-wembanyama-notches-43-points-career-best-43-shots-win",
+     "source": "ESPN"
+    },
+    {
+     "title": "What we learned from the Spurs’ win over the Timberwolves",
+     "link": "https://www.poundingtherock.com/spurs-analysis/109242/what-we-learned-from-the-spurs-win-over-the-timberwolves",
+     "source": "Pounding The Rock"
+    }
+   ]
+  },
+  {
+   "query": "liverpool vs arsenal",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Liverpool v Arsenal: Premier League – live",
+     "link": "https://www.theguardian.com/football/live/2026/nov/01/liverpool-v-arsenal-premier-league-live",
+     "source": "The Guardian"
+    },
+    {
+     "title": "Liverpool vs Arsenal live: Premier League",
+     "link": "https://www.aljazeera.com/sports/liveblog/2026/11/1/liverpool-vs-arsenal-live-premier-league",
+     "source": "Al Jazeera"
+    }
+   ]
+  },
+  {
+   "query": "nyc marathon tracker",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "2024 champ Sheila Chepkirui, debuting Andreas Almgren claim NYC Marathon wins",
+     "link": "https://www.espn.com/olympics/trackandfield/story/_/id/50348440/sheila-chepkirui-andreas-almgren-claim-nyc-marathon-wins",
+     "source": "ESPN"
+    },
+    {
+     "title": "Andreas Almgren wins men’s race in NYC in marathon debut, Sheila Chepkirui wins women’s race again",
+     "link": "https://www.nbcnews.com/sports/sports/andreas-almgren-wins-mens-race-nyc-marathon-debut-rcna606825",
+     "source": "NBC News"
+    }
+   ]
+  },
+  {
+   "query": "melissa gilbert little house tribute",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Entertainment"
+   ],
+   "news": [
+    {
+     "title": "Melissa Gilbert remembers TV dad Michael Landon with 90th birthday tribute",
+     "link": "https://www.usatoday.com/story/entertainment/tv-streaming/2026/10/31/melissa-gilbert-michael-landon-90th-birthday-little-house-prairie/92535473007/",
+     "source": "USA Today"
+    },
+    {
+     "title": "Melissa Gilbert Remembers ‘Little House’ TV Dad Michael Landon on What Would Have Been His 90th Birthday",
+     "link": "https://people.com/melissa-gilbert-remembers-little-house-on-the-prairie-michael-landon-would-have-been-his-90th-birthday-12204000",
+     "source": "People.com"
+    }
+   ]
+  },
+  {
+   "query": "inde navarrette",
+   "search_volume": 100000,
+   "increase_percentage": 400,
+   "categories": [
+    "Entertainment"
+   ],
+   "news": [
+    {
+     "title": "Inde Navarrette Shades Shane Gillis on SNL After \"Wh--es\" Comment",
+     "link": "https://www.yahoo.com/entertainment/tv/articles/inde-navarrette-shades-shane-gillis-155552480.html",
+     "source": "Yahoo"
+    },
+    {
+     "title": "'SNL' Host Inde Navarrette Wins Halloween With Penis-Destroying Robot Sketch 'The Inventor's Wife'",
+     "link": "https://variety.com/2026/tv/news/inde-navarrette-snl-halloween-the-inventors-wife-penis-robot-1236936629/",
+     "source": "Variety"
+    }
+   ]
+  },
+  {
+   "query": "did canelo win",
+   "search_volume": 100000,
+   "increase_percentage": 500,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "oregon state vs fresno state",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "posiciones de club américa contra deportivo toluca",
+   "search_volume": 100000,
+   "increase_percentage": 800,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "magic city classic",
+   "search_volume": 100000,
+   "increase_percentage": 100,
+   "categories": [
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "cardinals vs cowboys",
+   "search_volume": 50000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "vikings vs lions",
+   "search_volume": 50000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "heidi klum halloween costumes",
+   "search_volume": 50000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Entertainment",
+    "Hobbies and Leisure"
+   ]
+  },
+  {
+   "query": "mcdonald's mcrib lawsuit",
+   "search_volume": 50000,
+   "increase_percentage": 900,
+   "categories": [
+    "Law and Government",
+    "Food and Drink"
+   ]
+  },
+  {
+   "query": "miami weather",
+   "search_volume": 50000,
+   "increase_percentage": 100,
+   "categories": [
+    "Climate"
+   ]
+  },
+  {
+   "query": "browns vs steelers",
+   "search_volume": 20000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "ravens vs bills",
+   "search_volume": 20000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "raiders vs jets",
+   "search_volume": 20000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "villanova basketball",
+   "search_volume": 20000,
+   "increase_percentage": 900,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "falcons vs buccaneers",
+   "search_volume": 20000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "deep ellum shooting",
+   "search_volume": 20000,
+   "increase_percentage": 800,
+   "categories": [
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "where to vote",
+   "search_volume": 20000,
+   "increase_percentage": 500,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "liverpool",
+   "search_volume": 20000,
+   "increase_percentage": 800,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "star trek",
+   "search_volume": 20000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "new york city marathon 2026",
+   "search_volume": 20000,
+   "increase_percentage": 300,
+   "categories": [
+    "Sports",
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "university of delaware",
+   "search_volume": 20000,
+   "increase_percentage": 400,
+   "categories": [
+    "Other"
+   ]
+  },
+  {
+   "query": "montana millionaire",
+   "search_volume": 20000,
+   "increase_percentage": 500,
+   "categories": [
+    "Games",
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "america vs toluca",
+   "search_volume": 20000,
+   "increase_percentage": 700,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "east lansing shooting",
+   "search_volume": 20000,
+   "increase_percentage": 600,
+   "categories": [
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "liam fitzgerald motorcycle accident",
+   "search_volume": 20000,
+   "increase_percentage": 400,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "natalie nakase",
+   "search_volume": 20000,
+   "increase_percentage": 500,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "fortnite",
+   "search_volume": 20000,
+   "increase_percentage": 100,
+   "categories": [
+    "Games"
+   ]
+  },
+  {
+   "query": "is lamar jackson playing today",
+   "search_volume": 20000,
+   "increase_percentage": 100,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "election day 2026",
+   "search_volume": 20000,
+   "increase_percentage": 50,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "ihop",
+   "search_volume": 20000,
+   "increase_percentage": 50,
+   "categories": [
+    "Business and Finance",
+    "Food and Drink"
+   ]
+  },
+  {
+   "query": "savannah guthrie",
+   "search_volume": 20000,
+   "increase_percentage": 200,
+   "categories": [
+    "Other"
+   ]
+  },
+  {
+   "query": "new cfb rankings",
+   "search_volume": 20000,
+   "increase_percentage": 100,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "colts vs jaguars",
+   "search_volume": 10000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "titans vs bengals",
+   "search_volume": 10000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "servicio de ciudadanía e inmigración de los estados unidos",
+   "search_volume": 10000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "guy ritchie",
+   "search_volume": 10000,
+   "increase_percentage": 800,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "grand theft auto",
+   "search_volume": 10000,
+   "increase_percentage": 200,
+   "categories": [
+    "Games"
+   ]
+  },
+  {
+   "query": "méxico",
+   "search_volume": 10000,
+   "increase_percentage": 400,
+   "categories": [
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "nolan wells",
+   "search_volume": 10000,
+   "increase_percentage": 700,
+   "categories": [
+    "Other"
+   ]
+  },
+  {
+   "query": "thanksgiving 2026",
+   "search_volume": 10000,
+   "increase_percentage": 50,
+   "categories": [
+    "Hobbies and Leisure",
+    "Food and Drink"
+   ]
+  },
+  {
+   "query": "black friday 2026",
+   "search_volume": 10000,
+   "increase_percentage": 75,
+   "categories": [
+    "Shopping"
+   ]
+  },
+  {
+   "query": "november",
+   "search_volume": 10000,
+   "increase_percentage": 200,
+   "categories": [
+    "Climate"
+   ]
+  },
+  {
+   "query": "breece hall",
+   "search_volume": 10000,
+   "increase_percentage": 300,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "former 49ers player joe williams",
+   "search_volume": 10000,
+   "increase_percentage": 300,
+   "categories": [
+    "Sports",
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "when is thanksgiving 2026",
+   "search_volume": 10000,
+   "increase_percentage": 75,
+   "categories": [
+    "Hobbies and Leisure"
+   ]
+  },
+  {
+   "query": "gta 6 release date",
+   "search_volume": 10000,
+   "increase_percentage": 50,
+   "categories": [
+    "Games"
+   ]
+  },
+  {
+   "query": "when does daylight savings time end permanently",
+   "search_volume": 10000,
+   "increase_percentage": 200,
+   "categories": [
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "kyle whittingham tommy carr michigan",
+   "search_volume": 10000,
+   "increase_percentage": 100,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "michael mann",
+   "search_volume": 5000,
+   "increase_percentage": 700,
+   "categories": [
+    "Entertainment"
+   ]
+  }
+ ]
+}

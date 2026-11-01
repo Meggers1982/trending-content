@@ -1,6 +1,50 @@
 {
- "updated": "2026-10-31",
+ "updated": "2026-11-01",
  "items": [
+  {
+   "id": "2026-11-01-check-your-pantry-before-you-bake-flour-and-ground",
+   "title": "Check your pantry before you bake: flour and ground cinnamon recalls, including lead in cinnamon again",
+   "created": "2026-11-01",
+   "angle": "One service item that bundles both recalls ahead of holiday baking: which products, what to do with them. The take is that lead in ground cinnamon keeps coming back as a problem.",
+   "why_now": "The cinnamon recall was reported 10/30 and the flour recall in October, just as November baking starts.",
+   "is_it_real": "Both recalls exist but each comes from a single source (thehealthy.com, KLTV). Verify the hazard class and lot/UPC details in FDA enforcement reports. Don't call cinnamon a recurring issue without citing past FDA actions.",
+   "evidence": [
+    "https://www.thehealthy.com/news/flour-recall-october-2026/",
+    "https://www.kltv.com/2026/10/30/ground-cinnamon-recalled-ahead-holiday-season-due-elevated-lead-risk-fda-says/"
+   ],
+   "terms": [
+    "Flour and ground cinnamon recalls ahead of holiday baking season"
+   ],
+   "status": "routed"
+  },
+  {
+   "id": "2026-11-01-pew-americans-are-open-to-ai-in-healthcare-but-wan",
+   "title": "Pew: Americans are open to AI in healthcare, but want a human making the final call",
+   "created": "2026-11-01",
+   "angle": "A short item with a take: people say they want a human making the final call, yet AI is already in their chart notes and insurance decisions. Pairs with the 'AI beats doctors' test issue.",
+   "why_now": "Pew published 10/29.",
+   "is_it_real": "Solid primary source. It is opinion data only, so it can't be used to say anything about whether AI tools are accurate.",
+   "evidence": [
+    "https://www.pewresearch.org/science/2026/10/29/americans-are-open-to-ai-in-healthcare-but-want-humans-making-final-calls/"
+   ],
+   "terms": [
+    "Pew Research survey on US public attitudes toward AI in healthcare decision-making"
+   ],
+   "status": "routed"
+  },
+  {
+   "id": "2026-11-01-amlodipine-recall-what-blood-pressure-patients-sho",
+   "title": "Amlodipine recall: what blood pressure patients should check, and why you shouldn't just stop taking it",
+   "created": "2026-11-01",
+   "angle": "Amlodipine is one of the most-prescribed blood pressure drugs. The useful take is how to check whether your bottle's maker and lot are affected, and why stopping a BP med cold is riskier than the recall.",
+   "why_now": "Searches spiked 10/31 on the public-health radar.",
+   "is_it_real": "Search spike only; no news context or source came with it. The manufacturer, lot numbers, recall class and reason must be confirmed in FDA enforcement reports before writing. If no current recall exists, drop it.",
+   "evidence": [],
+   "terms": [
+    "amlodipine recall"
+   ],
+   "status": "routed"
+  },
   {
    "id": "2026-10-31-once-upon-a-farm-tractor-wheels-recall-which-kids",
    "title": "Once Upon a Farm 'Tractor Wheels' recall: which kids' snacks, and what to check",
@@ -10,6 +54,7 @@
    "is_it_real": "Unconfirmed. The input has no news link or FDA notice, so the product, scope and reason are all unknown. The roundup job must verify against the FDA recall database or the company before writing a word, and drop it if no recall exists.",
    "evidence": [],
    "terms": [
+    "FDA Tractor Wheels toddler snack choking-hazard recall",
     "once upon a farm tractor wheels recall"
    ],
    "status": "routed"
@@ -227,8 +272,10 @@
    "terms": [
     "daylight saving time",
     "Daylight Saving Time ends Nov 1 — circadian and cardiovascular health effects",
+    "daylight savings",
     "do we get an extra hour of sleep tonight",
-    "explain the daylight savings schedule, clock adjustment rules, and health effects"
+    "explain the daylight savings schedule, clock adjustment rules, and health effects",
+    "when does daylight savings time end permanently"
    ],
    "status": "routed"
   },
