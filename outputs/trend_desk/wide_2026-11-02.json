@@ -1,0 +1,634 @@
+{
+ "run_date": "2026-11-02",
+ "geo": "US",
+ "items": [
+  {
+   "query": "nathalia filgueiras",
+   "search_volume": 500000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Other"
+   ],
+   "news": [
+    {
+     "title": "‘Responsible, hardworking’ 20-year-old co-pilot among 9 killed when Learjet nosedived into a road",
+     "link": "https://www.cnn.com/2026/11/02/us/florida-learjet-plane-crash-monday",
+     "source": "CNN"
+    },
+    {
+     "title": "Several victims of South Florida private jet crash identified",
+     "link": "https://www.usatoday.com/story/news/nation/2026/11/02/florida-plane-crash-palm-beach-victims/92561126007/",
+     "source": "USA Today"
+    }
+   ]
+  },
+  {
+   "query": "what happened to jack campbell?",
+   "search_volume": 200000,
+   "increase_percentage": 200,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Lions LB Jack Campbell still in hospital, but signs positive",
+     "link": "https://www.espn.com/nfl/story/_/id/50360680/lions-lb-jack-campbell-hospital-signs-positive",
+     "source": "ESPN"
+    },
+    {
+     "title": "Jack Campbell injury update: Lions share 'positive news' on LB after neck injury",
+     "link": "https://www.usatoday.com/story/sports/nfl/lions/2026/11/02/lions-player-jack-campbell-injury-live-updates-and-latest-news/92562725007/",
+     "source": "USA Today"
+    }
+   ]
+  },
+  {
+   "query": "zelda",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Games",
+    "Technology"
+   ],
+   "news": [
+    {
+     "title": "Ask the Developer Vol. 24: The Legend of Zelda: Ocarina of Time — Part 1",
+     "link": "https://www.nintendo.com/us/whatsnew/ask-the-developer-vol-24-the-legend-of-zelda-ocarina-of-time-part-1/",
+     "source": "Nintendo"
+    },
+    {
+     "title": "Nintendo Reveals Development Team Behind The Legend of Zelda: Ocarina of Time Remake",
+     "link": "https://www.ign.com/articles/nintendo-reveals-development-team-behind-the-legend-of-zelda-ocarina-of-time-remake",
+     "source": "IGN"
+    }
+   ]
+  },
+  {
+   "query": "lenny kravitz",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Other"
+   ],
+   "news": [
+    {
+     "title": "Lenny Kravitz Debunks Viral Rumor That He Died in Horrific Learjet Plane Crash",
+     "link": "https://www.hollywoodreporter.com/news/general-news/lenny-kravitz-learjet-plane-crash-1236745896/",
+     "source": "The Hollywood Reporter"
+    },
+    {
+     "title": "Lenny Kravitz’s Rep Debunks Rumor He Was Involved in Fatal Florida Learjet Crash",
+     "link": "https://people.com/lenny-kravitz-rep-debunks-rumor-he-was-involved-fatal-florida-crash-12207541",
+     "source": "People.com"
+    }
+   ]
+  },
+  {
+   "query": "tornado watch",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Climate"
+   ],
+   "news": [
+    {
+     "title": "UPDATES: Tornado watch issued for several counties across Oklahoma, including the OKC metro",
+     "link": "https://www.koco.com/article/oklahoma-weather-tornado-severe-storm-risk-monday/74310512",
+     "source": "KOCO"
+    },
+    {
+     "title": "Waves of Storms likely Monday. Severe Storms likely, some see heavy rainfall.",
+     "link": "https://kfor.com/weather/waves-of-storms-likely-monday-severe-storms-likely-some-see-heavy-rainfall/",
+     "source": "KFOR"
+    }
+   ]
+  },
+  {
+   "query": "matt wright",
+   "search_volume": 50000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Entertainment"
+   ],
+   "news": [
+    {
+     "title": "'Ellen DeGeneres Show' EP Matthew Wright Dies In \"Unfathomable Tragedy\"",
+     "link": "https://deadline.com/2026/11/ellen-degeneres-matthew-wright-ep-1237211547/",
+     "source": "Deadline"
+    },
+    {
+     "title": "‘Ellen DeGeneres Show’ Executive Producer Matthew Wright Dies at 52 in ‘Unfathomable Tragedy’",
+     "link": "https://people.com/ellen-degeneres-show-executive-producer-matthew-wright-dead-52-12207456",
+     "source": "People.com"
+    }
+   ]
+  },
+  {
+   "query": "today",
+   "search_volume": 50000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Other"
+   ],
+   "news": [
+    {
+     "title": "NYT Connections hints today: Meanings for each word for Nov. 2, 2026",
+     "link": "https://mashable.com/entertainment/nyt-connections-hints-meanings-november-2-2026",
+     "source": "Mashable"
+    },
+    {
+     "title": "Today’s NYT Connections Hints and Answers for Monday, Nov. 2, #1240",
+     "link": "https://www.cnet.com/tech/gaming/todays-nyt-connections-hints-answers-november-2-1240/",
+     "source": "CNET"
+    }
+   ]
+  },
+  {
+   "query": "seal team paramount 2026 viewership",
+   "search_volume": 50000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Entertainment"
+   ],
+   "news": [
+    {
+     "title": "Goodbye 'Lioness,' Paramount's 114-Episode Military Action Thriller Is One of 2026's Most Streamed Shows",
+     "link": "https://movieweb.com/seal-team-stream-paramount-nielsen-november-2026/",
+     "source": "MovieWeb"
+    },
+    {
+     "title": "Paramount's 114-Episode Military Action Thriller Is Officially 1 of 2026's Most Streamed Shows",
+     "link": "https://collider.com/seal-team-streaming-2-billion-minutes-paramount-netflix/",
+     "source": "Collider"
+    }
+   ]
+  },
+  {
+   "query": "2026 white christmas weather predictions usa",
+   "search_volume": 50000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Hobbies and Leisure"
+   ],
+   "news": [
+    {
+     "title": "Will the Philadelphia area get snow for Christmas this year?",
+     "link": "https://www.fox29.com/weather/will-philadelphia-area-get-snow-christmas-year",
+     "source": "FOX 29 Philadelphia"
+    },
+    {
+     "title": "Will Texas see a white Christmas in 2026? Old Farmer's Almanac weighs in",
+     "link": "https://www.yahoo.com/news/weather-news/articles/texas-see-white-christmas-2026-200300997.html",
+     "source": "Yahoo"
+    }
+   ]
+  },
+  {
+   "query": "voting",
+   "search_volume": 50000,
+   "increase_percentage": 100,
+   "categories": [
+    "Politics"
+   ],
+   "news": [
+    {
+     "title": "2026 Elections Live Updates: Trump Makes Final Midterms Push for Republicans as Democrats Appear Hopeful",
+     "link": "https://www.nytimes.com/live/2026/11/02/us/midterms-elections-trump",
+     "source": "The New York Times"
+    },
+    {
+     "title": "What early voting numbers tell us about the midterms : Here & Now Anytime",
+     "link": "https://www.npr.org/2026/11/02/nx-s1-6026532/what-early-voting-numbers-tell-us-about-the-midterms",
+     "source": "NPR"
+    }
+   ]
+  },
+  {
+   "query": "ice post release immigrant detentions",
+   "search_volume": 20000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Law and Government"
+   ],
+   "news": [
+    {
+     "title": "ICE rapidly re-arresting immigrants released after winning court petitions",
+     "link": "https://www.theguardian.com/us-news/2026/nov/02/immigrants-released-after-court-petitions-ice-arrest",
+     "source": "The Guardian"
+    },
+    {
+     "title": "‘It left me in shock’: St. Cloud immigrant speaks about trauma after ICE re-arrest",
+     "link": "https://www.mprnews.org/story/2026/11/01/st-cloud-immigrant-yader-cortez-talks-about-ice-rearrest-trauma",
+     "source": "MPR News"
+    }
+   ]
+  },
+  {
+   "query": "popeyes cajun onion rings return",
+   "search_volume": 20000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Food and Drink"
+   ],
+   "news": [
+    {
+     "title": "Popeyes Is Bringing Back a Discontinued Side for the First Time in More Than a Decade",
+     "link": "https://www.allrecipes.com/popeyes-cajun-onion-rings-return-12202294",
+     "source": "Allrecipes"
+    },
+    {
+     "title": "Popeyes Introduces Cajun Onion Rings",
+     "link": "https://www.qsrmagazine.com/news/popeyes-introduces-cajun-onion-rings/",
+     "source": "QSR Magazine"
+    }
+   ]
+  },
+  {
+   "query": "newcastle vs everton",
+   "search_volume": 20000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "melissa rycroft",
+   "search_volume": 20000,
+   "increase_percentage": 600,
+   "categories": [
+    "Entertainment",
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "midterms",
+   "search_volume": 20000,
+   "increase_percentage": 100,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "lindsay clancy",
+   "search_volume": 20000,
+   "increase_percentage": 300,
+   "categories": [
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "ben arbuckle",
+   "search_volume": 20000,
+   "increase_percentage": 900,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "pakhtakor vs al-nassr",
+   "search_volume": 20000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "election",
+   "search_volume": 20000,
+   "increase_percentage": 100,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "apple earnings",
+   "search_volume": 20000,
+   "increase_percentage": 400,
+   "categories": [
+    "Business and Finance"
+   ]
+  },
+  {
+   "query": "marvell stock",
+   "search_volume": 20000,
+   "increase_percentage": 100,
+   "categories": [
+    "Business and Finance"
+   ]
+  },
+  {
+   "query": "nhl shop",
+   "search_volume": 20000,
+   "increase_percentage": 200,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "the big o",
+   "search_volume": 10000,
+   "increase_percentage": 300,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "tucker carlson",
+   "search_volume": 10000,
+   "increase_percentage": 300,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "karl bushby",
+   "search_volume": 10000,
+   "increase_percentage": 300,
+   "categories": [
+    "Other"
+   ]
+  },
+  {
+   "query": "social media",
+   "search_volume": 10000,
+   "increase_percentage": 300,
+   "categories": [
+    "Other"
+   ]
+  },
+  {
+   "query": "dc power outage",
+   "search_volume": 10000,
+   "increase_percentage": 200,
+   "categories": [
+    "Business and Finance"
+   ]
+  },
+  {
+   "query": "am i registered to vote",
+   "search_volume": 10000,
+   "increase_percentage": 100,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "can i vote today",
+   "search_volume": 10000,
+   "increase_percentage": 300,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "voting near me",
+   "search_volume": 10000,
+   "increase_percentage": 100,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "where can i vote",
+   "search_volume": 10000,
+   "increase_percentage": 100,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "scoot",
+   "search_volume": 10000,
+   "increase_percentage": 400,
+   "categories": [
+    "Travel and Transportation"
+   ]
+  },
+  {
+   "query": "dancing with the stars disney night",
+   "search_volume": 10000,
+   "increase_percentage": 100,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "cedric doumbe",
+   "search_volume": 10000,
+   "increase_percentage": 300,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "grand ole opry longest serving member",
+   "search_volume": 10000,
+   "increase_percentage": 300,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "jessica alba",
+   "search_volume": 10000,
+   "increase_percentage": 200,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "when is voting day",
+   "search_volume": 10000,
+   "increase_percentage": 100,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "polls",
+   "search_volume": 10000,
+   "increase_percentage": 50,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "odyssey cruise crew unpaid cambodia",
+   "search_volume": 10000,
+   "increase_percentage": 75,
+   "categories": [
+    "Travel and Transportation"
+   ]
+  },
+  {
+   "query": "michael wilbon",
+   "search_volume": 5000,
+   "increase_percentage": 500,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "target pokemon card lottery system",
+   "search_volume": 5000,
+   "increase_percentage": 600,
+   "categories": [
+    "Games"
+   ]
+  },
+  {
+   "query": "moss landing shooting",
+   "search_volume": 5000,
+   "increase_percentage": 200,
+   "categories": [
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "ella langley toy story outfit",
+   "search_volume": 5000,
+   "increase_percentage": 500,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "mark tilbury gta 6 financial advice",
+   "search_volume": 5000,
+   "increase_percentage": 300,
+   "categories": [
+    "Games"
+   ]
+  },
+  {
+   "query": "sam altman ram",
+   "search_volume": 5000,
+   "increase_percentage": 300,
+   "categories": [
+    "Technology"
+   ]
+  },
+  {
+   "query": "deportivo - osasuna",
+   "search_volume": 5000,
+   "increase_percentage": 400,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "atalanta vs parma",
+   "search_volume": 5000,
+   "increase_percentage": 200,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "last day to vote",
+   "search_volume": 5000,
+   "increase_percentage": 100,
+   "categories": [
+    "Politics",
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "voting day 2026",
+   "search_volume": 5000,
+   "increase_percentage": 100,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "pltr stock",
+   "search_volume": 5000,
+   "increase_percentage": 400,
+   "categories": [
+    "Business and Finance"
+   ]
+  },
+  {
+   "query": "90 day blackout",
+   "search_volume": 5000,
+   "increase_percentage": 75,
+   "categories": [
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "south carolina women's basketball",
+   "search_volume": 5000,
+   "increase_percentage": 100,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "carson hocevar",
+   "search_volume": 5000,
+   "increase_percentage": 100,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "callum turner",
+   "search_volume": 5000,
+   "increase_percentage": 800,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "paris masters",
+   "search_volume": 5000,
+   "increase_percentage": 100,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "is election day a federal holiday",
+   "search_volume": 5000,
+   "increase_percentage": 75,
+   "categories": [
+    "Law and Government",
+    "Politics"
+   ]
+  },
+  {
+   "query": "xavier becerra",
+   "search_volume": 5000,
+   "increase_percentage": 75,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "sonja shaw",
+   "search_volume": 5000,
+   "increase_percentage": 50,
+   "categories": [
+    "Jobs and Education"
+   ]
+  },
+  {
+   "query": "vti",
+   "search_volume": 5000,
+   "increase_percentage": 50,
+   "categories": [
+    "Business and Finance"
+   ]
+  },
+  {
+   "query": "david schwimmer",
+   "search_volume": 2000,
+   "increase_percentage": 300,
+   "categories": [
+    "Entertainment"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,169 @@
+{
+ "date": "2026-11-02",
+ "ideas": [
+  {
+   "id": "2026-11-02-open-enrollment-2027-what-s-actually-different-abo",
+   "title": "Open enrollment 2027: what's actually different about ACA subsidies this year, and who pays more",
+   "created": "2026-11-02",
+   "route": "pitch",
+   "speed": "new",
+   "beat": "public health / insurance",
+   "angle": "Skip the generic explainer. Focus on the shoppers most exposed to the subsidy changes, such as people 50 to 64 not yet on Medicare, early retirees and the self-employed, and walk through how to compare plans when premiums vary by state and income.",
+   "why_now": "Open enrollment opened Nov 1, and NPR and KFF are both reporting subsidy changes that affect what shoppers pay. The newsroom tool reports health insurance search interest up 23% in 7 days. It's a hard deadline-driven window.",
+   "is_it_real": "Solid. The peg is a fixed federal calendar and the reporting comes from NPR and KFF. Per the integrity flag, dollar impacts vary by state and income, so no single nationwide premium figure should be stated. The 23% search figure comes from an upstream tool and is not verified here. This is separate from the routed medical-debt pitch, which only uses enrollment as a hook. The angle has to be sharper than the service pieces every outlet will run.",
+   "confidence": "medium",
+   "evidence": [
+    "https://www.npr.org/2026/11/01/nx-s1-6023423/aca-open-enrollment-health-insurance",
+    "https://www.kff.org/affordable-care-act/explaining-health-care-reform-questions-about-health-insurance-subsidies/"
+   ],
+   "terms": [
+    "aca open enrollment 2027 health insurance subsidy changes"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-11-02",
+     "event": "routed",
+     "detail": "pitch"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "ACA open enrollment 2027 — health insurance subsidy changes",
+     "speed": "new",
+     "first_seen": "2026-11-02",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-11-02",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 78,
+       "opportunity": 67
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-11-02-kids-e-bike-and-e-scooter-injuries-are-rising-shar",
+   "title": "Kids' e-bike and e-scooter injuries are rising sharply: what a new Stanford study found, and what parents should know before buying one for the holidays",
+   "created": "2026-11-02",
+   "route": "pitch",
+   "speed": "new",
+   "beat": "public health",
+   "angle": "Use the new Stanford Medicine data to ask what is driving the jump in youth injuries: speed classes, helmet use, age rules, or simply more kids riding. Pair it with a practical buyer's checklist timed to holiday gift season.",
+   "why_now": "The study was published Nov 2 with almost no coverage yet. Holiday shopping is about to put more e-bikes under trees.",
+   "is_it_real": "The study is real and comes from a Stanford Medicine release. The trend is backed by data, but the data is observational. Per the flag, injury counts should not be framed as causal or as per-rider risk unless the paper supports it. Exposure (how many more kids are riding) needs checking before saying riding has become more dangerous.",
+   "confidence": "medium",
+   "evidence": [
+    "https://med.stanford.edu/news/all-news/2026/11/electric-bike-accidents.html"
+   ],
+   "terms": [
+    "youth e bike and e scooter injuries rising sharply stanford study finds"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-11-02",
+     "event": "routed",
+     "detail": "pitch"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "Youth e-bike and e-scooter injuries rising sharply, Stanford study finds",
+     "speed": "new",
+     "first_seen": "2026-11-02",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-11-02",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 53,
+       "opportunity": 77
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-11-02-a-common-gut-virus-turns-out-to-infect-bacteria-no",
+   "title": "A common gut virus turns out to infect bacteria, not us: a 40-year mystery solved, and what it doesn't mean for your probiotic",
+   "created": "2026-11-02",
+   "route": "roundup",
+   "speed": "new",
+   "beat": "nutrition science",
+   "angle": "A short, fun science item: what the finding is (a virus long blamed as a human pathogen is actually a bacteriophage) and a sharp caveat that this changes nothing you should buy or do for gut health.",
+   "why_now": "WashU Medicine published the finding Nov 2, and there is little competing coverage.",
+   "is_it_real": "Solid as a basic-science finding from a university release. It is a mechanism discovery only, so the item must not imply any consumer gut-health action or product claim. It is too thin for a full pitch but good for a roundup take.",
+   "confidence": "medium",
+   "evidence": [
+    "https://medicine.washu.edu/news/40-year-mystery-solved-common-gut-virus-infects-bacteria-not-human-cells/"
+   ],
+   "terms": [
+    "common gut virus infects bacteria not human cells 40 year mystery solved"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-11-02",
+     "event": "routed",
+     "detail": "roundup"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "Common gut virus infects bacteria, not human cells — 40-year mystery solved",
+     "speed": "new",
+     "first_seen": "2026-11-02",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-11-02",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 52,
+       "opportunity": 78
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  }
+ ],
+ "dropped": 69,
+ "watching": 3,
+ "notes": "Correction to the drops list: the ACA, e-bike and gut-virus keys were placed in ideas and should not also appear in drops; treat the three 'not-selected' drop entries for them as void. The day is dominated by midterm voting navigation, sports, celebrity and a Florida jet crash, so the real material came from the newsroom pipeline: ACA subsidy changes, the Stanford e-bike study and the WashU gut-virus finding. Two health-adjacent terms are on watch: Lindsay Clancy (postpartum psychosis is in Meagan's lane, but there's no news context to say what happened) and FDA infant formula nutrition updates (rising four straight days with still no news peg). Men's Mental Health Month was passed over as an awareness-month hook carrying minor fact-check issues.",
+ "cost_usd": 0.2421
+}
