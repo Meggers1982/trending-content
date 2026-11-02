@@ -1,6 +1,26 @@
 {
- "updated": "2026-11-01",
+ "updated": "2026-11-02",
  "items": [
+  {
+   "id": "rd-2026-11-02-using-ai-at-work-cost-people-their-boss-s-trust-in",
+   "title": "Using AI at work cost people their boss's trust in a set of experiments, unless the company had openly encouraged it",
+   "created": "2026-11-02",
+   "angle": "The quick take: supervisors trusted AI-assisted work less than work people did themselves, though more than plagiarized work, and rated those employees lower on performance and promotability. The one thing that erased the penalty was a stated company policy encouraging AI use. Caveat in a clause: most of the studies were lab games, not real offices.",
+   "why_now": "Many workers use AI with no guidance from their employer, and whether to say so is a live question. A roundup doesn't need a peg, and this one has no honest peg for a pitch.",
+   "is_it_real": "Modest. Six studies in The Leadership Quarterly. Five are incentivized economic games, and the one field study involved only academic supervisors. Promotability is the supervisor's perception, not real promotion records. The online date is unverified and at least 33 days old, so a pitch would need a peg, and there isn't a solid one. That's why it goes to roundup.",
+   "evidence": [
+    "https://openalex.org/W7214926983",
+    "https://doi.org/10.1016/j.leaqua.2026.102004"
+   ],
+   "studies": [
+    {
+     "pmid": "W7214926983",
+     "journal": "The Leadership Quarterly",
+     "caveats": "Five of the six studies are incentivized economic games rather than real work decisions; the field study is confined to academic supervisors; downstream outcomes such as promotability are perceptions, not actual promotion records.",
+     "days_online": 33
+    }
+   ]
+  },
   {
    "id": "rd-2026-11-01-black-friday-trick-second-one-for-1-beats-second-o",
    "title": "Black Friday trick: 'second one for 1¢' beats 'second one free' with shoppers, but can make the main item seem worth less",
