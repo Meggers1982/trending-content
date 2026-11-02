@@ -3,6 +3,36 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-11-02'
+  niche: health and wellness
+  signals_reviewed: 153
+  topics_retained: 4
+  topics_rejected: 36
+  p1_count: 1
+  p2_count: 2
+  p3_count: 1
+  p4_count: 0
+  p5_count: 0
+  integrity_flags: 3
+  top_topic: ACA open enrollment 2027 — health insurance subsidy changes
+  key_themes:
+  - ACA open enrollment 2027 — health insurance subsidy changes
+  - Youth e-bike and e-scooter injuries rising sharply, Stanford study finds
+  - Common gut virus infects bacteria, not human cells — 40-year mystery solved
+  - Men's Mental Health Month (November) — what the data actually shows
+  tools_used:
+  - google_news
+  - google_trends
+  - serpapi
+  tools_unavailable:
+  - reddit_api
+  - social_search
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-11-02.html
+  estimated_cost_usd: 0.5565
+  notes: 'Recurring themes flagged: ''FDA recall'' and ''mental health'' clusters have appeared in 3+
+    consecutive runs. Recalls being correctly filtered as existing/stale. Site self-check skipped (no
+    site_url); competitor-list fallback used for SERP-gap context. One candidate (cannabis/cardiovascular
+    study) routed to Monitor pending primary-source confirmation.'
 - run_date: '2026-11-01'
   niche: Health & Wellness
   signals_reviewed: 144

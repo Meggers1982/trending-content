@@ -1,0 +1,338 @@
+{
+  "run_date": "2026-11-02",
+  "niche": "health and wellness",
+  "signal_summary": {
+    "total_reviewed": 153,
+    "total_retained": 4,
+    "total_rejected": 149,
+    "tools_active": [
+      "google_news",
+      "google_trends",
+      "serpapi"
+    ],
+    "tools_unavailable": [
+      "reddit_api",
+      "social_search"
+    ],
+    "notes": "Recurring themes flagged: 'FDA recall' and 'mental health' clusters have appeared in 3+ consecutive runs. Recalls being correctly filtered as existing/stale. Site self-check skipped (no site_url); competitor-list fallback used for SERP-gap context. One candidate (cannabis/cardiovascular study) routed to Monitor pending primary-source confirmation."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "ACA open enrollment 2027 — health insurance subsidy changes",
+      "primary_entity": "Affordable Care Act (ACA) open enrollment",
+      "signal_type": "policy_or_regulatory_change",
+      "allowed_category": "public health and epidemiology",
+      "trend_strength_score": 78,
+      "opportunity_score": 67,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 2,
+      "source_urls": [
+        "https://www.npr.org/2026/11/01/nx-s1-6023423/aca-open-enrollment-health-insurance",
+        "https://www.kff.org/affordable-care-act/explaining-health-care-reform-questions-about-health-insurance-subsidies/"
+      ],
+      "recommended_angle": "What's actually different this enrollment period — subsidy changes explained in plain terms, with real premium-impact numbers",
+      "why_now": "Open enrollment began Nov 1; NPR and KFF both report subsidy changes affecting shopper costs; 'health insurance' search interest up 23% in 7 days",
+      "primary_headline": "ACA Open Enrollment 2027: What the Subsidy Changes Actually Mean for Your Premium",
+      "next_steps": "Full brief build; pull healthcare.gov/KFF subsidy calculator data; confirm state-by-state variance",
+      "integrity_flags": [
+        "Subsidy dollar impacts vary by state/income — do not present a single nationwide figure"
+      ],
+      "trend_score_reason": "'health insurance' search interest +23% delta in 7 days; NPR + KFF tier-1 sources confirm subsidy policy shift",
+      "opportunity_score_reason": "Direct patient-impact framing; concrete premium-dollar relevance; passes borderline category bar per precedent",
+      "discover_score_reason": "Policy signal with immediate household-finance implications; high search-intent alignment",
+      "notes": "Borderline category — passes on patient-impact framing per category_rules example precedent (Ozempic shortage)",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "NPR 11/1 ACA open enrollment article + KFF subsidy explainer + Google Trends 'health insurance' +23%"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Youth e-bike and e-scooter injuries rising sharply, Stanford study finds",
+      "primary_entity": "Stanford Medicine e-bike/e-scooter injury study",
+      "signal_type": "study_or_research",
+      "allowed_category": "pediatric health",
+      "trend_strength_score": 53,
+      "opportunity_score": 77,
+      "discover_score": 5,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://med.stanford.edu/news/all-news/2026/11/electric-bike-accidents.html"
+      ],
+      "recommended_angle": "What's actually driving the spike — and what parents can do before buying a kid an e-bike",
+      "why_now": "Stanford Medicine-led study published today (11/2); essentially zero other coverage yet — strong SERP gap",
+      "primary_headline": "E-Bike and E-Scooter Injuries in Kids Are Rising Fast, Stanford Study Finds",
+      "next_steps": "Locate underlying journal publication/DOI for citation; identify pediatric ER physician for commentary",
+      "integrity_flags": [
+        "Confirm observational vs. causal framing before stating injury-rate causation"
+      ],
+      "trend_score_reason": "Single-source institutional signal; published today with minimal SERP coverage; pediatric health category momentum",
+      "opportunity_score_reason": "Strong SERP gap; durable parenting-focused angle; media-ready institutional source",
+      "discover_score_reason": "High discoverability potential — timely institutional research with no competing coverage yet",
+      "notes": "Single-source confidence cap (medium) until second outlet or journal citation confirms; underlying journal citation to verify before publish",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Stanford Medicine 11/2 article on youth e-bike/e-scooter injuries"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Common gut virus infects bacteria, not human cells — 40-year mystery solved",
+      "primary_entity": "WashU Medicine gut virus / bacteriophage study",
+      "signal_type": "study_or_research",
+      "allowed_category": "gut health and microbiome",
+      "trend_strength_score": 52,
+      "opportunity_score": 78,
+      "discover_score": 5,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://medicine.washu.edu/news/40-year-mystery-solved-common-gut-virus-infects-bacteria-not-human-cells/"
+      ],
+      "recommended_angle": "What this 40-year scientific mystery means for gut-health claims you've heard — explainer on virus vs. bacteriophage distinction",
+      "why_now": "WashU Medicine published today; gut-health search interest up 8% in 7 days; essentially no competing coverage yet",
+      "primary_headline": "Scientists Just Solved a 40-Year Gut Health Mystery — Here's What It Means",
+      "next_steps": "Confirm peer-reviewed journal/DOI; identify gastroenterologist or microbiome researcher for context quote",
+      "integrity_flags": [
+        "Mechanism discovery only — do not imply a new consumer gut-health action or product claim"
+      ],
+      "trend_score_reason": "Tier-1 institutional source published today; gut-health category momentum +8% delta; minimal SERP saturation",
+      "opportunity_score_reason": "High durable explainer potential; specific named entity; thin competitive coverage; microbiome category momentum",
+      "discover_score_reason": "Exceptional discoverability — named scientific breakthrough, institutional credibility, zero other major coverage",
+      "notes": "High Discover potential — specific named entity, durable science explainer, thin SERP; underlying journal citation to confirm before publish",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "WashU Medicine article on gut virus/bacteriophage study + Google Trends 'gut health' +8%"
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Men's Mental Health Month (November) — what the data actually shows",
+      "primary_entity": "Men's Mental Health Awareness Month",
+      "signal_type": "seasonal_trend",
+      "allowed_category": "mental health and psychology",
+      "trend_strength_score": 66,
+      "opportunity_score": 76,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 2,
+      "source_urls": [
+        "https://www.cdc.gov/mental-health/about-data/emergency-department-visits.html",
+        "https://www.nytimes.com/2026/10/28/well/mind/mental-health-annual-checkup.html"
+      ],
+      "recommended_angle": "Use CDC mental-health ED-visit data to ground the awareness-month conversation in actual numbers, not platitudes",
+      "why_now": "November observance just started; 'mental health' search interest up 17% in 7 days; CDC released new ED-visit data 10/29",
+      "primary_headline": "What the Data Actually Shows About Men's Mental Health This November",
+      "next_steps": "Pull CDC ED-visit dataset; identify male-focused mental-health clinician for quote",
+      "integrity_flags": [],
+      "trend_score_reason": "Seasonal signal confirmed by 'mental health' search interest +17% delta in 7 days; CDC data release 10/29; NYT coverage validation",
+      "opportunity_score_reason": "Differentiation through data angle rather than generic awareness messaging; strong audience relevance; high confidence editorial",
+      "discover_score_reason": "Seasonal relevance limits novelty score; data-driven framing enhances value but competes in saturated seasonal space",
+      "notes": "Competitive seasonal space — differentiation must come from CDC data angle, not generic awareness messaging",
+      "fact_check": {
+        "verdict": "minor_issues",
+        "issues": [
+          "The cited CDC emergency-department visit data and NYT checkup article are general mental-health sources, not specifically broken down by gender or targeted at men's mental health, so framing them as grounding a 'men's mental health' data story is a stretch not confirmed by the evidence."
+        ],
+        "checked_against": "CDC Mental Health-Related ED Visits page + NYT mental health checkup article + Google Trends 'mental health' +17% and related 'men's mental health month' queries"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "DST/circadian-cardiovascular health",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Oura-UCSD GLP-1 wearable trial",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Pew Research AI-healthcare survey",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Dementia/social-activity study",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "HHS wellness-peptide enforcement easing",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Tractor Wheels recall",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Impella recall",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Flour/cinnamon recall",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Miyoko's butter recall",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Walmart fruit cocktail recall",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "H-E-B salad kit recall",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Haifa Smoked Fish sprats advisory",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Cancer immunotherapy 'promising trial results'",
+      "reason": "unverified_claim"
+    },
+    {
+      "topic": "Michigan Medicine 'diabetes wonder drug'",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Walmart/Care Access trial-center expansion",
+      "reason": "off_category"
+    },
+    {
+      "topic": "BCBSMA-Medzown partnership",
+      "reason": "off_category"
+    },
+    {
+      "topic": "AI-in-clinical-trials commentary",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Anthropic drug-development AI research",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Reuters chocolate-makers/Halloween shoppers story",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Fort McCoy wellness fair",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Pet-insurance wellness coverage",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Kirk Cousins 'wellness-celly'",
+      "reason": "brand_safety"
+    },
+    {
+      "topic": "Wellness tokens",
+      "reason": "off_category"
+    },
+    {
+      "topic": "University wellness profiles",
+      "reason": "off_category"
+    },
+    {
+      "topic": "PwC wellness report",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Benefits fair announcements",
+      "reason": "off_category"
+    },
+    {
+      "topic": "NOAA whale health landing page",
+      "reason": "other"
+    },
+    {
+      "topic": "USDA screwworm reference page",
+      "reason": "other"
+    },
+    {
+      "topic": "Tennessee respiratory health page",
+      "reason": "other"
+    },
+    {
+      "topic": "Virginia Department of Health public page",
+      "reason": "other"
+    },
+    {
+      "topic": "APHA summit information page",
+      "reason": "other"
+    },
+    {
+      "topic": "Jefferson County forest management page",
+      "reason": "other"
+    },
+    {
+      "topic": "CASRAI recall-coordinator guide",
+      "reason": "other"
+    },
+    {
+      "topic": "ESPN Wilbon health leave announcement",
+      "reason": "brand_safety"
+    },
+    {
+      "topic": "Nature agentic AI for adverse-event detection",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Medical Xpress AI discharge summaries",
+      "reason": "weak_signal"
+    }
+  ],
+  "fact_check_summary": {
+    "accurate": 3,
+    "minor_issues": 1
+  },
+  "run_cost": {
+    "total_usd": 0.5565,
+    "calls": [
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11433,
+        "output_tokens": 18524,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 44594,
+        "estimated_cost_usd": 0.4794
+      },
+      {
+        "model": "claude-haiku-4-5",
+        "input_tokens": 7856,
+        "output_tokens": 2414,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0199
+      },
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11061,
+        "output_tokens": 1602,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0572
+      }
+    ]
+  }
+}
