@@ -923,6 +923,96 @@
    "judged_on": "2026-11-01",
    "status": "dropped",
    "reason": "off-beat"
+  },
+  "aw-medicaid-s-transportation-benefit-and-the-people-who-use-it": {
+   "judged_on": "2026-11-02",
+   "status": "kept",
+   "idea": "nd-2026-11-02-the-fraud-crackdown-is-coming-for-medicaid-s-rides"
+  },
+  "aw-supplemental-security-income-ssi-resources": {
+   "judged_on": "2026-11-02",
+   "status": "dropped",
+   "reason": "too-thin"
+  },
+  "press-equinox-names-brendan-whitworth-ceo-and-lines-up-more-than-1": {
+   "judged_on": "2026-11-02",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-ufc-gym-opens-new-murfreesboro-tennessee-location": {
+   "judged_on": "2026-11-02",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-sirolimus-coated-balloon-matches-drug-eluting-stents-at-one": {
+   "judged_on": "2026-11-02",
+   "status": "dropped",
+   "reason": "no-reader-stake"
+  },
+  "press-2026-international-conference-on-women-s-and-children-s-heal": {
+   "judged_on": "2026-11-02",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-aca-open-enrollment-for-2027-opens-with-new-plans-and-new-fe": {
+   "judged_on": "2026-11-02",
+   "status": "dropped",
+   "reason": "already-covered"
+  },
+  "press-how-to-choose-a-primary-care-provider-according-to-a-healthc": {
+   "judged_on": "2026-11-02",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-erickson-senior-living-opens-oxford-hills-sales-center-in-ma": {
+   "judged_on": "2026-11-02",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-belmont-village-senior-living-ranks-no-11-on-fortune-s-best": {
+   "judged_on": "2026-11-02",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-real-estate-experts-break-down-the-emotional-and-financial-m": {
+   "judged_on": "2026-11-02",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-roofing-expert-explains-how-snow-and-ice-loads-damage-roofs": {
+   "judged_on": "2026-11-02",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-pg-e-offers-free-in-home-gas-appliance-safety-checks-and-pil": {
+   "judged_on": "2026-11-02",
+   "status": "dropped",
+   "reason": "no-reader-stake"
+  },
+  "press-consumer-watchdog-accuses-pg-e-of-bailout-blackmail-over-2-b": {
+   "judged_on": "2026-11-02",
+   "status": "dropped",
+   "reason": "off-beat"
+  },
+  "press-sonesta-and-boyd-gaming-strike-exclusive-loyalty-and-distrib": {
+   "judged_on": "2026-11-02",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-infinix-opens-first-flagship-concept-store-in-bali-blending": {
+   "judged_on": "2026-11-02",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-freelander-accelerates-middle-east-rollout-and-picks-morocco": {
+   "judged_on": "2026-11-02",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-christmas-wonderland-returns-to-miami-s-tropical-park-with-a": {
+   "judged_on": "2026-11-02",
+   "status": "dropped",
+   "reason": "off-beat"
   }
  },
  "ideas": {
@@ -2059,6 +2149,50 @@
    ],
    "term_details": [],
    "status": "routed"
+  },
+  "nd-2026-11-02-the-fraud-crackdown-is-coming-for-medicaid-s-rides": {
+   "desk": "news",
+   "title": "The fraud crackdown is coming for Medicaid's rides to dialysis: who actually uses non-emergency medical transportation, and what a House bill to GPS-track trips would mean for them",
+   "created": "2026-11-02",
+   "route": "pitch",
+   "speed": "released 0 days ago",
+   "beat": "Medicaid / aging and disability / public health policy",
+   "angle": "Washington has named Medicaid's non-emergency medical transportation (NEMT) benefit a fraud hot spot. KFF's analysis of 2024 claims shows who would bear the cost of a crackdown: 58% of riders qualify through age 65+ or disability (vs. 23% of all enrollees), 39% are on both Medicare and Medicaid, 85% have a chronic condition, and dialysis centers are among the top trip destinations. The benefit costs $4.65B a year, under 1% of Medicaid spending. The story weighs documented fraud against what extra verification does to people who need three dialysis trips a week, and looks at the capitated brokers that already have an incentive to turn down rides.",
+   "why_now": "KFF published Nov 2. In September 2026 a House Energy and Commerce majority staff report said NEMT has 'high rates of fraud', and committee Republicans introduced the STOP Medicaid Fraud Act, which would extend electronic visit verification to NEMT trips. KFF also cites CMS letters to CA, NY and MN flagging NEMT as high-risk. Medicaid work requirements begin in two months, so there is a wider program-integrity clock.",
+   "is_it_real": "Independent KFF analysis of T-MSIS 2024 data. I checked the figures on the KFF page (58%/23%, 39%/14% dual-eligible, 85%/36% chronic conditions, 7%/1% CKD among non-Medicare enrollees, $4.65B, delivery models across 19/12/30 states). The fraud claims come from a partisan committee staff report and CMS letters, so they are assertions to test, not facts. KFF does not report what share of all enrollees use NEMT. I have not independently confirmed the bill's status or the CMS letters' dates.",
+   "primary_test": "KFF NEMT brief (T-MSIS 2024); House Energy and Commerce majority staff report (Sept 2026) and STOP Medicaid Fraud Act bill text on congress.gov; CMS high-risk letters to CA/NY/MN; HHS provider-level Medicaid spending dataset (Feb 2026); prior HHS-OIG NEMT audits",
+   "standout": false,
+   "standout_reason": "",
+   "needs_independent_test": false,
+   "other_peg": "STOP Medicaid Fraud Act (Sept 2026) proposing electronic visit verification for NEMT trips; CMS high-risk designation letters",
+   "audience": "older adults",
+   "evidence_strength": "strong",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "keys": [
+    "aw-medicaid-s-transportation-benefit-and-the-people-who-use-it"
+   ],
+   "items": [
+    {
+     "key": "aw-medicaid-s-transportation-benefit-and-the-people-who-use-it",
+     "kind": "analysis",
+     "interested_party": false,
+     "title": "Medicaid’s Transportation Benefit and the People Who Use It",
+     "publisher": "kff-feed",
+     "url": "https://www.kff.org/medicaid/medicaids-transportation-benefit-and-the-people-who-use-it/",
+     "released": "2026-11-02",
+     "date_basis": "source date",
+     "days_old": 0,
+     "source": "AgingWire",
+     "summary": "Medicaid's non-emergency medical transportation (NEMT) benefit helps low-income enrollees get to care and accounts for less than 1% of Medicaid spending. Amid the current administration's focus on Medicaid fraud, this brief examines how states administer NEMT, what Medicaid spends on the program, and who uses it."
+    }
+   ],
+   "evidence": [
+    "https://www.kff.org/medicaid/medicaids-transportation-benefit-and-the-people-who-use-it/"
+   ],
+   "term_details": [],
+   "status": "routed"
   }
  },
  "runs": [
@@ -2264,6 +2398,33 @@
     "corporate-only": 14,
     "watch": 1,
     "off-beat": 1
+   }
+  },
+  {
+   "date": "2026-11-02",
+   "items": 180,
+   "candidates": 18,
+   "skipped": {
+    "already judged": 72,
+    "taken elsewhere": 4,
+    "older": 86,
+    "noise": 0
+   },
+   "sources": {
+    "news": "2026-11-02",
+    "agingwire": "2026-11-02"
+   },
+   "model": "opus",
+   "ideas": 1,
+   "routes": {
+    "pitch": 1
+   },
+   "dropped": {
+    "too-thin": 1,
+    "corporate-only": 11,
+    "no-reader-stake": 2,
+    "already-covered": 1,
+    "off-beat": 2
    }
   }
  ],
