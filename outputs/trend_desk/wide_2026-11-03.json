@@ -1,0 +1,639 @@
+{
+ "run_date": "2026-11-03",
+ "geo": "US",
+ "items": [
+  {
+   "query": "midterm elections results",
+   "search_volume": 500000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics"
+   ],
+   "news": [
+    {
+     "title": "2026 Midterm Elections Live Updates: Voters Head to the Polls to Decide Control of Congress",
+     "link": "https://www.nytimes.com/live/2026/11/03/us/midterms-2026-election-day-trump",
+     "source": "The New York Times"
+    },
+    {
+     "title": "US midterm election: How it works, why it's important and races to watch",
+     "link": "https://www.dw.com/en/us-midterm-election-why-its-important-and-races-to-watch/a-79789932",
+     "source": "DW.com"
+    }
+   ]
+  },
+  {
+   "query": "adam robinson",
+   "search_volume": 500000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Other"
+   ],
+   "news": [
+    {
+     "title": "The Final Seconds Before a Learjet Plunged Into a Florida Street",
+     "link": "https://www.wsj.com/us-news/the-final-seconds-before-a-learjet-plunged-into-a-florida-street-315b0c97",
+     "source": "WSJ"
+    },
+    {
+     "title": "Pilot in Learjet crash that killed 9 in Florida was a husband, father and a devout Christian",
+     "link": "https://apnews.com/article/florida-learjet-ntsb-plane-crash-crater-greenacres-13ef25e011bcf5762005838726ee05bf",
+     "source": "AP News"
+    }
+   ]
+  },
+  {
+   "query": "rhabdomyolysis",
+   "search_volume": 200000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Other"
+   ],
+   "news": [
+    {
+     "title": "Runner, 24, Dies During Her First Marathon",
+     "link": "https://www.nytimes.com/2026/11/02/nyregion/marathon-runner-dies-rachel-apa.html",
+     "source": "The New York Times"
+    },
+    {
+     "title": "N.Y.C. Marathon Runner, 24, Told Her Dad She ‘Never Felt This Good’ a Few Hours Before Sudden Collapse",
+     "link": "https://people.com/what-nyc-marathon-runner-rachel-apa-told-her-dad-shortly-before-sudden-collapse-12217716",
+     "source": "People.com"
+    }
+   ]
+  },
+  {
+   "query": "olmesartan",
+   "search_volume": 200000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Health"
+   ],
+   "news": [
+    {
+     "title": "Thousands of blood pressure medication bottles recalled nationwide after pills fail quality test",
+     "link": "https://www.foxbusiness.com/lifestyle/thousands-blood-pressure-medication-bottles-recalled-nationwide-pills-fail-quality-test",
+     "source": "Fox Business"
+    },
+    {
+     "title": "Blood pressure medication recalled as it may be ineffective, FDA says",
+     "link": "https://www.king5.com/article/news/nation-world/blood-pressure-medication-recalled-olmesartan-medoxomil-amlodipine-hydrochlorothiazide/507-8f431ffb-301b-42a1-9064-9d09c86215be",
+     "source": "KING5.com"
+    }
+   ]
+  },
+  {
+   "query": "tornado warning",
+   "search_volume": 200000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Climate"
+   ],
+   "news": [
+    {
+     "title": "Tornado watch issued for several Oklahoma counties Monday evening",
+     "link": "https://okcfox.com/news/local/tornado-watch-issued-for-several-oklahoma-counties-monday-evening",
+     "source": "KOKH"
+    },
+    {
+     "title": "Waves of Storms likely Monday. Severe Storms likely, some see heavy rainfall.",
+     "link": "https://kfor.com/weather/waves-of-storms-likely-monday-severe-storms-likely-some-see-heavy-rainfall/",
+     "source": "KFOR"
+    }
+   ]
+  },
+  {
+   "query": "jesus de miguel",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Spanish soccer player Jesús de Miguel dies after on-pitch collision",
+     "link": "https://www.cnn.com/2026/11/03/sport/jesus-de-miguel-spain-dies-after-on-pitch-collision",
+     "source": "CNN"
+    },
+    {
+     "title": "Spanish police investigating after soccer player dies following on-field collision",
+     "link": "https://www.seattletimes.com/nation-world/spanish-police-investigating-after-soccer-player-dies-after-on-field-collision/",
+     "source": "The Seattle Times"
+    }
+   ]
+  },
+  {
+   "query": "singer",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Entertainment"
+   ],
+   "news": [
+    {
+     "title": "Country Singer Nicole Taylor Dies at 35 After Being Diagnosed with Terminal Cancer, Her Triplet Sisters Reveal",
+     "link": "https://people.com/taylor-red-singer-nicole-taylor-dies-at-35-after-cancer-diagnosis-her-triplet-sisters-announce-12209162",
+     "source": "People.com"
+    },
+    {
+     "title": "Nicole Taylor of country music trio Taylor Red dies at 35",
+     "link": "https://www.nbcnews.com/news/us-news/nicole-taylor-country-music-trio-taylor-red-dies-35-rcna607222",
+     "source": "NBC News"
+    }
+   ]
+  },
+  {
+   "query": "voting results",
+   "search_volume": 100000,
+   "increase_percentage": 700,
+   "categories": [
+    "Politics"
+   ],
+   "news": [
+    {
+     "title": "U.S. Senate Midterm Election Live Results 2026",
+     "link": "https://www.nbcnews.com/politics/2026-elections/senate-results",
+     "source": "NBC News"
+    },
+    {
+     "title": "Here Are the 11 Senate races to Watch on Election Day",
+     "link": "https://www.nytimes.com/2026/11/03/us/11-senate-races-to-watch.html",
+     "source": "The New York Times"
+    }
+   ]
+  },
+  {
+   "query": "what do i need to bring to vote",
+   "search_volume": 100000,
+   "increase_percentage": 600,
+   "categories": [
+    "Politics"
+   ],
+   "news": [
+    {
+     "title": "What you need to know about Tuesday's election",
+     "link": "https://www.channel3000.com/news/what-you-need-to-know-about-tuesdays-election/article_a032d894-ad2f-40ec-bdf1-0a0fc5d35dd9.html",
+     "source": "Channel 3000"
+    },
+    {
+     "title": "Election results for Wisconsin state Senate and Assembly",
+     "link": "https://www.jsonline.com/story/news/politics/elections/2026/11/03/election-results-for-wisconsin-state-senate-and-assembly/92501587007/",
+     "source": "Milwaukee Journal Sentinel"
+    }
+   ]
+  },
+  {
+   "query": "texas senate race",
+   "search_volume": 100000,
+   "increase_percentage": 200,
+   "categories": [
+    "Politics"
+   ],
+   "news": [
+    {
+     "title": "Texas U.S. Senate Midterm Election 2026: Live Results",
+     "link": "https://www.nbcnews.com/politics/2026-elections/texas-senate-results",
+     "source": "NBC News"
+    },
+    {
+     "title": "Video: Can Democrats Flip Texas?",
+     "link": "https://www.nytimes.com/video/us/politics/100000011237962/can-democrats-flip-texas.html",
+     "source": "The New York Times"
+    }
+   ]
+  },
+  {
+   "query": "cnn",
+   "search_volume": 100000,
+   "increase_percentage": 75,
+   "categories": [
+    "Politics"
+   ],
+   "news": [
+    {
+     "title": "Ballot counting issues reported in key New York swing district as midterm polls open across America",
+     "link": "https://edition.cnn.com/2026/11/03/politics/live-news/midterm-election-congress",
+     "source": "CNN"
+    },
+    {
+     "title": "WATCH LIVE: Westchester County Executive Ken Jenkins provides update on voting issues",
+     "link": "https://www.foxnews.com/video/6407855092112",
+     "source": "Fox News"
+    }
+   ]
+  },
+  {
+   "query": "heat vs lakers",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ],
+   "news": [
+    {
+     "title": "Luka scores 42 points, earns high praise from Giannis as hot streak continues",
+     "link": "https://www.espn.com/nba/story/_/id/50366831/luka-doncic-earns-praise-giannis-antetokounmpo-hot-streak-continues-lakers-win-vs-heat",
+     "source": "ESPN"
+    },
+    {
+     "title": "Luka Dončić is off to a spectacular offensive start for the Lakers",
+     "link": "https://www.nba.com/news/luka-doncic-off-to-great-offensive-start",
+     "source": "NBA.com"
+    }
+   ]
+  },
+  {
+   "query": "dónde votar",
+   "search_volume": 50000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "what time does voting close",
+   "search_volume": 50000,
+   "increase_percentage": 500,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "nicolas cage",
+   "search_volume": 50000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "voting locations near me",
+   "search_volume": 50000,
+   "increase_percentage": 400,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "msc poesia miami coast guard",
+   "search_volume": 50000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "where do i vote today",
+   "search_volume": 50000,
+   "increase_percentage": 500,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "talarico vs paxton polls",
+   "search_volume": 50000,
+   "increase_percentage": 100,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "whats on my ballot 2026",
+   "search_volume": 50000,
+   "increase_percentage": 300,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "ellen degeneres",
+   "search_volume": 50000,
+   "increase_percentage": 300,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "china tape maker stock debut",
+   "search_volume": 20000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Business and Finance"
+   ]
+  },
+  {
+   "query": "elder scrolls 6",
+   "search_volume": 20000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Games"
+   ]
+  },
+  {
+   "query": "can you vote online",
+   "search_volume": 20000,
+   "increase_percentage": 200,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "what are we voting for today",
+   "search_volume": 20000,
+   "increase_percentage": 700,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "kelly clarkson show emmy awards",
+   "search_volume": 20000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "texas governor race",
+   "search_volume": 20000,
+   "increase_percentage": 100,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "can i vote online",
+   "search_volume": 20000,
+   "increase_percentage": 200,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "my voting location",
+   "search_volume": 20000,
+   "increase_percentage": 300,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "paris jackson",
+   "search_volume": 20000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Entertainment",
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "michael letasky montana elk poaching",
+   "search_volume": 20000,
+   "increase_percentage": 800,
+   "categories": [
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "jesús de miguel",
+   "search_volume": 20000,
+   "increase_percentage": 300,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "byron donalds",
+   "search_volume": 20000,
+   "increase_percentage": 200,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "polling place",
+   "search_volume": 20000,
+   "increase_percentage": 300,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "kalshi",
+   "search_volume": 20000,
+   "increase_percentage": 75,
+   "categories": [
+    "Other"
+   ]
+  },
+  {
+   "query": "how late are polls open",
+   "search_volume": 20000,
+   "increase_percentage": 200,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "is the post office open on election day",
+   "search_volume": 20000,
+   "increase_percentage": 200,
+   "categories": [
+    "Politics",
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "marcus spears jr",
+   "search_volume": 20000,
+   "increase_percentage": 400,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "arizona basketball",
+   "search_volume": 20000,
+   "increase_percentage": 400,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "can i vote anywhere in my state",
+   "search_volume": 20000,
+   "increase_percentage": 100,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "galatasaray vs vfb stuttgart",
+   "search_volume": 10000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "how to vote",
+   "search_volume": 10000,
+   "increase_percentage": 200,
+   "categories": [
+    "Politics",
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "texas polls",
+   "search_volume": 10000,
+   "increase_percentage": 200,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "michigan election",
+   "search_volume": 10000,
+   "increase_percentage": 100,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "exit polls",
+   "search_volume": 10000,
+   "increase_percentage": 400,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "where to vote in dc",
+   "search_volume": 10000,
+   "increase_percentage": 400,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "tony butala",
+   "search_volume": 10000,
+   "increase_percentage": 600,
+   "categories": [
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "vote near me",
+   "search_volume": 10000,
+   "increase_percentage": 200,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "national sandwich day",
+   "search_volume": 10000,
+   "increase_percentage": 200,
+   "categories": [
+    "Food and Drink"
+   ]
+  },
+  {
+   "query": "social security payments",
+   "search_volume": 10000,
+   "increase_percentage": 500,
+   "categories": [
+    "Business and Finance",
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "disneyland paris ride closing 2027",
+   "search_volume": 10000,
+   "increase_percentage": 500,
+   "categories": [
+    "Travel and Transportation",
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "playstation store black friday 2026",
+   "search_volume": 10000,
+   "increase_percentage": 200,
+   "categories": [
+    "Games",
+    "Technology",
+    "Shopping"
+   ]
+  },
+  {
+   "query": "msnow",
+   "search_volume": 10000,
+   "increase_percentage": 100,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "mario morales ice agent",
+   "search_volume": 10000,
+   "increase_percentage": 300,
+   "categories": [
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "msnbc",
+   "search_volume": 10000,
+   "increase_percentage": 75,
+   "categories": [
+    "Entertainment",
+    "Politics"
+   ]
+  },
+  {
+   "query": "voyager 1",
+   "search_volume": 10000,
+   "increase_percentage": 200,
+   "categories": [
+    "Science",
+    "Business and Finance"
+   ]
+  },
+  {
+   "query": "midterm elections live map",
+   "search_volume": 10000,
+   "increase_percentage": 200,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "what do i need to vote",
+   "search_volume": 10000,
+   "increase_percentage": 200,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "ohio election results",
+   "search_volume": 10000,
+   "increase_percentage": 100,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "freighter sinks off bulgarian coast",
+   "search_volume": 10000,
+   "increase_percentage": 300,
+   "categories": [
+    "Law and Government"
+   ]
+  }
+ ]
+}

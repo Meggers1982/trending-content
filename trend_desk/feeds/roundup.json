@@ -1,6 +1,76 @@
 {
- "updated": "2026-11-02",
+ "updated": "2026-11-03",
  "items": [
+  {
+   "id": "2026-11-03-a-24-year-old-dies-after-her-first-nyc-marathon-an",
+   "title": "A 24-year-old dies after her first NYC Marathon, and 'rhabdomyolysis' spikes: what exertional rhabdo is and how rare marathon deaths really are",
+   "created": "2026-11-03",
+   "angle": "Explain exertional rhabdomyolysis: what it is, warning signs (dark urine, severe muscle pain, weakness), and why first-timers are at higher risk. Put marathon death rates in context without speculating about this runner's case.",
+   "why_now": "Rhabdomyolysis became a breakout search the day after the NYC Marathon death of Rachel Apa, 24, covered by the NYT and People.",
+   "is_it_real": "The search spike is real and clearly tied to the marathon death. The input does not confirm that rhabdo caused her death. The item must attribute any cause to official reports or say it is unconfirmed. Marathon mortality figures must come from published research, not memory.",
+   "evidence": [
+    "https://www.nytimes.com/2026/11/02/nyregion/marathon-runner-dies-rachel-apa.html",
+    "https://people.com/what-nyc-marathon-runner-rachel-apa-told-her-dad-shortly-before-sudden-collapse-12217716"
+   ],
+   "terms": [
+    "rhabdomyolysis"
+   ],
+   "status": "routed"
+  },
+  {
+   "id": "2026-11-03-new-york-records-its-first-measles-death-in-30-yea",
+   "title": "New York records its first measles death in 30 years: what we know, and why measles still kills",
+   "created": "2026-11-03",
+   "angle": "A short, factual item on the New York death and the public health response. Explain how measles kills (pneumonia, encephalitis) and how often, and link back to the SSPE pitch for the long tail.",
+   "why_now": "Breakout news this week, reported as New York State's first measles fatality in three decades.",
+   "is_it_real": "Plausible, but the upstream angle claims this is the first U.S. measles death in 30 years. That is wrong: the U.S. recorded measles deaths in 2025. The claim must be scoped to New York State, and the only source in the input is a NYT homepage link, so the specific report needs to be located before writing. Keep it to factual reporting, not vaccine-debate framing.",
+   "evidence": [],
+   "terms": [
+    "Measles death — New York State's first fatal case in 30 years"
+   ],
+   "status": "routed"
+  },
+  {
+   "id": "2026-11-03-beyond-cte-retired-nfl-linemen-show-a-high-risk-of",
+   "title": "Beyond CTE: retired NFL linemen show a high risk of artery plaque",
+   "created": "2026-11-03",
+   "angle": "A follow-up to last week's CTE-number item. The lineman finding points to a body-size and cardiometabolic risk that gets less attention than brain injury. Note what an observational study of one position group can and can't tell us.",
+   "why_now": "Fresh study promoted by the AHA newsroom, landing days after the CTE item ran.",
+   "is_it_real": "The source is solid (AHA newsroom). The study is observational and specific to linemen, so the item must not generalize to all players or the public. The upstream fact check flagged minor issues, so the item's numbers must be checked against the study itself.",
+   "evidence": [
+    "https://newsroom.heart.org/news/retired-nfl-players-notably-linemen-had-high-risk-of-artery-plaque-per-independent-study"
+   ],
+   "terms": [
+    "Retired NFL linemen show high risk of arterial plaque — independent AHA-linked study"
+   ],
+   "status": "routed"
+  },
+  {
+   "id": "2026-11-03-whole-foods-ashwagandha-capsules-recalled-what-s-a",
+   "title": "Whole Foods ashwagandha capsules recalled: what's affected and what to check",
+   "created": "2026-11-03",
+   "angle": "A quick check-your-cabinet recall item. Ashwagandha is heavily marketed to women for stress and sleep, so this is a chance to note how lightly supplements are regulated compared with drugs.",
+   "why_now": "Breakout search on the nutrition radar this week.",
+   "is_it_real": "The search signal is strong, but the input has no news link or FDA notice. The recall, the product, and the reason for it must all be confirmed on FDA.gov before this runs. If it can't be confirmed, kill it.",
+   "evidence": [],
+   "terms": [
+    "whole foods ashwagandha capsules recall"
+   ],
+   "status": "routed"
+  },
+  {
+   "id": "2026-11-03-fda-s-infant-formula-nutrition-update-what-s-chang",
+   "title": "FDA's infant formula nutrition update: what's changing in what babies are fed",
+   "created": "2026-11-03",
+   "angle": "A short explainer on what the FDA's formula nutrient update actually changes, if anything, and what parents should and shouldn't do differently.",
+   "why_now": "Rising every day since Oct 30 after being held on watch, which suggests a real FDA action is driving searches.",
+   "is_it_real": "The rising-search pattern holds across five straight days, but the input has no news link, so the specific FDA action must be identified before writing. If it's only a review or request for comment, frame it that way. Never present it as a finalized rule unless it is one.",
+   "evidence": [],
+   "terms": [
+    "fda infant formula nutrition updates"
+   ],
+   "status": "routed"
+  },
   {
    "id": "2026-11-02-a-common-gut-virus-turns-out-to-infect-bacteria-no",
    "title": "A common gut virus turns out to infect bacteria, not us: a 40-year mystery solved, and what it doesn't mean for your probiotic",
@@ -25,7 +95,9 @@
    "is_it_real": "Search spike only; no news context or source came with it. The manufacturer, lot numbers, recall class and reason must be confirmed in FDA enforcement reports before writing. If no current recall exists, drop it.",
    "evidence": [],
    "terms": [
-    "amlodipine recall"
+    "amlodipine recall",
+    "Nationwide olmesartan (blood pressure medication) recall — pills failed quality test",
+    "olmesartan"
    ],
    "status": "routed"
   },
@@ -100,7 +172,8 @@
     "https://www.news-medical.net/news/20261025/Beer-wine-or-spirits-A-large-study-finds-different-mortality-patterns-for-each.aspx"
    ],
    "terms": [
-    "Beer vs. wine vs. spirits — large study finds different mortality patterns by alcohol type"
+    "Beer vs. wine vs. spirits — large study finds different mortality patterns by alcohol type",
+    "Even moderate drinking linked to cancer and early death — new study"
    ],
    "status": "routed"
   },

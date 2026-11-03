@@ -1,0 +1,443 @@
+{
+ "date": "2026-11-03",
+ "ideas": [
+  {
+   "id": "2026-11-03-a-24-year-old-dies-after-her-first-nyc-marathon-an",
+   "title": "A 24-year-old dies after her first NYC Marathon, and 'rhabdomyolysis' spikes: what exertional rhabdo is and how rare marathon deaths really are",
+   "created": "2026-11-03",
+   "route": "roundup",
+   "speed": "exploding",
+   "beat": "aging, body and metabolism / fitness",
+   "angle": "Explain exertional rhabdomyolysis: what it is, warning signs (dark urine, severe muscle pain, weakness), and why first-timers are at higher risk. Put marathon death rates in context without speculating about this runner's case.",
+   "why_now": "Rhabdomyolysis became a breakout search the day after the NYC Marathon death of Rachel Apa, 24, covered by the NYT and People.",
+   "is_it_real": "The search spike is real and clearly tied to the marathon death. The input does not confirm that rhabdo caused her death. The item must attribute any cause to official reports or say it is unconfirmed. Marathon mortality figures must come from published research, not memory.",
+   "confidence": "medium",
+   "evidence": [
+    "https://www.nytimes.com/2026/11/02/nyregion/marathon-runner-dies-rachel-apa.html",
+    "https://people.com/what-nyc-marathon-runner-rachel-apa-told-her-dad-shortly-before-sudden-collapse-12217716"
+   ],
+   "terms": [
+    "rhabdomyolysis"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-11-03",
+     "event": "routed",
+     "detail": "roundup"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "rhabdomyolysis",
+     "speed": "exploding",
+     "first_seen": "2026-11-03",
+     "weeks_seen": 1,
+     "sources": [
+      "wide"
+     ],
+     "profiles": [
+      "trending-now"
+     ],
+     "recent": [
+      {
+       "date": "2026-11-03",
+       "source": "wide",
+       "profile": "trending-now",
+       "stage": "breakout",
+       "score": 200000
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-11-03-new-york-records-its-first-measles-death-in-30-yea",
+   "title": "New York records its first measles death in 30 years: what we know, and why measles still kills",
+   "created": "2026-11-03",
+   "route": "roundup",
+   "speed": "new",
+   "beat": "public health",
+   "angle": "A short, factual item on the New York death and the public health response. Explain how measles kills (pneumonia, encephalitis) and how often, and link back to the SSPE pitch for the long tail.",
+   "why_now": "Breakout news this week, reported as New York State's first measles fatality in three decades.",
+   "is_it_real": "Plausible, but the upstream angle claims this is the first U.S. measles death in 30 years. That is wrong: the U.S. recorded measles deaths in 2025. The claim must be scoped to New York State, and the only source in the input is a NYT homepage link, so the specific report needs to be located before writing. Keep it to factual reporting, not vaccine-debate framing.",
+   "confidence": "medium",
+   "evidence": [],
+   "terms": [
+    "measles death new york state s first fatal case in 30 years"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-11-03",
+     "event": "routed",
+     "detail": "roundup"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "Measles death — New York State's first fatal case in 30 years",
+     "speed": "new",
+     "first_seen": "2026-11-03",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-11-03",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 85,
+       "opportunity": 83
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-11-03-beyond-cte-retired-nfl-linemen-show-a-high-risk-of",
+   "title": "Beyond CTE: retired NFL linemen show a high risk of artery plaque",
+   "created": "2026-11-03",
+   "route": "roundup",
+   "speed": "new",
+   "beat": "cardiometabolic",
+   "angle": "A follow-up to last week's CTE-number item. The lineman finding points to a body-size and cardiometabolic risk that gets less attention than brain injury. Note what an observational study of one position group can and can't tell us.",
+   "why_now": "Fresh study promoted by the AHA newsroom, landing days after the CTE item ran.",
+   "is_it_real": "The source is solid (AHA newsroom). The study is observational and specific to linemen, so the item must not generalize to all players or the public. The upstream fact check flagged minor issues, so the item's numbers must be checked against the study itself.",
+   "confidence": "high",
+   "evidence": [
+    "https://newsroom.heart.org/news/retired-nfl-players-notably-linemen-had-high-risk-of-artery-plaque-per-independent-study"
+   ],
+   "terms": [
+    "retired nfl linemen show high risk of arterial plaque independent aha linked study"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-11-03",
+     "event": "routed",
+     "detail": "roundup"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "Retired NFL linemen show high risk of arterial plaque — independent AHA-linked study",
+     "speed": "new",
+     "first_seen": "2026-11-03",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-11-03",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 64,
+       "opportunity": 70
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-11-03-whole-foods-ashwagandha-capsules-recalled-what-s-a",
+   "title": "Whole Foods ashwagandha capsules recalled: what's affected and what to check",
+   "created": "2026-11-03",
+   "route": "roundup",
+   "speed": "exploding",
+   "beat": "public health / supplements",
+   "angle": "A quick check-your-cabinet recall item. Ashwagandha is heavily marketed to women for stress and sleep, so this is a chance to note how lightly supplements are regulated compared with drugs.",
+   "why_now": "Breakout search on the nutrition radar this week.",
+   "is_it_real": "The search signal is strong, but the input has no news link or FDA notice. The recall, the product, and the reason for it must all be confirmed on FDA.gov before this runs. If it can't be confirmed, kill it.",
+   "confidence": "low",
+   "evidence": [],
+   "terms": [
+    "whole foods ashwagandha capsules recall"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-11-03",
+     "event": "routed",
+     "detail": "roundup"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "whole foods ashwagandha capsules recall",
+     "speed": "exploding",
+     "first_seen": "2026-11-02",
+     "weeks_seen": 1,
+     "sources": [
+      "radar"
+     ],
+     "profiles": [
+      "nutrition"
+     ],
+     "recent": [
+      {
+       "date": "2026-11-02",
+       "source": "radar",
+       "profile": "nutrition",
+       "stage": "breakout",
+       "score": 66,
+       "opportunity": 89
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-11-03-fda-s-infant-formula-nutrition-update-what-s-chang",
+   "title": "FDA's infant formula nutrition update: what's changing in what babies are fed",
+   "created": "2026-11-03",
+   "route": "roundup",
+   "speed": "new",
+   "beat": "public health / FDA",
+   "angle": "A short explainer on what the FDA's formula nutrient update actually changes, if anything, and what parents should and shouldn't do differently.",
+   "why_now": "Rising every day since Oct 30 after being held on watch, which suggests a real FDA action is driving searches.",
+   "is_it_real": "The rising-search pattern holds across five straight days, but the input has no news link, so the specific FDA action must be identified before writing. If it's only a review or request for comment, frame it that way. Never present it as a finalized rule unless it is one.",
+   "confidence": "low",
+   "evidence": [],
+   "terms": [
+    "fda infant formula nutrition updates"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-11-03",
+     "event": "routed",
+     "detail": "roundup"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "fda infant formula nutrition updates",
+     "speed": "new",
+     "first_seen": "2026-10-30",
+     "weeks_seen": 2,
+     "sources": [
+      "rising"
+     ],
+     "profiles": [
+      "daily-signals"
+     ],
+     "recent": [
+      {
+       "date": "2026-10-30",
+       "profile": "daily-signals",
+       "source": "rising",
+       "stage": "rising"
+      },
+      {
+       "date": "2026-10-31",
+       "profile": "daily-signals",
+       "source": "rising",
+       "stage": "rising"
+      },
+      {
+       "date": "2026-11-01",
+       "profile": "daily-signals",
+       "source": "rising",
+       "stage": "rising"
+      },
+      {
+       "date": "2026-11-02",
+       "profile": "daily-signals",
+       "source": "rising",
+       "stage": "rising"
+      },
+      {
+       "date": "2026-11-03",
+       "source": "rising",
+       "profile": "daily-signals",
+       "stage": "rising"
+      }
+     ],
+     "previous_verdict": "held",
+     "previous_reason": "watch"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-03-is-it-real-the-prescription-medical-emergency-kit",
+   "title": "Is it real? The prescription 'medical emergency kit': do you need antibiotics and ivermectin in a drawer?",
+   "created": "2026-11-03",
+   "route": "tfm",
+   "speed": "emerging",
+   "beat": "viral health claims",
+   "angle": "Test the pitch behind telehealth 'emergency kits': that stockpiling prescription drugs makes you safer. Check it against evidence on antibiotic stewardship, self-treatment and drug shelf life, and ask who is selling the fear.",
+   "why_now": "Emerging: searches have risen since August and resurfaced daily in the last week. It was held on watch and is now back with a third variant term.",
+   "is_it_real": "The search interest is real and sustained. What the kit actually contains, how it's prescribed and its price must be verified from the company's own materials. Nothing from memory. The evidence side (antibiotic misuse, self-dosing risks) comes from CDC and peer-reviewed sources.",
+   "confidence": "medium",
+   "evidence": [],
+   "terms": [
+    "the wellness company emergency kit",
+    "the wellness company medical emergency kit",
+    "wellness company emergency kit"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-11-03",
+     "event": "routed",
+     "detail": "tfm"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "the wellness company emergency kit",
+     "speed": "emerging",
+     "first_seen": "2026-08-21",
+     "weeks_seen": 4,
+     "sources": [
+      "rising"
+     ],
+     "profiles": [
+      "daily-signals"
+     ],
+     "recent": [
+      {
+       "date": "2026-08-21",
+       "profile": "daily-signals",
+       "source": "rising",
+       "stage": "rising"
+      },
+      {
+       "date": "2026-08-23",
+       "profile": "daily-signals",
+       "source": "rising",
+       "stage": "rising"
+      },
+      {
+       "date": "2026-08-24",
+       "profile": "daily-signals",
+       "source": "rising",
+       "stage": "rising"
+      },
+      {
+       "date": "2026-10-31",
+       "profile": "daily-signals",
+       "source": "rising",
+       "stage": "rising"
+      },
+      {
+       "date": "2026-11-03",
+       "source": "rising",
+       "profile": "daily-signals",
+       "stage": "rising"
+      }
+     ],
+     "previous_verdict": "held",
+     "previous_reason": "watch"
+    },
+    {
+     "term": "the wellness company medical emergency kit",
+     "speed": "emerging",
+     "first_seen": "2026-08-21",
+     "weeks_seen": 4,
+     "sources": [
+      "rising"
+     ],
+     "profiles": [
+      "daily-signals"
+     ],
+     "recent": [
+      {
+       "date": "2026-08-21",
+       "profile": "daily-signals",
+       "source": "rising",
+       "stage": "rising"
+      },
+      {
+       "date": "2026-08-23",
+       "profile": "daily-signals",
+       "source": "rising",
+       "stage": "rising"
+      },
+      {
+       "date": "2026-08-24",
+       "profile": "daily-signals",
+       "source": "rising",
+       "stage": "rising"
+      },
+      {
+       "date": "2026-10-31",
+       "profile": "daily-signals",
+       "source": "rising",
+       "stage": "rising"
+      },
+      {
+       "date": "2026-11-02",
+       "profile": "daily-signals",
+       "source": "rising",
+       "stage": "rising"
+      },
+      {
+       "date": "2026-11-03",
+       "source": "rising",
+       "profile": "daily-signals",
+       "stage": "rising"
+      }
+     ],
+     "previous_verdict": "held",
+     "previous_reason": "watch"
+    },
+    {
+     "term": "wellness company emergency kit",
+     "speed": "new",
+     "first_seen": "2026-11-03",
+     "weeks_seen": 1,
+     "sources": [
+      "rising"
+     ],
+     "profiles": [
+      "daily-signals"
+     ],
+     "recent": [
+      {
+       "date": "2026-11-03",
+       "source": "rising",
+       "profile": "daily-signals",
+       "stage": "rising"
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  }
+ ],
+ "dropped": 87,
+ "watching": 1,
+ "notes": "Election Day swamped the wide feed: about 40 of 99 terms are voting logistics, race results or news-network names, none of them in her lanes. The real health signals are a marathon death driving rhabdo searches, the blood pressure recall widening to olmesartan combo pills (attached to the existing amlodipine item), a New York measles death, and the NFL linemen heart study. Two upstream claims need correcting before anything runs: the measles 'first U.S. death in 30 years' framing is wrong (scope it to New York State), and 'actor died from peptides' has no source, so it's on watch rather than attached to the peptides pitch. The ashwagandha recall and FDA infant formula items have no news links in the input and must be confirmed against FDA notices before writing.",
+ "cost_usd": 0.3405
+}

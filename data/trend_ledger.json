@@ -863,6 +863,11 @@
      "date": "2026-10-30",
      "detail": "roundup",
      "event": "routed"
+    },
+    {
+     "date": "2026-11-03",
+     "detail": "Even moderate drinking linked to cancer and early death — new study",
+     "event": "new-signal"
     }
    ],
    "is_it_real": "The input sources it only to News-Medical. Find the primary paper. It is observational, so no causal claims.",
@@ -872,7 +877,8 @@
    "speed": "new",
    "status": "routed",
    "terms": [
-    "beer vs wine vs spirits large study finds different mortality patterns by alcohol type"
+    "beer vs wine vs spirits large study finds different mortality patterns by alcohol type",
+    "even moderate drinking linked to cancer and early death new study"
    ],
    "title": "Beer vs. wine vs. spirits: a big study finds different death rates by drink. Here's why it's probably not the drink",
    "why_now": "New observational data is getting picked up, and alcohol and health stays a live topic."
@@ -1058,6 +1064,11 @@
      "date": "2026-11-01",
      "detail": "roundup",
      "event": "routed"
+    },
+    {
+     "date": "2026-11-03",
+     "detail": "olmesartan, Nationwide olmesartan (blood pressure medication) recall — pills failed quality test",
+     "event": "new-signal"
     }
    ],
    "is_it_real": "Search spike only; no news context or source came with it. The manufacturer, lot numbers, recall class and reason must be confirmed in FDA enforcement reports before writing. If no current recall exists, drop it.",
@@ -1067,7 +1078,9 @@
    "speed": "exploding",
    "status": "routed",
    "terms": [
-    "amlodipine recall"
+    "amlodipine recall",
+    "nationwide olmesartan blood pressure medication recall pills failed quality test",
+    "olmesartan"
    ],
    "title": "Amlodipine recall: what blood pressure patients should check, and why you shouldn't just stop taking it",
    "why_now": "Searches spiked 10/31 on the public-health radar."
@@ -1233,6 +1246,163 @@
    ],
    "title": "Open enrollment 2027: what's actually different about ACA subsidies this year, and who pays more",
    "why_now": "Open enrollment opened Nov 1, and NPR and KFF are both reporting subsidy changes that affect what shoppers pay. The newsroom tool reports health insurance search interest up 23% in 7 days. It's a hard deadline-driven window."
+  },
+  "2026-11-03-a-24-year-old-dies-after-her-first-nyc-marathon-an": {
+   "angle": "Explain exertional rhabdomyolysis: what it is, warning signs (dark urine, severe muscle pain, weakness), and why first-timers are at higher risk. Put marathon death rates in context without speculating about this runner's case.",
+   "beat": "aging, body and metabolism / fitness",
+   "confidence": "medium",
+   "created": "2026-11-03",
+   "evidence": [
+    "https://www.nytimes.com/2026/11/02/nyregion/marathon-runner-dies-rachel-apa.html",
+    "https://people.com/what-nyc-marathon-runner-rachel-apa-told-her-dad-shortly-before-sudden-collapse-12217716"
+   ],
+   "history": [
+    {
+     "date": "2026-11-03",
+     "detail": "roundup",
+     "event": "routed"
+    }
+   ],
+   "is_it_real": "The search spike is real and clearly tied to the marathon death. The input does not confirm that rhabdo caused her death. The item must attribute any cause to official reports or say it is unconfirmed. Marathon mortality figures must come from published research, not memory.",
+   "route": "roundup",
+   "seed_keyword": "",
+   "site": "",
+   "speed": "exploding",
+   "status": "routed",
+   "terms": [
+    "rhabdomyolysis"
+   ],
+   "title": "A 24-year-old dies after her first NYC Marathon, and 'rhabdomyolysis' spikes: what exertional rhabdo is and how rare marathon deaths really are",
+   "why_now": "Rhabdomyolysis became a breakout search the day after the NYC Marathon death of Rachel Apa, 24, covered by the NYT and People."
+  },
+  "2026-11-03-beyond-cte-retired-nfl-linemen-show-a-high-risk-of": {
+   "angle": "A follow-up to last week's CTE-number item. The lineman finding points to a body-size and cardiometabolic risk that gets less attention than brain injury. Note what an observational study of one position group can and can't tell us.",
+   "beat": "cardiometabolic",
+   "confidence": "high",
+   "created": "2026-11-03",
+   "evidence": [
+    "https://newsroom.heart.org/news/retired-nfl-players-notably-linemen-had-high-risk-of-artery-plaque-per-independent-study"
+   ],
+   "history": [
+    {
+     "date": "2026-11-03",
+     "detail": "roundup",
+     "event": "routed"
+    }
+   ],
+   "is_it_real": "The source is solid (AHA newsroom). The study is observational and specific to linemen, so the item must not generalize to all players or the public. The upstream fact check flagged minor issues, so the item's numbers must be checked against the study itself.",
+   "route": "roundup",
+   "seed_keyword": "",
+   "site": "",
+   "speed": "new",
+   "status": "routed",
+   "terms": [
+    "retired nfl linemen show high risk of arterial plaque independent aha linked study"
+   ],
+   "title": "Beyond CTE: retired NFL linemen show a high risk of artery plaque",
+   "why_now": "Fresh study promoted by the AHA newsroom, landing days after the CTE item ran."
+  },
+  "2026-11-03-fda-s-infant-formula-nutrition-update-what-s-chang": {
+   "angle": "A short explainer on what the FDA's formula nutrient update actually changes, if anything, and what parents should and shouldn't do differently.",
+   "beat": "public health / FDA",
+   "confidence": "low",
+   "created": "2026-11-03",
+   "evidence": [],
+   "history": [
+    {
+     "date": "2026-11-03",
+     "detail": "roundup",
+     "event": "routed"
+    }
+   ],
+   "is_it_real": "The rising-search pattern holds across five straight days, but the input has no news link, so the specific FDA action must be identified before writing. If it's only a review or request for comment, frame it that way. Never present it as a finalized rule unless it is one.",
+   "route": "roundup",
+   "seed_keyword": "",
+   "site": "",
+   "speed": "new",
+   "status": "routed",
+   "terms": [
+    "fda infant formula nutrition updates"
+   ],
+   "title": "FDA's infant formula nutrition update: what's changing in what babies are fed",
+   "why_now": "Rising every day since Oct 30 after being held on watch, which suggests a real FDA action is driving searches."
+  },
+  "2026-11-03-is-it-real-the-prescription-medical-emergency-kit": {
+   "angle": "Test the pitch behind telehealth 'emergency kits': that stockpiling prescription drugs makes you safer. Check it against evidence on antibiotic stewardship, self-treatment and drug shelf life, and ask who is selling the fear.",
+   "beat": "viral health claims",
+   "confidence": "medium",
+   "created": "2026-11-03",
+   "evidence": [],
+   "history": [
+    {
+     "date": "2026-11-03",
+     "detail": "tfm",
+     "event": "routed"
+    }
+   ],
+   "is_it_real": "The search interest is real and sustained. What the kit actually contains, how it's prescribed and its price must be verified from the company's own materials. Nothing from memory. The evidence side (antibiotic misuse, self-dosing risks) comes from CDC and peer-reviewed sources.",
+   "route": "tfm",
+   "seed_keyword": "",
+   "site": "",
+   "speed": "emerging",
+   "status": "routed",
+   "terms": [
+    "the wellness company emergency kit",
+    "the wellness company medical emergency kit",
+    "wellness company emergency kit"
+   ],
+   "title": "Is it real? The prescription 'medical emergency kit': do you need antibiotics and ivermectin in a drawer?",
+   "why_now": "Emerging: searches have risen since August and resurfaced daily in the last week. It was held on watch and is now back with a third variant term."
+  },
+  "2026-11-03-new-york-records-its-first-measles-death-in-30-yea": {
+   "angle": "A short, factual item on the New York death and the public health response. Explain how measles kills (pneumonia, encephalitis) and how often, and link back to the SSPE pitch for the long tail.",
+   "beat": "public health",
+   "confidence": "medium",
+   "created": "2026-11-03",
+   "evidence": [],
+   "history": [
+    {
+     "date": "2026-11-03",
+     "detail": "roundup",
+     "event": "routed"
+    }
+   ],
+   "is_it_real": "Plausible, but the upstream angle claims this is the first U.S. measles death in 30 years. That is wrong: the U.S. recorded measles deaths in 2025. The claim must be scoped to New York State, and the only source in the input is a NYT homepage link, so the specific report needs to be located before writing. Keep it to factual reporting, not vaccine-debate framing.",
+   "route": "roundup",
+   "seed_keyword": "",
+   "site": "",
+   "speed": "new",
+   "status": "routed",
+   "terms": [
+    "measles death new york state s first fatal case in 30 years"
+   ],
+   "title": "New York records its first measles death in 30 years: what we know, and why measles still kills",
+   "why_now": "Breakout news this week, reported as New York State's first measles fatality in three decades."
+  },
+  "2026-11-03-whole-foods-ashwagandha-capsules-recalled-what-s-a": {
+   "angle": "A quick check-your-cabinet recall item. Ashwagandha is heavily marketed to women for stress and sleep, so this is a chance to note how lightly supplements are regulated compared with drugs.",
+   "beat": "public health / supplements",
+   "confidence": "low",
+   "created": "2026-11-03",
+   "evidence": [],
+   "history": [
+    {
+     "date": "2026-11-03",
+     "detail": "roundup",
+     "event": "routed"
+    }
+   ],
+   "is_it_real": "The search signal is strong, but the input has no news link or FDA notice. The recall, the product, and the reason for it must all be confirmed on FDA.gov before this runs. If it can't be confirmed, kill it.",
+   "route": "roundup",
+   "seed_keyword": "",
+   "site": "",
+   "speed": "exploding",
+   "status": "routed",
+   "terms": [
+    "whole foods ashwagandha capsules recall"
+   ],
+   "title": "Whole Foods ashwagandha capsules recalled: what's affected and what to check",
+   "why_now": "Breakout search on the nutrition radar this week."
   }
  },
  "runs": [
@@ -1420,6 +1590,26 @@
     "roundup": 1
    },
    "watching": 3
+  },
+  {
+   "collected": {
+    "newsroom": 13,
+    "radar": 29,
+    "rising": 60,
+    "wide": 180
+   },
+   "cost_usd": 0.3405,
+   "date": "2026-11-03",
+   "dropped": 87,
+   "due": 99,
+   "ideas": 6,
+   "model": "claude-opus-5-5",
+   "notes": "Election Day swamped the wide feed: about 40 of 99 terms are voting logistics, race results or news-network names, none of them in her lanes. The real health signals are a marathon death driving rhabdo searches, the blood pressure recall widening to olmesartan combo pills (attached to the existing amlodipine item), a New York measles death, and the NFL linemen heart study. Two upstream claims need correcting before anything runs: the measles 'first U.S. death in 30 years' framing is wrong (scope it to New York State), and 'actor died from peptides' has no source, so it's on watch rather than attached to the peptides pitch. The ashwagandha recall and FDA infant formula items have no news links in the input and must be confirmed against FDA notices before writing.",
+   "routes": {
+    "roundup": 5,
+    "tfm": 1
+   },
+   "watching": 1
   }
  ],
  "terms": {
@@ -2329,6 +2519,44 @@
    "status": "pending",
    "term": "activeplayhub achieve your wellness goals with expert insights on fitness"
   },
+  "actor died from peptides": {
+   "drop_reason": "watch",
+   "first_seen": "2026-11-02",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-02",
+   "sightings": [
+    {
+     "date": "2026-11-02",
+     "opportunity": 89,
+     "profile": "beauty",
+     "score": 66,
+     "source": "radar",
+     "stage": "breakout"
+    }
+   ],
+   "status": "held",
+   "term": "actor died from peptides"
+  },
+  "adam robinson": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 500000,
+     "source": "wide",
+     "stage": "breakout"
+    }
+   ],
+   "status": "dropped",
+   "term": "adam robinson"
+  },
   "adt": {
    "drop_reason": "navigational",
    "first_seen": "2026-10-29",
@@ -2474,8 +2702,8 @@
    "drop_reason": "off-beat",
    "first_seen": "2026-10-14",
    "idea": null,
-   "judged_on": "2026-11-02",
-   "last_seen": "2026-11-02",
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
    "sightings": [
     {
      "date": "2026-10-14",
@@ -2495,6 +2723,14 @@
     },
     {
      "date": "2026-11-02",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    },
+    {
+     "date": "2026-11-03",
      "opportunity": null,
      "profile": "daily-signals",
      "score": null,
@@ -2585,8 +2821,8 @@
    "drop_reason": "noise",
    "first_seen": "2026-06-22",
    "idea": null,
-   "judged_on": "2026-11-02",
-   "last_seen": "2026-11-02",
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
    "sightings": [
     {
      "date": "2026-06-22",
@@ -2678,6 +2914,14 @@
     },
     {
      "date": "2026-11-02",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    },
+    {
+     "date": "2026-11-03",
      "opportunity": null,
      "profile": "daily-signals",
      "score": null,
@@ -3552,6 +3796,25 @@
    "status": "dropped",
    "term": "amazon stock"
   },
+  "ambetter health insurance": {
+   "drop_reason": "navigational",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "ambetter health insurance"
+  },
   "amd stock": {
    "drop_reason": "off-beat",
    "first_seen": "2026-10-30",
@@ -4126,6 +4389,25 @@
    ],
    "status": "pending",
    "term": "ariana grande health"
+  },
+  "arizona basketball": {
+   "drop_reason": "noise",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 20000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "arizona basketball"
   },
   "arizona vs texas tech": {
    "drop_reason": "noise",
@@ -6515,6 +6797,25 @@
    "status": "pending",
    "term": "blue moon channel"
   },
+  "blueberries nutrition": {
+   "drop_reason": "too-thin",
+   "first_seen": "2026-11-02",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-02",
+   "sightings": [
+    {
+     "date": "2026-11-02",
+     "opportunity": 63,
+     "profile": "nutrition",
+     "score": 52,
+     "source": "radar",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "blueberries nutrition"
+  },
   "blueberry recall": {
    "drop_reason": null,
    "first_seen": "2026-08-20",
@@ -6558,7 +6859,7 @@
    "first_seen": "2026-10-31",
    "idea": null,
    "judged_on": "2026-10-31",
-   "last_seen": "2026-10-31",
+   "last_seen": "2026-11-02",
    "sightings": [
     {
      "date": "2026-10-31",
@@ -6567,6 +6868,14 @@
      "score": 50000,
      "source": "wide",
      "stage": "breakout"
+    },
+    {
+     "date": "2026-11-02",
+     "opportunity": 89,
+     "profile": "beauty",
+     "score": 66,
+     "source": "radar",
+     "stage": "emerging"
     }
    ],
    "status": "dropped",
@@ -7627,6 +7936,25 @@
    "status": "kept",
    "term": "butter"
   },
+  "byron donalds": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 20000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "byron donalds"
+  },
   "caitlin clark all wnba first team": {
    "drop_reason": "noise",
    "first_seen": "2026-10-28",
@@ -7855,6 +8183,44 @@
    "status": "pending",
    "term": "can i drink coffee during intermittent fasting"
   },
+  "can i vote anywhere in my state": {
+   "drop_reason": "navigational",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 20000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "can i vote anywhere in my state"
+  },
+  "can i vote online": {
+   "drop_reason": "navigational",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 20000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "can i vote online"
+  },
   "can i vote today": {
    "drop_reason": "navigational",
    "first_seen": "2026-11-02",
@@ -7892,6 +8258,25 @@
    ],
    "status": "pending",
    "term": "can intermittent fasting help you lose weight"
+  },
+  "can you vote online": {
+   "drop_reason": "navigational",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 20000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "can you vote online"
   },
   "candice swanepoel": {
    "drop_reason": "celebrity-only",
@@ -8465,6 +8850,25 @@
    "status": "pending",
    "term": "chc wellbeing"
   },
+  "cheap fitness tracker": {
+   "drop_reason": "noise",
+   "first_seen": "2026-11-02",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-02",
+   "sightings": [
+    {
+     "date": "2026-11-02",
+     "opportunity": 89,
+     "profile": "fitness",
+     "score": 66,
+     "source": "radar",
+     "stage": "breakout"
+    }
+   ],
+   "status": "dropped",
+   "term": "cheap fitness tracker"
+  },
   "cheap meal ideas": {
    "drop_reason": null,
    "first_seen": "2026-09-07",
@@ -8694,6 +9098,25 @@
    ],
    "status": "pending",
    "term": "Childhood obesity — updated AAP clinical practice guidelines (August 2026)"
+  },
+  "china tape maker stock debut": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 20000,
+     "source": "wide",
+     "stage": "breakout"
+    }
+   ],
+   "status": "dropped",
+   "term": "china tape maker stock debut"
   },
   "chinese food near me": {
    "drop_reason": "navigational",
@@ -9758,6 +10181,25 @@
    "status": "pending",
    "term": "cnd solar oil nail and cuticle care"
   },
+  "cnn": {
+   "drop_reason": "navigational",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 100000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "cnn"
+  },
   "cocoa pebbles nutrition facts": {
    "drop_reason": null,
    "first_seen": "2026-09-27",
@@ -10126,7 +10568,7 @@
    "first_seen": "2026-10-31",
    "idea": null,
    "judged_on": "2026-10-31",
-   "last_seen": "2026-11-01",
+   "last_seen": "2026-11-03",
    "sightings": [
     {
      "date": "2026-10-31",
@@ -10138,6 +10580,14 @@
     },
     {
      "date": "2026-11-01",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    },
+    {
+     "date": "2026-11-03",
      "opportunity": null,
      "profile": "daily-signals",
      "score": null,
@@ -10467,7 +10917,7 @@
    "first_seen": "2026-10-30",
    "idea": "2026-10-30-is-it-real-corporate-wellness-programs-make-worker",
    "judged_on": "2026-10-30",
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-03",
    "sightings": [
     {
      "date": "2026-10-30",
@@ -10495,6 +10945,14 @@
     },
     {
      "date": "2026-11-02",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    },
+    {
+     "date": "2026-11-03",
      "opportunity": null,
      "profile": "daily-signals",
      "score": null,
@@ -10660,6 +11118,25 @@
    ],
    "status": "pending",
    "term": "costco health insurance"
+  },
+  "costco workout bench": {
+   "drop_reason": "noise",
+   "first_seen": "2026-11-02",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-02",
+   "sightings": [
+    {
+     "date": "2026-11-02",
+     "opportunity": 77,
+     "profile": "fitness",
+     "score": 57,
+     "source": "radar",
+     "stage": "emerging"
+    }
+   ],
+   "status": "dropped",
+   "term": "costco workout bench"
   },
   "coventry vs sunderland": {
    "drop_reason": "noise",
@@ -11898,6 +12375,25 @@
    "status": "pending",
    "term": "cyclosporiasis outbreak iceberg lettuce safety"
   },
+  "d nde votar": {
+   "drop_reason": "navigational",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 50000,
+     "source": "wide",
+     "stage": "breakout"
+    }
+   ],
+   "status": "dropped",
+   "term": "dónde votar"
+  },
   "dabo swinney": {
    "drop_reason": "noise",
    "first_seen": "2026-10-25",
@@ -12586,6 +13082,25 @@
    "status": "dropped",
    "term": "deep ellum shooting"
   },
+  "deep south nutrition": {
+   "drop_reason": "navigational",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "deep south nutrition"
+  },
   "defaulted federal student loan collections": {
    "drop_reason": "watch",
    "first_seen": "2026-10-26",
@@ -12913,6 +13428,25 @@
    ],
    "status": "pending",
    "term": "dermatologist recommended spf lip balm"
+  },
+  "describe four ways in which improving your muscular fitness would have a positive affect on your life": {
+   "drop_reason": "noise",
+   "first_seen": "2026-11-02",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-02",
+   "sightings": [
+    {
+     "date": "2026-11-02",
+     "opportunity": 88,
+     "profile": "fitness",
+     "score": 63,
+     "source": "radar",
+     "stage": "emerging"
+    }
+   ],
+   "status": "dropped",
+   "term": "describe four ways in which improving your muscular fitness would have a positive affect on your life."
   },
   "designates a diet product": {
    "drop_reason": null,
@@ -13475,11 +14009,11 @@
    "term": "digital side hustles"
   },
   "dignity health sports park": {
-   "drop_reason": null,
+   "drop_reason": "navigational",
    "first_seen": "2026-08-20",
    "idea": null,
-   "judged_on": null,
-   "last_seen": "2026-08-21",
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
    "sightings": [
     {
      "date": "2026-08-20",
@@ -13496,9 +14030,17 @@
      "score": null,
      "source": "rising",
      "stage": "rising"
+    },
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
     }
    ],
-   "status": "pending",
+   "status": "dropped",
    "term": "dignity health sports park"
   },
   "dime acne spot treatment": {
@@ -13557,6 +14099,25 @@
    ],
    "status": "dropped",
    "term": "disney plus"
+  },
+  "disneyland paris ride closing 2027": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 10000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "disneyland paris ride closing 2027"
   },
   "disneyplus": {
    "drop_reason": "navigational",
@@ -14423,6 +14984,25 @@
    "status": "pending",
    "term": "dr brian paris arthritis diet reviews"
   },
+  "dr somji skincare": {
+   "drop_reason": "noise",
+   "first_seen": "2026-11-02",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-02",
+   "sightings": [
+    {
+     "date": "2026-11-02",
+     "opportunity": 89,
+     "profile": "beauty",
+     "score": 66,
+     "source": "radar",
+     "stage": "breakout"
+    }
+   ],
+   "status": "dropped",
+   "term": "dr somji skincare"
+  },
   "dr steven heymsfield glp 1 research": {
    "drop_reason": null,
    "first_seen": "2026-08-20",
@@ -15248,6 +15828,25 @@
    "status": "dropped",
    "term": "el nino us winter forecast"
   },
+  "elder scrolls 6": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 20000,
+     "source": "wide",
+     "stage": "breakout"
+    }
+   ],
+   "status": "dropped",
+   "term": "elder scrolls 6"
+  },
   "eleanor bernie gerson longevity advice": {
    "drop_reason": "too-thin",
    "first_seen": "2026-10-29",
@@ -15553,6 +16152,25 @@
    ],
    "status": "dropped",
    "term": "ella langley toy story outfit"
+  },
+  "ellen degeneres": {
+   "drop_reason": "celebrity-only",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 50000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "ellen degeneres"
   },
   "elleybear skincare": {
    "drop_reason": null,
@@ -16227,6 +16845,25 @@
    "status": "pending",
    "term": "essentia health"
   },
+  "even moderate drinking linked to cancer and early death new study": {
+   "drop_reason": null,
+   "first_seen": "2026-11-03",
+   "idea": "2026-10-30-beer-vs-wine-vs-spirits-a-big-study-finds-differen",
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": 67,
+     "profile": "daily-pipeline",
+     "score": 51,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "kept",
+   "term": "Even moderate drinking linked to cancer and early death — new study"
+  },
   "everleap fertility": {
    "drop_reason": null,
    "first_seen": "2026-10-14",
@@ -16346,6 +16983,25 @@
    "status": "pending",
    "term": "Exercise and Alzheimer's Risk: The Mechanism Scientists Just Discovered"
   },
+  "exit polls": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 10000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "exit polls"
+  },
   "explain benefits optimal wavelengths and protocols for home red light therapy": {
    "drop_reason": "not-selected",
    "first_seen": "2026-10-24",
@@ -16427,7 +17083,7 @@
    "first_seen": "2026-10-31",
    "idea": "2026-10-25-clocks-fall-back-nov-1-what-the-extra-hour-actuall",
    "judged_on": "2026-10-31",
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-03",
    "sightings": [
     {
      "date": "2026-10-31",
@@ -16447,6 +17103,14 @@
     },
     {
      "date": "2026-11-02",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    },
+    {
+     "date": "2026-11-03",
      "opportunity": null,
      "profile": "daily-signals",
      "score": null,
@@ -17383,11 +18047,11 @@
    "term": "FDA holds public meeting on testosterone use in menopausal women"
   },
   "fda infant formula nutrition updates": {
-   "drop_reason": "watch",
+   "drop_reason": null,
    "first_seen": "2026-10-30",
-   "idea": null,
-   "judged_on": "2026-11-02",
-   "last_seen": "2026-11-02",
+   "idea": "2026-11-03-fda-s-infant-formula-nutrition-update-what-s-chang",
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
    "sightings": [
     {
      "date": "2026-10-30",
@@ -17420,9 +18084,17 @@
      "score": null,
      "source": "rising",
      "stage": "rising"
+    },
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
     }
    ],
-   "status": "held",
+   "status": "kept",
    "term": "fda infant formula nutrition updates"
   },
   "fda infant formula safety advisory botulism risk": {
@@ -18475,11 +19147,11 @@
    "term": "fitbit edge alternative fitness trackers"
   },
   "fitness centre": {
-   "drop_reason": null,
+   "drop_reason": "noise",
    "first_seen": "2026-10-05",
    "idea": null,
-   "judged_on": null,
-   "last_seen": "2026-10-05",
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-02",
    "sightings": [
     {
      "date": "2026-10-05",
@@ -18488,9 +19160,17 @@
      "score": 51,
      "source": "radar",
      "stage": "watch"
+    },
+    {
+     "date": "2026-11-02",
+     "opportunity": 71,
+     "profile": "fitness",
+     "score": 52,
+     "source": "radar",
+     "stage": "watch"
     }
    ],
-   "status": "pending",
+   "status": "dropped",
    "term": "fitness centre"
   },
   "fitness international ftc lawsuit": {
@@ -18498,7 +19178,7 @@
    "first_seen": "2026-10-30",
    "idea": "2026-10-30-la-fitness-closing-gyms-what-s-actually-happening",
    "judged_on": "2026-10-30",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-11-02",
    "sightings": [
     {
      "date": "2026-10-30",
@@ -18507,6 +19187,14 @@
      "score": null,
      "source": "rising",
      "stage": "rising"
+    },
+    {
+     "date": "2026-11-02",
+     "opportunity": 89,
+     "profile": "fitness",
+     "score": 66,
+     "source": "radar",
+     "stage": "breakout"
     }
    ],
    "status": "kept",
@@ -18538,6 +19226,25 @@
    ],
    "status": "pending",
    "term": "fitness nutrition twspoondietary"
+  },
+  "fitness routines": {
+   "drop_reason": "too-thin",
+   "first_seen": "2026-11-02",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-02",
+   "sightings": [
+    {
+     "date": "2026-11-02",
+     "opportunity": 73,
+     "profile": "fitness",
+     "score": 54,
+     "source": "radar",
+     "stage": "watch"
+    }
+   ],
+   "status": "dropped",
+   "term": "fitness routines"
   },
   "fitness tee co reviews": {
    "drop_reason": null,
@@ -18584,6 +19291,25 @@
    ],
    "status": "pending",
    "term": "fitness tracker review"
+  },
+  "fitness warrior nation": {
+   "drop_reason": "noise",
+   "first_seen": "2026-11-02",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-02",
+   "sightings": [
+    {
+     "date": "2026-11-02",
+     "opportunity": 89,
+     "profile": "fitness",
+     "score": 66,
+     "source": "radar",
+     "stage": "breakout"
+    }
+   ],
+   "status": "dropped",
+   "term": "fitness warrior nation"
   },
   "fitness workouts": {
    "drop_reason": "noise",
@@ -19049,6 +19775,25 @@
    "status": "dropped",
    "term": "freddie prinze jr son new look"
   },
+  "freighter sinks off bulgarian coast": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 10000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "freighter sinks off bulgarian coast"
+  },
   "from netflix horror series review": {
    "drop_reason": "off-beat",
    "first_seen": "2026-10-27",
@@ -19178,6 +19923,25 @@
    ],
    "status": "pending",
    "term": "gabourey sidibe weight loss"
+  },
+  "galatasaray vs vfb stuttgart": {
+   "drop_reason": "noise",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 10000,
+     "source": "wide",
+     "stage": "breakout"
+    }
+   ],
+   "status": "dropped",
+   "term": "galatasaray vs vfb stuttgart"
   },
   "gang": {
    "drop_reason": "noise",
@@ -22083,8 +22847,8 @@
    "drop_reason": "navigational",
    "first_seen": "2026-09-28",
    "idea": null,
-   "judged_on": "2026-11-02",
-   "last_seen": "2026-11-02",
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
    "sightings": [
     {
      "date": "2026-09-28",
@@ -22176,6 +22940,14 @@
     },
     {
      "date": "2026-11-02",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    },
+    {
+     "date": "2026-11-03",
      "opportunity": null,
      "profile": "daily-signals",
      "score": null,
@@ -22775,6 +23547,25 @@
    ],
    "status": "pending",
    "term": "Heat/sauna therapy for depression and mental health"
+  },
+  "heat vs lakers": {
+   "drop_reason": "noise",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 100000,
+     "source": "wide",
+     "stage": "breakout"
+    }
+   ],
+   "status": "dropped",
+   "term": "heat vs lakers"
   },
   "heat waves and mental health hospitalizations": {
    "drop_reason": null,
@@ -23596,6 +24387,25 @@
    ],
    "status": "held",
    "term": "how does the blood pressure drug losartan affect brown fat and anxiety"
+  },
+  "how late are polls open": {
+   "drop_reason": "navigational",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 20000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "how late are polls open"
   },
   "how long does autistic burnout last": {
    "drop_reason": null,
@@ -24780,6 +25590,25 @@
    "status": "pending",
    "term": "how to stop hair loss"
   },
+  "how to vote": {
+   "drop_reason": "navigational",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 10000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "how to vote"
+  },
   "how wegovy and zepbound actually work mechanism and side effects explained": {
    "drop_reason": null,
    "first_seen": "2026-10-11",
@@ -25906,6 +26735,25 @@
    "status": "dropped",
    "term": "is election day a federal holiday"
   },
+  "is harry styles running nyc marathon": {
+   "drop_reason": "celebrity-only",
+   "first_seen": "2026-11-02",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-02",
+   "sightings": [
+    {
+     "date": "2026-11-02",
+     "opportunity": 89,
+     "profile": "fitness",
+     "score": 66,
+     "source": "radar",
+     "stage": "emerging"
+    }
+   ],
+   "status": "dropped",
+   "term": "is harry styles running nyc marathon"
+  },
   "is honey allowed on keto diet": {
    "drop_reason": null,
    "first_seen": "2026-10-13",
@@ -26154,6 +27002,25 @@
    ],
    "status": "pending",
    "term": "is the mediterranean diet good for diabetics"
+  },
+  "is the post office open on election day": {
+   "drop_reason": "navigational",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 20000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "is the post office open on election day"
   },
   "is today world mental health day": {
    "drop_reason": null,
@@ -26783,6 +27650,25 @@
    "status": "pending",
    "term": "jeremy clarkson health"
   },
+  "jes s de miguel": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 20000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "jesús de miguel"
+  },
   "jessica alba": {
    "drop_reason": "celebrity-only",
    "first_seen": "2026-11-02",
@@ -26801,6 +27687,25 @@
    ],
    "status": "dropped",
    "term": "jessica alba"
+  },
+  "jesus de miguel": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 100000,
+     "source": "wide",
+     "stage": "breakout"
+    }
+   ],
+   "status": "dropped",
+   "term": "jesus de miguel"
   },
   "jill wagner hollywood to tennessee": {
    "drop_reason": "celebrity-only",
@@ -27203,6 +28108,25 @@
    "status": "pending",
    "term": "joyce vance weight loss"
   },
+  "julia stiles fitness routine low impact": {
+   "drop_reason": "celebrity-only",
+   "first_seen": "2026-11-02",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-02",
+   "sightings": [
+    {
+     "date": "2026-11-02",
+     "opportunity": 89,
+     "profile": "fitness",
+     "score": 66,
+     "source": "radar",
+     "stage": "breakout"
+    }
+   ],
+   "status": "dropped",
+   "term": "julia stiles fitness routine low impact"
+  },
   "julianne hough beauty and wellness": {
    "drop_reason": null,
    "first_seen": "2026-10-01",
@@ -27406,6 +28330,25 @@
    "status": "pending",
    "term": "kaleidoscope hair products"
   },
+  "kalshi": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 20000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "kalshi"
+  },
   "karl bushby": {
    "drop_reason": "off-beat",
    "first_seen": "2026-11-02",
@@ -27481,6 +28424,25 @@
    ],
    "status": "pending",
    "term": "kate spade beauty and the beast"
+  },
+  "kelly clarkson show emmy awards": {
+   "drop_reason": "celebrity-only",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 20000,
+     "source": "wide",
+     "stage": "breakout"
+    }
+   ],
+   "status": "dropped",
+   "term": "kelly clarkson show emmy awards"
   },
   "kelly rowland adopted heavy weightlifting and quit drinking for wellness": {
    "drop_reason": null,
@@ -28031,7 +28993,7 @@
    "first_seen": "2026-06-04",
    "idea": "2026-11-01-kona-ice-nutrition-how-much-sugar-is-in-a-shaved-i",
    "judged_on": "2026-11-01",
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-03",
    "sightings": [
     {
      "date": "2026-06-04",
@@ -28187,6 +29149,22 @@
     },
     {
      "date": "2026-11-02",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    },
+    {
+     "date": "2026-11-02",
+     "opportunity": 89,
+     "profile": "nutrition",
+     "score": 66,
+     "source": "radar",
+     "stage": "emerging"
+    },
+    {
+     "date": "2026-11-03",
      "opportunity": null,
      "profile": "daily-signals",
      "score": null,
@@ -30007,6 +30985,25 @@
    "status": "dropped",
    "term": "mao zedong"
   },
+  "marcus spears jr": {
+   "drop_reason": "noise",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 20000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "marcus spears jr"
+  },
   "margaret cho weight loss": {
    "drop_reason": null,
    "first_seen": "2026-08-20",
@@ -30044,6 +31041,25 @@
    ],
    "status": "pending",
    "term": "Marie-Pierre St-Onge and the Sleep-Diet Connection: What the Research Shows"
+  },
+  "mario morales ice agent": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 10000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "mario morales ice agent"
   },
   "mark hamill": {
    "drop_reason": "celebrity-only",
@@ -30655,6 +31671,25 @@
    "status": "pending",
    "term": "meal prep recipes"
   },
+  "measles death new york state s first fatal case in 30 years": {
+   "drop_reason": null,
+   "first_seen": "2026-11-03",
+   "idea": "2026-11-03-new-york-records-its-first-measles-death-in-30-yea",
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": 83,
+     "profile": "daily-pipeline",
+     "score": 85,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "kept",
+   "term": "Measles death — New York State's first fatal case in 30 years"
+  },
   "measles outbreak in pennsylvania unvaccinated woman s death linked to complications": {
    "drop_reason": null,
    "first_seen": "2026-09-14",
@@ -31265,11 +32300,11 @@
    "term": "mens mental health awareness month"
   },
   "mens mental health month": {
-   "drop_reason": null,
+   "drop_reason": "too-thin",
    "first_seen": "2026-06-04",
    "idea": null,
-   "judged_on": null,
-   "last_seen": "2026-06-08",
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
    "sightings": [
     {
      "date": "2026-06-04",
@@ -31294,9 +32329,17 @@
      "score": null,
      "source": "rising",
      "stage": "rising"
+    },
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
     }
    ],
-   "status": "pending",
+   "status": "dropped",
    "term": "mens mental health month"
   },
   "mental health": {
@@ -31903,6 +32946,25 @@
    "status": "dropped",
    "term": "michael douglas on jack nicholson"
   },
+  "michael letasky montana elk poaching": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 20000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "michael letasky montana elk poaching"
+  },
   "michael mann": {
    "drop_reason": "celebrity-only",
    "first_seen": "2026-11-01",
@@ -31941,6 +33003,25 @@
    "status": "dropped",
    "term": "michael wilbon"
   },
+  "michael wilbon health issues": {
+   "drop_reason": "celebrity-only",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "michael wilbon health issues"
+  },
   "michelina s frozen meals recall": {
    "drop_reason": null,
    "first_seen": "2026-09-08",
@@ -31959,6 +33040,25 @@
    ],
    "status": "pending",
    "term": "michelina's frozen meals recall"
+  },
+  "michigan election": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 10000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "michigan election"
   },
   "michigan vs rutgers": {
    "drop_reason": "noise",
@@ -32119,6 +33219,44 @@
    ],
    "status": "dropped",
    "term": "midi health"
+  },
+  "midterm elections live map": {
+   "drop_reason": "navigational",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 10000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "midterm elections live map"
+  },
+  "midterm elections results": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 500000,
+     "source": "wide",
+     "stage": "breakout"
+    }
+   ],
+   "status": "dropped",
+   "term": "midterm elections results"
   },
   "midterms": {
    "drop_reason": "off-beat",
@@ -32989,6 +34127,25 @@
    "status": "dropped",
    "term": "moussa diawara ice case"
   },
+  "msc poesia miami coast guard": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 50000,
+     "source": "wide",
+     "stage": "breakout"
+    }
+   ],
+   "status": "dropped",
+   "term": "msc poesia miami coast guard"
+  },
   "msft": {
    "drop_reason": "navigational",
    "first_seen": "2026-10-26",
@@ -33007,6 +34164,44 @@
    ],
    "status": "dropped",
    "term": "msft"
+  },
+  "msnbc": {
+   "drop_reason": "navigational",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 10000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "msnbc"
+  },
+  "msnow": {
+   "drop_reason": "navigational",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 10000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "msnow"
   },
   "msu student recreation and wellness center": {
    "drop_reason": null,
@@ -33149,6 +34344,25 @@
    "status": "pending",
    "term": "my numy wellness"
   },
+  "my voting location": {
+   "drop_reason": "navigational",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 20000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "my voting location"
+  },
   "myglamper hitch mounted tent trailer": {
    "drop_reason": "off-beat",
    "first_seen": "2026-10-30",
@@ -33282,6 +34496,25 @@
    "status": "pending",
    "term": "nail care lancaster pa"
   },
+  "nail care product niche": {
+   "drop_reason": "noise",
+   "first_seen": "2026-11-02",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-02",
+   "sightings": [
+    {
+     "date": "2026-11-02",
+     "opportunity": 89,
+     "profile": "beauty",
+     "score": 66,
+     "source": "radar",
+     "stage": "breakout"
+    }
+   ],
+   "status": "dropped",
+   "term": "nail care product niche"
+  },
   "napping and dementia": {
    "drop_reason": "watch",
    "first_seen": "2026-10-22",
@@ -33376,6 +34609,25 @@
    ],
    "status": "dropped",
    "term": "national first responders day"
+  },
+  "national sandwich day": {
+   "drop_reason": "noise",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 10000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "national sandwich day"
   },
   "national tight end day": {
    "drop_reason": "noise",
@@ -33506,6 +34758,25 @@
    ],
    "status": "pending",
    "term": "nationwide lunchmeat listeria recall"
+  },
+  "nationwide olmesartan blood pressure medication recall pills failed quality test": {
+   "drop_reason": null,
+   "first_seen": "2026-11-03",
+   "idea": "2026-11-01-amlodipine-recall-what-blood-pressure-patients-sho",
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": 75,
+     "profile": "daily-pipeline",
+     "score": 73,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "kept",
+   "term": "Nationwide olmesartan (blood pressure medication) recall — pills failed quality test"
   },
   "native hawaiians": {
    "drop_reason": "unverifiable",
@@ -34482,6 +35753,25 @@
    "status": "dropped",
    "term": "nicki minaj citizenship"
   },
+  "nicolas cage": {
+   "drop_reason": "celebrity-only",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 50000,
+     "source": "wide",
+     "stage": "breakout"
+    }
+   ],
+   "status": "dropped",
+   "term": "nicolas cage"
+  },
   "nidhi razdan": {
    "drop_reason": "celebrity-only",
    "first_seen": "2026-10-31",
@@ -34633,6 +35923,25 @@
    ],
    "status": "dropped",
    "term": "nikita kucherov"
+  },
+  "no sugar added snacks": {
+   "drop_reason": "too-thin",
+   "first_seen": "2026-11-02",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-02",
+   "sightings": [
+    {
+     "date": "2026-11-02",
+     "opportunity": 70,
+     "profile": "nutrition",
+     "score": 52,
+     "source": "radar",
+     "stage": "watch"
+    }
+   ],
+   "status": "dropped",
+   "term": "no sugar added snacks"
   },
   "no7 beauty products": {
    "drop_reason": null,
@@ -35804,6 +37113,25 @@
    "status": "dropped",
    "term": "ofrenda"
   },
+  "ohio election results": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 10000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "ohio election results"
+  },
   "ohio powerball winners october 2026": {
    "drop_reason": "noise",
    "first_seen": "2026-10-29",
@@ -35900,6 +37228,25 @@
    ],
    "status": "pending",
    "term": "old word for favor rhymes with toon"
+  },
+  "olmesartan": {
+   "drop_reason": null,
+   "first_seen": "2026-11-03",
+   "idea": "2026-11-01-amlodipine-recall-what-blood-pressure-patients-sho",
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 200000,
+     "source": "wide",
+     "stage": "breakout"
+    }
+   ],
+   "status": "kept",
+   "term": "olmesartan"
   },
   "olympic style weightlifting": {
    "drop_reason": null,
@@ -36775,6 +38122,25 @@
    "status": "pending",
    "term": "parenting wellness infoguide famparentlife"
   },
+  "paris jackson": {
+   "drop_reason": "celebrity-only",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 20000,
+     "source": "wide",
+     "stage": "breakout"
+    }
+   ],
+   "status": "dropped",
+   "term": "paris jackson"
+  },
   "paris masters": {
    "drop_reason": "noise",
    "first_seen": "2026-11-02",
@@ -37520,6 +38886,25 @@
    "status": "pending",
    "term": "pet nutrition alliance"
   },
+  "peter thomas roth acne spot and area treatment": {
+   "drop_reason": "noise",
+   "first_seen": "2026-11-02",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-02",
+   "sightings": [
+    {
+     "date": "2026-11-02",
+     "opportunity": 89,
+     "profile": "beauty",
+     "score": 66,
+     "source": "radar",
+     "stage": "breakout"
+    }
+   ],
+   "status": "dropped",
+   "term": "peter thomas roth acne spot and area treatment"
+  },
   "pew research survey on us public attitudes toward ai in healthcare decision making": {
    "drop_reason": null,
    "first_seen": "2026-11-01",
@@ -37850,7 +39235,7 @@
    "first_seen": "2026-10-30",
    "idea": null,
    "judged_on": "2026-10-30",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-11-02",
    "sightings": [
     {
      "date": "2026-10-30",
@@ -37859,6 +39244,14 @@
      "score": null,
      "source": "rising",
      "stage": "rising"
+    },
+    {
+     "date": "2026-11-02",
+     "opportunity": 89,
+     "profile": "fitness",
+     "score": 65,
+     "source": "radar",
+     "stage": "breakout"
     }
    ],
    "status": "dropped",
@@ -37901,6 +39294,25 @@
    ],
    "status": "pending",
    "term": "Plastics and Preterm Birth: What Parents Need to Know"
+  },
+  "playstation store black friday 2026": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 10000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "playstation store black friday 2026"
   },
   "pltr stock": {
    "drop_reason": "off-beat",
@@ -37996,6 +39408,25 @@
    ],
    "status": "dropped",
    "term": "poland"
+  },
+  "polling place": {
+   "drop_reason": "navigational",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 20000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "polling place"
   },
   "pollo asado chipotle nutrition": {
    "drop_reason": null,
@@ -39783,6 +41214,25 @@
    "status": "pending",
    "term": "retatrutide vs semaglutide"
   },
+  "retired nfl linemen show high risk of arterial plaque independent aha linked study": {
+   "drop_reason": null,
+   "first_seen": "2026-11-03",
+   "idea": "2026-11-03-beyond-cte-retired-nfl-linemen-show-a-high-risk-of",
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": 70,
+     "profile": "daily-pipeline",
+     "score": 64,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "kept",
+   "term": "Retired NFL linemen show high risk of arterial plaque — independent AHA-linked study"
+  },
   "retracted chinese cancer therapy timing study what retraction means for patients and science": {
    "drop_reason": null,
    "first_seen": "2026-06-29",
@@ -39918,6 +41368,25 @@
    "status": "pending",
    "term": "RFK Jr.'s $700 Million Mental Health Announcement: What the Grants Actually Are"
   },
+  "rhabdomyolysis": {
+   "drop_reason": null,
+   "first_seen": "2026-11-03",
+   "idea": "2026-11-03-a-24-year-old-dies-after-her-first-nyc-marathon-an",
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 200000,
+     "source": "wide",
+     "stage": "breakout"
+    }
+   ],
+   "status": "kept",
+   "term": "rhabdomyolysis"
+  },
   "rhonda voskuhl brain fog advice": {
    "drop_reason": null,
    "first_seen": "2026-10-29",
@@ -39961,7 +41430,7 @@
    "first_seen": "2026-10-31",
    "idea": "2026-10-29-hhs-opens-the-door-to-unapproved-wellness-peptides",
    "judged_on": "2026-10-31",
-   "last_seen": "2026-10-31",
+   "last_seen": "2026-11-02",
    "sightings": [
     {
      "date": "2026-10-31",
@@ -39969,6 +41438,14 @@
      "profile": "trending-now",
      "score": 100000,
      "source": "wide",
+     "stage": "breakout"
+    },
+    {
+     "date": "2026-11-02",
+     "opportunity": 89,
+     "profile": "beauty",
+     "score": 66,
+     "source": "radar",
      "stage": "breakout"
     }
    ],
@@ -41194,6 +42671,25 @@
    "status": "pending",
    "term": "sean hannity health issues"
   },
+  "selena gomez demi lovato rare beauty": {
+   "drop_reason": "celebrity-only",
+   "first_seen": "2026-11-02",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-02",
+   "sightings": [
+    {
+     "date": "2026-11-02",
+     "opportunity": 89,
+     "profile": "beauty",
+     "score": 66,
+     "source": "radar",
+     "stage": "breakout"
+    }
+   ],
+   "status": "dropped",
+   "term": "selena gomez demi lovato rare beauty"
+  },
   "selena gomez mental health": {
    "drop_reason": null,
    "first_seen": "2026-08-20",
@@ -41565,7 +43061,7 @@
    "first_seen": "2026-10-30",
    "idea": null,
    "judged_on": "2026-10-30",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-11-02",
    "sightings": [
     {
      "date": "2026-10-30",
@@ -41574,6 +43070,14 @@
      "score": null,
      "source": "rising",
      "stage": "rising"
+    },
+    {
+     "date": "2026-11-02",
+     "opportunity": 89,
+     "profile": "fitness",
+     "score": 61,
+     "source": "radar",
+     "stage": "emerging"
     }
    ],
    "status": "dropped",
@@ -41990,7 +43494,7 @@
    "first_seen": "2026-10-28",
    "idea": null,
    "judged_on": "2026-10-28",
-   "last_seen": "2026-10-28",
+   "last_seen": "2026-11-03",
    "sightings": [
     {
      "date": "2026-10-28",
@@ -41999,6 +43503,14 @@
      "score": 5000,
      "source": "wide",
      "stage": "rising"
+    },
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 100000,
+     "source": "wide",
+     "stage": "breakout"
     }
    ],
    "status": "dropped",
@@ -42553,6 +44065,25 @@
    ],
    "status": "dropped",
    "term": "social media"
+  },
+  "social security payments": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 10000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "social security payments"
   },
   "sofi stock": {
    "drop_reason": "off-beat",
@@ -43629,11 +45160,11 @@
    "term": "STAT Investigation: GLP-1 Online Prescriptions — Fast, Easy, Low Oversight"
   },
   "stc wellness city": {
-   "drop_reason": null,
+   "drop_reason": "noise",
    "first_seen": "2026-06-04",
    "idea": null,
-   "judged_on": null,
-   "last_seen": "2026-10-07",
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
    "sightings": [
     {
      "date": "2026-06-04",
@@ -43778,9 +45309,17 @@
      "score": null,
      "source": "rising",
      "stage": "rising"
+    },
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
     }
    ],
-   "status": "pending",
+   "status": "dropped",
    "term": "stc wellness city"
   },
   "steam free games october 2026": {
@@ -44675,7 +46214,7 @@
    "first_seen": "2026-10-29",
    "idea": "2026-10-25-snap-changes-explainer-for-omaha-families",
    "judged_on": "2026-10-29",
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-03",
    "sightings": [
     {
      "date": "2026-10-29",
@@ -44711,6 +46250,22 @@
     },
     {
      "date": "2026-11-02",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    },
+    {
+     "date": "2026-11-02",
+     "opportunity": 89,
+     "profile": "nutrition",
+     "score": 66,
+     "source": "radar",
+     "stage": "breakout"
+    },
+    {
+     "date": "2026-11-03",
      "opportunity": null,
      "profile": "daily-signals",
      "score": null,
@@ -44925,6 +46480,25 @@
    ],
    "status": "pending",
    "term": "talarico mental health"
+  },
+  "talarico vs paxton polls": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 50000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "talarico vs paxton polls"
   },
   "talerico mental health": {
    "drop_reason": null,
@@ -45542,6 +47116,44 @@
    "status": "pending",
    "term": "terry bradshaw depression"
   },
+  "texas governor race": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 20000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "texas governor race"
+  },
+  "texas polls": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 10000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "texas polls"
+  },
   "texas roadhouse": {
    "drop_reason": "noise",
    "first_seen": "2026-10-27",
@@ -45579,6 +47191,25 @@
    ],
    "status": "dropped",
    "term": "texas roadhouse steak complaint kenneth card"
+  },
+  "texas senate race": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 100000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "texas senate race"
   },
   "thanksgiving 2026": {
    "drop_reason": "navigational",
@@ -45952,11 +47583,11 @@
    "term": "the voice elimination episode kelly clarkson"
   },
   "the wellness company emergency kit": {
-   "drop_reason": "watch",
+   "drop_reason": null,
    "first_seen": "2026-08-21",
-   "idea": null,
-   "judged_on": "2026-10-31",
-   "last_seen": "2026-10-31",
+   "idea": "2026-11-03-is-it-real-the-prescription-medical-emergency-kit",
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
    "sightings": [
     {
      "date": "2026-08-21",
@@ -45989,17 +47620,25 @@
      "score": null,
      "source": "rising",
      "stage": "rising"
+    },
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
     }
    ],
-   "status": "held",
+   "status": "kept",
    "term": "the wellness company emergency kit"
   },
   "the wellness company medical emergency kit": {
-   "drop_reason": "watch",
+   "drop_reason": null,
    "first_seen": "2026-08-21",
-   "idea": null,
-   "judged_on": "2026-11-02",
-   "last_seen": "2026-11-02",
+   "idea": "2026-11-03-is-it-real-the-prescription-medical-emergency-kit",
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
    "sightings": [
     {
      "date": "2026-08-21",
@@ -46040,9 +47679,17 @@
      "score": null,
      "source": "rising",
      "stage": "rising"
+    },
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
     }
    ],
-   "status": "held",
+   "status": "kept",
    "term": "the wellness company medical emergency kit"
   },
   "thehealthyprimate org empowering wellness": {
@@ -46549,6 +48196,25 @@
    "status": "dropped",
    "term": "tom jones postpones california concerts"
   },
+  "tony butala": {
+   "drop_reason": "celebrity-only",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 10000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "tony butala"
+  },
   "too ugly to marry hidden beauty": {
    "drop_reason": null,
    "first_seen": "2026-10-12",
@@ -46613,6 +48279,25 @@
    ],
    "status": "pending",
    "term": "top tourist attractions in paris"
+  },
+  "tornado warning": {
+   "drop_reason": "noise",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 200000,
+     "source": "wide",
+     "stage": "breakout"
+    }
+   ],
+   "status": "dropped",
+   "term": "tornado warning"
   },
   "tornado watch": {
    "drop_reason": "noise",
@@ -47587,6 +49272,25 @@
    ],
    "status": "pending",
    "term": "united states secretary of health and human services"
+  },
+  "unitypoint health iowa lutheran hospital": {
+   "drop_reason": "navigational",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "unitypoint health iowa lutheran hospital"
   },
   "university health": {
    "drop_reason": null,
@@ -48858,6 +50562,25 @@
    "status": "dropped",
    "term": "voo stock"
   },
+  "vote near me": {
+   "drop_reason": "navigational",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 10000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "vote near me"
+  },
   "voting": {
    "drop_reason": "off-beat",
    "first_seen": "2026-11-02",
@@ -48896,6 +50619,25 @@
    "status": "dropped",
    "term": "voting day 2026"
   },
+  "voting locations near me": {
+   "drop_reason": "navigational",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 50000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "voting locations near me"
+  },
   "voting near me": {
    "drop_reason": "navigational",
    "first_seen": "2026-11-02",
@@ -48914,6 +50656,44 @@
    ],
    "status": "dropped",
    "term": "voting near me"
+  },
+  "voting results": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 100000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "voting results"
+  },
+  "voyager 1": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 10000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "voyager 1"
   },
   "vti": {
    "drop_reason": "off-beat",
@@ -49496,11 +51276,11 @@
    "term": "weight loss surgery prices"
   },
   "weightlifting area": {
-   "drop_reason": null,
+   "drop_reason": "noise",
    "first_seen": "2026-08-03",
    "idea": null,
-   "judged_on": null,
-   "last_seen": "2026-10-05",
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-02",
    "sightings": [
     {
      "date": "2026-08-03",
@@ -49525,17 +51305,25 @@
      "score": 66,
      "source": "radar",
      "stage": "emerging"
+    },
+    {
+     "date": "2026-11-02",
+     "opportunity": 89,
+     "profile": "fitness",
+     "score": 66,
+     "source": "radar",
+     "stage": "emerging"
     }
    ],
-   "status": "pending",
+   "status": "dropped",
    "term": "weightlifting area"
   },
   "weightlifting gyms near me": {
-   "drop_reason": null,
+   "drop_reason": "navigational",
    "first_seen": "2026-09-07",
    "idea": null,
-   "judged_on": null,
-   "last_seen": "2026-10-05",
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-02",
    "sightings": [
     {
      "date": "2026-09-07",
@@ -49552,9 +51340,17 @@
      "score": 60,
      "source": "radar",
      "stage": "emerging"
+    },
+    {
+     "date": "2026-11-02",
+     "opportunity": 89,
+     "profile": "fitness",
+     "score": 66,
+     "source": "radar",
+     "stage": "emerging"
     }
    ],
-   "status": "pending",
+   "status": "dropped",
    "term": "weightlifting gyms near me"
   },
   "weil": {
@@ -49946,6 +51742,25 @@
    ],
    "status": "pending",
    "term": "wellness company"
+  },
+  "wellness company emergency kit": {
+   "drop_reason": null,
+   "first_seen": "2026-11-03",
+   "idea": "2026-11-03-is-it-real-the-prescription-medical-emergency-kit",
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    }
+   ],
+   "status": "kept",
+   "term": "wellness company emergency kit"
   },
   "wellness darties": {
    "drop_reason": null,
@@ -50597,6 +52412,25 @@
    "status": "kept",
    "term": "what are the symptoms of menopause after a partial hysterectomy"
   },
+  "what are we voting for today": {
+   "drop_reason": "navigational",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 20000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "what are we voting for today"
+  },
   "what can you drink while intermittent fasting": {
    "drop_reason": null,
    "first_seen": "2026-10-13",
@@ -50693,6 +52527,44 @@
    ],
    "status": "pending",
    "term": "what do harmful bacteria do in the gut microbiome?"
+  },
+  "what do i need to bring to vote": {
+   "drop_reason": "navigational",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 100000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "what do i need to bring to vote"
+  },
+  "what do i need to vote": {
+   "drop_reason": "navigational",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 10000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "what do i need to vote"
   },
   "what does rpe stand for in weightlifting": {
    "drop_reason": null,
@@ -51389,6 +53261,25 @@
    "status": "pending",
    "term": "what should food workers do to prevent chemical hazards from contaminating food"
   },
+  "what time does voting close": {
+   "drop_reason": "navigational",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 50000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "what time does voting close"
+  },
   "what time is the ballon d or ceremony": {
    "drop_reason": "navigational",
    "first_seen": "2026-10-26",
@@ -51464,6 +53355,25 @@
    ],
    "status": "pending",
    "term": "What to know before joining a clinical trial"
+  },
+  "whats on my ballot 2026": {
+   "drop_reason": "navigational",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 50000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "whats on my ballot 2026"
   },
   "when does bloating from period go away": {
    "drop_reason": "too-thin",
@@ -51703,6 +53613,25 @@
    "status": "dropped",
    "term": "where can i vote"
   },
+  "where do i vote today": {
+   "drop_reason": "navigational",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 50000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "where do i vote today"
+  },
   "where to vote": {
    "drop_reason": "navigational",
    "first_seen": "2026-10-30",
@@ -51729,6 +53658,25 @@
    ],
    "status": "dropped",
    "term": "where to vote"
+  },
+  "where to vote in dc": {
+   "drop_reason": "navigational",
+   "first_seen": "2026-11-03",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "sightings": [
+    {
+     "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "trending-now",
+     "score": 10000,
+     "source": "wide",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "where to vote in dc"
   },
   "which eggs are recalled": {
    "drop_reason": null,
@@ -52004,6 +53952,25 @@
    "status": "dropped",
    "term": "who won the world series 2026"
   },
+  "whole foods ashwagandha capsules recall": {
+   "drop_reason": null,
+   "first_seen": "2026-11-02",
+   "idea": "2026-11-03-whole-foods-ashwagandha-capsules-recalled-what-s-a",
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-02",
+   "sightings": [
+    {
+     "date": "2026-11-02",
+     "opportunity": 89,
+     "profile": "nutrition",
+     "score": 66,
+     "source": "radar",
+     "stage": "breakout"
+    }
+   ],
+   "status": "kept",
+   "term": "whole foods ashwagandha capsules recall"
+  },
   "whole foods cabricharme cheese recall": {
    "drop_reason": null,
    "first_seen": "2026-09-14",
@@ -52164,6 +54131,25 @@
    "status": "dropped",
    "term": "whole foods thanksgiving"
   },
+  "whole foods thanksgiving catering": {
+   "drop_reason": "navigational",
+   "first_seen": "2026-11-02",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-02",
+   "sightings": [
+    {
+     "date": "2026-11-02",
+     "opportunity": 62,
+     "profile": "nutrition",
+     "score": 53,
+     "source": "radar",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "whole foods thanksgiving catering"
+  },
   "whole foods thanksgiving turkey": {
    "drop_reason": "navigational",
    "first_seen": "2026-10-26",
@@ -52182,6 +54168,44 @@
    ],
    "status": "dropped",
    "term": "whole foods thanksgiving turkey"
+  },
+  "whole foods turkey": {
+   "drop_reason": "navigational",
+   "first_seen": "2026-11-02",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-02",
+   "sightings": [
+    {
+     "date": "2026-11-02",
+     "opportunity": 60,
+     "profile": "nutrition",
+     "score": 56,
+     "source": "radar",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "whole foods turkey"
+  },
+  "whole foods wine tasting": {
+   "drop_reason": "navigational",
+   "first_seen": "2026-11-02",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-02",
+   "sightings": [
+    {
+     "date": "2026-11-02",
+     "opportunity": 89,
+     "profile": "nutrition",
+     "score": 66,
+     "source": "radar",
+     "stage": "emerging"
+    }
+   ],
+   "status": "dropped",
+   "term": "whole foods wine tasting"
   },
   "whos running for governor of texas": {
    "drop_reason": "off-beat",
@@ -52226,7 +54250,7 @@
    "first_seen": "2026-10-29",
    "idea": "2026-10-29-hhs-opens-the-door-to-unapproved-wellness-peptides",
    "judged_on": "2026-10-29",
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-03",
    "sightings": [
     {
      "date": "2026-10-29",
@@ -52262,6 +54286,14 @@
     },
     {
      "date": "2026-11-02",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    },
+    {
+     "date": "2026-11-03",
      "opportunity": null,
      "profile": "daily-signals",
      "score": null,
@@ -53325,6 +55357,25 @@
    ],
    "status": "pending",
    "term": "yuaia haircare"
+  },
+  "zamaya fitness resort": {
+   "drop_reason": "noise",
+   "first_seen": "2026-11-02",
+   "idea": null,
+   "judged_on": "2026-11-03",
+   "last_seen": "2026-11-02",
+   "sightings": [
+    {
+     "date": "2026-11-02",
+     "opportunity": 89,
+     "profile": "fitness",
+     "score": 66,
+     "source": "radar",
+     "stage": "breakout"
+    }
+   ],
+   "status": "dropped",
+   "term": "zamaya fitness resort"
   },
   "zeke emanuel ice cream wellness": {
    "drop_reason": null,
