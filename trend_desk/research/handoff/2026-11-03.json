@@ -1,0 +1,252 @@
+{
+ "date": "2026-11-03",
+ "ideas": [
+  {
+   "id": "rd-2026-11-03-when-anti-climate-populism-rises-consumer-brands-q",
+   "desk": "research",
+   "title": "When anti-climate populism rises, consumer brands quietly drop green packaging, and the 'values-driven' sustainability pledge turns out to track politics",
+   "created": "2026-11-03",
+   "route": "pitch",
+   "speed": "online 26 days",
+   "beat": "marketing and AI / business of sustainability",
+   "angle": "Using the 2017 US Paris Agreement exit as a natural experiment across a global sample of new packaged-goods launches, firms more exposed to anti-climate populism cut eco-friendly packaging on later launches. Local institutions (economic freedom, tighter cultures) blunted the retreat. The story is greenhushing with receipts: brand sustainability follows the political weather, not only shoppers.",
+   "why_now": "Online 26 days and uncovered. The US has exited Paris a second time and corporate ESG retreat is a live trade-press theme, so a study that measures what a past exit did to real packaging decisions works as a forecast.",
+   "is_it_real": "Reasonably solid for business research: an A*-journal difference-in-differences on real product-launch data, not a survey of intentions. The digest calls it a 'field experiment'. It is a quasi-experiment on archival data, so there is no randomization. It looks at one policy shock and only at packaging on new launches, not at a firm's whole footprint, and it measured no consumer response. Phrase it as 'linked to' or 'followed', not 'caused'.",
+   "evidence_strength": "moderate",
+   "other_peg": "The second US withdrawal from the Paris Agreement (announced January 2025, effective a year later; pitch agents should confirm the date) and the wider corporate ESG pullback",
+   "audience": "trade",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "W7214508893"
+   ],
+   "studies": [
+    {
+     "pmid": "W7214508893",
+     "doi": "10.1007/s11747-026-01211-y",
+     "journal": "Journal of the Academy of Marketing Science",
+     "headline": "When populism rises, green packaging quietly disappears",
+     "pubdate": "2026 Oct 8",
+     "days_online": 26,
+     "date_verified": true,
+     "digests": [
+      "Marketing research: public relations & reputation"
+     ],
+     "score": 9.5,
+     "caveats": "Observational quasi-experiment rather than a randomized design; centers on one policy shock in one country and on packaging choices in new launches, which is a narrow slice of sustainability behavior; no consumer response measured.",
+     "fact_check_note": "✅ Accurate: Design (quasi-natural experiment, difference-in-differences, global CPG launch sample), direction of effect, and both moderators (economic freedom, cultural tightness) are reported faithfully; caveats correctly note the observational design and absence of consumer outcomes.",
+     "coverage": "No coverage found",
+     "flags": [
+      "observational"
+     ],
+     "openalex": true,
+     "evidence_type": "field experiment"
+    }
+   ],
+   "evidence": [
+    "https://openalex.org/W7214508893",
+    "https://doi.org/10.1007/s11747-026-01211-y"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "rd-2026-11-03-cannabis-for-parkinson-s-seven-placebo-controlled",
+   "desk": "research",
+   "title": "Cannabis for Parkinson's: seven placebo-controlled trials found no clear benefit, and about four times the risk of confusion",
+   "created": "2026-11-03",
+   "route": "roundup",
+   "speed": "online 3 days",
+   "beat": "aging, body and metabolism",
+   "angle": "CBD and cannabis products are marketed hard to people with Parkinson's. Pooled randomized trials showed no edge over placebo on motor symptoms, mood, cognition or quality of life, but confusion (RR 4.44) and dizziness (RR 2.78) were more common. That matters for people who already fall easily. Caveat in a clause: the trials were few and small, so 'not shown to help' is not 'proven useless'.",
+   "why_now": "Published 3 days ago (date verified). Marshall Faulk's Parkinson's disclosure has search interest in Parkinson's this week, and a short 'what the evidence says about the CBD you're being sold' item fits next to it.",
+   "is_it_real": "A meta-analysis of seven randomized placebo-controlled trials is the right design for this question, but the total sample is small, follow-up is short, and products and doses differ. The harm signal (risk ratios for confusion and dizziness) is the firmest part. The 'no benefit' finding is imprecise, not a definitive negative.",
+   "evidence_strength": "moderate",
+   "other_peg": "Marshall Faulk's Parkinson's disclosure (Trend Desk roundup idea this week)",
+   "audience": "older adults",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42966680"
+   ],
+   "studies": [
+    {
+     "pmid": "42966680",
+     "doi": "10.1016/j.neurol.2026.10.009",
+     "journal": "Rev Neurol (Paris)",
+     "headline": "Cannabis products for Parkinson's: meta-analysis finds no clear benefit and a four-fold risk of confusion",
+     "pubdate": "2026 Oct 31",
+     "days_online": 3,
+     "date_verified": true,
+     "digests": [
+      "Senior Living — New This Week"
+     ],
+     "score": 7,
+     "caveats": "Only seven trials with few participants total, short follow-up, heterogeneous products and doses, and imprecise estimates — an absence of demonstrated benefit is not proof that no benefit exists.",
+     "fact_check_note": "⚠️ Minor issues",
+     "coverage": "Not widely covered ✓ (Google News checked)",
+     "flags": []
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42966680/",
+    "https://doi.org/10.1016/j.neurol.2026.10.009"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "rd-2026-11-03-want-to-die-at-home-family-willing-to-care-for-you",
+   "desk": "research",
+   "title": "Want to die at home? Family willing to care for you wasn't linked to it. Doctor and nurse home visits were",
+   "created": "2026-11-03",
+   "route": "roundup",
+   "speed": "online 3 days",
+   "beat": "aging / end-of-life care",
+   "angle": "A review of 36 studies found that informal family care alone was not tied to a higher chance of dying at home, and some studies pointed toward more hospital deaths. Physician and nurse home visits were tied to more home deaths. The useful takeaway: if dying at home matters, ask early whether clinical home visits are available, because family devotion without clinical backup often ends in a transfer.",
+   "why_now": "Online 3 days (date verified). It goes with Research Desk's recurring end-of-life thread (advance directives, hospice) and with holiday-season family conversations about care plans.",
+   "is_it_real": "A systematic review of mostly observational studies, so these are associations: families who end up caring alone may be dealing with sicker patients. Screening and quality appraisal were partly AI-assisted (85% agreement with humans), and fewer than half the studies met all quality criteria. It's a Dutch-led review of international studies, so how this maps onto US hospice should be stated as uncertain.",
+   "evidence_strength": "moderate",
+   "other_peg": "",
+   "audience": "both",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42966200"
+   ],
+   "studies": [
+    {
+     "pmid": "42966200",
+     "doi": "10.1016/j.gerinurse.2026.104417",
+     "journal": "Geriatr Nurs",
+     "headline": "Having family at the bedside didn't make dying at home more likely — professional home visits did",
+     "pubdate": "2026 Oct 31",
+     "days_online": 3,
+     "date_verified": true,
+     "digests": [
+      "Senior Living — New This Week"
+     ],
+     "score": 7,
+     "caveats": "Systematic review of mostly observational studies — cannot establish causation; screening and quality appraisal were AI-assisted (85.2% AI–human agreement), and fewer than half of studies met all seven quality criteria.",
+     "fact_check_note": "⚠️ Minor issues",
+     "coverage": "Not widely covered ✓ (Google News checked)",
+     "flags": [
+      "observational"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42966200/",
+    "https://doi.org/10.1016/j.gerinurse.2026.104417"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "rd-2026-11-03-the-good-mood-after-a-team-win-fades-fast-the-team",
+   "desk": "research",
+   "title": "The good mood after a team win fades fast. The team conflict doesn't",
+   "created": "2026-11-03",
+   "route": "roundup",
+   "speed": "online 29 days",
+   "beat": "work and careers",
+   "angle": "A meta-analysis of longitudinal studies covering about 11,000 teams on average found team mood shifts most easily, while conflict is the most persistent state once it sets in. Performance also feeds back into how the team feels and works later. Relatable takeaway: deal with friction early, and don't judge a team by one upbeat pulse survey.",
+   "why_now": "Online 29 days, A*-journal meta-analysis, uncovered. A quick, relatable work item for the Friday issue.",
+   "is_it_real": "It's a large synthesis, but of correlational studies, so the 'what changes what' ordering comes from cross-lagged modeling, not experiments. Results also depend on the time gaps the original researchers happened to pick. Say 'tends to persist', not 'proven to'.",
+   "evidence_strength": "moderate",
+   "other_peg": "",
+   "audience": "professionals",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "W7220392932"
+   ],
+   "studies": [
+    {
+     "pmid": "W7220392932",
+     "doi": "10.1037/apl0001407",
+     "journal": "Journal of Applied Psychology",
+     "headline": "Teams are stickier than we think — and conflict is the stickiest thing of all",
+     "pubdate": "2026 Oct 5",
+     "days_online": 29,
+     "date_verified": true,
+     "digests": [
+      "Career psychology: team dynamics & collaboration"
+     ],
+     "score": 9.5,
+     "caveats": "Meta-analysis of correlational longitudinal studies, so causality is inferred from cross-lagged modeling rather than experiments; results depend on the time lags that original researchers happened to choose, which the authors show moderate the findings; heterogeneous measures across hundreds of samples.",
+     "fact_check_note": "⚠️ Minor issues: Findings and numbers match the abstract; one prescriptive story angle runs slightly ahead of correlational cross-lagged evidence.",
+     "coverage": "No coverage found",
+     "flags": [],
+     "openalex": true,
+     "evidence_type": "meta-analysis"
+    }
+   ],
+   "evidence": [
+    "https://openalex.org/W7220392932",
+    "https://doi.org/10.1037/apl0001407"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "rd-2026-11-03-switching-jobs-with-an-old-teammate-makes-you-look",
+   "desk": "research",
+   "title": "Switching jobs with an old teammate makes you look good fast, and makes your new team worse, at least in the NBA",
+   "created": "2026-11-03",
+   "route": "roundup",
+   "speed": "online 25 days",
+   "beat": "work and careers",
+   "angle": "Players who moved to a new team with a former teammate outperformed solo arrivals, more so the longer they'd played together, but the teams that took on these pairs did worse than teams adding solo players. The penalty seemed to fade over time. A fun, slightly uncomfortable line about lift-out hiring and bringing your work buddy along.",
+   "why_now": "Online 25 days, Organization Science, uncovered. A light work item with a sports hook.",
+   "is_it_real": "Archival NBA performance data plus interviews, so it's non-experimental and selection is possible (which pairs move, and to which teams). Pro basketball measures performance unusually well but is an odd stand-in for office work. The caveat 'in pro basketball data' has to ride in the sentence.",
+   "evidence_strength": "thin",
+   "other_peg": "",
+   "audience": "general",
+   "confidence": "low",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "W7221144841"
+   ],
+   "studies": [
+    {
+     "pmid": "W7221144841",
+     "doi": "10.1287/orsc.2024.18867",
+     "journal": "Organization Science",
+     "headline": "Moving to a new job with an old teammate helps you — and hurts your new team",
+     "pubdate": "2026 Oct 9",
+     "days_online": 25,
+     "date_verified": true,
+     "digests": [
+      "Career psychology: team dynamics & collaboration"
+     ],
+     "score": 8.5,
+     "caveats": "Archival data from a single, highly atypical setting (professional sports); performance measures and team dynamics in the NBA may not generalize to knowledge work; non-experimental, so selection effects (which players move together, and to which teams) can't be fully ruled out.",
+     "fact_check_note": "⚠️ Minor issues: Faithful to the abstract overall; one small mix-up in which analysis produced which result.",
+     "coverage": "No coverage found",
+     "flags": [],
+     "openalex": true,
+     "evidence_type": "archival data"
+    }
+   ],
+   "evidence": [
+    "https://openalex.org/W7221144841",
+    "https://doi.org/10.1287/orsc.2024.18867"
+   ],
+   "term_details": [],
+   "status": "routed"
+  }
+ ],
+ "dropped": {
+  "too-thin": 9,
+  "specialist-only": 9,
+  "caveats-undo-it": 2,
+  "stale": 1,
+  "already-covered": 1
+ }
+}

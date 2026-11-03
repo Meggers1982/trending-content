@@ -1,6 +1,86 @@
 {
- "updated": "2026-11-02",
+ "updated": "2026-11-03",
  "items": [
+  {
+   "id": "rd-2026-11-03-cannabis-for-parkinson-s-seven-placebo-controlled",
+   "title": "Cannabis for Parkinson's: seven placebo-controlled trials found no clear benefit, and about four times the risk of confusion",
+   "created": "2026-11-03",
+   "angle": "CBD and cannabis products are marketed hard to people with Parkinson's. Pooled randomized trials showed no edge over placebo on motor symptoms, mood, cognition or quality of life, but confusion (RR 4.44) and dizziness (RR 2.78) were more common. That matters for people who already fall easily. Caveat in a clause: the trials were few and small, so 'not shown to help' is not 'proven useless'.",
+   "why_now": "Published 3 days ago (date verified). Marshall Faulk's Parkinson's disclosure has search interest in Parkinson's this week, and a short 'what the evidence says about the CBD you're being sold' item fits next to it.",
+   "is_it_real": "A meta-analysis of seven randomized placebo-controlled trials is the right design for this question, but the total sample is small, follow-up is short, and products and doses differ. The harm signal (risk ratios for confusion and dizziness) is the firmest part. The 'no benefit' finding is imprecise, not a definitive negative.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42966680/",
+    "https://doi.org/10.1016/j.neurol.2026.10.009"
+   ],
+   "studies": [
+    {
+     "pmid": "42966680",
+     "journal": "Rev Neurol (Paris)",
+     "caveats": "Only seven trials with few participants total, short follow-up, heterogeneous products and doses, and imprecise estimates — an absence of demonstrated benefit is not proof that no benefit exists.",
+     "days_online": 3
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-11-03-want-to-die-at-home-family-willing-to-care-for-you",
+   "title": "Want to die at home? Family willing to care for you wasn't linked to it. Doctor and nurse home visits were",
+   "created": "2026-11-03",
+   "angle": "A review of 36 studies found that informal family care alone was not tied to a higher chance of dying at home, and some studies pointed toward more hospital deaths. Physician and nurse home visits were tied to more home deaths. The useful takeaway: if dying at home matters, ask early whether clinical home visits are available, because family devotion without clinical backup often ends in a transfer.",
+   "why_now": "Online 3 days (date verified). It goes with Research Desk's recurring end-of-life thread (advance directives, hospice) and with holiday-season family conversations about care plans.",
+   "is_it_real": "A systematic review of mostly observational studies, so these are associations: families who end up caring alone may be dealing with sicker patients. Screening and quality appraisal were partly AI-assisted (85% agreement with humans), and fewer than half the studies met all quality criteria. It's a Dutch-led review of international studies, so how this maps onto US hospice should be stated as uncertain.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42966200/",
+    "https://doi.org/10.1016/j.gerinurse.2026.104417"
+   ],
+   "studies": [
+    {
+     "pmid": "42966200",
+     "journal": "Geriatr Nurs",
+     "caveats": "Systematic review of mostly observational studies — cannot establish causation; screening and quality appraisal were AI-assisted (85.2% AI–human agreement), and fewer than half of studies met all seven quality criteria.",
+     "days_online": 3
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-11-03-the-good-mood-after-a-team-win-fades-fast-the-team",
+   "title": "The good mood after a team win fades fast. The team conflict doesn't",
+   "created": "2026-11-03",
+   "angle": "A meta-analysis of longitudinal studies covering about 11,000 teams on average found team mood shifts most easily, while conflict is the most persistent state once it sets in. Performance also feeds back into how the team feels and works later. Relatable takeaway: deal with friction early, and don't judge a team by one upbeat pulse survey.",
+   "why_now": "Online 29 days, A*-journal meta-analysis, uncovered. A quick, relatable work item for the Friday issue.",
+   "is_it_real": "It's a large synthesis, but of correlational studies, so the 'what changes what' ordering comes from cross-lagged modeling, not experiments. Results also depend on the time gaps the original researchers happened to pick. Say 'tends to persist', not 'proven to'.",
+   "evidence": [
+    "https://openalex.org/W7220392932",
+    "https://doi.org/10.1037/apl0001407"
+   ],
+   "studies": [
+    {
+     "pmid": "W7220392932",
+     "journal": "Journal of Applied Psychology",
+     "caveats": "Meta-analysis of correlational longitudinal studies, so causality is inferred from cross-lagged modeling rather than experiments; results depend on the time lags that original researchers happened to choose, which the authors show moderate the findings; heterogeneous measures across hundreds of samples.",
+     "days_online": 29
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-11-03-switching-jobs-with-an-old-teammate-makes-you-look",
+   "title": "Switching jobs with an old teammate makes you look good fast, and makes your new team worse, at least in the NBA",
+   "created": "2026-11-03",
+   "angle": "Players who moved to a new team with a former teammate outperformed solo arrivals, more so the longer they'd played together, but the teams that took on these pairs did worse than teams adding solo players. The penalty seemed to fade over time. A fun, slightly uncomfortable line about lift-out hiring and bringing your work buddy along.",
+   "why_now": "Online 25 days, Organization Science, uncovered. A light work item with a sports hook.",
+   "is_it_real": "Archival NBA performance data plus interviews, so it's non-experimental and selection is possible (which pairs move, and to which teams). Pro basketball measures performance unusually well but is an odd stand-in for office work. The caveat 'in pro basketball data' has to ride in the sentence.",
+   "evidence": [
+    "https://openalex.org/W7221144841",
+    "https://doi.org/10.1287/orsc.2024.18867"
+   ],
+   "studies": [
+    {
+     "pmid": "W7221144841",
+     "journal": "Organization Science",
+     "caveats": "Archival data from a single, highly atypical setting (professional sports); performance measures and team dynamics in the NBA may not generalize to knowledge work; non-experimental, so selection effects (which players move together, and to which teams) can't be fully ruled out.",
+     "days_online": 25
+    }
+   ]
+  },
   {
    "id": "rd-2026-11-02-using-ai-at-work-cost-people-their-boss-s-trust-in",
    "title": "Using AI at work cost people their boss's trust in a set of experiments, unless the company had openly encouraged it",
