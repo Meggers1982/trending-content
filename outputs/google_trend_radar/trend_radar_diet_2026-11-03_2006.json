@@ -1,0 +1,866 @@
+{
+  "run_date": "2026-11-03",
+  "generated_at": "2026-11-03T20:06:52",
+  "topic": "diet",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "diet",
+    "keto diet",
+    "intermittent fasting",
+    "low carb diet",
+    "Mediterranean diet",
+    "weight management",
+    "calorie deficit",
+    "macro tracking",
+    "elimination diet",
+    "anti-inflammatory diet",
+    "diet trends",
+    "diet products",
+    "diet news",
+    "diet for beginners",
+    "diet routine",
+    "diet benefits",
+    "diet ideas",
+    "diet reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 18,
+    "total_reviewed": 80,
+    "total_retained": 2,
+    "total_rejected": 79,
+    "breakouts": 2,
+    "emerging": 0,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "topic": "fad diets",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 71,
+      "emergence_score": 82,
+      "velocity_score": 55,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "Breakout",
+      "latest_interest": 20,
+      "peak_interest": 45,
+      "slope": 20,
+      "acceleration": 0,
+      "seed_terms": [
+        "diet products"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        24,
+        22,
+        24,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        38,
+        28,
+        0,
+        0,
+        0,
+        26,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        32,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        45,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        23,
+        18,
+        26,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        30,
+        0,
+        16,
+        20
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; interest moved from 0 to 20; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    },
+    {
+      "rank": 2,
+      "topic": "18-6 intermittent fasting",
+      "trend_stage": "breakout",
+      "urgency": "today",
+      "radar_score": 66,
+      "emergence_score": 82,
+      "velocity_score": 40,
+      "confidence_score": 75,
+      "saturation_score": 0,
+      "opportunity_score": 89,
+      "confidence": "high",
+      "rising_label": "Breakout",
+      "latest_interest": 0,
+      "peak_interest": 100,
+      "slope": 0,
+      "acceleration": 1,
+      "seed_terms": [
+        "intermittent fasting"
+      ],
+      "discovery_sources": [
+        "rising query"
+      ],
+      "interest_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        100,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tags": {},
+      "why_now": "Google Trends labels it Breakout; interest moved from 0 to 0; found through rising query",
+      "recommended_action": "Prioritize a same-day brief, then validate sources before publishing."
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "keto diet",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "jazz guide for beginners",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "intermittent fasting"
+      ]
+    },
+    {
+      "topic": "which disease may be caused by an unhealthy lifestyle? osteoporosis sickle cell disease huntington’s disease lupus",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet products"
+      ]
+    },
+    {
+      "topic": "list four symptoms of food borne illness that should cause you to consult a doctor.",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet products"
+      ]
+    },
+    {
+      "topic": "which treatment would most likely be used for cardiovascular disease? pacemaker radiation blood transfusions bone marrow transplants",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet products"
+      ]
+    },
+    {
+      "topic": "a serving portion is usually the equivalent to one serving per package or container.",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet products"
+      ]
+    },
+    {
+      "topic": "israel news",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet news"
+      ]
+    },
+    {
+      "topic": "bears news",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet news"
+      ]
+    },
+    {
+      "topic": "prime video",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet news"
+      ]
+    },
+    {
+      "topic": "how to calculate body fat percentage",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "calorie deficit"
+      ]
+    },
+    {
+      "topic": "mifflin st jeor calculator",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "calorie deficit"
+      ]
+    },
+    {
+      "topic": "diet coke mini fridge",
+      "reason": "Off-topic: matched exclusion term 'diet coke'",
+      "seed_terms": [
+        "diet"
+      ]
+    },
+    {
+      "topic": "iran news",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet news"
+      ]
+    },
+    {
+      "topic": "coffee grinder reviews",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet reviews"
+      ]
+    },
+    {
+      "topic": "non hdl cholesterol",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "Mediterranean diet"
+      ]
+    },
+    {
+      "topic": "diet coke advent calendar",
+      "reason": "Off-topic: matched exclusion term 'diet coke'",
+      "seed_terms": [
+        "diet"
+      ]
+    },
+    {
+      "topic": "abc news",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet news"
+      ]
+    },
+    {
+      "topic": "diet coke fridge",
+      "reason": "Off-topic: matched exclusion term 'diet coke'",
+      "seed_terms": [
+        "diet"
+      ]
+    },
+    {
+      "topic": "breitbart news",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet news"
+      ]
+    },
+    {
+      "topic": "duckweed",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "Mediterranean diet"
+      ]
+    },
+    {
+      "topic": "iran war news",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet news"
+      ]
+    },
+    {
+      "topic": "diet coke gift ideas",
+      "reason": "Off-topic: matched exclusion term 'diet coke'",
+      "seed_terms": [
+        "diet ideas"
+      ]
+    },
+    {
+      "topic": "hungryroot reviews",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet reviews"
+      ]
+    },
+    {
+      "topic": "real estate",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet news"
+      ]
+    },
+    {
+      "topic": "pet supplies plus",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "weight management"
+      ]
+    },
+    {
+      "topic": "nbc news",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet news"
+      ]
+    },
+    {
+      "topic": "chewy",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet reviews"
+      ]
+    },
+    {
+      "topic": "cheapest flights to tokyo",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "calorie deficit"
+      ]
+    },
+    {
+      "topic": "tdee calculator free",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "calorie deficit"
+      ]
+    },
+    {
+      "topic": "basal metabolic rate",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "calorie deficit"
+      ]
+    },
+    {
+      "topic": "lentil recipes",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "Mediterranean diet"
+      ]
+    },
+    {
+      "topic": "top tourist attractions in paris",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet reviews"
+      ]
+    },
+    {
+      "topic": "diet coke blanket",
+      "reason": "Off-topic: matched exclusion term 'diet coke'",
+      "seed_terms": [
+        "diet"
+      ]
+    },
+    {
+      "topic": "best time to visit maldives",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet news"
+      ]
+    },
+    {
+      "topic": "carnivore meal ideas",
+      "reason": "Off-topic after expanded seed scan",
+      "seed_terms": [
+        "diet ideas"
+      ]
+    },
+    {
+      "topic": "hills science diet",
+      "reason": "Off-topic: matched exclusion term 'science diet'",
+      "seed_terms": [
+        "diet reviews"
+      ]
+    },
+    {
+      "topic": "diet coke",
+      "reason": "Off-topic: matched exclusion term 'diet coke'",
+      "seed_terms": [
+        "diet"
+      ]
+    },
+    {
+      "topic": "science diet",
+      "reason": "Off-topic: matched exclusion term 'science diet'",
+      "seed_terms": [
+        "diet"
+      ]
+    },
+    {
+      "topic": "is 12 hours enough for intermittent fasting",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "rp diet app reviews",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "tsimane people diet",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "mediterranean diet pros and cons",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "florida weight management program",
+      "reason": "Weak radar score (44)"
+    },
+    {
+      "topic": "mediterranean diet thanksgiving recipes",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "low carb mediterranean diet meal plan",
+      "reason": "Weak radar score (36)"
+    },
+    {
+      "topic": "not losing weight despite calorie deficit",
+      "reason": "Weak radar score (36)"
+    },
+    {
+      "topic": "kirkland weight management dog food",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "how to get into a calorie deficit",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "how to calculate maintenance calories",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "opposite of calorie deficit",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "omad diet benefits",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "low carb breakfast ideas",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "how to figure out your calorie deficit",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "can you grow muscle in a calorie deficit",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "mediterranean diet meal plan for beginners",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "can you still build muscle in a calorie deficit",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "dash diet breakfast ideas",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "harmony diet reviews",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "intermittent fasting reviews",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "is the mediterranean diet good for diabetics",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "mediterranean diet cookbook for beginners",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "500 calorie deficit per day weight loss",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "intermittent fasting explained",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "low carb mediterranean diet",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "low carb foods for weight loss",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "grocery list for mediterranean diet",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "weight loss medication",
+      "reason": "Weak radar score (46)"
+    },
+    {
+      "topic": "migraine elimination diet",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "gluten free diet for beginners",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "carnivore diet meal plan",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "low carb dinner ideas",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "benefits of intermittent fasting",
+      "reason": "Weak radar score (47)"
+    },
+    {
+      "topic": "popcorn on low carb diet",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "easy mediterranean diet recipes for beginners",
+      "reason": "Weak radar score (41)"
+    },
+    {
+      "topic": "diet food",
+      "reason": "Weak radar score (42)"
+    },
+    {
+      "topic": "mediterranean diet",
+      "reason": "Weak radar score (43)"
+    },
+    {
+      "topic": "mediterranean",
+      "reason": "Weak radar score (40)"
+    },
+    {
+      "topic": "healthy diet",
+      "reason": "Weak radar score (37)"
+    },
+    {
+      "topic": "keto diet",
+      "reason": "Weak radar score (36)"
+    }
+  ]
+}
