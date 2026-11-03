@@ -1,0 +1,58 @@
+{
+ "date": "2026-11-03",
+ "ideas": [
+  {
+   "id": "nd-2026-11-03-cms-rewrites-the-rules-for-decertifying-organ-proc",
+   "desk": "news",
+   "title": "CMS rewrites the rules for decertifying organ procurement groups, effective Jan. 4: who's at risk of losing their territory, and whether the changes make it easier for low performers to hang on",
+   "created": "2026-11-03",
+   "route": "pitch",
+   "speed": "released 0 days ago",
+   "beat": "public health policy / Medicare",
+   "angle": "The 2020 OPO rule promised that the worst-performing organ procurement organizations would lose their territories for the first time. This final rule, which lands at the end of that first recertification cycle, rewrites how a service area opens to competition and how decertified OPOs can appeal. The story asks whether the 'flexibility' blunts that accountability, and what it means for people on the transplant waitlist in regions served by bottom-tier OPOs.",
+   "why_now": "Published in the Federal Register Nov. 3, 2026 and effective Jan. 4, 2027, right as the first outcome-based recertification and decertification decisions come due.",
+   "is_it_real": "This is the primary document itself: a CMS final rule at 91 FR 69390-69444 (55 pages), RIN 0938-AU54, docket CMS-2026-0364 / CMS-3409-F. Its abstract says it revises definitions, designation requirements, when a service area opens for competition, and appeals, and that it keeps the donation and transplant outcome measures and the tier structure. Not yet checked: how many OPOs are in the bottom tier this cycle, which regions they serve, and whether the appeals and competition changes actually delay or soften decertification. Those need the rule text and CMS's tier data. The reader-stake figures (waitlist size, deaths on the list) have to come from HRSA/OPTN, not from this item.",
+   "primary_test": "The final rule text at 91 FR 69390 and its comment docket CMS-2026-0364 (including OPO industry and patient-group comments), checked against CMS's published OPO performance tier assessments and SRTR/OPTN donation and transplant data by service area.",
+   "standout": false,
+   "standout_reason": "",
+   "needs_independent_test": false,
+   "other_peg": "Effective date Jan. 4, 2027, and the close of the first 2020-rule recertification cycle.",
+   "audience": "general",
+   "evidence_strength": "moderate",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "keys": [
+    "aw-medicare-and-medicaid-programs-organ-procurement-organizations-conditi"
+   ],
+   "items": [
+    {
+     "key": "aw-medicare-and-medicaid-programs-organ-procurement-organizations-conditi",
+     "kind": "notice",
+     "interested_party": false,
+     "title": "Medicare and Medicaid Programs; Organ Procurement Organizations Conditions for Coverage: Revisions to the Conditions for Coverage",
+     "publisher": "federal-register",
+     "url": "https://www.federalregister.gov/documents/2026/11/03/2026-22381/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to",
+     "released": "2026-11-03",
+     "date_basis": "source date",
+     "days_old": 0,
+     "source": "AgingWire",
+     "summary": "This final rule revises the Conditions for Coverage for Organ Procurement Organizations (OPOs) to clarify outstanding procedural questions and provide additional operational flexibility for OPOs to achieve high performance resulting in the successful procurement, distribution, and transplantation of more life-saving organs. This rule revises definitions, revises the designation requirements for OPOs, clarifies when an OPO's service area is open for competition, and updates the process for appeals. We are committed to holding all OPOs accountable for their performance and this final rule does n"
+    }
+   ],
+   "evidence": [
+    "https://www.federalregister.gov/documents/2026/11/03/2026-22381/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to"
+   ],
+   "term_details": [],
+   "status": "routed"
+  }
+ ],
+ "dropped": {
+  "stale": 20,
+  "already-covered": 2,
+  "too-thin": 1,
+  "corporate-only": 11,
+  "off-beat": 5,
+  "watch": 1
+ }
+}

@@ -1013,6 +1013,217 @@
    "judged_on": "2026-11-02",
    "status": "dropped",
    "reason": "off-beat"
+  },
+  "press-iboss-launches-ai-dlp-to-block-sensitive-data-loss-across-an": {
+   "judged_on": "2026-11-03",
+   "status": "dropped",
+   "reason": "noise",
+   "detail": "product launch"
+  },
+  "aw-medicare-and-medicaid-programs-organ-procurement-organizations-conditi": {
+   "judged_on": "2026-11-03",
+   "status": "kept",
+   "idea": "nd-2026-11-03-cms-rewrites-the-rules-for-decertifying-organ-proc"
+  },
+  "aw-review-of-medicare-data-reveals-potential-new-statistics-on-dementia-d": {
+   "judged_on": "2026-11-03",
+   "status": "dropped",
+   "reason": "stale"
+  },
+  "aw-nih-releases-alzheimer-s-disease-and-related-dementias-research-progre": {
+   "judged_on": "2026-11-03",
+   "status": "dropped",
+   "reason": "stale"
+  },
+  "aw-connect-with-nia-at-aaic-2025": {
+   "judged_on": "2026-11-03",
+   "status": "dropped",
+   "reason": "stale"
+  },
+  "aw-a-d-j-vu-moment-for-women-s-health-research": {
+   "judged_on": "2026-11-03",
+   "status": "dropped",
+   "reason": "already-covered"
+  },
+  "aw-building-ai-in-house-at-europe-s-largest-hospital": {
+   "judged_on": "2026-11-03",
+   "status": "dropped",
+   "reason": "too-thin"
+  },
+  "aw-we-re-hiring-a-development-coordinator": {
+   "judged_on": "2026-11-03",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "aw-a-gene-guiding-brain-cell-growth-may-regulate-alzheimer-s-plaque-size": {
+   "judged_on": "2026-11-03",
+   "status": "dropped",
+   "reason": "stale"
+  },
+  "aw-new-drug-candidate-targeting-synaptic-resilience-well-tolerated-in-alz": {
+   "judged_on": "2026-11-03",
+   "status": "dropped",
+   "reason": "stale"
+  },
+  "aw-south-africa-cash-transfer-program-slowed-cognitive-decline-for-midlif": {
+   "judged_on": "2026-11-03",
+   "status": "dropped",
+   "reason": "stale"
+  },
+  "aw-advance-care-planning-intervention-improved-end-of-life-documentation": {
+   "judged_on": "2026-11-03",
+   "status": "dropped",
+   "reason": "stale"
+  },
+  "aw-difficulty-managing-bills-may-signal-early-dementia": {
+   "judged_on": "2026-11-03",
+   "status": "dropped",
+   "reason": "stale"
+  },
+  "aw-nia-funded-small-business-spotlight-bone-health-technologies-shakes-up": {
+   "judged_on": "2026-11-03",
+   "status": "dropped",
+   "reason": "stale"
+  },
+  "aw-biological-clock-based-on-blood-measurements-predicts-mouse-lifespan-a": {
+   "judged_on": "2026-11-03",
+   "status": "dropped",
+   "reason": "stale"
+  },
+  "aw-nia-statement-on-the-u-s-cost-of-dementia-model-report": {
+   "judged_on": "2026-11-03",
+   "status": "dropped",
+   "reason": "stale"
+  },
+  "aw-senolytic-therapy-shows-subtle-impact-on-age-related-bone-health-in-wo": {
+   "judged_on": "2026-11-03",
+   "status": "dropped",
+   "reason": "stale"
+  },
+  "aw-bright-brain-spots-from-small-blood-vessels-could-help-predict-alzheim": {
+   "judged_on": "2026-11-03",
+   "status": "dropped",
+   "reason": "stale"
+  },
+  "aw-risk-and-future-burden-of-dementia-in-the-united-states": {
+   "judged_on": "2026-11-03",
+   "status": "dropped",
+   "reason": "stale"
+  },
+  "aw-butler-williams-scholars-program-2026": {
+   "judged_on": "2026-11-03",
+   "status": "dropped",
+   "reason": "stale"
+  },
+  "aw-research-training-spotlight-nia-funding-enables-researcher-mentor-to-p": {
+   "judged_on": "2026-11-03",
+   "status": "dropped",
+   "reason": "stale"
+  },
+  "aw-nia-experimental-aging-research-training-course": {
+   "judged_on": "2026-11-03",
+   "status": "dropped",
+   "reason": "stale"
+  },
+  "aw-timeframe-of-8-hour-restricted-eating-irrelevant-to-weight-loss": {
+   "judged_on": "2026-11-03",
+   "status": "dropped",
+   "reason": "stale"
+  },
+  "aw-a-mother-s-x-chromosome-affects-learning-and-memory-in-later-life": {
+   "judged_on": "2026-11-03",
+   "status": "dropped",
+   "reason": "stale"
+  },
+  "aw-scientists-develop-improved-mouse-model-for-studying-systemic-aging-re": {
+   "judged_on": "2026-11-03",
+   "status": "dropped",
+   "reason": "stale"
+  },
+  "press-cepheid-receives-fda-clearance-for-xpert-hemorrhagic-fever-p": {
+   "judged_on": "2026-11-03",
+   "status": "dropped",
+   "reason": "already-covered"
+  },
+  "press-asia-pacific-conference-charts-path-for-cooperation-on-popul": {
+   "judged_on": "2026-11-03",
+   "status": "dropped",
+   "reason": "off-beat"
+  },
+  "press-executive-home-care-calls-for-care-plans-that-support-family": {
+   "judged_on": "2026-11-03",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-integracare-expands-private-home-healthcare-to-winnipeg": {
+   "judged_on": "2026-11-03",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-neurologist-arun-swaminathan-named-pinnacle-professional-mem": {
+   "judged_on": "2026-11-03",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-massage-envy-marks-fifth-year-backing-glamourgals-my-dear-fr": {
+   "judged_on": "2026-11-03",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-palmetto-publishing-releases-new-eldercare-planning-guide-ca": {
+   "judged_on": "2026-11-03",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-lincoln-avenue-communities-breaks-ground-on-affordable-55-ho": {
+   "judged_on": "2026-11-03",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-ziegler-closes-long-term-fha-hud-financing-for-magnolia-cros": {
+   "judged_on": "2026-11-03",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-leap-partners-expands-into-virginia-with-360-plumbing-servic": {
+   "judged_on": "2026-11-03",
+   "status": "dropped",
+   "reason": "off-beat"
+  },
+  "press-pwc-asset-manager-margins-squeezed-as-infrastructure-costs-c": {
+   "judged_on": "2026-11-03",
+   "status": "dropped",
+   "reason": "off-beat"
+  },
+  "press-cboe-joins-challenge-to-cftc-approval-of-single-stock-perpet": {
+   "judged_on": "2026-11-03",
+   "status": "dropped",
+   "reason": "watch"
+  },
+  "press-oneworld-s-incheon-airport-lounge-named-asia-s-best-business": {
+   "judged_on": "2026-11-03",
+   "status": "dropped",
+   "reason": "off-beat"
+  },
+  "press-rider-jet-center-s-hangar-becomes-a-community-gathering-spac": {
+   "judged_on": "2026-11-03",
+   "status": "dropped",
+   "reason": "off-beat"
+  },
+  "press-nordic-brings-edge-ai-to-battery-powered-wi-fi-devices-with": {
+   "judged_on": "2026-11-03",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-virse-connects-brand-and-packaging-workflows-on-one-canvas": {
+   "judged_on": "2026-11-03",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-huawei-s-7th-global-installer-summit-pushes-a-new-home-energ": {
+   "judged_on": "2026-11-03",
+   "status": "dropped",
+   "reason": "corporate-only"
   }
  },
  "ideas": {
@@ -2193,6 +2404,50 @@
    ],
    "term_details": [],
    "status": "routed"
+  },
+  "nd-2026-11-03-cms-rewrites-the-rules-for-decertifying-organ-proc": {
+   "desk": "news",
+   "title": "CMS rewrites the rules for decertifying organ procurement groups, effective Jan. 4: who's at risk of losing their territory, and whether the changes make it easier for low performers to hang on",
+   "created": "2026-11-03",
+   "route": "pitch",
+   "speed": "released 0 days ago",
+   "beat": "public health policy / Medicare",
+   "angle": "The 2020 OPO rule promised that the worst-performing organ procurement organizations would lose their territories for the first time. This final rule, which lands at the end of that first recertification cycle, rewrites how a service area opens to competition and how decertified OPOs can appeal. The story asks whether the 'flexibility' blunts that accountability, and what it means for people on the transplant waitlist in regions served by bottom-tier OPOs.",
+   "why_now": "Published in the Federal Register Nov. 3, 2026 and effective Jan. 4, 2027, right as the first outcome-based recertification and decertification decisions come due.",
+   "is_it_real": "This is the primary document itself: a CMS final rule at 91 FR 69390-69444 (55 pages), RIN 0938-AU54, docket CMS-2026-0364 / CMS-3409-F. Its abstract says it revises definitions, designation requirements, when a service area opens for competition, and appeals, and that it keeps the donation and transplant outcome measures and the tier structure. Not yet checked: how many OPOs are in the bottom tier this cycle, which regions they serve, and whether the appeals and competition changes actually delay or soften decertification. Those need the rule text and CMS's tier data. The reader-stake figures (waitlist size, deaths on the list) have to come from HRSA/OPTN, not from this item.",
+   "primary_test": "The final rule text at 91 FR 69390 and its comment docket CMS-2026-0364 (including OPO industry and patient-group comments), checked against CMS's published OPO performance tier assessments and SRTR/OPTN donation and transplant data by service area.",
+   "standout": false,
+   "standout_reason": "",
+   "needs_independent_test": false,
+   "other_peg": "Effective date Jan. 4, 2027, and the close of the first 2020-rule recertification cycle.",
+   "audience": "general",
+   "evidence_strength": "moderate",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "keys": [
+    "aw-medicare-and-medicaid-programs-organ-procurement-organizations-conditi"
+   ],
+   "items": [
+    {
+     "key": "aw-medicare-and-medicaid-programs-organ-procurement-organizations-conditi",
+     "kind": "notice",
+     "interested_party": false,
+     "title": "Medicare and Medicaid Programs; Organ Procurement Organizations Conditions for Coverage: Revisions to the Conditions for Coverage",
+     "publisher": "federal-register",
+     "url": "https://www.federalregister.gov/documents/2026/11/03/2026-22381/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to",
+     "released": "2026-11-03",
+     "date_basis": "source date",
+     "days_old": 0,
+     "source": "AgingWire",
+     "summary": "This final rule revises the Conditions for Coverage for Organ Procurement Organizations (OPOs) to clarify outstanding procedural questions and provide additional operational flexibility for OPOs to achieve high performance resulting in the successful procurement, distribution, and transplantation of more life-saving organs. This rule revises definitions, revises the designation requirements for OPOs, clarifies when an OPO's service area is open for competition, and updates the process for appeals. We are committed to holding all OPOs accountable for their performance and this final rule does n"
+    }
+   ],
+   "evidence": [
+    "https://www.federalregister.gov/documents/2026/11/03/2026-22381/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to"
+   ],
+   "term_details": [],
+   "status": "routed"
   }
  },
  "runs": [
@@ -2425,6 +2680,34 @@
     "no-reader-stake": 2,
     "already-covered": 1,
     "off-beat": 2
+   }
+  },
+  {
+   "date": "2026-11-03",
+   "items": 208,
+   "candidates": 41,
+   "skipped": {
+    "already judged": 73,
+    "taken elsewhere": 4,
+    "older": 89,
+    "noise": 1
+   },
+   "sources": {
+    "news": "2026-11-03",
+    "agingwire": "2026-11-03"
+   },
+   "model": "opus",
+   "ideas": 1,
+   "routes": {
+    "pitch": 1
+   },
+   "dropped": {
+    "stale": 20,
+    "already-covered": 2,
+    "too-thin": 1,
+    "corporate-only": 11,
+    "off-beat": 5,
+    "watch": 1
    }
   }
  ],
