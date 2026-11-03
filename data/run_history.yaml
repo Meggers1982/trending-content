@@ -3,6 +3,38 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-11-03'
+  niche: health and wellness
+  signals_reviewed: 153
+  topics_retained: 4
+  topics_rejected: 13
+  p1_count: 2
+  p2_count: 1
+  p3_count: 1
+  p4_count: 0
+  p5_count: 0
+  integrity_flags: 4
+  top_topic: Measles death — New York State's first fatal case in 30 years
+  key_themes:
+  - Measles death — New York State's first fatal case in 30 years
+  - Nationwide olmesartan (blood pressure medication) recall — pills failed quality test
+  - Even moderate drinking linked to cancer and early death — new study
+  - Retired NFL linemen show high risk of arterial plaque — independent AHA-linked study
+  tools_used:
+  - serpapi_news
+  - serpapi_trends
+  - serpapi_search
+  - google_news
+  - google_trends
+  tools_unavailable:
+  - reddit_api
+  - exa_search
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-11-03.html
+  estimated_cost_usd: 0.5437
+  notes: 'site_url not configured — self-check skipped, competitor-list fallback used. Recurring themes
+    flagged: FDA recall cluster (4th consecutive day), NFL/CTE brain-health cluster, ACA open enrollment,
+    wellness-fair/local-event noise. Louisiana pollution study passed 02b but trend_strength (43) below
+    50 threshold — routed to Monitor, not rejected.'
 - run_date: '2026-11-02'
   niche: health and wellness
   signals_reviewed: 153
