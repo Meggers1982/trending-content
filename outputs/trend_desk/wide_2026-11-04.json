@@ -1,0 +1,507 @@
+{
+ "run_date": "2026-11-04",
+ "geo": "US",
+ "items": [
+  {
+   "query": "2026 us election results",
+   "search_volume": 10000000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics"
+   ],
+   "news": []
+  },
+  {
+   "query": "georgia election results",
+   "search_volume": 2000000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics",
+    "Law and Government"
+   ],
+   "news": []
+  },
+  {
+   "query": "mississippi senate race",
+   "search_volume": 1000000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics"
+   ],
+   "news": []
+  },
+  {
+   "query": "texas governor",
+   "search_volume": 1000000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics"
+   ],
+   "news": []
+  },
+  {
+   "query": "dan osborn",
+   "search_volume": 1000000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics"
+   ],
+   "news": []
+  },
+  {
+   "query": "when was the last time texas was blue",
+   "search_volume": 1000000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics"
+   ],
+   "news": []
+  },
+  {
+   "query": "alaska senate race",
+   "search_volume": 500000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics"
+   ],
+   "news": []
+  },
+  {
+   "query": "resultados de las elecciones de 2026 en estados unidos",
+   "search_volume": 500000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics",
+    "Law and Government"
+   ],
+   "news": []
+  },
+  {
+   "query": "susan collins",
+   "search_volume": 500000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics"
+   ],
+   "news": []
+  },
+  {
+   "query": "habibi",
+   "search_volume": 500000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics"
+   ],
+   "news": []
+  },
+  {
+   "query": "ohio governor",
+   "search_volume": 500000,
+   "increase_percentage": 500,
+   "categories": [
+    "Politics"
+   ],
+   "news": []
+  },
+  {
+   "query": "lauren boebert",
+   "search_volume": 200000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics"
+   ],
+   "news": []
+  },
+  {
+   "query": "aek vs real madrid",
+   "search_volume": 200000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "bobby pulido",
+   "search_volume": 200000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics",
+    "Entertainment"
+   ]
+  },
+  {
+   "query": "minnesota election results",
+   "search_volume": 200000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "la mayor race",
+   "search_volume": 200000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "alaska election results",
+   "search_volume": 200000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "wisconsin election results",
+   "search_volume": 200000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "ca election results",
+   "search_volume": 200000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "keisha lance bottoms governor",
+   "search_volume": 200000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "ossoff",
+   "search_volume": 200000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "donald trump",
+   "search_volume": 200000,
+   "increase_percentage": 300,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "jd vance",
+   "search_volume": 200000,
+   "increase_percentage": 400,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "pa election results",
+   "search_volume": 200000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "nyt election results",
+   "search_volume": 200000,
+   "increase_percentage": 700,
+   "categories": [
+    "Politics",
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "florida governor",
+   "search_volume": 200000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "south carolina senate race",
+   "search_volume": 200000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "dow jones",
+   "search_volume": 200000,
+   "increase_percentage": 100,
+   "categories": [
+    "Business and Finance",
+    "Politics"
+   ]
+  },
+  {
+   "query": "texas election results 2026",
+   "search_volume": 200000,
+   "increase_percentage": 400,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "aek - real madrid",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "mike johnson",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "hakeem jeffries",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "missouri election results",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "deb haaland",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Other"
+   ]
+  },
+  {
+   "query": "louisiana election results",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "kansas election results",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "mitch mcconnell",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "arizona election results",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "tennessee election results",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "cindy holscher",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "nebraska election results",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "iowa election results",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "trump truth social",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "arizona elections 2026 results",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "nevada election results",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "virginia election results",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "indiana election results",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "ted cruz",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "california governor",
+   "search_volume": 100000,
+   "increase_percentage": 800,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "california prop 40",
+   "search_volume": 100000,
+   "increase_percentage": 700,
+   "categories": [
+    "Politics",
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "cfp rankings",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Sports"
+   ]
+  },
+  {
+   "query": "oklahoma election results",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "illinois election results",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "2026 united states gubernatorial elections",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics",
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "josh turek",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "massachusetts election results",
+   "search_volume": 100000,
+   "increase_percentage": 1000,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "katy padilla stout",
+   "search_volume": 100000,
+   "increase_percentage": 800,
+   "categories": [
+    "Politics",
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "aaron d. ford",
+   "search_volume": 100000,
+   "increase_percentage": 800,
+   "categories": [
+    "Politics",
+    "Law and Government"
+   ]
+  },
+  {
+   "query": "north carolina election results",
+   "search_volume": 100000,
+   "increase_percentage": 900,
+   "categories": [
+    "Politics"
+   ]
+  },
+  {
+   "query": "tina kotek",
+   "search_volume": 100000,
+   "increase_percentage": 800,
+   "categories": [
+    "Politics"
+   ]
+  }
+ ]
+}

@@ -1,6 +1,36 @@
 {
- "updated": "2026-11-03",
+ "updated": "2026-11-04",
  "items": [
+  {
+   "id": "2026-11-04-kratom-sold-as-a-wellness-supplement-is-driving-op",
+   "title": "Kratom sold as a 'wellness' supplement is driving opioid-like addiction: what's in the packets and why it's still on shelves",
+   "created": "2026-11-04",
+   "angle": "A short, sharp item on the wellness-to-dependence pipeline: 'natural' and 'plant-based' marketing versus withdrawal reality. Tie it to last week's HHS wellness-peptides opening as part of the same lax-regulation pattern.",
+   "why_now": "A fresh NYT Well investigation ran 11/2–11/3.",
+   "is_it_real": "The NYT reporting is credible but it is the only source here. A full pitch would need a fresh angle beyond the NYT, so this works best as a roundup item. Confirm with FDA warnings or poison-control data before stating any numbers.",
+   "evidence": [
+    "https://www.nytimes.com/2026/11/02/well/kratom-wellness-marketing-addiction.html"
+   ],
+   "terms": [
+    "Kratom marketed as wellness supplement fuels opioid-like addiction"
+   ],
+   "status": "routed"
+  },
+  {
+   "id": "2026-11-04-vitamin-c-in-pregnancy-linked-to-baby-brain-develo",
+   "title": "Vitamin C in pregnancy linked to baby brain development: what the study actually shows",
+   "created": "2026-11-04",
+   "angle": "Cover what the study found and what it can't prove. Explain why 'linked to' isn't 'causes,' and why it isn't a reason to megadose beyond a prenatal vitamin.",
+   "why_now": "The study was published 11/2 and is circulating through MedicalXpress.",
+   "is_it_real": "The headline is accurate per the upstream check. It is likely observational, so the item must not imply causation. Source design and size need confirming from the paper.",
+   "evidence": [
+    "https://medicalxpress.com/news/2026-11-vitamin-pregnancy-early-brain.html"
+   ],
+   "terms": [
+    "Vitamin C during pregnancy linked to early brain development"
+   ],
+   "status": "routed"
+  },
   {
    "id": "2026-11-03-a-24-year-old-dies-after-her-first-nyc-marathon-an",
    "title": "A 24-year-old dies after her first NYC Marathon, and 'rhabdomyolysis' spikes: what exertional rhabdo is and how rare marathon deaths really are",
@@ -14,19 +44,6 @@
    ],
    "terms": [
     "rhabdomyolysis"
-   ],
-   "status": "routed"
-  },
-  {
-   "id": "2026-11-03-new-york-records-its-first-measles-death-in-30-yea",
-   "title": "New York records its first measles death in 30 years: what we know, and why measles still kills",
-   "created": "2026-11-03",
-   "angle": "A short, factual item on the New York death and the public health response. Explain how measles kills (pneumonia, encephalitis) and how often, and link back to the SSPE pitch for the long tail.",
-   "why_now": "Breakout news this week, reported as New York State's first measles fatality in three decades.",
-   "is_it_real": "Plausible, but the upstream angle claims this is the first U.S. measles death in 30 years. That is wrong: the U.S. recorded measles deaths in 2025. The claim must be scoped to New York State, and the only source in the input is a NYT homepage link, so the specific report needs to be located before writing. Keep it to factual reporting, not vaccine-debate framing.",
-   "evidence": [],
-   "terms": [
-    "Measles death — New York State's first fatal case in 30 years"
    ],
    "status": "routed"
   },
@@ -46,19 +63,6 @@
    "status": "routed"
   },
   {
-   "id": "2026-11-03-whole-foods-ashwagandha-capsules-recalled-what-s-a",
-   "title": "Whole Foods ashwagandha capsules recalled: what's affected and what to check",
-   "created": "2026-11-03",
-   "angle": "A quick check-your-cabinet recall item. Ashwagandha is heavily marketed to women for stress and sleep, so this is a chance to note how lightly supplements are regulated compared with drugs.",
-   "why_now": "Breakout search on the nutrition radar this week.",
-   "is_it_real": "The search signal is strong, but the input has no news link or FDA notice. The recall, the product, and the reason for it must all be confirmed on FDA.gov before this runs. If it can't be confirmed, kill it.",
-   "evidence": [],
-   "terms": [
-    "whole foods ashwagandha capsules recall"
-   ],
-   "status": "routed"
-  },
-  {
    "id": "2026-11-03-fda-s-infant-formula-nutrition-update-what-s-chang",
    "title": "FDA's infant formula nutrition update: what's changing in what babies are fed",
    "created": "2026-11-03",
@@ -68,6 +72,32 @@
    "evidence": [],
    "terms": [
     "fda infant formula nutrition updates"
+   ],
+   "status": "routed"
+  },
+  {
+   "id": "2026-11-03-new-york-records-its-first-measles-death-in-30-yea",
+   "title": "New York records its first measles death in 30 years: what we know, and why measles still kills",
+   "created": "2026-11-03",
+   "angle": "A short, factual item on the New York death and the public health response. Explain how measles kills (pneumonia, encephalitis) and how often, and link back to the SSPE pitch for the long tail.",
+   "why_now": "Breakout news this week, reported as New York State's first measles fatality in three decades.",
+   "is_it_real": "Plausible, but the upstream angle claims this is the first U.S. measles death in 30 years. That is wrong: the U.S. recorded measles deaths in 2025. The claim must be scoped to New York State, and the only source in the input is a NYT homepage link, so the specific report needs to be located before writing. Keep it to factual reporting, not vaccine-debate framing.",
+   "evidence": [],
+   "terms": [
+    "Measles death — New York State's first fatal case in 30 years"
+   ],
+   "status": "routed"
+  },
+  {
+   "id": "2026-11-03-whole-foods-ashwagandha-capsules-recalled-what-s-a",
+   "title": "Whole Foods ashwagandha capsules recalled: what's affected and what to check",
+   "created": "2026-11-03",
+   "angle": "A quick check-your-cabinet recall item. Ashwagandha is heavily marketed to women for stress and sleep, so this is a chance to note how lightly supplements are regulated compared with drugs.",
+   "why_now": "Breakout search on the nutrition radar this week.",
+   "is_it_real": "The search signal is strong, but the input has no news link or FDA notice. The recall, the product, and the reason for it must all be confirmed on FDA.gov before this runs. If it can't be confirmed, kill it.",
+   "evidence": [],
+   "terms": [
+    "whole foods ashwagandha capsules recall"
    ],
    "status": "routed"
   },

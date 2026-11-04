@@ -1,0 +1,115 @@
+{
+ "date": "2026-11-04",
+ "ideas": [
+  {
+   "id": "2026-11-04-kratom-sold-as-a-wellness-supplement-is-driving-op",
+   "title": "Kratom sold as a 'wellness' supplement is driving opioid-like addiction: what's in the packets and why it's still on shelves",
+   "created": "2026-11-04",
+   "route": "roundup",
+   "speed": "new",
+   "beat": "public health / supplements",
+   "angle": "A short, sharp item on the wellness-to-dependence pipeline: 'natural' and 'plant-based' marketing versus withdrawal reality. Tie it to last week's HHS wellness-peptides opening as part of the same lax-regulation pattern.",
+   "why_now": "A fresh NYT Well investigation ran 11/2–11/3.",
+   "is_it_real": "The NYT reporting is credible but it is the only source here. A full pitch would need a fresh angle beyond the NYT, so this works best as a roundup item. Confirm with FDA warnings or poison-control data before stating any numbers.",
+   "confidence": "medium",
+   "evidence": [
+    "https://www.nytimes.com/2026/11/02/well/kratom-wellness-marketing-addiction.html"
+   ],
+   "terms": [
+    "kratom marketed as wellness supplement fuels opioid like addiction"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-11-04",
+     "event": "routed",
+     "detail": "roundup"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "Kratom marketed as wellness supplement fuels opioid-like addiction",
+     "speed": "new",
+     "first_seen": "2026-11-04",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-11-04",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 58,
+       "opportunity": 70
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-11-04-vitamin-c-in-pregnancy-linked-to-baby-brain-develo",
+   "title": "Vitamin C in pregnancy linked to baby brain development: what the study actually shows",
+   "created": "2026-11-04",
+   "route": "roundup",
+   "speed": "new",
+   "beat": "reproductive health / nutrition science",
+   "angle": "Cover what the study found and what it can't prove. Explain why 'linked to' isn't 'causes,' and why it isn't a reason to megadose beyond a prenatal vitamin.",
+   "why_now": "The study was published 11/2 and is circulating through MedicalXpress.",
+   "is_it_real": "The headline is accurate per the upstream check. It is likely observational, so the item must not imply causation. Source design and size need confirming from the paper.",
+   "confidence": "low",
+   "evidence": [
+    "https://medicalxpress.com/news/2026-11-vitamin-pregnancy-early-brain.html"
+   ],
+   "terms": [
+    "vitamin c during pregnancy linked to early brain development"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-11-04",
+     "event": "routed",
+     "detail": "roundup"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "Vitamin C during pregnancy linked to early brain development",
+     "speed": "new",
+     "first_seen": "2026-11-04",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-11-04",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 54,
+       "opportunity": 60
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  }
+ ],
+ "dropped": 77,
+ "watching": 4,
+ "notes": "It's the day after the midterms, so the wide feed is roughly 60 election terms with no health ballot measure clearly surfacing; California Prop 40 is unidentified and dropped as unverifiable. The real health signal is thin: three terms extend existing pitches (HRT safety data, retatrutide, open enrollment), and two new roundup items cover kratom and prenatal vitamin C. TFM has already had two posts routed this week, so no new tfm idea. Watch 18:6 fasting, GLP-1 and aging, and the USDA $472.5M food purchase, which could become a Kind Grid angle if details on food-bank distribution emerge.",
+ "cost_usd": 0.2246
+}
