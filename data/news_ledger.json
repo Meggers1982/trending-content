@@ -1224,6 +1224,108 @@
    "judged_on": "2026-11-03",
    "status": "dropped",
    "reason": "corporate-only"
+  },
+  "press-agency-skin-introduces-peptide-renewal-hand-cream-with-clini": {
+   "judged_on": "2026-11-04",
+   "status": "dropped",
+   "reason": "noise",
+   "detail": "product launch"
+  },
+  "press-flexcompute-introduces-physics-twin-for-space-plume-impingem": {
+   "judged_on": "2026-11-04",
+   "status": "dropped",
+   "reason": "noise",
+   "detail": "product launch"
+  },
+  "aw-explaining-health-savings-accounts-in-the-affordable-care-act-marketpl": {
+   "judged_on": "2026-11-04",
+   "status": "kept",
+   "idea": "nd-2026-11-04-shopping-a-bronze-or-catastrophic-aca-plan-this-op"
+  },
+  "aw-webinar-on-supporting-older-adults-with-assistive-technology-a-guide-f": {
+   "judged_on": "2026-11-04",
+   "status": "dropped",
+   "reason": "too-thin"
+  },
+  "aw-acl-announces-2027-senior-nutrition-program-theme": {
+   "judged_on": "2026-11-04",
+   "status": "dropped",
+   "reason": "too-thin"
+  },
+  "aw-visit-the-celebration-page": {
+   "judged_on": "2026-11-04",
+   "status": "dropped",
+   "reason": "watch"
+  },
+  "press-american-college-of-surgeons-emergency-surgery-verification": {
+   "judged_on": "2026-11-04",
+   "status": "dropped",
+   "reason": "no-reader-stake"
+  },
+  "press-new-study-finds-union-pacific-norfolk-southern-merger-could": {
+   "judged_on": "2026-11-04",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-norc-survey-finds-two-thirds-of-2024-trump-voters-wanted-swe": {
+   "judged_on": "2026-11-04",
+   "status": "dropped",
+   "reason": "off-beat"
+  },
+  "press-ai-helps-families-shortlist-senior-living-but-gut-feelings-a": {
+   "judged_on": "2026-11-04",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-cltc-marks-long-term-care-awareness-month-with-video-series": {
+   "judged_on": "2026-11-04",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-ringconn-and-borussia-dortmund-join-forces-in-a-bvb-women-s": {
+   "judged_on": "2026-11-04",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-prava-expands-its-innovative-senior-living-therapy-model-wit": {
+   "judged_on": "2026-11-04",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-from-grand-slam-courts-to-classrooms-gonoodle-and-usta-celeb": {
+   "judged_on": "2026-11-04",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-sebastian-professional-partners-with-boiler-room-to-celebrat": {
+   "judged_on": "2026-11-04",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-optimum-and-university-of-phoenix-expand-education-savings-o": {
+   "judged_on": "2026-11-04",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-funeral-home-expert-jake-leonetti-explains-what-to-decide-wh": {
+   "judged_on": "2026-11-04",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-rural-land-expert-cindy-garvey-explains-how-to-verify-builde": {
+   "judged_on": "2026-11-04",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-aimg-sizes-ai-governance-platforms-market-at-12-5-billion-by": {
+   "judged_on": "2026-11-04",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-speaker-welch-leads-house-democrats-to-historic-election-nig": {
+   "judged_on": "2026-11-04",
+   "status": "dropped",
+   "reason": "off-beat"
   }
  },
  "ideas": {
@@ -2448,6 +2550,50 @@
    ],
    "term_details": [],
    "status": "routed"
+  },
+  "nd-2026-11-04-shopping-a-bronze-or-catastrophic-aca-plan-this-op": {
+   "desk": "news",
+   "title": "Shopping a bronze or catastrophic ACA plan this open enrollment? Under the 2025 budget law it now comes with HSA eligibility. Here's what that does and doesn't save you",
+   "created": "2026-11-04",
+   "route": "roundup",
+   "speed": "released 2 days ago",
+   "beat": "insurance / ACA marketplaces",
+   "angle": "With benchmark premiums up and more people choosing cheaper, high-deductible plans, KFF explains the budget law's change that makes more Marketplace plans HSA-eligible. The roundup item covers who can now open an HSA, the tax break it gives, and the catch: it only helps people with spare cash to put in, while the deductible stays the same.",
+   "why_now": "ACA open enrollment opened Nov 1 and runs to Jan 15. People choosing between metal tiers now need to know which plans pair with an HSA. KFF published the brief Nov 2.",
+   "is_it_real": "Independent KFF analysis of a change in federal law. The digest summary only says the reconciliation law 'expanded access to HSA-eligible plans and accounts' on the Marketplaces. It has no figures. The details (which tiers qualify, the effective date, any direct-primary-care provision, contribution limits) have to come from the KFF brief itself before the item runs. No numbers are stated here.",
+   "primary_test": "The KFF brief and the HSA provisions of the 2025 reconciliation law (Public Law 119-21), checked against IRS guidance on HSA eligibility for bronze and catastrophic plans",
+   "standout": false,
+   "standout_reason": "",
+   "needs_independent_test": false,
+   "other_peg": "ACA open enrollment, Nov 1 to Jan 15",
+   "audience": "general",
+   "evidence_strength": "moderate",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "keys": [
+    "aw-explaining-health-savings-accounts-in-the-affordable-care-act-marketpl"
+   ],
+   "items": [
+    {
+     "key": "aw-explaining-health-savings-accounts-in-the-affordable-care-act-marketpl",
+     "kind": "analysis",
+     "interested_party": false,
+     "title": "Explaining Health Savings Accounts in the Affordable Care Act Marketplaces",
+     "publisher": "kff-feed",
+     "url": "https://www.kff.org/affordable-care-act/explaining-health-savings-accounts-in-the-affordable-care-act-marketplaces/",
+     "released": "2026-11-02",
+     "date_basis": "source date",
+     "days_old": 2,
+     "source": "AgingWire",
+     "summary": "This brief examines how the budget reconciliation law expanded access to HSA-eligible plans and accounts on the ACA Marketplaces and what these changes means for enrollees"
+    }
+   ],
+   "evidence": [
+    "https://www.kff.org/affordable-care-act/explaining-health-savings-accounts-in-the-affordable-care-act-marketplaces/"
+   ],
+   "term_details": [],
+   "status": "routed"
   }
  },
  "runs": [
@@ -2708,6 +2854,33 @@
     "corporate-only": 11,
     "off-beat": 5,
     "watch": 1
+   }
+  },
+  {
+   "date": "2026-11-04",
+   "items": 194,
+   "candidates": 18,
+   "skipped": {
+    "already judged": 77,
+    "taken elsewhere": 8,
+    "older": 89,
+    "noise": 2
+   },
+   "sources": {
+    "news": "2026-11-04",
+    "agingwire": "2026-11-04"
+   },
+   "model": "opus",
+   "ideas": 1,
+   "routes": {
+    "roundup": 1
+   },
+   "dropped": {
+    "too-thin": 2,
+    "watch": 1,
+    "no-reader-stake": 1,
+    "corporate-only": 11,
+    "off-beat": 2
    }
   }
  ],

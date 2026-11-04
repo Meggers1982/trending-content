@@ -1,6 +1,25 @@
 {
- "updated": "2026-11-03",
+ "updated": "2026-11-04",
  "items": [
+  {
+   "id": "nd-2026-11-04-shopping-a-bronze-or-catastrophic-aca-plan-this-op",
+   "title": "Shopping a bronze or catastrophic ACA plan this open enrollment? Under the 2025 budget law it now comes with HSA eligibility. Here's what that does and doesn't save you",
+   "created": "2026-11-04",
+   "angle": "With benchmark premiums up and more people choosing cheaper, high-deductible plans, KFF explains the budget law's change that makes more Marketplace plans HSA-eligible. The roundup item covers who can now open an HSA, the tax break it gives, and the catch: it only helps people with spare cash to put in, while the deductible stays the same.",
+   "why_now": "ACA open enrollment opened Nov 1 and runs to Jan 15. People choosing between metal tiers now need to know which plans pair with an HSA. KFF published the brief Nov 2.",
+   "is_it_real": "Independent KFF analysis of a change in federal law. The digest summary only says the reconciliation law 'expanded access to HSA-eligible plans and accounts' on the Marketplaces. It has no figures. The details (which tiers qualify, the effective date, any direct-primary-care provision, contribution limits) have to come from the KFF brief itself before the item runs. No numbers are stated here.",
+   "evidence": [
+    "https://www.kff.org/affordable-care-act/explaining-health-savings-accounts-in-the-affordable-care-act-marketplaces/"
+   ],
+   "items": [
+    {
+     "kind": "analysis",
+     "publisher": "kff-feed",
+     "released": "2026-11-02",
+     "url": "https://www.kff.org/affordable-care-act/explaining-health-savings-accounts-in-the-affordable-care-act-marketplaces/"
+    }
+   ]
+  },
   {
    "id": "nd-2026-10-31-aca-open-enrollment-opens-nov-1-benchmark-premiums",
    "title": "ACA open enrollment opens Nov. 1: benchmark premiums up 13% for 2027 and 42% since 2025, Cigna is leaving the individual market in all 11 of its states, and there's no longer a cap on paying back subsidies at tax time",
