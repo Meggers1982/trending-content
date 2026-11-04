@@ -3,6 +3,38 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-11-04'
+  niche: health and wellness
+  signals_reviewed: 144
+  topics_retained: 6
+  topics_rejected: 27
+  p1_count: 2
+  p2_count: 3
+  p3_count: 1
+  p4_count: 0
+  p5_count: 0
+  integrity_flags: 4
+  top_topic: New long-term study supports cardiovascular safety of hormone replacement therapy
+  key_themes:
+  - New long-term study supports cardiovascular safety of hormone replacement therapy
+  - Kratom marketed as wellness supplement fuels opioid-like addiction
+  - Wellness trends that do more harm than good (skeptical roundup)
+  - Why mental health needs an annual checkup too
+  - Why radiation cancer treatments sometimes fail — and a possible fix
+  - Vitamin C during pregnancy linked to early brain development
+  tools_used:
+  - web_search
+  - google_news
+  - google_trends
+  - serpapi
+  tools_unavailable: []
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-11-04.html
+  estimated_cost_usd: 0.6159
+  notes: Olmesartan recall, Gatorade recall, Tractor Wheels recall, Impella recall, flour/cinnamon recalls,
+    wellness peptides, DST, ACA open enrollment, and Men's Mental Health Month data piece are all recurring
+    from the last 7 days with no material new development — rejected as existing. Wellness peptides is
+    now a 4th-consecutive-day recurrence; recommend removing from GOOGLE_NEWS_QUERIES rotation or requiring
+    a hard new-development gate before resurfacing.
 - run_date: '2026-11-03'
   niche: health and wellness
   signals_reviewed: 153
