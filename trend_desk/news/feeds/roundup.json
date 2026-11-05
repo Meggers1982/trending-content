@@ -1,6 +1,32 @@
 {
- "updated": "2026-11-04",
+ "updated": "2026-11-05",
  "items": [
+  {
+   "id": "nd-2026-11-05-what-actually-moved-voters-on-health-care-in-the-2",
+   "title": "What actually moved voters on health care in the 2026 midterms: KFF's election polling on costs, Trump health policy, and the four abortion ballot measures (including Missouri's abortion-plus-trans-care bundle)",
+   "created": "2026-11-05",
+   "angle": "A short Friday item two days after the election. Did rising health costs actually drive votes, how do voters rate the administration's health moves, and how did support for the Idaho, Missouri, Nevada and Virginia abortion measures split by group? The take: Missouri asked voters to decide abortion access and gender-affirming care restrictions in a single question.",
+   "why_now": "The midterms were Nov. 3. KFF published both voter-polling dashboards today, while results are still being read.",
+   "is_it_real": "Both are KFF's own survey analyses: independent, with their own numbers. Neither item came with key findings, so every figure has to be pulled from the dashboards themselves before the item runs. Nothing here has been checked against the dashboards yet. This is polling about why people voted, not the vote results, and it should be labeled that way.",
+   "evidence": [
+    "https://www.kff.org/public-opinion/health-care-in-the-2026-midterm-election/",
+    "https://www.kff.org/public-opinion/abortion-on-the-ballot-in-2026-polling-insights-from-voters-in-four-states/"
+   ],
+   "items": [
+    {
+     "kind": "analysis",
+     "publisher": "kff-feed",
+     "released": "2026-11-05",
+     "url": "https://www.kff.org/public-opinion/health-care-in-the-2026-midterm-election/"
+    },
+    {
+     "kind": "analysis",
+     "publisher": "kff-feed",
+     "released": "2026-11-05",
+     "url": "https://www.kff.org/public-opinion/abortion-on-the-ballot-in-2026-polling-insights-from-voters-in-four-states/"
+    }
+   ]
+  },
   {
    "id": "nd-2026-11-04-shopping-a-bronze-or-catastrophic-aca-plan-this-op",
    "title": "Shopping a bronze or catastrophic ACA plan this open enrollment? Under the 2025 budget law it now comes with HSA eligibility. Here's what that does and doesn't save you",

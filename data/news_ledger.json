@@ -1326,6 +1326,138 @@
    "judged_on": "2026-11-04",
    "status": "dropped",
    "reason": "off-beat"
+  },
+  "press-rancho-la-gloria-launches-a-13-9-abv-apple-cinnamon-martini": {
+   "judged_on": "2026-11-05",
+   "status": "dropped",
+   "reason": "noise",
+   "detail": "product launch"
+  },
+  "press-freddy-s-introduces-new-everyday-value-menu-in-select-market": {
+   "judged_on": "2026-11-05",
+   "status": "dropped",
+   "reason": "noise",
+   "detail": "product launch"
+  },
+  "aw-health-care-in-the-2026-midterm-election": {
+   "judged_on": "2026-11-05",
+   "status": "kept",
+   "idea": "nd-2026-11-05-what-actually-moved-voters-on-health-care-in-the-2"
+  },
+  "aw-abortion-on-the-ballot-in-2026-polling-insights-from-voters-in-four-st": {
+   "judged_on": "2026-11-05",
+   "status": "kept",
+   "idea": "nd-2026-11-05-what-actually-moved-voters-on-health-care-in-the-2"
+  },
+  "aw-1115-waiver-watch-a-look-at-budget-neutrality-policy-changes": {
+   "judged_on": "2026-11-05",
+   "status": "dropped",
+   "reason": "watch"
+  },
+  "aw-tribal-intergovernmental-advisory-committee-request-for-member-nominat": {
+   "judged_on": "2026-11-05",
+   "status": "dropped",
+   "reason": "no-reader-stake"
+  },
+  "aw-justice-in-aging-s-2027-california-priorities": {
+   "judged_on": "2026-11-05",
+   "status": "dropped",
+   "reason": "no-reader-stake"
+  },
+  "aw-using-theory-of-change-models-to-evaluate-the-implementation-of-urinar": {
+   "judged_on": "2026-11-05",
+   "status": "dropped",
+   "reason": "too-thin"
+  },
+  "aw-petition-for-rulemaking-of-new-hope-now": {
+   "judged_on": "2026-11-05",
+   "status": "dropped",
+   "reason": "too-thin"
+  },
+  "aw-new-public-charge-guidance-leaves-key-questions-unanswered-likely-deep": {
+   "judged_on": "2026-11-05",
+   "status": "dropped",
+   "reason": "already-covered"
+  },
+  "press-suicide-loss-survivors-across-illinois-unite-nov-21-for-heal": {
+   "judged_on": "2026-11-05",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-as-alzheimer-s-disease-cases-rise-new-report-warns-of-growin": {
+   "judged_on": "2026-11-05",
+   "status": "dropped",
+   "reason": "too-thin"
+  },
+  "press-inside-the-room-highlights-from-attilio-s-inaugural-longevit": {
+   "judged_on": "2026-11-05",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-delta-dental-community-care-foundation-awards-16-3-million-i": {
+   "judged_on": "2026-11-05",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-ai-boom-risks-widening-the-gap-between-rich-and-poor-nations": {
+   "judged_on": "2026-11-05",
+   "status": "dropped",
+   "reason": "off-beat"
+  },
+  "press-immunogenesis-publishes-new-data-on-sting-agonist-imgs-203-i": {
+   "judged_on": "2026-11-05",
+   "status": "dropped",
+   "reason": "too-thin"
+  },
+  "press-bella-philly-steaks-brings-authentic-cheesesteak-slices-to-t": {
+   "judged_on": "2026-11-05",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-teamsters-strike-at-associated-grocers-of-new-england": {
+   "judged_on": "2026-11-05",
+   "status": "dropped",
+   "reason": "off-beat"
+  },
+  "press-financial-advisor-breaks-down-the-life-events-that-should-tr": {
+   "judged_on": "2026-11-05",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-visiting-angels-shares-holiday-cybersecurity-advice-for-seni": {
+   "judged_on": "2026-11-05",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-pjm-issues-winter-outlook-as-reserve-margins-tighten": {
+   "judged_on": "2026-11-05",
+   "status": "dropped",
+   "reason": "off-beat"
+  },
+  "press-expansive-opens-first-salt-lake-city-flexible-workplace-loca": {
+   "judged_on": "2026-11-05",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-integrated-home-care-services-and-carecentrix-to-combine": {
+   "judged_on": "2026-11-05",
+   "status": "dropped",
+   "reason": "corporate-only"
+  },
+  "press-autoflight-completes-world-s-first-five-aircraft-evtol-forma": {
+   "judged_on": "2026-11-05",
+   "status": "dropped",
+   "reason": "off-beat"
+  },
+  "press-pudu-robotics-unveils-one-brain-many-bodies-strategy-at-euro": {
+   "judged_on": "2026-11-05",
+   "status": "dropped",
+   "reason": "off-beat"
+  },
+  "press-quantinuum-unveils-nexus-roadmap-for-fault-tolerant-quantum": {
+   "judged_on": "2026-11-05",
+   "status": "dropped",
+   "reason": "off-beat"
   }
  },
  "ideas": {
@@ -2594,6 +2726,65 @@
    ],
    "term_details": [],
    "status": "routed"
+  },
+  "nd-2026-11-05-what-actually-moved-voters-on-health-care-in-the-2": {
+   "desk": "news",
+   "title": "What actually moved voters on health care in the 2026 midterms: KFF's election polling on costs, Trump health policy, and the four abortion ballot measures (including Missouri's abortion-plus-trans-care bundle)",
+   "created": "2026-11-05",
+   "route": "roundup",
+   "speed": "released 0 days ago",
+   "beat": "public health policy / reproductive health",
+   "angle": "A short Friday item two days after the election. Did rising health costs actually drive votes, how do voters rate the administration's health moves, and how did support for the Idaho, Missouri, Nevada and Virginia abortion measures split by group? The take: Missouri asked voters to decide abortion access and gender-affirming care restrictions in a single question.",
+   "why_now": "The midterms were Nov. 3. KFF published both voter-polling dashboards today, while results are still being read.",
+   "is_it_real": "Both are KFF's own survey analyses: independent, with their own numbers. Neither item came with key findings, so every figure has to be pulled from the dashboards themselves before the item runs. Nothing here has been checked against the dashboards yet. This is polling about why people voted, not the vote results, and it should be labeled that way.",
+   "primary_test": "",
+   "standout": false,
+   "standout_reason": "",
+   "needs_independent_test": false,
+   "other_peg": "",
+   "audience": "general",
+   "evidence_strength": "moderate",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "keys": [
+    "aw-health-care-in-the-2026-midterm-election",
+    "aw-abortion-on-the-ballot-in-2026-polling-insights-from-voters-in-four-st"
+   ],
+   "items": [
+    {
+     "key": "aw-health-care-in-the-2026-midterm-election",
+     "kind": "analysis",
+     "interested_party": false,
+     "title": "Health Care in the 2026 Midterm Election",
+     "publisher": "kff-feed",
+     "url": "https://www.kff.org/public-opinion/health-care-in-the-2026-midterm-election/",
+     "released": "2026-11-05",
+     "date_basis": "source date",
+     "days_old": 0,
+     "source": "AgingWire",
+     "summary": "This dashboard focuses on KFF’s analysis of the role health care costs and other health policy issues played in voters’ decisions in the 2026 midterm elections, including in key Senate races. It examines the role of rising health costs on voters’ decisions, views on the Trump administration’s health care policies, and opinions on the government’s role in health care amid discussions of Medicare for All."
+    },
+    {
+     "key": "aw-abortion-on-the-ballot-in-2026-polling-insights-from-voters-in-four-st",
+     "kind": "analysis",
+     "interested_party": false,
+     "title": "Abortion on the Ballot in 2026: Polling Insights from Voters in Four States",
+     "publisher": "kff-feed",
+     "url": "https://www.kff.org/public-opinion/abortion-on-the-ballot-in-2026-polling-insights-from-voters-in-four-states/",
+     "released": "2026-11-05",
+     "date_basis": "source date",
+     "days_old": 0,
+     "source": "AgingWire",
+     "summary": "This dashboard provides KFF’s analysis of the role abortion played in voters’ decisions in the 2026 midterm elections, with a focus on four states with abortion-related ballot measures: Idaho, Missouri, Nevada, and Virginia. It examines support for each of the measures across groups, including additional questions in Missouri, where voters were asked to weigh in on a ballot measure that combined questions of abortion access with restrictions on gender-affirming care."
+    }
+   ],
+   "evidence": [
+    "https://www.kff.org/public-opinion/health-care-in-the-2026-midterm-election/",
+    "https://www.kff.org/public-opinion/abortion-on-the-ballot-in-2026-polling-insights-from-voters-in-four-states/"
+   ],
+   "term_details": [],
+   "status": "routed"
   }
  },
  "runs": [
@@ -2881,6 +3072,34 @@
     "no-reader-stake": 1,
     "corporate-only": 11,
     "off-beat": 2
+   }
+  },
+  {
+   "date": "2026-11-05",
+   "items": 189,
+   "candidates": 24,
+   "skipped": {
+    "already judged": 73,
+    "taken elsewhere": 9,
+    "older": 81,
+    "noise": 2
+   },
+   "sources": {
+    "news": "2026-11-05",
+    "agingwire": "2026-11-05"
+   },
+   "model": "opus",
+   "ideas": 1,
+   "routes": {
+    "roundup": 1
+   },
+   "dropped": {
+    "watch": 1,
+    "no-reader-stake": 2,
+    "too-thin": 4,
+    "already-covered": 1,
+    "corporate-only": 8,
+    "off-beat": 6
    }
   }
  ],
