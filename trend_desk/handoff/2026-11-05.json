@@ -1,0 +1,219 @@
+{
+ "date": "2026-11-05",
+ "ideas": [
+  {
+   "id": "2026-11-05-swapping-table-salt-for-potassium-salt-could-preve",
+   "title": "Swapping table salt for potassium salt could prevent heart attacks at scale, so why isn't anyone telling you to, and who shouldn't",
+   "created": "2026-11-05",
+   "route": "pitch",
+   "speed": "new",
+   "beat": "cardiometabolic / nutrition science",
+   "angle": "A new global analysis in Nature puts salt substitutes forward as a cheap, population-scale heart intervention. The story is the gap between that promise and the individual decision. Who benefits, who is put at real risk (kidney disease, certain blood pressure and potassium-sparing medications), and why it isn't standard advice.",
+   "why_now": "Published in Nature on 11/04, with a primary-source link.",
+   "is_it_real": "The primary source is strong (Nature). The piece needs to be clear about whether the finding is population-level modeling or trial-based, and must not overstate individual benefit. The potassium contraindications are real and need to sit up top. No other outlets' figures are given in the input, so all numbers must come from the paper.",
+   "confidence": "medium",
+   "evidence": [
+    "https://www.nature.com/articles/s44360-026-00216-9"
+   ],
+   "terms": [
+    "global study replacing table salt with potassium enriched salt substitute tied to major cardiovascular health gains"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-11-05",
+     "event": "routed",
+     "detail": "pitch"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "Global study: replacing table salt with potassium-enriched salt substitute tied to major cardiovascular health gains",
+     "speed": "new",
+     "first_seen": "2026-11-05",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-11-05",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 52,
+       "opportunity": 79
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-11-05-south-korea-s-birth-rate-is-rising-after-years-of",
+   "title": "South Korea's birth rate is rising after years of record lows. Is the turnaround real, and did the baby bonuses do it?",
+   "created": "2026-11-05",
+   "route": "pitch",
+   "speed": "exploding",
+   "beat": "reproductive health / public health policy",
+   "angle": "South Korea has the world's lowest fertility rate, and it is now ticking up. Test whether that is a policy success (cash incentives, parental leave) or demographics and a post-pandemic marriage rebound. Then ask what that means for the US pronatalist push.",
+   "why_now": "Searches are exploding this week. The rise is a counterintuitive data point at a moment when US politics is openly debating birth-rate policy.",
+   "is_it_real": "The upward trend is plausible and should be checkable against Statistics Korea's official birth data. The input includes no source URL, though, so the reporter must pull the official figures before pitching, and the causal claim about policy is exactly what needs testing.",
+   "confidence": "medium",
+   "evidence": [],
+   "terms": [
+    "south korea fertility rate increase"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-11-05",
+     "event": "routed",
+     "detail": "pitch"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "south korea fertility rate increase",
+     "speed": "exploding",
+     "first_seen": "2026-11-04",
+     "weeks_seen": 1,
+     "sources": [
+      "radar"
+     ],
+     "profiles": [
+      "womens-health"
+     ],
+     "recent": [
+      {
+       "date": "2026-11-04",
+       "source": "radar",
+       "profile": "womens-health",
+       "stage": "emerging",
+       "score": 66,
+       "opportunity": 89
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-11-05-can-brain-activity-predict-alzheimer-s-years-befor",
+   "title": "Can brain activity predict Alzheimer's years before memory loss? What the new Stanford study can and can't tell you",
+   "created": "2026-11-05",
+   "route": "roundup",
+   "speed": "new",
+   "beat": "aging / brain health",
+   "angle": "A short, expectation-setting item: what the brain-activity signal is, what kind of study found it, and why it is not a test you can get today.",
+   "why_now": "Stanford Medicine published it on 11/04.",
+   "is_it_real": "There is only one source, an institutional press release. Cohort size, study design and peer-review status need to be confirmed before writing, and the item must not imply a diagnostic test exists.",
+   "confidence": "medium",
+   "evidence": [
+    "https://med.stanford.edu/news/all-news/2026/11/alzheimers-brain-activity.html"
+   ],
+   "terms": [
+    "stanford study brain activity patterns may predict alzheimer s years before memory loss"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-11-05",
+     "event": "routed",
+     "detail": "roundup"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "Stanford study: brain activity patterns may predict Alzheimer's years before memory loss",
+     "speed": "new",
+     "first_seen": "2026-11-05",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-11-05",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 50,
+       "opportunity": 78
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-11-05-clocks-fell-back-and-seasonal-depression-lamp-sear",
+   "title": "Clocks fell back and 'seasonal depression lamp' searches jumped: what a light box needs to actually work",
+   "created": "2026-11-05",
+   "route": "roundup",
+   "speed": "new",
+   "beat": "mental health / sleep",
+   "angle": "A useful, timely item: what separates a clinical light box from a pretty lamp (brightness, timing, duration), who should check with a doctor first, and the evidence for light therapy in seasonal depression.",
+   "why_now": "Searches are rising in the first week after daylight saving time ended on Nov 1.",
+   "is_it_real": "The search signal is new and only a watch-stage score. Light therapy for seasonal affective disorder has a long evidence base, but specific specs and claims should be sourced from clinical guidance, not product listings.",
+   "confidence": "low",
+   "evidence": [],
+   "terms": [
+    "seasonal depression lamp"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-11-05",
+     "event": "routed",
+     "detail": "roundup"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "seasonal depression lamp",
+     "speed": "new",
+     "first_seen": "2026-11-04",
+     "weeks_seen": 1,
+     "sources": [
+      "radar"
+     ],
+     "profiles": [
+      "mental-health"
+     ],
+     "recent": [
+      {
+       "date": "2026-11-04",
+       "source": "radar",
+       "profile": "mental-health",
+       "stage": "watch",
+       "score": 50,
+       "opportunity": 66
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  }
+ ],
+ "dropped": 16,
+ "watching": 5,
+ "notes": "The radar's 11/04 batch scores almost every term at 66/89, so those scores don't separate signal from noise; most of it is generic or navigational. The real stories today come from the newsroom feed (Nature salt study, Stanford Alzheimer's, Ebola trial update) plus South Korea's fertility uptick, which needs official birth data pulled before it goes out. 'Men's mental health month' is back for the third time and still has no story: the June/Movember confusion isn't enough for 600 honest words. Several gut-health and viral-claim terms (7th depression type, legs-up-the-wall for bloating, the tree frog cancer bacteria) are on watch as possible TFM 'is it real?' candidates if they keep rising.",
+ "cost_usd": 0.1741
+}

@@ -537,6 +537,11 @@
      "date": "2026-10-28",
      "detail": "Ebola outbreak spreads beyond DRC — first confirmed case in Nigeria evacuated to Switzerland",
      "event": "new-signal"
+    },
+    {
+     "date": "2026-11-05",
+     "detail": "Two new Ebola vaccine candidates join active DRC clinical trial",
+     "event": "new-signal"
     }
    ],
    "is_it_real": "The vaccine trial start is reported by Al Jazeera. The 10,000 figure comes from secondary aggregation and is flagged for verification; confirm it against the latest WHO situation report before writing. Big outlets have staff on this, so it fits the roundup better than a pitch.",
@@ -548,7 +553,8 @@
    "terms": [
     "drc ebola outbreak tops 10 000 cases",
     "ebola",
-    "ebola outbreak spreads beyond drc first confirmed case in nigeria evacuated to switzerland"
+    "ebola outbreak spreads beyond drc first confirmed case in nigeria evacuated to switzerland",
+    "two new ebola vaccine candidates join active drc clinical trial"
    ],
    "title": "The DRC Ebola outbreak passes 10,000 cases: what that milestone means, and where the vaccine trial stands",
    "why_now": "The case count reportedly crossed 10,000 days after WHO announced a vaccine trial in DRC, and 'ebola' is rising in general search today."
@@ -907,6 +913,11 @@
      "date": "2026-10-31",
      "detail": "employee wellness programs",
      "event": "new-signal"
+    },
+    {
+     "date": "2026-11-05",
+     "detail": "workplace wellness programs",
+     "event": "new-signal"
     }
    ],
    "is_it_real": "The peg is modest: one DocWire News story on the AMA comments. The claim is very checkable, though, since randomized workplace wellness trials exist (for example the Illinois Workplace Wellness Study). The writer should pull the primary studies and not rely on summaries.",
@@ -918,7 +929,8 @@
    "terms": [
     "corporate wellness perks won t fix physician burnout ama leader skepticism",
     "corporate wellness programs",
-    "employee wellness programs"
+    "employee wellness programs",
+    "workplace wellness programs"
    ],
    "title": "Is it real? Corporate wellness programs make workers healthier",
    "why_now": "'Corporate wellness programs' is a new rising query, and a physician-leader just publicly questioned the premise heading into benefits season."
@@ -1476,6 +1488,110 @@
    ],
    "title": "Vitamin C in pregnancy linked to baby brain development: what the study actually shows",
    "why_now": "The study was published 11/2 and is circulating through MedicalXpress."
+  },
+  "2026-11-05-can-brain-activity-predict-alzheimer-s-years-befor": {
+   "angle": "A short, expectation-setting item: what the brain-activity signal is, what kind of study found it, and why it is not a test you can get today.",
+   "beat": "aging / brain health",
+   "confidence": "medium",
+   "created": "2026-11-05",
+   "evidence": [
+    "https://med.stanford.edu/news/all-news/2026/11/alzheimers-brain-activity.html"
+   ],
+   "history": [
+    {
+     "date": "2026-11-05",
+     "detail": "roundup",
+     "event": "routed"
+    }
+   ],
+   "is_it_real": "There is only one source, an institutional press release. Cohort size, study design and peer-review status need to be confirmed before writing, and the item must not imply a diagnostic test exists.",
+   "route": "roundup",
+   "seed_keyword": "",
+   "site": "",
+   "speed": "new",
+   "status": "routed",
+   "terms": [
+    "stanford study brain activity patterns may predict alzheimer s years before memory loss"
+   ],
+   "title": "Can brain activity predict Alzheimer's years before memory loss? What the new Stanford study can and can't tell you",
+   "why_now": "Stanford Medicine published it on 11/04."
+  },
+  "2026-11-05-clocks-fell-back-and-seasonal-depression-lamp-sear": {
+   "angle": "A useful, timely item: what separates a clinical light box from a pretty lamp (brightness, timing, duration), who should check with a doctor first, and the evidence for light therapy in seasonal depression.",
+   "beat": "mental health / sleep",
+   "confidence": "low",
+   "created": "2026-11-05",
+   "evidence": [],
+   "history": [
+    {
+     "date": "2026-11-05",
+     "detail": "roundup",
+     "event": "routed"
+    }
+   ],
+   "is_it_real": "The search signal is new and only a watch-stage score. Light therapy for seasonal affective disorder has a long evidence base, but specific specs and claims should be sourced from clinical guidance, not product listings.",
+   "route": "roundup",
+   "seed_keyword": "",
+   "site": "",
+   "speed": "new",
+   "status": "routed",
+   "terms": [
+    "seasonal depression lamp"
+   ],
+   "title": "Clocks fell back and 'seasonal depression lamp' searches jumped: what a light box needs to actually work",
+   "why_now": "Searches are rising in the first week after daylight saving time ended on Nov 1."
+  },
+  "2026-11-05-south-korea-s-birth-rate-is-rising-after-years-of": {
+   "angle": "South Korea has the world's lowest fertility rate, and it is now ticking up. Test whether that is a policy success (cash incentives, parental leave) or demographics and a post-pandemic marriage rebound. Then ask what that means for the US pronatalist push.",
+   "beat": "reproductive health / public health policy",
+   "confidence": "medium",
+   "created": "2026-11-05",
+   "evidence": [],
+   "history": [
+    {
+     "date": "2026-11-05",
+     "detail": "pitch",
+     "event": "routed"
+    }
+   ],
+   "is_it_real": "The upward trend is plausible and should be checkable against Statistics Korea's official birth data. The input includes no source URL, though, so the reporter must pull the official figures before pitching, and the causal claim about policy is exactly what needs testing.",
+   "route": "pitch",
+   "seed_keyword": "",
+   "site": "",
+   "speed": "exploding",
+   "status": "routed",
+   "terms": [
+    "south korea fertility rate increase"
+   ],
+   "title": "South Korea's birth rate is rising after years of record lows. Is the turnaround real, and did the baby bonuses do it?",
+   "why_now": "Searches are exploding this week. The rise is a counterintuitive data point at a moment when US politics is openly debating birth-rate policy."
+  },
+  "2026-11-05-swapping-table-salt-for-potassium-salt-could-preve": {
+   "angle": "A new global analysis in Nature puts salt substitutes forward as a cheap, population-scale heart intervention. The story is the gap between that promise and the individual decision. Who benefits, who is put at real risk (kidney disease, certain blood pressure and potassium-sparing medications), and why it isn't standard advice.",
+   "beat": "cardiometabolic / nutrition science",
+   "confidence": "medium",
+   "created": "2026-11-05",
+   "evidence": [
+    "https://www.nature.com/articles/s44360-026-00216-9"
+   ],
+   "history": [
+    {
+     "date": "2026-11-05",
+     "detail": "pitch",
+     "event": "routed"
+    }
+   ],
+   "is_it_real": "The primary source is strong (Nature). The piece needs to be clear about whether the finding is population-level modeling or trial-based, and must not overstate individual benefit. The potassium contraindications are real and need to sit up top. No other outlets' figures are given in the input, so all numbers must come from the paper.",
+   "route": "pitch",
+   "seed_keyword": "",
+   "site": "",
+   "speed": "new",
+   "status": "routed",
+   "terms": [
+    "global study replacing table salt with potassium enriched salt substitute tied to major cardiovascular health gains"
+   ],
+   "title": "Swapping table salt for potassium salt could prevent heart attacks at scale, so why isn't anyone telling you to, and who shouldn't",
+   "why_now": "Published in Nature on 11/04, with a primary-source link."
   }
  },
  "runs": [
@@ -1702,6 +1818,26 @@
     "roundup": 2
    },
    "watching": 4
+  },
+  {
+   "collected": {
+    "newsroom": 13,
+    "radar": 30,
+    "rising": 60,
+    "wide": 120
+   },
+   "cost_usd": 0.1741,
+   "date": "2026-11-05",
+   "dropped": 16,
+   "due": 27,
+   "ideas": 4,
+   "model": "claude-opus-5-5",
+   "notes": "The radar's 11/04 batch scores almost every term at 66/89, so those scores don't separate signal from noise; most of it is generic or navigational. The real stories today come from the newsroom feed (Nature salt study, Stanford Alzheimer's, Ebola trial update) plus South Korea's fertility uptick, which needs official birth data pulled before it goes out. 'Men's mental health month' is back for the third time and still has no story: the June/Movember confusion isn't enough for 600 honest words. Several gut-health and viral-claim terms (7th depression type, legs-up-the-wall for bloating, the tree frog cancer bacteria) are on watch as possible TFM 'is it real?' candidates if they keep rising.",
+   "routes": {
+    "pitch": 2,
+    "roundup": 2
+   },
+   "watching": 5
   }
  ],
  "terms": {
@@ -2119,6 +2255,25 @@
    ],
    "status": "pending",
    "term": "772-563-4880"
+  },
+  "7th type of depression": {
+   "drop_reason": "watch",
+   "first_seen": "2026-11-04",
+   "idea": null,
+   "judged_on": "2026-11-05",
+   "last_seen": "2026-11-04",
+   "sightings": [
+    {
+     "date": "2026-11-04",
+     "opportunity": 89,
+     "profile": "mental-health",
+     "score": 66,
+     "source": "radar",
+     "stage": "emerging"
+    }
+   ],
+   "status": "held",
+   "term": "7th type of depression"
   },
   "8 dimensions of wellness": {
    "drop_reason": null,
@@ -4064,7 +4219,7 @@
    "first_seen": "2026-11-03",
    "idea": null,
    "judged_on": "2026-11-03",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-05",
    "sightings": [
     {
      "date": "2026-11-03",
@@ -4076,6 +4231,14 @@
     },
     {
      "date": "2026-11-04",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    },
+    {
+     "date": "2026-11-05",
      "opportunity": null,
      "profile": "daily-signals",
      "score": null,
@@ -4302,6 +4465,25 @@
    ],
    "status": "pending",
    "term": "Analysis: too few clinical trials test suicide-prevention interventions"
+  },
+  "ancient fertility statue": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-11-04",
+   "idea": null,
+   "judged_on": "2026-11-05",
+   "last_seen": "2026-11-04",
+   "sightings": [
+    {
+     "date": "2026-11-04",
+     "opportunity": 89,
+     "profile": "womens-health",
+     "score": 66,
+     "source": "radar",
+     "stage": "emerging"
+    }
+   ],
+   "status": "dropped",
+   "term": "ancient fertility statue"
   },
   "andy reid patrick mahomes josh simmons": {
    "drop_reason": "noise",
@@ -9790,6 +9972,25 @@
    "status": "dropped",
    "term": "chris brown"
   },
+  "chris murphy health": {
+   "drop_reason": "celebrity-only",
+   "first_seen": "2026-11-05",
+   "idea": null,
+   "judged_on": "2026-11-05",
+   "last_seen": "2026-11-05",
+   "sightings": [
+    {
+     "date": "2026-11-05",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "chris murphy health"
+  },
   "chris sorensen": {
    "drop_reason": "noise",
    "first_seen": "2026-10-26",
@@ -11378,7 +11579,7 @@
    "first_seen": "2026-10-30",
    "idea": "2026-10-30-is-it-real-corporate-wellness-programs-make-worker",
    "judged_on": "2026-10-30",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-05",
    "sightings": [
     {
      "date": "2026-10-30",
@@ -11422,6 +11623,14 @@
     },
     {
      "date": "2026-11-04",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    },
+    {
+     "date": "2026-11-05",
      "opportunity": null,
      "profile": "daily-signals",
      "score": null,
@@ -12919,6 +13128,25 @@
    ],
    "status": "dropped",
    "term": "dabo swinney"
+  },
+  "dairy vs vegan milk nutrition study": {
+   "drop_reason": "watch",
+   "first_seen": "2026-11-05",
+   "idea": null,
+   "judged_on": "2026-11-05",
+   "last_seen": "2026-11-05",
+   "sightings": [
+    {
+     "date": "2026-11-05",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    }
+   ],
+   "status": "held",
+   "term": "dairy vs vegan milk nutrition study"
   },
   "dallas cowboys roster moves running back": {
    "drop_reason": null,
@@ -14924,6 +15152,25 @@
    "status": "pending",
    "term": "Does magnesium actually improve gut health?"
   },
+  "does putting your legs up on a wall help with bloating": {
+   "drop_reason": "watch",
+   "first_seen": "2026-11-04",
+   "idea": null,
+   "judged_on": "2026-11-05",
+   "last_seen": "2026-11-04",
+   "sightings": [
+    {
+     "date": "2026-11-04",
+     "opportunity": 68,
+     "profile": "gut-health",
+     "score": 50,
+     "source": "radar",
+     "stage": "watch"
+    }
+   ],
+   "status": "held",
+   "term": "does putting your legs up on a wall help with bloating"
+  },
   "does sourdough have probiotics": {
    "drop_reason": null,
    "first_seen": "2026-09-30",
@@ -15574,6 +15821,25 @@
    ],
    "status": "pending",
    "term": "dr brian paris arthritis diet reviews"
+  },
+  "dr check fertility": {
+   "drop_reason": "navigational",
+   "first_seen": "2026-11-04",
+   "idea": null,
+   "judged_on": "2026-11-05",
+   "last_seen": "2026-11-04",
+   "sightings": [
+    {
+     "date": "2026-11-04",
+     "opportunity": 81,
+     "profile": "womens-health",
+     "score": 60,
+     "source": "radar",
+     "stage": "emerging"
+    }
+   ],
+   "status": "dropped",
+   "term": "dr check fertility"
   },
   "dr somji skincare": {
    "drop_reason": "noise",
@@ -17033,7 +17299,7 @@
    "first_seen": "2026-10-31",
    "idea": "2026-10-30-is-it-real-corporate-wellness-programs-make-worker",
    "judged_on": "2026-10-31",
-   "last_seen": "2026-11-01",
+   "last_seen": "2026-11-05",
    "sightings": [
     {
      "date": "2026-10-31",
@@ -17045,6 +17311,14 @@
     },
     {
      "date": "2026-11-01",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    },
+    {
+     "date": "2026-11-05",
      "opportunity": null,
      "profile": "daily-signals",
      "score": null,
@@ -17693,7 +17967,7 @@
    "first_seen": "2026-10-31",
    "idea": "2026-10-25-clocks-fall-back-nov-1-what-the-extra-hour-actuall",
    "judged_on": "2026-10-31",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-05",
    "sightings": [
     {
      "date": "2026-10-31",
@@ -17729,6 +18003,14 @@
     },
     {
      "date": "2026-11-04",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    },
+    {
+     "date": "2026-11-05",
      "opportunity": null,
      "profile": "daily-signals",
      "score": null,
@@ -18688,7 +18970,7 @@
    "first_seen": "2026-10-30",
    "idea": "2026-11-03-fda-s-infant-formula-nutrition-update-what-s-chang",
    "judged_on": "2026-11-03",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-05",
    "sightings": [
     {
      "date": "2026-10-30",
@@ -18732,6 +19014,14 @@
     },
     {
      "date": "2026-11-04",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    },
+    {
+     "date": "2026-11-05",
      "opportunity": null,
      "profile": "daily-signals",
      "score": null,
@@ -21049,6 +21339,25 @@
    "status": "pending",
    "term": "Global Clinical Trial Identifies Safest, Most Effective Antibiotics for Staph Bloodstream Infections"
   },
+  "global study replacing table salt with potassium enriched salt substitute tied to major cardiovascular health gains": {
+   "drop_reason": null,
+   "first_seen": "2026-11-05",
+   "idea": "2026-11-05-swapping-table-salt-for-potassium-salt-could-preve",
+   "judged_on": "2026-11-05",
+   "last_seen": "2026-11-05",
+   "sightings": [
+    {
+     "date": "2026-11-05",
+     "opportunity": 79,
+     "profile": "daily-pipeline",
+     "score": 52,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "kept",
+   "term": "Global study: replacing table salt with potassium-enriched salt substitute tied to major cardiovascular health gains"
+  },
   "global wellness day 2026": {
    "drop_reason": null,
    "first_seen": "2026-06-18",
@@ -22018,6 +22327,25 @@
    "status": "pending",
    "term": "guava nutrition facts"
   },
+  "gut bacteria dietary fiber fermentation": {
+   "drop_reason": "too-thin",
+   "first_seen": "2026-11-04",
+   "idea": null,
+   "judged_on": "2026-11-05",
+   "last_seen": "2026-11-04",
+   "sightings": [
+    {
+     "date": "2026-11-04",
+     "opportunity": 89,
+     "profile": "gut-health",
+     "score": 66,
+     "source": "radar",
+     "stage": "emerging"
+    }
+   ],
+   "status": "dropped",
+   "term": "gut bacteria dietary fiber fermentation"
+  },
   "gut health diet": {
    "drop_reason": null,
    "first_seen": "2026-07-14",
@@ -22391,6 +22719,25 @@
    ],
    "status": "dropped",
    "term": "hakeem jeffries"
+  },
+  "haley stevens mental health": {
+   "drop_reason": "unverifiable",
+   "first_seen": "2026-11-04",
+   "idea": null,
+   "judged_on": "2026-11-05",
+   "last_seen": "2026-11-04",
+   "sightings": [
+    {
+     "date": "2026-11-04",
+     "opportunity": 89,
+     "profile": "mental-health",
+     "score": 66,
+     "source": "radar",
+     "stage": "breakout"
+    }
+   ],
+   "status": "dropped",
+   "term": "haley stevens mental health"
   },
   "halloween parade nyc": {
    "drop_reason": "navigational",
@@ -27765,6 +28112,25 @@
    "status": "pending",
    "term": "is matthew mcconaughey running for governor of texas"
   },
+  "is november men s mental health month": {
+   "drop_reason": "too-thin",
+   "first_seen": "2026-11-04",
+   "idea": null,
+   "judged_on": "2026-11-05",
+   "last_seen": "2026-11-04",
+   "sightings": [
+    {
+     "date": "2026-11-04",
+     "opportunity": 89,
+     "profile": "mental-health",
+     "score": 66,
+     "source": "radar",
+     "stage": "emerging"
+    }
+   ],
+   "status": "dropped",
+   "term": "is november men's mental health month"
+  },
   "is ron desantis running for governor of florida again": {
    "drop_reason": null,
    "first_seen": "2026-08-20",
@@ -28176,6 +28542,25 @@
    ],
    "status": "pending",
    "term": "jans health bar"
+  },
+  "japanese tree frog gut bacteria cancer treatment": {
+   "drop_reason": "watch",
+   "first_seen": "2026-11-04",
+   "idea": null,
+   "judged_on": "2026-11-05",
+   "last_seen": "2026-11-04",
+   "sightings": [
+    {
+     "date": "2026-11-04",
+     "opportunity": 69,
+     "profile": "gut-health",
+     "score": 51,
+     "source": "radar",
+     "stage": "watch"
+    }
+   ],
+   "status": "held",
+   "term": "japanese tree frog gut bacteria cancer treatment"
   },
   "jason statham": {
    "drop_reason": "celebrity-only",
@@ -29942,7 +30327,7 @@
    "first_seen": "2026-06-04",
    "idea": "2026-11-01-kona-ice-nutrition-how-much-sugar-is-in-a-shaved-i",
    "judged_on": "2026-11-01",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-05",
    "sightings": [
     {
      "date": "2026-06-04",
@@ -30122,6 +30507,14 @@
     },
     {
      "date": "2026-11-04",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    },
+    {
+     "date": "2026-11-05",
      "opportunity": null,
      "profile": "daily-signals",
      "score": null,
@@ -33412,8 +33805,8 @@
    "drop_reason": "too-thin",
    "first_seen": "2026-06-04",
    "idea": null,
-   "judged_on": "2026-11-04",
-   "last_seen": "2026-11-04",
+   "judged_on": "2026-11-05",
+   "last_seen": "2026-11-05",
    "sightings": [
     {
      "date": "2026-06-04",
@@ -33454,10 +33847,37 @@
      "score": null,
      "source": "rising",
      "stage": "rising"
+    },
+    {
+     "date": "2026-11-05",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
     }
    ],
    "status": "dropped",
    "term": "mens mental health month"
+  },
+  "menstrual cycle phases": {
+   "drop_reason": "watch",
+   "first_seen": "2026-11-04",
+   "idea": null,
+   "judged_on": "2026-11-05",
+   "last_seen": "2026-11-04",
+   "sightings": [
+    {
+     "date": "2026-11-04",
+     "opportunity": 85,
+     "profile": "womens-health",
+     "score": 64,
+     "source": "radar",
+     "stage": "breakout"
+    }
+   ],
+   "status": "held",
+   "term": "menstrual cycle phases"
   },
   "mental health": {
    "drop_reason": "noise",
@@ -34125,10 +34545,18 @@
    "first_seen": "2026-11-03",
    "idea": null,
    "judged_on": "2026-11-03",
-   "last_seen": "2026-11-03",
+   "last_seen": "2026-11-05",
    "sightings": [
     {
      "date": "2026-11-03",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    },
+    {
+     "date": "2026-11-05",
      "opportunity": null,
      "profile": "daily-signals",
      "score": null,
@@ -34831,11 +35259,11 @@
    "term": "mitch mcconnell age"
   },
   "mitch mcconnell health": {
-   "drop_reason": null,
+   "drop_reason": "celebrity-only",
    "first_seen": "2026-06-18",
    "idea": null,
-   "judged_on": null,
-   "last_seen": "2026-09-20",
+   "judged_on": "2026-11-05",
+   "last_seen": "2026-11-05",
    "sightings": [
     {
      "date": "2026-06-18",
@@ -35004,9 +35432,17 @@
      "score": null,
      "source": "rising",
      "stage": "rising"
+    },
+    {
+     "date": "2026-11-05",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
     }
    ],
-   "status": "pending",
+   "status": "dropped",
    "term": "mitch mcconnell health"
   },
   "mitch mcconnell health update": {
@@ -38160,6 +38596,25 @@
    "status": "pending",
    "term": "nutrition nest"
   },
+  "nutrition plan for weight loss": {
+   "drop_reason": "too-thin",
+   "first_seen": "2026-11-05",
+   "idea": null,
+   "judged_on": "2026-11-05",
+   "last_seen": "2026-11-05",
+   "sightings": [
+    {
+     "date": "2026-11-05",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "nutrition plan for weight loss"
+  },
   "nutrition solutions": {
    "drop_reason": null,
    "first_seen": "2026-10-14",
@@ -40488,6 +40943,25 @@
    "status": "pending",
    "term": "physical therapy clinic near me"
   },
+  "physician burnout treatment": {
+   "drop_reason": "too-thin",
+   "first_seen": "2026-11-04",
+   "idea": null,
+   "judged_on": "2026-11-05",
+   "last_seen": "2026-11-04",
+   "sightings": [
+    {
+     "date": "2026-11-04",
+     "opportunity": 75,
+     "profile": "mental-health",
+     "score": 56,
+     "source": "radar",
+     "stage": "emerging"
+    }
+   ],
+   "status": "dropped",
+   "term": "physician burnout treatment"
+  },
   "pilot mental health bill": {
    "drop_reason": null,
    "first_seen": "2026-09-30",
@@ -40989,6 +41463,25 @@
    ],
    "status": "dropped",
    "term": "posiciones de club américa contra deportivo toluca"
+  },
+  "post pop depression": {
+   "drop_reason": "off-beat",
+   "first_seen": "2026-11-04",
+   "idea": null,
+   "judged_on": "2026-11-05",
+   "last_seen": "2026-11-04",
+   "sightings": [
+    {
+     "date": "2026-11-04",
+     "opportunity": 78,
+     "profile": "mental-health",
+     "score": 58,
+     "source": "radar",
+     "stage": "emerging"
+    }
+   ],
+   "status": "dropped",
+   "term": "post pop depression"
   },
   "powerball ohio winners october 24 2026": {
    "drop_reason": "noise",
@@ -44100,6 +44593,25 @@
    "status": "pending",
    "term": "sean hannity health issues"
   },
+  "seasonal depression lamp": {
+   "drop_reason": null,
+   "first_seen": "2026-11-04",
+   "idea": "2026-11-05-clocks-fell-back-and-seasonal-depression-lamp-sear",
+   "judged_on": "2026-11-05",
+   "last_seen": "2026-11-04",
+   "sightings": [
+    {
+     "date": "2026-11-04",
+     "opportunity": 66,
+     "profile": "mental-health",
+     "score": 50,
+     "source": "radar",
+     "stage": "watch"
+    }
+   ],
+   "status": "kept",
+   "term": "seasonal depression lamp"
+  },
   "selena gomez demi lovato rare beauty": {
    "drop_reason": "celebrity-only",
    "first_seen": "2026-11-02",
@@ -45747,6 +46259,25 @@
    "status": "dropped",
    "term": "south carolina women's basketball"
   },
+  "south korea fertility rate increase": {
+   "drop_reason": null,
+   "first_seen": "2026-11-04",
+   "idea": "2026-11-05-south-korea-s-birth-rate-is-rising-after-years-of",
+   "judged_on": "2026-11-05",
+   "last_seen": "2026-11-04",
+   "sightings": [
+    {
+     "date": "2026-11-04",
+     "opportunity": 89,
+     "profile": "womens-health",
+     "score": 66,
+     "source": "radar",
+     "stage": "emerging"
+    }
+   ],
+   "status": "kept",
+   "term": "south korea fertility rate increase"
+  },
   "southeastern health and wellness institute": {
    "drop_reason": null,
    "first_seen": "2026-10-02",
@@ -46466,6 +46997,25 @@
    "status": "pending",
    "term": "Stanford study: bone marrow transplant as treatment approach for mitochondrial disease"
   },
+  "stanford study brain activity patterns may predict alzheimer s years before memory loss": {
+   "drop_reason": null,
+   "first_seen": "2026-11-05",
+   "idea": "2026-11-05-can-brain-activity-predict-alzheimer-s-years-befor",
+   "judged_on": "2026-11-05",
+   "last_seen": "2026-11-05",
+   "sightings": [
+    {
+     "date": "2026-11-05",
+     "opportunity": 78,
+     "profile": "daily-pipeline",
+     "score": 50,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "kept",
+   "term": "Stanford study: brain activity patterns may predict Alzheimer's years before memory loss"
+  },
   "stanford study chronic pain patients can successfully reduce opioid use with slow voluntary taper": {
    "drop_reason": null,
    "first_seen": "2026-07-11",
@@ -46611,8 +47161,8 @@
    "drop_reason": "noise",
    "first_seen": "2026-06-04",
    "idea": null,
-   "judged_on": "2026-11-04",
-   "last_seen": "2026-11-04",
+   "judged_on": "2026-11-05",
+   "last_seen": "2026-11-05",
    "sightings": [
     {
      "date": "2026-06-04",
@@ -46768,6 +47318,14 @@
     },
     {
      "date": "2026-11-04",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    },
+    {
+     "date": "2026-11-05",
      "opportunity": null,
      "profile": "daily-signals",
      "score": null,
@@ -49165,7 +49723,7 @@
    "first_seen": "2026-08-21",
    "idea": "2026-11-03-is-it-real-the-prescription-medical-emergency-kit",
    "judged_on": "2026-11-03",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-05",
    "sightings": [
     {
      "date": "2026-08-21",
@@ -49214,6 +49772,14 @@
      "score": null,
      "source": "rising",
      "stage": "rising"
+    },
+    {
+     "date": "2026-11-05",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
     }
    ],
    "status": "kept",
@@ -49224,7 +49790,7 @@
    "first_seen": "2026-08-21",
    "idea": "2026-11-03-is-it-real-the-prescription-medical-emergency-kit",
    "judged_on": "2026-11-03",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-05",
    "sightings": [
     {
      "date": "2026-08-21",
@@ -49276,6 +49842,14 @@
     },
     {
      "date": "2026-11-04",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    },
+    {
+     "date": "2026-11-05",
      "opportunity": null,
      "profile": "daily-signals",
      "score": null,
@@ -50380,6 +50954,25 @@
    "status": "pending",
    "term": "twisted tea nutrition facts"
   },
+  "two new ebola vaccine candidates join active drc clinical trial": {
+   "drop_reason": null,
+   "first_seen": "2026-11-05",
+   "idea": "2026-10-27-the-drc-ebola-outbreak-passes-10-000-cases-what-th",
+   "judged_on": "2026-11-05",
+   "last_seen": "2026-11-05",
+   "sightings": [
+    {
+     "date": "2026-11-05",
+     "opportunity": 72,
+     "profile": "daily-pipeline",
+     "score": 63,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "kept",
+   "term": "Two new Ebola vaccine candidates join active DRC clinical trial"
+  },
   "two unvaccinated people die from measles in pennsylvania amid multi state outbreak": {
    "drop_reason": null,
    "first_seen": "2026-08-26",
@@ -50910,7 +51503,7 @@
    "first_seen": "2026-11-03",
    "idea": null,
    "judged_on": "2026-11-03",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-05",
    "sightings": [
     {
      "date": "2026-11-03",
@@ -50922,6 +51515,14 @@
     },
     {
      "date": "2026-11-04",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    },
+    {
+     "date": "2026-11-05",
      "opportunity": null,
      "profile": "daily-signals",
      "score": null,
@@ -53445,7 +54046,7 @@
    "first_seen": "2026-11-03",
    "idea": "2026-11-03-is-it-real-the-prescription-medical-emergency-kit",
    "judged_on": "2026-11-03",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-05",
    "sightings": [
     {
      "date": "2026-11-03",
@@ -53457,6 +54058,14 @@
     },
     {
      "date": "2026-11-04",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    },
+    {
+     "date": "2026-11-05",
      "opportunity": null,
      "profile": "daily-signals",
      "score": null,
@@ -53730,6 +54339,25 @@
    ],
    "status": "pending",
    "term": "wellness kitchen auburn"
+  },
+  "wellness living login": {
+   "drop_reason": "navigational",
+   "first_seen": "2026-11-05",
+   "idea": null,
+   "judged_on": "2026-11-05",
+   "last_seen": "2026-11-05",
+   "sightings": [
+    {
+     "date": "2026-11-05",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "wellness living login"
   },
   "wellness massage": {
    "drop_reason": null,
@@ -54141,10 +54769,18 @@
    "first_seen": "2026-10-28",
    "idea": "2026-10-29-menopause-after-a-partial-hysterectomy-symptoms-ti",
    "judged_on": "2026-10-29",
-   "last_seen": "2026-10-28",
+   "last_seen": "2026-11-04",
    "sightings": [
     {
      "date": "2026-10-28",
+     "opportunity": 89,
+     "profile": "womens-health",
+     "score": 66,
+     "source": "radar",
+     "stage": "breakout"
+    },
+    {
+     "date": "2026-11-04",
      "opportunity": 89,
      "profile": "womens-health",
      "score": 66,
@@ -54346,6 +54982,25 @@
    ],
    "status": "pending",
    "term": "what does the keto diet consist of"
+  },
+  "what effect has increasing antibiotic use in the united states had on people s microbiomes": {
+   "drop_reason": "noise",
+   "first_seen": "2026-11-04",
+   "idea": null,
+   "judged_on": "2026-11-05",
+   "last_seen": "2026-11-04",
+   "sightings": [
+    {
+     "date": "2026-11-04",
+     "opportunity": 89,
+     "profile": "gut-health",
+     "score": 74,
+     "source": "radar",
+     "stage": "emerging"
+    }
+   ],
+   "status": "dropped",
+   "term": "what effect has “increasing antibiotic use in the united states” had on people’s microbiomes?"
   },
   "what foods do you eat on a keto diet": {
    "drop_reason": "not-selected",
@@ -55193,6 +55848,25 @@
    ],
    "status": "pending",
    "term": "when is men mental health awareness month"
+  },
+  "when is men s mental health month": {
+   "drop_reason": "duplicate",
+   "first_seen": "2026-11-05",
+   "idea": null,
+   "judged_on": "2026-11-05",
+   "last_seen": "2026-11-05",
+   "sightings": [
+    {
+     "date": "2026-11-05",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    }
+   ],
+   "status": "dropped",
+   "term": "when is men's mental health month"
   },
   "when is open enrollment for health insurance 2027": {
    "drop_reason": "not-selected",
@@ -56692,6 +57366,44 @@
    ],
    "status": "pending",
    "term": "Working From Home May Be Harming Your Health, New Study Finds"
+  },
+  "workplace wellness programs": {
+   "drop_reason": null,
+   "first_seen": "2026-11-05",
+   "idea": "2026-10-30-is-it-real-corporate-wellness-programs-make-worker",
+   "judged_on": "2026-11-05",
+   "last_seen": "2026-11-05",
+   "sightings": [
+    {
+     "date": "2026-11-05",
+     "opportunity": null,
+     "profile": "daily-signals",
+     "score": null,
+     "source": "rising",
+     "stage": "rising"
+    }
+   ],
+   "status": "kept",
+   "term": "workplace wellness programs"
+  },
+  "world fertility day 2026": {
+   "drop_reason": "too-thin",
+   "first_seen": "2026-11-04",
+   "idea": null,
+   "judged_on": "2026-11-05",
+   "last_seen": "2026-11-04",
+   "sightings": [
+    {
+     "date": "2026-11-04",
+     "opportunity": 89,
+     "profile": "womens-health",
+     "score": 66,
+     "source": "radar",
+     "stage": "emerging"
+    }
+   ],
+   "status": "dropped",
+   "term": "world fertility day 2026"
   },
   "world mental health day": {
    "drop_reason": null,
