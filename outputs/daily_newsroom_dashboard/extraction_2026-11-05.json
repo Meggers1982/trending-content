@@ -1,0 +1,231 @@
+{
+  "run_date": "2026-11-05",
+  "niche": "Health & Wellness",
+  "signal_summary": {
+    "total_reviewed": 153,
+    "total_retained": 3,
+    "total_rejected": 40,
+    "tools_active": [
+      "web_search",
+      "google_news",
+      "google_trends",
+      "serpapi"
+    ],
+    "tools_unavailable": [],
+    "notes": "Heavy overlap with last 7 days' coverage (recalls, Men's Mental Health Month, DST, wellness-trends skepticism) meant most radar was duplicate or off-category. Two rising Google Trends queries ('dairy vs vegan milk nutrition study,' 'FDA infant formula nutrition updates') had no corroborating news articles and were deferred for monitoring. Men's Mental Health Month and wellness-trends-skepticism flagged as recurring (3+ runs) — deprioritize unless new data emerges."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Two new Ebola vaccine candidates join active DRC clinical trial",
+      "primary_entity": "Ebola vaccine trial (DRC)",
+      "signal_type": "clinical_trial",
+      "allowed_category": "infectious disease",
+      "trend_strength_score": 63,
+      "opportunity_score": 72,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 3,
+      "source_urls": [
+        "https://www.who.int/news/item/04-11-2026-two-new-candidate-vaccines-to-join-ebola-trial-as-treatment-research-advances",
+        "https://news.un.org/en/story/2026/11/1168742"
+      ],
+      "recommended_angle": "Explainer: what adding two vaccine candidates to an active outbreak trial actually means for containment — translate WHO/UN language for a general audience",
+      "why_now": "WHO and UN News confirmed trial expansion today (11/05); CDC has concurrent traveler guidance for Ebola-affected areas — first national-audience Ebola signal in recent coverage history",
+      "primary_headline": "WHO Adds Two New Vaccines to Ebola Outbreak Trial — Here's What That Means",
+      "next_steps": "Assign full deep-dive brief; confirm no US case risk framing is overstated",
+      "integrity_flags": [
+        "⚠️ Clarify vaccines are entering trial stage, not approved/proven — avoid implying outbreak is resolved",
+        "⚠️ Clarify DRC outbreak status vs. any US risk — avoid fear-based framing given low direct US relevance"
+      ],
+      "trend_score_reason": "Convergence across CDC + WHO + UN News; tier-1 institutional sourcing with no prior recent coverage",
+      "opportunity_score_reason": "Strong explainer potential on emotionally high-interest topic with multiple news hooks (trial mechanics, traveler guidance, outbreak context)",
+      "discover_score_reason": "Natural question format ('what does this mean for me'), primary institutional entity, AI-citation candidate",
+      "notes": "",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "WHO press release (11/04) and UN News story (11/05) in Google News Radar; CDC traveler guidance entry present in radar"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Global study: replacing table salt with potassium-enriched salt substitute tied to major cardiovascular health gains",
+      "primary_entity": "Potassium-enriched salt substitute",
+      "signal_type": "study_or_research",
+      "allowed_category": "nutrition and diet science",
+      "trend_strength_score": 52,
+      "opportunity_score": 79,
+      "discover_score": 5,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://www.nature.com/articles/s44360-026-00216-9"
+      ],
+      "recommended_angle": "Practical evaluative: 'Should you switch to potassium salt?' — translate global population-level modeling into an individual decision framework",
+      "why_now": "Published directly in Nature (11/04), with direct DOI link — strongest primary sourcing of the day; dovetails with evergreen sodium/heart-health search demand",
+      "primary_headline": "A New Global Study Says Swapping Your Salt Could Save Millions of Lives — Should You?",
+      "next_steps": "Full brief; confirm whether findings are modeled/epidemiological vs. interventional before drafting",
+      "integrity_flags": [
+        "⚠️ Clarify modeling/observational nature — do not frame as RCT-proven individual outcome",
+        "⚠️ Potassium substitutes carry real contraindications (kidney disease, certain medications) — must be flagged prominently, not buried"
+      ],
+      "trend_score_reason": "Published in Nature with DOI traceable primary source; connects to persistent evergreen consumer interest in sodium/heart health",
+      "opportunity_score_reason": "High practical utility and decision-making relevance; durable evergreen topic with immediate consumer application",
+      "discover_score_reason": "Specific entity, DOI-traceable, durable topic, natural evaluative question fit — high AI-citation potential",
+      "notes": "Require expert quote on contraindications (kidney disease, ACE inhibitors) before publishing — do not run as pure data recap",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Nature article 'Global health outcomes from replacing dietary sodium chloride with potassium-enriched salt' (11/04) in Google News Radar"
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Stanford study: brain activity patterns may predict Alzheimer's years before memory loss",
+      "primary_entity": "Alzheimer's disease predictive biomarker",
+      "signal_type": "study_or_research",
+      "allowed_category": "aging and longevity",
+      "trend_strength_score": 50,
+      "opportunity_score": 78,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "low",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [
+        "https://med.stanford.edu/news/all-news/2026/11/alzheimers-brain-activity.html"
+      ],
+      "recommended_angle": "Skeptical/evaluative: what this biomarker research can and can't tell you today — manage expectations on an emotionally loaded topic",
+      "why_now": "Stanford Medicine published 11/04; no prior coverage, but single-source and uncorroborated — treat as early signal, not breaking news",
+      "primary_headline": "Can a Brain Scan Predict Alzheimer's Before Symptoms Start? What a New Stanford Study Found",
+      "next_steps": "Concise brief only; hold for corroboration from a second outlet/journal citation before upgrading priority",
+      "integrity_flags": [
+        "⚠️ Single-source institutional report — confirm cohort size, study design (observational vs. longitudinal), and peer-review status before publishing",
+        "⚠️ Avoid implying this is a diagnostic test available today"
+      ],
+      "trend_score_reason": "Single institutional source with emotional appeal on sensitive aging topic; uncorroborated publication limits trend signal strength",
+      "opportunity_score_reason": "High evaluative utility and emotional resonance for aging/longevity audience; natural skeptical question format",
+      "discover_score_reason": "Specific entity and natural consumer question, but single-source limits discovery potential until corroborated",
+      "notes": "Low confidence due to single institutional source; requires expert neuropsychologist/geriatrician validation of clinical applicability before upgrade",
+      "fact_check": {
+        "verdict": "accurate",
+        "issues": [],
+        "checked_against": "Stanford Medicine article 'Brain activity patterns may predict Alzheimer's years before memory slips' (11/04) in Google News Radar"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "Cannabis use linked to cardiovascular risk",
+      "reason": "unverified_claim"
+    },
+    {
+      "topic": "Medicare ExRad study (CT radiation variation)",
+      "reason": "unverified_claim"
+    },
+    {
+      "topic": "Compounded eye drops recall (leaching chemical / GLP-1 mix-up)",
+      "reason": "unverified_claim"
+    },
+    {
+      "topic": "Olmesartan BP medication recall (continued coverage)",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Flour/cinnamon recall (continued coverage)",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "FDA Tractor Wheels choking recall (continued coverage)",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Impella heart pump recall (continued coverage)",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Men's Mental Health Month",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Daylight Saving Time circadian/cardiovascular effects",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Outside Magazine 'wellness trends do more harm'",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Aflac 'Wellness Paradox' survey",
+      "reason": "brand_safety"
+    },
+    {
+      "topic": "CVS Health pharmacy/insurance split",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Clinical trial industry/vendor cluster (Signant Health, Walmart/Care Access, AJMC costs, Brazil/Canada regulatory)",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Pfizer pediatric trial lower doses (5–11yo)",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Mitch McConnell / Chris Murphy health searches",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Dairy vs vegan milk nutrition study (Trends-only)",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "FDA infant formula updates (Trends-only)",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Local/institutional wellness PR (school wellness centers, college wellness days, benefits fairs)",
+      "reason": "off_category"
+    }
+  ],
+  "fact_check_summary": {
+    "accurate": 3
+  },
+  "run_cost": {
+    "total_usd": 0.6694,
+    "calls": [
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11387,
+        "output_tokens": 26453,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 44594,
+        "estimated_cost_usd": 0.5982
+      },
+      {
+        "model": "claude-haiku-4-5",
+        "input_tokens": 9069,
+        "output_tokens": 1937,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0188
+      },
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 11007,
+        "output_tokens": 1291,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0524
+      }
+    ]
+  }
+}
