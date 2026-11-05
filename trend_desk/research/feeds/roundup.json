@@ -1,6 +1,166 @@
 {
- "updated": "2026-11-04",
+ "updated": "2026-11-05",
  "items": [
+  {
+   "id": "rd-2026-11-05-heart-risk-calculators-labeled-many-under-60s-low",
+   "title": "Heart risk calculators labeled many under-60s 'low risk' who already had artery calcium; an experimental blood test caught somewhat more of them",
+   "created": "2026-11-05",
+   "angle": "Use it as a reminder that 'low risk' on a calculator doesn't mean clean arteries. Among low-risk adults under 60, the standard MESA score missed 62% of those with meaningful calcification. A five-metabolite score did better, but only modestly (AUC 0.67 vs 0.55). The caveat in a clause: the test is research-only, and a calcium scan already exists.",
+   "why_now": "Online today, date verified. AHA Scientific Sessions start this week, and the desk is already pitching heart-risk testing (Lp(a), hsCRP).",
+   "is_it_real": "An observational study from one Sydney centre with an external validation cohort. AUC 0.67 is only fair discrimination, and it adds about 46 true positives per 495 people. The 62% figure describes the standard score's misses among people who had calcium, not a share of all under-60s. No outcomes such as heart attacks were measured, only calcium on a scan.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42985773/",
+    "https://doi.org/10.1161/CIRCGEN.125.005501"
+   ],
+   "studies": [
+    {
+     "pmid": "42985773",
+     "journal": "Circulation: Genomic and Precision Medicine",
+     "caveats": "single-center, observational design",
+     "days_online": 0
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-11-05-plus-size-models-made-women-like-an-ad-and-its-bra",
+   "title": "Plus-size models made women like an ad and its brand more; plus-size male models had the opposite effect on men",
+   "created": "2026-11-05",
+   "angle": "A quick, gendered twist on body-inclusive advertising. Women warmed to large-size models over thin ones, and positive emotion drove the effect. Men cooled on large-size male models compared with muscular ones, driven by negative emotion. The caveat in a clause: these are attitudes in an experiment, not purchases.",
+   "why_now": "Online 9 days, verified, no coverage found. Holiday campaigns are launching and the debate over inclusive casting keeps resurfacing.",
+   "is_it_real": "An experiment that measured attitudes toward the ad and the brand, not sales. The abstract gives no sample size, sample makeup or country, so the line should not cite magnitudes. The comparisons were also narrow: thin vs large for women, muscular vs large for men.",
+   "evidence": [
+    "https://openalex.org/W7224022072",
+    "https://doi.org/10.1080/02650487.2026.2751347"
+   ],
+   "studies": [
+    {
+     "pmid": "W7224022072",
+     "journal": "International Journal of Advertising",
+     "caveats": "Experimental ad exposure measuring attitudes rather than purchases; the abstract does not report sample size, composition or country, and the model manipulations were limited to thin-versus-large for women and muscular-versus-large for men.",
+     "days_online": 9
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-11-05-ai-shopping-assistants-people-took-text-recommenda",
+   "title": "AI shopping assistants: people took text recommendations more often than spoken ones, unless their hands and heads were busy",
+   "created": "2026-11-05",
+   "angle": "Useful for the holiday AI-shopping wave. Text advice won for products you compare on specs (electronics), and voice did better for products you buy on feel. When people were multitasking, voice won across the board. The mechanism was ease of processing.",
+   "why_now": "Online 9 days, verified. Retailers and chatbots are pushing AI shopping assistants into the Black Friday season.",
+   "is_it_real": "Five studies: one field study with real customers (scale and partner not described) plus four controlled experiments, apparently in China. The outcome is adoption of a recommendation within the study, not sales tracked over time. Worth a line, not a trend claim.",
+   "evidence": [
+    "https://openalex.org/W7223653038",
+    "https://doi.org/10.1108/ejm-06-2025-0493"
+   ],
+   "studies": [
+    {
+     "pmid": "W7223653038",
+     "journal": "European Journal of Marketing",
+     "caveats": "Experiments conducted in China, limiting generalizability; four of the five studies were controlled lab or online experiments; the field study's scale and partner are not detailed in the abstract.",
+     "days_online": 9
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-11-05-three-bad-reviews-in-a-row-make-a-product-seem-wid",
+   "title": "Three bad reviews in a row make a product seem widely disliked, even when they're the only three, and the effect is stronger on your phone",
+   "created": "2026-11-05",
+   "angle": "A Black Friday tip with a mechanism behind it. When reviews scroll past one at a time, a run of minority opinions bunched together feels like the majority and drags down how people rate the product. Spreading the same reviews out weakens the effect. The tip: check the star distribution, not the scroll.",
+   "why_now": "Online 6 days, verified, no coverage found. It lands just before the biggest review-reading week of the year.",
+   "is_it_real": "Four experiments using constructed review sets, not a live platform, so real-world effect sizes are untested. The effect ran both ways (rave clusters too), was stronger on mobile than desktop, and faded under cognitive load. The digest's intensifiers go a bit past the abstract, so keep the wording modest.",
+   "evidence": [
+    "https://openalex.org/W7224935301",
+    "https://doi.org/10.1002/mar.70299"
+   ],
+   "studies": [
+    {
+     "pmid": "W7224935301",
+     "journal": "Psychology and Marketing",
+     "caveats": "Experimental studies with constructed review sets rather than real purchase behavior on a live platform; effect sizes in the field are untested.",
+     "days_online": 6
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-11-05-the-more-unequal-people-think-society-is-the-more",
+   "title": "The more unequal people think society is, the more they want to buy self-improvement, and it's ambition, not anxiety, driving it",
+   "created": "2026-11-05",
+   "angle": "A receipt for the 'maxxing' moment. Across the US, Japan and China, perceived inequality pushed people toward courses, training and self-optimization through status ambition. Status anxiety, envy, low mood and loss of control were all tested as explanations and none held up. The caveat in a clause: these are stated preferences in experiments.",
+   "why_now": "Online 5 days, verified. 'Maxxing' was just named Dictionary.com's 2026 Word of the Year, and a looksmaxxing pitch is already queued, so this could also serve as a supporting line there.",
+   "is_it_real": "Six experiments with N=2,626 across three countries. Inequality was usually manipulated, and the outcomes are hypothetical choices and stated intentions, not real spending. The predicted moderation by social mobility did not appear. The headline's 'buy' overstates it; say 'want to buy'.",
+   "evidence": [
+    "https://openalex.org/W7224997542",
+    "https://doi.org/10.1002/mar.70300"
+   ],
+   "studies": [
+    {
+     "pmid": "W7224997542",
+     "journal": "Psychology and Marketing",
+     "caveats": "Experiments with hypothetical choices and stated intentions rather than real purchases; perceived inequality was often manipulated; the predicted moderation by perceived social mobility did not appear; three countries but all via experimental samples.",
+     "days_online": 5
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-11-05-liberal-ceos-don-t-simply-do-more-good-in-1-600-bi",
+   "title": "Liberal CEOs don't simply do more good: in 1,600 big-company chiefs, the ideological moderates ran the least pro-social companies",
+   "created": "2026-11-05",
+   "angle": "A post-election corrective to 'a conservative CEO means the company retreats from social commitments'. Among S&P 1500 CEOs, both ideological poles were linked to more pro-social practices and the middle to the least: a U, not a line. The authors argue the two sides get there through different moral concerns.",
+   "why_now": "Online 7 days, verified. The midterms just ended, and the backlash against ESG and DEI keeps tying corporate behavior to politics.",
+   "is_it_real": "Archival and correlational, large US public companies only. CEO ideology is inferred from secondary indicators, likely political donations, and moral foundations are theorized rather than measured. It cannot show that ideology causes the outcomes. The digest's advice on message-framing was not tested.",
+   "evidence": [
+    "https://openalex.org/W7224801151",
+    "https://doi.org/10.1177/01492063261489261"
+   ],
+   "studies": [
+    {
+     "pmid": "W7224801151",
+     "journal": "Journal of Management",
+     "caveats": "Archival study of large U.S. public companies, so the findings may not generalize elsewhere; CEO ideology is inferred from secondary indicators rather than measured attitudes, and moral foundations are theorized rather than directly assessed; correlational design cannot establish that ideology causes the corporate outcomes.",
+     "days_online": 7
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-11-05-two-days-of-carb-loading-made-female-soccer-player",
+   "title": "Two days of carb-loading made female soccer players faster in the late stretch of a simulated match, though they didn't last any longer",
+   "created": "2026-11-05",
+   "angle": "A quick, practical line for women who play sport, against the low-carb fueling advice on social media. Doubling carbs (6 vs 3 g/kg/day) for two days sped up late-match sprints, made early effort feel easier and sharpened reaction time afterward. Time to exhaustion didn't change.",
+   "why_now": "Online 4 days, verified. It continues the desk's thread on sports science finally studying women.",
+   "is_it_real": "A crossover trial in just 15 players with a simulated match, not real games, so treat it as a small early signal. The 'double-blind' description of a diet intervention needs checking. Endurance, the headline outcome people expect, did not improve.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42521197/",
+    "https://doi.org/10.1123/ijsnem.2026-0098"
+   ],
+   "studies": [
+    {
+     "pmid": "42521197",
+     "journal": "International Journal of Sport Nutrition and Exercise Metabolism",
+     "caveats": "small sample (N<100), single-center, short follow-up, female team-sport players only (may not generalize to male athletes or other sports)",
+     "days_online": 4
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-11-05-only-about-1-in-4-people-hospitalized-for-heart-fa",
+   "title": "Only about 1 in 4 people hospitalized for heart failure in France left on all four drugs guidelines say save lives, and women and older patients were least likely to",
+   "created": "2026-11-05",
+   "angle": "A useful number with a gender gap. Among nearly 23,000 people newly hospitalized for heart failure with reduced ejection fraction, 26% got the full four-drug regimen within 30 days, and 22.5% were on it at a year. Women, older patients and sicker patients were less likely to get it. Readers with heart failure can ask about all four drug classes.",
+   "why_now": "Newly published (online date unverified). The AHA Scientific Sessions this week put heart-failure care in the news.",
+   "is_it_real": "National French claims data: large and real-world, but observational and one country. It measures prescribing, not outcomes, so the line shouldn't claim lives lost. One author has industry ties (Novartis, Boehringer, Pfizer). US rates may differ.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42985347/",
+    "https://doi.org/10.1093/ehjopen/oeag159"
+   ],
+   "studies": [
+    {
+     "pmid": "42985347",
+     "journal": "European Heart Journal Open",
+     "caveats": "observational design, single-country (France), surrogate endpoints only, industry funding [Novartis, Boehringer Ingelheim, Pfizer — one author]",
+     "days_online": 0
+    }
+   ]
+  },
   {
    "id": "rd-2026-11-04-for-people-over-65-flu-s-biggest-danger-may-be-the",
    "title": "For people over 65, flu's biggest danger may be their heart: a 238-study review links flu to more than 50 cardiovascular deaths and 60 hospitalizations per 100,000 older adults",
