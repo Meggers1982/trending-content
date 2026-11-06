@@ -1,0 +1,163 @@
+{
+ "date": "2026-11-06",
+ "ideas": [
+  {
+   "id": "nd-2026-11-06-home-health-jobs-are-up-4-4-in-a-year-but-the-indu",
+   "desk": "news",
+   "title": "Home health jobs are up 4.4% in a year but the industry's pay rose 2.5%, behind the 3.6% COLA. Medicaid's new rate-transparency rules were supposed to show what states pay for home care. KFF checks how much they actually capture",
+   "created": "2026-11-06",
+   "route": "pitch",
+   "speed": "released 0 days ago",
+   "beat": "aging, caregiving and Medicaid",
+   "angle": "Home care is where long-term care jobs are growing fastest. Home health employment rose 4.4% against 2.1% for nursing facilities, but the industry's average hourly pay rose only 2.5%, below the 3.6% inflation measure behind the 2027 COLA, while assisted living pay rose 5.4%. As of July 2026 states must publish their Medicaid fee-for-service rates and their home and community-based services (HCBS) payment rates. The story asks what those postings now let families, workers and reporters see about what Medicaid pays for an hour of home care, and what KFF says they still miss. This is home care, separate from the 10/25 nursing-home staffing pitch, so it doesn't duplicate that idea.",
+   "why_now": "KFF published its first assessment of the July 2026 transparency requirements today, and fresh BLS figures show home care jobs growing while pay falls behind inflation.",
+   "is_it_real": "KFF is independent and drew on T-MSIS claims data. Its summary says it measures what share of fee-for-service spending the new reporting covers and discusses the limits, but we have no specific numbers from it yet. The BLS figures are primary data. The pay series covers all employees in each industry, not just aides, so it can't be presented as aide wages. Comparing pay growth to the COLA is our own inference from two federal numbers, not a finding by any source.",
+   "primary_test": "The KFF brief; state Medicaid rate postings and HCBS payment rate disclosures required by 42 CFR 447.203 (2024 Medicaid access rule); BLS CES series CES6562160001, CES6562160003, CES6562310001, CES6562330003; BLS OEWS for home health aide wages specifically",
+   "standout": false,
+   "standout_reason": "",
+   "needs_independent_test": false,
+   "other_peg": "The same 2024 access rule sets later deadlines: states must report what share of HCBS payments goes to direct care workers, then meet a minimum share. My recollection is 2028 for the reporting and 2030 for the minimum, but confirm both dates and whether they still stand before pitching.",
+   "audience": "both",
+   "evidence_strength": "moderate",
+   "confidence": "low",
+   "site": "",
+   "seed_keyword": "",
+   "keys": [
+    "aw-medicaid-payment-transparency-rules-state-reporting-requirements-and-l",
+    "aw-bls-home-health-care-services-employment-october-2026-1-903-60-thousan",
+    "aw-bls-home-health-care-services-average-hourly-earnings-september-2026-2",
+    "aw-bls-nursing-care-facilities-employment-october-2026-1-591-80-thousands",
+    "aw-bls-assisted-living-and-ccrc-average-hourly-earnings-september-2026-25"
+   ],
+   "items": [
+    {
+     "key": "aw-medicaid-payment-transparency-rules-state-reporting-requirements-and-l",
+     "kind": "analysis",
+     "interested_party": false,
+     "title": "Medicaid Payment Transparency Rules: State Reporting Requirements and Limitations",
+     "publisher": "kff-feed",
+     "url": "https://www.kff.org/medicaid/medicaid-payment-transparency-rules-state-reporting-requirements-and-limitations/",
+     "released": "2026-11-06",
+     "date_basis": "source date",
+     "days_old": 0,
+     "source": "AgingWire",
+     "summary": "This brief describes the transparency requirements that took effect in July 2026, uses T-MSIS data to assess the share of FFS spending and claims captured by certain reporting requirements, and discusses limitations of the new transparency requirements."
+    },
+    {
+     "key": "aw-bls-home-health-care-services-employment-october-2026-1-903-60-thousan",
+     "kind": "notice",
+     "interested_party": false,
+     "title": "BLS: Home health care services employment, October 2026 — 1,903.60 thousands of jobs (+4.4% year over year)",
+     "publisher": "bls-api",
+     "url": "https://data.bls.gov/timeseries/CES6562160001",
+     "released": "2026-10-01",
+     "date_basis": "source date",
+     "days_old": 36,
+     "source": "AgingWire",
+     "summary": ""
+    },
+    {
+     "key": "aw-bls-home-health-care-services-average-hourly-earnings-september-2026-2",
+     "kind": "notice",
+     "interested_party": false,
+     "title": "BLS: Home health care services average hourly earnings, September 2026 — 28.26 dollars per hour (+2.5% year over year)",
+     "publisher": "bls-api",
+     "url": "https://data.bls.gov/timeseries/CES6562160003",
+     "released": "2026-09-01",
+     "date_basis": "source date",
+     "days_old": 66,
+     "source": "AgingWire",
+     "summary": ""
+    },
+    {
+     "key": "aw-bls-nursing-care-facilities-employment-october-2026-1-591-80-thousands",
+     "kind": "notice",
+     "interested_party": false,
+     "title": "BLS: Nursing care facilities employment, October 2026 — 1,591.80 thousands of jobs (+2.1% year over year)",
+     "publisher": "bls-api",
+     "url": "https://data.bls.gov/timeseries/CES6562310001",
+     "released": "2026-10-01",
+     "date_basis": "source date",
+     "days_old": 36,
+     "source": "AgingWire",
+     "summary": ""
+    },
+    {
+     "key": "aw-bls-assisted-living-and-ccrc-average-hourly-earnings-september-2026-25",
+     "kind": "notice",
+     "interested_party": false,
+     "title": "BLS: Assisted living and CCRC average hourly earnings, September 2026 — 25.99 dollars per hour (+5.4% year over year)",
+     "publisher": "bls-api",
+     "url": "https://data.bls.gov/timeseries/CES6562330003",
+     "released": "2026-09-01",
+     "date_basis": "source date",
+     "days_old": 66,
+     "source": "AgingWire",
+     "summary": ""
+    }
+   ],
+   "evidence": [
+    "https://www.kff.org/medicaid/medicaid-payment-transparency-rules-state-reporting-requirements-and-limitations/",
+    "https://data.bls.gov/timeseries/CES6562160001",
+    "https://data.bls.gov/timeseries/CES6562160003",
+    "https://data.bls.gov/timeseries/CES6562310001",
+    "https://data.bls.gov/timeseries/CES6562330003"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "nd-2026-11-06-medicine-is-taking-race-out-of-its-kidney-lung-and",
+   "desk": "news",
+   "title": "Medicine is taking race out of its kidney, lung and childbirth calculators: KFF's progress check, and what it has changed for Black patients' transplant waits and lung diagnoses",
+   "created": "2026-11-06",
+   "route": "pitch",
+   "speed": "released 0 days ago",
+   "beat": "public health and health equity",
+   "angle": "Skip the abstract debate over 'race in medicine' and follow the patient. Black kidney patients were credited waitlist time after the race term came out of the kidney function (eGFR) formula. Race-neutral lung function equations reclassify some patients as impaired, which can change disability, job and treatment decisions. The story checks which tools changed, which still haven't, and whether disparities have actually moved.",
+   "why_now": "KFF published its progress assessment today.",
+   "is_it_real": "KFF is an independent analysis. We only have the summary, which describes trends and implications but no numbers. The reference points are documented: the transplant network (OPTN) ordered kidney waitlist time adjusted for race-based eGFR, and the American Thoracic Society (ATS) endorsed race-neutral lung function (spirometry) equations in 2023. Whether disparities improved depends on what the brief actually shows.",
+   "primary_test": "KFF brief; OPTN data on eGFR waitlist time modifications; ATS 2023 statement on race-neutral spirometry (GLI Global)",
+   "standout": false,
+   "standout_reason": "",
+   "needs_independent_test": false,
+   "other_peg": "",
+   "audience": "general",
+   "evidence_strength": "moderate",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "keys": [
+    "aw-the-movement-to-remove-race-from-clinical-decision-making-tools-assess"
+   ],
+   "items": [
+    {
+     "key": "aw-the-movement-to-remove-race-from-clinical-decision-making-tools-assess",
+     "kind": "analysis",
+     "interested_party": false,
+     "title": "The Movement to Remove Race From Clinical Decision-Making Tools: Assessing Progress and Impacts",
+     "publisher": "kff-feed",
+     "url": "https://www.kff.org/racial-equity-and-health-policy/the-movement-to-remove-race-from-clinical-decision-making-tools-assessing-progress-and-impacts/",
+     "released": "2026-11-06",
+     "date_basis": "source date",
+     "days_old": 0,
+     "source": "AgingWire",
+     "summary": "This brief provides an update on how the use of race in clinical decision-making tools has changed in recent years, as a growing number of medical specialties and institutions have moved away from race-based tools, and the implications of this change for racial health disparities."
+    }
+   ],
+   "evidence": [
+    "https://www.kff.org/racial-equity-and-health-policy/the-movement-to-remove-race-from-clinical-decision-making-tools-assessing-progress-and-impacts/"
+   ],
+   "term_details": [],
+   "status": "routed"
+  }
+ ],
+ "dropped": {
+  "too-thin": 1,
+  "already-covered": 1,
+  "unverifiable-claim": 1,
+  "corporate-only": 9,
+  "no-reader-stake": 2,
+  "off-beat": 3
+ }
+}
