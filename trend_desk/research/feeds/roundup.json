@@ -1,6 +1,146 @@
 {
- "updated": "2026-11-05",
+ "updated": "2026-11-06",
  "items": [
+  {
+   "id": "rd-2026-11-06-a-lasting-shoulder-injury-from-a-vaccine-shot-is-r",
+   "title": "A lasting shoulder injury from a vaccine shot is rare: about 2 per 10,000 COVID shots and 1 per 10,000 flu shots, and no clear difference for people 65+",
+   "created": "2026-11-06",
+   "angle": "Kaiser Permanente Southern California checked 1.9 million vaccinations given in 2023-24 for shoulder injury from vaccine administration (SIRVA): pain starting within a week and lasting more than a month. Rates were 1.84 per 10,000 COVID shots and 1.15 per 10,000 flu shots, about 7 extra cases per 100,000 for COVID. In adults 65+, COVID and high-dose flu shots didn't differ significantly. Caveat in a clause: one health system, with cases found by an algorithm.",
+   "why_now": "It's fall shot season, and vaccine trust is a live Trend Desk topic (KFF's fall poll on who Americans trust on vaccines). Published in JAMA Internal Medicine 2 days ago. It could grow into a pitch if the pitch agents confirm a current federal move on the vaccine injury compensation program.",
+   "is_it_real": "A large and careful study, but observational. It covers one integrated health system, the COVID shots were almost all Pfizer, and cases were found by a validated language-processing tool rather than doctors reviewing each chart. A CDC immunization-safety coauthor is disclosed. The absolute numbers are given, so they can lead the item.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42981061/",
+    "https://doi.org/10.1001/jamainternmed.2026.5899"
+   ],
+   "studies": [
+    {
+     "pmid": "42981061",
+     "journal": "JAMA Intern Med",
+     "caveats": "Observational cohort study within a single large integrated health system in Southern California; case detection relied on an algorithm applied to electronic records rather than independent clinical adjudication. COVID-19 vaccines were almost entirely Pfizer-BioNTech mRNA, so results may not extend to other products. One coauthor is from the CDC's Immunization Safety Office.",
+     "days_online": 2
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-11-06-talk-therapy-eased-anxiety-and-depression-in-parki",
+   "title": "Talk therapy eased anxiety and depression in Parkinson's across 21 trials, most clearly in programs longer than 10 weeks",
+   "created": "2026-11-06",
+   "angle": "A pooled analysis of 21 randomized trials (892 people with Parkinson's) found cognitive behavioral therapy moderately reduced anxiety and depressive symptoms, with bigger effects in programs that ran longer than 10 weeks. Reader takeaway: medication isn't the only option for mood symptoms in Parkinson's. Caveat in a clause: small trials that varied widely.",
+   "why_now": "Marshall Faulk's Parkinson's disclosure is a live Trend Desk item, and the desk has been running Parkinson's evidence checks (cannabis on Nov. 3). Online 1 day.",
+   "is_it_real": "A meta-analysis of randomized trials, but the individual trials were small and results varied widely (I² of 79-87%). Outcomes were symptom questionnaires, and long-term follow-up is missing. Moderate effect sizes (SMD about -0.6).",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42983118/",
+    "https://doi.org/10.1007/s10072-026-09450-1"
+   ],
+   "studies": [
+    {
+     "pmid": "42983118",
+     "journal": "Neurol Sci",
+     "caveats": "Meta-analysis of existing trials, not new primary data; substantial statistical heterogeneity between studies (I² of 79% and 87%); individual trials were mostly small, varied widely in how CBT was delivered, and outcomes were symptom questionnaires. Longer-term follow-up and larger multicenter trials are still needed.",
+     "days_online": 1
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-11-06-turning-on-tv-subtitles-didn-t-help-kids-read-bett",
+   "title": "Turning on TV subtitles didn't help kids read better in a six-week randomized trial",
+   "created": "2026-11-06",
+   "angle": "'Turn on the subtitles and your kid will learn to read faster' is a popular parenting tip. In a UK randomized trial, 127 kids aged about 6 to 8 watched TV at home with or without same-language subtitles for six weeks (about 66 hours). Eye-tracking showed they did look at the words, but reading fluency improved the same amount in both groups. Caveat in a clause: one short trial in one country.",
+   "why_now": "A fun, quick myth-check that parents share. No news peg, so it needs to run soon after its online date is confirmed.",
+   "is_it_real": "A clean randomized trial with eye-tracking confirming the kids were actually reading the subtitles. But it lasted only six weeks, ran in one UK setting, and had 127 children, so it can't rule out benefits over longer periods or for older readers. date_verified is false, so the online date needs checking before it runs.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/41795601/",
+    "https://doi.org/10.1111/bjop.70066"
+   ],
+   "studies": [
+    {
+     "pmid": "41795601",
+     "journal": "British Journal of Psychology",
+     "caveats": "single-center, short follow-up, UK population only (findings may not generalize to non-English-speaking households or different reading curricula)",
+     "days_online": 0
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-11-06-why-weight-loss-pills-lag-the-shots-novo-s-experim",
+   "title": "Why weight-loss pills lag the shots: Novo's experimental dual-hormone pill was absorbed about 2% as well as the injection and barely beat placebo",
+   "created": "2026-11-06",
+   "angle": "In a Phase 1 trial, Novo Nordisk's experimental GLP-1/GIP drug NNC0130 cut about 12% of body weight in 15 weeks as an injection. As a daily pill, even at the highest dose, it managed about 4%, which wasn't statistically different from placebo. Oral bioavailability was only 1.6-2.2% of the injection's. A quick explainer on why a pill version of the strongest drugs is hard to make. Caveat in a clause: an early, small, company-run trial.",
+   "why_now": "Retatrutide and next-generation obesity drugs are trending on Trend Desk this week. Online 3 days.",
+   "is_it_real": "A Phase 1 dose-escalation trial, small and funded by Novo Nordisk, lasting 15 weeks. It says nothing about other oral GLP-1 drugs built differently (small molecules like orforglipron), so don't generalize to 'all pills fail.'",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42977258/",
+    "https://doi.org/10.1016/j.molmet.2026.102470"
+   ],
+   "studies": [
+    {
+     "pmid": "42977258",
+     "journal": "Molecular Metabolism",
+     "caveats": "industry funding [Novo Nordisk], short follow-up, small sample (N<100 implied per cohort), Phase 1",
+     "days_online": 3
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-11-06-statin-users-over-70-were-about-20-less-likely-to",
+   "title": "Statin users over 70 were about 20% less likely to develop depressive symptoms over eight years in ASPREE data",
+   "created": "2026-11-06",
+   "angle": "Using ASPREE data on 17,231 depression-free adults aged 70+ followed for a median of 8.4 years, and a method that mimics a randomized trial, researchers found statin use linked to a 20% lower relative risk of developing depressive symptoms (RR 0.80). The link was stronger with longer use and in people with higher genetic risk for depression. Statins didn't treat existing depression. Caveat in a clause: an observational analysis, and the absolute risk difference needs to come from the paper.",
+   "why_now": "Online 2 days. A possible side benefit for a drug millions of older adults already take.",
+   "is_it_real": "Observational, even with target-trial emulation and weighting, and the authors say confounding can't be ruled out. Depression was measured by a symptom scale, not diagnosis, and ASPREE enrolled relatively healthy people. A relative risk shouldn't headline without its absolute number, so the roundup writer needs the absolute rates from the full paper. The digest's fact-check flagged minor issues, and its 'no liver concerns' hook isn't in the summary, so leave that out.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42982348/",
+    "https://doi.org/10.1016/j.jad.2026.122695"
+   ],
+   "studies": [
+    {
+     "pmid": "42982348",
+     "journal": "J Affect Disord",
+     "caveats": "Observational analysis using trial data; despite target trial emulation and inverse probability weighting, the authors state residual confounding cannot be excluded and RCT confirmation is needed. Depressive symptoms were measured by symptom scale rather than clinical diagnosis. ASPREE participants were relatively healthy at enrollment, so findings may not generalize to frailer older adults.",
+     "days_online": 2
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-11-06-about-1-in-3-people-are-lonely-in-their-last-year",
+   "title": "About 1 in 3 people are lonely in their last year of life, UK survey data suggest, and that didn't improve from 2017 to 2022",
+   "created": "2026-11-06",
+   "angle": "Pooled waves of the UK Household Longitudinal Study put loneliness in the final 12 months of life at about 32%. It was more common among people with likely mental health conditions, people who weren't married, and those with three or more functional impairments, and it didn't change over five years. Caveat in a clause: UK data and self-reported.",
+   "why_now": "The holidays are coming, when loneliness among older adults gets attention, and the desk's end-of-life coverage gives it context. Possibly the first prevalence estimate for this group.",
+   "is_it_real": "A national panel survey, observational and self-reported. The abstract doesn't fully report the sample size or ages, and changes to survey methods limit the trend comparison. date_verified is false, so confirm the online date.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42492599/",
+    "https://doi.org/10.1016/j.jpainsymman.2026.07.023"
+   ],
+   "studies": [
+    {
+     "pmid": "42492599",
+     "journal": "Journal of Pain and Symptom Management",
+     "caveats": "observational design, UK population only (may not generalize to US), self-reported outcomes, no age breakdown reported, survey methodology changes limited trend analysis",
+     "days_online": 0
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-11-06-if-no-embryos-reached-blastocyst-in-your-first-ivf",
+   "title": "If no embryos reached blastocyst in your first IVF cycle, about 7 in 10 patients at one French clinic got transferable embryos the next time",
+   "created": "2026-11-06",
+   "angle": "A canceled IVF cycle where no embryo reaches the blastocyst stage is crushing. In a French clinic's records, 72.6% of 113 such patients produced transferable blastocysts in their next cycle after protocol changes. Repeat failure was linked to markers of low ovarian reserve (higher FSH, lower AMH). Caveat in a clause: one clinic, looking back at its own records.",
+   "why_now": "Online 6 days. A hopeful, usable number for a large, anxious audience of IVF patients.",
+   "is_it_real": "A retrospective study at one center with propensity-matched controls and 113 cases. The second-cycle rate is a lab milestone (transferable embryos), not live births, so don't let it read as 'pregnancy odds.' How well it applies to other clinics and protocols is unknown.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42966532/",
+    "https://doi.org/10.1016/j.jogoh.2026.103319"
+   ],
+   "studies": [
+    {
+     "pmid": "42966532",
+     "journal": "Journal of Gynecology Obstetrics and Human Reproduction",
+     "caveats": "single-center, observational design, retrospective",
+     "days_online": 6
+    }
+   ]
+  },
   {
    "id": "rd-2026-11-05-heart-risk-calculators-labeled-many-under-60s-low",
    "title": "Heart risk calculators labeled many under-60s 'low risk' who already had artery calcium; an experimental blood test caught somewhat more of them",
