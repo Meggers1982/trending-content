@@ -3,6 +3,39 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-11-06'
+  niche: Health & Wellness
+  signals_reviewed: 38
+  topics_retained: 5
+  topics_rejected: 5
+  p1_count: 2
+  p2_count: 1
+  p3_count: 2
+  p4_count: 0
+  p5_count: 0
+  integrity_flags: 4
+  top_topic: NY measles outbreak — second case confirmed in same cluster
+  key_themes:
+  - NY measles outbreak — second case confirmed in same cluster
+  - CDC flu surveillance shows early, high-severity season
+  - CMS expands Medicare Part D coverage for GLP-1 obesity drugs (2027 plan year)
+  - ACIP expands RSV vaccine eligibility for adults 50–59 with risk factors
+  - New meta-analysis on light therapy for seasonal affective disorder
+  tools_used: []
+  tools_unavailable:
+  - composio_search_trends
+  - serpapi_trends_search
+  - serpapi_news_search
+  - serpapi_search
+  - exasearch
+  - reddit
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-11-06.html
+  estimated_cost_usd: 0.426
+  notes: Degraded run — no live API data. All trend_strength_score values rely on source-credibility and
+    news-volume estimation only; search_velocity component is modeled, not measured. Recommend re-running
+    with live SerpAPI/Trends access before publishing commitments are made. Confidence capped at Medium
+    across all candidates. Infectious disease/outbreak coverage has appeared 5+ consecutive days — recommend
+    diversifying category mix in next run.
 - run_date: '2026-11-05'
   niche: Health & Wellness
   signals_reviewed: 153
