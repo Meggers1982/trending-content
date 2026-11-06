@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05",
+ "updated": "2026-11-06",
  "items": [
   {
    "id": "2026-11-05-can-brain-activity-predict-alzheimer-s-years-befor",
@@ -112,7 +112,8 @@
    "is_it_real": "Plausible, but the upstream angle claims this is the first U.S. measles death in 30 years. That is wrong: the U.S. recorded measles deaths in 2025. The claim must be scoped to New York State, and the only source in the input is a NYT homepage link, so the specific report needs to be located before writing. Keep it to factual reporting, not vaccine-debate framing.",
    "evidence": [],
    "terms": [
-    "Measles death — New York State's first fatal case in 30 years"
+    "Measles death — New York State's first fatal case in 30 years",
+    "NY measles outbreak — second case confirmed in same cluster"
    ],
    "status": "routed"
   },

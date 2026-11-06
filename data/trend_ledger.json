@@ -1396,6 +1396,11 @@
      "date": "2026-11-03",
      "detail": "roundup",
      "event": "routed"
+    },
+    {
+     "date": "2026-11-06",
+     "detail": "NY measles outbreak — second case confirmed in same cluster",
+     "event": "new-signal"
     }
    ],
    "is_it_real": "Plausible, but the upstream angle claims this is the first U.S. measles death in 30 years. That is wrong: the U.S. recorded measles deaths in 2025. The claim must be scoped to New York State, and the only source in the input is a NYT homepage link, so the specific report needs to be located before writing. Keep it to factual reporting, not vaccine-debate framing.",
@@ -1405,7 +1410,8 @@
    "speed": "new",
    "status": "routed",
    "terms": [
-    "measles death new york state s first fatal case in 30 years"
+    "measles death new york state s first fatal case in 30 years",
+    "ny measles outbreak second case confirmed in same cluster"
    ],
    "title": "New York records its first measles death in 30 years: what we know, and why measles still kills",
    "why_now": "Breakout news this week, reported as New York State's first measles fatality in three decades."
@@ -1838,6 +1844,23 @@
     "roundup": 2
    },
    "watching": 5
+  },
+  {
+   "collected": {
+    "newsroom": 14,
+    "radar": 16,
+    "rising": 40,
+    "wide": 60
+   },
+   "cost_usd": 0.0852,
+   "date": "2026-11-06",
+   "dropped": 3,
+   "due": 5,
+   "ideas": 0,
+   "model": "claude-opus-5-5",
+   "notes": "All five terms came from a single newsroom profile, and every one was marked unverifiable. Several read as plausible-sounding inferences rather than reported events. The Medicare GLP-1 item's 'why now' is literally 'typically finalize in early November' and cites only the cms.gov homepage. The RSV 50–59 expansion matches a recommendation ACIP already made in 2025, so it may be stale. The Medicare GLP-1 story would be a strong pitch squarely in her lane if a real CMS announcement surfaces, so watch for a primary source. Flu is parked as 'watch' until actual FluView numbers back the 'early, severe' claim, and the light-therapy meta-analysis has no citation and overlaps yesterday's light-box roundup item.",
+   "routes": {},
+   "watching": 1
   }
  ],
  "terms": {
@@ -2757,6 +2780,25 @@
    ],
    "status": "kept",
    "term": "ACA open enrollment 2027 — health insurance subsidy changes"
+  },
+  "acip expands rsv vaccine eligibility for adults 50 59 with risk factors": {
+   "drop_reason": "unverifiable",
+   "first_seen": "2026-11-06",
+   "idea": null,
+   "judged_on": "2026-11-06",
+   "last_seen": "2026-11-06",
+   "sightings": [
+    {
+     "date": "2026-11-06",
+     "opportunity": 61,
+     "profile": "daily-pipeline",
+     "score": 65,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "dropped",
+   "term": "ACIP expands RSV vaccine eligibility for adults 50–59 with risk factors"
   },
   "acorn squash nutrition": {
    "drop_reason": null,
@@ -9244,6 +9286,25 @@
    "status": "kept",
    "term": "CDC flags top antibiotic-resistant 'superbug' threats"
   },
+  "cdc flu surveillance shows early high severity season": {
+   "drop_reason": "watch",
+   "first_seen": "2026-11-06",
+   "idea": null,
+   "judged_on": "2026-11-06",
+   "last_seen": "2026-11-06",
+   "sightings": [
+    {
+     "date": "2026-11-06",
+     "opportunity": 72,
+     "profile": "daily-pipeline",
+     "score": 78,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "held",
+   "term": "CDC flu surveillance shows early, high-severity season"
+  },
   "cdc updates rsv vaccine recommendation for adults 60 new acip guidance": {
    "drop_reason": null,
    "first_seen": "2026-08-05",
@@ -10823,6 +10884,25 @@
    ],
    "status": "pending",
    "term": "cloud fitness"
+  },
+  "cms expands medicare part d coverage for glp 1 obesity drugs 2027 plan year": {
+   "drop_reason": "unverifiable",
+   "first_seen": "2026-11-06",
+   "idea": null,
+   "judged_on": "2026-11-06",
+   "last_seen": "2026-11-06",
+   "sightings": [
+    {
+     "date": "2026-11-06",
+     "opportunity": 68,
+     "profile": "daily-pipeline",
+     "score": 74,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "dropped",
+   "term": "CMS expands Medicare Part D coverage for GLP-1 obesity drugs (2027 plan year)"
   },
   "cnd solar oil nail and cuticle care": {
    "drop_reason": null,
@@ -37067,6 +37147,25 @@
    "status": "kept",
    "term": "New long-term study supports cardiovascular safety of hormone replacement therapy"
   },
+  "new meta analysis on light therapy for seasonal affective disorder": {
+   "drop_reason": "already-covered",
+   "first_seen": "2026-11-06",
+   "idea": null,
+   "judged_on": "2026-11-06",
+   "last_seen": "2026-11-06",
+   "sightings": [
+    {
+     "date": "2026-11-06",
+     "opportunity": 60,
+     "profile": "daily-pipeline",
+     "score": 58,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "dropped",
+   "term": "New meta-analysis on light therapy for seasonal affective disorder"
+  },
   "new model predicts who faces severe muscle injury risk from statins": {
    "drop_reason": null,
    "first_seen": "2026-06-26",
@@ -38722,6 +38821,25 @@
    ],
    "status": "dropped",
    "term": "nvidia stock"
+  },
+  "ny measles outbreak second case confirmed in same cluster": {
+   "drop_reason": null,
+   "first_seen": "2026-11-06",
+   "idea": "2026-11-03-new-york-records-its-first-measles-death-in-30-yea",
+   "judged_on": "2026-11-06",
+   "last_seen": "2026-11-06",
+   "sightings": [
+    {
+     "date": "2026-11-06",
+     "opportunity": 68,
+     "profile": "daily-pipeline",
+     "score": 76,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "kept",
+   "term": "NY measles outbreak — second case confirmed in same cluster"
   },
   "nyc marathon": {
    "drop_reason": "noise",
