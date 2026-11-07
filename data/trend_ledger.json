@@ -1598,6 +1598,56 @@
    ],
    "title": "Swapping table salt for potassium salt could prevent heart attacks at scale, so why isn't anyone telling you to, and who shouldn't",
    "why_now": "Published in Nature on 11/04, with a primary-source link."
+  },
+  "2026-11-07-does-hand-sanitizer-kill-norovirus-what-actually-s": {
+   "angle": "An evergreen explainer built on the question people actually type: does alcohol sanitizer work on norovirus, and what does (handwashing, bleach-based cleaning, food handling). Framed for Recall Register readers who arrive after an outbreak or a sick household.",
+   "beat": "food safety / outbreaks",
+   "confidence": "low",
+   "created": "2026-11-07",
+   "evidence": [],
+   "history": [
+    {
+     "date": "2026-11-07",
+     "detail": "brief:recall-register",
+     "event": "routed"
+    }
+   ],
+   "is_it_real": "The seasonality is well established and the sanitizer question is a durable search. There is no current outbreak data in the input, and the only source given is the CDC homepage, so the page needs real CDC guidance pulled in at the brief stage. 'Speed' is new, so the brief room should confirm demand with real keyword data.",
+   "route": "brief",
+   "seed_keyword": "does hand sanitizer kill norovirus",
+   "site": "recall-register",
+   "speed": "new",
+   "status": "routed",
+   "terms": [
+    "why norovirus climbs every winter and what actually prevents it"
+   ],
+   "title": "Does hand sanitizer kill norovirus? What actually stops the winter stomach bug",
+   "why_now": "Norovirus activity rises predictably from November through March, and holiday travel and gatherings increase exposure. Search demand recurs every year, so this works as an evergreen page and not breaking news."
+  },
+  "2026-11-07-thanksgiving-food-safety-safe-turkey-temperatures": {
+   "angle": "An evergreen Thanksgiving food safety page for Recall Register: safe turkey temperatures, thawing, how long leftovers last, plus a standing 'check active recalls before you cook' module that can be refreshed each year rather than tied to this month's flour and cinnamon recalls.",
+   "beat": "food safety",
+   "confidence": "medium",
+   "created": "2026-11-07",
+   "evidence": [],
+   "history": [
+    {
+     "date": "2026-11-07",
+     "detail": "brief:recall-register",
+     "event": "routed"
+    }
+   ],
+   "is_it_real": "The search demand is real and recurs every year, though this is seasonal and not a new trend. The newsroom's recall hook is time-sensitive: the flour and cinnamon recalls were already covered in the Nov 1 roundup, and their status has to be reconfirmed before anything says they are ongoing. The input links are only agency homepages, so there is no specific citation yet.",
+   "route": "brief",
+   "seed_keyword": "thanksgiving food safety turkey temperature leftovers",
+   "site": "recall-register",
+   "speed": "new",
+   "status": "routed",
+   "terms": [
+    "thanksgiving food safety 2026 turkey temps leftovers and this year s active recalls"
+   ],
+   "title": "Thanksgiving food safety: safe turkey temperatures, leftover timelines, and how to check your pantry for recalls first",
+   "why_now": "Thanksgiving is three weeks out. Searches for turkey temperatures and leftover safety come back every November, so a page published now can catch this year's peak and every year after."
   }
  },
  "runs": [
@@ -1861,6 +1911,25 @@
    "notes": "All five terms came from a single newsroom profile, and every one was marked unverifiable. Several read as plausible-sounding inferences rather than reported events. The Medicare GLP-1 item's 'why now' is literally 'typically finalize in early November' and cites only the cms.gov homepage. The RSV 50–59 expansion matches a recommendation ACIP already made in 2025, so it may be stale. The Medicare GLP-1 story would be a strong pitch squarely in her lane if a real CMS announcement surfaces, so watch for a primary source. Flu is parked as 'watch' until actual FluView numbers back the 'early, severe' claim, and the light-therapy meta-analysis has no citation and overlaps yesterday's light-box roundup item.",
    "routes": {},
    "watching": 1
+  },
+  {
+   "collected": {
+    "newsroom": 13,
+    "radar": 0,
+    "rising": 20,
+    "wide": 0
+   },
+   "cost_usd": 0.0979,
+   "date": "2026-11-07",
+   "dropped": 1,
+   "due": 5,
+   "ideas": 2,
+   "model": "claude-opus-5-5",
+   "notes": "All five terms came from the newsroom pipeline, not search radars. They are seasonal or awareness-month service angles with homepage-only sources and no data or news peg, so none clears the pitch bar on its own. The two food-safety items suit evergreen Recall Register briefs. GLP-1 holiday eating and the COPD diagnosis gap for women are in her lanes, but each needs a fresh study, data point or real search spike before it is a story editors would pay for. Caregiver mental health rests only on Caregivers Month, with no evidence behind the screening-gap claim.",
+   "routes": {
+    "brief": 2
+   },
+   "watching": 2
   }
  ],
  "terms": {
@@ -26572,6 +26641,25 @@
    "status": "pending",
    "term": "how to make sushi"
   },
+  "how to navigate holiday meals while on glp 1 medications": {
+   "drop_reason": "watch",
+   "first_seen": "2026-11-07",
+   "idea": null,
+   "judged_on": "2026-11-07",
+   "last_seen": "2026-11-07",
+   "sightings": [
+    {
+     "date": "2026-11-07",
+     "opportunity": 72,
+     "profile": "daily-pipeline",
+     "score": 68,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "held",
+   "term": "How to navigate holiday meals while on GLP-1 medications"
+  },
   "how to read nutrition labels": {
    "drop_reason": null,
    "first_seen": "2026-06-04",
@@ -49484,6 +49572,25 @@
    "status": "dropped",
    "term": "thanksgiving 2026"
   },
+  "thanksgiving food safety 2026 turkey temps leftovers and this year s active recalls": {
+   "drop_reason": null,
+   "first_seen": "2026-11-07",
+   "idea": "2026-11-07-thanksgiving-food-safety-safe-turkey-temperatures",
+   "judged_on": "2026-11-07",
+   "last_seen": "2026-11-07",
+   "sightings": [
+    {
+     "date": "2026-11-07",
+     "opportunity": 60,
+     "profile": "daily-pipeline",
+     "score": 64,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "kept",
+   "term": "Thanksgiving food safety 2026 — turkey temps, leftovers, and this year's active recalls"
+  },
   "the beauty fx series cast": {
    "drop_reason": null,
    "first_seen": "2026-07-14",
@@ -49778,6 +49885,25 @@
    ],
    "status": "dropped",
    "term": "the mayor of kingstown"
+  },
+  "the mental health toll of caregiving that screening tools miss": {
+   "drop_reason": "too-thin",
+   "first_seen": "2026-11-07",
+   "idea": null,
+   "judged_on": "2026-11-07",
+   "last_seen": "2026-11-07",
+   "sightings": [
+    {
+     "date": "2026-11-07",
+     "opportunity": 61,
+     "profile": "daily-pipeline",
+     "score": 52,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "dropped",
+   "term": "The mental-health toll of caregiving that screening tools miss"
   },
   "the most common vehicle of contamination in the food industry is": {
    "drop_reason": null,
@@ -56961,6 +57087,25 @@
    "status": "pending",
    "term": "Why most cancer patients still can't access clinical trials"
   },
+  "why norovirus climbs every winter and what actually prevents it": {
+   "drop_reason": null,
+   "first_seen": "2026-11-07",
+   "idea": "2026-11-07-does-hand-sanitizer-kill-norovirus-what-actually-s",
+   "judged_on": "2026-11-07",
+   "last_seen": "2026-11-07",
+   "sightings": [
+    {
+     "date": "2026-11-07",
+     "opportunity": 58,
+     "profile": "daily-pipeline",
+     "score": 55,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "kept",
+   "term": "Why norovirus climbs every winter — and what actually prevents it"
+  },
   "why radiation cancer treatments sometimes fail and a possible fix": {
    "drop_reason": "too-thin",
    "first_seen": "2026-11-04",
@@ -56979,6 +57124,25 @@
    ],
    "status": "dropped",
    "term": "Why radiation cancer treatments sometimes fail — and a possible fix"
+  },
+  "why women are diagnosed with copd years later than men": {
+   "drop_reason": "watch",
+   "first_seen": "2026-11-07",
+   "idea": null,
+   "judged_on": "2026-11-07",
+   "last_seen": "2026-11-07",
+   "sightings": [
+    {
+     "date": "2026-11-07",
+     "opportunity": 57,
+     "profile": "daily-pipeline",
+     "score": 50,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "held",
+   "term": "Why women are diagnosed with COPD years later than men"
   },
   "wild seed wellness": {
    "drop_reason": null,

@@ -1,0 +1,111 @@
+{
+ "date": "2026-11-07",
+ "ideas": [
+  {
+   "id": "2026-11-07-thanksgiving-food-safety-safe-turkey-temperatures",
+   "title": "Thanksgiving food safety: safe turkey temperatures, leftover timelines, and how to check your pantry for recalls first",
+   "created": "2026-11-07",
+   "route": "brief",
+   "speed": "new",
+   "beat": "food safety",
+   "angle": "An evergreen Thanksgiving food safety page for Recall Register: safe turkey temperatures, thawing, how long leftovers last, plus a standing 'check active recalls before you cook' module that can be refreshed each year rather than tied to this month's flour and cinnamon recalls.",
+   "why_now": "Thanksgiving is three weeks out. Searches for turkey temperatures and leftover safety come back every November, so a page published now can catch this year's peak and every year after.",
+   "is_it_real": "The search demand is real and recurs every year, though this is seasonal and not a new trend. The newsroom's recall hook is time-sensitive: the flour and cinnamon recalls were already covered in the Nov 1 roundup, and their status has to be reconfirmed before anything says they are ongoing. The input links are only agency homepages, so there is no specific citation yet.",
+   "confidence": "medium",
+   "evidence": [],
+   "terms": [
+    "thanksgiving food safety 2026 turkey temps leftovers and this year s active recalls"
+   ],
+   "site": "recall-register",
+   "seed_keyword": "thanksgiving food safety turkey temperature leftovers",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-11-07",
+     "event": "routed",
+     "detail": "brief:recall-register"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "Thanksgiving food safety 2026 — turkey temps, leftovers, and this year's active recalls",
+     "speed": "new",
+     "first_seen": "2026-11-07",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-11-07",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 64,
+       "opportunity": 60
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-11-07-does-hand-sanitizer-kill-norovirus-what-actually-s",
+   "title": "Does hand sanitizer kill norovirus? What actually stops the winter stomach bug",
+   "created": "2026-11-07",
+   "route": "brief",
+   "speed": "new",
+   "beat": "food safety / outbreaks",
+   "angle": "An evergreen explainer built on the question people actually type: does alcohol sanitizer work on norovirus, and what does (handwashing, bleach-based cleaning, food handling). Framed for Recall Register readers who arrive after an outbreak or a sick household.",
+   "why_now": "Norovirus activity rises predictably from November through March, and holiday travel and gatherings increase exposure. Search demand recurs every year, so this works as an evergreen page and not breaking news.",
+   "is_it_real": "The seasonality is well established and the sanitizer question is a durable search. There is no current outbreak data in the input, and the only source given is the CDC homepage, so the page needs real CDC guidance pulled in at the brief stage. 'Speed' is new, so the brief room should confirm demand with real keyword data.",
+   "confidence": "low",
+   "evidence": [],
+   "terms": [
+    "why norovirus climbs every winter and what actually prevents it"
+   ],
+   "site": "recall-register",
+   "seed_keyword": "does hand sanitizer kill norovirus",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-11-07",
+     "event": "routed",
+     "detail": "brief:recall-register"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "Why norovirus climbs every winter — and what actually prevents it",
+     "speed": "new",
+     "first_seen": "2026-11-07",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-11-07",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 55,
+       "opportunity": 58
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  }
+ ],
+ "dropped": 1,
+ "watching": 2,
+ "notes": "All five terms came from the newsroom pipeline, not search radars. They are seasonal or awareness-month service angles with homepage-only sources and no data or news peg, so none clears the pitch bar on its own. The two food-safety items suit evergreen Recall Register briefs. GLP-1 holiday eating and the COPD diagnosis gap for women are in her lanes, but each needs a fresh study, data point or real search spike before it is a story editors would pay for. Caregiver mental health rests only on Caregivers Month, with no evidence behind the screening-gap claim.",
+ "cost_usd": 0.0979
+}
