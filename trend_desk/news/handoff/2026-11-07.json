@@ -1,0 +1,101 @@
+{
+ "date": "2026-11-07",
+ "ideas": [
+  {
+   "id": "nd-2026-11-07-medicare-s-340b-cut-is-back-legally-this-time-from",
+   "desk": "news",
+   "title": "Medicare's 340B cut is back, legally this time: from Jan. 1 safety-net hospitals lose 5.2% of outpatient revenue, for-profits gain 6.8%, and patients on 340B drugs pay less",
+   "created": "2026-11-07",
+   "route": "pitch",
+   "speed": "released 0 days ago",
+   "beat": "public health policy / Medicare / hospitals",
+   "angle": "In 2022 the Supreme Court struck down the first Trump administration's 340B cut because CMS hadn't surveyed what hospitals actually pay for drugs. CMS ran that survey in early 2026, and the CY2027 outpatient rule now moves 340B drug payment from ASP+6% to ASP-28%. Budget neutrality moves the $4.65B into a 7.5% raise for everything else, which shifts money from safety-net and big teaching hospitals to for-profit chains. The tension is that patients pay less coinsurance on 340B drugs ($1.1B in 2027) but more on every other outpatient service, so the story is who wins, who loses, and what safety-net hospitals say they'll cut.",
+   "why_now": "The final rule was published in the Federal Register on Nov. 6 (doc 2026-22739) and takes effect Jan. 1, 2027. KFF updated its analysis for the final rule on Nov. 6.",
+   "is_it_real": "Independent KFF analysis of CMS's own impact estimates. Documented in the KFF piece: ASP-28% (proposed ASP-33.4%), a $4.65B cut offset by a 7.5% increase for non-drug services, safety-net hospitals -5.2%, nonprofits -0.4%, for-profits +6.8%, rural sole community, children's and cancer hospitals exempt, and $1.1B in beneficiary savings on 340B drugs. KFF's appendix table was image-only and not read. Whether hospitals will sue again, and what they'd cut, has not been reported yet.",
+   "primary_test": "CY2027 OPPS/ASC final rule, Federal Register doc 2026-22739 (Nov. 6, 2026), and its regulatory impact tables; CMS's 2026 340B drug acquisition cost survey; AHA v. Becerra (2022)",
+   "standout": false,
+   "standout_reason": "",
+   "needs_independent_test": false,
+   "other_peg": "Effective Jan. 1, 2027; it lands during Medicare open enrollment (ends Dec. 7)",
+   "audience": "both",
+   "evidence_strength": "strong",
+   "confidence": "high",
+   "site": "",
+   "seed_keyword": "",
+   "keys": [
+    "aw-medicare-cuts-to-340b-drug-payments-will-hit-safety-net-hospitals-whil"
+   ],
+   "items": [
+    {
+     "key": "aw-medicare-cuts-to-340b-drug-payments-will-hit-safety-net-hospitals-whil",
+     "kind": "analysis",
+     "interested_party": false,
+     "title": "Medicare Cuts to 340B Drug Payments Will Hit Safety-Net Hospitals While Benefiting For-Profit Hospitals",
+     "publisher": "kff-feed",
+     "url": "https://www.kff.org/health-costs/medicares-proposed-cut-to-340b-drug-payments-would-hit-safety-net-hospitals-while-benefiting-for-profit-hospitals/",
+     "released": "2026-11-07",
+     "date_basis": "source date",
+     "days_old": 0,
+     "source": "AgingWire",
+     "summary": "This analysis finds that CMS’s proposed cut to Medicare reimbursement for 340B drugs, and accompanying increase for other outpatient services, will reduce revenues among safety-net hospitals while increasing revenues among for-profit hospitals."
+    }
+   ],
+   "evidence": [
+    "https://www.kff.org/health-costs/medicares-proposed-cut-to-340b-drug-payments-would-hit-safety-net-hospitals-while-benefiting-for-profit-hospitals/"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "nd-2026-11-07-thirteen-years-of-ischemia-data-stents-and-bypass",
+   "desk": "news",
+   "title": "Thirteen years of ISCHEMIA data: stents and bypass for stable heart disease still don't help people live longer. So why do patients keep believing a stent prevents a heart attack?",
+   "created": "2026-11-07",
+   "route": "pitch",
+   "speed": "released 1 days ago",
+   "beat": "aging, body and metabolism / cardiometabolic",
+   "angle": "ISCHEMIA-EXTEND followed more than 5,000 patients with stable coronary disease and moderate-to-severe ischemia for up to 13 years. Death at about a decade was 26% with routine cath-lab procedures and 27% with medication first. That backs up COURAGE and the original ISCHEMIA, but patients and many referrers still treat a stent as heart-attack prevention. The piece covers what procedures do (relieve angina), what they don't do (extend life), who the trial excluded, and the consumer question to ask before agreeing to a cath for stable chest pain.",
+   "why_now": "Presented at AHA Scientific Sessions and published in JAMA on Nov. 7, 2026.",
+   "is_it_real": "NYU Langone press release (an interested party: NYU led the trial). From a summarized fetch, not verbatim: 1,071 deaths, 96% vital-status follow-up, 26% vs 27% mortality at about a decade. The release gives no hazard ratios, CIs, or split between cardiovascular and non-cardiovascular deaths. The 2022 EXTEND report found lower cardiovascular and higher non-cardiovascular death with invasive care, so the JAMA paper needs checking for whether that held. The trial excluded left main disease, recent heart attack, reduced ejection fraction and unacceptable angina, so it doesn't apply to everyone with blocked arteries.",
+   "primary_test": "The ISCHEMIA-EXTEND paper in JAMA (Nov. 7, 2026) and the trial's ClinicalTrials.gov registration (number to confirm). Prior results: NEJM 2020 (ISCHEMIA) and Circulation 2022 (EXTEND).",
+   "standout": false,
+   "standout_reason": "",
+   "needs_independent_test": false,
+   "other_peg": "AHA Scientific Sessions 2026 (Nov. 7 to 10)",
+   "audience": "older adults",
+   "evidence_strength": "strong",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "keys": [
+    "press-routine-invasive-procedures-for-stable-heart-disease-offer-n"
+   ],
+   "items": [
+    {
+     "key": "press-routine-invasive-procedures-for-stable-heart-disease-offer-n",
+     "kind": "press_release",
+     "interested_party": true,
+     "title": "Routine invasive procedures for stable heart disease offer no long-term survival advantage over drug therapy",
+     "publisher": "PR Newswire",
+     "url": "https://www.prnewswire.com/news-releases/routine-invasive-procedures-for-stable-heart-disease-offer-no-long-term-survival-advantage-over-drug-therapy-302931095.html",
+     "released": "2026-11-06",
+     "date_basis": "within 1 day(s) of the digest run",
+     "days_old": 1,
+     "source": "news digest",
+     "summary": "A counterintuitive long-term finding: patients with stable heart disease and abnormal stress tests who go early to the cath lab get symptom relief but don't live longer than those managed with medication."
+    }
+   ],
+   "evidence": [
+    "https://www.prnewswire.com/news-releases/routine-invasive-procedures-for-stable-heart-disease-offer-no-long-term-survival-advantage-over-drug-therapy-302931095.html"
+   ],
+   "term_details": [],
+   "status": "routed"
+  }
+ ],
+ "dropped": {
+  "too-thin": 1,
+  "watch": 2,
+  "corporate-only": 5,
+  "off-beat": 5
+ }
+}
