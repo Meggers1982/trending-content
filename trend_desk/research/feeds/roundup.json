@@ -1,6 +1,46 @@
 {
- "updated": "2026-11-06",
+ "updated": "2026-11-07",
  "items": [
+  {
+   "id": "rd-2026-11-07-coconut-water-and-an-electrolyte-drink-did-no-bett",
+   "title": "Coconut water and an electrolyte drink did no better than plain water for recovery after an hour of cycling in the heat, in a 12-person trial",
+   "created": "2026-11-07",
+   "angle": "The electrolyte-packet boom (LMNT, Liquid IV, coconut water) sells post-workout recovery. In a small triple-blind crossover trial, water, a sodium-potassium drink and coconut water produced the same core temperature, heart rate, body-mass and fatigue results after 60 minutes of cycling at about 33°C. One-line take: for an ordinary hour-long sweaty workout, drinking enough of anything may matter more than what's in it.",
+   "why_now": "Online 6 days (date verified). Sports drinks are in the news this week with the Gatorade recall on the Trend Desk list, and electrolyte products sell year-round.",
+   "is_it_real": "It's a real randomized, triple-blind crossover, but only 12 people (7 men), one center, one session per drink, and short-term measures. It can't speak to long endurance events, heavy salt losers or illness-related dehydration. A co-author (Macciochi) is affiliated with Ancient+Brave, a supplement and food brand. The result doesn't favor any product, but the item should name the affiliation. Say 'in a small trial', not 'water works just as well'.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42601056/",
+    "https://doi.org/10.1123/ijsnem.2026-0016"
+   ],
+   "studies": [
+    {
+     "pmid": "42601056",
+     "journal": "International Journal of Sport Nutrition and Exercise Metabolism",
+     "caveats": "small sample (N<100), short follow-up, industry funding [Ancient+Brave — coconut water product affiliation noted for author Macciochi], single-center",
+     "days_online": 6
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-11-07-the-hallmarks-of-aging-that-biological-age-tests-a",
+   "title": "The 'hallmarks of aging' that biological-age tests and longevity clinics measure have almost no long-term human evidence linking them to muscle loss. Insulin resistance does",
+   "created": "2026-11-07",
+   "angle": "A French team looked for longitudinal human studies (adults 50+) that tie aging biomarkers to repeated body-composition scans. They found none at all for senescence, epigenetic changes, genomic instability, autophagy, stem-cell exhaustion or gut dysbiosis. Telomere length, the one primary hallmark studied, showed no consistent link. Insulin-related markers were the one consistent signal. Take: the marker your regular doctor already checks beat the ones being sold.",
+   "why_now": "Online 3 days (date verified). Fits the steady wave of biological-age testing and longevity-clinic marketing, plus 'glp-1 and aging' searches on this week's Trend Desk list. It also follows our rapamycin 'Is it real?' (11-06) without repeating it.",
+   "is_it_real": "It's a narrative review, not a systematic review or meta-analysis (the digest's score line wrongly calls it one), so the search wasn't exhaustive and nothing was pooled. The striking part is an absence of evidence, which is not evidence that the markers don't matter. It covers muscle and fat outcomes only. The insulin finding comes from observational studies, so say 'linked to'.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42980902/",
+    "https://doi.org/10.1007/s11357-026-02629-6"
+   ],
+   "studies": [
+    {
+     "pmid": "42980902",
+     "journal": "Geroscience",
+     "caveats": "Narrative review rather than a systematic review or meta-analysis, so study selection was not exhaustive and results were not statistically pooled. The included evidence was described by the authors as limited and heterogeneous, and associations across the underlying observational studies cannot establish causation.",
+     "days_online": 3
+    }
+   ]
+  },
   {
    "id": "rd-2026-11-06-a-lasting-shoulder-injury-from-a-vaccine-shot-is-r",
    "title": "A lasting shoulder injury from a vaccine shot is rare: about 2 per 10,000 COVID shots and 1 per 10,000 flu shots, and no clear difference for people 65+",

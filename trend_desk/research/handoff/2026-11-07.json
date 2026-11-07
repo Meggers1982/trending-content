@@ -1,0 +1,109 @@
+{
+ "date": "2026-11-07",
+ "ideas": [
+  {
+   "id": "rd-2026-11-07-coconut-water-and-an-electrolyte-drink-did-no-bett",
+   "desk": "research",
+   "title": "Coconut water and an electrolyte drink did no better than plain water for recovery after an hour of cycling in the heat, in a 12-person trial",
+   "created": "2026-11-07",
+   "route": "roundup",
+   "speed": "online 6 days",
+   "beat": "fitness, nutrition science",
+   "angle": "The electrolyte-packet boom (LMNT, Liquid IV, coconut water) sells post-workout recovery. In a small triple-blind crossover trial, water, a sodium-potassium drink and coconut water produced the same core temperature, heart rate, body-mass and fatigue results after 60 minutes of cycling at about 33°C. One-line take: for an ordinary hour-long sweaty workout, drinking enough of anything may matter more than what's in it.",
+   "why_now": "Online 6 days (date verified). Sports drinks are in the news this week with the Gatorade recall on the Trend Desk list, and electrolyte products sell year-round.",
+   "is_it_real": "It's a real randomized, triple-blind crossover, but only 12 people (7 men), one center, one session per drink, and short-term measures. It can't speak to long endurance events, heavy salt losers or illness-related dehydration. A co-author (Macciochi) is affiliated with Ancient+Brave, a supplement and food brand. The result doesn't favor any product, but the item should name the affiliation. Say 'in a small trial', not 'water works just as well'.",
+   "evidence_strength": "thin",
+   "other_peg": "Gatorade recall of 122,000+ cases over undeclared dyes (Trend Desk, this week)",
+   "audience": "general",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42601056"
+   ],
+   "studies": [
+    {
+     "pmid": "42601056",
+     "doi": "10.1123/ijsnem.2026-0016",
+     "journal": "International Journal of Sport Nutrition and Exercise Metabolism",
+     "headline": "Coconut water and electrolyte drinks offer no advantage over plain water for cooling down after hot-weather workouts",
+     "pubdate": "2026 Nov 1",
+     "days_online": 6,
+     "date_verified": true,
+     "digests": [
+      "Fitness & Exercise"
+     ],
+     "score": 7,
+     "caveats": "small sample (N<100), short follow-up, industry funding [Ancient+Brave — coconut water product affiliation noted for author Macciochi], single-center",
+     "fact_check_note": "One co-author (Macciochi) is affiliated with Ancient+Brave, a supplement/food brand; this potential conflict of interest should be noted, though the finding does not favor any commercial product.",
+     "coverage": "Not widely covered ✓ (SERPAPI verified)",
+     "flags": [
+      "small_sample"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42601056/",
+    "https://doi.org/10.1123/ijsnem.2026-0016"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "rd-2026-11-07-the-hallmarks-of-aging-that-biological-age-tests-a",
+   "desk": "research",
+   "title": "The 'hallmarks of aging' that biological-age tests and longevity clinics measure have almost no long-term human evidence linking them to muscle loss. Insulin resistance does",
+   "created": "2026-11-07",
+   "route": "roundup",
+   "speed": "online 3 days",
+   "beat": "aging, body and metabolism",
+   "angle": "A French team looked for longitudinal human studies (adults 50+) that tie aging biomarkers to repeated body-composition scans. They found none at all for senescence, epigenetic changes, genomic instability, autophagy, stem-cell exhaustion or gut dysbiosis. Telomere length, the one primary hallmark studied, showed no consistent link. Insulin-related markers were the one consistent signal. Take: the marker your regular doctor already checks beat the ones being sold.",
+   "why_now": "Online 3 days (date verified). Fits the steady wave of biological-age testing and longevity-clinic marketing, plus 'glp-1 and aging' searches on this week's Trend Desk list. It also follows our rapamycin 'Is it real?' (11-06) without repeating it.",
+   "is_it_real": "It's a narrative review, not a systematic review or meta-analysis (the digest's score line wrongly calls it one), so the search wasn't exhaustive and nothing was pooled. The striking part is an absence of evidence, which is not evidence that the markers don't matter. It covers muscle and fat outcomes only. The insulin finding comes from observational studies, so say 'linked to'.",
+   "evidence_strength": "moderate",
+   "other_peg": "",
+   "audience": "both",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42980902"
+   ],
+   "studies": [
+    {
+     "pmid": "42980902",
+     "doi": "10.1007/s11357-026-02629-6",
+     "journal": "Geroscience",
+     "headline": "Researchers searched for biological markers that predict muscle loss with age — and found most 'hallmarks of aging' have never been tested",
+     "pubdate": "2026 Nov 4",
+     "days_online": 3,
+     "date_verified": true,
+     "digests": [
+      "Senior Living — New This Week"
+     ],
+     "score": 8,
+     "caveats": "Narrative review rather than a systematic review or meta-analysis, so study selection was not exhaustive and results were not statistically pooled. The included evidence was described by the authors as limited and heterogeneous, and associations across the underlying observational studies cannot establish causation.",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (Google News checked)",
+     "flags": [
+      "observational"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42980902/",
+    "https://doi.org/10.1007/s11357-026-02629-6"
+   ],
+   "term_details": [],
+   "status": "routed"
+  }
+ ],
+ "dropped": {
+  "methods-only": 2,
+  "caveats-undo-it": 4,
+  "specialist-only": 3,
+  "watch": 1,
+  "already-covered": 2,
+  "too-thin": 1
+ }
+}
