@@ -1,6 +1,86 @@
 {
- "updated": "2026-11-07",
+ "updated": "2026-11-08",
  "items": [
+  {
+   "id": "rd-2026-11-08-phone-apps-that-send-cpr-trained-volunteers-to-car",
+   "title": "Phone apps that send CPR-trained volunteers to cardiac arrests got someone there before the ambulance in about 6 in 10 cases when alerts used travel time, though a wide fixed radius did nearly as well",
+   "created": "2026-11-08",
+   "angle": "A useful line for readers who have PulsePoint-style responder apps or are thinking about signing up. In a German randomized trial, smart travel-time alerts beat a narrow 600 m radius (58% vs 31% arriving before EMS) but tied a 2.5 km radius (57%). The real gain was cutting about 31% of pointless dispatches, which matters for volunteer burnout.",
+   "why_now": "Online 1 day in JAHA (date verified). Not yet covered.",
+   "is_it_real": "A randomized three-arm trial with 823 activations, one German system. The outcome was arrival before the ambulance, not survival. The digest's 'observational' caveat is wrong because the trial was randomized, but 'surrogate endpoint only' is right. The smart algorithm did not beat the simple wide radius.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42998307/",
+    "https://doi.org/10.1161/JAHA.126.051900"
+   ],
+   "studies": [
+    {
+     "pmid": "42998307",
+     "journal": "Journal of the American Heart Association",
+     "caveats": "observational design, single-center, short follow-up, surrogate endpoints only",
+     "days_online": 1
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-11-08-four-2-minute-bursts-of-hard-exercise-during-schoo",
+   "title": "Four 2-minute bursts of hard exercise during school breaks cut teens' self-reported screen time by about 52 minutes a day in a class-randomized trial",
+   "created": "2026-11-08",
+   "angle": "A different take on teen phone use than bans and warning labels: short bursts of hard exercise built into the school day. The roundup line should say the effect partly faded once the structured program stopped.",
+   "why_now": "Teen social media restrictions are in the news (California's AB 56 warning labels, Australia's under-16 ban at one year). It also sits alongside the 10-25 pitch on the teen phone panic.",
+   "is_it_real": "A cluster RCT of 386 Chinese secondary students, randomized by class. Screen time and smartphone addiction scores were self-reported, so expectation effects are possible, and there was one school setting. Some of the improvement faded during the 2-month unguided follow-up. The online date is not verified.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42925061/",
+    "https://doi.org/10.1111/sms.70388"
+   ],
+   "studies": [
+    {
+     "pmid": "42925061",
+     "journal": "Scandinavian Journal of Medicine & Science in Sports",
+     "caveats": "single-center, observational design, short follow-up, self-reported outcomes",
+     "days_online": 0
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-11-08-women-veterans-with-copd-got-recommended-lung-test",
+   "title": "Women veterans with COPD got recommended lung testing and quit-smoking help more often than men, but were less likely to get maintenance inhalers",
+   "created": "2026-11-08",
+   "angle": "COPD is increasingly a women's disease, and this shows a split gap: women got the diagnostic and counseling steps but less of the core drug therapy (adjusted odds ratio 0.86). The line should give it as odds, not 'X% less likely'.",
+   "why_now": "Adds to recent coverage of women being under-treated for heart and lung disease, including the 10-25 'women are screened more but treated less for heart risk' pitch.",
+   "is_it_real": "A retrospective study of national VA data, 2012 to 2020: 34,645 women age-matched to 138,580 men. It covers the VA only, and that system is overwhelmingly male. Prescriptions were measured, not outcomes. The aOR of 0.86 is modest. The online date is not verified.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42833476/",
+    "https://doi.org/10.1016/j.rmed.2026.109196"
+   ],
+   "studies": [
+    {
+     "pmid": "42833476",
+     "journal": "Respiratory Medicine",
+     "caveats": "observational design, VA population may not generalize (predominantly male system, 3.9% female), retrospective, surrogate endpoints only",
+     "days_online": 0
+    }
+   ]
+  },
+  {
+   "id": "rd-2026-11-08-toddlers-hospitalized-with-rsv-got-steroids-about",
+   "title": "Toddlers hospitalized with RSV got steroids about four times as often as infants and antibiotics twice as often, though they were less often sick enough for intensive care",
+   "created": "2026-11-08",
+   "angle": "A useful line for RSV season: neither drug class is recommended for routine RSV, and the extra prescribing in 1-year-olds wasn't explained by how sick they were. Parents can reasonably ask why a drug is being given.",
+   "why_now": "Winter RSV season is starting. It follows the earlier RSV roundups on the infant antibody shot and the vaccine for adults 60 and older.",
+   "is_it_real": "A retrospective study of 6,260 children at 11 Israeli centers, 2017 to 2021 (the digest's 'single-center' caveat is wrong). It's observational, so it can't show any individual prescription was inappropriate. It covers Israel only. The online date is not verified.",
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42952123/",
+    "https://doi.org/10.1111/irv.70338"
+   ],
+   "studies": [
+    {
+     "pmid": "42952123",
+     "journal": "Influenza and Other Respiratory Viruses",
+     "caveats": "observational design, single-center, retrospective design, geographically limited to Israel",
+     "days_online": 0
+    }
+   ]
+  },
   {
    "id": "rd-2026-11-07-coconut-water-and-an-electrolyte-drink-did-no-bett",
    "title": "Coconut water and an electrolyte drink did no better than plain water for recovery after an hour of cycling in the heat, in a 12-person trial",

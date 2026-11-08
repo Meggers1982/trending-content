@@ -40157,6 +40157,311 @@
    "judged_on": "2026-11-07",
    "status": "dropped",
    "reason": "too-thin"
+  },
+  "42537042": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42995052": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42993431": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42974910": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42537435": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42998286": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42946426": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42937165": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42995282": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42362109": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42998315": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42987410": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42983147": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42999036": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42530921": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42974821": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42997323": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42998103": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42995032": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42754802": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42778079": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42982300": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42998940": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42848858": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42980653": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42394263": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42995660": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42988576": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42998781": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42981174": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42993959": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42547039": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42415538": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42998219": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42998754": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42993214": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "screened-out"
+  },
+  "42993545": {
+   "judged_on": "2026-11-08",
+   "status": "kept",
+   "idea": "rd-2026-11-08-hormone-pills-instead-of-surgery-for-breast-cancer"
+  },
+  "42998307": {
+   "judged_on": "2026-11-08",
+   "status": "kept",
+   "idea": "rd-2026-11-08-phone-apps-that-send-cpr-trained-volunteers-to-car"
+  },
+  "42925061": {
+   "judged_on": "2026-11-08",
+   "status": "kept",
+   "idea": "rd-2026-11-08-four-2-minute-bursts-of-hard-exercise-during-schoo"
+  },
+  "42833476": {
+   "judged_on": "2026-11-08",
+   "status": "kept",
+   "idea": "rd-2026-11-08-women-veterans-with-copd-got-recommended-lung-test"
+  },
+  "42952123": {
+   "judged_on": "2026-11-08",
+   "status": "kept",
+   "idea": "rd-2026-11-08-toddlers-hospitalized-with-rsv-got-steroids-about"
+  },
+  "42998691": {
+   "judged_on": "2026-11-08",
+   "status": "kept",
+   "idea": "rd-2026-11-08-testosterone-gel-can-rub-off-on-partners-and-kids"
+  },
+  "42998334": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "caveats-undo-it"
+  },
+  "42988151": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "caveats-undo-it"
+  },
+  "42992601": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "too-thin"
+  },
+  "42995502": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "watch"
+  },
+  "42995413": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "specialist-only"
+  },
+  "42997333": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "already-covered"
+  },
+  "42838239": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "too-thin"
+  },
+  "42998586": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "caveats-undo-it"
+  },
+  "42977214": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "specialist-only"
+  },
+  "42579403": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "too-thin"
+  },
+  "42994690": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "specialist-only"
+  },
+  "42570400": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "specialist-only"
+  },
+  "42727648": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "already-covered"
+  },
+  "42982236": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "too-thin"
+  },
+  "42975712": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "specialist-only"
+  },
+  "42982275": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "caveats-undo-it"
+  },
+  "42980899": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "methods-only"
+  },
+  "42805279": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "too-thin"
+  },
+  "42993419": {
+   "judged_on": "2026-11-08",
+   "status": "dropped",
+   "reason": "too-thin"
   }
  },
  "ideas": {
@@ -56901,6 +57206,289 @@
    ],
    "term_details": [],
    "status": "routed"
+  },
+  "rd-2026-11-08-hormone-pills-instead-of-surgery-for-breast-cancer": {
+   "desk": "research",
+   "title": "Hormone pills instead of surgery for breast cancer in your 80s: a 29-study analysis says the tumor's biology and the patient's frailty should decide, not her age",
+   "created": "2026-11-08",
+   "route": "pitch",
+   "speed": "online 6 days",
+   "beat": "aging, body and metabolism (cancer)",
+   "angle": "Many women in their 80s with ER-positive breast cancer are steered toward or away from surgery based on age alone. Pooled randomized trials found no statistically significant survival difference for hormone pills alone versus upfront surgery, though the estimate leaned toward surgery. How long the pills held the cancer back ranged from under 20 months to more than 50, depending on tumor biology and the drug used. The story is about how treatment for the oldest patients gets decided, and the questions women and families should be asking.",
+   "why_now": "Online 6 days (date verified) in JAMA Network Open. It fits the wider push to scale back cancer treatment in older women, where surgery, lymph-node biopsy and radiation are each being questioned.",
+   "is_it_real": "A meta-analysis of 29 studies covering 22,821 patients, median age 83. Only the 6 randomized trials were pooled for survival, and they span five decades, many from the tamoxifen era, with a lot of variation between them. Trial participants were younger (median 77) than real-world patients (median 84), so the results fit the oldest and frailest women least well. Overall survival showed no significant difference but leaned toward surgery, so 'pills are just as good' would overstate it. Press coverage hasn't been checked; the pitch agents need to check it.",
+   "evidence_strength": "moderate",
+   "other_peg": "San Antonio Breast Cancer Symposium, held each December (pitch agents should confirm the 2026 dates and look for any related abstracts)",
+   "audience": "older adults",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42993545"
+   ],
+   "studies": [
+    {
+     "pmid": "42993545",
+     "doi": "10.1001/jamanetworkopen.2026.43218",
+     "journal": "JAMA Netw Open",
+     "headline": "For women in their 80s with breast cancer, hormone pills may be a reasonable alternative to surgery — but tumor biology, not age, should decide",
+     "pubdate": "2026 Nov 2",
+     "days_online": 6,
+     "date_verified": true,
+     "digests": [
+      "Senior Living — New This Week"
+     ],
+     "score": 8,
+     "caveats": "Meta-analysis of trials spanning five decades with substantial heterogeneity; observational cohorts were susceptible to confounding by indication and were not pooled for survival comparison; randomized trial participants were younger (median 77) than real-world patients (median 84), limiting generalizability to the oldest and frailest.",
+     "fact_check_note": "",
+     "coverage": "Not verified — coverage not checked",
+     "flags": [
+      "observational"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42993545/",
+    "https://doi.org/10.1001/jamanetworkopen.2026.43218"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  "rd-2026-11-08-phone-apps-that-send-cpr-trained-volunteers-to-car": {
+   "desk": "research",
+   "title": "Phone apps that send CPR-trained volunteers to cardiac arrests got someone there before the ambulance in about 6 in 10 cases when alerts used travel time, though a wide fixed radius did nearly as well",
+   "created": "2026-11-08",
+   "route": "roundup",
+   "speed": "online 1 days",
+   "beat": "public health, environment and tech",
+   "angle": "A useful line for readers who have PulsePoint-style responder apps or are thinking about signing up. In a German randomized trial, smart travel-time alerts beat a narrow 600 m radius (58% vs 31% arriving before EMS) but tied a 2.5 km radius (57%). The real gain was cutting about 31% of pointless dispatches, which matters for volunteer burnout.",
+   "why_now": "Online 1 day in JAHA (date verified). Not yet covered.",
+   "is_it_real": "A randomized three-arm trial with 823 activations, one German system. The outcome was arrival before the ambulance, not survival. The digest's 'observational' caveat is wrong because the trial was randomized, but 'surrogate endpoint only' is right. The smart algorithm did not beat the simple wide radius.",
+   "evidence_strength": "moderate",
+   "other_peg": "",
+   "audience": "general",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42998307"
+   ],
+   "studies": [
+    {
+     "pmid": "42998307",
+     "doi": "10.1161/JAHA.126.051900",
+     "journal": "Journal of the American Heart Association",
+     "headline": "Smarter Smartphone Dispatch Gets CPR-Trained Volunteers to Cardiac Arrests Before Ambulances Arrive",
+     "pubdate": "2026 Nov 7",
+     "days_online": 1,
+     "date_verified": true,
+     "digests": [
+      "Aging & Longevity",
+      "Cardiology & Heart Health"
+     ],
+     "score": 8,
+     "caveats": "observational design, single-center, short follow-up, surrogate endpoints only",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (SERPAPI verified)",
+     "flags": [
+      "observational"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42998307/",
+    "https://doi.org/10.1161/JAHA.126.051900"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  "rd-2026-11-08-four-2-minute-bursts-of-hard-exercise-during-schoo": {
+   "desk": "research",
+   "title": "Four 2-minute bursts of hard exercise during school breaks cut teens' self-reported screen time by about 52 minutes a day in a class-randomized trial",
+   "created": "2026-11-08",
+   "route": "roundup",
+   "speed": "online 0 days (unverified)",
+   "beat": "women's health and the mind / internet culture",
+   "angle": "A different take on teen phone use than bans and warning labels: short bursts of hard exercise built into the school day. The roundup line should say the effect partly faded once the structured program stopped.",
+   "why_now": "Teen social media restrictions are in the news (California's AB 56 warning labels, Australia's under-16 ban at one year). It also sits alongside the 10-25 pitch on the teen phone panic.",
+   "is_it_real": "A cluster RCT of 386 Chinese secondary students, randomized by class. Screen time and smartphone addiction scores were self-reported, so expectation effects are possible, and there was one school setting. Some of the improvement faded during the 2-month unguided follow-up. The online date is not verified.",
+   "evidence_strength": "moderate",
+   "other_peg": "",
+   "audience": "general",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42925061"
+   ],
+   "studies": [
+    {
+     "pmid": "42925061",
+     "doi": "10.1111/sms.70388",
+     "journal": "Scandinavian Journal of Medicine & Science in Sports",
+     "headline": "Just 8 minutes of intense exercise per school day cut teens' screen time by nearly an hour",
+     "pubdate": "2026 Nov",
+     "days_online": 0,
+     "date_verified": false,
+     "digests": [
+      "Fitness & Exercise"
+     ],
+     "score": 8,
+     "caveats": "single-center, observational design, short follow-up, self-reported outcomes",
+     "fact_check_note": "The abstract states the intervention was four 2-minute bouts daily (8 minutes total), not a single session; headline and summary reflect this accurately.",
+     "coverage": "Not widely covered ✓ (SERPAPI verified)",
+     "flags": [
+      "observational"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42925061/",
+    "https://doi.org/10.1111/sms.70388"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  "rd-2026-11-08-women-veterans-with-copd-got-recommended-lung-test": {
+   "desk": "research",
+   "title": "Women veterans with COPD got recommended lung testing and quit-smoking help more often than men, but were less likely to get maintenance inhalers",
+   "created": "2026-11-08",
+   "route": "roundup",
+   "speed": "online 0 days (unverified)",
+   "beat": "women's health and the mind",
+   "angle": "COPD is increasingly a women's disease, and this shows a split gap: women got the diagnostic and counseling steps but less of the core drug therapy (adjusted odds ratio 0.86). The line should give it as odds, not 'X% less likely'.",
+   "why_now": "Adds to recent coverage of women being under-treated for heart and lung disease, including the 10-25 'women are screened more but treated less for heart risk' pitch.",
+   "is_it_real": "A retrospective study of national VA data, 2012 to 2020: 34,645 women age-matched to 138,580 men. It covers the VA only, and that system is overwhelmingly male. Prescriptions were measured, not outcomes. The aOR of 0.86 is modest. The online date is not verified.",
+   "evidence_strength": "moderate",
+   "other_peg": "",
+   "audience": "both",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42833476"
+   ],
+   "studies": [
+    {
+     "pmid": "42833476",
+     "doi": "10.1016/j.rmed.2026.109196",
+     "journal": "Respiratory Medicine",
+     "headline": "Women with COPD are less likely to get the inhalers that could help them — even when they're better at completing other recommended care",
+     "pubdate": "2026 Nov",
+     "days_online": 0,
+     "date_verified": false,
+     "digests": [
+      "Cardiology & Heart Health"
+     ],
+     "score": 7,
+     "caveats": "observational design, VA population may not generalize (predominantly male system, 3.9% female), retrospective, surrogate endpoints only",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (SERPAPI verified)",
+     "flags": [
+      "observational"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42833476/",
+    "https://doi.org/10.1016/j.rmed.2026.109196"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  "rd-2026-11-08-toddlers-hospitalized-with-rsv-got-steroids-about": {
+   "desk": "research",
+   "title": "Toddlers hospitalized with RSV got steroids about four times as often as infants and antibiotics twice as often, though they were less often sick enough for intensive care",
+   "created": "2026-11-08",
+   "route": "roundup",
+   "speed": "online 0 days (unverified)",
+   "beat": "public health, environment and tech",
+   "angle": "A useful line for RSV season: neither drug class is recommended for routine RSV, and the extra prescribing in 1-year-olds wasn't explained by how sick they were. Parents can reasonably ask why a drug is being given.",
+   "why_now": "Winter RSV season is starting. It follows the earlier RSV roundups on the infant antibody shot and the vaccine for adults 60 and older.",
+   "is_it_real": "A retrospective study of 6,260 children at 11 Israeli centers, 2017 to 2021 (the digest's 'single-center' caveat is wrong). It's observational, so it can't show any individual prescription was inappropriate. It covers Israel only. The online date is not verified.",
+   "evidence_strength": "moderate",
+   "other_peg": "",
+   "audience": "general",
+   "confidence": "low",
+   "site": "",
+   "seed_keyword": "",
+   "pmids": [
+    "42952123"
+   ],
+   "studies": [
+    {
+     "pmid": "42952123",
+     "doi": "10.1111/irv.70338",
+     "journal": "Influenza and Other Respiratory Viruses",
+     "headline": "Toddlers hospitalized with RSV get far more antibiotics and steroids than infants — even though they're less critically ill",
+     "pubdate": "2026 Nov",
+     "days_online": 0,
+     "date_verified": false,
+     "digests": [
+      "Science & Environment"
+     ],
+     "score": 7,
+     "caveats": "observational design, single-center, retrospective design, geographically limited to Israel",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (SERPAPI verified)",
+     "flags": [
+      "observational"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42952123/",
+    "https://doi.org/10.1111/irv.70338"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  "rd-2026-11-08-testosterone-gel-can-rub-off-on-partners-and-kids": {
+   "desk": "research",
+   "title": "Testosterone gel can rub off on partners and kids: how secondary transfer happens and how to prevent it",
+   "created": "2026-11-08",
+   "route": "brief",
+   "speed": "online 1 days",
+   "beat": "aging, body and metabolism",
+   "angle": "An evergreen explainer for women using testosterone for low libido (often low doses of gels made for men) and women whose partners use it. It covers what raises transfer (sweat, skin contact before the gel dries), what lowers it, and the FDA's secondary-exposure warning. The lab study is one source behind it, not the hook.",
+   "why_now": "Testosterone prescribing for women is growing (a related pitch was picked 11-03), and 'testosterone gel transfer' gets steady searches.",
+   "is_it_real": "A lab study using Franz diffusion cells with pig and human skin. Sweat raised transfer about 5-fold, and letting the gel dry cut it about 7-fold. There are no clinical or blood-level outcomes in real people, so the page should rely on the FDA label and clinical guidance for advice and cite this study only for mechanism.",
+   "evidence_strength": "thin",
+   "other_peg": "",
+   "audience": "both",
+   "confidence": "medium",
+   "site": "menopause",
+   "seed_keyword": "testosterone gel transfer to partner",
+   "pmids": [
+    "42998691"
+   ],
+   "studies": [
+    {
+     "pmid": "42998691",
+     "doi": "10.1016/j.ejpb.2026.115283",
+     "journal": "European Journal of Pharmaceutics and Biopharmaceutics",
+     "headline": "Sweat dramatically boosts accidental testosterone transfer from gel users to others — and drying the gel first doesn't fully protect",
+     "pubdate": "2026 Nov 7",
+     "days_online": 1,
+     "date_verified": true,
+     "digests": [
+      "Science & Environment"
+     ],
+     "score": 7,
+     "caveats": "in vitro study, animal skin (porcine) used alongside human skin, no clinical outcome data",
+     "fact_check_note": "",
+     "coverage": "Not widely covered ✓ (SERPAPI verified)",
+     "flags": [
+      "animal_or_lab"
+     ]
+    }
+   ],
+   "evidence": [
+    "https://pubmed.ncbi.nlm.nih.gov/42998691/",
+    "https://doi.org/10.1016/j.ejpb.2026.115283"
+   ],
+   "term_details": [],
+   "status": "routed"
   }
  },
  "runs": [
@@ -57363,6 +57951,34 @@
     "watch": 1,
     "already-covered": 2,
     "too-thin": 1
+   }
+  },
+  {
+   "date": "2026-11-08",
+   "studies": 8300,
+   "candidates": 25,
+   "skipped": {
+    "already judged": 7994,
+    "taken elsewhere": 1,
+    "below score": 204,
+    "older": 80,
+    "screened out": 36
+   },
+   "screened": 40,
+   "model": "opus",
+   "ideas": 6,
+   "routes": {
+    "pitch": 1,
+    "roundup": 4,
+    "brief": 1
+   },
+   "dropped": {
+    "caveats-undo-it": 4,
+    "too-thin": 6,
+    "watch": 1,
+    "specialist-only": 5,
+    "already-covered": 2,
+    "methods-only": 1
    }
   }
  ],
