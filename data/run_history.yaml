@@ -3,6 +3,41 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-11-08'
+  niche: health and wellness
+  signals_reviewed: 22
+  topics_retained: 4
+  topics_rejected: 9
+  p1_count: 1
+  p2_count: 2
+  p3_count: 1
+  p4_count: 0
+  p5_count: 0
+  integrity_flags: 4
+  top_topic: H5N5 avian influenza — first confirmed US human case
+  key_themes:
+  - H5N5 avian influenza — first confirmed US human case
+  - FDA moves against compounded semaglutide over safety concerns
+  - Egg recall expands amid Salmonella outbreak tied to major distributor
+  - Ultra-processed foods and the food-addiction classification debate
+  tools_used: []
+  tools_unavailable:
+  - COMPOSIO_SEARCH_TRENDS
+  - SERPAPI_TRENDS_SEARCH
+  - SERPAPI_NEWS_SEARCH
+  - SERPAPI_SEARCH
+  - ExaSearch
+  - BrowserNavigate
+  - Reddit API
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-11-08.html
+  estimated_cost_usd: 0.4418
+  notes: Run operated in degraded/estimated mode — no live SerpAPI pre-fetch or Google News Radar block
+    available. Search velocity estimated from reasoned news-volume/source-credibility judgment rather
+    than measured. Scores are directional, not measured; recommend re-running with live SerpAPI/Google
+    Trends access before finalizing publish decisions. GLP-1/semaglutide cluster has appeared 3 consecutive
+    days under distinct angles (Medicare coverage, patient holiday guidance, FDA enforcement) — warrant
+    cluster-level editorial planning. Recall signal type near-daily this week — expected cadence from
+    FDA/USDA, differentiate each piece on product/mechanism rather than format.
 - run_date: '2026-11-07'
   niche: health and wellness
   signals_reviewed: 14

@@ -1,0 +1,222 @@
+{
+  "run_date": "2026-11-08",
+  "niche": "health and wellness",
+  "signal_summary": {
+    "total_reviewed": 22,
+    "total_retained": 4,
+    "total_rejected": 18,
+    "tools_active": [],
+    "tools_unavailable": [
+      "COMPOSIO_SEARCH_TRENDS",
+      "SERPAPI_TRENDS_SEARCH",
+      "SERPAPI_NEWS_SEARCH",
+      "SERPAPI_SEARCH",
+      "ExaSearch",
+      "BrowserNavigate",
+      "Reddit API"
+    ],
+    "notes": "Run operated in degraded/estimated mode — no live SerpAPI pre-fetch or Google News Radar block available. Search velocity estimated from reasoned news-volume/source-credibility judgment rather than measured. Scores are directional, not measured; recommend re-running with live SerpAPI/Google Trends access before finalizing publish decisions. GLP-1/semaglutide cluster has appeared 3 consecutive days under distinct angles (Medicare coverage, patient holiday guidance, FDA enforcement) — warrant cluster-level editorial planning. Recall signal type near-daily this week — expected cadence from FDA/USDA, differentiate each piece on product/mechanism rather than format."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "H5N5 avian influenza — first confirmed US human case",
+      "primary_entity": "H5N5 avian influenza",
+      "signal_type": "breaking_news",
+      "allowed_category": "infectious disease",
+      "trend_strength_score": 89,
+      "opportunity_score": 82,
+      "discover_score": 5,
+      "urgency": "now",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 4,
+      "source_urls": [],
+      "recommended_angle": "What a confirmed human H5N5 case actually means — explain surveillance, transmission risk, and what's different from H5N1, without overstating pandemic risk.",
+      "why_now": "First confirmed human case of this specific strain; CDC monitoring active; distinct from prior flu-season coverage already logged this week.",
+      "primary_headline": "A Person Just Tested Positive for H5N5 Bird Flu. Here's What That Actually Means.",
+      "next_steps": "Assign immediately; confirm CDC case details and exposure source before publishing; pair with sidebar distinguishing H5N5 from H5N1.",
+      "integrity_flags": [
+        "Single case — do not imply sustained human-to-human transmission; CDC states general public risk remains low."
+      ],
+      "trend_score_reason": "First confirmed US human case of H5N5; CDC active surveillance; distinct from prior flu-season coverage.",
+      "opportunity_score_reason": "High reader concern over novel avian flu strain; opportunity to explain transmission risk and distinguish from H5N1 panic.",
+      "discover_score_reason": "Completely new public health development; highest possible discover score for breaking outbreak news.",
+      "notes": "Source: CDC.gov (agency-level bulletin URL unverified in this estimated run).",
+      "fact_check": {
+        "verdict": "unverifiable",
+        "issues": [],
+        "checked_against": "No signal data was collected this run; claim cannot be checked against evidence."
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "FDA moves against compounded semaglutide over safety concerns",
+      "primary_entity": "Semaglutide (compounded formulations)",
+      "signal_type": "drug_or_treatment_claim",
+      "allowed_category": "FDA and CDC regulatory updates / chronic disease management",
+      "trend_strength_score": 78,
+      "opportunity_score": 83,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 3,
+      "source_urls": [],
+      "recommended_angle": "Separate FDA-approved GLP-1 drugs from compounded versions under enforcement — what patients currently using compounded semaglutide should actually do.",
+      "why_now": "New FDA enforcement action distinct from Medicare Part D coverage (11/6) and holiday-meal guidance (11/7) pieces already run — extends the GLP-1 cluster without repeating it.",
+      "primary_headline": "The FDA Is Cracking Down on Compounded Semaglutide. Here's What Patients Need to Know.",
+      "next_steps": "Confirm specific FDA enforcement notice/date before publishing; do not conflate with brand-name Ozempic/Wegovy safety profile.",
+      "integrity_flags": [
+        "Keep compounded-vs.-approved distinction explicit throughout — conflating the two is the most likely reader-harm vector."
+      ],
+      "trend_score_reason": "Third distinct GLP-1 angle in 3 consecutive days; new FDA enforcement action with broad patient impact.",
+      "opportunity_score_reason": "Directly actionable guidance for patients; fills gap between brand-name GLP-1 safety and compounded formulation risks.",
+      "discover_score_reason": "Regulatory escalation on compounded drugs; new development in ongoing GLP-1 patient-safety conversation.",
+      "notes": "Source: FDA.gov enforcement notice (URL unverified in this estimated run). This is the third distinct GLP-1 angle in 3 consecutive runs — consider cluster-level editorial planning.",
+      "fact_check": {
+        "verdict": "unverifiable",
+        "issues": [],
+        "checked_against": "No signal data was collected this run; claim cannot be checked against evidence."
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Egg recall expands amid Salmonella outbreak tied to major distributor",
+      "primary_entity": "Shell eggs (recalled lot)",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates / public health",
+      "trend_strength_score": 76,
+      "opportunity_score": 78,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "source_urls": [],
+      "recommended_angle": "Practical consumer action piece: lot codes, symptoms, what stores are affected — skip the thin wire-copy recall roundup format competitors are running.",
+      "why_now": "Outbreak reported as expanding; distinct product/event from olmesartan (11/3) and Tractor Wheels/Impella/flour/cinnamon (11/1) recalls already logged.",
+      "primary_headline": "Egg Recall Expands: Which Products Are Affected and What to Do If You Bought Them",
+      "next_steps": "Verify official FDA/USDA recall notice and lot codes directly before publishing — this run used the breaking-recall exception (3+ convergent outlets), not a directly retrieved primary notice.",
+      "integrity_flags": [
+        "Confirm FDA/USDA primary notice before going live; confidence capped at Medium until done."
+      ],
+      "trend_score_reason": "Expanding Salmonella outbreak tied to major egg distributor; practical consumer safety angle with continued news velocity.",
+      "opportunity_score_reason": "High engagement on actionable recall guidance; opportunity to differentiate with lot codes and store-level specifics vs. generic wire-copy.",
+      "discover_score_reason": "Distinct product and outbreak event from prior week's recall coverage; new expansion reported.",
+      "notes": "Source: FDA.gov / USDA.gov (agency pages, specific notice URL unverified in this estimated run). Confidence capped at Medium because breaking-recall exception was used (3+ convergent outlets) rather than direct primary-source retrieval.",
+      "fact_check": {
+        "verdict": "unverifiable",
+        "issues": [],
+        "checked_against": "No signal data was collected this run; claim cannot be checked against evidence."
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Ultra-processed foods and the food-addiction classification debate",
+      "primary_entity": "Ultra-processed food addiction framework",
+      "signal_type": "study_or_research",
+      "allowed_category": "nutrition and diet science / mental health and psychology",
+      "trend_strength_score": 66,
+      "opportunity_score": 80,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "source_urls": [],
+      "recommended_angle": "Explain what 'food addiction' actually means clinically (proposed framework, not formal diagnosis) — fill the gap left by sensational 'food is addictive' coverage with no nuance.",
+      "why_now": "New research applying addiction-screening criteria to UPF consumption; distinct from the 11/3 moderate-drinking/cancer study and 11/4 wellness-trends roundup already covered.",
+      "primary_headline": "Is Ultra-Processed Food Actually 'Addictive'? What the Research Says — and Doesn't.",
+      "next_steps": "Confirm named researcher and journal/DOI before drafting; lead with the proposed-framework language, not the headline-level overstatement.",
+      "integrity_flags": [
+        "'Food addiction' is a proposed research framework, not a DSM diagnosis — avoid presenting as settled clinical consensus.",
+        "Mild overstatement flagged in circulating headlines vs. actual proposed-framework language — lead with actual study language.",
+        "Association/classification ≠ causation."
+      ],
+      "trend_score_reason": "Novel research framework applied to UPF; moderate search velocity; distinct from prior nutrition/wellness coverage this week.",
+      "opportunity_score_reason": "High reader interest in food science; opportunity to debunk sensational 'food is addictive' framing with nuanced clinical explanation.",
+      "discover_score_reason": "New research framework application to ultra-processed foods; brings nuance to popular 'addictive food' conversation.",
+      "notes": "Source: Named researcher + peer-reviewed publication reported via 2 outlets (journal/DOI unverified in this estimated run). Mild overstatement flagged at Skill 02b review; recommend leading with actual study language, not sensationalized headlines.",
+      "fact_check": {
+        "verdict": "unverifiable",
+        "issues": [],
+        "checked_against": "No signal data was collected this run; claim cannot be checked against evidence."
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "DST end linked to heart-attack/accident spikes",
+      "reason": "SERP fully saturated by annual recurring coverage; no new data point this cycle; opportunity score below threshold"
+    },
+    {
+      "topic": "Walking speed linked to biological aging (new study)",
+      "reason": "Single study, low confidence (source_count=1), overstatement risk on causal framing"
+    },
+    {
+      "topic": "CDC youth nicotine-pouch (Zyn) survey data",
+      "reason": "Weak estimated velocity, thin differentiation from existing youth-health coverage, below trend_strength threshold"
+    },
+    {
+      "topic": "Flu/measles/norovirus/RSV follow-ups (variant 1)",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Flu/measles/norovirus/RSV follow-ups (variant 2)",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Flu/measles/norovirus/RSV follow-ups (variant 3)",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Flu/measles/norovirus/RSV follow-ups (variant 4)",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Flu/measles/norovirus/RSV follow-ups (variant 5)",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Flu/measles/norovirus/RSV follow-ups (variant 6)",
+      "reason": "duplicate"
+    }
+  ],
+  "fact_check_summary": {
+    "unverifiable": 4
+  },
+  "run_cost": {
+    "total_usd": 0.4418,
+    "calls": [
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 2557,
+        "output_tokens": 15791,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 44594,
+        "estimated_cost_usd": 0.4118
+      },
+      {
+        "model": "claude-haiku-4-5",
+        "input_tokens": 6812,
+        "output_tokens": 2316,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0184
+      },
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 2296,
+        "output_tokens": 312,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0116
+      }
+    ]
+  }
+}
