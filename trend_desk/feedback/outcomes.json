@@ -1,9 +1,9 @@
 {
- "updated": "2026-11-06T20:58:42-06:00",
+ "updated": "2026-11-07T21:27:13-06:00",
  "summary": {
   "by_route": {
    "pitch": {
-    "built": 90,
+    "built": 92,
     "skipped": 0,
     "failed": 0,
     "edited": 0
@@ -15,15 +15,15 @@
     "edited": 0
    },
    "roundup": {
-    "built": 121,
+    "built": 123,
     "skipped": 0,
     "failed": 0,
     "edited": 0
    },
    "brief": {
-    "built": 64,
+    "built": 65,
     "skipped": 0,
-    "failed": 1,
+    "failed": 0,
     "edited": 0
    }
   },
