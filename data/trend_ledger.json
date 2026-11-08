@@ -93,6 +93,11 @@
      "date": "2026-10-25",
      "detail": "pitch",
      "event": "routed"
+    },
+    {
+     "date": "2026-11-08",
+     "detail": "FDA moves against compounded semaglutide over safety concerns",
+     "event": "new-signal"
     }
    ],
    "is_it_real": "Recall reported by multiple outlets, but the input only gives outlet homepages, not the notice itself. The newsroom flags that it is unconfirmed whether this is one manufacturer or class-wide. Verify the FDA notice, the compounder's name and the lot scope before pitching.",
@@ -103,6 +108,7 @@
    "status": "routed",
    "terms": [
     "compounded glp 1 nationwide recall",
+    "fda moves against compounded semaglutide over safety concerns",
     "glp 1 tirzepatide injection recall sterility concerns"
    ],
    "title": "Compounded tirzepatide recalled over sterility concerns: what the compounded GLP-1 market still isn't telling patients",
@@ -1648,6 +1654,81 @@
    ],
    "title": "Thanksgiving food safety: safe turkey temperatures, leftover timelines, and how to check your pantry for recalls first",
    "why_now": "Thanksgiving is three weeks out. Searches for turkey temperatures and leftover safety come back every November, so a page published now can catch this year's peak and every year after."
+  },
+  "2026-11-08-egg-recall-expands-in-a-salmonella-outbreak-which": {
+   "angle": "A practical check-your-fridge item: brands, lot and plant codes, affected states and stores, symptoms, and what to do with eggs you already used. Add one line on why egg Salmonella outbreaks tend to grow after the first notice.",
+   "beat": "food safety",
+   "confidence": "low",
+   "created": "2026-11-08",
+   "evidence": [],
+   "history": [
+    {
+     "date": "2026-11-08",
+     "detail": "roundup",
+     "event": "routed"
+    }
+   ],
+   "is_it_real": "Unverified. There is no distributor name, no product details and no URLs, and the feed itself caps confidence until a primary FDA or USDA notice is confirmed. Run it only if the notice exists by Friday. If it keeps growing into a multi-week outbreak, it could also earn a Recall Register page later.",
+   "route": "roundup",
+   "seed_keyword": "",
+   "site": "",
+   "speed": "new",
+   "status": "routed",
+   "terms": [
+    "egg recall expands amid salmonella outbreak tied to major distributor"
+   ],
+   "title": "Egg recall expands in a Salmonella outbreak: which eggs, which stores, and what to check in your fridge",
+   "why_now": "The outbreak is reported as expanding this week, and eggs are a staple heading into holiday baking."
+  },
+  "2026-11-08-is-it-real-ultra-processed-food-is-as-addictive-as": {
+   "angle": "Test the viral claim that ultra-processed food is addictive against what the research actually measures: the Yale Food Addiction Scale, screening criteria versus diagnosis, and the fact that food addiction is not in the DSM. Ground it in her own body story to show what feels true versus what has been proven.",
+   "beat": "the body / viral health claims",
+   "confidence": "medium",
+   "created": "2026-11-08",
+   "evidence": [],
+   "history": [
+    {
+     "date": "2026-11-08",
+     "detail": "tfm",
+     "event": "routed"
+    }
+   ],
+   "is_it_real": "The debate is real and long-running in the literature, and 'food addiction' is a proposed research framework, not a formal diagnosis. The specific new study is not identified in the input (no URLs, fact-check unverifiable), so the post must cite the actual paper and quote its language rather than the headlines.",
+   "route": "tfm",
+   "seed_keyword": "",
+   "site": "",
+   "speed": "new",
+   "status": "routed",
+   "terms": [
+    "ultra processed foods and the food addiction classification debate"
+   ],
+   "title": "Is it real? 'Ultra-processed food is as addictive as drugs'",
+   "why_now": "New research applying addiction-screening criteria to ultra-processed food is producing overstated headlines. The Wednesday slot (11/11) is open, and this is the strongest 'is it real?' candidate this week."
+  },
+  "2026-11-08-the-first-confirmed-us-human-h5n5-bird-flu-case-wh": {
+   "angle": "A short, calm explainer on how H5N5 differs from the H5N1 strain people already know, what surveillance found, and why one human case is not human-to-human spread. The take: the useful question is how it was caught, not whether to panic.",
+   "beat": "public health",
+   "confidence": "low",
+   "created": "2026-11-08",
+   "evidence": [],
+   "history": [
+    {
+     "date": "2026-11-08",
+     "detail": "roundup",
+     "event": "routed"
+    }
+   ],
+   "is_it_real": "Thin as given. It comes from one newsroom feed with no source URLs, and the fact-check is marked unverifiable. The 'first' claim needs checking: a Washington state human H5N5 case was reported in late 2025, so this may be old news resurfacing or a second case mislabeled 'first.' Confirm against a CDC or state health department notice before writing, and do not imply sustained transmission.",
+   "route": "roundup",
+   "seed_keyword": "",
+   "site": "",
+   "speed": "new",
+   "status": "routed",
+   "terms": [
+    "h5n5 avian influenza first confirmed us human case"
+   ],
+   "title": "The first confirmed US human H5N5 bird flu case: what one case does and doesn't tell you",
+   "why_now": "Surfaced today as a new human case with CDC monitoring. It is exploding news with a clock, which suits a fast Friday item more than a slow feature."
   }
  },
  "runs": [
@@ -1930,6 +2011,26 @@
     "brief": 2
    },
    "watching": 2
+  },
+  {
+   "collected": {
+    "newsroom": 14,
+    "radar": 0,
+    "rising": 0,
+    "wide": 0
+   },
+   "cost_usd": 0.1029,
+   "date": "2026-11-08",
+   "dropped": 0,
+   "due": 4,
+   "ideas": 3,
+   "model": "claude-opus-5-5",
+   "notes": "A light day: four newsroom-only terms, all marked unverifiable with no source URLs, so every keeper carries a verify-first caveat. The compounded semaglutide action extends the existing compounded GLP-1 pitch rather than starting a new one. The ultra-processed food addiction claim fills this week's open newsletter slot. The H5N5 'first case' framing needs checking against the 2025 Washington case before anyone writes it.",
+   "routes": {
+    "roundup": 2,
+    "tfm": 1
+   },
+   "watching": 0
   }
  ],
  "terms": {
@@ -16777,6 +16878,25 @@
    "status": "pending",
    "term": "egg recall california"
   },
+  "egg recall expands amid salmonella outbreak tied to major distributor": {
+   "drop_reason": null,
+   "first_seen": "2026-11-08",
+   "idea": "2026-11-08-egg-recall-expands-in-a-salmonella-outbreak-which",
+   "judged_on": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "sightings": [
+    {
+     "date": "2026-11-08",
+     "opportunity": 78,
+     "profile": "daily-pipeline",
+     "score": 76,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "kept",
+   "term": "Egg recall expands amid Salmonella outbreak tied to major distributor"
+  },
   "eight sleep": {
    "drop_reason": "noise",
    "first_seen": "2026-10-22",
@@ -19272,6 +19392,25 @@
    ],
    "status": "pending",
    "term": "FDA Listeria outbreak investigation — soft cheese, June 2026"
+  },
+  "fda moves against compounded semaglutide over safety concerns": {
+   "drop_reason": null,
+   "first_seen": "2026-11-08",
+   "idea": "2026-10-25-compounded-tirzepatide-recalled-over-sterility-con",
+   "judged_on": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "sightings": [
+    {
+     "date": "2026-11-08",
+     "opportunity": 83,
+     "profile": "daily-pipeline",
+     "score": 78,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "kept",
+   "term": "FDA moves against compounded semaglutide over safety concerns"
   },
   "fda nationwide bladder medication recall august 2026": {
    "drop_reason": null,
@@ -22784,6 +22923,25 @@
    ],
    "status": "pending",
    "term": "H5N1 bird flu — new human exposure cases and farm worker surveillance data"
+  },
+  "h5n5 avian influenza first confirmed us human case": {
+   "drop_reason": null,
+   "first_seen": "2026-11-08",
+   "idea": "2026-11-08-the-first-confirmed-us-human-h5n5-bird-flu-case-wh",
+   "judged_on": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "sightings": [
+    {
+     "date": "2026-11-08",
+     "opportunity": 82,
+     "profile": "daily-pipeline",
+     "score": 89,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "kept",
+   "term": "H5N5 avian influenza — first confirmed US human case"
   },
   "habibi": {
    "drop_reason": "noise",
@@ -51509,6 +51667,25 @@
    ],
    "status": "pending",
    "term": "Ultra-processed food consumption linked to all-cause mortality — large cohort update"
+  },
+  "ultra processed foods and the food addiction classification debate": {
+   "drop_reason": null,
+   "first_seen": "2026-11-08",
+   "idea": "2026-11-08-is-it-real-ultra-processed-food-is-as-addictive-as",
+   "judged_on": "2026-11-08",
+   "last_seen": "2026-11-08",
+   "sightings": [
+    {
+     "date": "2026-11-08",
+     "opportunity": 80,
+     "profile": "daily-pipeline",
+     "score": 66,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "kept",
+   "term": "Ultra-processed foods and the food-addiction classification debate"
   },
   "unapproved peptides adverse event reporting": {
    "drop_reason": null,

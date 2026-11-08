@@ -1,0 +1,162 @@
+{
+ "date": "2026-11-08",
+ "ideas": [
+  {
+   "id": "2026-11-08-the-first-confirmed-us-human-h5n5-bird-flu-case-wh",
+   "title": "The first confirmed US human H5N5 bird flu case: what one case does and doesn't tell you",
+   "created": "2026-11-08",
+   "route": "roundup",
+   "speed": "new",
+   "beat": "public health",
+   "angle": "A short, calm explainer on how H5N5 differs from the H5N1 strain people already know, what surveillance found, and why one human case is not human-to-human spread. The take: the useful question is how it was caught, not whether to panic.",
+   "why_now": "Surfaced today as a new human case with CDC monitoring. It is exploding news with a clock, which suits a fast Friday item more than a slow feature.",
+   "is_it_real": "Thin as given. It comes from one newsroom feed with no source URLs, and the fact-check is marked unverifiable. The 'first' claim needs checking: a Washington state human H5N5 case was reported in late 2025, so this may be old news resurfacing or a second case mislabeled 'first.' Confirm against a CDC or state health department notice before writing, and do not imply sustained transmission.",
+   "confidence": "low",
+   "evidence": [],
+   "terms": [
+    "h5n5 avian influenza first confirmed us human case"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-11-08",
+     "event": "routed",
+     "detail": "roundup"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "H5N5 avian influenza — first confirmed US human case",
+     "speed": "new",
+     "first_seen": "2026-11-08",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-11-08",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 89,
+       "opportunity": 82
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-11-08-egg-recall-expands-in-a-salmonella-outbreak-which",
+   "title": "Egg recall expands in a Salmonella outbreak: which eggs, which stores, and what to check in your fridge",
+   "created": "2026-11-08",
+   "route": "roundup",
+   "speed": "new",
+   "beat": "food safety",
+   "angle": "A practical check-your-fridge item: brands, lot and plant codes, affected states and stores, symptoms, and what to do with eggs you already used. Add one line on why egg Salmonella outbreaks tend to grow after the first notice.",
+   "why_now": "The outbreak is reported as expanding this week, and eggs are a staple heading into holiday baking.",
+   "is_it_real": "Unverified. There is no distributor name, no product details and no URLs, and the feed itself caps confidence until a primary FDA or USDA notice is confirmed. Run it only if the notice exists by Friday. If it keeps growing into a multi-week outbreak, it could also earn a Recall Register page later.",
+   "confidence": "low",
+   "evidence": [],
+   "terms": [
+    "egg recall expands amid salmonella outbreak tied to major distributor"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-11-08",
+     "event": "routed",
+     "detail": "roundup"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "Egg recall expands amid Salmonella outbreak tied to major distributor",
+     "speed": "new",
+     "first_seen": "2026-11-08",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-11-08",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 76,
+       "opportunity": 78
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-11-08-is-it-real-ultra-processed-food-is-as-addictive-as",
+   "title": "Is it real? 'Ultra-processed food is as addictive as drugs'",
+   "created": "2026-11-08",
+   "route": "tfm",
+   "speed": "new",
+   "beat": "the body / viral health claims",
+   "angle": "Test the viral claim that ultra-processed food is addictive against what the research actually measures: the Yale Food Addiction Scale, screening criteria versus diagnosis, and the fact that food addiction is not in the DSM. Ground it in her own body story to show what feels true versus what has been proven.",
+   "why_now": "New research applying addiction-screening criteria to ultra-processed food is producing overstated headlines. The Wednesday slot (11/11) is open, and this is the strongest 'is it real?' candidate this week.",
+   "is_it_real": "The debate is real and long-running in the literature, and 'food addiction' is a proposed research framework, not a formal diagnosis. The specific new study is not identified in the input (no URLs, fact-check unverifiable), so the post must cite the actual paper and quote its language rather than the headlines.",
+   "confidence": "medium",
+   "evidence": [],
+   "terms": [
+    "ultra processed foods and the food addiction classification debate"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-11-08",
+     "event": "routed",
+     "detail": "tfm"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "Ultra-processed foods and the food-addiction classification debate",
+     "speed": "new",
+     "first_seen": "2026-11-08",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-11-08",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 66,
+       "opportunity": 80
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  }
+ ],
+ "dropped": 0,
+ "watching": 0,
+ "notes": "A light day: four newsroom-only terms, all marked unverifiable with no source URLs, so every keeper carries a verify-first caveat. The compounded semaglutide action extends the existing compounded GLP-1 pitch rather than starting a new one. The ultra-processed food addiction claim fills this week's open newsletter slot. The H5N5 'first case' framing needs checking against the 2025 Washington case before anyone writes it.",
+ "cost_usd": 0.1029
+}

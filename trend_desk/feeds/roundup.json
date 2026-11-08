@@ -1,6 +1,32 @@
 {
- "updated": "2026-11-07",
+ "updated": "2026-11-08",
  "items": [
+  {
+   "id": "2026-11-08-the-first-confirmed-us-human-h5n5-bird-flu-case-wh",
+   "title": "The first confirmed US human H5N5 bird flu case: what one case does and doesn't tell you",
+   "created": "2026-11-08",
+   "angle": "A short, calm explainer on how H5N5 differs from the H5N1 strain people already know, what surveillance found, and why one human case is not human-to-human spread. The take: the useful question is how it was caught, not whether to panic.",
+   "why_now": "Surfaced today as a new human case with CDC monitoring. It is exploding news with a clock, which suits a fast Friday item more than a slow feature.",
+   "is_it_real": "Thin as given. It comes from one newsroom feed with no source URLs, and the fact-check is marked unverifiable. The 'first' claim needs checking: a Washington state human H5N5 case was reported in late 2025, so this may be old news resurfacing or a second case mislabeled 'first.' Confirm against a CDC or state health department notice before writing, and do not imply sustained transmission.",
+   "evidence": [],
+   "terms": [
+    "H5N5 avian influenza — first confirmed US human case"
+   ],
+   "status": "routed"
+  },
+  {
+   "id": "2026-11-08-egg-recall-expands-in-a-salmonella-outbreak-which",
+   "title": "Egg recall expands in a Salmonella outbreak: which eggs, which stores, and what to check in your fridge",
+   "created": "2026-11-08",
+   "angle": "A practical check-your-fridge item: brands, lot and plant codes, affected states and stores, symptoms, and what to do with eggs you already used. Add one line on why egg Salmonella outbreaks tend to grow after the first notice.",
+   "why_now": "The outbreak is reported as expanding this week, and eggs are a staple heading into holiday baking.",
+   "is_it_real": "Unverified. There is no distributor name, no product details and no URLs, and the feed itself caps confidence until a primary FDA or USDA notice is confirmed. Run it only if the notice exists by Friday. If it keeps growing into a multi-week outbreak, it could also earn a Recall Register page later.",
+   "evidence": [],
+   "terms": [
+    "Egg recall expands amid Salmonella outbreak tied to major distributor"
+   ],
+   "status": "routed"
+  },
   {
    "id": "2026-11-05-can-brain-activity-predict-alzheimer-s-years-befor",
    "title": "Can brain activity predict Alzheimer's years before memory loss? What the new Stanford study can and can't tell you",
