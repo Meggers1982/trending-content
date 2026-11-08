@@ -1,0 +1,98 @@
+{
+ "date": "2026-11-08",
+ "ideas": [
+  {
+   "id": "nd-2026-11-08-medicare-s-2027-physician-rule-writes-down-how-cms",
+   "desk": "news",
+   "title": "Medicare's 2027 physician rule writes down how CMS will remove refugees, asylees and other lawfully present immigrants from Medicare under the 2025 budget law, with terminations due in early 2027",
+   "created": "2026-11-08",
+   "route": "pitch",
+   "speed": "released 0 days ago",
+   "beat": "public health / Medicare policy",
+   "angle": "The physician fee schedule is mostly about doctor pay, but tucked inside it is the final rule for ending Medicare for people who paid in and qualified but no longer meet the 2025 law's narrower immigration-status test. The story covers who they are (older refugees, asylees, people with some humanitarian statuses), how many there are, what notice and appeal rights the final rule gives them, and what coverage they have left.",
+   "why_now": "The final rule is in the Federal Register Nov. 9. My recollection is that the 2025 reconciliation law gives CMS 18 months from enactment (July 4, 2025), which puts the deadline for removing current enrollees around early January 2027. Check that date against the statute. It also lands during Medicare and ACA open enrollment.",
+   "is_it_real": "This is the primary document: the CY 2027 PFS final rule's summary lists 'limiting Medicare coverage of certain individuals.' Trade summaries confirm the July proposed rule set out how CMS would enforce the law's removal of some enrollees by immigration status, and the Center for Medicare Advocacy's Sept. 14 comments asked for due-process protections. I have not seen the final terms: notice periods, appeals, effective dates or counts of people affected. The 18-month deadline comes from memory and needs checking against the law.",
+   "primary_test": "The final rule text (FR 2026-22743), specifically its Medicare eligibility section and regulatory impact analysis; Sec. 71201 of Public Law 119-21; the CBO score of that section; the Center for Medicare Advocacy's comments on the proposed rule.",
+   "standout": false,
+   "standout_reason": "",
+   "needs_independent_test": false,
+   "other_peg": "The Medicare open enrollment deadline is Dec. 7, and the terminations are due in early 2027 under the 2025 budget law's deadline.",
+   "audience": "older adults",
+   "evidence_strength": "moderate",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "keys": [
+    "aw-medicare-and-medicaid-programs-cy-2027-payment-policies-under-the-phys"
+   ],
+   "items": [
+    {
+     "key": "aw-medicare-and-medicaid-programs-cy-2027-payment-policies-under-the-phys",
+     "kind": "notice",
+     "interested_party": false,
+     "title": "Medicare and Medicaid Programs; CY 2027 Payment Policies Under the Physician Fee Schedule and Other Changes to Part B Payment and Coverage Policies; Medicare Shared Savings Program Requirements; and Medicare Prescription Drug Inflation Rebate Program",
+     "publisher": "federal-register",
+     "url": "https://www.federalregister.gov/documents/2026/11/09/2026-22743/medicare-and-medicaid-programs-cy-2027-payment-policies-under-the-physician-fee-schedule-and-other",
+     "released": "2026-11-09",
+     "date_basis": "source date",
+     "days_old": 0,
+     "source": "AgingWire",
+     "summary": "This final rule addresses: changes to the physician fee schedule (PFS); other changes to Medicare Part B payment policies to ensure that payment systems are updated to reflect changes in medical practice, relative value of services, and changes in the statute; codification of establishment of new policies for: the Medicare Prescription Drug Inflation Rebate Program under the Inflation Reduction Act of 2022; limiting Medicare coverage of certain individuals; the Ambulatory Specialty Model; updates to drugs and biological products paid under Part B; Medicare Shared Savings Program requirements; "
+    }
+   ],
+   "evidence": [
+    "https://www.federalregister.gov/documents/2026/11/09/2026-22743/medicare-and-medicaid-programs-cy-2027-payment-policies-under-the-physician-fee-schedule-and-other"
+   ],
+   "term_details": [],
+   "status": "routed"
+  },
+  {
+   "id": "nd-2026-11-08-medicare-s-negotiated-prices-for-15-more-drugs-oze",
+   "desk": "news",
+   "title": "Medicare's negotiated prices for 15 more drugs, Ozempic and Wegovy among them, start Jan. 1, and CMS has just made the negotiation program permanent in regulation and closed the combination-pill loophole. What changes at the pharmacy counter?",
+   "created": "2026-11-08",
+   "route": "pitch",
+   "speed": "released 0 days ago",
+   "beat": "drug prices / Medicare",
+   "angle": "The final rule turns guidance into codified regulation and changes how new fixed-combination formulations are counted, so a drugmaker can't reset the clock by pairing an old molecule into a 'new' pill. The rule is the hook. The reader story is what 2027's negotiated prices mean for someone on semaglutide or another selected drug, once you factor in the Part D out-of-pocket cap and the premium jumps already in the news. The rule matters most for the 2029 cycle onward.",
+   "why_now": "The final rule publishes Nov. 9. As I recall, second-cycle negotiated prices take effect Jan. 1, 2027, and Part D plan switching closes Dec. 7.",
+   "is_it_real": "Primary document. The June 2026 proposed rule said the final would apply starting with initial price applicability year 2029, so the rule's own effects on prices are years away. That the second-cycle prices (announced November 2025, including semaglutide) take effect Jan. 1, 2027 is my recollection and needs checking against the CMS fact sheet. The reader-savings angle also needs independent analysis: KFF or ASPE on out-of-pocket effects under the cap, plus 2026 evidence from the first cycle, including reported pharmacy reimbursement problems if they hold up.",
+   "primary_test": "The final rule (FR 2026-22792) and its fixed-combination provision; CMS's negotiated-price fact sheet for initial price applicability year 2027; KFF or ASPE out-of-pocket analyses; CMS data on Medicare Transaction Facilitator payments to pharmacies in 2026.",
+   "standout": false,
+   "standout_reason": "",
+   "needs_independent_test": false,
+   "other_peg": "Negotiated prices for the second cycle take effect Jan. 1, 2027, and Part D open enrollment ends Dec. 7.",
+   "audience": "older adults",
+   "evidence_strength": "moderate",
+   "confidence": "medium",
+   "site": "",
+   "seed_keyword": "",
+   "keys": [
+    "aw-medicare-drug-price-negotiation-program-and-medicare-prescription-drug"
+   ],
+   "items": [
+    {
+     "key": "aw-medicare-drug-price-negotiation-program-and-medicare-prescription-drug",
+     "kind": "notice",
+     "interested_party": false,
+     "title": "Medicare Drug Price Negotiation Program and Medicare Prescription Drug Benefit Program",
+     "publisher": "federal-register",
+     "url": "https://www.federalregister.gov/documents/2026/11/09/2026-22792/medicare-drug-price-negotiation-program-and-medicare-prescription-drug-benefit-program",
+     "released": "2026-11-09",
+     "date_basis": "source date",
+     "days_old": 0,
+     "source": "AgingWire",
+     "summary": "This rule finalizes and codifies the Medicare Drug Price Negotiation Program (\"Negotiation Program\") and establishes certain new policies for the Negotiation Program and the Medicare Prescription Drug Benefit Program (\"Part D Program\") as required by the Inflation Reduction Act of 2022. This final rule also finalizes a proposed policy for specific fixed combination drugs that are new formulations."
+    }
+   ],
+   "evidence": [
+    "https://www.federalregister.gov/documents/2026/11/09/2026-22792/medicare-drug-price-negotiation-program-and-medicare-prescription-drug-benefit-program"
+   ],
+   "term_details": [],
+   "status": "routed"
+  }
+ ],
+ "dropped": {
+  "already-covered": 1
+ }
+}
