@@ -3,6 +3,36 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-11-09'
+  niche: health and wellness
+  signals_reviewed: 12
+  topics_retained: 4
+  topics_rejected: 8
+  p1_count: 1
+  p2_count: 2
+  p3_count: 1
+  p4_count: 0
+  p5_count: 0
+  integrity_flags: 3
+  top_topic: H5N5 avian influenza — second confirmed U.S. human case; CDC updates risk assessment
+  key_themes:
+  - H5N5 avian influenza — second confirmed U.S. human case; CDC updates risk assessment
+  - Nationwide recall — frozen spinach linked to Listeria contamination
+  - USPSTF expands lung cancer screening eligibility guidelines
+  - New study links poor sleep quality to early dementia biomarkers
+  tools_used: []
+  tools_unavailable:
+  - serpapi
+  - google_trends
+  - exa_search
+  - reddit
+  - youtube
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-11-09.html
+  estimated_cost_usd: 0.4242
+  notes: No live SerpAPI/Google Trends pre-fetch data injected this session; all scores estimated from
+    news-volume and source-credibility judgment, not measured search velocity. GLP-1/semaglutide cluster
+    now recurring 3+ consecutive days — recommend narrowing Google News queries to force new angles. Recall
+    stories trending frequently — watch for recall fatigue in content calendar.
 - run_date: '2026-11-08'
   niche: health and wellness
   signals_reviewed: 22
