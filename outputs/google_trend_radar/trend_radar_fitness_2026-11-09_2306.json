@@ -1,0 +1,121 @@
+{
+  "run_date": "2026-11-09",
+  "generated_at": "2026-11-09T23:06:35",
+  "topic": "fitness",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "fitness",
+    "strength training",
+    "cardio",
+    "HIIT workout",
+    "resistance training",
+    "mobility training",
+    "workout recovery",
+    "home workout",
+    "running",
+    "weightlifting",
+    "VO2 max",
+    "fitness trends",
+    "fitness products",
+    "fitness news",
+    "fitness for beginners",
+    "fitness routine",
+    "fitness benefits",
+    "fitness ideas",
+    "fitness reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 19,
+    "total_reviewed": 0,
+    "total_retained": 0,
+    "total_rejected": 19,
+    "breakouts": 0,
+    "emerging": 0,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [],
+  "rejected": [
+    {
+      "topic": "fitness",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "strength training",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "cardio",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "HIIT workout",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "resistance training",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "mobility training",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "workout recovery",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "home workout",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "running",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "weightlifting",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "VO2 max",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "fitness trends",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "fitness products",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "fitness news",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "fitness for beginners",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "fitness routine",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "fitness benefits",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "fitness ideas",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "fitness reviews",
+      "reason": "No related_queries data returned"
+    }
+  ]
+}
