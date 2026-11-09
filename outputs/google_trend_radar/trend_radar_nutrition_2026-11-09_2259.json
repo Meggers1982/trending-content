@@ -1,0 +1,121 @@
+{
+  "run_date": "2026-11-09",
+  "generated_at": "2026-11-09T22:59:26",
+  "topic": "nutrition",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "nutrition",
+    "macronutrients",
+    "meal prep",
+    "whole foods",
+    "fiber intake",
+    "added sugar",
+    "ultra-processed foods",
+    "nutrient deficiency",
+    "mindful eating",
+    "portion control",
+    "plant-based diet",
+    "nutrition trends",
+    "nutrition products",
+    "nutrition news",
+    "nutrition for beginners",
+    "nutrition routine",
+    "nutrition benefits",
+    "nutrition ideas",
+    "nutrition reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 19,
+    "total_reviewed": 0,
+    "total_retained": 0,
+    "total_rejected": 19,
+    "breakouts": 0,
+    "emerging": 0,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [],
+  "rejected": [
+    {
+      "topic": "nutrition",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "macronutrients",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "meal prep",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "whole foods",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "fiber intake",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "added sugar",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "ultra-processed foods",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "nutrient deficiency",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "mindful eating",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "portion control",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "plant-based diet",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "nutrition trends",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "nutrition products",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "nutrition news",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "nutrition for beginners",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "nutrition routine",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "nutrition benefits",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "nutrition ideas",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "nutrition reviews",
+      "reason": "No related_queries data returned"
+    }
+  ]
+}
