@@ -1,0 +1,146 @@
+{
+  "run_date": "2026-11-09",
+  "generated_at": "2026-11-09T22:55:11",
+  "topic": "beauty",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "beauty",
+    "skincare",
+    "makeup",
+    "haircare",
+    "fragrance",
+    "clean beauty",
+    "retinol",
+    "niacinamide",
+    "peptides",
+    "hyaluronic acid",
+    "skin barrier",
+    "skin cycling",
+    "glass skin",
+    "slugging",
+    "scalp care",
+    "SPF",
+    "sunscreen",
+    "K-beauty",
+    "hair loss",
+    "acne treatment",
+    "nail care",
+    "beauty trends",
+    "beauty products",
+    "beauty news"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 24,
+    "total_reviewed": 0,
+    "total_retained": 0,
+    "total_rejected": 24,
+    "breakouts": 0,
+    "emerging": 0,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [],
+  "rejected": [
+    {
+      "topic": "beauty",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "skincare",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "makeup",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "haircare",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "fragrance",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "clean beauty",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "retinol",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "niacinamide",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "peptides",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "hyaluronic acid",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "skin barrier",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "skin cycling",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "glass skin",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "slugging",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "scalp care",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "SPF",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "sunscreen",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "K-beauty",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "hair loss",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "acne treatment",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "nail care",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "beauty trends",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "beauty products",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "beauty news",
+      "reason": "No related_queries data returned"
+    }
+  ]
+}
