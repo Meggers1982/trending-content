@@ -1,16 +1,16 @@
 {
- "updated": "2026-11-08",
+ "updated": "2026-11-09",
  "items": [
   {
-   "id": "2026-11-08-the-first-confirmed-us-human-h5n5-bird-flu-case-wh",
-   "title": "The first confirmed US human H5N5 bird flu case: what one case does and doesn't tell you",
-   "created": "2026-11-08",
-   "angle": "A short, calm explainer on how H5N5 differs from the H5N1 strain people already know, what surveillance found, and why one human case is not human-to-human spread. The take: the useful question is how it was caught, not whether to panic.",
-   "why_now": "Surfaced today as a new human case with CDC monitoring. It is exploding news with a clock, which suits a fast Friday item more than a slow feature.",
-   "is_it_real": "Thin as given. It comes from one newsroom feed with no source URLs, and the fact-check is marked unverifiable. The 'first' claim needs checking: a Washington state human H5N5 case was reported in late 2025, so this may be old news resurfacing or a second case mislabeled 'first.' Confirm against a CDC or state health department notice before writing, and do not imply sustained transmission.",
+   "id": "2026-11-09-frozen-spinach-recalled-nationwide-over-listeria-w",
+   "title": "Frozen spinach recalled nationwide over Listeria: which bags, and why Listeria symptoms can show up weeks later",
+   "created": "2026-11-09",
+   "angle": "Short recall item: affected brands and lot codes, why frozen vegetables carry a Listeria risk when people treat them as ready to eat (smoothies, dips), and who is most at risk (pregnancy, older adults).",
+   "why_now": "New recall with a new pathogen and product, distinct from the egg/Salmonella item, heading into holiday cooking.",
+   "is_it_real": "Unverified. No brand, retailer or source URL was given, and the primary FDA/USDA notice wasn't retrieved. Run it only after finding the actual FDA recall notice with brand and lot codes. If no notice exists, drop it.",
    "evidence": [],
    "terms": [
-    "H5N5 avian influenza — first confirmed US human case"
+    "Nationwide recall — frozen spinach linked to Listeria contamination"
    ],
    "status": "routed"
   },
@@ -24,6 +24,20 @@
    "evidence": [],
    "terms": [
     "Egg recall expands amid Salmonella outbreak tied to major distributor"
+   ],
+   "status": "routed"
+  },
+  {
+   "id": "2026-11-08-the-first-confirmed-us-human-h5n5-bird-flu-case-wh",
+   "title": "The first confirmed US human H5N5 bird flu case: what one case does and doesn't tell you",
+   "created": "2026-11-08",
+   "angle": "A short, calm explainer on how H5N5 differs from the H5N1 strain people already know, what surveillance found, and why one human case is not human-to-human spread. The take: the useful question is how it was caught, not whether to panic.",
+   "why_now": "Surfaced today as a new human case with CDC monitoring. It is exploding news with a clock, which suits a fast Friday item more than a slow feature.",
+   "is_it_real": "Thin as given. It comes from one newsroom feed with no source URLs, and the fact-check is marked unverifiable. The 'first' claim needs checking: a Washington state human H5N5 case was reported in late 2025, so this may be old news resurfacing or a second case mislabeled 'first.' Confirm against a CDC or state health department notice before writing, and do not imply sustained transmission.",
+   "evidence": [],
+   "terms": [
+    "H5N5 avian influenza — first confirmed US human case",
+    "H5N5 avian influenza — second confirmed U.S. human case; CDC updates risk assessment"
    ],
    "status": "routed"
   },
@@ -286,6 +300,7 @@
    "evidence": [],
    "terms": [
     "daytime sleep habits cognitive decline research",
+    "New study links poor sleep quality to early dementia biomarkers",
     "nighttime habit key indicator of dementia"
    ],
    "status": "routed"

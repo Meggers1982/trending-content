@@ -1,0 +1,111 @@
+{
+ "date": "2026-11-09",
+ "ideas": [
+  {
+   "id": "2026-11-09-frozen-spinach-recalled-nationwide-over-listeria-w",
+   "title": "Frozen spinach recalled nationwide over Listeria: which bags, and why Listeria symptoms can show up weeks later",
+   "created": "2026-11-09",
+   "route": "roundup",
+   "speed": "new",
+   "beat": "food safety",
+   "angle": "Short recall item: affected brands and lot codes, why frozen vegetables carry a Listeria risk when people treat them as ready to eat (smoothies, dips), and who is most at risk (pregnancy, older adults).",
+   "why_now": "New recall with a new pathogen and product, distinct from the egg/Salmonella item, heading into holiday cooking.",
+   "is_it_real": "Unverified. No brand, retailer or source URL was given, and the primary FDA/USDA notice wasn't retrieved. Run it only after finding the actual FDA recall notice with brand and lot codes. If no notice exists, drop it.",
+   "confidence": "low",
+   "evidence": [],
+   "terms": [
+    "nationwide recall frozen spinach linked to listeria contamination"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-11-09",
+     "event": "routed",
+     "detail": "roundup"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "Nationwide recall — frozen spinach linked to Listeria contamination",
+     "speed": "new",
+     "first_seen": "2026-11-09",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-11-09",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 65,
+       "opportunity": 70
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-11-09-uspstf-widens-lung-cancer-screening-who-newly-qual",
+   "title": "USPSTF widens lung cancer screening: who newly qualifies, and why most eligible people still never get scanned",
+   "created": "2026-11-09",
+   "route": "pitch",
+   "speed": "new",
+   "beat": "cancer / public health",
+   "angle": "Use the guideline change as the peg for a service-plus-tension story: who now qualifies (the age, pack-year and quit-date thresholds), whether insurers must cover it, and why low-dose CT uptake has stayed low even after the last expansion.",
+   "why_now": "A fresh federal guideline change with direct personal-eligibility stakes, and insurance-coverage consequences that follow USPSTF grades.",
+   "is_it_real": "Unverified and needs checking first. There is no source URL and the fact check is unverifiable. USPSTF last finalized lung screening in 2021. Confirm this is a new USPSTF draft or final recommendation, and not the American Cancer Society's 2023 guideline or another body's update being re-reported. Confirm the exact new thresholds before pitching.",
+   "confidence": "low",
+   "evidence": [],
+   "terms": [
+    "uspstf expands lung cancer screening eligibility guidelines"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-11-09",
+     "event": "routed",
+     "detail": "pitch"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "USPSTF expands lung cancer screening eligibility guidelines",
+     "speed": "new",
+     "first_seen": "2026-11-09",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-11-09",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 58,
+       "opportunity": 64
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  }
+ ],
+ "dropped": 0,
+ "watching": 0,
+ "notes": "A light day: four newsroom-only terms, none with source URLs, and every fact check unverifiable. All four are therefore low confidence and conditional on finding primary sources. Two of them (H5N5 and sleep/dementia) are follow-ups attached to existing roundup items rather than new ideas. The lung screening item is the only one with pitch potential, but it hinges on confirming that USPSTF, not ACS or another body, actually changed its guidance.",
+ "cost_usd": 0.108
+}

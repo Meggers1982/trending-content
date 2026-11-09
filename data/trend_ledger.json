@@ -1004,6 +1004,11 @@
      "date": "2026-10-30",
      "detail": "roundup",
      "event": "routed"
+    },
+    {
+     "date": "2026-11-09",
+     "detail": "New study links poor sleep quality to early dementia biomarkers",
+     "event": "new-signal"
     }
    ],
    "is_it_real": "The trend looks real, since two distinct queries are exploding together. The underlying study is unidentified in the input, so the writer must find the primary paper. Expect observational data and reverse causation, because sleep changes can be an early symptom rather than a cause.",
@@ -1014,6 +1019,7 @@
    "status": "routed",
    "terms": [
     "daytime sleep habits cognitive decline research",
+    "new study links poor sleep quality to early dementia biomarkers",
     "nighttime habit key indicator of dementia"
    ],
    "title": "The sleep habit everyone says predicts dementia: what the new research actually links",
@@ -1716,6 +1722,11 @@
      "date": "2026-11-08",
      "detail": "roundup",
      "event": "routed"
+    },
+    {
+     "date": "2026-11-09",
+     "detail": "H5N5 avian influenza — second confirmed U.S. human case; CDC updates risk assessment",
+     "event": "new-signal"
     }
    ],
    "is_it_real": "Thin as given. It comes from one newsroom feed with no source URLs, and the fact-check is marked unverifiable. The 'first' claim needs checking: a Washington state human H5N5 case was reported in late 2025, so this may be old news resurfacing or a second case mislabeled 'first.' Confirm against a CDC or state health department notice before writing, and do not imply sustained transmission.",
@@ -1725,10 +1736,61 @@
    "speed": "new",
    "status": "routed",
    "terms": [
-    "h5n5 avian influenza first confirmed us human case"
+    "h5n5 avian influenza first confirmed us human case",
+    "h5n5 avian influenza second confirmed u s human case cdc updates risk assessment"
    ],
    "title": "The first confirmed US human H5N5 bird flu case: what one case does and doesn't tell you",
    "why_now": "Surfaced today as a new human case with CDC monitoring. It is exploding news with a clock, which suits a fast Friday item more than a slow feature."
+  },
+  "2026-11-09-frozen-spinach-recalled-nationwide-over-listeria-w": {
+   "angle": "Short recall item: affected brands and lot codes, why frozen vegetables carry a Listeria risk when people treat them as ready to eat (smoothies, dips), and who is most at risk (pregnancy, older adults).",
+   "beat": "food safety",
+   "confidence": "low",
+   "created": "2026-11-09",
+   "evidence": [],
+   "history": [
+    {
+     "date": "2026-11-09",
+     "detail": "roundup",
+     "event": "routed"
+    }
+   ],
+   "is_it_real": "Unverified. No brand, retailer or source URL was given, and the primary FDA/USDA notice wasn't retrieved. Run it only after finding the actual FDA recall notice with brand and lot codes. If no notice exists, drop it.",
+   "route": "roundup",
+   "seed_keyword": "",
+   "site": "",
+   "speed": "new",
+   "status": "routed",
+   "terms": [
+    "nationwide recall frozen spinach linked to listeria contamination"
+   ],
+   "title": "Frozen spinach recalled nationwide over Listeria: which bags, and why Listeria symptoms can show up weeks later",
+   "why_now": "New recall with a new pathogen and product, distinct from the egg/Salmonella item, heading into holiday cooking."
+  },
+  "2026-11-09-uspstf-widens-lung-cancer-screening-who-newly-qual": {
+   "angle": "Use the guideline change as the peg for a service-plus-tension story: who now qualifies (the age, pack-year and quit-date thresholds), whether insurers must cover it, and why low-dose CT uptake has stayed low even after the last expansion.",
+   "beat": "cancer / public health",
+   "confidence": "low",
+   "created": "2026-11-09",
+   "evidence": [],
+   "history": [
+    {
+     "date": "2026-11-09",
+     "detail": "pitch",
+     "event": "routed"
+    }
+   ],
+   "is_it_real": "Unverified and needs checking first. There is no source URL and the fact check is unverifiable. USPSTF last finalized lung screening in 2021. Confirm this is a new USPSTF draft or final recommendation, and not the American Cancer Society's 2023 guideline or another body's update being re-reported. Confirm the exact new thresholds before pitching.",
+   "route": "pitch",
+   "seed_keyword": "",
+   "site": "",
+   "speed": "new",
+   "status": "routed",
+   "terms": [
+    "uspstf expands lung cancer screening eligibility guidelines"
+   ],
+   "title": "USPSTF widens lung cancer screening: who newly qualifies, and why most eligible people still never get scanned",
+   "why_now": "A fresh federal guideline change with direct personal-eligibility stakes, and insurance-coverage consequences that follow USPSTF grades."
   }
  },
  "runs": [
@@ -2029,6 +2091,26 @@
    "routes": {
     "roundup": 2,
     "tfm": 1
+   },
+   "watching": 0
+  },
+  {
+   "collected": {
+    "newsroom": 13,
+    "radar": 0,
+    "rising": 0,
+    "wide": 0
+   },
+   "cost_usd": 0.108,
+   "date": "2026-11-09",
+   "dropped": 0,
+   "due": 4,
+   "ideas": 2,
+   "model": "claude-opus-5-5",
+   "notes": "A light day: four newsroom-only terms, none with source URLs, and every fact check unverifiable. All four are therefore low confidence and conditional on finding primary sources. Two of them (H5N5 and sleep/dementia) are follow-ups attached to existing roundup items rather than new ideas. The lung screening item is the only one with pitch potential, but it hinges on confirming that USPSTF, not ACS or another body, actually changed its guidance.",
+   "routes": {
+    "pitch": 1,
+    "roundup": 1
    },
    "watching": 0
   }
@@ -22943,6 +23025,25 @@
    "status": "kept",
    "term": "H5N5 avian influenza — first confirmed US human case"
   },
+  "h5n5 avian influenza second confirmed u s human case cdc updates risk assessment": {
+   "drop_reason": null,
+   "first_seen": "2026-11-09",
+   "idea": "2026-11-08-the-first-confirmed-us-human-h5n5-bird-flu-case-wh",
+   "judged_on": "2026-11-09",
+   "last_seen": "2026-11-09",
+   "sightings": [
+    {
+     "date": "2026-11-09",
+     "opportunity": 68,
+     "profile": "daily-pipeline",
+     "score": 78,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "kept",
+   "term": "H5N5 avian influenza — second confirmed U.S. human case; CDC updates risk assessment"
+  },
   "habibi": {
    "drop_reason": "noise",
    "first_seen": "2026-11-04",
@@ -36760,6 +36861,25 @@
    "status": "kept",
    "term": "Nationwide olmesartan (blood pressure medication) recall — pills failed quality test"
   },
+  "nationwide recall frozen spinach linked to listeria contamination": {
+   "drop_reason": null,
+   "first_seen": "2026-11-09",
+   "idea": "2026-11-09-frozen-spinach-recalled-nationwide-over-listeria-w",
+   "judged_on": "2026-11-09",
+   "last_seen": "2026-11-09",
+   "sightings": [
+    {
+     "date": "2026-11-09",
+     "opportunity": 70,
+     "profile": "daily-pipeline",
+     "score": 65,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "kept",
+   "term": "Nationwide recall — frozen spinach linked to Listeria contamination"
+  },
   "native hawaiians": {
    "drop_reason": "unverifiable",
    "first_seen": "2026-10-28",
@@ -37525,6 +37645,25 @@
    ],
    "status": "pending",
    "term": "New study links late-night eating to liver strain and metabolic disruption"
+  },
+  "new study links poor sleep quality to early dementia biomarkers": {
+   "drop_reason": null,
+   "first_seen": "2026-11-09",
+   "idea": "2026-10-30-the-sleep-habit-everyone-says-predicts-dementia-wh",
+   "judged_on": "2026-11-09",
+   "last_seen": "2026-11-09",
+   "sightings": [
+    {
+     "date": "2026-11-09",
+     "opportunity": 60,
+     "profile": "daily-pipeline",
+     "score": 54,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "kept",
+   "term": "New study links poor sleep quality to early dementia biomarkers"
   },
   "new study links social activity engagement to reduced cognitive decline and dementia risk": {
    "drop_reason": "not-selected",
@@ -52606,6 +52745,25 @@
    ],
    "status": "pending",
    "term": "usps tracking"
+  },
+  "uspstf expands lung cancer screening eligibility guidelines": {
+   "drop_reason": null,
+   "first_seen": "2026-11-09",
+   "idea": "2026-11-09-uspstf-widens-lung-cancer-screening-who-newly-qual",
+   "judged_on": "2026-11-09",
+   "last_seen": "2026-11-09",
+   "sightings": [
+    {
+     "date": "2026-11-09",
+     "opportunity": 64,
+     "profile": "daily-pipeline",
+     "score": 58,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "kept",
+   "term": "USPSTF expands lung cancer screening eligibility guidelines"
   },
   "uss lincoln food water shortages": {
    "drop_reason": null,
