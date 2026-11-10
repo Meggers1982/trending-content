@@ -1727,6 +1727,11 @@
      "date": "2026-11-09",
      "detail": "H5N5 avian influenza — second confirmed U.S. human case; CDC updates risk assessment",
      "event": "new-signal"
+    },
+    {
+     "date": "2026-11-10",
+     "detail": "H5N5 avian influenza — third confirmed U.S. human case; CDC maintains low public risk assessment",
+     "event": "new-signal"
     }
    ],
    "is_it_real": "Thin as given. It comes from one newsroom feed with no source URLs, and the fact-check is marked unverifiable. The 'first' claim needs checking: a Washington state human H5N5 case was reported in late 2025, so this may be old news resurfacing or a second case mislabeled 'first.' Confirm against a CDC or state health department notice before writing, and do not imply sustained transmission.",
@@ -1737,7 +1742,8 @@
    "status": "routed",
    "terms": [
     "h5n5 avian influenza first confirmed us human case",
-    "h5n5 avian influenza second confirmed u s human case cdc updates risk assessment"
+    "h5n5 avian influenza second confirmed u s human case cdc updates risk assessment",
+    "h5n5 avian influenza third confirmed u s human case cdc maintains low public risk assessment"
    ],
    "title": "The first confirmed US human H5N5 bird flu case: what one case does and doesn't tell you",
    "why_now": "Surfaced today as a new human case with CDC monitoring. It is exploding news with a clock, which suits a fast Friday item more than a slow feature."
@@ -1791,6 +1797,131 @@
    ],
    "title": "USPSTF widens lung cancer screening: who newly qualifies, and why most eligible people still never get scanned",
    "why_now": "A fresh federal guideline change with direct personal-eligibility stakes, and insurance-coverage consequences that follow USPSTF grades."
+  },
+  "2026-11-10-cruise-ship-norovirus-outbreaks-hit-a-five-year-hi": {
+   "angle": "A quick, useful item for holiday cruisers: what the CDC Vessel Sanitation Program count shows, why cruises report outbreaks more visibly than land settings, and a link back to the soap-vs-sanitizer point.",
+   "beat": "public health",
+   "confidence": "medium",
+   "created": "2026-11-10",
+   "evidence": [],
+   "history": [
+    {
+     "date": "2026-11-10",
+     "detail": "roundup",
+     "event": "routed"
+    }
+   ],
+   "is_it_real": "Unverified. There is no URL in the input. CDC publishes cruise outbreak counts, so the 'five-year high' figure is easy to check before it runs. Do not generalize it to population-wide risk.",
+   "route": "roundup",
+   "seed_keyword": "",
+   "site": "",
+   "speed": "new",
+   "status": "routed",
+   "terms": [
+    "cdc cruise ship surveillance shows norovirus outbreak counts at highest level in five years"
+   ],
+   "title": "Cruise ship norovirus outbreaks hit a five-year high: what the CDC's count does and doesn't say about your trip",
+   "why_now": "A CDC surveillance milestone ahead of holiday travel, following the Nov 7 norovirus brief."
+  },
+  "2026-11-10-fda-warns-that-counterfeit-ozempic-and-mounjaro-vi": {
+   "angle": "A practical safety item on counterfeit and illicit vials, kept clearly separate from legal compounded product, which the Oct 25 pitch already covers.",
+   "beat": "aging, body and metabolism / GLP-1s",
+   "confidence": "medium",
+   "created": "2026-11-10",
+   "evidence": [],
+   "history": [
+    {
+     "date": "2026-11-10",
+     "detail": "roundup",
+     "event": "routed"
+    }
+   ],
+   "is_it_real": "Plausible, since the FDA has issued counterfeit GLP-1 warnings before, but this specific alert has no URL in the input and must be found and confirmed on FDA's site. Do not blur counterfeit with compounded.",
+   "route": "roundup",
+   "seed_keyword": "",
+   "site": "",
+   "speed": "new",
+   "status": "routed",
+   "terms": [
+    "fda warns consumers after counterfeit semaglutide tirzepatide vials test positive for contamination"
+   ],
+   "title": "FDA warns that counterfeit Ozempic and Mounjaro vials tested contaminated: how to tell fake from real",
+   "why_now": "A new FDA consumer alert about illicit-market GLP-1 contamination."
+  },
+  "2026-11-10-infant-rsv-hospitalizations-are-running-ahead-of-t": {
+   "angle": "A short take for new and expecting parents: the curve is early, and here is what the protection options (maternal vaccine, nirsevimab) are and when to ask about them. Present it as a surveillance trend, not a verdict on the program.",
+   "beat": "public health / reproductive health",
+   "confidence": "low",
+   "created": "2026-11-10",
+   "evidence": [],
+   "history": [
+    {
+     "date": "2026-11-10",
+     "detail": "roundup",
+     "event": "routed"
+    }
+   ],
+   "is_it_real": "Unverified. There is no URL in the input, so the 'ahead of the last three seasons' comparison needs checking against CDC RSV-NET before it runs. Early-season comparisons can flip quickly.",
+   "route": "roundup",
+   "seed_keyword": "",
+   "site": "",
+   "speed": "new",
+   "status": "routed",
+   "terms": [
+    "cdc surveillance infant rsv hospitalizations running ahead of the last three seasons"
+   ],
+   "title": "Infant RSV hospitalizations are running ahead of the last three seasons: what that means with nirsevimab now widely available",
+   "why_now": "New CDC surveillance shows an early infant RSV season, heading into holiday gatherings."
+  },
+  "2026-11-10-intermittent-fasting-may-cost-older-adults-muscle": {
+   "angle": "A short corrective for over-65 readers who picked up fasting advice: what was measured, how big the effect was, and why protein and strength work matter. This ties into her GLP-1 and muscle-loss coverage.",
+   "beat": "aging, body and metabolism",
+   "confidence": "low",
+   "created": "2026-11-10",
+   "evidence": [],
+   "history": [
+    {
+     "date": "2026-11-10",
+     "detail": "roundup",
+     "event": "routed"
+    }
+   ],
+   "is_it_real": "Unverified. There is no URL in the input, so confirm the journal, design and size before it runs. The flag says it is observational or a small cohort, so it should not be generalized to younger adults.",
+   "route": "roundup",
+   "seed_keyword": "",
+   "site": "",
+   "speed": "new",
+   "status": "routed",
+   "terms": [
+    "new jama study links intermittent fasting to increased muscle mass loss in older adults"
+   ],
+   "title": "Intermittent fasting may cost older adults muscle: what the new JAMA study found, and the protein fix researchers suggest",
+   "why_now": "A newly published JAMA study on a specific older population."
+  },
+  "2026-11-10-is-it-real-there-s-a-spoonful-of-plastic-in-your-b": {
+   "angle": "Test the brain-microplastics claim that keeps resurfacing against how the measurements are made, the known critiques of those methods, and the gap between finding particles and showing harm.",
+   "beat": "environment / viral health claims",
+   "confidence": "medium",
+   "created": "2026-11-10",
+   "evidence": [],
+   "history": [
+    {
+     "date": "2026-11-10",
+     "detail": "tfm",
+     "event": "routed"
+    }
+   ],
+   "is_it_real": "The broader claim is checkable against existing published work and its method critiques. The new study itself has no URL in the input and is unverified, so the post must cite the paper directly. Association only: there is no established causal brain harm in humans.",
+   "route": "tfm",
+   "seed_keyword": "",
+   "site": "",
+   "speed": "new",
+   "status": "routed",
+   "terms": [
+    "new study finds microplastics in human brain tissue at higher concentrations than prior measurements"
+   ],
+   "title": "Is it real? 'There's a spoonful of plastic in your brain'",
+   "why_now": "A new study reports higher concentrations than before, which revives a claim that has circulated widely for over a year."
   }
  },
  "runs": [
@@ -2113,6 +2244,26 @@
     "roundup": 1
    },
    "watching": 0
+  },
+  {
+   "collected": {
+    "newsroom": 16,
+    "radar": 0,
+    "rising": 0,
+    "wide": 0
+   },
+   "cost_usd": 0.1277,
+   "date": "2026-11-10",
+   "dropped": 1,
+   "due": 8,
+   "ideas": 5,
+   "model": "claude-opus-5-5",
+   "notes": "Every term came from the newsroom pipeline with no source URLs, so each kept idea needs its primary source confirmed before it is built. The H5N5 term attaches to the Nov 8 roundup item instead of becoming a new idea. The diet-soda memory claim would make a strong TFM 'is it real?' post once the underlying observational study is identified, so it is on watch rather than dropped for good. Roundup is carrying most of the load today; nothing cleared the pitch bar without verifiable sourcing.",
+   "routes": {
+    "roundup": 4,
+    "tfm": 1
+   },
+   "watching": 1
   }
  ],
  "terms": {
@@ -9500,6 +9651,25 @@
    "status": "pending",
    "term": "CDC-blocked COVID vaccine study published in outside journal"
   },
+  "cdc cruise ship surveillance shows norovirus outbreak counts at highest level in five years": {
+   "drop_reason": null,
+   "first_seen": "2026-11-10",
+   "idea": "2026-11-10-cruise-ship-norovirus-outbreaks-hit-a-five-year-hi",
+   "judged_on": "2026-11-10",
+   "last_seen": "2026-11-10",
+   "sightings": [
+    {
+     "date": "2026-11-10",
+     "opportunity": 58,
+     "profile": "daily-pipeline",
+     "score": 56,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "kept",
+   "term": "CDC cruise ship surveillance shows norovirus outbreak counts at highest level in five years"
+  },
   "cdc excludes pennsylvania measles deaths from official count amid accelerating outbreak": {
    "drop_reason": null,
    "first_seen": "2026-09-23",
@@ -9556,6 +9726,25 @@
    ],
    "status": "held",
    "term": "CDC flu surveillance shows early, high-severity season"
+  },
+  "cdc surveillance infant rsv hospitalizations running ahead of the last three seasons": {
+   "drop_reason": null,
+   "first_seen": "2026-11-10",
+   "idea": "2026-11-10-infant-rsv-hospitalizations-are-running-ahead-of-t",
+   "judged_on": "2026-11-10",
+   "last_seen": "2026-11-10",
+   "sightings": [
+    {
+     "date": "2026-11-10",
+     "opportunity": 65,
+     "profile": "daily-pipeline",
+     "score": 62,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "kept",
+   "term": "CDC surveillance: infant RSV hospitalizations running ahead of the last three seasons"
   },
   "cdc updates rsv vaccine recommendation for adults 60 new acip guidance": {
    "drop_reason": null,
@@ -14921,6 +15110,25 @@
    "status": "pending",
    "term": "Diet soda and cognitive decline — rising search + research base"
   },
+  "diet soda causes memory loss viral claim": {
+   "drop_reason": "watch",
+   "first_seen": "2026-11-10",
+   "idea": null,
+   "judged_on": "2026-11-10",
+   "last_seen": "2026-11-10",
+   "sightings": [
+    {
+     "date": "2026-11-10",
+     "opportunity": 0,
+     "profile": "daily-pipeline",
+     "score": 0,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "held",
+   "term": "Diet soda \"causes\" memory loss (viral claim)"
+  },
   "diet soda weight management study": {
    "drop_reason": null,
    "first_seen": "2026-10-12",
@@ -20034,6 +20242,25 @@
    "status": "pending",
    "term": "FDA upgrades Vitruvias Therapeutics thyroid tablet recall to Class I (highest risk)"
   },
+  "fda warns consumers after counterfeit semaglutide tirzepatide vials test positive for contamination": {
+   "drop_reason": null,
+   "first_seen": "2026-11-10",
+   "idea": "2026-11-10-fda-warns-that-counterfeit-ozempic-and-mounjaro-vi",
+   "judged_on": "2026-11-10",
+   "last_seen": "2026-11-10",
+   "sightings": [
+    {
+     "date": "2026-11-10",
+     "opportunity": 74,
+     "profile": "daily-pipeline",
+     "score": 76,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "kept",
+   "term": "FDA warns consumers after counterfeit semaglutide/tirzepatide vials test positive for contamination"
+  },
   "featherstone nutrition": {
    "drop_reason": null,
    "first_seen": "2026-10-10",
@@ -23043,6 +23270,25 @@
    ],
    "status": "kept",
    "term": "H5N5 avian influenza — second confirmed U.S. human case; CDC updates risk assessment"
+  },
+  "h5n5 avian influenza third confirmed u s human case cdc maintains low public risk assessment": {
+   "drop_reason": null,
+   "first_seen": "2026-11-10",
+   "idea": "2026-11-08-the-first-confirmed-us-human-h5n5-bird-flu-case-wh",
+   "judged_on": "2026-11-10",
+   "last_seen": "2026-11-10",
+   "sightings": [
+    {
+     "date": "2026-11-10",
+     "opportunity": 78,
+     "profile": "daily-pipeline",
+     "score": 88,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "kept",
+   "term": "H5N5 avian influenza — third confirmed U.S. human case; CDC maintains low public risk assessment"
   },
   "habibi": {
    "drop_reason": "noise",
@@ -37475,6 +37721,25 @@
    "status": "held",
    "term": "new hormone therapy patch"
   },
+  "new jama study links intermittent fasting to increased muscle mass loss in older adults": {
+   "drop_reason": null,
+   "first_seen": "2026-11-10",
+   "idea": "2026-11-10-intermittent-fasting-may-cost-older-adults-muscle",
+   "judged_on": "2026-11-10",
+   "last_seen": "2026-11-10",
+   "sightings": [
+    {
+     "date": "2026-11-10",
+     "opportunity": 60,
+     "profile": "daily-pipeline",
+     "score": 54,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "kept",
+   "term": "New JAMA study links intermittent fasting to increased muscle mass loss in older adults"
+  },
   "new liquid biopsy method for early pancreatic cancer detection": {
    "drop_reason": null,
    "first_seen": "2026-09-17",
@@ -37589,6 +37854,25 @@
    "status": "pending",
    "term": "New Nature study explains why teen girls face worse mental health outcomes than boys"
   },
+  "new ophthalmology research links rising childhood myopia rates to screen time urges outdoor time guidelines": {
+   "drop_reason": "not-selected",
+   "first_seen": "2026-11-10",
+   "idea": null,
+   "judged_on": "2026-11-10",
+   "last_seen": "2026-11-10",
+   "sightings": [
+    {
+     "date": "2026-11-10",
+     "opportunity": 61,
+     "profile": "daily-pipeline",
+     "score": 52,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "dropped",
+   "term": "New ophthalmology research links rising childhood myopia rates to screen time, urges outdoor-time guidelines"
+  },
   "new study classifies atherosclerosis as an autoimmune disease": {
    "drop_reason": null,
    "first_seen": "2026-09-12",
@@ -37626,6 +37910,25 @@
    ],
    "status": "pending",
    "term": "New study finds GLP-1 drugs do not cause major psychiatric harm"
+  },
+  "new study finds microplastics in human brain tissue at higher concentrations than prior measurements": {
+   "drop_reason": null,
+   "first_seen": "2026-11-10",
+   "idea": "2026-11-10-is-it-real-there-s-a-spoonful-of-plastic-in-your-b",
+   "judged_on": "2026-11-10",
+   "last_seen": "2026-11-10",
+   "sightings": [
+    {
+     "date": "2026-11-10",
+     "opportunity": 68,
+     "profile": "daily-pipeline",
+     "score": 58,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "kept",
+   "term": "New study finds microplastics in human brain tissue at higher concentrations than prior measurements"
   },
   "new study links late night eating to liver strain and metabolic disruption": {
    "drop_reason": null,

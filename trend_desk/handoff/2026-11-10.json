@@ -1,0 +1,264 @@
+{
+ "date": "2026-11-10",
+ "ideas": [
+  {
+   "id": "2026-11-10-fda-warns-that-counterfeit-ozempic-and-mounjaro-vi",
+   "title": "FDA warns that counterfeit Ozempic and Mounjaro vials tested contaminated: how to tell fake from real",
+   "created": "2026-11-10",
+   "route": "roundup",
+   "speed": "new",
+   "beat": "aging, body and metabolism / GLP-1s",
+   "angle": "A practical safety item on counterfeit and illicit vials, kept clearly separate from legal compounded product, which the Oct 25 pitch already covers.",
+   "why_now": "A new FDA consumer alert about illicit-market GLP-1 contamination.",
+   "is_it_real": "Plausible, since the FDA has issued counterfeit GLP-1 warnings before, but this specific alert has no URL in the input and must be found and confirmed on FDA's site. Do not blur counterfeit with compounded.",
+   "confidence": "medium",
+   "evidence": [],
+   "terms": [
+    "fda warns consumers after counterfeit semaglutide tirzepatide vials test positive for contamination"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-11-10",
+     "event": "routed",
+     "detail": "roundup"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "FDA warns consumers after counterfeit semaglutide/tirzepatide vials test positive for contamination",
+     "speed": "new",
+     "first_seen": "2026-11-10",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-11-10",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 76,
+       "opportunity": 74
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-11-10-infant-rsv-hospitalizations-are-running-ahead-of-t",
+   "title": "Infant RSV hospitalizations are running ahead of the last three seasons: what that means with nirsevimab now widely available",
+   "created": "2026-11-10",
+   "route": "roundup",
+   "speed": "new",
+   "beat": "public health / reproductive health",
+   "angle": "A short take for new and expecting parents: the curve is early, and here is what the protection options (maternal vaccine, nirsevimab) are and when to ask about them. Present it as a surveillance trend, not a verdict on the program.",
+   "why_now": "New CDC surveillance shows an early infant RSV season, heading into holiday gatherings.",
+   "is_it_real": "Unverified. There is no URL in the input, so the 'ahead of the last three seasons' comparison needs checking against CDC RSV-NET before it runs. Early-season comparisons can flip quickly.",
+   "confidence": "low",
+   "evidence": [],
+   "terms": [
+    "cdc surveillance infant rsv hospitalizations running ahead of the last three seasons"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-11-10",
+     "event": "routed",
+     "detail": "roundup"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "CDC surveillance: infant RSV hospitalizations running ahead of the last three seasons",
+     "speed": "new",
+     "first_seen": "2026-11-10",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-11-10",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 62,
+       "opportunity": 65
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-11-10-is-it-real-there-s-a-spoonful-of-plastic-in-your-b",
+   "title": "Is it real? 'There's a spoonful of plastic in your brain'",
+   "created": "2026-11-10",
+   "route": "tfm",
+   "speed": "new",
+   "beat": "environment / viral health claims",
+   "angle": "Test the brain-microplastics claim that keeps resurfacing against how the measurements are made, the known critiques of those methods, and the gap between finding particles and showing harm.",
+   "why_now": "A new study reports higher concentrations than before, which revives a claim that has circulated widely for over a year.",
+   "is_it_real": "The broader claim is checkable against existing published work and its method critiques. The new study itself has no URL in the input and is unverified, so the post must cite the paper directly. Association only: there is no established causal brain harm in humans.",
+   "confidence": "medium",
+   "evidence": [],
+   "terms": [
+    "new study finds microplastics in human brain tissue at higher concentrations than prior measurements"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-11-10",
+     "event": "routed",
+     "detail": "tfm"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "New study finds microplastics in human brain tissue at higher concentrations than prior measurements",
+     "speed": "new",
+     "first_seen": "2026-11-10",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-11-10",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 58,
+       "opportunity": 68
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-11-10-cruise-ship-norovirus-outbreaks-hit-a-five-year-hi",
+   "title": "Cruise ship norovirus outbreaks hit a five-year high: what the CDC's count does and doesn't say about your trip",
+   "created": "2026-11-10",
+   "route": "roundup",
+   "speed": "new",
+   "beat": "public health",
+   "angle": "A quick, useful item for holiday cruisers: what the CDC Vessel Sanitation Program count shows, why cruises report outbreaks more visibly than land settings, and a link back to the soap-vs-sanitizer point.",
+   "why_now": "A CDC surveillance milestone ahead of holiday travel, following the Nov 7 norovirus brief.",
+   "is_it_real": "Unverified. There is no URL in the input. CDC publishes cruise outbreak counts, so the 'five-year high' figure is easy to check before it runs. Do not generalize it to population-wide risk.",
+   "confidence": "medium",
+   "evidence": [],
+   "terms": [
+    "cdc cruise ship surveillance shows norovirus outbreak counts at highest level in five years"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-11-10",
+     "event": "routed",
+     "detail": "roundup"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "CDC cruise ship surveillance shows norovirus outbreak counts at highest level in five years",
+     "speed": "new",
+     "first_seen": "2026-11-10",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-11-10",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 56,
+       "opportunity": 58
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-11-10-intermittent-fasting-may-cost-older-adults-muscle",
+   "title": "Intermittent fasting may cost older adults muscle: what the new JAMA study found, and the protein fix researchers suggest",
+   "created": "2026-11-10",
+   "route": "roundup",
+   "speed": "new",
+   "beat": "aging, body and metabolism",
+   "angle": "A short corrective for over-65 readers who picked up fasting advice: what was measured, how big the effect was, and why protein and strength work matter. This ties into her GLP-1 and muscle-loss coverage.",
+   "why_now": "A newly published JAMA study on a specific older population.",
+   "is_it_real": "Unverified. There is no URL in the input, so confirm the journal, design and size before it runs. The flag says it is observational or a small cohort, so it should not be generalized to younger adults.",
+   "confidence": "low",
+   "evidence": [],
+   "terms": [
+    "new jama study links intermittent fasting to increased muscle mass loss in older adults"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-11-10",
+     "event": "routed",
+     "detail": "roundup"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "New JAMA study links intermittent fasting to increased muscle mass loss in older adults",
+     "speed": "new",
+     "first_seen": "2026-11-10",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-11-10",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 54,
+       "opportunity": 60
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  }
+ ],
+ "dropped": 1,
+ "watching": 1,
+ "notes": "Every term came from the newsroom pipeline with no source URLs, so each kept idea needs its primary source confirmed before it is built. The H5N5 term attaches to the Nov 8 roundup item instead of becoming a new idea. The diet-soda memory claim would make a strong TFM 'is it real?' post once the underlying observational study is identified, so it is on watch rather than dropped for good. Roundup is carrying most of the load today; nothing cleared the pitch bar without verifiable sourcing.",
+ "cost_usd": 0.1277
+}
