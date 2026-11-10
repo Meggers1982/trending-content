@@ -3,6 +3,45 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-11-10'
+  niche: Health & Wellness
+  signals_reviewed: 52
+  topics_retained: 8
+  topics_rejected: 4
+  p1_count: 2
+  p2_count: 2
+  p3_count: 3
+  p4_count: 0
+  p5_count: 1
+  integrity_flags: 8
+  top_topic: H5N5 avian influenza — third confirmed U.S. human case; CDC maintains low public risk assessment
+  key_themes:
+  - H5N5 avian influenza — third confirmed U.S. human case; CDC maintains low public risk assessment
+  - FDA warns consumers after counterfeit semaglutide/tirzepatide vials test positive for contamination
+  - 'CDC surveillance: infant RSV hospitalizations running ahead of the last three seasons'
+  - New study finds microplastics in human brain tissue at higher concentrations than prior measurements
+  - New JAMA study links intermittent fasting to increased muscle mass loss in older adults
+  - CDC cruise ship surveillance shows norovirus outbreak counts at highest level in five years
+  - New ophthalmology research links rising childhood myopia rates to screen time, urges outdoor-time
+    guidelines
+  - Diet soda "causes" memory loss (viral claim)
+  tools_used:
+  - web_search
+  tools_unavailable:
+  - google_news
+  - google_trends
+  - serpapi
+  - composio_search_trends
+  - exasearch
+  - reddit
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-11-10.html
+  estimated_cost_usd: 0.4656
+  notes: 'Degraded mode: no live SerpAPI, Google Trends, or Google News Radar injected this session. All
+    trend/opportunity scores are editorial estimates based on news volume and source credibility. Duplicate
+    detection used Recent Coverage log and competitor-list fallback. H5N5 recurring 3rd consecutive day
+    — retained due to genuine new case, flag for staleness if no development tomorrow. GLP-1 ecosystem
+    recurring 5 of last 7 days — only differentiated angles clearing duplicate bar. Recommend restoring
+    live tools before next run.'
 - run_date: '2026-11-09'
   niche: health and wellness
   signals_reviewed: 12

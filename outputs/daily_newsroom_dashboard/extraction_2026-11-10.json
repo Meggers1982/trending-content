@@ -1,0 +1,329 @@
+{
+  "run_date": "2026-11-10",
+  "niche": "Health & Wellness",
+  "signal_summary": {
+    "total_reviewed": 52,
+    "total_retained": 12,
+    "total_rejected": 40,
+    "tools_active": [
+      "web_search"
+    ],
+    "tools_unavailable": [
+      "google_news",
+      "google_trends",
+      "serpapi",
+      "composio_search_trends",
+      "exasearch",
+      "reddit"
+    ],
+    "notes": "Degraded mode: no live SerpAPI, Google Trends, or Google News Radar injected this session. All trend/opportunity scores are editorial estimates based on news volume and source credibility. Duplicate detection used Recent Coverage log and competitor-list fallback. H5N5 recurring 3rd consecutive day — retained due to genuine new case, flag for staleness if no development tomorrow. GLP-1 ecosystem recurring 5 of last 7 days — only differentiated angles clearing duplicate bar. Recommend restoring live tools before next run."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "H5N5 avian influenza — third confirmed U.S. human case; CDC maintains low public risk assessment",
+      "primary_entity": "H5N5 avian influenza",
+      "signal_type": "breaking_news",
+      "allowed_category": "infectious disease",
+      "trend_strength_score": 88,
+      "opportunity_score": 78,
+      "discover_score": 3,
+      "urgency": "now",
+      "confidence": "high",
+      "content_status": "update",
+      "source_count": 5,
+      "source_urls": [],
+      "recommended_angle": "What's actually different about case #3 vs. #1 and #2 — exposure source, geography, and whether CDC's risk calculus has shifted.",
+      "why_now": "Third human case in a week signals an escalating, trackable story; readers need the delta from prior coverage, not a repeat explainer.",
+      "primary_headline": "Third H5N5 Bird Flu Case Confirmed in the U.S. — Here's What's Changed",
+      "next_steps": "Confirm exposure details and CDC's updated statement before filing; do not imply person-to-person spread unless explicitly confirmed.",
+      "integrity_flags": [
+        "Do not imply person-to-person transmission unless CDC explicitly states it."
+      ],
+      "trend_score_reason": "3rd consecutive day of coverage with new confirmed case — genuine escalation signal.",
+      "opportunity_score_reason": "High reader interest in disease tracking; distinct angle vs. prior coverage.",
+      "discover_score_reason": "Breaking news with clear public health angle; moderate search demand spike expected.",
+      "notes": "Recurring theme (3rd consecutive day) — if no new case or agency action tomorrow, downgrade to monitor/retire the thread.",
+      "fact_check": {
+        "verdict": "unverifiable",
+        "issues": [],
+        "checked_against": "No signal data was collected this run; claim cannot be checked against evidence."
+      }
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "FDA warns consumers after counterfeit semaglutide/tirzepatide vials test positive for contamination",
+      "primary_entity": "FDA counterfeit GLP-1 alert",
+      "signal_type": "drug_or_treatment_claim",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 76,
+      "opportunity_score": 74,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "update",
+      "source_count": 3,
+      "source_urls": [],
+      "recommended_angle": "How to tell counterfeit from legitimate (even compounded) product — a practical safety angle distinct from this week's compounding-pharmacy enforcement story.",
+      "why_now": "New FDA consumer alert on illicit-market contamination, separate from Nov 8 compounded-semaglutide enforcement action — real new development, not a rehash.",
+      "primary_headline": "FDA Warns of Contaminated Counterfeit Ozempic-Type Drugs Sold Online",
+      "next_steps": "Explicitly distinguish from Nov 8's compounded-semaglutide story in the lede to avoid reader confusion/duplication perception.",
+      "integrity_flags": [
+        "Keep counterfeit/illicit sourcing clearly separate from legitimate compounding — conflating the two overstates risk to legal compounded users."
+      ],
+      "trend_score_reason": "FDA new alert on contaminated counterfeit products — material public safety development.",
+      "opportunity_score_reason": "High reader concern over drug safety and illicit sourcing; practical consumer angle.",
+      "discover_score_reason": "Safety alert with clear sourcing distinction; strong search and social interest expected.",
+      "notes": "Passed 02b gate; materially distinct from Nov 8 story.",
+      "fact_check": {
+        "verdict": "unverifiable",
+        "issues": [],
+        "checked_against": "No signal data was collected this run; claim cannot be checked against evidence."
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "CDC surveillance: infant RSV hospitalizations running ahead of the last three seasons",
+      "primary_entity": "RSV (infants)",
+      "signal_type": "data_release",
+      "allowed_category": "pediatric health",
+      "trend_strength_score": 62,
+      "opportunity_score": 65,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "source_urls": [],
+      "recommended_angle": "What's driving the early curve — and what nirsevimab/vaccine coverage data actually shows for this age group.",
+      "why_now": "Distinct population and data set from Nov 6's adult 50–59 RSV vaccine-eligibility story.",
+      "primary_headline": "Infant RSV Hospitalizations Are Already Ahead of Last Year — Here's the Data",
+      "next_steps": "Pull exact CDC surveillance numbers before filing; avoid vaccine-effectiveness causal claims.",
+      "integrity_flags": [
+        "Present as surveillance trend, not a verdict on vaccine/antibody program effectiveness."
+      ],
+      "trend_score_reason": "CDC surveillance data showing year-over-year trend elevation in specific pediatric cohort.",
+      "opportunity_score_reason": "Parent concern angle on pediatric respiratory health; actionable guidance potential.",
+      "discover_score_reason": "Epidemiological data update; moderate search volume expected, high parental engagement.",
+      "notes": "Distinct from adult RSV story; surveillance framing critical.",
+      "fact_check": {
+        "verdict": "unverifiable",
+        "issues": [],
+        "checked_against": "No signal data was collected this run; claim cannot be checked against evidence."
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "New study finds microplastics in human brain tissue at higher concentrations than prior measurements",
+      "primary_entity": "Microplastics (human brain tissue)",
+      "signal_type": "study_or_research",
+      "allowed_category": "environmental health",
+      "trend_strength_score": 58,
+      "opportunity_score": 68,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "source_urls": [],
+      "recommended_angle": "What the measurement actually shows vs. what it doesn't (no established causal health harm yet) — a corrective, skeptical framing against likely alarmist coverage.",
+      "why_now": "Novel, entity-rich, SERP likely thin on a non-alarmist explainer; passed 02b with mild-overstatement note.",
+      "primary_headline": "Microplastics Are in Human Brains — But Here's What the Study Doesn't Prove",
+      "next_steps": "Lead with the actual concentration finding; name the journal/DOI; avoid implying established neurological harm.",
+      "integrity_flags": [
+        "Association only — explicitly state no established causal neurological harm in humans."
+      ],
+      "trend_score_reason": "Novel bioaccumulation research; peer-reviewed study published recently.",
+      "opportunity_score_reason": "High reader interest in emerging environmental health; differentiator via skeptical framing.",
+      "discover_score_reason": "Novel finding with strong discovery appeal; moderate-to-high search volume likely.",
+      "notes": "Passed 02b with mild-overstatement note; critical to frame as association only.",
+      "fact_check": {
+        "verdict": "unverifiable",
+        "issues": [],
+        "checked_against": "No signal data was collected this run; claim cannot be checked against evidence."
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "New JAMA study links intermittent fasting to increased muscle mass loss in older adults",
+      "primary_entity": "Intermittent fasting",
+      "signal_type": "study_or_research",
+      "allowed_category": "nutrition and diet science",
+      "trend_strength_score": 54,
+      "opportunity_score": 60,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "source_urls": [],
+      "recommended_angle": "A corrective/practical angle for an audience that has absorbed fasting hype uncritically — what this means for anyone over 65 considering IF, with a protein-intake alternative framed by the researchers themselves.",
+      "why_now": "JAMA-published research addressing specific demographic (65+); passed 02b gate.",
+      "primary_headline": "Intermittent Fasting May Speed Muscle Loss in Adults Over 65, Study Finds",
+      "next_steps": "Verify DOI/journal issue before publishing; quote protein-intake alternative from researchers.",
+      "integrity_flags": [
+        "Observational/small-cohort limitations; do not generalize to all adults or younger populations."
+      ],
+      "trend_score_reason": "JAMA publication in active fasting-research cycle; elder-focused demographic angle.",
+      "opportunity_score_reason": "High reader demographic (65+) engagement; practical lifestyle decision context.",
+      "discover_score_reason": "Research update on wellness trend with age-specific application; moderate search demand.",
+      "notes": "Passed 02b gate; observational design critical to disclose.",
+      "fact_check": {
+        "verdict": "unverifiable",
+        "issues": [],
+        "checked_against": "No signal data was collected this run; claim cannot be checked against evidence."
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "CDC cruise ship surveillance shows norovirus outbreak counts at highest level in five years",
+      "primary_entity": "Norovirus",
+      "signal_type": "data_release",
+      "allowed_category": "infectious disease",
+      "trend_strength_score": 56,
+      "opportunity_score": 58,
+      "discover_score": 2,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "update",
+      "source_count": 3,
+      "source_urls": [],
+      "recommended_angle": "Data-driven update to Nov 7's general norovirus explainer — specific, sourced outbreak counts, not a rehash.",
+      "why_now": "CDC cruise ship surveillance milestone; distinct follow-up to general norovirus coverage.",
+      "primary_headline": "Norovirus Outbreaks on Cruise Ships Just Hit a 5-Year High — Here's the CDC Data",
+      "next_steps": "Confirm CDC's specific count/comparison year before filing; tie to travel season context.",
+      "integrity_flags": [
+        "Cruise-specific outbreak data should not be generalized to overall population risk."
+      ],
+      "trend_score_reason": "CDC surveillance milestone (5-year high); cruise-specific seasonality signal.",
+      "opportunity_score_reason": "Travel season angle; cruise/vacation planning audience relevance.",
+      "discover_score_reason": "Niche surveillance update; lower general search volume but travel-relevant audience.",
+      "notes": "Surveillance data specific to cruise setting; segregate from general population risk messaging.",
+      "fact_check": {
+        "verdict": "unverifiable",
+        "issues": [],
+        "checked_against": "No signal data was collected this run; claim cannot be checked against evidence."
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "New ophthalmology research links rising childhood myopia rates to screen time, urges outdoor-time guidelines",
+      "primary_entity": "Childhood myopia",
+      "signal_type": "study_or_research",
+      "allowed_category": "pediatric health",
+      "trend_strength_score": 52,
+      "opportunity_score": 61,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "source_urls": [],
+      "recommended_angle": "Practical parent-facing angle: what the research actually supports (association, outdoor-time confounder) vs. screen-time panic.",
+      "why_now": "Ophthalmology journal research on pediatric vision; passed 02b with mild-overstatement note.",
+      "primary_headline": "Childhood Myopia Rates Are Climbing — New Research Points to Screen Time",
+      "next_steps": "Confirm named journal/DOI before publishing; lead with confounders alongside screen-time finding.",
+      "integrity_flags": [
+        "Correlational; outdoor-time and genetic confounders must be disclosed, not screen time alone."
+      ],
+      "trend_score_reason": "Peer-reviewed ophthalmology research; recurring concern in pediatric health cycle.",
+      "opportunity_score_reason": "Parent audience engagement on child health; screen-time decision context.",
+      "discover_score_reason": "Research update on parental concern topic; moderate search volume expected.",
+      "notes": "Passed 02b gate with mild-overstatement flag; confounders critical to disclose.",
+      "fact_check": {
+        "verdict": "unverifiable",
+        "issues": [],
+        "checked_against": "No signal data was collected this run; claim cannot be checked against evidence."
+      }
+    },
+    {
+      "priority_level": "P5",
+      "publish_timing": "monitor",
+      "topic": "Diet soda \"causes\" memory loss (viral claim)",
+      "primary_entity": "Diet soda",
+      "signal_type": "study_or_research",
+      "allowed_category": "nutrition and diet science",
+      "trend_strength_score": 0,
+      "opportunity_score": 0,
+      "discover_score": 0,
+      "urgency": "evergreen",
+      "confidence": "low",
+      "content_status": "new",
+      "source_count": 1,
+      "source_urls": [],
+      "recommended_angle": "Correlational study materially distorted in reporting — hold for editorial reframing around actual observational findings.",
+      "why_now": "Viral claim requires contextualization but source claim distorts causation.",
+      "primary_headline": "[HOLD] Diet Soda and Memory: What the Study Actually Says",
+      "next_steps": "Do not brief for publication until study's actual observational framing confirmed and causal claim explicitly corrected.",
+      "integrity_flags": [
+        "Material overstatement — correlation reported as causation; do not brief until reframed around the study's actual (observational) finding."
+      ],
+      "trend_score_reason": "Deferred to P5 Monitor due to material claim distortion.",
+      "opportunity_score_reason": "N/A — routed to 02b gate as material overstatement.",
+      "discover_score_reason": "N/A — held pending editorial interpretation.",
+      "notes": "Routed to 02b → Monitor gate (not a hard reject). Correlational study reported as causal; requires editorial interpretation before briefing.",
+      "fact_check": {
+        "verdict": "unverifiable",
+        "issues": [],
+        "checked_against": "No signal data was collected this run; claim cannot be checked against evidence."
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "\"Quiet cracking\" TikTok workplace burnout trend",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Red Cross winter blood shortage",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "GLP-1 drugs + holiday eating (recurrence)",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Ultra-processed food addiction angle (recurrence)",
+      "reason": "duplicate"
+    }
+  ],
+  "fact_check_summary": {
+    "unverifiable": 8
+  },
+  "run_cost": {
+    "total_usd": 0.4656,
+    "calls": [
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 2516,
+        "output_tokens": 16501,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 44594,
+        "estimated_cost_usd": 0.4223
+      },
+      {
+        "model": "claude-haiku-4-5",
+        "input_tokens": 7844,
+        "output_tokens": 3096,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0233
+      },
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 3222,
+        "output_tokens": 689,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.02
+      }
+    ]
+  }
+}
