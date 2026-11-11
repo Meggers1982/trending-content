@@ -1,6 +1,58 @@
 {
- "updated": "2026-11-10",
+ "updated": "2026-11-11",
  "items": [
+  {
+   "id": "2026-11-11-another-listeria-recall-this-time-deli-meat-right",
+   "title": "Another Listeria recall, this time deli meat, right before Thanksgiving: what to check and who's actually at risk",
+   "created": "2026-11-11",
+   "angle": "Short and useful: which products, how to check your fridge, and why Listeria matters mainly for pregnant people, people 65+ and the immunocompromised. Lead with absolute risk, not alarm.",
+   "why_now": "It's the third major recall in about a week, landing as people stock up for Thanksgiving.",
+   "is_it_real": "The input names no company, product or agency notice, and the fact check is unverifiable. The item only works once the FSIS or FDA recall notice is found. If it can't be confirmed, kill it.",
+   "evidence": [],
+   "terms": [
+    "Nationwide ready-to-eat deli meat recall — Listeria contamination, distinct from prior egg/spinach recalls"
+   ],
+   "status": "routed"
+  },
+  {
+   "id": "2026-11-11-mouth-taping-for-sleep-is-back-on-your-feed-what-t",
+   "title": "Mouth taping for sleep is back on your feed: what the evidence actually shows, and who should never try it",
+   "created": "2026-11-11",
+   "angle": "A quick 'is it real' item: claimed benefits versus the lack of strong trial evidence, plus the real risk for people with undiagnosed sleep apnea.",
+   "why_now": "There's a viral resurgence on short video, and a sleep item fits the post-time-change season.",
+   "is_it_real": "The trend is long-running and was heavily covered in past cycles, which is why this isn't a pitch. This week's TFM slot already went to the UPF and microplastics posts. The AASM caution and 'no RCT' claims should be confirmed against current sources; the input has no URL.",
+   "evidence": [],
+   "terms": [
+    "Mouth taping for sleep — viral trend lacks RCT evidence, AASM flags safety concerns"
+   ],
+   "status": "routed"
+  },
+  {
+   "id": "2026-11-11-walking-pneumonia-is-surging-in-school-age-kids-ho",
+   "title": "Walking pneumonia is surging in school-age kids: how it differs from flu and RSV, and when to call the doctor",
+   "created": "2026-11-11",
+   "angle": "Parent-facing explainer: the lingering cough, the low fever, and why the usual first-line antibiotics may not work for Mycoplasma.",
+   "why_now": "Surveillance reportedly shows a surge separate from the flu, RSV and norovirus items we've already run.",
+   "is_it_real": "The surge claim is unsourced. It needs CDC surveillance data (or state data) confirming a current rise, not a recap of the big 2024 wave. Drop it if the data isn't there.",
+   "evidence": [],
+   "terms": [
+    "Walking pneumonia (Mycoplasma) surge in school-age children — distinct from flu/RSV season"
+   ],
+   "status": "routed"
+  },
+  {
+   "id": "2026-11-10-cruise-ship-norovirus-outbreaks-hit-a-five-year-hi",
+   "title": "Cruise ship norovirus outbreaks hit a five-year high: what the CDC's count does and doesn't say about your trip",
+   "created": "2026-11-10",
+   "angle": "A quick, useful item for holiday cruisers: what the CDC Vessel Sanitation Program count shows, why cruises report outbreaks more visibly than land settings, and a link back to the soap-vs-sanitizer point.",
+   "why_now": "A CDC surveillance milestone ahead of holiday travel, following the Nov 7 norovirus brief.",
+   "is_it_real": "Unverified. There is no URL in the input. CDC publishes cruise outbreak counts, so the 'five-year high' figure is easy to check before it runs. Do not generalize it to population-wide risk.",
+   "evidence": [],
+   "terms": [
+    "CDC cruise ship surveillance shows norovirus outbreak counts at highest level in five years"
+   ],
+   "status": "routed"
+  },
   {
    "id": "2026-11-10-fda-warns-that-counterfeit-ozempic-and-mounjaro-vi",
    "title": "FDA warns that counterfeit Ozempic and Mounjaro vials tested contaminated: how to tell fake from real",
@@ -24,19 +76,6 @@
    "evidence": [],
    "terms": [
     "CDC surveillance: infant RSV hospitalizations running ahead of the last three seasons"
-   ],
-   "status": "routed"
-  },
-  {
-   "id": "2026-11-10-cruise-ship-norovirus-outbreaks-hit-a-five-year-hi",
-   "title": "Cruise ship norovirus outbreaks hit a five-year high: what the CDC's count does and doesn't say about your trip",
-   "created": "2026-11-10",
-   "angle": "A quick, useful item for holiday cruisers: what the CDC Vessel Sanitation Program count shows, why cruises report outbreaks more visibly than land settings, and a link back to the soap-vs-sanitizer point.",
-   "why_now": "A CDC surveillance milestone ahead of holiday travel, following the Nov 7 norovirus brief.",
-   "is_it_real": "Unverified. There is no URL in the input. CDC publishes cruise outbreak counts, so the 'five-year high' figure is easy to check before it runs. Do not generalize it to population-wide risk.",
-   "evidence": [],
-   "terms": [
-    "CDC cruise ship surveillance shows norovirus outbreak counts at highest level in five years"
    ],
    "status": "routed"
   },
@@ -89,6 +128,7 @@
    "evidence": [],
    "terms": [
     "H5N5 avian influenza — first confirmed US human case",
+    "H5N5 avian influenza — fourth suspected U.S. case under investigation, CDC issues updated occupational guidance",
     "H5N5 avian influenza — second confirmed U.S. human case; CDC updates risk assessment",
     "H5N5 avian influenza — third confirmed U.S. human case; CDC maintains low public risk assessment"
    ],
@@ -206,7 +246,8 @@
    "evidence": [],
    "terms": [
     "Measles death — New York State's first fatal case in 30 years",
-    "NY measles outbreak — second case confirmed in same cluster"
+    "NY measles outbreak — second case confirmed in same cluster",
+    "NY measles outbreak — third case confirmed in second county, expanded vaccination advisory issued"
    ],
    "status": "routed"
   },

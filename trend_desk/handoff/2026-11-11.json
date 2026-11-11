@@ -1,0 +1,213 @@
+{
+ "date": "2026-11-11",
+ "ideas": [
+  {
+   "id": "2026-11-11-another-listeria-recall-this-time-deli-meat-right",
+   "title": "Another Listeria recall, this time deli meat, right before Thanksgiving: what to check and who's actually at risk",
+   "created": "2026-11-11",
+   "route": "roundup",
+   "speed": "new",
+   "beat": "food safety",
+   "angle": "Short and useful: which products, how to check your fridge, and why Listeria matters mainly for pregnant people, people 65+ and the immunocompromised. Lead with absolute risk, not alarm.",
+   "why_now": "It's the third major recall in about a week, landing as people stock up for Thanksgiving.",
+   "is_it_real": "The input names no company, product or agency notice, and the fact check is unverifiable. The item only works once the FSIS or FDA recall notice is found. If it can't be confirmed, kill it.",
+   "confidence": "medium",
+   "evidence": [],
+   "terms": [
+    "nationwide ready to eat deli meat recall listeria contamination distinct from prior egg spinach recalls"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-11-11",
+     "event": "routed",
+     "detail": "roundup"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "Nationwide ready-to-eat deli meat recall — Listeria contamination, distinct from prior egg/spinach recalls",
+     "speed": "new",
+     "first_seen": "2026-11-11",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-11-11",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 72,
+       "opportunity": 81
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-11-11-aspirin-to-prevent-colorectal-cancer-coming-back-b",
+   "title": "Aspirin to prevent colorectal cancer coming back, but only if your tumor carries one mutation, and most patients are never tested for it",
+   "created": "2026-11-11",
+   "route": "pitch",
+   "speed": "new",
+   "beat": "aging, body and metabolism / cancer",
+   "angle": "Precision-medicine tension: a cheap drug may cut recurrence for a specific genetic subgroup, but the benefit depends on tumor PIK3CA testing that isn't routine for everyone. Who qualifies, what testing costs, and why this isn't 'everyone should take aspirin' (bleeding risk).",
+   "why_now": "A new JAMA Internal Medicine paper is out this week, and colorectal cancer in younger adults keeps editors interested in the topic.",
+   "is_it_real": "Unverified: no URL or DOI, and the context calls it an association, so study design must be confirmed. The aspirin and PIK3CA link has been studied before, so the 'first major finding in years' framing needs checking against prior trials. Findings apply only to PIK3CA-mutated tumors.",
+   "confidence": "medium",
+   "evidence": [],
+   "terms": [
+    "daily low dose aspirin linked to reduced colorectal cancer recurrence in pik3ca mutated tumors jama internal medicine"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-11-11",
+     "event": "routed",
+     "detail": "pitch"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "Daily low-dose aspirin linked to reduced colorectal cancer recurrence in PIK3CA-mutated tumors (JAMA Internal Medicine)",
+     "speed": "new",
+     "first_seen": "2026-11-11",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-11-11",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 62,
+       "opportunity": 80
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-11-11-mouth-taping-for-sleep-is-back-on-your-feed-what-t",
+   "title": "Mouth taping for sleep is back on your feed: what the evidence actually shows, and who should never try it",
+   "created": "2026-11-11",
+   "route": "roundup",
+   "speed": "new",
+   "beat": "sleep / viral wellness claims",
+   "angle": "A quick 'is it real' item: claimed benefits versus the lack of strong trial evidence, plus the real risk for people with undiagnosed sleep apnea.",
+   "why_now": "There's a viral resurgence on short video, and a sleep item fits the post-time-change season.",
+   "is_it_real": "The trend is long-running and was heavily covered in past cycles, which is why this isn't a pitch. This week's TFM slot already went to the UPF and microplastics posts. The AASM caution and 'no RCT' claims should be confirmed against current sources; the input has no URL.",
+   "confidence": "medium",
+   "evidence": [],
+   "terms": [
+    "mouth taping for sleep viral trend lacks rct evidence aasm flags safety concerns"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-11-11",
+     "event": "routed",
+     "detail": "roundup"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "Mouth taping for sleep — viral trend lacks RCT evidence, AASM flags safety concerns",
+     "speed": "new",
+     "first_seen": "2026-11-11",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-11-11",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 68,
+       "opportunity": 68
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-11-11-walking-pneumonia-is-surging-in-school-age-kids-ho",
+   "title": "Walking pneumonia is surging in school-age kids: how it differs from flu and RSV, and when to call the doctor",
+   "created": "2026-11-11",
+   "route": "roundup",
+   "speed": "new",
+   "beat": "public health",
+   "angle": "Parent-facing explainer: the lingering cough, the low fever, and why the usual first-line antibiotics may not work for Mycoplasma.",
+   "why_now": "Surveillance reportedly shows a surge separate from the flu, RSV and norovirus items we've already run.",
+   "is_it_real": "The surge claim is unsourced. It needs CDC surveillance data (or state data) confirming a current rise, not a recap of the big 2024 wave. Drop it if the data isn't there.",
+   "confidence": "low",
+   "evidence": [],
+   "terms": [
+    "walking pneumonia mycoplasma surge in school age children distinct from flu rsv season"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-11-11",
+     "event": "routed",
+     "detail": "roundup"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "Walking pneumonia (Mycoplasma) surge in school-age children — distinct from flu/RSV season",
+     "speed": "new",
+     "first_seen": "2026-11-11",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-11-11",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 61,
+       "opportunity": 77
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  }
+ ],
+ "dropped": 0,
+ "watching": 1,
+ "notes": "Every term today came from a single newsroom source, with no URLs and every fact check unverifiable, so each kept idea depends on verification. Two are updates attached to existing ideas (H5N5 and NY measles). The Alzheimer's approval names no drug or date; hold it until the FDA acts, when the surrogate-endpoint angle could become a pitch. The H5N5 case count in the source conflicts with our Nov 8 framing, so check it before anything runs.",
+ "cost_usd": 0.1309
+}
