@@ -1,0 +1,106 @@
+{
+  "run_date": "2026-11-11",
+  "generated_at": "2026-11-11T20:16:50",
+  "topic": "womens-health",
+  "geo": "US",
+  "date_window": "now 7-d",
+  "seed_terms": [
+    "womens-health",
+    "perimenopause",
+    "menopause symptoms",
+    "hormone therapy",
+    "PCOS",
+    "endometriosis",
+    "period health",
+    "fertility",
+    "womens-health trends",
+    "womens-health products",
+    "womens-health news",
+    "womens-health for beginners",
+    "womens-health routine",
+    "womens-health benefits",
+    "womens-health ideas",
+    "womens-health reviews"
+  ],
+  "trending_now_terms_used": [],
+  "trending_now_context": [],
+  "autocomplete_terms_used": [],
+  "methodology": "Google Trends related-query/topic discovery, time-series validation, emergence scoring, confidence routing",
+  "summary": {
+    "seed_count": 16,
+    "total_reviewed": 0,
+    "total_retained": 0,
+    "total_rejected": 16,
+    "breakouts": 0,
+    "emerging": 0,
+    "rising": 0,
+    "notes": "Scores are relative Google Trends signals, not absolute search volume. Treat low-confidence trends as watchlist items until another channel confirms them."
+  },
+  "candidates": [],
+  "rejected": [
+    {
+      "topic": "womens-health",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "perimenopause",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "menopause symptoms",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "hormone therapy",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "PCOS",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "endometriosis",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "period health",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "fertility",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "womens-health trends",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "womens-health products",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "womens-health news",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "womens-health for beginners",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "womens-health routine",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "womens-health benefits",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "womens-health ideas",
+      "reason": "No related_queries data returned"
+    },
+    {
+      "topic": "womens-health reviews",
+      "reason": "No related_queries data returned"
+    }
+  ]
+}
