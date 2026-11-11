@@ -3,6 +3,45 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-11-11'
+  niche: Health & Wellness
+  signals_reviewed: 138
+  topics_retained: 7
+  topics_rejected: 9
+  p1_count: 2
+  p2_count: 3
+  p3_count: 2
+  p4_count: 0
+  p5_count: 0
+  integrity_flags: 5
+  top_topic: H5N5 avian influenza — fourth suspected U.S. case under investigation, CDC issues updated
+    occupational guidance
+  key_themes:
+  - H5N5 avian influenza — fourth suspected U.S. case under investigation, CDC issues updated occupational
+    guidance
+  - Nationwide ready-to-eat deli meat recall — Listeria contamination, distinct from prior egg/spinach
+    recalls
+  - NY measles outbreak — third case confirmed in second county, expanded vaccination advisory issued
+  - Daily low-dose aspirin linked to reduced colorectal cancer recurrence in PIK3CA-mutated tumors (JAMA
+    Internal Medicine)
+  - FDA accelerated-approval decision pending on next-generation anti-amyloid Alzheimer's drug
+  - Walking pneumonia (Mycoplasma) surge in school-age children — distinct from flu/RSV season
+  - Mouth taping for sleep — viral trend lacks RCT evidence, AASM flags safety concerns
+  tools_used:
+  - web_search
+  - google_news
+  tools_unavailable:
+  - google_trends
+  - serpapi
+  - composio_search_trends
+  - exasearch
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-11-11.html
+  estimated_cost_usd: 0.5339
+  notes: Operating without live tool injection this session. Google Trends and SerpAPI live data not available;
+    search velocity and trend/opportunity scores are estimates based on continuity record and news convergence.
+    GLP-1/semaglutide, egg/spinach recall, and microplastics clusters recur with no new development today
+    — flagged as stale. Deli-meat recall and walking pneumonia are genuinely new sub-stories within otherwise-saturated
+    clusters.
 - run_date: '2026-11-10'
   niche: Health & Wellness
   signals_reviewed: 52

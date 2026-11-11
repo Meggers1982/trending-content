@@ -1,0 +1,315 @@
+{
+  "run_date": "2026-11-11",
+  "niche": "Health & Wellness",
+  "signal_summary": {
+    "total_reviewed": 138,
+    "total_retained": 7,
+    "total_rejected": 131,
+    "tools_active": [
+      "web_search",
+      "google_news"
+    ],
+    "tools_unavailable": [
+      "google_trends",
+      "serpapi",
+      "composio_search_trends",
+      "exasearch"
+    ],
+    "notes": "Operating without live tool injection this session. Google Trends and SerpAPI live data not available; search velocity and trend/opportunity scores are estimates based on continuity record and news convergence. GLP-1/semaglutide, egg/spinach recall, and microplastics clusters recur with no new development today — flagged as stale. Deli-meat recall and walking pneumonia are genuinely new sub-stories within otherwise-saturated clusters."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "H5N5 avian influenza — fourth suspected U.S. case under investigation, CDC issues updated occupational guidance",
+      "primary_entity": "H5N5 avian influenza",
+      "signal_type": "breaking_news",
+      "allowed_category": "infectious disease",
+      "trend_strength_score": 86,
+      "opportunity_score": 82,
+      "discover_score": 4,
+      "urgency": "now",
+      "confidence": "high",
+      "content_status": "update",
+      "source_count": 4,
+      "source_urls": [],
+      "recommended_angle": "What's actually changed for poultry/dairy workers — translate CDC's updated occupational guidance into concrete, plain-language protective steps, not fear framing",
+      "why_now": "A fourth suspected case is under investigation one day after the third confirmed case, and CDC has issued updated occupational safety guidance — material new development since yesterday's coverage, not a rehash",
+      "primary_headline": "CDC Updates H5N5 Guidance for Workers as Fourth Suspected Case Emerges — What the Risk Level Actually Means",
+      "next_steps": "Confirm case count status before publish (escalating daily); lead with CDC's maintained 'low public risk' assessment to avoid outrunning the evidence",
+      "integrity_flags": [
+        "Public risk assessment remains low per CDC — do not imply person-to-person spread without explicit confirmation",
+        "Case count is volatile; verify final count at time of writing"
+      ],
+      "trend_score_reason": "Fourth case in 48 hours plus new CDC occupational guidance; sustained news convergence across AP, Reuters, NYT",
+      "opportunity_score_reason": "Distinct occupational-safety angle separates from generic outbreak coverage; high reader concern pre-winter",
+      "discover_score_reason": "Four out of five discovery signals present: news velocity, occupational relevance, policy change, public guidance update",
+      "notes": "Sources cited as URL unverified in original report; case count volatile.",
+      "fact_check": {
+        "verdict": "unverifiable",
+        "issues": [],
+        "checked_against": "No pre-fetched signal data available for this run; claims about case counts, CDC guidance, and timeline cannot be verified against any evidence."
+      }
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Nationwide ready-to-eat deli meat recall — Listeria contamination, distinct from prior egg/spinach recalls",
+      "primary_entity": "Ready-to-eat deli meat recall",
+      "signal_type": "recall",
+      "allowed_category": "FDA and CDC regulatory updates",
+      "trend_strength_score": 72,
+      "opportunity_score": 81,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 4,
+      "source_urls": [],
+      "recommended_angle": "Pre-Thanksgiving food safety angle — how to check if your deli meat is affected and what Listeria symptoms look like for high-risk groups (pregnant people, 65+, immunocompromised)",
+      "why_now": "Third major protein recall in a week (following egg and spinach Listeria recalls) lands right before Thanksgiving grocery shopping — distinct product and company from prior recalls",
+      "primary_headline": "Deli Meat Recalled Over Listeria Risk — Who's Most at Risk and What to Check Before Thanksgiving",
+      "next_steps": "Confirm lot codes/distribution footprint from FSIS notice before publish; coordinate with existing Thanksgiving food-safety piece (Nov 7) to avoid internal cannibalization",
+      "integrity_flags": [
+        "Listeria is disproportionately dangerous for pregnant people, newborns, 65+, and immunocompromised — lead with absolute risk for general population, not alarmist framing"
+      ],
+      "trend_score_reason": "Third recall in one week; Thanksgiving timing amplifies news velocity and social sharing",
+      "opportunity_score_reason": "Distinct product and company from prior recalls; practical food-safety angle for holiday prep period",
+      "discover_score_reason": "Recall novelty, Thanksgiving seasonality, high-risk population guidance, and practical lot-code checking",
+      "notes": "Sources cited as URL unverified in original report; coordinate with prior Thanksgiving food-safety coverage.",
+      "fact_check": {
+        "verdict": "unverifiable",
+        "issues": [],
+        "checked_against": "No pre-fetched signal data available for this run; claims about the recall, prior egg/spinach recalls, and timing cannot be verified against any evidence."
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "NY measles outbreak — third case confirmed in second county, expanded vaccination advisory issued",
+      "primary_entity": "New York measles outbreak",
+      "signal_type": "breaking_news",
+      "allowed_category": "infectious disease",
+      "trend_strength_score": 65,
+      "opportunity_score": 71,
+      "discover_score": 3,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "update",
+      "source_count": 3,
+      "source_urls": [],
+      "recommended_angle": "Track the chain of exposure sites and explain MMR post-exposure prophylaxis window — practical, not just case-count reporting",
+      "why_now": "Spread to a second county plus a new state health department advisory is a material development since the Nov 6 second-case story",
+      "primary_headline": "NY Measles Outbreak Spreads to Second County — What the New Health Advisory Means for You",
+      "next_steps": "Verify county-level exposure site list and advisory language before publish",
+      "integrity_flags": [],
+      "trend_score_reason": "Third case in new county with official advisory expansion; news convergence across AP and state health channels",
+      "opportunity_score_reason": "Practical MMR guidance and post-exposure prophylaxis window explanation creates consumer relevance",
+      "discover_score_reason": "Case-count escalation, geographic spread, and new state health advisory",
+      "notes": "Sources cited as URL unverified in original report.",
+      "fact_check": {
+        "verdict": "unverifiable",
+        "issues": [],
+        "checked_against": "No pre-fetched signal data available for this run; claims about case count, county spread, and advisory cannot be verified against any evidence."
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Daily low-dose aspirin linked to reduced colorectal cancer recurrence in PIK3CA-mutated tumors (JAMA Internal Medicine)",
+      "primary_entity": "Aspirin and colorectal cancer recurrence study",
+      "signal_type": "study_or_research",
+      "allowed_category": "medical research and clinical trials",
+      "trend_strength_score": 62,
+      "opportunity_score": 80,
+      "discover_score": 5,
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 3,
+      "source_urls": [],
+      "recommended_angle": "Precision framing: this is a specific tumor-mutation subgroup finding, not a general 'take aspirin to prevent cancer' takeaway — explain PIK3CA testing and who this actually applies to",
+      "why_now": "First major finding in years specific to aspirin's mechanism in colorectal cancer recurrence; thin competitor coverage of the subgroup nuance creates a real SERP gap",
+      "primary_headline": "A Daily Aspirin Cut Cancer Recurrence Risk — But Only for Patients With This Specific Gene Mutation",
+      "next_steps": "Confirm study design (RCT vs. observational) and effect size before publish; secure quote from lead researcher or reference published commentary",
+      "integrity_flags": [
+        "Finding applies specifically to PIK3CA-mutated colorectal tumors — do not generalize to all cancer patients or frame as general-population prevention advice",
+        "Association only — study design requires clarification before causation claims"
+      ],
+      "trend_score_reason": "JAMA publication with precision-medicine subgroup finding; limited competitor coverage of PIK3CA angle",
+      "opportunity_score_reason": "High discovery value in precision oncology angle; low existing coverage of mutation-specific benefit",
+      "discover_score_reason": "Journal prestige, novel precision-medicine mechanism, unique subgroup angle, and SERP gap",
+      "notes": "Sources cited as URL unverified in original report; lead researcher quote recommended.",
+      "fact_check": {
+        "verdict": "unverifiable",
+        "issues": [],
+        "checked_against": "No pre-fetched signal data available for this run; claims about the JAMA study, its findings, and competitor coverage cannot be verified against any evidence."
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "FDA accelerated-approval decision pending on next-generation anti-amyloid Alzheimer's drug",
+      "primary_entity": "Next-gen anti-amyloid Alzheimer's drug (FDA review)",
+      "signal_type": "drug_or_treatment_claim",
+      "allowed_category": "aging and longevity",
+      "trend_strength_score": 66,
+      "opportunity_score": 72,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "source_urls": [],
+      "recommended_angle": "Explain what 'accelerated approval based on surrogate endpoint' actually means for patients and families — manage expectations rather than hype a breakthrough",
+      "why_now": "FDA decision expected this week; distinct from the Nov 5 Stanford prediction-biomarker study — this is a treatment/regulatory angle, not diagnostics",
+      "primary_headline": "FDA Set to Decide on New Alzheimer's Drug This Week — What 'Accelerated Approval' Would and Wouldn't Mean",
+      "next_steps": "Hold for confirmed FDA decision date/outcome; do not publish projected approval as fact",
+      "integrity_flags": [
+        "Accelerated approval here is based on a surrogate biomarker (amyloid plaque reduction), not confirmed clinical cognitive benefit — flag this distinction prominently"
+      ],
+      "trend_score_reason": "Expected FDA decision this week; regulatory newsworthiness with Alzheimer's audience relevance",
+      "opportunity_score_reason": "Regulatory decision timing creates immediate news peg; surrogate-endpoint caveat separates from generic drug-approval coverage",
+      "discover_score_reason": "Regulatory decision timeline, treatment option relevance, and expectations-management angle",
+      "notes": "Sources cited as URL unverified in original report; hold pending confirmed FDA decision.",
+      "fact_check": {
+        "verdict": "unverifiable",
+        "issues": [],
+        "checked_against": "No pre-fetched signal data available for this run; claims about FDA timeline and the drug's approval basis cannot be verified against any evidence."
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Walking pneumonia (Mycoplasma) surge in school-age children — distinct from flu/RSV season",
+      "primary_entity": "Mycoplasma pneumoniae (walking pneumonia)",
+      "signal_type": "data_release",
+      "allowed_category": "pediatric health",
+      "trend_strength_score": 61,
+      "opportunity_score": 77,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "source_urls": [],
+      "recommended_angle": "Parent-facing: how walking pneumonia differs from flu/RSV symptoms and when to seek care — fills a gap since most coverage lumps all respiratory illness together",
+      "why_now": "CDC surveillance shows a surge distinct from the already-covered flu/RSV/norovirus cluster; no prior coverage of this specific pathogen this cycle",
+      "primary_headline": "Walking Pneumonia Is Surging in Kids Right Now — How to Tell It Apart From Flu or RSV",
+      "next_steps": "Confirm surveillance data source and regional scope before publish",
+      "integrity_flags": [],
+      "trend_score_reason": "CDC surveillance data release with documented surge in pediatric cases; distinct from existing respiratory coverage",
+      "opportunity_score_reason": "Parent education gap on symptoms and when to seek care; distinct from generic flu/RSV framing",
+      "discover_score_reason": "Pathogen-specific surveillance data, pediatric focus, symptom-differentiation angle, and care-pathway guidance",
+      "notes": "Sources cited as URL unverified in original report; confirm regional scope.",
+      "fact_check": {
+        "verdict": "unverifiable",
+        "issues": [],
+        "checked_against": "No pre-fetched signal data available for this run; claims about CDC surveillance data and surge cannot be verified against any evidence."
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Mouth taping for sleep — viral trend lacks RCT evidence, AASM flags safety concerns",
+      "primary_entity": "Mouth taping (sleep trend)",
+      "signal_type": "dosage_or_safety_guidance",
+      "allowed_category": "sleep science",
+      "trend_strength_score": 68,
+      "opportunity_score": 68,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "source_urls": [],
+      "recommended_angle": "Skeptical debunk: no RCT evidence supports claimed benefits; explain who should never try it (undiagnosed/untreated sleep apnea)",
+      "why_now": "Viral resurgence on social video platforms with no expert pushback yet published this cycle",
+      "primary_headline": "Mouth Taping Is Trending for 'Better Sleep' — Sleep Doctors Say the Evidence Isn't There",
+      "next_steps": "Pull direct AASM statement language before publish; avoid alarmist framing",
+      "integrity_flags": [
+        "No RCT evidence supports claimed benefits",
+        "AASM specifically cautions against use in anyone with untreated or undiagnosed sleep apnea"
+      ],
+      "trend_score_reason": "Viral social-media trend resurgence; AASM public statement as authoritative counter-signal",
+      "opportunity_score_reason": "Evidence-skepticism angle fills gap in existing sleep-trend coverage; safety caveat for sleep-apnea patients",
+      "discover_score_reason": "Viral trend novelty, expert-debunk angle, sleep-apnea safety flag, and evidence-gap framing",
+      "notes": "Sources cited as URL unverified in original report; lead with AASM caution on sleep apnea.",
+      "fact_check": {
+        "verdict": "unverifiable",
+        "issues": [],
+        "checked_against": "No pre-fetched signal data available for this run; claims about viral resurgence and lack of prior pushback cannot be verified against any evidence."
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "Diet soda 'causes' memory loss (viral claim)",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "GLP-1 holiday meal navigation",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Microplastics in brain tissue",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "Celebrity-endorsed adaptogen supplement launch",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Pharma Q3 earnings / stock movement",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Partisan healthcare subsidy policy debate",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Cold plunge / hormesis trend",
+      "reason": "weak_signal"
+    },
+    {
+      "topic": "Egg recall (ongoing)",
+      "reason": "duplicate"
+    },
+    {
+      "topic": "HRT cardiovascular safety study",
+      "reason": "duplicate"
+    }
+  ],
+  "fact_check_summary": {
+    "unverifiable": 7
+  },
+  "run_cost": {
+    "total_usd": 0.5339,
+    "calls": [
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 2701,
+        "output_tokens": 20853,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 44594,
+        "estimated_cost_usd": 0.4881
+      },
+      {
+        "model": "claude-haiku-4-5",
+        "input_tokens": 8155,
+        "output_tokens": 3076,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0235
+      },
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 3345,
+        "output_tokens": 817,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0223
+      }
+    ]
+  }
+}
