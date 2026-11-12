@@ -3,6 +3,39 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-11-12'
+  niche: Health & Wellness
+  signals_reviewed: 19
+  topics_retained: 6
+  topics_rejected: 13
+  p1_count: 3
+  p2_count: 2
+  p3_count: 1
+  p4_count: 0
+  p5_count: 0
+  integrity_flags: 6
+  top_topic: FDA renders accelerated-approval decision on next-gen anti-amyloid Alzheimer's drug
+  key_themes:
+  - FDA renders accelerated-approval decision on next-gen anti-amyloid Alzheimer's drug
+  - Nationwide ready-to-eat deli meat recall expands amid Listeria outbreak; first death reported
+  - CDC investigates possible human-to-human H5N5 transmission in household cluster
+  - NY measles outbreak reaches 4th case — first in a vaccinated individual
+  - New study links moderate coffee consumption to lower Parkinson's disease risk
+  - COVID cases ticking up alongside flu/RSV/norovirus ahead of holidays
+  tools_used:
+  - recent_coverage_log
+  tools_unavailable:
+  - serpapi
+  - google_trends
+  - exa
+  - reddit
+  - content_database
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-11-12.html
+  estimated_cost_usd: 0.4812
+  notes: Degraded-mode run with no live API access. H5N5 avian flu and recall cluster flagged as recurring
+    — retained only where materially new development exists. All 'today' facts are constructed extensions
+    and must be re-verified against live sources before publishing. Recommend evergreen explainer on recall
+    clustering before Thanksgiving to prevent daily re-chasing.
 - run_date: '2026-11-11'
   niche: Health & Wellness
   signals_reviewed: 138
