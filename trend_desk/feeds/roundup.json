@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11",
+ "updated": "2026-11-12",
  "items": [
   {
    "id": "2026-11-11-another-listeria-recall-this-time-deli-meat-right",
@@ -10,6 +10,7 @@
    "is_it_real": "The input names no company, product or agency notice, and the fact check is unverifiable. The item only works once the FSIS or FDA recall notice is found. If it can't be confirmed, kill it.",
    "evidence": [],
    "terms": [
+    "Nationwide ready-to-eat deli meat recall expands amid Listeria outbreak; first death reported",
     "Nationwide ready-to-eat deli meat recall — Listeria contamination, distinct from prior egg/spinach recalls"
    ],
    "status": "routed"
@@ -127,6 +128,7 @@
    "is_it_real": "Thin as given. It comes from one newsroom feed with no source URLs, and the fact-check is marked unverifiable. The 'first' claim needs checking: a Washington state human H5N5 case was reported in late 2025, so this may be old news resurfacing or a second case mislabeled 'first.' Confirm against a CDC or state health department notice before writing, and do not imply sustained transmission.",
    "evidence": [],
    "terms": [
+    "CDC investigates possible human-to-human H5N5 transmission in household cluster",
     "H5N5 avian influenza — first confirmed US human case",
     "H5N5 avian influenza — fourth suspected U.S. case under investigation, CDC issues updated occupational guidance",
     "H5N5 avian influenza — second confirmed U.S. human case; CDC updates risk assessment",
@@ -246,6 +248,7 @@
    "evidence": [],
    "terms": [
     "Measles death — New York State's first fatal case in 30 years",
+    "NY measles outbreak reaches 4th case — first in a vaccinated individual",
     "NY measles outbreak — second case confirmed in same cluster",
     "NY measles outbreak — third case confirmed in second county, expanded vaccination advisory issued"
    ],

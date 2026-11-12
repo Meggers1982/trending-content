@@ -1418,6 +1418,11 @@
      "date": "2026-11-11",
      "detail": "NY measles outbreak — third case confirmed in second county, expanded vaccination advisory issued",
      "event": "new-signal"
+    },
+    {
+     "date": "2026-11-12",
+     "detail": "NY measles outbreak reaches 4th case — first in a vaccinated individual",
+     "event": "new-signal"
     }
    ],
    "is_it_real": "Plausible, but the upstream angle claims this is the first U.S. measles death in 30 years. That is wrong: the U.S. recorded measles deaths in 2025. The claim must be scoped to New York State, and the only source in the input is a NYT homepage link, so the specific report needs to be located before writing. Keep it to factual reporting, not vaccine-debate framing.",
@@ -1428,6 +1433,7 @@
    "status": "routed",
    "terms": [
     "measles death new york state s first fatal case in 30 years",
+    "ny measles outbreak reaches 4th case first in a vaccinated individual",
     "ny measles outbreak second case confirmed in same cluster",
     "ny measles outbreak third case confirmed in second county expanded vaccination advisory issued"
    ],
@@ -1743,6 +1749,11 @@
      "date": "2026-11-11",
      "detail": "H5N5 avian influenza — fourth suspected U.S. case under investigation, CDC issues updated occupational guidance",
      "event": "new-signal"
+    },
+    {
+     "date": "2026-11-12",
+     "detail": "CDC investigates possible human-to-human H5N5 transmission in household cluster",
+     "event": "new-signal"
     }
    ],
    "is_it_real": "Thin as given. It comes from one newsroom feed with no source URLs, and the fact-check is marked unverifiable. The 'first' claim needs checking: a Washington state human H5N5 case was reported in late 2025, so this may be old news resurfacing or a second case mislabeled 'first.' Confirm against a CDC or state health department notice before writing, and do not imply sustained transmission.",
@@ -1752,6 +1763,7 @@
    "speed": "new",
    "status": "routed",
    "terms": [
+    "cdc investigates possible human to human h5n5 transmission in household cluster",
     "h5n5 avian influenza first confirmed us human case",
     "h5n5 avian influenza fourth suspected u s case under investigation cdc issues updated occupational guidance",
     "h5n5 avian influenza second confirmed u s human case cdc updates risk assessment",
@@ -1946,6 +1958,11 @@
      "date": "2026-11-11",
      "detail": "roundup",
      "event": "routed"
+    },
+    {
+     "date": "2026-11-12",
+     "detail": "Nationwide ready-to-eat deli meat recall expands amid Listeria outbreak; first death reported",
+     "event": "new-signal"
     }
    ],
    "is_it_real": "The input names no company, product or agency notice, and the fact check is unverifiable. The item only works once the FSIS or FDA recall notice is found. If it can't be confirmed, kill it.",
@@ -1955,6 +1972,7 @@
    "speed": "new",
    "status": "routed",
    "terms": [
+    "nationwide ready to eat deli meat recall expands amid listeria outbreak first death reported",
     "nationwide ready to eat deli meat recall listeria contamination distinct from prior egg spinach recalls"
    ],
    "title": "Another Listeria recall, this time deli meat, right before Thanksgiving: what to check and who's actually at risk",
@@ -2396,6 +2414,23 @@
     "roundup": 3
    },
    "watching": 1
+  },
+  {
+   "collected": {
+    "newsroom": 21,
+    "radar": 0,
+    "rising": 0,
+    "wide": 0
+   },
+   "cost_usd": 0.1102,
+   "date": "2026-11-12",
+   "dropped": 1,
+   "due": 6,
+   "ideas": 0,
+   "model": "claude-opus-5-5",
+   "notes": "Today was all newsroom follow-ups. Three of the six are escalations of stories already in the roundup (H5N5, deli meat Listeria, NY measles), so they attach rather than spawn new ideas. The Alzheimer's decision could be a strong aging-beat pitch, but the input names no drug and no outcome and cites a placeholder sponsor press release, so it is on watch until there's something concrete. Several sources today were generic home pages or example.com placeholders, so every figure needs checking at the primary source before anything is written.",
+   "routes": {},
+   "watching": 2
   }
  ],
  "terms": {
@@ -9859,6 +9894,25 @@
    "status": "held",
    "term": "CDC flu surveillance shows early, high-severity season"
   },
+  "cdc investigates possible human to human h5n5 transmission in household cluster": {
+   "drop_reason": null,
+   "first_seen": "2026-11-12",
+   "idea": "2026-11-08-the-first-confirmed-us-human-h5n5-bird-flu-case-wh",
+   "judged_on": "2026-11-12",
+   "last_seen": "2026-11-12",
+   "sightings": [
+    {
+     "date": "2026-11-12",
+     "opportunity": 78,
+     "profile": "daily-pipeline",
+     "score": 88,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "kept",
+   "term": "CDC investigates possible human-to-human H5N5 transmission in household cluster"
+  },
   "cdc surveillance infant rsv hospitalizations running ahead of the last three seasons": {
    "drop_reason": null,
    "first_seen": "2026-11-10",
@@ -12506,6 +12560,25 @@
    ],
    "status": "pending",
    "term": "COVID-19 Vaccines Cut Hospitalizations by More Than 50% — New Real-World Data"
+  },
+  "covid cases ticking up alongside flu rsv norovirus ahead of holidays": {
+   "drop_reason": "watch",
+   "first_seen": "2026-11-12",
+   "idea": null,
+   "judged_on": "2026-11-12",
+   "last_seen": "2026-11-12",
+   "sightings": [
+    {
+     "date": "2026-11-12",
+     "opportunity": 58,
+     "profile": "daily-pipeline",
+     "score": 55,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "held",
+   "term": "COVID cases ticking up alongside flu/RSV/norovirus ahead of holidays"
   },
   "covid vaccine study blocked by cdc acting director published in outside peer reviewed journal": {
    "drop_reason": null,
@@ -20221,6 +20294,25 @@
    ],
    "status": "pending",
    "term": "FDA recalls millions of bottles of eye drops nationwide"
+  },
+  "fda renders accelerated approval decision on next gen anti amyloid alzheimer s drug": {
+   "drop_reason": "watch",
+   "first_seen": "2026-11-12",
+   "idea": null,
+   "judged_on": "2026-11-12",
+   "last_seen": "2026-11-12",
+   "sightings": [
+    {
+     "date": "2026-11-12",
+     "opportunity": 75,
+     "profile": "daily-pipeline",
+     "score": 80,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "held",
+   "term": "FDA renders accelerated-approval decision on next-gen anti-amyloid Alzheimer's drug"
   },
   "fda reviewing glp 1 ozempic mental health signal what the suicidality review found": {
    "drop_reason": null,
@@ -37315,6 +37407,25 @@
    "status": "kept",
    "term": "Nationwide olmesartan (blood pressure medication) recall — pills failed quality test"
   },
+  "nationwide ready to eat deli meat recall expands amid listeria outbreak first death reported": {
+   "drop_reason": null,
+   "first_seen": "2026-11-12",
+   "idea": "2026-11-11-another-listeria-recall-this-time-deli-meat-right",
+   "judged_on": "2026-11-12",
+   "last_seen": "2026-11-12",
+   "sightings": [
+    {
+     "date": "2026-11-12",
+     "opportunity": 80,
+     "profile": "daily-pipeline",
+     "score": 85,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "kept",
+   "term": "Nationwide ready-to-eat deli meat recall expands amid Listeria outbreak; first death reported"
+  },
   "nationwide ready to eat deli meat recall listeria contamination distinct from prior egg spinach recalls": {
    "drop_reason": null,
    "first_seen": "2026-11-11",
@@ -38175,6 +38286,25 @@
    ],
    "status": "pending",
    "term": "New study links late-night eating to liver strain and metabolic disruption"
+  },
+  "new study links moderate coffee consumption to lower parkinson s disease risk": {
+   "drop_reason": "too-thin",
+   "first_seen": "2026-11-12",
+   "idea": null,
+   "judged_on": "2026-11-12",
+   "last_seen": "2026-11-12",
+   "sightings": [
+    {
+     "date": "2026-11-12",
+     "opportunity": 65,
+     "profile": "daily-pipeline",
+     "score": 58,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "dropped",
+   "term": "New study links moderate coffee consumption to lower Parkinson's disease risk"
   },
   "new study links poor sleep quality to early dementia biomarkers": {
    "drop_reason": null,
@@ -39736,6 +39866,25 @@
    ],
    "status": "dropped",
    "term": "nvidia stock"
+  },
+  "ny measles outbreak reaches 4th case first in a vaccinated individual": {
+   "drop_reason": null,
+   "first_seen": "2026-11-12",
+   "idea": "2026-11-03-new-york-records-its-first-measles-death-in-30-yea",
+   "judged_on": "2026-11-12",
+   "last_seen": "2026-11-12",
+   "sightings": [
+    {
+     "date": "2026-11-12",
+     "opportunity": 68,
+     "profile": "daily-pipeline",
+     "score": 72,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "kept",
+   "term": "NY measles outbreak reaches 4th case — first in a vaccinated individual"
   },
   "ny measles outbreak second case confirmed in same cluster": {
    "drop_reason": null,
