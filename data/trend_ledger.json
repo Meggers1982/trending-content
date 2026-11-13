@@ -2052,6 +2052,34 @@
    ],
    "title": "Walking pneumonia is surging in school-age kids: how it differs from flu and RSV, and when to call the doctor",
    "why_now": "Surveillance reportedly shows a surge separate from the flu, RSV and norovirus items we've already run."
+  },
+  "2026-11-13-medicare-s-glp-1-coverage-change-meets-the-dec-7-o": {
+   "angle": "Service journalism with a clock. A policy headline doesn't mean your plan covers the drug. Walk Medicare enrollees through how to check formulary status, prior-authorization and step-therapy rules, and the eligibility criteria (obesity vs. diabetes vs. cardiovascular indication) for semaglutide and tirzepatide in their 2027 Part D options before open enrollment closes Dec 7.",
+   "beat": "aging, body and metabolism / insurance policy",
+   "confidence": "low",
+   "created": "2026-11-13",
+   "evidence": [
+    "https://www.cms.gov/",
+    "https://www.medicare.gov/"
+   ],
+   "history": [
+    {
+     "date": "2026-11-13",
+     "detail": "pitch",
+     "event": "routed"
+    }
+   ],
+   "is_it_real": "The deadline is solid: Medicare's annual enrollment period ends Dec 7. The size and terms of the 'coverage expansion' are not verified in the input. The only sources are the CMS and Medicare.gov homepages, and the upstream fact-check is marked unverifiable. Before pitching, the exact 2027 Part D GLP-1 eligibility and coverage rules have to be confirmed from a specific CMS document. If the expansion turns out narrower or later than framed, the story shifts to 'what Medicare does and doesn't cover yet,' which still works with the deadline. Separate from the ACA open-enrollment pitch (Nov 2) and the compounded and counterfeit GLP-1 items.",
+   "route": "pitch",
+   "seed_keyword": "",
+   "site": "",
+   "speed": "new",
+   "status": "routed",
+   "terms": [
+    "cms glp 1 part d coverage expansion enrollment deadline service angle"
+   ],
+   "title": "Medicare's GLP-1 coverage change meets the Dec 7 open-enrollment deadline: what people on Part D actually need to check before picking a 2027 plan",
+   "why_now": "Medicare open enrollment runs through Dec 7, a real action window. The coverage change is reportedly a new development since early-November coverage, and readers who miss the window are locked into a plan for 2027."
   }
  },
  "runs": [
@@ -2431,6 +2459,25 @@
    "notes": "Today was all newsroom follow-ups. Three of the six are escalations of stories already in the roundup (H5N5, deli meat Listeria, NY measles), so they attach rather than spawn new ideas. The Alzheimer's decision could be a strong aging-beat pitch, but the input names no drug and no outcome and cites a placeholder sponsor press release, so it is on watch until there's something concrete. Several sources today were generic home pages or example.com placeholders, so every figure needs checking at the primary source before anything is written.",
    "routes": {},
    "watching": 2
+  },
+  {
+   "collected": {
+    "newsroom": 16,
+    "radar": 0,
+    "rising": 0,
+    "wide": 0
+   },
+   "cost_usd": 0.092,
+   "date": "2026-11-13",
+   "dropped": 2,
+   "due": 3,
+   "ideas": 1,
+   "model": "claude-opus-5-5",
+   "notes": "A thin day: all three terms came from the newsroom pipeline, and two are fixed calendar observances (World Diabetes Day, Great American Smokeout) with no news peg beyond the date, so neither clears the bar. The Medicare GLP-1 item is the only one with a real clock. Its underlying policy claim is unverified (homepage-only sources), so it is kept as a low-confidence pitch that depends on confirming the CMS details first.",
+   "routes": {
+    "pitch": 1
+   },
+   "watching": 0
   }
  ],
  "terms": {
@@ -11530,6 +11577,25 @@
    ],
    "status": "dropped",
    "term": "CMS expands Medicare Part D coverage for GLP-1 obesity drugs (2027 plan year)"
+  },
+  "cms glp 1 part d coverage expansion enrollment deadline service angle": {
+   "drop_reason": null,
+   "first_seen": "2026-11-13",
+   "idea": "2026-11-13-medicare-s-glp-1-coverage-change-meets-the-dec-7-o",
+   "judged_on": "2026-11-13",
+   "last_seen": "2026-11-13",
+   "sightings": [
+    {
+     "date": "2026-11-13",
+     "opportunity": 60,
+     "profile": "daily-pipeline",
+     "score": 55,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "kept",
+   "term": "CMS GLP-1 Part D coverage expansion — enrollment deadline service angle"
   },
   "cnd solar oil nail and cuticle care": {
    "drop_reason": null,
@@ -22855,6 +22921,25 @@
    ],
    "status": "pending",
    "term": "granola recall"
+  },
+  "great american smokeout nov 19 smoking cessation evidence roundup": {
+   "drop_reason": "too-thin",
+   "first_seen": "2026-11-13",
+   "idea": null,
+   "judged_on": "2026-11-13",
+   "last_seen": "2026-11-13",
+   "sightings": [
+    {
+     "date": "2026-11-13",
+     "opportunity": 58,
+     "profile": "daily-pipeline",
+     "score": 50,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "dropped",
+   "term": "Great American Smokeout (Nov 19) — smoking cessation evidence roundup"
   },
   "green bay packers running back trade": {
    "drop_reason": "off-beat",
@@ -58719,6 +58804,25 @@
    ],
    "status": "kept",
    "term": "workplace wellness programs"
+  },
+  "world diabetes day nov 14 diabetes prevention management content": {
+   "drop_reason": "too-thin",
+   "first_seen": "2026-11-13",
+   "idea": null,
+   "judged_on": "2026-11-13",
+   "last_seen": "2026-11-13",
+   "sightings": [
+    {
+     "date": "2026-11-13",
+     "opportunity": 64,
+     "profile": "daily-pipeline",
+     "score": 58,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "dropped",
+   "term": "World Diabetes Day (Nov 14) — diabetes prevention/management content"
   },
   "world fertility day 2026": {
    "drop_reason": "too-thin",
