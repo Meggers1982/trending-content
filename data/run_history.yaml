@@ -3,6 +3,38 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-11-13'
+  niche: Health & Wellness
+  signals_reviewed: 11
+  topics_retained: 3
+  topics_rejected: 8
+  p1_count: 1
+  p2_count: 1
+  p3_count: 1
+  p4_count: 0
+  p5_count: 0
+  integrity_flags: 3
+  top_topic: World Diabetes Day (Nov 14) — diabetes prevention/management content
+  key_themes:
+  - World Diabetes Day (Nov 14) — diabetes prevention/management content
+  - CMS GLP-1 Part D coverage expansion — enrollment deadline service angle
+  - Great American Smokeout (Nov 19) — smoking cessation evidence roundup
+  tools_used:
+  - manual_estimated_signal_review
+  tools_unavailable:
+  - google_trends
+  - google_news_api
+  - exasearch
+  - reddit
+  - content_database
+  - serpapi
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-11-13.html
+  estimated_cost_usd: 0.426
+  notes: No live SerpAPI/Google Trends/Google News Radar data available this session — operating in fallback
+    mode with estimated search velocity. Nearly all major health stories from past 7 days already covered
+    without verified new developments. Retained list deliberately kept small (3 candidates) sourced from
+    fixed editorial calendar and Medicare enrollment deadline. All confidence scores capped at Medium
+    due to tooling gap. Recommend re-running with live Trends/News data before publishing.
 - run_date: '2026-11-12'
   niche: Health & Wellness
   signals_reviewed: 19
