@@ -1,0 +1,60 @@
+{
+ "date": "2026-11-14",
+ "ideas": [
+  {
+   "id": "2026-11-14-approved-isn-t-available-what-it-actually-takes-to",
+   "title": "Approved isn't available: what it actually takes to get the new anti-amyloid Alzheimer's drug, and who pays",
+   "created": "2026-11-14",
+   "route": "pitch",
+   "speed": "new",
+   "beat": "aging / FDA / insurance",
+   "angle": "Skip the approval headline and follow the patient. Cover eligibility testing (amyloid confirmation), monitoring requirements, infusion or dosing logistics, Medicare and private coverage, and real out-of-pocket cost. Be plain that accelerated approval rests on amyloid reduction, not proven clinical benefit.",
+   "why_now": "The radar reports an approval decision on Nov 12. The access and cost question follows immediately and overlaps with Medicare open enrollment, which runs to Dec 7.",
+   "is_it_real": "Thin. No source URL was provided, the drug is not named, and the fact-check is 'unverifiable'. The pitch team must first confirm the approval exists, the drug's name and its approval pathway. If it can't be confirmed, kill the pitch. The access-barrier frame is solid ground for prior anti-amyloid drugs, but nothing should be assumed to carry over.",
+   "confidence": "low",
+   "evidence": [],
+   "terms": [
+    "post approval access and cost questions for new anti amyloid alzheimer s drug"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-11-14",
+     "event": "routed",
+     "detail": "pitch"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "Post-approval access and cost questions for new anti-amyloid Alzheimer's drug",
+     "speed": "new",
+     "first_seen": "2026-11-14",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-11-14",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 60,
+       "opportunity": 68
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  }
+ ],
+ "dropped": 1,
+ "watching": 2,
+ "notes": "All six terms came from one newsroom pipeline, with no URLs and with fact-checks that were 'unverifiable' or worse. Several 'why now' lines say things are 'presumed' to have grown, so the day is mostly unconfirmed updates to stories already routed. The H5N5 human-to-human cluster is held as a watch: the source data itself flagged 'significant issues', and calling it a confirmed transmission update is unsupported. If CDC language changes, it should come back to me, attached to the Nov 8 H5N5 item. The flu vaccine effectiveness term is also a watch: US interim estimates usually arrive later in the season, so a mid-November report needs proof it exists. The 'five concurrent outbreaks' travel piece is a framing invented by the tool rather than a story, and it rehashes items already routed.",
+ "cost_usd": 0.1216
+}

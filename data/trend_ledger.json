@@ -1423,6 +1423,11 @@
      "date": "2026-11-12",
      "detail": "NY measles outbreak reaches 4th case — first in a vaccinated individual",
      "event": "new-signal"
+    },
+    {
+     "date": "2026-11-14",
+     "detail": "NY measles outbreak grows — case count and geographic spread update",
+     "event": "new-signal"
     }
    ],
    "is_it_real": "Plausible, but the upstream angle claims this is the first U.S. measles death in 30 years. That is wrong: the U.S. recorded measles deaths in 2025. The claim must be scoped to New York State, and the only source in the input is a NYT homepage link, so the specific report needs to be located before writing. Keep it to factual reporting, not vaccine-debate framing.",
@@ -1433,6 +1438,7 @@
    "status": "routed",
    "terms": [
     "measles death new york state s first fatal case in 30 years",
+    "ny measles outbreak grows case count and geographic spread update",
     "ny measles outbreak reaches 4th case first in a vaccinated individual",
     "ny measles outbreak second case confirmed in same cluster",
     "ny measles outbreak third case confirmed in second county expanded vaccination advisory issued"
@@ -1963,6 +1969,11 @@
      "date": "2026-11-12",
      "detail": "Nationwide ready-to-eat deli meat recall expands amid Listeria outbreak; first death reported",
      "event": "new-signal"
+    },
+    {
+     "date": "2026-11-14",
+     "detail": "Nationwide ready-to-eat deli meat recall — Listeria outbreak expands",
+     "event": "new-signal"
     }
    ],
    "is_it_real": "The input names no company, product or agency notice, and the fact check is unverifiable. The item only works once the FSIS or FDA recall notice is found. If it can't be confirmed, kill it.",
@@ -1973,7 +1984,8 @@
    "status": "routed",
    "terms": [
     "nationwide ready to eat deli meat recall expands amid listeria outbreak first death reported",
-    "nationwide ready to eat deli meat recall listeria contamination distinct from prior egg spinach recalls"
+    "nationwide ready to eat deli meat recall listeria contamination distinct from prior egg spinach recalls",
+    "nationwide ready to eat deli meat recall listeria outbreak expands"
    ],
    "title": "Another Listeria recall, this time deli meat, right before Thanksgiving: what to check and who's actually at risk",
    "why_now": "It's the third major recall in about a week, landing as people stock up for Thanksgiving."
@@ -2080,6 +2092,31 @@
    ],
    "title": "Medicare's GLP-1 coverage change meets the Dec 7 open-enrollment deadline: what people on Part D actually need to check before picking a 2027 plan",
    "why_now": "Medicare open enrollment runs through Dec 7, a real action window. The coverage change is reportedly a new development since early-November coverage, and readers who miss the window are locked into a plan for 2027."
+  },
+  "2026-11-14-approved-isn-t-available-what-it-actually-takes-to": {
+   "angle": "Skip the approval headline and follow the patient. Cover eligibility testing (amyloid confirmation), monitoring requirements, infusion or dosing logistics, Medicare and private coverage, and real out-of-pocket cost. Be plain that accelerated approval rests on amyloid reduction, not proven clinical benefit.",
+   "beat": "aging / FDA / insurance",
+   "confidence": "low",
+   "created": "2026-11-14",
+   "evidence": [],
+   "history": [
+    {
+     "date": "2026-11-14",
+     "detail": "pitch",
+     "event": "routed"
+    }
+   ],
+   "is_it_real": "Thin. No source URL was provided, the drug is not named, and the fact-check is 'unverifiable'. The pitch team must first confirm the approval exists, the drug's name and its approval pathway. If it can't be confirmed, kill the pitch. The access-barrier frame is solid ground for prior anti-amyloid drugs, but nothing should be assumed to carry over.",
+   "route": "pitch",
+   "seed_keyword": "",
+   "site": "",
+   "speed": "new",
+   "status": "routed",
+   "terms": [
+    "post approval access and cost questions for new anti amyloid alzheimer s drug"
+   ],
+   "title": "Approved isn't available: what it actually takes to get the new anti-amyloid Alzheimer's drug, and who pays",
+   "why_now": "The radar reports an approval decision on Nov 12. The access and cost question follows immediately and overlaps with Medicare open enrollment, which runs to Dec 7."
   }
  },
  "runs": [
@@ -2478,6 +2515,25 @@
     "pitch": 1
    },
    "watching": 0
+  },
+  {
+   "collected": {
+    "newsroom": 15,
+    "radar": 0,
+    "rising": 0,
+    "wide": 0
+   },
+   "cost_usd": 0.1216,
+   "date": "2026-11-14",
+   "dropped": 1,
+   "due": 6,
+   "ideas": 1,
+   "model": "claude-opus-5-5",
+   "notes": "All six terms came from one newsroom pipeline, with no URLs and with fact-checks that were 'unverifiable' or worse. Several 'why now' lines say things are 'presumed' to have grown, so the day is mostly unconfirmed updates to stories already routed. The H5N5 human-to-human cluster is held as a watch: the source data itself flagged 'significant issues', and calling it a confirmed transmission update is unsupported. If CDC language changes, it should come back to me, attached to the Nov 8 H5N5 item. The flu vaccine effectiveness term is also a watch: US interim estimates usually arrive later in the season, so a mid-November report needs proof it exists. The 'five concurrent outbreaks' travel piece is a framing invented by the tool rather than a story, and it rehashes items already routed.",
+   "routes": {
+    "pitch": 1
+   },
+   "watching": 2
   }
  ],
  "terms": {
@@ -9940,6 +9996,25 @@
    ],
    "status": "held",
    "term": "CDC flu surveillance shows early, high-severity season"
+  },
+  "cdc interim flu vaccine effectiveness data 2026 27 season": {
+   "drop_reason": "watch",
+   "first_seen": "2026-11-14",
+   "idea": null,
+   "judged_on": "2026-11-14",
+   "last_seen": "2026-11-14",
+   "sightings": [
+    {
+     "date": "2026-11-14",
+     "opportunity": 58,
+     "profile": "daily-pipeline",
+     "score": 52,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "held",
+   "term": "CDC interim flu vaccine effectiveness data, 2026–27 season"
   },
   "cdc investigates possible human to human h5n5 transmission in household cluster": {
    "drop_reason": null,
@@ -23637,6 +23712,25 @@
    "status": "kept",
    "term": "H5N5 avian influenza — second confirmed U.S. human case; CDC updates risk assessment"
   },
+  "h5n5 avian influenza suspected human to human transmission cluster": {
+   "drop_reason": "watch",
+   "first_seen": "2026-11-14",
+   "idea": null,
+   "judged_on": "2026-11-14",
+   "last_seen": "2026-11-14",
+   "sightings": [
+    {
+     "date": "2026-11-14",
+     "opportunity": 74,
+     "profile": "daily-pipeline",
+     "score": 82,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "held",
+   "term": "H5N5 avian influenza — suspected human-to-human transmission cluster"
+  },
   "h5n5 avian influenza third confirmed u s human case cdc maintains low public risk assessment": {
    "drop_reason": null,
    "first_seen": "2026-11-10",
@@ -26145,6 +26239,25 @@
    ],
    "status": "pending",
    "term": "holafly us states natural beauty"
+  },
+  "holiday travel health risks amid five concurrent outbreaks": {
+   "drop_reason": "too-thin",
+   "first_seen": "2026-11-14",
+   "idea": null,
+   "judged_on": "2026-11-14",
+   "last_seen": "2026-11-14",
+   "sightings": [
+    {
+     "date": "2026-11-14",
+     "opportunity": 66,
+     "profile": "daily-pipeline",
+     "score": 58,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "dropped",
+   "term": "Holiday travel health risks amid five concurrent outbreaks"
   },
   "holistic gut health doctor near me": {
    "drop_reason": null,
@@ -37530,6 +37643,25 @@
    "status": "kept",
    "term": "Nationwide ready-to-eat deli meat recall — Listeria contamination, distinct from prior egg/spinach recalls"
   },
+  "nationwide ready to eat deli meat recall listeria outbreak expands": {
+   "drop_reason": null,
+   "first_seen": "2026-11-14",
+   "idea": "2026-11-11-another-listeria-recall-this-time-deli-meat-right",
+   "judged_on": "2026-11-14",
+   "last_seen": "2026-11-14",
+   "sightings": [
+    {
+     "date": "2026-11-14",
+     "opportunity": 70,
+     "profile": "daily-pipeline",
+     "score": 78,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "kept",
+   "term": "Nationwide ready-to-eat deli meat recall — Listeria outbreak expands"
+  },
   "nationwide recall frozen spinach linked to listeria contamination": {
    "drop_reason": null,
    "first_seen": "2026-11-09",
@@ -39951,6 +40083,25 @@
    ],
    "status": "dropped",
    "term": "nvidia stock"
+  },
+  "ny measles outbreak grows case count and geographic spread update": {
+   "drop_reason": null,
+   "first_seen": "2026-11-14",
+   "idea": "2026-11-03-new-york-records-its-first-measles-death-in-30-yea",
+   "judged_on": "2026-11-14",
+   "last_seen": "2026-11-14",
+   "sightings": [
+    {
+     "date": "2026-11-14",
+     "opportunity": 64,
+     "profile": "daily-pipeline",
+     "score": 68,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "kept",
+   "term": "NY measles outbreak grows — case count and geographic spread update"
   },
   "ny measles outbreak reaches 4th case first in a vaccinated individual": {
    "drop_reason": null,
@@ -42749,6 +42900,25 @@
    ],
    "status": "dropped",
    "term": "posiciones de club américa contra deportivo toluca"
+  },
+  "post approval access and cost questions for new anti amyloid alzheimer s drug": {
+   "drop_reason": null,
+   "first_seen": "2026-11-14",
+   "idea": "2026-11-14-approved-isn-t-available-what-it-actually-takes-to",
+   "judged_on": "2026-11-14",
+   "last_seen": "2026-11-14",
+   "sightings": [
+    {
+     "date": "2026-11-14",
+     "opportunity": 68,
+     "profile": "daily-pipeline",
+     "score": 60,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "kept",
+   "term": "Post-approval access and cost questions for new anti-amyloid Alzheimer's drug"
   },
   "post pop depression": {
    "drop_reason": "off-beat",
