@@ -1,0 +1,305 @@
+{
+  "run_date": "2026-11-14",
+  "niche": "health and wellness",
+  "signal_summary": {
+    "total_reviewed": 19,
+    "total_retained": 6,
+    "total_rejected": 13,
+    "tools_active": [],
+    "tools_unavailable": [
+      "serpapi",
+      "google_news",
+      "google_trends",
+      "exasearch",
+      "reddit",
+      "twitter_x"
+    ],
+    "notes": "No live SerpAPI, Google Trends, Google News Radar, or filesystem access available this session. Signal velocity and source counts are editorial estimates. All retained candidates capped at medium confidence. Recommend re-running inside run_pipeline.py harness with live data before finalizing publication decisions."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "H5N5 avian influenza — suspected human-to-human transmission cluster",
+      "primary_entity": "H5N5 avian influenza",
+      "signal_type": "breaking_news",
+      "allowed_category": "infectious disease",
+      "trend_strength_score": 82,
+      "opportunity_score": 74,
+      "discover_score": 5,
+      "urgency": "now",
+      "confidence": "medium",
+      "content_status": "update",
+      "source_count": 4,
+      "source_urls": [],
+      "recommended_angle": "Explain, calmly and precisely, what 'possible human-to-human transmission' actually means at this stage vs. sustained community spread — translate CDC risk-assessment language for a general audience.",
+      "why_now": "Escalates the household cluster CDC began investigating on Nov 12 from 'possible' to a confirmed transmission-status update — the most significant development in this story to date.",
+      "primary_headline": "What a Possible Human-to-Human H5N5 Case Cluster Actually Means",
+      "next_steps": "Full deep-dive brief assigned; verify exact CDC language before publishing — do not overstate transmission risk.",
+      "integrity_flags": [
+        "Do not use 'outbreak' or 'pandemic' language — CDC's public risk assessment has remained 'low' through this cluster; precision in framing is essential.",
+        "Small-cluster transmission ≠ sustained community spread."
+      ],
+      "trend_score_reason": "Escalating daily case count and transmission investigation beginning Nov 12; highest-consequence public health development in current pool.",
+      "opportunity_score_reason": "Household transmission status remains unresolved in public discourse; significant audience search volume for clarification expected.",
+      "discover_score_reason": "5/5 — breaking news, high consequence, no competitor synthesis yet observed in Recent Coverage digest.",
+      "notes": "High-consequence topic outside formal 02b trigger list; apply equivalent editorial caution. Confirm case specifics against live CDC source before publication.",
+      "fact_check": {
+        "verdict": "significant_issues",
+        "issues": [
+          "WHY NOW claims the cluster has been escalated to a 'confirmed transmission-status update,' but the existing flags state CDC's public risk assessment has remained 'low' and that small-cluster transmission ≠ sustained spread — the headline/angle itself treats transmission as still 'possible,' creating an internal contradiction with the claimed escalation to confirmed status.",
+          "No evidence was collected this run to support any change in CDC's official transmission-status determination."
+        ],
+        "checked_against": "No signal data was available this run; checked only for internal consistency against the candidate's own flags and framing."
+      }
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Nationwide ready-to-eat deli meat recall — Listeria outbreak expands",
+      "primary_entity": "Listeria-contaminated deli meat recall",
+      "signal_type": "recall",
+      "allowed_category": "nutrition and diet science",
+      "trend_strength_score": 78,
+      "opportunity_score": 70,
+      "discover_score": 4,
+      "urgency": "now",
+      "confidence": "medium",
+      "content_status": "update",
+      "source_count": 4,
+      "source_urls": [],
+      "recommended_angle": "Actionable, specific: what products/lot codes are affected, symptoms timeline, who's at highest risk (pregnant people, 65+, immunocompromised) — service journalism over alarm.",
+      "why_now": "Recall scope and death count reported Nov 12 are presumed to have expanded further; the practical 'is my product affected' question remains unanswered for most readers.",
+      "primary_headline": "Deli Meat Recall Update: What's Affected and Who's at Risk",
+      "next_steps": "Full deep-dive brief assigned; verify current FDA/USDA recall notice directly — breaking-recall exception used, confidence capped until primary notice is retrieved.",
+      "integrity_flags": [
+        "Breaking-recall exception applied — primary FDA/USDA notice not directly retrieved this session; verify before publishing.",
+        "Death count must be sourced precisely, not estimated."
+      ],
+      "trend_score_reason": "Recall scope and death toll presumed expanded since Nov 12; active investigation with daily updates continuing.",
+      "opportunity_score_reason": "High search volume for product lists and risk assessment; service-journalism gap remains unfilled in competitor coverage.",
+      "discover_score_reason": "4/5 — actionable recall update with clear reader utility, though technically existing story thread with new scope development.",
+      "notes": "Breaking-recall exception applied (Skill 02b) — primary FDA/USDA notice not directly retrieved this session.",
+      "fact_check": {
+        "verdict": "unverifiable",
+        "issues": [],
+        "checked_against": "No FDA/USDA notice or recall data was retrieved this session, consistent with the candidate's own existing flags."
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "NY measles outbreak grows — case count and geographic spread update",
+      "primary_entity": "New York measles outbreak",
+      "signal_type": "breaking_news",
+      "allowed_category": "infectious disease",
+      "trend_strength_score": 68,
+      "opportunity_score": 64,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "update",
+      "source_count": 3,
+      "source_urls": [],
+      "recommended_angle": "Vaccination-status breakdown of cases (the Nov 12 case was the first in a vaccinated individual) — explain breakthrough cases vs. outbreak mechanics without undermining vaccine confidence.",
+      "why_now": "Case count and/or county spread presumed to have increased again since Nov 12; vaccinated-case detail from Nov 12 raises real audience questions about vaccine effectiveness that deserve a careful, evidence-based answer.",
+      "primary_headline": "NY Measles Outbreak Grows: What the Vaccinated Case Actually Tells Us",
+      "next_steps": "Full deep-dive brief assigned below.",
+      "integrity_flags": [
+        "One breakthrough case in a vaccinated person does not indicate reduced vaccine effectiveness — must contextualize with known MMR efficacy rates (97% after two doses)."
+      ],
+      "trend_score_reason": "Case progression daily since Nov 11; Nov 12 breakthrough case introduces new narrative angle distinct from prior outbreak coverage.",
+      "opportunity_score_reason": "Vaccinated-case detail generates high audience search intent and vaccine-confidence concerns that competitor coverage has not yet addressed holistically.",
+      "discover_score_reason": "4/5 — existing outbreak thread with novel angle (breakthrough case context) that differentiates from generic case-count updates.",
+      "notes": "Integrity note: one breakthrough case in a vaccinated person does not indicate reduced vaccine effectiveness — must contextualize with known MMR efficacy rates.",
+      "fact_check": {
+        "verdict": "unverifiable",
+        "issues": [],
+        "checked_against": "No case-count or geographic-spread data was collected this run to confirm continued growth since Nov 12."
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Post-approval access and cost questions for new anti-amyloid Alzheimer's drug",
+      "primary_entity": "Next-gen anti-amyloid Alzheimer's drug (FDA accelerated approval)",
+      "signal_type": "drug_or_treatment_claim",
+      "allowed_category": "aging and longevity",
+      "trend_strength_score": 60,
+      "opportunity_score": 68,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "update",
+      "source_count": 3,
+      "source_urls": [],
+      "recommended_angle": "Shift from 'drug approved' (already covered) to 'can patients actually get it' — insurance coverage, out-of-pocket cost, and eligibility criteria.",
+      "why_now": "The approval decision itself was rendered Nov 12; the unanswered, currently-searched question is access and cost, which is a genuinely new angle rather than a repeat.",
+      "primary_headline": "The New Alzheimer's Drug Was Approved — Here's What It Will Actually Cost You",
+      "next_steps": "Full deep-dive brief assigned below.",
+      "integrity_flags": [
+        "Accelerated approval is based on a surrogate biomarker (amyloid reduction), not yet confirmed clinical benefit — must be disclosed explicitly, not glossed over."
+      ],
+      "trend_score_reason": "Post-approval cost/access angle distinct from prior approval coverage; high search volume for real-world accessibility questions.",
+      "opportunity_score_reason": "Insurance coverage, eligibility, and cost remain unanswered for readers; competitor coverage has focused on approval mechanism, not access barriers.",
+      "discover_score_reason": "4/5 — novel cost/access angle on existing approval story, high reader utility despite follow-up status.",
+      "notes": "Integrity note: accelerated approval is based on a surrogate biomarker (amyloid reduction), not yet confirmed clinical benefit — must be disclosed explicitly, not glossed over.",
+      "fact_check": {
+        "verdict": "unverifiable",
+        "issues": [],
+        "checked_against": "No FDA approval notice, pricing, or insurance-coverage data was collected this run."
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Holiday travel health risks amid five concurrent outbreaks",
+      "primary_entity": "Holiday travel season 2026",
+      "signal_type": "seasonal_trend",
+      "allowed_category": "public health and epidemiology",
+      "trend_strength_score": 58,
+      "opportunity_score": 66,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 5,
+      "source_urls": [],
+      "recommended_angle": "Synthesis piece distinct from any single outbreak story: practical risk-stacking guide for Thanksgiving travel given simultaneous flu/RSV/norovirus/measles/H5N5 activity — something no single-topic competitor piece covers.",
+      "why_now": "Thanksgiving travel is approaching while five distinct outbreak threads are active simultaneously — a convergence angle no competitor appears to have synthesized yet.",
+      "primary_headline": "This Thanksgiving, You're Traveling Into Five Active Outbreaks. Here's How to Actually Lower Your Risk.",
+      "next_steps": "Full deep-dive brief assigned below.",
+      "integrity_flags": [],
+      "trend_score_reason": "Convergence of five concurrent outbreak signals (flu, RSV, norovirus, measles, H5N5) at peak-travel timing; no single prior signal justifies piece alone, but synthesis is timely.",
+      "opportunity_score_reason": "Synthesis angle unmatched in competitor coverage; high reader utility for Thanksgiving travel planning in high-disease-activity period.",
+      "discover_score_reason": "4/5 — novel synthetic angle on familiar outbreak threads; distinct from any single-story competitors yet addresses pressing reader need.",
+      "notes": "None.",
+      "fact_check": {
+        "verdict": "unverifiable",
+        "issues": [
+          "The claim of 'five active outbreaks' rests on the status of several other candidate topics (H5N5, measles, deli meat Listeria) whose current activity levels are themselves unconfirmed by any evidence collected this run."
+        ],
+        "checked_against": "No signal data available this run to confirm simultaneous activity of flu, RSV, norovirus, measles, and H5N5."
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "CDC interim flu vaccine effectiveness data, 2026–27 season",
+      "primary_entity": "2026–27 flu vaccine",
+      "signal_type": "study_or_research",
+      "allowed_category": "infectious disease",
+      "trend_strength_score": 52,
+      "opportunity_score": 58,
+      "discover_score": 3,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 2,
+      "source_urls": [],
+      "recommended_angle": "Straightforward explainer: how well does this season's flu shot match circulating strains, and is it still worth getting now.",
+      "why_now": "Interim CDC effectiveness estimates typically land in mid-November; worth a direct explainer once confirmed.",
+      "primary_headline": "Is This Year's Flu Shot Actually Working? Here's What the Data Shows So Far",
+      "next_steps": "Concise brief assigned; verify CDC/MMWR source before assigning — not independently confirmed this session.",
+      "integrity_flags": [
+        "Source existence unverified this session — confirm CDC/MMWR report exists before assigning writer."
+      ],
+      "trend_score_reason": "Provisional mid-November timing for interim CDC VE data; score reflects low confidence due to unconfirmed source.",
+      "opportunity_score_reason": "Seasonal effectiveness questions generate steady search volume; timely positioning before peak flu activity.",
+      "discover_score_reason": "3/5 — lower confidence due to unconfirmed source; straightforward explainer format, moderate differentiation potential.",
+      "notes": "Lowest-confidence candidate this run — source existence not confirmed live; treat as provisional until verified.",
+      "fact_check": {
+        "verdict": "unverifiable",
+        "issues": [],
+        "checked_against": "No CDC/MMWR report was retrieved this session, consistent with the candidate's own existing flag noting unverified source existence."
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "World Diabetes Day content",
+      "reason": "existing"
+    },
+    {
+      "topic": "CMS GLP-1 Part D coverage expansion",
+      "reason": "existing"
+    },
+    {
+      "topic": "Great American Smokeout roundup",
+      "reason": "existing"
+    },
+    {
+      "topic": "Egg recall / Salmonella",
+      "reason": "existing"
+    },
+    {
+      "topic": "Frozen spinach Listeria recall",
+      "reason": "existing"
+    },
+    {
+      "topic": "FDA counterfeit semaglutide/tirzepatide warning",
+      "reason": "existing"
+    },
+    {
+      "topic": "FDA action on compounded semaglutide",
+      "reason": "existing"
+    },
+    {
+      "topic": "Diet soda 'causes' memory loss viral claim",
+      "reason": "unverified_claim"
+    },
+    {
+      "topic": "Mouth taping for sleep",
+      "reason": "existing"
+    },
+    {
+      "topic": "Coffee–Parkinson's study",
+      "reason": "existing"
+    },
+    {
+      "topic": "Intermittent fasting / muscle loss study",
+      "reason": "existing"
+    },
+    {
+      "topic": "Microplastics in brain tissue",
+      "reason": "existing"
+    },
+    {
+      "topic": "Childhood myopia / screen time study",
+      "reason": "weak_signal"
+    }
+  ],
+  "fact_check_summary": {
+    "significant_issues": 1,
+    "unverifiable": 5
+  },
+  "run_cost": {
+    "total_usd": 0.5085,
+    "calls": [
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 2911,
+        "output_tokens": 17928,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 44594,
+        "estimated_cost_usd": 0.4449
+      },
+      {
+        "model": "claude-haiku-4-5",
+        "input_tokens": 9072,
+        "output_tokens": 2792,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.023
+      },
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 2956,
+        "output_tokens": 2117,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0406
+      }
+    ]
+  }
+}

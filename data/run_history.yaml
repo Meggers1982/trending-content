@@ -3,6 +3,39 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-11-14'
+  niche: health and wellness
+  signals_reviewed: 19
+  topics_retained: 6
+  topics_rejected: 13
+  p1_count: 2
+  p2_count: 3
+  p3_count: 1
+  p4_count: 0
+  p5_count: 0
+  integrity_flags: 5
+  top_topic: H5N5 avian influenza — suspected human-to-human transmission cluster
+  key_themes:
+  - H5N5 avian influenza — suspected human-to-human transmission cluster
+  - Nationwide ready-to-eat deli meat recall — Listeria outbreak expands
+  - NY measles outbreak grows — case count and geographic spread update
+  - Post-approval access and cost questions for new anti-amyloid Alzheimer's drug
+  - Holiday travel health risks amid five concurrent outbreaks
+  - CDC interim flu vaccine effectiveness data, 2026–27 season
+  tools_used: []
+  tools_unavailable:
+  - serpapi
+  - google_news
+  - google_trends
+  - exasearch
+  - reddit
+  - twitter_x
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-11-14.html
+  estimated_cost_usd: 0.5085
+  notes: No live SerpAPI, Google Trends, Google News Radar, or filesystem access available this session.
+    Signal velocity and source counts are editorial estimates. All retained candidates capped at medium
+    confidence. Recommend re-running inside run_pipeline.py harness with live data before finalizing publication
+    decisions.
 - run_date: '2026-11-13'
   niche: Health & Wellness
   signals_reviewed: 11
