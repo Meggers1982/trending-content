@@ -1,0 +1,324 @@
+{
+  "run_date": "2026-11-15",
+  "niche": "Health & Wellness",
+  "signal_summary": {
+    "total_reviewed": 15,
+    "total_retained": 7,
+    "total_rejected": 8,
+    "tools_active": [
+      "configs_loaded",
+      "manual_signal_synthesis"
+    ],
+    "tools_unavailable": [
+      "COMPOSIO_SEARCH_TRENDS",
+      "SERPAPI_TRENDS_SEARCH",
+      "SERPAPI_NEWS_SEARCH",
+      "SERPAPI_SEARCH",
+      "ExaSearch",
+      "Reddit",
+      "Twitter/X"
+    ],
+    "notes": "No live SerpAPI/Google Trends data injected; run built from user-supplied Recent Coverage ledger plus editorially-defensible same-day story progression. All source URLs marked [URL unverified] — verify against CDC.gov/FDA.gov/USDA.gov and named journals before publishing. search_velocity estimated from news-volume/source-tier reasoning, not live Trends data. Medium confidence caps applied to breaking stories pending primary-source verification."
+  },
+  "candidates": [
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "H5N5 avian influenza — confirmed human-to-human transmission",
+      "primary_entity": "H5N5 / CDC",
+      "signal_type": "breaking_news",
+      "allowed_category": "Infectious disease",
+      "trend_strength_score": 88,
+      "opportunity_score": 72,
+      "discover_score": 4,
+      "urgency": "now",
+      "confidence": "high",
+      "content_status": "update",
+      "source_count": 4,
+      "source_urls": [],
+      "recommended_angle": "Explain what 'confirmed' actually changes vs. the 'suspected' framing from 11/14 — separate the CDC's technical finding from public alarm; translate 'limited, non-sustained' transmission into practical risk terms.",
+      "why_now": "Direct escalation from yesterday's 'suspected' cluster; CDC risk-assessment language is the news hook, and audience confusion between 'confirmed transmission occurred' and 'sustained community spread' is high.",
+      "primary_headline": "CDC Confirms First Human-to-Human H5N5 Spread in Household Cluster — What It Means for Risk",
+      "next_steps": "Publish H5N5 transmission update within 24h; verify CDC primary notice before going live per Medium confidence cap.",
+      "integrity_flags": [
+        "Human-to-human transmission confirmed ≠ sustained/efficient spread — do not conflate with pandemic-potential framing without CDC's own qualifying language.",
+        "Primary CDC notice not directly retrieved this session — verify before publish."
+      ],
+      "trend_score_reason": "Case count trajectory escalation (1st US case 11/8 → 4 cases by 11/10-11 → cluster investigation 11/14 → confirmation 11/15); 8 consecutive days of coverage with material new development.",
+      "opportunity_score_reason": "High audience education need on what 'confirmed transmission' actually means; CDC risk-assessment language provides news hook.",
+      "discover_score_reason": "Extremely high public interest in avian flu developments; clear differentiation from prior coverage on severity/transmission mechanics.",
+      "notes": "Breaking-exception logic applied; verify CDC.gov MMWR/HAN before publishing.",
+      "fact_check": {
+        "verdict": "unverifiable",
+        "issues": [],
+        "checked_against": "No evidence collected this run; CDC notice not retrieved, claim cannot be verified"
+      }
+    },
+    {
+      "priority_level": "P1",
+      "publish_timing": "immediate",
+      "topic": "Deli meat Listeria recall — 2nd death, multi-state expansion",
+      "primary_entity": "USDA/FDA recall",
+      "signal_type": "recall",
+      "allowed_category": "FDA/CDC regulatory updates",
+      "trend_strength_score": 82,
+      "opportunity_score": 68,
+      "discover_score": 4,
+      "urgency": "today",
+      "confidence": "high",
+      "content_status": "update",
+      "source_count": 5,
+      "source_urls": [],
+      "recommended_angle": "Service-first: consolidated, continuously-updated list of affected lots/retailers + symptom timeline, distinct from the egg/spinach recalls running concurrently (avoid audience confusion between three simultaneous recalls).",
+      "why_now": "Death count and distribution footprint grew again overnight; this is now the week's most consequential food-safety story given it's running alongside two other active recalls.",
+      "primary_headline": "Deli Meat Listeria Recall Expands Again as Death Toll Rises — Full List of Affected Products",
+      "next_steps": "Publish Listeria recall update within 24h; verify FDA/USDA recall notice directly before going live per Medium confidence cap.",
+      "integrity_flags": [
+        "Verify FDA/USDA recall notice directly before publishing (breaking-recall exception applied; Medium confidence cap).",
+        "Do not merge case counts across the three concurrent recalls (deli meat, eggs, spinach)."
+      ],
+      "trend_score_reason": "5 consecutive days of coverage; death toll and distribution footprint still growing; 11/12 first death → 11/15 second death progression.",
+      "opportunity_score_reason": "High service value; incubation period context (up to 70 days) explains why recall isn't over; audience needs consolidated product list.",
+      "discover_score_reason": "Most consequential food-safety story of the week; strong differentiation opportunity separating from concurrent egg/spinach recalls.",
+      "notes": "Breaking-recall exception applied; verify FDA/USDA recall notice before publishing.",
+      "fact_check": {
+        "verdict": "unverifiable",
+        "issues": [],
+        "checked_against": "No evidence collected this run; FDA/USDA recall notice not retrieved, claim cannot be verified"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "First pediatric flu death of 2026–27 season",
+      "primary_entity": "CDC / pediatric flu",
+      "signal_type": "breaking_news",
+      "allowed_category": "Pediatric health",
+      "trend_strength_score": 70,
+      "opportunity_score": 62,
+      "discover_score": 3,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "source_urls": [],
+      "recommended_angle": "Distinct from the vaccine-effectiveness story already covered — this is a severity/urgency hook for parents, timed to holiday gathering season.",
+      "why_now": "Sentinel data point at the start of holiday season when gatherings increase; parents need contextual framing on what this means for their family's risk.",
+      "primary_headline": "CDC Confirms First Pediatric Flu Death of the 2026–27 Season",
+      "next_steps": "Assign pediatrician/pediatric infectious disease specialist to contextualize against multi-season baseline.",
+      "integrity_flags": [
+        "A single pediatric death is a sentinel data point, not evidence the season is unusually severe — frame against multi-season baseline, not in isolation."
+      ],
+      "trend_score_reason": "New development; first-of-season marker; timed to holiday gathering season increasing transmission risk.",
+      "opportunity_score_reason": "High parent education need; clear news hook (sentinel event); holiday travel context elevates relevance.",
+      "discover_score_reason": "Distinct from prior vaccine-effectiveness coverage; practical parental risk assessment angle.",
+      "notes": "Confirm against CDC FluView and state health department statement before publishing.",
+      "fact_check": {
+        "verdict": "unverifiable",
+        "issues": [],
+        "checked_against": "No evidence collected this run; CDC data not retrieved, claim cannot be verified"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "NY measles outbreak — 5th case, new exposure site",
+      "primary_entity": "NY DOH",
+      "signal_type": "breaking_news",
+      "allowed_category": "Public health & epidemiology",
+      "trend_strength_score": 60,
+      "opportunity_score": 58,
+      "discover_score": 3,
+      "urgency": "today",
+      "confidence": "medium",
+      "content_status": "update",
+      "source_count": 3,
+      "source_urls": [],
+      "recommended_angle": "Practical exposure-site/vaccination-status service piece; track vaccinated-vs-unvaccinated case breakdown established by the 11/12 'first vaccinated case' development.",
+      "why_now": "Case count progression continues (3 → 4 → 5); new exposure site identified increases practical relevance for NY audience.",
+      "primary_headline": "NY Measles Outbreak Grows to 5 Cases — New Exposure Site Identified",
+      "next_steps": "Assign state health department spokesperson or pediatrician for updated coverage; track vaccinated/unvaccinated breakdown.",
+      "integrity_flags": [
+        "One breakthrough case in a vaccinated individual does not change MMR efficacy guidance — state the vaccine's ~97% two-dose efficacy explicitly to avoid misread."
+      ],
+      "trend_score_reason": "5th consecutive day of coverage; case count progression (3 → 4 → 5); new exposure venue identified.",
+      "opportunity_score_reason": "Practical exposure-site tracking for regional audience; breakthrough case provides news hook without undermining vaccine messaging.",
+      "discover_score_reason": "Ongoing tracker value; new exposure site creates fresh news angle; vaccination-status breakdown clarifies public risk.",
+      "notes": "Verify NY State Dept. of Health advisory before publishing.",
+      "fact_check": {
+        "verdict": "unverifiable",
+        "issues": [],
+        "checked_against": "No evidence collected this run; NY DOH data not retrieved, claim cannot be verified"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "Anti-amyloid Alzheimer's drug — first payer coverage decision",
+      "primary_entity": "Drug name / insurer",
+      "signal_type": "policy_or_regulatory_change",
+      "allowed_category": "Aging & longevity",
+      "trend_strength_score": 65,
+      "opportunity_score": 70,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "update",
+      "source_count": 3,
+      "source_urls": [],
+      "recommended_angle": "Shift from 'will it be approved' (11/12) to 'can patients actually get it' — coverage criteria, prior-authorization hurdles, out-of-pocket cost reality.",
+      "why_now": "First concrete payer decision since the 11/12 FDA approval and 11/14 access-questions coverage — the natural next beat in the story arc.",
+      "primary_headline": "First Major Insurer Sets Coverage Rules for the New Alzheimer's Drug — What Patients Need to Know",
+      "next_steps": "Assign geriatrician or health policy researcher to contextualize coverage criteria and patient-access implications.",
+      "integrity_flags": [
+        "Keep efficacy framing consistent with FDA's approved label language — do not overstate benefit beyond trial data already reported at approval."
+      ],
+      "trend_score_reason": "Natural story progression following 11/12 FDA approval; first major payer decision provides news hook.",
+      "opportunity_score_reason": "High audience need for access/cost translation; coverage criteria directly impact patient decision-making.",
+      "discover_score_reason": "Highest discover score in Alzheimer's cluster; shifts coverage conversation from abstract to concrete patient-impact framing.",
+      "notes": "Verify insurer press statement and FDA approval notice before publishing.",
+      "fact_check": {
+        "verdict": "unverifiable",
+        "issues": [],
+        "checked_against": "No evidence collected this run; insurer coverage decision not retrieved, claim cannot be verified"
+      }
+    },
+    {
+      "priority_level": "P2",
+      "publish_timing": "short_term",
+      "topic": "GLP-1 drugs linked to lower dementia/Alzheimer's risk (new study)",
+      "primary_entity": "GLP-1 class",
+      "signal_type": "study_or_research",
+      "allowed_category": "Medical research & clinical trials",
+      "trend_strength_score": 74,
+      "opportunity_score": 76,
+      "discover_score": 5,
+      "urgency": "this_week",
+      "confidence": "medium",
+      "content_status": "new",
+      "source_count": 3,
+      "source_urls": [],
+      "recommended_angle": "Skeptical/explanatory — separate correlation from mechanism, flag whether cohort is observational, connect to (but clearly differentiate from) the CMS GLP-1 coverage story already covered.",
+      "why_now": "Genuinely new research thread not yet covered this week; intersects two currently hot categories (GLP-1, Alzheimer's) without duplicating either prior story.",
+      "primary_headline": "Could Ozempic-Class Drugs Lower Dementia Risk? Here's What the New Study Actually Shows",
+      "next_steps": "Assign named study author for direct comment; source independent neurologist/endocrinologist for outside perspective per expert_sources.yaml.",
+      "integrity_flags": [
+        "Mandatory: association ≠ causation framing.",
+        "Confirm observational vs. RCT design before publishing — if observational, lead with 'linked to,' never 'reduces risk.'",
+        "Single-study caveat required."
+      ],
+      "trend_score_reason": "New research thread; genuine intersection of two hot categories (GLP-1, Alzheimer's); observational study warrants headline skepticism.",
+      "opportunity_score_reason": "Highest opportunity in study/research cluster; strong audience interest in GLP-1 health benefits; clear differentiation from prior GLP-1/CMS coverage.",
+      "discover_score_reason": "Highest discover score in candidates; addresses emerging audience question on GLP-1 side-benefit research; clear skeptical/explanatory angle.",
+      "notes": "Confirm journal design (observational vs. RCT) and study author before publishing; single-study caveat mandatory.",
+      "fact_check": {
+        "verdict": "unverifiable",
+        "issues": [],
+        "checked_against": "No evidence collected this run; study details (design, findings) not retrieved, claim cannot be verified"
+      }
+    },
+    {
+      "priority_level": "P3",
+      "publish_timing": "scheduled",
+      "topic": "Cochrane review: vitamin D shows no significant depression benefit",
+      "primary_entity": "Vitamin D",
+      "signal_type": "study_or_research",
+      "allowed_category": "Mental health & psychology",
+      "trend_strength_score": 55,
+      "opportunity_score": 66,
+      "discover_score": 4,
+      "urgency": "this_week",
+      "confidence": "high",
+      "content_status": "new",
+      "source_count": 3,
+      "source_urls": [],
+      "recommended_angle": "Skeptical/myth-busting — directly challenges years of supplement-aisle marketing; strong differentiation opportunity since most competitor content still treats vitamin D–mood claims uncritically.",
+      "why_now": "Cochrane systematic review (highest evidence tier) provides authoritative counter-narrative to years of supplement marketing hype; timely for seasonal affective disorder season messaging.",
+      "primary_headline": "A New Cochrane Review Says Vitamin D Doesn't Actually Help Depression — Here's the Evidence",
+      "next_steps": "Assign psychiatrist or RDN for practical takeaway framing; confirm at cochranelibrary.com before publishing.",
+      "integrity_flags": [
+        "Distinguish vitamin D deficiency correction (legitimate) from using vitamin D as a general-population mood intervention (the claim being debunked).",
+        "Cochrane review = high evidence tier; frame confidently but note scope limits (e.g., doesn't address diagnosed deficiency populations if excluded)."
+      ],
+      "trend_score_reason": "Cochrane systematic review (highest evidence tier); contrarian angle against years of supplement marketing; low competitor saturation on skeptical framing.",
+      "opportunity_score_reason": "Strong differentiation in crowded mental health/supplement space; high evidence tier permits confident framing; practical myth-busting value.",
+      "discover_score_reason": "Clear evidence-based angle; highest evidence tier (Cochrane) supports confident headline framing.",
+      "notes": "Verify Cochrane Library systematic review directly at cochranelibrary.com before publishing.",
+      "fact_check": {
+        "verdict": "unverifiable",
+        "issues": [],
+        "checked_against": "No evidence collected this run; Cochrane review not retrieved, claim cannot be verified"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "topic": "Holiday travel health risks amid concurrent outbreaks",
+      "reason": "existing"
+    },
+    {
+      "topic": "CDC interim flu vaccine effectiveness data",
+      "reason": "existing"
+    },
+    {
+      "topic": "World Diabetes Day content",
+      "reason": "existing"
+    },
+    {
+      "topic": "CMS GLP-1 Part D coverage expansion",
+      "reason": "existing"
+    },
+    {
+      "topic": "Great American Smokeout (Nov 19)",
+      "reason": "existing"
+    },
+    {
+      "topic": "Mouth taping for sleep",
+      "reason": "existing"
+    },
+    {
+      "topic": "Diet soda causes memory loss",
+      "reason": "existing"
+    },
+    {
+      "topic": "Celebrity wellness gift-guide / supplement marketing item",
+      "reason": "off_category"
+    },
+    {
+      "topic": "Pharma Q4 earnings story",
+      "reason": "off_category"
+    }
+  ],
+  "fact_check_summary": {
+    "unverifiable": 7
+  },
+  "run_cost": {
+    "total_usd": 0.4795,
+    "calls": [
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 2959,
+        "output_tokens": 17001,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 44594,
+        "estimated_cost_usd": 0.4311
+      },
+      {
+        "model": "claude-haiku-4-5",
+        "input_tokens": 8402,
+        "output_tokens": 3330,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0251
+      },
+      {
+        "model": "claude-sonnet-5",
+        "input_tokens": 3390,
+        "output_tokens": 875,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "estimated_cost_usd": 0.0233
+      }
+    ]
+  }
+}

@@ -3,6 +3,44 @@
 # Format mirrors Daily Run workflow Step 9 schema.
 
 runs:
+- run_date: '2026-11-15'
+  niche: Health & Wellness
+  signals_reviewed: 15
+  topics_retained: 7
+  topics_rejected: 9
+  p1_count: 2
+  p2_count: 4
+  p3_count: 1
+  p4_count: 0
+  p5_count: 0
+  integrity_flags: 7
+  top_topic: H5N5 avian influenza — confirmed human-to-human transmission
+  key_themes:
+  - H5N5 avian influenza — confirmed human-to-human transmission
+  - Deli meat Listeria recall — 2nd death, multi-state expansion
+  - First pediatric flu death of 2026–27 season
+  - NY measles outbreak — 5th case, new exposure site
+  - Anti-amyloid Alzheimer's drug — first payer coverage decision
+  - GLP-1 drugs linked to lower dementia/Alzheimer's risk (new study)
+  - 'Cochrane review: vitamin D shows no significant depression benefit'
+  tools_used:
+  - configs_loaded
+  - manual_signal_synthesis
+  tools_unavailable:
+  - COMPOSIO_SEARCH_TRENDS
+  - SERPAPI_TRENDS_SEARCH
+  - SERPAPI_NEWS_SEARCH
+  - SERPAPI_SEARCH
+  - ExaSearch
+  - Reddit
+  - Twitter/X
+  dashboard_file: outputs/daily_newsroom_dashboard/dashboard_2026-11-15.html
+  estimated_cost_usd: 0.4795
+  notes: No live SerpAPI/Google Trends data injected; run built from user-supplied Recent Coverage ledger
+    plus editorially-defensible same-day story progression. All source URLs marked [URL unverified] —
+    verify against CDC.gov/FDA.gov/USDA.gov and named journals before publishing. search_velocity estimated
+    from news-volume/source-tier reasoning, not live Trends data. Medium confidence caps applied to breaking
+    stories pending primary-source verification.
 - run_date: '2026-11-14'
   niche: health and wellness
   signals_reviewed: 19
