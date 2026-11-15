@@ -1760,6 +1760,11 @@
      "date": "2026-11-12",
      "detail": "CDC investigates possible human-to-human H5N5 transmission in household cluster",
      "event": "new-signal"
+    },
+    {
+     "date": "2026-11-15",
+     "detail": "H5N5 avian influenza — confirmed human-to-human transmission",
+     "event": "new-signal"
     }
    ],
    "is_it_real": "Thin as given. It comes from one newsroom feed with no source URLs, and the fact-check is marked unverifiable. The 'first' claim needs checking: a Washington state human H5N5 case was reported in late 2025, so this may be old news resurfacing or a second case mislabeled 'first.' Confirm against a CDC or state health department notice before writing, and do not imply sustained transmission.",
@@ -1770,6 +1775,7 @@
    "status": "routed",
    "terms": [
     "cdc investigates possible human to human h5n5 transmission in household cluster",
+    "h5n5 avian influenza confirmed human to human transmission",
     "h5n5 avian influenza first confirmed us human case",
     "h5n5 avian influenza fourth suspected u s case under investigation cdc issues updated occupational guidance",
     "h5n5 avian influenza second confirmed u s human case cdc updates risk assessment",
@@ -1974,6 +1980,11 @@
      "date": "2026-11-14",
      "detail": "Nationwide ready-to-eat deli meat recall — Listeria outbreak expands",
      "event": "new-signal"
+    },
+    {
+     "date": "2026-11-15",
+     "detail": "Deli meat Listeria recall — 2nd death, multi-state expansion",
+     "event": "new-signal"
     }
    ],
    "is_it_real": "The input names no company, product or agency notice, and the fact check is unverifiable. The item only works once the FSIS or FDA recall notice is found. If it can't be confirmed, kill it.",
@@ -1983,6 +1994,7 @@
    "speed": "new",
    "status": "routed",
    "terms": [
+    "deli meat listeria recall 2nd death multi state expansion",
     "nationwide ready to eat deli meat recall expands amid listeria outbreak first death reported",
     "nationwide ready to eat deli meat recall listeria contamination distinct from prior egg spinach recalls",
     "nationwide ready to eat deli meat recall listeria outbreak expands"
@@ -2104,6 +2116,11 @@
      "date": "2026-11-14",
      "detail": "pitch",
      "event": "routed"
+    },
+    {
+     "date": "2026-11-15",
+     "detail": "Anti-amyloid Alzheimer's drug — first payer coverage decision",
+     "event": "new-signal"
     }
    ],
    "is_it_real": "Thin. No source URL was provided, the drug is not named, and the fact-check is 'unverifiable'. The pitch team must first confirm the approval exists, the drug's name and its approval pathway. If it can't be confirmed, kill the pitch. The access-barrier frame is solid ground for prior anti-amyloid drugs, but nothing should be assumed to carry over.",
@@ -2113,10 +2130,61 @@
    "speed": "new",
    "status": "routed",
    "terms": [
+    "anti amyloid alzheimer s drug first payer coverage decision",
     "post approval access and cost questions for new anti amyloid alzheimer s drug"
    ],
    "title": "Approved isn't available: what it actually takes to get the new anti-amyloid Alzheimer's drug, and who pays",
    "why_now": "The radar reports an approval decision on Nov 12. The access and cost question follows immediately and overlaps with Medicare open enrollment, which runs to Dec 7."
+  },
+  "2026-11-15-glp-1s-linked-to-lower-dementia-risk-again-why-obs": {
+   "angle": "Use the new study to ask a sharper question: why do big observational datasets keep linking GLP-1 use to lower dementia risk while randomized tests in Alzheimer's patients have disappointed? Possible reasons include healthy-user bias, weight and vascular effects versus direct brain effects, and who gets prescribed these drugs.",
+   "beat": "aging, body and metabolism",
+   "confidence": "medium",
+   "created": "2026-11-15",
+   "evidence": [],
+   "history": [
+    {
+     "date": "2026-11-15",
+     "detail": "pitch",
+     "event": "routed"
+    }
+   ],
+   "is_it_real": "The trend is solid, since GLP-1/dementia findings recur across several large cohort studies. This particular study is unverified: no source URL was supplied and its design isn't confirmed. The reporter must establish whether it is observational (lead with 'linked to') and should verify the status of Novo Nordisk's semaglutide Alzheimer's trials (evoke/evoke+), which reported no slowing of progression, before using them as the counterpoint.",
+   "route": "pitch",
+   "seed_keyword": "",
+   "site": "",
+   "speed": "new",
+   "status": "routed",
+   "terms": [
+    "glp 1 drugs linked to lower dementia alzheimer s risk new study"
+   ],
+   "title": "GLP-1s linked to lower dementia risk, again: why observational studies keep finding it while the drug trials haven't",
+   "why_now": "New study is in the news this week, and it lands on two hot categories: GLP-1s, plus Alzheimer's after this week's anti-amyloid approval and access coverage. Demand for 'should I take Ozempic for my brain' answers is real."
+  },
+  "2026-11-15-is-it-real-vitamin-d-helps-depression-a-new-cochra": {
+   "angle": "Test the supplement-aisle claim that vitamin D lifts mood, using the Cochrane review as the receipt. Separate correcting a real deficiency from taking vitamin D as a general mood fix, and say what actually has evidence for winter low mood, such as light therapy.",
+   "beat": "viral health and wellness claims",
+   "confidence": "medium",
+   "created": "2026-11-15",
+   "evidence": [],
+   "history": [
+    {
+     "date": "2026-11-15",
+     "detail": "tfm",
+     "event": "routed"
+    }
+   ],
+   "is_it_real": "The claim being tested is widespread and long-running, which makes it a good 'is it real' target. The review itself is unverified here: no URL was supplied. Before writing, confirm the Cochrane citation, its inclusion criteria (whether deficient or depressed populations were excluded) and the effect sizes. Medium confidence until the primary source is in hand.",
+   "route": "tfm",
+   "seed_keyword": "",
+   "site": "",
+   "speed": "new",
+   "status": "routed",
+   "terms": [
+    "cochrane review vitamin d shows no significant depression benefit"
+   ],
+   "title": "Is it real? 'Vitamin D helps depression' — a new Cochrane review says not much",
+   "why_now": "The review just published, and it's peak seasonal-depression season after the clocks fell back. People are buying D3 for their mood right now."
   }
  },
  "runs": [
@@ -2534,6 +2602,26 @@
     "pitch": 1
    },
    "watching": 2
+  },
+  {
+   "collected": {
+    "newsroom": 16,
+    "radar": 0,
+    "rising": 0,
+    "wide": 0
+   },
+   "cost_usd": 0.1344,
+   "date": "2026-11-15",
+   "dropped": 2,
+   "due": 7,
+   "ideas": 2,
+   "model": "claude-opus-5-5",
+   "notes": "Every term today came from the newsroom pipeline with 'unverifiable' fact checks and no source URLs. All five kept ideas need primary-source confirmation before build, the H5N5 human-to-human claim most of all. Three of the seven terms are continuations of stories already in the queue, so they are attached rather than duplicated. The two genuinely new research stories (GLP-1/dementia and the vitamin D Cochrane review) are the best of the day. The vitamin D review is the natural Wednesday TFM test for this week.",
+   "routes": {
+    "pitch": 1,
+    "tfm": 1
+   },
+   "watching": 0
   }
  ],
  "terms": {
@@ -5313,6 +5401,25 @@
    ],
    "status": "dropped",
    "term": "anthropic ipo"
+  },
+  "anti amyloid alzheimer s drug first payer coverage decision": {
+   "drop_reason": null,
+   "first_seen": "2026-11-15",
+   "idea": "2026-11-14-approved-isn-t-available-what-it-actually-takes-to",
+   "judged_on": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "sightings": [
+    {
+     "date": "2026-11-15",
+     "opportunity": 70,
+     "profile": "daily-pipeline",
+     "score": 65,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "kept",
+   "term": "Anti-amyloid Alzheimer's drug — first payer coverage decision"
   },
   "antidepressant recall carcinogen risk 375k bottles": {
    "drop_reason": null,
@@ -11710,6 +11817,25 @@
    "status": "dropped",
    "term": "cnn"
   },
+  "cochrane review vitamin d shows no significant depression benefit": {
+   "drop_reason": null,
+   "first_seen": "2026-11-15",
+   "idea": "2026-11-15-is-it-real-vitamin-d-helps-depression-a-new-cochra",
+   "judged_on": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "sightings": [
+    {
+     "date": "2026-11-15",
+     "opportunity": 66,
+     "profile": "daily-pipeline",
+     "score": 55,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "kept",
+   "term": "Cochrane review: vitamin D shows no significant depression benefit"
+  },
   "cocoa pebbles nutrition facts": {
    "drop_reason": null,
    "first_seen": "2026-09-27",
@@ -14851,6 +14977,25 @@
    ],
    "status": "dropped",
    "term": "deion sanders videographer uncle neely"
+  },
+  "deli meat listeria recall 2nd death multi state expansion": {
+   "drop_reason": null,
+   "first_seen": "2026-11-15",
+   "idea": "2026-11-11-another-listeria-recall-this-time-deli-meat-right",
+   "judged_on": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "sightings": [
+    {
+     "date": "2026-11-15",
+     "opportunity": 68,
+     "profile": "daily-pipeline",
+     "score": 82,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "kept",
+   "term": "Deli meat Listeria recall — 2nd death, multi-state expansion"
   },
   "dementia rising in latino populations washu multidecade study": {
    "drop_reason": null,
@@ -21016,6 +21161,25 @@
    "status": "pending",
    "term": "First 2026 measles case confirmed in San Luis Obispo County, extending the national outbreak pattern"
   },
+  "first pediatric flu death of 2026 27 season": {
+   "drop_reason": "too-thin",
+   "first_seen": "2026-11-15",
+   "idea": null,
+   "judged_on": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "sightings": [
+    {
+     "date": "2026-11-15",
+     "opportunity": 62,
+     "profile": "daily-pipeline",
+     "score": 70,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "dropped",
+   "term": "First pediatric flu death of 2026–27 season"
+  },
   "fish oil supplements don t prevent alzheimer s cognitive decline study finds": {
    "drop_reason": null,
    "first_seen": "2026-06-25",
@@ -22499,6 +22663,25 @@
    "status": "pending",
    "term": "GLP-1 Drugs Linked to Lower Breast Cancer Risk — Large Cohort Study"
   },
+  "glp 1 drugs linked to lower dementia alzheimer s risk new study": {
+   "drop_reason": null,
+   "first_seen": "2026-11-15",
+   "idea": "2026-11-15-glp-1s-linked-to-lower-dementia-risk-again-why-obs",
+   "judged_on": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "sightings": [
+    {
+     "date": "2026-11-15",
+     "opportunity": 76,
+     "profile": "daily-pipeline",
+     "score": 74,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "kept",
+   "term": "GLP-1 drugs linked to lower dementia/Alzheimer's risk (new study)"
+  },
   "glp 1 drugs ozempic wegovy may save over 192 000 in lifetime medical costs for people with obesity": {
    "drop_reason": null,
    "first_seen": "2026-06-19",
@@ -23654,6 +23837,25 @@
    ],
    "status": "pending",
    "term": "H5N1 bird flu — new human exposure cases and farm worker surveillance data"
+  },
+  "h5n5 avian influenza confirmed human to human transmission": {
+   "drop_reason": null,
+   "first_seen": "2026-11-15",
+   "idea": "2026-11-08-the-first-confirmed-us-human-h5n5-bird-flu-case-wh",
+   "judged_on": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "sightings": [
+    {
+     "date": "2026-11-15",
+     "opportunity": 72,
+     "profile": "daily-pipeline",
+     "score": 88,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "kept",
+   "term": "H5N5 avian influenza — confirmed human-to-human transmission"
   },
   "h5n5 avian influenza first confirmed us human case": {
    "drop_reason": null,
@@ -40083,6 +40285,25 @@
    ],
    "status": "dropped",
    "term": "nvidia stock"
+  },
+  "ny measles outbreak 5th case new exposure site": {
+   "drop_reason": "already-covered",
+   "first_seen": "2026-11-15",
+   "idea": null,
+   "judged_on": "2026-11-15",
+   "last_seen": "2026-11-15",
+   "sightings": [
+    {
+     "date": "2026-11-15",
+     "opportunity": 58,
+     "profile": "daily-pipeline",
+     "score": 60,
+     "source": "newsroom",
+     "stage": ""
+    }
+   ],
+   "status": "dropped",
+   "term": "NY measles outbreak — 5th case, new exposure site"
   },
   "ny measles outbreak grows case count and geographic spread update": {
    "drop_reason": null,

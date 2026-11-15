@@ -1,0 +1,111 @@
+{
+ "date": "2026-11-15",
+ "ideas": [
+  {
+   "id": "2026-11-15-glp-1s-linked-to-lower-dementia-risk-again-why-obs",
+   "title": "GLP-1s linked to lower dementia risk, again: why observational studies keep finding it while the drug trials haven't",
+   "created": "2026-11-15",
+   "route": "pitch",
+   "speed": "new",
+   "beat": "aging, body and metabolism",
+   "angle": "Use the new study to ask a sharper question: why do big observational datasets keep linking GLP-1 use to lower dementia risk while randomized tests in Alzheimer's patients have disappointed? Possible reasons include healthy-user bias, weight and vascular effects versus direct brain effects, and who gets prescribed these drugs.",
+   "why_now": "New study is in the news this week, and it lands on two hot categories: GLP-1s, plus Alzheimer's after this week's anti-amyloid approval and access coverage. Demand for 'should I take Ozempic for my brain' answers is real.",
+   "is_it_real": "The trend is solid, since GLP-1/dementia findings recur across several large cohort studies. This particular study is unverified: no source URL was supplied and its design isn't confirmed. The reporter must establish whether it is observational (lead with 'linked to') and should verify the status of Novo Nordisk's semaglutide Alzheimer's trials (evoke/evoke+), which reported no slowing of progression, before using them as the counterpoint.",
+   "confidence": "medium",
+   "evidence": [],
+   "terms": [
+    "glp 1 drugs linked to lower dementia alzheimer s risk new study"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-11-15",
+     "event": "routed",
+     "detail": "pitch"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "GLP-1 drugs linked to lower dementia/Alzheimer's risk (new study)",
+     "speed": "new",
+     "first_seen": "2026-11-15",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-11-15",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 74,
+       "opportunity": 76
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  },
+  {
+   "id": "2026-11-15-is-it-real-vitamin-d-helps-depression-a-new-cochra",
+   "title": "Is it real? 'Vitamin D helps depression' — a new Cochrane review says not much",
+   "created": "2026-11-15",
+   "route": "tfm",
+   "speed": "new",
+   "beat": "viral health and wellness claims",
+   "angle": "Test the supplement-aisle claim that vitamin D lifts mood, using the Cochrane review as the receipt. Separate correcting a real deficiency from taking vitamin D as a general mood fix, and say what actually has evidence for winter low mood, such as light therapy.",
+   "why_now": "The review just published, and it's peak seasonal-depression season after the clocks fell back. People are buying D3 for their mood right now.",
+   "is_it_real": "The claim being tested is widespread and long-running, which makes it a good 'is it real' target. The review itself is unverified here: no URL was supplied. Before writing, confirm the Cochrane citation, its inclusion criteria (whether deficient or depressed populations were excluded) and the effect sizes. Medium confidence until the primary source is in hand.",
+   "confidence": "medium",
+   "evidence": [],
+   "terms": [
+    "cochrane review vitamin d shows no significant depression benefit"
+   ],
+   "site": "",
+   "seed_keyword": "",
+   "status": "routed",
+   "history": [
+    {
+     "date": "2026-11-15",
+     "event": "routed",
+     "detail": "tfm"
+    }
+   ],
+   "term_details": [
+    {
+     "term": "Cochrane review: vitamin D shows no significant depression benefit",
+     "speed": "new",
+     "first_seen": "2026-11-15",
+     "weeks_seen": 1,
+     "sources": [
+      "newsroom"
+     ],
+     "profiles": [
+      "daily-pipeline"
+     ],
+     "recent": [
+      {
+       "date": "2026-11-15",
+       "source": "newsroom",
+       "profile": "daily-pipeline",
+       "score": 55,
+       "opportunity": 66
+      }
+     ],
+     "previous_verdict": null,
+     "previous_reason": null
+    }
+   ]
+  }
+ ],
+ "dropped": 2,
+ "watching": 0,
+ "notes": "Every term today came from the newsroom pipeline with 'unverifiable' fact checks and no source URLs. All five kept ideas need primary-source confirmation before build, the H5N5 human-to-human claim most of all. Three of the seven terms are continuations of stories already in the queue, so they are attached rather than duplicated. The two genuinely new research stories (GLP-1/dementia and the vitamin D Cochrane review) are the best of the day. The vitamin D review is the natural Wednesday TFM test for this week.",
+ "cost_usd": 0.1344
+}
