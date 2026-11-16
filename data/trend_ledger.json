@@ -2622,6 +2622,20 @@
     "tfm": 1
    },
    "watching": 0
+  },
+  {
+   "collected": {
+    "newsroom": 13,
+    "radar": 0,
+    "rising": 0,
+    "wide": 0
+   },
+   "cost_usd": 0,
+   "date": "2026-11-16",
+   "dropped": 0,
+   "due": 0,
+   "ideas": 0,
+   "model": "claude-opus-5-5"
   }
  ],
  "terms": {
