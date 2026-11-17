@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16",
+ "updated": "2026-11-17",
  "items": [
   {
    "id": "2026-11-11-another-listeria-recall-this-time-deli-meat-right",
@@ -502,36 +502,6 @@
     "ebola",
     "Ebola outbreak spreads beyond DRC — first confirmed case in Nigeria evacuated to Switzerland",
     "Two new Ebola vaccine candidates join active DRC clinical trial"
-   ],
-   "status": "routed"
-  },
-  {
-   "id": "2026-10-26-a-ptsd-treatment-with-a-68-remission-rate-what-tha",
-   "title": "A PTSD treatment with a '68% remission' rate: what that number does and doesn't mean",
-   "created": "2026-10-26",
-   "angle": "A short, skeptical item on a headline remission rate: what the treatment is, how big and long the trial was, and what remission means in trial terms.",
-   "why_now": "Trial results were publicized Oct. 22 and the 68% figure is the kind of number that travels.",
-   "is_it_real": "So far this rests on a single ScienceDaily summary. The trial phase, sample size, comparator and journal are unconfirmed. It only runs if the writer can find the paper, and it should not be upgraded to a pitch on this evidence.",
-   "evidence": [
-    "https://www.sciencedaily.com/releases/2026/10/261022081309.htm"
-   ],
-   "terms": [
-    "PTSD treatment — 68% remission rate, clinical trial"
-   ],
-   "status": "routed"
-  },
-  {
-   "id": "2026-10-26-kff-s-fall-poll-who-americans-trust-on-vaccines-no",
-   "title": "KFF's fall poll: who Americans trust on vaccines now",
-   "created": "2026-10-26",
-   "angle": "One sharp stat from KFF's fall trust tracker, with a one-line take on what it means heading into flu and measles season. It pairs naturally with the measles/SSPE pitch already in motion.",
-   "why_now": "KFF released its Fall 2026 update on vaccine views this week.",
-   "is_it_real": "KFF is a reliable pollster, but this is self-reported opinion data. Present it as a trust metric and pull the actual numbers from the KFF report; none are in hand yet.",
-   "evidence": [
-    "https://www.kff.org/public-opinion/kff-tracking-poll-on-health-information-and-trust-fall-2026-update-on-vaccine-views/"
-   ],
-   "terms": [
-    "KFF Fall 2026 tracking poll — vaccine trust"
    ],
    "status": "routed"
   }
