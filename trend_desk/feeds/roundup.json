@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21",
+ "updated": "2026-11-22",
  "items": [
   {
    "id": "2026-11-11-another-listeria-recall-this-time-deli-meat-right",
@@ -329,20 +329,6 @@
    ],
    "terms": [
     "Pew Research survey on US public attitudes toward AI in healthcare decision-making"
-   ],
-   "status": "routed"
-  },
-  {
-   "id": "2026-10-31-once-upon-a-farm-tractor-wheels-recall-which-kids",
-   "title": "Once Upon a Farm 'Tractor Wheels' recall: which kids' snacks, and what to check",
-   "created": "2026-10-31",
-   "angle": "A quick service item for parents: which products, lot codes and reason, and what to do. It continues the run of recall items the Friday issue has been carrying.",
-   "why_now": "Search spiked today; recalls of kids' food move fast.",
-   "is_it_real": "Unconfirmed. The input has no news link or FDA notice, so the product, scope and reason are all unknown. The roundup job must verify against the FDA recall database or the company before writing a word, and drop it if no recall exists.",
-   "evidence": [],
-   "terms": [
-    "FDA Tractor Wheels toddler snack choking-hazard recall",
-    "once upon a farm tractor wheels recall"
    ],
    "status": "routed"
   }
