@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "items": [
   {
    "id": "2026-11-11-another-listeria-recall-this-time-deli-meat-right",
@@ -268,21 +268,6 @@
    "evidence": [],
    "terms": [
     "whole foods ashwagandha capsules recall"
-   ],
-   "status": "routed"
-  },
-  {
-   "id": "2026-11-02-a-common-gut-virus-turns-out-to-infect-bacteria-no",
-   "title": "A common gut virus turns out to infect bacteria, not us: a 40-year mystery solved, and what it doesn't mean for your probiotic",
-   "created": "2026-11-02",
-   "angle": "A short, fun science item: what the finding is (a virus long blamed as a human pathogen is actually a bacteriophage) and a sharp caveat that this changes nothing you should buy or do for gut health.",
-   "why_now": "WashU Medicine published the finding Nov 2, and there is little competing coverage.",
-   "is_it_real": "Solid as a basic-science finding from a university release. It is a mechanism discovery only, so the item must not imply any consumer gut-health action or product claim. It is too thin for a full pitch but good for a roundup take.",
-   "evidence": [
-    "https://medicine.washu.edu/news/40-year-mystery-solved-common-gut-virus-infects-bacteria-not-human-cells/"
-   ],
-   "terms": [
-    "Common gut virus infects bacteria, not human cells — 40-year mystery solved"
    ],
    "status": "routed"
   }
