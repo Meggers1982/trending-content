@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "items": [
   {
    "id": "2026-11-11-another-listeria-recall-this-time-deli-meat-right",
@@ -164,36 +164,6 @@
    "evidence": [],
    "terms": [
     "seasonal depression lamp"
-   ],
-   "status": "routed"
-  },
-  {
-   "id": "2026-11-04-kratom-sold-as-a-wellness-supplement-is-driving-op",
-   "title": "Kratom sold as a 'wellness' supplement is driving opioid-like addiction: what's in the packets and why it's still on shelves",
-   "created": "2026-11-04",
-   "angle": "A short, sharp item on the wellness-to-dependence pipeline: 'natural' and 'plant-based' marketing versus withdrawal reality. Tie it to last week's HHS wellness-peptides opening as part of the same lax-regulation pattern.",
-   "why_now": "A fresh NYT Well investigation ran 11/2–11/3.",
-   "is_it_real": "The NYT reporting is credible but it is the only source here. A full pitch would need a fresh angle beyond the NYT, so this works best as a roundup item. Confirm with FDA warnings or poison-control data before stating any numbers.",
-   "evidence": [
-    "https://www.nytimes.com/2026/11/02/well/kratom-wellness-marketing-addiction.html"
-   ],
-   "terms": [
-    "Kratom marketed as wellness supplement fuels opioid-like addiction"
-   ],
-   "status": "routed"
-  },
-  {
-   "id": "2026-11-04-vitamin-c-in-pregnancy-linked-to-baby-brain-develo",
-   "title": "Vitamin C in pregnancy linked to baby brain development: what the study actually shows",
-   "created": "2026-11-04",
-   "angle": "Cover what the study found and what it can't prove. Explain why 'linked to' isn't 'causes,' and why it isn't a reason to megadose beyond a prenatal vitamin.",
-   "why_now": "The study was published 11/2 and is circulating through MedicalXpress.",
-   "is_it_real": "The headline is accurate per the upstream check. It is likely observational, so the item must not imply causation. Source design and size need confirming from the paper.",
-   "evidence": [
-    "https://medicalxpress.com/news/2026-11-vitamin-pregnancy-early-brain.html"
-   ],
-   "terms": [
-    "Vitamin C during pregnancy linked to early brain development"
    ],
    "status": "routed"
   }
